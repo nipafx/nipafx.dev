@@ -83,7 +83,7 @@ exports.createPages = ({ graphql, actions }) => {
 			}
 		}
 	`).then(({ data }) => {
-		data.posts.nodes.forEach( node => {
+		data.posts.nodes.forEach(node => {
 			createPage({
 				path: node.slug,
 				component: postTemplate,

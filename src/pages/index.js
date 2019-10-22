@@ -8,14 +8,20 @@ import Cards from "../components/cards"
 const IndexPage = ({ data }) => (
 	<Layout>
 		<p>Hello, World (Blog)</p>
-		<ul>{data.posts.nodes.map(node => (<li><Link to={node.slug}>{node.title}</Link></li>))}</ul>
+		<ul>
+			{data.posts.nodes.map(node => (
+				<li>
+					<Link to={node.slug}>{node.title}</Link>
+				</li>
+			))}
+		</ul>
 		<Cards />
 	</Layout>
 )
 
 export const query = graphql`
 	{
-		posts: allBlogPost {
+		posts: allBlogPost(sort: { fields: [date], order: DESC }) {
 			nodes {
 				slug
 				title
