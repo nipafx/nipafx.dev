@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+
+body {
+	color: white;
+	background: black;
+	font-family: "Montserrat", Impact, sans-serif;
+	font-weight: normal;
+	line-height: 1.2;
+	letter-spacing: -0.03em;
+	text-shadow: none;
+}
+
+body a {
+	text-decoration: none;
+	color: inherit;
+}
+
+body img {
+	max-width: 100%;
+}
+
+body {
+	--content-width: 830px;
+	--tile-shadow-color: white;
+	--tile-animation: 200ms;
+	--panel-animation: 600ms;
+
+	--how-height: 200px;
+
+	--blog-color: #ffa500;
+	--books-color: #7e180a;
+	--discord-color: #7389dc;
+	--github-color: #000;
+	--hire-color: #666;
+	--medium-color: #18b475;
+	--stackoverflow-color: #f58023;
+	--talks-color: #ff8c6a;
+	--twitch-color: #593e83;
+	--twitter-color: #1da1f3;
+	--youtube-color: #da281e;
+}
+
+#content {
+	width: var(--content-width);
+	margin: 0 auto;
+}

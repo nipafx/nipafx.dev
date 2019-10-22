@@ -1,0 +1,40 @@
+{
+	"name": "nipafx.org",
+	"private": true,
+	"description": "Gatsby sites for nipafx.org",
+	"version": "0.1.0",
+	"author": "Nicolai Parlog <nicolai@nipafx.org>",
+	"dependencies": {
+		"@mikaelkristiansson/domready": "^1.0.9",
+		"gatsby": "^2.13.21",
+		"gatsby-image": "^2.2.6",
+		"gatsby-link": "^2.2.2",
+		"gatsby-plugin-sharp": "^2.2.7",
+		"gatsby-react-router-scroll": "^2.1.3",
+		"gatsby-source-filesystem": "^2.1.5",
+		"gatsby-transformer-asciidoc": "^1.1.3",
+		"gatsby-transformer-sharp": "^2.2.3",
+		"graphql": "^14.4.2",
+		"lodash": "^4.17.14",
+		"mitt": "^1.1.3",
+		"node-html-parser": "^1.1.16",
+		"prop-types": "^15.7.2",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"react-error-overlay": "^5.1.6",
+		"shallow-compare": "^1.2.2"
+	},
+	"devDependencies": {
+		"prettier": "^1.18.2"
+	},
+	"keywords": [
+		"gatsby"
+	],
+	"license": "Copyright",
+	"main": "n/a",
+	"scripts": {
+		"develop": "gatsby develop",
+		"build": "gatsby build",
+		"start": "npm run develop"
+	}
+}
