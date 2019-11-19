@@ -6,26 +6,26 @@
 	"author": "Nicolai Parlog <nicolai@nipafx.org>",
 	"dependencies": {
 		"@mikaelkristiansson/domready": "^1.0.9",
-		"gatsby": "^2.13.21",
-		"gatsby-image": "^2.2.6",
-		"gatsby-link": "^2.2.2",
-		"gatsby-plugin-sharp": "^2.2.7",
-		"gatsby-react-router-scroll": "^2.1.3",
-		"gatsby-source-filesystem": "^2.1.5",
-		"gatsby-transformer-asciidoc": "^1.1.3",
-		"gatsby-transformer-sharp": "^2.2.3",
-		"graphql": "^14.4.2",
-		"lodash": "^4.17.14",
-		"mitt": "^1.1.3",
+		"gatsby": "^2.18.0",
+		"gatsby-image": "^2.2.33",
+		"gatsby-link": "^2.2.24",
+		"gatsby-plugin-sharp": "^2.3.2",
+		"gatsby-react-router-scroll": "^2.1.16",
+		"gatsby-source-filesystem": "^2.1.38",
+		"gatsby-transformer-asciidoc": "^1.1.17",
+		"gatsby-transformer-sharp": "^2.3.5",
+		"graphql": "^14.5.8",
+		"lodash": "^4.17.15",
+		"mitt": "^1.2.0",
 		"node-html-parser": "^1.1.16",
 		"prop-types": "^15.7.2",
-		"react": "^16.8.6",
-		"react-dom": "^16.8.6",
+		"react": "^16.12.0",
+		"react-dom": "^16.12.0",
 		"react-error-overlay": "^5.1.6",
 		"shallow-compare": "^1.2.2"
 	},
 	"devDependencies": {
-		"prettier": "^1.18.2"
+		"prettier": "^1.19.1"
 	},
 	"keywords": [
 		"gatsby"
