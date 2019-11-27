@@ -5,6 +5,10 @@
 	"version": "0.1.0",
 	"author": "Nicolai Parlog <nicolai@nipafx.org>",
 	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^1.2.25",
+		"@fortawesome/free-brands-svg-icons": "^5.11.2",
+		"@fortawesome/free-solid-svg-icons": "^5.11.2",
+		"@fortawesome/react-fontawesome": "^0.1.4",
 		"@mikaelkristiansson/domready": "^1.0.9",
 		"gatsby": "^2.18.0",
 		"gatsby-image": "^2.2.33",

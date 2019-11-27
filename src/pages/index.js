@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import Layout from "../components/layout"
 import Cards from "../components/cards"
@@ -11,7 +12,7 @@ const IndexPage = ({ data }) => (
 		<ul>
 			{data.posts.nodes.map(node => (
 				<li>
-					<Link to={node.slug}>{node.title}</Link>
+					<Link to={node.slug}>{node.title} <FontAwesomeIcon icon={["fas", "globe"]} /></Link>
 				</li>
 			))}
 		</ul>
