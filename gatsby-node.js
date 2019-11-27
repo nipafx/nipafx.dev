@@ -18,7 +18,7 @@ exports.sourceNodes = ({ actions, createContentDigest }) => {
 }
 
 exports.onCreateNode = ({ node, getNode, actions, createContentDigest }) => {
-	const { createNodeField, createNode } = actions
+	const { createNodeField, createNode, deleteNode } = actions
 
 	if ([`ImageSharp`, `Asciidoc`].includes(node.internal.type)) {
 		// add a field "collection" with the source instance (e.g. "src-images"),
@@ -40,6 +40,12 @@ exports.onCreateNode = ({ node, getNode, actions, createContentDigest }) => {
 	}
 
 	if (node.internal.type === `Asciidoc`) {
+		// draft nodes shouldn't show up anywhere
+		if (node.pageAttributes.draft) {
+			deleteNode(node)
+			return
+		}
+
 		const post = {
 			id: node.fields.id,
 
