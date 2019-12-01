@@ -24,7 +24,7 @@ module.exports = {
 			resolve: `gatsby-transformer-sharp`,
 		},
 		{
-			resolve: `gatsby-transformer-asciidoc`,
+			resolve: `gatsby-transformer-remark`,
 		},
 	],
 }

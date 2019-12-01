@@ -6,7 +6,7 @@ export default ({ data }) => {
 	return (
 		<div>
 			<h1>{data.post.title}</h1>
-			<div dangerouslySetInnerHTML={{ __html: data.post.html }} />
+			<div dangerouslySetInnerHTML={{ __html: data.post.content.html }} />
 		</div>
 	)
 }
@@ -15,7 +15,9 @@ export const query = graphql`
 	query($id: String!) {
 		post: blogPost(id: { eq: $id }) {
 			title
-			html
+			content {
+				html
+			}
 		}
 	}
 `
