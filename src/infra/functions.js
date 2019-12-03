@@ -22,6 +22,8 @@ export function setAltColorVar(color) {
 		: null
 }
 
-export function classes() {
-	return Array.prototype.slice.call(arguments).reduce((acc, cur) => `${acc} ${cur}`)
+export function className() {
+	return {
+		className: Array.prototype.slice.call(arguments).reduce((acc, cur) => `${acc} ${cur}`),
+	}
 }

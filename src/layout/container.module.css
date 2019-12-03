@@ -6,3 +6,25 @@
 .container > * {
 	grid-column: 2 / span 12;
 }
+
+.container > .header {
+	grid-column: 4 / span 8;
+}
+
+.textContainer {
+	grid-column: 1 / span 14;
+	display: grid;
+	grid-template-columns: 1fr repeat(12, 100px) 1fr;
+}
+
+.textContainer > * {
+	grid-column: 4 / span 5;
+}
+
+.textContainer > pre {
+	grid-column: 2 / span 12;
+}
+
+.textContainer > :global(.stretch) {
+	grid-column: 2 / span 12;
+}
