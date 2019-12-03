@@ -1,0 +1,13 @@
+body {
+	font-family: Impact, sans-serif;
+	font-weight: normal;
+	line-height: 1.25;
+}
+
+body a {
+	text-decoration: none;
+}
+
+body img {
+	max-width: 100%;
+}

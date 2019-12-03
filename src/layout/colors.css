@@ -1,0 +1,30 @@
+body {
+	--bg-color: black;
+	--bg-color-shade-1: gray;
+	--bg-color-shade-2: darkgray;
+
+	--fg-color: white;
+	--fg-color-shade-1: lightgray;
+	--fg-color-shade-2: darkgray;
+
+	--alt-color: lightgreen;
+
+	--blog-color: #ffa500;
+	--books-color: #7e180a;
+	--discord-color: #7389dc;
+	--github-color: #000;
+	--hire-color: #666;
+	--medium-color: #18b475;
+	--stackoverflow-color: #f58023;
+	--talks-color: #ff8c6a;
+	--twitch-color: #593e83;
+	--twitter-color: #1da1f3;
+	--youtube-color: #da281e;
+
+	color: var(--fg-color);
+	background: var(--bg-color);
+}
+
+body a {
+	color: var(--alt-color);
+}

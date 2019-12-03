@@ -1,0 +1,8 @@
+.container {
+	display: grid;
+	grid-template-columns: 1fr repeat(12, 100px) 1fr;
+}
+
+.container > * {
+	grid-column: 2 / span 12;
+}

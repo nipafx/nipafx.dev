@@ -3,12 +3,11 @@ import { graphql } from "gatsby"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import Layout from "../components/layout"
+import Site from "../layout/site"
 import Cards from "../components/cards"
 
 const IndexPage = ({ data }) => (
-	<Layout>
-		<p>Hello, World (Blog)</p>
+	<Site>
 		<ul>
 			{data.posts.nodes.map(node => (
 				<li>
@@ -17,7 +16,7 @@ const IndexPage = ({ data }) => (
 			))}
 		</ul>
 		<Cards />
-	</Layout>
+	</Site>
 )
 
 export const query = graphql`
