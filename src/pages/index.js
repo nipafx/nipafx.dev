@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
+import Link from "../components/link"
 import Site from "../layout/site"
 import Cards from "../components/cards"
 

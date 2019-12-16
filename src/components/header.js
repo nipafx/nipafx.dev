@@ -1,11 +1,13 @@
 import React from "react"
 
+import Link from "./link"
+
 import layout from "../layout/container.module.css"
 
 const Header = () => (
 	<header className={layout.container}>
 		<div>Logo</div>
-		<a href="https://codefx.org">Links</a>
+		<Link to="https://codefx.org">Links</Link>
 		<nav>Nav</nav>
 	</header>
 )
