@@ -1,13 +1,13 @@
 body {
-	--bg-color: black;
-	--bg-color-shade-1: gray;
-	--bg-color-shade-2: darkgray;
+	--bg-color: #262429;
+	--bg-color-shade-1: #404040;
+	--bg-color-shade-2: #606060;
 
 	--fg-color: white;
-	--fg-color-shade-1: lightgray;
-	--fg-color-shade-2: darkgray;
+	--fg-color-shade-1: #CCC;
+	--fg-color-shade-2: #AAA;
 
-	--alt-color: lightgreen;
+	--alt-color: #69EA7D;
 
 	--blog-color: #ffa500;
 	--books-color: #7e180a;
