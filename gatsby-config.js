@@ -25,6 +25,25 @@ module.exports = {
 		},
 		{
 			resolve: `gatsby-transformer-remark`,
+			options: {
+				plugins: [
+					{
+						resolve: `gatsby-remark-prismjs`,
+						options: {
+							classPrefix: "language-",
+							// This is used to allow setting a language for inline code
+							// (i.e. single backticks) by creating a separator.
+							inlineCodeMarker: "§",
+							// This lets you set up language aliases.  For example,
+							// setting this to '{ sh: "bash" }' will let you use
+							// the language "sh" which will highlight using the
+							// bash highlighter.
+							aliases: {},
+							showLineNumbers: false,
+						},
+					},
+				],
+			},
 		},
 	],
 }
