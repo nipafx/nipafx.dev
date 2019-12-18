@@ -28,6 +28,12 @@ module.exports = {
 			options: {
 				plugins: [
 					{
+						resolve: `gatsby-remark-add-inline-code-language`,
+						options: {
+							inlineCodeMarker: "§",
+						}
+					},
+					{
 						resolve: `gatsby-remark-prismjs`,
 						options: {
 							classPrefix: "language-",
