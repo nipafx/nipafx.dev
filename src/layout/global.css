@@ -1,13 +1,7 @@
-body {
-	font-family: Impact, sans-serif;
-	font-weight: normal;
-	line-height: 1.25;
-}
-
-body a {
+a {
 	text-decoration: none;
 }
 
-body img {
+img {
 	max-width: 100%;
 }
