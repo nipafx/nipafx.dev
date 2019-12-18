@@ -24,7 +24,3 @@ body {
 	color: var(--fg-color);
 	background: var(--bg-color);
 }
-
-body a {
-	color: var(--alt-color);
-}

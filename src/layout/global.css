@@ -1,5 +1,14 @@
 a {
-	text-decoration: none;
+	color: inherit;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: var(--alt-color);
+}
+
+a:visited {
+	color: var(--fg-color-shade-1);
 }
 
 img {

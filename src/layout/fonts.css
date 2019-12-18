@@ -31,5 +31,9 @@ h4 {
 code {
 	font-family: 'BedsteadRegular', monospace;
 	font-style: normal;
+	font-size: 18px;
+}
+
+pre > code {
 	font-size: 16px;
 }
