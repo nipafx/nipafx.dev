@@ -8,7 +8,7 @@ export default ({ data }) => {
 	const post = {
 		title: data.post.title,
 		date: data.post.date,
-		html: data.post.content.html,
+		htmlAst: data.post.content.htmlAst,
 	}
 	return (
 		<Site altColor="blog">
@@ -23,7 +23,7 @@ export const query = graphql`
 			title
 			date
 			content {
-				html
+				htmlAst
 			}
 		}
 	}

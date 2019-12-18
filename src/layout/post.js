@@ -5,13 +5,13 @@ import PostContent from "../components/postContent"
 
 import layout from "./container.module.css"
 
-const Post = ({ title, date, html }) => {
+const Post = ({ title, date, htmlAst }) => {
 	return (
 		<main>
 			<section>
 				{/* TODO. progress */}
 				<PostHeader {...{ title, date }} />
-				<PostContent {...{ html }} />
+				<PostContent {...{ htmlAst }} />
 			</section>
 		</main>
 	)
