@@ -5,9 +5,6 @@ import { flatten, setAltColorVar } from "../infra/functions"
 import Header from "../components/header"
 import Footer from "../components/footer"
 
-import "./colors.css"
-import "./global.css"
-
 const Site = ({ altColor, children }) =>
 	flatten(
 		<div style={setAltColorVar(altColor)}>
