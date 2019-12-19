@@ -52,6 +52,7 @@ exports.onCreateNode = ({ node, getNode, actions, createContentDigest }) => {
 			title: node.frontmatter.title,
 			slug: node.frontmatter.slug,
 			date: node.frontmatter.date,
+			tags: node.frontmatter.tags,
 			description: node.frontmatter.description,
 			socialDescription: node.frontmatter.searchDescription,
 			image: node.frontmatter.image,

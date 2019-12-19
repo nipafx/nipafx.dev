@@ -3,14 +3,12 @@ import React from "react"
 import PostHeader from "../components/postHeader"
 import PostContent from "../components/postContent"
 
-import layout from "./container.module.css"
-
-const Post = ({ title, date, htmlAst }) => {
+const Post = ({ title, date, tags, htmlAst }) => {
 	return (
 		<main>
 			<section>
 				{/* TODO. progress */}
-				<PostHeader {...{ title, date }} />
+				<PostHeader {...{ title, date, tags }} />
 				<PostContent {...{ htmlAst }} />
 			</section>
 		</main>

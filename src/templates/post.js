@@ -8,6 +8,7 @@ export default ({ data }) => {
 	const post = {
 		title: data.post.title,
 		date: data.post.date,
+		tags: data.post.tags,
 		htmlAst: data.post.content.htmlAst,
 	}
 	return (
@@ -22,6 +23,7 @@ export const query = graphql`
 		post: blogPost(id: { eq: $id }) {
 			title
 			date
+			tags
 			content {
 				htmlAst
 			}

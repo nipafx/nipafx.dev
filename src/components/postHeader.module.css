@@ -5,3 +5,19 @@
 .title {
 	text-align: center;
 }
+
+.tags {
+	font-family: 'BedsteadRegular', monospace;
+	font-size: 16px;
+	display: flex;
+	justify-content: center;
+}
+
+.tags > li {
+	padding: 0 1em;
+	text-indent: 0;
+}
+
+.tags > li::before {
+	content: none;
+}
