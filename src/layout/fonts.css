@@ -18,6 +18,12 @@ h2 {
 	font-weight: bold;
 }
 
+h2::before {
+	font-family: 'BedsteadRegular', monospace;
+	font-style: normal;
+	font-weight: normal;
+}
+
 h3 {
 	font-size: 24px;
 	font-weight: bold;
@@ -25,6 +31,11 @@ h3 {
 
 h4 {
 	font-size: 18px;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: 16px;
 	font-weight: bold;
 }
 

@@ -1,3 +1,28 @@
+/*
+ * HEADERS
+ */
+
+h1, h2, h3, h4, h5 {
+	padding: 0;
+	margin: 1em 0 0;
+}
+
+h1 + h2, h2 + h3, h3 + h4, h4 + h5 {
+	margin-top: 0;
+}
+
+h2::before {
+	content: "//";
+	display: block;
+	text-align: center;
+	color: var(--bg-color-shade-2);
+	margin-bottom: 1em;
+}
+
+/*
+ * LINKS
+ */
+
 a {
 	color: inherit;
 	text-decoration: underline;
@@ -9,10 +34,6 @@ a:hover {
 
 a:visited {
 	color: var(--fg-color-shade-1);
-}
-
-img {
-	max-width: 100%;
 }
 
 /*
@@ -57,4 +78,12 @@ ol > li:before {
 	content: counter(item) ".";
 	counter-increment: item;
 	padding-right: 0.3em;
+}
+
+/*
+ * MISC
+ */
+
+img {
+	max-width: 100%;
 }
