@@ -20,7 +20,6 @@ h2 {
 
 h2::before {
 	font-family: 'BedsteadRegular', monospace;
-	font-style: normal;
 	font-weight: normal;
 }
 
@@ -41,7 +40,6 @@ h4 {
 
 code {
 	font-family: 'BedsteadRegular', monospace;
-	font-style: normal;
 	font-size: 18px;
 }
 
