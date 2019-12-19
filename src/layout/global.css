@@ -14,3 +14,47 @@ a:visited {
 img {
 	max-width: 100%;
 }
+
+/*
+ * LISTS
+ */
+
+ul, ol {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	padding-left: 2em;
+	padding-bottom: 1em;
+}
+
+ul {
+	list-style: none;
+}
+
+ul > li {
+	text-indent: -1em;
+}
+
+ul > li::before {
+	color: var(--alt-color);
+	content: "┘";
+	padding-right: 0.3em;
+}
+
+ol {
+	counter-reset: item;
+}
+
+ol > li {
+	display: block;
+	text-indent: -1em;
+}
+
+ol > li:before {
+	color: var(--alt-color);
+	content: counter(item) ".";
+	counter-increment: item;
+	padding-right: 0.3em;
+}
