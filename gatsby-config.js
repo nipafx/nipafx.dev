@@ -18,6 +18,13 @@ module.exports = {
 			},
 		},
 		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `tags`,
+				path: `${__dirname}/content/tags`,
+			},
+		},
+		{
 			resolve: `gatsby-plugin-sharp`,
 		},
 		{

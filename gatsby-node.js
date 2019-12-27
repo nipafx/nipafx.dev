@@ -12,6 +12,16 @@ exports.sourceNodes = ({ actions, createContentDigest }) => {
 			contentDigest: createContentDigest(``),
 		},
 	})
+	createNode({
+		id: `tag`,
+		parent: null,
+		children: [],
+		internal: {
+			type: `TagCollection`,
+			content: ``,
+			contentDigest: createContentDigest(``),
+		},
+	})
 }
 
 exports.onCreateNode = ({ node, getNode, actions, createContentDigest }) => {
@@ -44,6 +54,7 @@ exports.onCreateNode = ({ node, getNode, actions, createContentDigest }) => {
 		}
 
 		createPostNodes(node, createNode, createContentDigest)
+		createTagNodes(node, createNode, createContentDigest)
 	}
 }
 
@@ -86,11 +97,40 @@ createPostNodes = (node, createNode, createContentDigest) => {
 	createNode(post)
 }
 
+createTagNodes = (node, createNode, createContentDigest) => {
+	if (node.fields.collection !== `tags`)
+		return
+
+	const tag = {
+		id: node.fields.id,
+
+		title: node.frontmatter.title,
+		slug: node.frontmatter.slug,
+
+		// see comment on creating blog post nodes
+		content___NODE: node.id,
+
+		parent: `tag`,
+		children: [],
+		internal: {
+			type: `Tag`,
+			content: ``,
+			contentDigest: createContentDigest(``),
+		},
+	}
+
+	if (node.frontmatter.series) tag.series = node.frontmatter.series
+	if (node.frontmatter.draft) tag.draft = node.frontmatter.draft
+
+	createNode(tag)
+}
+
 exports.createPages = ({ graphql, actions }) => {
 	const { createPage } = actions
 
 	return Promise.all([
 		createPostPages(graphql, createPage),
+		createTagPages(graphql, createPage),
 	])
 }
 
@@ -113,6 +153,30 @@ createPostPages = (graphql, createPage) => {
 				component: postTemplate,
 				context: {
 					slug: post.slug,
+				},
+			})
+		})
+	})
+}
+
+createTagPages = (graphql, createPage) => {
+	const tagTemplate = path.resolve(`./src/templates/tag.js`)
+
+	return graphql(`
+		{
+			tags: allBlogPost {
+				group(field: tags) {
+					name: fieldValue
+				}
+			}
+		}
+	`).then(({ data }) => {
+		data.tags.group.forEach(tag => {
+			createPage({
+				path: tag.name,
+				component: tagTemplate,
+				context: {
+					tag: tag.name
 				},
 			})
 		})

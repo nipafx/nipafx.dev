@@ -1,6 +1,7 @@
 import React from "react"
 
 import FormattedDate from "./formattedDate"
+import Link from "./link"
 
 import { className } from "../infra/functions"
 
@@ -26,7 +27,9 @@ const showTags = tags => {
 		return (
 			<ul {...className(style.tags)}>
 				{tags.map(tag => (
-					<li>#{tag}</li>
+					<li>
+						<Link to={tag}>#{tag}</Link>
+					</li>
 				))}
 			</ul>
 		)
