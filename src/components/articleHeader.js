@@ -1,0 +1,42 @@
+import React from "react"
+
+import FormattedDate from "./formattedDate"
+import Link from "./link"
+
+import { className } from "../infra/functions"
+
+import layout from "../layout/container.module.css"
+import style from "./articleHeader.module.css"
+
+const ArticleHeader = ({ title, tags, date }) => {
+	return (
+		<header {...className(layout.container)}>
+			{showDate(date)}
+			<h1 {...className(layout.header, style.title)}>{title}</h1>
+			{showTags(tags)}
+			{/* TODO: teaser */}
+			{/* TODO: image */}
+		</header>
+	)
+}
+
+const showDate = date =>
+	date && (
+		<div {...className(layout.header, style.date)}>
+			<FormattedDate date={date} />
+		</div>
+	)
+
+const showTags = tags =>
+	tags &&
+	tags.length > 0 && (
+		<ul {...className(style.tags)}>
+			{tags.map(tag => (
+				<li>
+					<Link to={tag}>#{tag}</Link>
+				</li>
+			))}
+		</ul>
+	)
+
+export default ArticleHeader

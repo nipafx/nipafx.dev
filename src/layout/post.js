@@ -1,6 +1,6 @@
 import React from "react"
 
-import PostHeader from "../components/postHeader"
+import ArticleHeader from "../components/articleHeader"
 import PostContent from "../components/postContent"
 
 const Post = ({ title, date, tags, htmlAst }) => {
@@ -8,7 +8,7 @@ const Post = ({ title, date, tags, htmlAst }) => {
 		<main>
 			<section>
 				{/* TODO. progress */}
-				<PostHeader {...{ title, date, tags }} />
+				<ArticleHeader {...{ title, date, tags }} />
 				<PostContent htmlAst={htmlAst} />
 			</section>
 		</main>

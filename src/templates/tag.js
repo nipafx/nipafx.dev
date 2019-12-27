@@ -2,25 +2,21 @@ import React from "react"
 
 import { graphql } from "gatsby"
 
-import Link from "../components/link"
-import RenderHtml from "../infra/renderHtml"
+import Site from "../layout/site"
+import Tag from "../layout/tag"
 
-const Tag = ({ pageContext, data }) => {
+export default ({ pageContext, data }) => {
 	const tag = extractTag(pageContext.tag, data.tags.nodes)
 	const posts = extractTagPostsWithoutSeries(tag, data.posts.nodes)
+	const options = {
+		title: tag.title + " Posts",
+		posts,
+	}
+	if (tag.content) options.descriptionHtmlAst = tag.content.htmlAst
 	return (
-		<div>
-			<h1>{tag.title} Posts</h1>
-			<Link to="/tags">All tags</Link>
-			{tag.content && <RenderHtml htmlAst={tag.content.htmlAst}></RenderHtml>}
-			<ul>
-				{posts.map(post => (
-					<li key={post.slug}>
-						<Link to={post.slug}>{post.title}</Link>
-					</li>
-				))}
-			</ul>
-		</div>
+		<Site altColor="blog">
+			<Tag {...options} />
+		</Site>
 	)
 }
 
@@ -38,8 +34,6 @@ const extractTag = (contextTag, dataTags) =>
 
 const extractTagPostsWithoutSeries = (tag, posts) =>
 	tag.series ? posts.filter(post => !tag.series.includes(post.slug)) : posts
-
-export default Tag
 
 export const pageQuery = graphql`
 	query($tag: String) {
