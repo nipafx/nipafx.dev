@@ -9,7 +9,7 @@ const Post = ({ title, date, tags, htmlAst }) => {
 			<section>
 				{/* TODO. progress */}
 				<PostHeader {...{ title, date, tags }} />
-				<PostContent {...{ htmlAst }} />
+				<PostContent htmlAst={htmlAst} />
 			</section>
 		</main>
 	)

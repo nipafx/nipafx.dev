@@ -1,7 +1,8 @@
 import React from "react"
 
-import layout from "../layout/container.module.css"
 import RenderHtml from "../infra/renderHtml"
+
+import layout from "../layout/container.module.css"
 
 const PostContent = ({ htmlAst }) => {
 	return (

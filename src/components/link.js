@@ -6,7 +6,7 @@ import ExternalLink from "./externalLink"
 const Link = ({ to, children }) => {
 	const external =
 		to.indexOf("://") > 0 || to.startsWith("//") || to.startsWith("mailto")
-	// if internal link don't start with "/", Gatsby emits a warning;
+	// if internal links don't start with "/", Gatsby emits a warning;
 	// prevent that by prefixing internal links with a "/" if they lack one
 	const internalWithoutPrefix = !external && !to.startsWith("/")
 	to = internalWithoutPrefix ? `/${to}` : to

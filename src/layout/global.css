@@ -28,12 +28,12 @@ a {
 	text-decoration: underline;
 }
 
-a:hover {
-	color: var(--alt-color);
-}
-
 a:visited {
 	color: var(--fg-color-shade-1);
+}
+
+a:hover {
+	color: var(--alt-color);
 }
 
 /*

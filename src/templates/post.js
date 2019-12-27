@@ -19,8 +19,8 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-	query($id: String!) {
-		post: blogPost(id: { eq: $id }) {
+	query($slug: String!) {
+		post: blogPost(slug: { eq: $slug }) {
 			title
 			date
 			tags
