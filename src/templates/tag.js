@@ -7,10 +7,10 @@ import Tag from "../layout/tag"
 
 export default ({ pageContext, data }) => {
 	const tag = extractTag(pageContext.tag, data.tags.nodes)
-	const posts = extractTagPostsWithoutSeries(tag, data.posts.nodes)
+	const postSlugs = extractSlugsWithoutSeries(tag, data.posts.nodes)
 	const options = {
 		title: tag.title + " Posts",
-		posts,
+		postSlugs,
 	}
 	if (tag.content) options.descriptionHtmlAst = tag.content.htmlAst
 	return (
@@ -32,8 +32,12 @@ const extractTag = (contextTag, dataTags) =>
 					.join(" "),
 		  }
 
-const extractTagPostsWithoutSeries = (tag, posts) =>
-	tag.series ? posts.filter(post => !tag.series.includes(post.slug)) : posts
+const extractSlugsWithoutSeries = (tag, posts) => {
+	const nonSeriesPosts = tag.series
+		? posts.filter(post => !tag.series.includes(post.slug))
+		: posts
+	return nonSeriesPosts.map(post => post.slug)
+}
 
 export const pageQuery = graphql`
 	query($tag: String) {
@@ -53,7 +57,6 @@ export const pageQuery = graphql`
 		) {
 			nodes {
 				slug
-				title
 			}
 		}
 	}

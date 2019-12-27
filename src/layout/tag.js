@@ -1,19 +1,19 @@
 import React from "react"
 
 import ArticleHeader from "../components/articleHeader"
-import Link from "../components/link"
+import PostList from "../components/postList"
 import RenderHtml from "../infra/renderHtml"
 
 import layout from "./container.module.css"
 
-const Tag = ({ title, descriptionHtmlAst, posts }) => {
+const Tag = ({ title, descriptionHtmlAst, postSlugs }) => {
 	return (
 		<main>
 			<section>
 				{/* TODO. progress */}
 				<ArticleHeader title={title} />
 				{showDescription(descriptionHtmlAst)}
-				{showPosts(posts)}
+				<PostList postSlugs={postSlugs} />
 			</section>
 		</main>
 	)
@@ -23,19 +23,6 @@ const showDescription = htmlAst =>
 	htmlAst && (
 		<div className={layout.container}>
 			<RenderHtml htmlAst={htmlAst} />
-		</div>
-	)
-
-const showPosts = posts =>
-	posts.length > 0 && (
-		<div className={layout.container}>
-			<ul>
-				{posts.map(post => (
-					<li key={post.slug}>
-						<Link to={post.slug}>{post.title}</Link>
-					</li>
-				))}
-			</ul>
 		</div>
 	)
 
