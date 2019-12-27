@@ -2,6 +2,7 @@ import React from "react"
 import RehypeReact from "rehype-react"
 
 import Link from "../components/link"
+import SeriesList from "../components/seriesList"
 
 const RenderHtml = ({ withAst, htmlAst }) => {
 	const renderAst = new RehypeReact({
@@ -12,6 +13,7 @@ const RenderHtml = ({ withAst, htmlAst }) => {
 		createElement: React.createElement,
 		components: {
 			a: renderLink,
+			"series-list": SeriesList,
 		},
 	}).Compiler
 

@@ -35,10 +35,16 @@ module.exports = {
 			options: {
 				plugins: [
 					{
+						resolve: `gatsby-remark-promote-tags`,
+						options: {
+							tags: ["series-list"],
+						},
+					},
+					{
 						resolve: `gatsby-remark-add-inline-code-language`,
 						options: {
 							inlineCodeMarker: "§",
-						}
+						},
 					},
 					{
 						resolve: `gatsby-remark-prismjs`,
@@ -54,6 +60,9 @@ module.exports = {
 							aliases: {},
 							showLineNumbers: false,
 						},
+					},
+					{
+						resolve: `gatsby-remark-site-specific`,
 					},
 				],
 			},
