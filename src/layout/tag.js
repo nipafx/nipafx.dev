@@ -1,17 +1,18 @@
 import React from "react"
 
 import ArticleHeader from "../components/articleHeader"
+import Tag from "../components/tag"
 import PostList from "../components/postList"
 import RenderHtml from "../infra/renderHtml"
 
 import layout from "./container.module.css"
 
-const Tag = ({ title, descriptionHtmlAst, postSlugs }) => {
+const TagLayout = ({ tag, descriptionHtmlAst, postSlugs }) => {
 	return (
 		<main>
 			<section>
 				{/* TODO. progress */}
-				<ArticleHeader title={title} />
+				<ArticleHeader title={<Tag tag={tag} />} tags={["tags"]} />
 				{showDescription(descriptionHtmlAst)}
 				<PostList postSlugs={postSlugs} />
 			</section>
@@ -26,4 +27,4 @@ const showDescription = htmlAst =>
 		</div>
 	)
 
-export default Tag
+export default TagLayout

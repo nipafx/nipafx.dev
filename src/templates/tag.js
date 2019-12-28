@@ -9,7 +9,7 @@ export default ({ pageContext, data }) => {
 	const tag = extractTag(pageContext.tag, data.tags.nodes)
 	const postSlugs = extractSlugsWithoutSeries(tag, data.posts.nodes)
 	const options = {
-		title: tag.title + " Posts",
+		tag: tag.slug,
 		postSlugs,
 	}
 	if (tag.content) options.descriptionHtmlAst = tag.content.htmlAst
@@ -25,11 +25,6 @@ const extractTag = (contextTag, dataTags) =>
 		? dataTags[0]
 		: {
 				slug: contextTag,
-				// best effort to format the tag
-				title: contextTag
-					.split("-")
-					.map(word => word.charAt(0).toUpperCase() + word.slice(1))
-					.join(" "),
 		  }
 
 const extractSlugsWithoutSeries = (tag, posts) => {
