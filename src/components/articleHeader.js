@@ -12,7 +12,7 @@ const ArticleHeader = ({ title, tags, date }) => {
 	return (
 		<header {...className(layout.container)}>
 			{showDate(date)}
-			<h1 {...className(layout.header, style.title)}>{title}</h1>
+			{showTitle(title)}
 			{showTags(tags)}
 			{/* TODO: teaser */}
 			{/* TODO: image */}
@@ -26,6 +26,8 @@ const showDate = date =>
 			<FormattedDate date={date} />
 		</div>
 	)
+
+const showTitle = title => title && <h1 {...className(layout.header, style.title)}>{title}</h1>
 
 const showTags = tags =>
 	tags &&

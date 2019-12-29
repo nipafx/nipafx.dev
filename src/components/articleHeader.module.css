@@ -1,9 +1,14 @@
+/* based on global.css, fonts.css */
+
 .date {
 	text-align: center;
+	color: var(--fg-color-shade-2);
+	font-size: 16px;
 }
 
 .title {
 	text-align: center;
+	margin: 0.5em 0;
 }
 
 .tags {
@@ -20,4 +25,12 @@
 
 .tags > li::before {
 	content: none;
+}
+
+.tags a:visited {
+	color: unset;
+}
+
+.tags a:hover {
+	color: var(--alt-color);
 }
