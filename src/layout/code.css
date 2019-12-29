@@ -12,7 +12,13 @@
 */
 pre[class*="language-"],
 code[class*="language-"] {
-  color: var(--fg-color);
+  --code-fg-color: var(--fg-color);
+  --code-fg-color-shade-1: var(--fg-color-shade-1);
+  --code-fg-color-shade-2: var(--fg-color-shade-2);
+  --code-alt-color: var(--alt-color);
+  --code-bg-color-shade-1: var(--bg-color-shade-1);
+
+  color: var(--code-fg-color);
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -49,7 +55,7 @@ pre[class*="language-"] {
 :not(pre) > code[class*="language-"] {
   /* padding: .1em .3em; */
   border-radius: .3em;
-  color: var(--fg-color);
+  color: var(--code-fg-color);
   /* background: var(--bg-color); */
 }
 /*********************************************************
@@ -62,10 +68,10 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: var(--fg-color-shade-1);
+  color: var(--code-fg-color-shade-1);
 }
 .token.punctuation {
-  color: var(--fg-color-shade-2);
+  color: var(--code-fg-color-shade-2);
 }
 .token.property,
 .token.tag,
@@ -74,7 +80,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: var(--alt-color);
+  color: var(--code-alt-color);
 }
 .token.selector,
 .token.attr-name,
@@ -82,28 +88,28 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: var(--alt-color);
+  color: var(--code-alt-color);
 }
 .token.operator,
 .token.entity,
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: var(--fg-color);
+  color: var(--code-fg-color);
   /* background: var(--bg-color); */
 }
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  color: var(--alt-color);
+  color: var(--code-alt-color);
 }
 .token.function {
-  color: var(--fg-color);
+  color: var(--code-fg-color);
 }
 .token.regex,
 .token.important,
 .token.variable {
-  color: var(--alt-color);
+  color: var(--code-alt-color);
 }
 .token.important,
 .token.bold {
@@ -131,8 +137,8 @@ pre[class*="language-"] > code[class*="language-"] {
   right: 0;
   padding: inherit 0;
   margin-top: 1em;
-  background: var(--bg-color-shade-1);
-  box-shadow: inset 5px 0 0 var(--alt-color);
+  background: var(--code-bg-color-shade-1);
+  box-shadow: inset 5px 0 0 var(--code-alt-color);
   z-index: 0;
   pointer-events: none;
   line-height: inherit;

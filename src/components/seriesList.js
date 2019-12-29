@@ -21,7 +21,7 @@ const getPostSlugs = slug => {
 			}
 		`
 	)
-	return tags.nodes.filter(tag => tag.slug === slug)[0].series
+	return tags.nodes.find(tag => tag.slug === slug).series
 }
 
 export default SeriesList

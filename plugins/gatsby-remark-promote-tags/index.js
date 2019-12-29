@@ -8,15 +8,14 @@ module.exports = ({ markdownAST }, userOptions) => {
 
 	visit(markdownAST, `paragraph`, (paragraph, index, parent) => {
 		const isTagInRedundantParagraph =
-			paragraph.children.length === 2 &&
+			paragraph.children.length >= 2 &&
 			isOpeningTag(paragraph.children[0], tags) &&
-			isClosingTag(paragraph.children[1], tags)
+			isClosingTag(paragraph.children[paragraph.children.length - 1], tags)
 		if (isTagInRedundantParagraph) {
 			const tagAunts = parent.children
 			const tagWithAunts = [
 				...tagAunts.slice(0, index),
-				paragraph.children[0],
-				paragraph.children[1],
+				...paragraph.children,
 				...tagAunts.slice(index + 1),
 			]
 			parent.children = tagWithAunts

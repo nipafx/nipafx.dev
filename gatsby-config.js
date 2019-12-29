@@ -37,7 +37,7 @@ module.exports = {
 					{
 						resolve: `gatsby-remark-promote-tags`,
 						options: {
-							tags: ["series-list"],
+							tags: ["series-list", "pullquote"],
 						},
 					},
 					{

@@ -2,6 +2,7 @@ import React from "react"
 import RehypeReact from "rehype-react"
 
 import Link from "../components/link"
+import PullQuote from "../components/pullQuote"
 import SeriesList from "../components/seriesList"
 
 const RenderHtml = ({ withAst, htmlAst }) => {
@@ -13,6 +14,7 @@ const RenderHtml = ({ withAst, htmlAst }) => {
 		createElement: React.createElement,
 		components: {
 			a: renderLink,
+			pullquote: PullQuote,
 			"series-list": SeriesList,
 		},
 	}).Compiler
