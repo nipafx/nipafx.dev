@@ -2,20 +2,21 @@ import React from "react"
 
 import FormattedDate from "./formattedDate"
 import Tag from "./tag"
+import Image from "./image"
 
 import { className } from "../infra/functions"
 
 import layout from "../layout/container.module.css"
 import style from "./articleHeader.module.css"
 
-const ArticleHeader = ({ title, tags, date }) => {
+const ArticleHeader = ({ title, tags, date, featuredImage }) => {
 	return (
 		<header {...className(layout.container)}>
 			{showDate(date)}
 			{showTitle(title)}
 			{showTags(tags)}
 			{/* TODO: teaser */}
-			{/* TODO: image */}
+			{showImage(featuredImage)}
 		</header>
 	)
 }
@@ -32,13 +33,22 @@ const showTitle = title => title && <h1 {...className(layout.header, style.title
 const showTags = tags =>
 	tags &&
 	tags.length > 0 && (
-		<ul {...className(style.tags)}>
+		<ul {...className(layout.header, style.tags)}>
 			{tags.map(tag => (
-				<li>
+				<li key={tag}>
 					<Tag tag={tag} link />
 				</li>
 			))}
 		</ul>
+	)
+
+const showImage = featuredImage =>
+	featuredImage && (
+		<Image
+			id={featuredImage}
+			type="post-title"
+			{...className(layout.headerImage, style.image)}
+		/>
 	)
 
 export default ArticleHeader

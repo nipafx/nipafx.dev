@@ -25,6 +25,23 @@ module.exports = {
 			},
 		},
 		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `content-images`,
+				path: `${__dirname}/content/images`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `meta`,
+				path: `${__dirname}/content/meta/`,
+			},
+		},
+		{
+			resolve: `gatsby-transformer-json`,
+		},
+		{
 			resolve: `gatsby-plugin-sharp`,
 		},
 		{

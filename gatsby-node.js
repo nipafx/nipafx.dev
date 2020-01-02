@@ -71,7 +71,7 @@ createPostNodes = (node, createNode, createContentDigest) => {
 		tags: node.frontmatter.tags,
 		description: node.frontmatter.description,
 		socialDescription: node.frontmatter.searchDescription,
-		image: node.frontmatter.image,
+		featuredImage: node.frontmatter.featuredImage,
 		searchKeywords: node.frontmatter.searchKeywords,
 
 		// it would be nice to simply assign `node.html`/`node.htmlAst` to a field,

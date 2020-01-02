@@ -34,3 +34,7 @@
 .tags a:hover {
 	color: var(--alt-color);
 }
+
+.image {
+	margin: 2em 0;
+}

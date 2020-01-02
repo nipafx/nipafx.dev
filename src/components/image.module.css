@@ -1,0 +1,29 @@
+.container {
+	position: relative;
+}
+
+.credits {
+	position: absolute;
+	bottom: 1em;
+	right: 1em;
+
+	padding: 0.5em 1em;
+	line-height: 1;
+	background-color: var(--bg-color);
+
+	display: flex;
+}
+
+.credits > li {
+	padding: 0;
+	text-indent: 0;
+}
+
+.credits > li::before {
+	padding: 0 0.5em;
+	content: "//";
+}
+
+.credits > li:nth-child(1)::before {
+	content: none;
+}

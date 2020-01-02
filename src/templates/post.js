@@ -9,6 +9,7 @@ export default ({ data }) => {
 		title: data.post.title,
 		date: data.post.date,
 		tags: data.post.tags,
+		featuredImage: data.post.featuredImage,
 		htmlAst: data.post.content.htmlAst,
 	}
 	return (
@@ -24,6 +25,7 @@ export const query = graphql`
 			title
 			date
 			tags
+			featuredImage
 			content {
 				htmlAst
 			}

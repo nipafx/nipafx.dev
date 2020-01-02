@@ -11,6 +11,10 @@
 	grid-column: 4 / span 8;
 }
 
+.container > .headerImage {
+	grid-column: 3 / span 10;
+}
+
 .textContainer {
 	grid-column: 1 / span 14;
 	display: grid;

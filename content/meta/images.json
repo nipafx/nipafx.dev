@@ -1,0 +1,2888 @@
+[
+	{
+		"slug": "twoMethodsFromDeepNesting",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "step-by-step",
+		"credits": {
+			"description": "Published by <a href=\"http://opensource.com/sites/default/files/styles/image-full-size/public/images/life/LIFE_dance.png?itok=uK1BgNBj\" title=\"Link to source at opensource.com\">opensource.com</a> under <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\" title=\"Link to Licence\">CC-BY-SA 3.0</a>."
+		},
+		"postId": "75"
+	},
+	{
+		"slug": "Batman-running",
+		"credits": {
+			"description": ""
+		},
+		"postId": "105"
+	},
+	{
+		"slug": "LibFX v0.1.1",
+		"credits": {
+			"description": "GitHub Screenshot of the release tag."
+		},
+		"postId": "100"
+	},
+	{
+		"slug": "vaskas_complex_allinone",
+		"credits": {
+			"description": ""
+		},
+		"postId": "146"
+	},
+	{
+		"slug": "vaskas_complex_inheritance",
+		"credits": {
+			"description": ""
+		},
+		"postId": "146"
+	},
+	{
+		"slug": "vaskas_complex_decorator",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "vaskas_complex_decorated",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "Worflows Of Refactoring at OOP 2014",
+		"credits": {
+			"description": ""
+		},
+		"postId": "267"
+	},
+	{
+		"slug": "The Decorator Pattern with Java8 The Decorator Pattern (simplified)",
+		"credits": {
+			"description": ""
+		},
+		"postId": "233"
+	},
+	{
+		"slug": "The Decorator Pattern (simplified)",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "Simply Explained NPE",
+		"credits": {
+			"description": "Licensed under CC-BY 3.0 by Geek & Poke:\n\nhttp://geek-and-poke.com/geekandpoke/2010/11/12/simply-explained-npe.html"
+		},
+		"postId": "360"
+	},
+	{
+		"slug": "architecture-the-lost-years",
+		"credits": {
+			"description": ""
+		},
+		"postId": "391"
+	},
+	{
+		"slug": "question-box",
+		"credits": {
+			"description": "Licensed under CC-BY 2.0 by Raymond Bryson.\n\nSource:\nhttps://www.flickr.com/photos/f-oxymoron/9647972522/in/gallery-118577234@N05-72157642659168903/",
+			"source": {
+				"url": "https://www.flickr.com/photos/f-oxymoron/9647972522/in/gallery-118577234@N05-72157642659168903/"
+			}
+		},
+		"postId": "429"
+	},
+	{
+		"slug": "question-mark-puzzle",
+		"credits": {
+			"description": "Licensed under CC-BY 2.0 by Horla Varlan.\n\nSource:\nhttps://www.flickr.com/photos/horiavarlan/4273168957/in/photolist-7x9bYE-7vB7fR-7vEVHQ\nI changed the background to white and cropped the image.",
+			"source": {
+				"url": "https://www.flickr.com/photos/horiavarlan/4273168957/in/photolist-7x9bYE-7vB7fR-7vEVHQ"
+			}
+		},
+		"postId": "517"
+	},
+	{
+		"slug": "bit-tunnel",
+		"credits": {
+			"description": "Licensed under CC-BY 2.0 by infocux Technologies.\n\nSource:\nimage: https://www.flickr.com/photos/infocux/8450190120\ninfocux: https://www.flickr.com/photos/infocux/",
+			"source": {
+				"url": "https://www.flickr.com/photos/infocux/8450190120"
+			}
+		},
+		"postId": "555"
+	},
+	{
+		"slug": "favicon_FX",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "favicon_FX_simple",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "serialization-proxy-pattern",
+		"credits": {
+			"description": ""
+		},
+		"postId": "574"
+	},
+	{
+		"slug": "question-mark-written",
+		"credits": {
+			"description": "Licensed under CC-BY 2.0 by Ethan Lofton\n\nsource:\nhttps://www.flickr.com/photos/eleaf/2536358399/",
+			"source": {
+				"url": "https://www.flickr.com/photos/eleaf/2536358399/"
+			}
+		},
+		"postId": "490"
+	},
+	{
+		"slug": "forkme_black",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "forkme_purple",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "forkme_orange",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "CodeFX_ascii as Header.png",
+		"credits": {
+			"description": "http://blog.codefx.org/wp-content/uploads/copy-CodeFX_ascii.png"
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "lambdas-in-java-a-peek-under-the-hood",
+		"credits": {
+			"description": ""
+		},
+		"postId": "651"
+	},
+	{
+		"slug": "javafx-with-attached-source",
+		"credits": {
+			"description": ""
+		},
+		"postId": "683"
+	},
+	{
+		"slug": "multiple-return-statements",
+		"credits": {
+			"description": "Published under CC-BY-2.0 (https://creativecommons.org/licenses/by/2.0/) by JDHancock (https://www.flickr.com/photos/jdhancock/)\nSource https://www.flickr.com/photos/jdhancock/6206667510/in/photolist-assN1N-8u1mPw-94UwKZ-8MSX5N-oXuR28-83N7YS-63unqD-8isJBD"
+		},
+		"postId": "700"
+	},
+	{
+		"slug": "LibFX v0.2.0",
+		"credits": {
+			"description": ""
+		},
+		"postId": "723"
+	},
+	{
+		"slug": "use-listener-handle",
+		"credits": {
+			"description": "Published: https://www.flickr.com/photos/ky_olsen/3133347219/in/photolist-5LTdXV-5LTdXx-8LChMH-8LChMX\nBY: https://www.flickr.com/photos/ky_olsen/\nCC-BY 2.0",
+			"author": {
+				"url": "https://www.flickr.com/photos/ky_olsen/"
+			}
+		},
+		"postId": "741"
+	},
+	{
+		"slug": "instances-non-capturing-lambdas",
+		"credits": {
+			"description": ""
+		},
+		"postId": "788"
+	},
+	{
+		"slug": "2014-end",
+		"credits": {
+			"description": "Published on stockarch (http://stockarch.com/images/events/2014-new-years-even-concept-5781) by cr103 (http://stockarch.com/users/cr103) under CC-BY 3.0 (http://creativecommons.org/licenses/by/3.0/)"
+		},
+		"postId": "852"
+	},
+	{
+		"slug": "2015_new_year",
+		"credits": {
+			"description": "Published by christmasstockimages.com (http://christmasstockimages.com/free/new_year/slides/2015_new_year.htm) under CC-BY 3.0 (http://creativecommons.org/licenses/by/3.0/)."
+		},
+		"postId": "887"
+	},
+	{
+		"slug": "eclipse-friends-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "mozilla-foundation-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "javadoc-8-tag",
+		"credits": {
+			"description": "Source: Brooklyn Museum http://www.brooklynmuseum.org/opencollection/objects/4149/Tag_for_Mummy_of_a_Stonecutter_with_Text_in_Greek_and_Demotic/image/8874/image\nLicense: CC-BY 3-0 http://creativecommons.org/licenses/by/3.0/",
+			"source": {
+				"name": "Brooklyn Museum",
+				"url": "http://www.brooklynmuseum.org/opencollection/objects/4149/Tag_for_Mummy_of_a_Stonecutter_with_Text_in_Greek_and_Demotic/image/8874/image"
+			},
+			"license": {
+				"name": "CC-BY 3-0",
+				"url": "http://creativecommons.org/licenses/by/3.0/"
+			}
+		},
+		"postId": "918"
+	},
+	{
+		"slug": "concepts-default-methods",
+		"credits": {
+			"description": "Image: https://www.flickr.com/photos/seelensturm/4721765618/\nAuthor: https://www.flickr.com/photos/seelensturm/\nLicense: https://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"url": "https://www.flickr.com/photos/seelensturm/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/seelensturm/4721765618/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "959"
+	},
+	{
+		"slug": "haxm",
+		"credits": {
+			"description": ""
+		},
+		"postId": "1025"
+	},
+	{
+		"slug": "value-based",
+		"credits": {
+			"description": "Source: Flickr - https://www.flickr.com/photos/tao_zhyn/442965594/\nBy: Jeremy Schultz - https://www.flickr.com/photos/tao_zhyn/\nLicense: CC-BY 2.0 - https://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "Jeremy Schultz",
+				"url": "https://www.flickr.com/photos/tao_zhyn/"
+			},
+			"source": {
+				"name": "Flickr",
+				"url": "https://www.flickr.com/photos/tao_zhyn/442965594/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "1045"
+	},
+	{
+		"slug": "bitbucket_black",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "bitbucket_orange",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "bitbucket_purple",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "github_black",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "github_orange",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "github_purple",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "newsletter_black",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "newsletter_orange",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "newsletter_purple",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "rss_black",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "rss_orange",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "rss_purple",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "stackoverflow_black",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "stackoverflow_orange",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "stackoverflow_purple",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "twitter_black",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "twitter_orange",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "twitter_purple",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "evolution-to-laptop",
+		"credits": {
+			"description": "Source: http://commons.wikimedia.org/wiki/File:Evolution-des-wissens.jpg\nAuthor: Johanna Pung for Wikimedia Deutschland\nLicense: CC-BY-SA 3.0 http://creativecommons.org/licenses/by-sa/3.0/deed.en",
+			"author": {
+				"url": "Johanna Pung for Wikimedia Deutschland"
+			},
+			"source": {
+				"url": "http://commons.wikimedia.org/wiki/File:Evolution-des-wissens.jpg"
+			},
+			"license": {
+				"name": "CC-BY-SA 3.0",
+				"url": "http://creativecommons.org/licenses/by-sa/3.0/deed.en"
+			}
+		},
+		"postId": "1128"
+	},
+	{
+		"slug": "fsfe-fellowship-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "nicolai-parlog",
+		"credits": {
+			"description": "All Rights reserved by Klaus Mellenthin (http://www.my-photographer.com/)"
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "googleplus_black",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "googleplus_orange",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "googleplus_purple",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "test-collection-implementations-with-guava",
+		"credits": {
+			"description": "Author: http://pixabay.com/en/users/Liza-43162/\nSource: http://pixabay.com/en/guava-green-fruits-edible-plants-188440/\nLicense: CC0 http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+			"author": {
+				"url": "http://pixabay.com/en/users/Liza-43162/"
+			},
+			"source": {
+				"url": "http://pixabay.com/en/guava-green-fruits-edible-plants-188440/"
+			},
+			"license": {
+				"name": "CC0",
+				"url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+			}
+		},
+		"postId": "1214"
+	},
+	{
+		"slug": "elvis-operator",
+		"credits": {
+			"description": "Source: http://www.flickr.com/photos/that_chrysler_guy/8361254955\nAuthor: That Hartford Guy https://www.flickr.com/photos/that_chrysler_guy/\nLicense: https://creativecommons.org/licenses/by-sa/2.0/",
+			"author": {
+				"name": "That Hartford Guy",
+				"url": "https://www.flickr.com/photos/that_chrysler_guy/"
+			},
+			"source": {
+				"url": "http://www.flickr.com/photos/that_chrysler_guy/8361254955"
+			},
+			"license": {
+				"name": "CC-BY-SA 2.0",
+				"url": "https://creativecommons.org/licenses/by-sa/2.0/"
+			}
+		},
+		"postId": "1236"
+	},
+	{
+		"slug": "agile-architecture",
+		"credits": {
+			"description": ""
+		},
+		"postId": "1267"
+	},
+	{
+		"slug": "interface-evolution-with-default-methods-II",
+		"credits": {
+			"description": "Author: Washington State Dept of Transportation https://www.flickr.com/photos/wsdot/\nSource: https://www.flickr.com/photos/wsdot/4679360979\nLicense: CC-BY-NC-ND 2.0: https://creativecommons.org/licenses/by-nc-nd/2.0/",
+			"author": {
+				"name": "Washington State Dept of Transportation",
+				"url": "https://www.flickr.com/photos/wsdot/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/wsdot/4679360979"
+			},
+			"license": {
+				"name": "CC-BY-NC-ND 2.0",
+				"url": "https://creativecommons.org/licenses/by-nc-nd/2.0/"
+			}
+		},
+		"postId": "1153"
+	},
+	{
+		"slug": "project-jigsaw-I",
+		"credits": {
+			"description": "Source: https://www.flickr.com/photos/epublicist/8718123610\nAuthor: Yoel Ben-Avraham  https://www.flickr.com/photos/epublicist/\nLicense: CC-BY-ND 2.0 https://creativecommons.org/licenses/by-nd/2.0/",
+			"author": {
+				"name": "Yoel Ben-Avraham ",
+				"url": "https://www.flickr.com/photos/epublicist/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/epublicist/8718123610"
+			},
+			"license": {
+				"name": "CC-BY-ND 2.0",
+				"url": "https://creativecommons.org/licenses/by-nd/2.0/"
+			}
+		},
+		"postId": "1337"
+	},
+	{
+		"slug": "LibFX v0.2.1",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "crafted-design",
+		"credits": {
+			"description": ""
+		},
+		"postId": "1394"
+	},
+	{
+		"slug": "crafted-design-repositories",
+		"credits": {
+			"description": "source: http://www.slideshare.net/sandromancuso/crafted-design-geecon-2014 (slide 21)",
+			"source": {
+				"url": "http://www.slideshare.net/sandromancuso/crafted-design-geecon-2014"
+			}
+		},
+		"postId": "1394"
+	},
+	{
+		"slug": "crafted-design-responsibilities",
+		"credits": {
+			"description": "source: http://www.slideshare.net/sandromancuso/crafted-design-geecon-2014 (slide 19)",
+			"source": {
+				"url": "http://www.slideshare.net/sandromancuso/crafted-design-geecon-2014"
+			}
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "crafted-design-flow",
+		"credits": {
+			"description": "source: http://www.slideshare.net/sandromancuso/crafted-design-geecon-2014 (slide 29)",
+			"source": {
+				"url": "http://www.slideshare.net/sandromancuso/crafted-design-geecon-2014"
+			}
+		},
+		"postId": "1394"
+	},
+	{
+		"slug": "crafted-design-packages",
+		"credits": {
+			"description": "source: http://www.slideshare.net/sandromancuso/crafted-design-geecon-2014 (slide 25)",
+			"source": {
+				"url": "http://www.slideshare.net/sandromancuso/crafted-design-geecon-2014"
+			}
+		},
+		"postId": "1394"
+	},
+	{
+		"slug": "JDeps-Maven-Plugin v0.1",
+		"credits": {
+			"description": ""
+		},
+		"postId": "1465"
+	},
+	{
+		"slug": "jep253-jigsaw",
+		"credits": {
+			"description": "Source: http://jfx.wikia.com/wiki/JavaFX_Logo_-_Centigrade\nAuthor: Flosweb http://jfx.wikia.com/wiki/User:Flosweb\nLicense: CC BY-SA https://creativecommons.org/licenses/by-sa/3.0/",
+			"author": {
+				"name": "Flosweb",
+				"url": "http://jfx.wikia.com/wiki/User:Flosweb"
+			},
+			"source": {
+				"url": "http://jfx.wikia.com/wiki/JavaFX_Logo_-_Centigrade"
+			},
+			"license": {
+				"name": "CC BY-SA",
+				"url": "https://creativecommons.org/licenses/by-sa/3.0/"
+			}
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "transforming-collections",
+		"credits": {
+			"description": "Author:\nRooners Toy Photography\nhttps://www.flickr.com/photos/rooners/\n\nSource: https://www.flickr.com/photos/rooners/5193607922/\n\nLicense:\nCC-BY-NC-ND 2.0\nhttps://creativecommons.org/licenses/by-nc-nd/2.0/",
+			"author": {
+				"name": "Rooners Toy Photography",
+				"url": "https://www.flickr.com/photos/rooners/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/rooners/5193607922/"
+			},
+			"license": {
+				"name": "CC-BY-NC-ND 2.0",
+				"url": "https://creativecommons.org/licenses/by-nc-nd/2.0/"
+			}
+		},
+		"postId": "1533"
+	},
+	{
+		"slug": "LibFX v0.3.0",
+		"credits": {
+			"description": ""
+		},
+		"postId": "1561"
+	},
+	{
+		"slug": "project-jigsaw-2-goals",
+		"credits": {
+			"description": "Author:\nRiccardo Cuppini\nhttps://www.flickr.com/photos/cuppini/\n\nSource:\nhttps://www.flickr.com/photos/cuppini/15243688300/\n\nLicense:\nCC-BY-NC-ND 2.0\nhttps://creativecommons.org/licenses/by-nc-nd/2.0/",
+			"author": {
+				"name": "Riccardo Cuppini",
+				"url": "https://www.flickr.com/photos/cuppini/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/cuppini/15243688300/"
+			},
+			"license": {
+				"name": "CC-BY-NC-ND 2.0",
+				"url": "https://creativecommons.org/licenses/by-nc-nd/2.0/"
+			}
+		},
+		"postId": "1583"
+	},
+	{
+		"slug": "project-jigsaw-3b-jdk-modularization",
+		"credits": {
+			"description": ""
+		},
+		"postId": "1606"
+	},
+	{
+		"slug": "project-jigsaw-3a-features",
+		"credits": {
+			"description": "Author:\ndroetker0912\nhttps://www.flickr.com/photos/droetker0912/\n\nSource: \nhttps://www.flickr.com/photos/droetker0912/5542920908\n\nLicense:\nCC-BY-NC-SA 2.0\nhttps://creativecommons.org/licenses/by-nc-sa/2.0/",
+			"author": {
+				"name": "droetker0912",
+				"url": "https://www.flickr.com/photos/droetker0912/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/droetker0912/5542920908"
+			},
+			"license": {
+				"name": "CC-BY-NC-SA 2.0",
+				"url": "https://creativecommons.org/licenses/by-nc-sa/2.0/"
+			}
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "comment-your-fucking-code",
+		"credits": {
+			"description": "Author: http://www.igorclark.net/\n\nSource: http://blog.wk.com/2011/10/21/why-we-are-not-hiring-creative-technologists/\n\nLicense: https://twitter.com/igorclark/status/620672190573346824",
+			"author": {
+				"url": "http://www.igorclark.net/"
+			},
+			"source": {
+				"url": "http://blog.wk.com/2011/10/21/why-we-are-not-hiring-creative-technologists/"
+			},
+			"license": {
+				"url": "https://twitter.com/igorclark/status/620672190573346824"
+			}
+		},
+		"postId": "1696"
+	},
+	{
+		"slug": "thoughts-on-clean-comments",
+		"credits": {
+			"description": "Author:\nduncan c\nhttps://www.flickr.com/photos/duncan/\n\nSource: \nhttps://www.flickr.com/photos/duncan/215267578\n\nLicense:\nCC-BY-NC 2.0\nhttps://creativecommons.org/licenses/by-nc/2.0/",
+			"author": {
+				"name": "duncan c",
+				"url": "https://www.flickr.com/photos/duncan/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/duncan/215267578"
+			},
+			"license": {
+				"name": "CC-BY-NC 2.0",
+				"url": "https://creativecommons.org/licenses/by-nc/2.0/"
+			}
+		},
+		"postId": "1726"
+	},
+	{
+		"slug": "thoughts-on-comments",
+		"credits": {
+			"description": "Author:\nFarhad Sadykov\nhttps://www.flickr.com/photos/fsadykov/\n\nSource: \nhttps://www.flickr.com/photos/fsadykov/19465934622/\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "Farhad Sadykov",
+				"url": "https://www.flickr.com/photos/fsadykov/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/fsadykov/19465934622/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "1726"
+	},
+	{
+		"slug": "thoughts-on-comments-II",
+		"credits": {
+			"description": "Author:\nPhilippe Moreau Chevrolet\nhttps://www.flickr.com/photos/likethefox/\n\nSource: \nhttps://www.flickr.com/photos/likethefox/6081828722\n\nLicense:\nCC-BY-NC-ND 2.0\nhttps://creativecommons.org/licenses/by-nc-nd/2.0/",
+			"author": {
+				"name": "Philippe Moreau Chevrolet",
+				"url": "https://www.flickr.com/photos/likethefox/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/likethefox/6081828722"
+			},
+			"license": {
+				"name": "CC-BY-NC-ND 2.0",
+				"url": "https://creativecommons.org/licenses/by-nc-nd/2.0/"
+			}
+		},
+		"postId": "1726"
+	},
+	{
+		"slug": "eff_logo_full",
+		"credits": {
+			"description": ""
+		},
+		"postId": "824"
+	},
+	{
+		"slug": "adventures-on-the-road-to-project-valhalla",
+		"credits": {
+			"description": "https://www.youtube.com/watch?v=uNgAFSUXuwc"
+		},
+		"postId": "1818"
+	},
+	{
+		"slug": "adventures-on-the-road-to-project-valhalla-multiple-inheritance",
+		"credits": {
+			"description": ""
+		},
+		"postId": "1818"
+	},
+	{
+		"slug": "adventures-on-the-road-to-project-valhalla-any-interface",
+		"credits": {
+			"description": ""
+		},
+		"postId": "1818"
+	},
+	{
+		"slug": "optional-a-strict-approach",
+		"credits": {
+			"description": "Author:\nJD Hancock\nhttps://www.flickr.com/photos/jdhancock/\n\nSource: \nhttps://www.flickr.com/photos/jdhancock/4496110114/\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "JD Hancock",
+				"url": "https://www.flickr.com/photos/jdhancock/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/jdhancock/4496110114/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "1866"
+	},
+	{
+		"slug": "stream-performance-your-ideas",
+		"credits": {
+			"description": "Author:\nKhalid Albaih\nhttps://www.flickr.com/photos/khalidalbaih/\n\nSource: \nhttps://www.flickr.com/photos/khalidalbaih/5134654297/\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "Khalid Albaih",
+				"url": "https://www.flickr.com/photos/khalidalbaih/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/khalidalbaih/5134654297/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "1983"
+	},
+	{
+		"slug": "taxonomy-of-comments-contract",
+		"credits": {
+			"description": ""
+		},
+		"postId": "1769"
+	},
+	{
+		"slug": "taxonomy-of-comments",
+		"credits": {
+			"description": "Author:\nGlynLowe\nhttps://www.flickr.com/photos/glynlowe/\n\nSource: \nhttps://www.flickr.com/photos/glynlowe/8494249993/\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/\n\nEdits:\nChanged field of view and colorization",
+			"author": {
+				"name": "GlynLowe",
+				"url": "https://www.flickr.com/photos/glynlowe/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/glynlowe/8494249993/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "1769"
+	},
+	{
+		"slug": "taxonomy-of-comments-narration",
+		"credits": {
+			"description": ""
+		},
+		"postId": "1769"
+	},
+	{
+		"slug": "taxonomy-of-comments-technical",
+		"credits": {
+			"description": ""
+		},
+		"postId": "1769"
+	},
+	{
+		"slug": "taxonomy-of-comments-historical",
+		"credits": {
+			"description": ""
+		},
+		"postId": "1769"
+	},
+	{
+		"slug": "diaspora_black",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "diaspora_purple",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jmeter-tutorial",
+		"credits": {
+			"description": "Author:\nwplynn\nhttps://www.flickr.com/photos/warrenlynn/\n\nSource:\nhttps://www.flickr.com/photos/warrenlynn/3426240727\n\nLicense:\nCC-BY-ND 2.0\nhttps://creativecommons.org/licenses/by-nd/2.0/",
+			"author": {
+				"name": "wplynn",
+				"url": "https://www.flickr.com/photos/warrenlynn/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/warrenlynn/3426240727"
+			},
+			"license": {
+				"name": "CC-BY-ND 2.0",
+				"url": "https://creativecommons.org/licenses/by-nd/2.0/"
+			}
+		},
+		"postId": "2119"
+	},
+	{
+		"slug": "jmeter-tutorial-advanced-elements",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jmeter-tutorial-basic-elements",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2119"
+	},
+	{
+		"slug": "jmeter-tutorial-extracting-variables-from-response",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jmeter-tutorial-login-with-csv",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jar-hell",
+		"credits": {
+			"description": "Author:\nWellcome Library, London\nhttps://wellcomelibrary.org/\n\nSource:\nhttps://commons.wikimedia.org/wiki/File:An_angel_leading_a_soul_into_hell._Oil_painting_by_a_followe_Wellcome_L0030887.jpg\n\nLicense:\nCC-BY 4.0\nhttps://creativecommons.org/licenses/by/4.0/",
+			"author": {
+				"name": "Wellcome Library, London",
+				"url": "https://wellcomelibrary.org/"
+			},
+			"source": {
+				"url": "https://commons.wikimedia.org/wiki/File:An_angel_leading_a_soul_into_hell._Oil_painting_by_a_followe_Wellcome_L0030887.jpg"
+			},
+			"license": {
+				"name": "CC-BY 4.0",
+				"url": "https://creativecommons.org/licenses/by/4.0/"
+			}
+		},
+		"postId": "2189"
+	},
+	{
+		"slug": "module-hell",
+		"credits": {
+			"description": "Flipped by me\n\nAuthor:\nWellcome Library, London\nhttps://www.flickr.com/photos/warrenlynn/\n\nSource:\nhttps://commons.wikimedia.org/wiki/File:An_angel_leading_a_soul_into_hell._Oil_painting_by_a_followe_Wellcome_L0030887.jpg\n\nLicense:\nCC-BY 4.0\nhttps://creativecommons.org/licenses/by/4.0/",
+			"author": {
+				"name": "Wellcome Library, London",
+				"url": "https://www.flickr.com/photos/warrenlynn/"
+			},
+			"source": {
+				"url": "https://commons.wikimedia.org/wiki/File:An_angel_leading_a_soul_into_hell._Oil_painting_by_a_followe_Wellcome_L0030887.jpg"
+			},
+			"license": {
+				"name": "CC-BY 4.0",
+				"url": "https://creativecommons.org/licenses/by/4.0/"
+			}
+		},
+		"postId": "2147"
+	},
+	{
+		"slug": "stream-findfirst-findany-reduce",
+		"credits": {
+			"description": "Author:\nStephen Depolo\nhttps://www.flickr.com/photos/stevendepolo/\n\nSource:\nhttps://www.flickr.com/photos/stevendepolo/6228420376/\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "Stephen Depolo",
+				"url": "https://www.flickr.com/photos/stevendepolo/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/stevendepolo/6228420376/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "2238"
+	},
+	{
+		"slug": "playvideo_black",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "playvideo_dark",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "playvideo_purple",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "javaone-project-jigsaw-jdk-structure",
+		"credits": {
+			"description": "Copyright © 2015, Oracle and/or its affiliates. All rights reserved."
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "javaone-project-jigsaw-platform-modules",
+		"credits": {
+			"description": "Copyright © 2015, Oracle and/or its affiliates. All rights reserved."
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "javaone-project-jigsaw-automatic-modules",
+		"credits": {
+			"description": "Copyright © 2015, Oracle and/or its affiliates. All rights reserved."
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "javaone-project-jigsaw-library-modules",
+		"credits": {
+			"description": "Copyright © 2015, Oracle and/or its affiliates. All rights reserved."
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "javaone-project-jigsaw-migration-done",
+		"credits": {
+			"description": "Copyright © 2015, Oracle and/or its affiliates. All rights reserved."
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "javaone-project-jigsaw-migration-scenario",
+		"credits": {
+			"description": "Copyright © 2015, Oracle and/or its affiliates. All rights reserved."
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "javaone-project-jigsaw-implied-readability",
+		"credits": {
+			"description": "Copyright © 2015, Oracle and/or its affiliates. All rights reserved."
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "javaone-project-jigsaw-layers-class-loaders",
+		"credits": {
+			"description": "Copyright © 2015, Oracle and/or its affiliates. All rights reserved."
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "javaone-project-jigsaw-layers-loader-delegation",
+		"credits": {
+			"description": "Copyright © 2015, Oracle and/or its affiliates. All rights reserved."
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "javaone-project-jigsaw-seatbelt",
+		"credits": {
+			"description": "Copyright © 2015, Oracle and/or its affiliates. All rights reserved."
+		},
+		"postId": "2380"
+	},
+	{
+		"slug": "javaone-project-jigsaw-prepare-sf",
+		"credits": {
+			"description": "Author:\nRicardo Villar\nhttps://www.flickr.com/photos/rvillar/\n\nSource:\nhttps://www.flickr.com/photos/rvillar/3790349080\n\nLicense:\nCC-BY-NC 2.0\nhttps://creativecommons.org/licenses/by-nc/2.0/",
+			"author": {
+				"name": "Ricardo Villar",
+				"url": "https://www.flickr.com/photos/rvillar/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/rvillar/3790349080"
+			},
+			"license": {
+				"name": "CC-BY-NC 2.0",
+				"url": "https://creativecommons.org/licenses/by-nc/2.0/"
+			}
+		},
+		"postId": "2372"
+	},
+	{
+		"slug": "javaone-project-jigsaw-introduction-sf",
+		"credits": {
+			"description": "Author:\nChristian Arballo\nhttps://www.flickr.com/photos/arballoimages/\n\nSource:\nhttps://www.flickr.com/photos/arballoimages/11095571233/\n\nLicense:\nCC-BY-NC 2.0\nhttps://creativecommons.org/licenses/by-nc/2.0/",
+			"author": {
+				"name": "Christian Arballo",
+				"url": "https://www.flickr.com/photos/arballoimages/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/arballoimages/11095571233/"
+			},
+			"license": {
+				"name": "CC-BY-NC 2.0",
+				"url": "https://creativecommons.org/licenses/by-nc/2.0/"
+			}
+		},
+		"postId": "2379"
+	},
+	{
+		"slug": "javaone-project-jigsaw-advanced-sf",
+		"credits": {
+			"description": "Author:\nJoe Parks\nhttps://www.flickr.com/photos/parksjd/\n\nSource:\nhttps://www.flickr.com/photos/parksjd/9162806331/\n\nLicense:\nCC-BY-NC 2.0\nhttps://creativecommons.org/licenses/by-nc/2.0/",
+			"author": {
+				"name": "Joe Parks",
+				"url": "https://www.flickr.com/photos/parksjd/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/parksjd/9162806331/"
+			},
+			"license": {
+				"name": "CC-BY-NC 2.0",
+				"url": "https://creativecommons.org/licenses/by-nc/2.0/"
+			}
+		},
+		"postId": "2381"
+	},
+	{
+		"slug": "javaone-project-jigsaw-under-the-hood-sf",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2380"
+	},
+	{
+		"slug": "JUnitLambda",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2427"
+	},
+	{
+		"slug": "delay-of-Java-9-release-proposed",
+		"credits": {
+			"description": "Author:\nLee Jordan\nhttps://www.flickr.com/photos/leejordan/\n\nSource:\nhttps://www.flickr.com/photos/leejordan/2347982593/\n\nLicense:\nCC-BY-SA 2.0\nhttps://creativecommons.org/licenses/by-sa/2.0/",
+			"author": {
+				"name": "Lee Jordan",
+				"url": "https://www.flickr.com/photos/leejordan/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/leejordan/2347982593/"
+			},
+			"license": {
+				"name": "CC-BY-SA 2.0",
+				"url": "https://creativecommons.org/licenses/by-sa/2.0/"
+			}
+		},
+		"postId": "2485"
+	},
+	{
+		"slug": "JDeps-Maven-Plugin v0.2",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2507"
+	},
+	{
+		"slug": "jigsaw-hands-on-guide-advent",
+		"credits": {
+			"description": "Author:\nTina D\nhttps://www.flickr.com/photos/littlestuffme/\n\nSource:\nhttps://www.flickr.com/photos/littlestuffme/10599733413/\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "Tina D",
+				"url": "https://www.flickr.com/photos/littlestuffme/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/littlestuffme/10599733413/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "2540"
+	},
+	{
+		"slug": "2015_end",
+		"credits": {
+			"description": "Author:\nRobert Anders\nhttps://www.flickr.com/photos/schwarzbrot/\n\nSource:\nhttps://www.flickr.com/photos/schwarzbrot/20447504269\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "Robert Anders",
+				"url": "https://www.flickr.com/photos/schwarzbrot/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/schwarzbrot/20447504269"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "2568"
+	},
+	{
+		"slug": "2016_beginning",
+		"credits": {
+			"description": "Author:\npeaceful-jp-scenery\nhttps://www.flickr.com/photos/peaceful-jp-scenery/\n\nSource:\nhttps://www.flickr.com/photos/peaceful-jp-scenery/15486305505/\n\nLicense:\nCC-BY-NC-ND 2.0\nhttps://creativecommons.org/licenses/by-nc-nd/2.0/",
+			"author": {
+				"name": "peaceful-jp-scenery",
+				"url": "https://www.flickr.com/photos/peaceful-jp-scenery/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/peaceful-jp-scenery/15486305505/"
+			},
+			"license": {
+				"name": "CC-BY-NC-ND 2.0",
+				"url": "https://creativecommons.org/licenses/by-nc-nd/2.0/"
+			}
+		},
+		"postId": "2572"
+	},
+	{
+		"slug": "nipa_profil",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "implied-readability",
+		"credits": {
+			"description": "Author:\nPeter Hopper\nhttps://www.flickr.com/photos/whisperwolf/\n\nSource:\nhttps://www.flickr.com/photos/whisperwolf/3675980379/\n\nLicense:\nCC-BY-NC 2.0\nhttps://creativecommons.org/licenses/by-nc/2.0/",
+			"author": {
+				"name": "Peter Hopper",
+				"url": "https://www.flickr.com/photos/whisperwolf/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/whisperwolf/3675980379/"
+			},
+			"license": {
+				"name": "CC-BY-NC 2.0",
+				"url": "https://creativecommons.org/licenses/by-nc/2.0/"
+			}
+		},
+		"postId": "2641"
+	},
+	{
+		"slug": "implied-readability-requires-public",
+		"credits": {
+			"description": "http://yuml.me/edit/0015a8bb\n\n[Dependent; (uses Guava's 'ImmutableList' in its public API){bg:violet}]->[Depended-Upon; (Guava containing 'ImmutableList'){bg:violet}]\n\n[Other Modules; (implicitly read Guava){bg:orange}]->[Dependent; (uses Guava's 'ImmutableList' in its public API){bg:violet}]\n\n[Other Modules; (implicitly read Guava){bg:orange}]-.->[Depended-Upon; (Guava containing 'ImmutableList'){bg:violet}]"
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "implied-readability-requires",
+		"credits": {
+			"description": "Code and edit link were lost; start with the other graph."
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "costs-benefits-comments",
+		"credits": {
+			"description": "Author:\nAnthony Wright\nhttps://www.flickr.com/photos/awri127/\n\nSource:\nhttps://www.flickr.com/photos/awri127/12493325045/\n\nLicense:\nCC-BY-NC-ND 2.0\nhttps://creativecommons.org/licenses/by-nc-nd/2.0/",
+			"author": {
+				"name": "Anthony Wright",
+				"url": "https://www.flickr.com/photos/awri127/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/awri127/12493325045/"
+			},
+			"license": {
+				"name": "CC-BY-NC-ND 2.0",
+				"url": "https://creativecommons.org/licenses/by-nc-nd/2.0/"
+			}
+		},
+		"postId": "1770"
+	},
+	{
+		"slug": "reasons-against-blogging",
+		"credits": {
+			"description": "Source: http://giphy.com/gifs/11SJ52YouBaDFS",
+			"source": {
+				"url": "http://giphy.com/gifs/11SJ52YouBaDFS"
+			}
+		},
+		"postId": "2697"
+	},
+	{
+		"slug": "reasons-against-blogging",
+		"credits": {
+			"description": "Author:\ndarkday\nhttps://www.flickr.com/photos/drainrat/\n\nSource:\nhttps://www.flickr.com/photos/drainrat/16786733075/\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "darkday",
+				"url": "https://www.flickr.com/photos/drainrat/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/drainrat/16786733075/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "2697"
+	},
+	{
+		"slug": "junit-5-setup",
+		"credits": {
+			"description": "Author:\nThomas Leth-Olsen\nhttps://www.flickr.com/photos/thomasletholsen/\n\nSource:\nhttps://www.flickr.com/photos/thomasletholsen/8553236056/\n\nLicense:\nCC-BY-SA 2.0\nhttps://creativecommons.org/licenses/by-sa/2.0/",
+			"author": {
+				"name": "Thomas Leth-Olsen",
+				"url": "https://www.flickr.com/photos/thomasletholsen/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/thomasletholsen/8553236056/"
+			},
+			"license": {
+				"name": "CC-BY-SA 2.0",
+				"url": "https://creativecommons.org/licenses/by-sa/2.0/"
+			}
+		},
+		"postId": "2736"
+	},
+	{
+		"slug": "atom-on-gentoo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2765"
+	},
+	{
+		"slug": "junit-5-basics",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "junit-5-extension-model",
+		"credits": {
+			"description": "Author:\nTony Walmsley\nhttps://www.flickr.com/photos/twalmsley/\n\nSource:\nhttps://www.flickr.com/photos/twalmsley/6825340663\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "Tony Walmsley",
+				"url": "https://www.flickr.com/photos/twalmsley/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/twalmsley/6825340663"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "2903"
+	},
+	{
+		"slug": "doomed-code-review",
+		"credits": {
+			"description": "Author:\nRyan and Sarah Deeds\nhttps://www.flickr.com/photos/deedsfam/\n\nSource:\nhttps://www.flickr.com/photos/deedsfam/9515006780/\n\nLicense:\nCC-BY-SA 2.0\nhttps://creativecommons.org/licenses/by-sa/2.0/",
+			"author": {
+				"name": "Ryan and Sarah Deeds",
+				"url": "https://www.flickr.com/photos/deedsfam/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/deedsfam/9515006780/"
+			},
+			"license": {
+				"name": "CC-BY-SA 2.0",
+				"url": "https://creativecommons.org/licenses/by-sa/2.0/"
+			}
+		},
+		"postId": "2945"
+	},
+	{
+		"slug": "level-up",
+		"credits": {
+			"description": "Author:\nA. Pagliaricci ♦\nhttps://www.flickr.com/photos/doscronopios/\n\nSource:\nhttps://www.flickr.com/photos/doscronopios/5459170197/\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "A. Pagliaricci ♦",
+				"url": "https://www.flickr.com/photos/doscronopios/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/doscronopios/5459170197/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "2951"
+	},
+	{
+		"slug": "jug_ch_logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jug-stutgart-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jug-karlsruhe-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "junit-5-conditions",
+		"credits": {
+			"description": "Author:\nCWCS Managed Hosting\nhttp://www.cwcs.co.uk/\n\nSource:\nhttps://www.flickr.com/photos/122969584@N07/13778195773\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "CWCS Managed Hosting",
+				"url": "http://www.cwcs.co.uk/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/122969584@N07/13778195773"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "3044"
+	},
+	{
+		"slug": "puzzle-people",
+		"credits": {
+			"description": "Author:\nKevin Dooley\nhttps://www.flickr.com/photos/pagedooley/\n\nSource:\nhttps://www.flickr.com/photos/pagedooley/14555354976/\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/\nI clipped the image",
+			"author": {
+				"name": "Kevin Dooley",
+				"url": "https://www.flickr.com/photos/pagedooley/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/pagedooley/14555354976/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jmsia-fake-cover",
+		"credits": {
+			"description": ""
+		},
+		"postId": "3095"
+	},
+	{
+		"slug": "devoxx-pl-speaker",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "under-construction",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jeeconf-2016-art",
+		"credits": {
+			"description": ""
+		},
+		"postId": "3140"
+	},
+	{
+		"slug": "jeeconf-2016-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "3140"
+	},
+	{
+		"slug": "jeeconf-2016-park",
+		"credits": {
+			"description": ""
+		},
+		"postId": "3140"
+	},
+	{
+		"slug": "jeeconf-2016-center",
+		"credits": {
+			"description": ""
+		},
+		"postId": "3140"
+	},
+	{
+		"slug": "jeeconf-2016-maidan",
+		"credits": {
+			"description": ""
+		},
+		"postId": "3140"
+	},
+	{
+		"slug": "implementing-equals-correctly",
+		"credits": {
+			"description": "Author:\nPixel Fantasy\nhttps://www.flickr.com/photos/techthis/\n\nSource:\nhttps://www.flickr.com/photos/techthis/8594821409/\n\nLicense:\nCC-BY-NC-ND 2.0\nhttps://creativecommons.org/licenses/by-nc-nd/2.0/",
+			"author": {
+				"name": "Pixel Fantasy",
+				"url": "https://www.flickr.com/photos/techthis/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/techthis/8594821409/"
+			},
+			"license": {
+				"name": "CC-BY-NC-ND 2.0",
+				"url": "https://creativecommons.org/licenses/by-nc-nd/2.0/"
+			}
+		},
+		"postId": "3171"
+	},
+	{
+		"slug": "implementing-hashcode-correctly",
+		"credits": {
+			"description": "Author:\nDerek Gavey\nhttps://www.flickr.com/photos/derekgavey/\n\nSource:\nhttps://www.flickr.com/photos/derekgavey/5503822637/\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "Derek Gavey",
+				"url": "https://www.flickr.com/photos/derekgavey/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/derekgavey/5503822637/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "3195"
+	},
+	{
+		"slug": "java-9-stream",
+		"credits": {
+			"description": "Author:\nAndy Arthur\nhttps://www.flickr.com/photos/andyarthur/\n\nSource:\nhttps://www.flickr.com/photos/andyarthur/10441404884/\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "Andy Arthur",
+				"url": "https://www.flickr.com/photos/andyarthur/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/andyarthur/10441404884/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "3226"
+	},
+	{
+		"slug": "vjug-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2976"
+	},
+	{
+		"slug": "java-9-optional",
+		"credits": {
+			"description": "Author:\nLeo Leung\nhttps://www.flickr.com/photos/mleung311/\n\nSource:\nhttps://www.flickr.com/photos/mleung311/9468927282/\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "Leo Leung",
+				"url": "https://www.flickr.com/photos/mleung311/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/mleung311/9468927282/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "3252"
+	},
+	{
+		"slug": "junit-5-dynamic-tests",
+		"credits": {
+			"description": "Author:\nNASA Goddard Space Flight Center \nhttps://www.flickr.com/photos/gsfc/\n\nSource:\nhttps://www.flickr.com/photos/gsfc/7402440272/\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "NASA Goddard Space Flight Center ",
+				"url": "https://www.flickr.com/photos/gsfc/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/gsfc/7402440272/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "3280"
+	},
+	{
+		"slug": "objektforum-ka-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2976"
+	},
+	{
+		"slug": "junit-5-architecture-lean",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "junit-5-architecture-single",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "junit-5-architecture",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "goodbye-disy-hello-sitepoint",
+		"credits": {
+			"description": "Author:\nDamian Gadal\nhttps://www.flickr.com/photos/23024164@N06/\n\nSource:\nhttps://www.flickr.com/photos/23024164@N06/15984621614/\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "Damian Gadal",
+				"url": "https://www.flickr.com/photos/23024164@N06/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/23024164@N06/15984621614/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "3363"
+	},
+	{
+		"slug": "tdc-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2976"
+	},
+	{
+		"slug": "disy-code-reviews-i",
+		"credits": {
+			"description": "Author:\nSebastian Wiertz\nhttps://www.flickr.com/photos/wiertz\n\nSource:\nhttps://www.flickr.com/photos/wiertz/4563724688\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "Sebastian Wiertz",
+				"url": "https://www.flickr.com/photos/wiertz"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/wiertz/4563724688"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "3398"
+	},
+	{
+		"slug": "disy-code-reviews-ii",
+		"credits": {
+			"description": "Author:\nSebastian Wiertz\nhttps://www.flickr.com/photos/wiertz\n\nSource:\nhttps://www.flickr.com/photos/wiertz/4563205031\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "Sebastian Wiertz",
+				"url": "https://www.flickr.com/photos/wiertz"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/wiertz/4563205031"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "3398"
+	},
+	{
+		"slug": "rebutting-stream-tropes",
+		"credits": {
+			"description": "Author:\nDan Zen\nhttps://www.flickr.com/photos/danzen/\n\nSource:\nhttps://www.flickr.com/photos/danzen/2055899778/\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "Dan Zen",
+				"url": "https://www.flickr.com/photos/danzen/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/danzen/2055899778/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "3420"
+	},
+	{
+		"slug": "ultimate-guide-to-java-9",
+		"credits": {
+			"description": "Author:\nGuwashi\nhttp://www.flickr.com/people/16877319@N07\n\nSource:\nhttps://commons.wikimedia.org/wiki/File:Shibuya_Night_(HDR).jpg\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "Guwashi",
+				"url": "http://www.flickr.com/people/16877319@N07"
+			},
+			"source": {
+				"url": "https://commons.wikimedia.org/wiki/File:Shibuya_Night_(HDR).jpg"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "3455"
+	},
+	{
+		"slug": "devoxx-be",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2976"
+	},
+	{
+		"slug": "etc-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2976"
+	},
+	{
+		"slug": "javaland-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2976"
+	},
+	{
+		"slug": "modconf-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2976"
+	},
+	{
+		"slug": "devfest-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2976"
+	},
+	{
+		"slug": "javabin-trondheim-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2976"
+	},
+	{
+		"slug": "disy-code-reviews-iii",
+		"credits": {
+			"description": "Author:\nSebastian Wiertz\nhttps://www.flickr.com/photos/wiertz\n\nSource:\nhttps://www.flickr.com/photos/wiertz/5584753106\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "Sebastian Wiertz",
+				"url": "https://www.flickr.com/photos/wiertz"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/wiertz/5584753106"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "3503"
+	},
+	{
+		"slug": "spjcn-i-new-york",
+		"credits": {
+			"description": "Source: https://unsplash.com/search/new-york?photo=RokFUDqlTIo",
+			"source": {
+				"url": "https://unsplash.com/search/new-york?photo=RokFUDqlTIo"
+			}
+		},
+		"postId": "3516"
+	},
+	{
+		"slug": "what-future-java-might-look-like",
+		"credits": {
+			"description": "Source: https://pixabay.com/en/binocular-sky-telescope-looking-1698658/",
+			"source": {
+				"url": "https://pixabay.com/en/binocular-sky-telescope-looking-1698658/"
+			}
+		},
+		"postId": "3527"
+	},
+	{
+		"slug": "entwicklertag-frankfurt-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "whats-taking-so-long",
+		"credits": {
+			"description": "Source: https://unsplash.com/search/clock?photo=p3Pj7jOYvnM",
+			"source": {
+				"url": "https://unsplash.com/search/clock?photo=p3Pj7jOYvnM"
+			}
+		},
+		"postId": "3537"
+	},
+	{
+		"slug": "voxxed-days-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2976"
+	},
+	{
+		"slug": "jfokus-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2976"
+	},
+	{
+		"slug": "gradle-publish-snapshot-maven-publish",
+		"credits": {
+			"description": "Source: https://unsplash.com/photos/aS4Duj2j7r4",
+			"source": {
+				"url": "https://unsplash.com/photos/aS4Duj2j7r4"
+			}
+		},
+		"postId": "3549"
+	},
+	{
+		"slug": "spjcn-iii-javaone2016-nucleus",
+		"credits": {
+			"description": "Author:\nHubble Heritage\nhttps://www.flickr.com/photos/hubble-heritage/\n\nSource:\nhttps://www.flickr.com/photos/hubble-heritage/8497132547/\n\nLicense:\nCC-BY-SA 2.0\nhttps://creativecommons.org/licenses/by-sa/2.0/",
+			"author": {
+				"name": "Hubble Heritage",
+				"url": "https://www.flickr.com/photos/hubble-heritage/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/hubble-heritage/8497132547/"
+			},
+			"license": {
+				"name": "CC-BY-SA 2.0",
+				"url": "https://creativecommons.org/licenses/by-sa/2.0/"
+			}
+		},
+		"postId": "3573"
+	},
+	{
+		"slug": "2016_end",
+		"credits": {
+			"description": "Source: https://pixabay.com/en/explosion-night-smoke-fireworks-1325471/",
+			"source": {
+				"url": "https://pixabay.com/en/explosion-night-smoke-fireworks-1325471/"
+			}
+		},
+		"postId": "3584"
+	},
+	{
+		"slug": "2017_beginning",
+		"credits": {
+			"description": ""
+		},
+		"postId": "3630"
+	},
+	{
+		"slug": "junit-5-basics-testing-a-stack",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "reflection-vs-encapsulation-module-system",
+		"credits": {
+			"description": "Source: https://en.fotolia.com/id/79319670",
+			"source": {
+				"url": "https://en.fotolia.com/id/79319670"
+			}
+		},
+		"postId": "3692"
+	},
+	{
+		"slug": "quo-vadis-scala",
+		"credits": {
+			"description": ""
+		},
+		"postId": "3708"
+	},
+	{
+		"slug": "elvis-in-java",
+		"credits": {
+			"description": "Author:\nKevin Dooley\nhttps://www.flickr.com/photos/pagedooley/\n\nSource:\nhttps://www.flickr.com/photos/pagedooley/4464019859/\n\nLicense:\nCC-BY 2.0\nhttps://creativecommons.org/licenses/by/2.0/",
+			"author": {
+				"name": "Kevin Dooley",
+				"url": "https://www.flickr.com/photos/pagedooley/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/pagedooley/4464019859/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "3716"
+	},
+	{
+		"slug": "jigsaw-hands-on-services",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2540"
+	},
+	{
+		"slug": "jigsaw-hands-on-splitting-into-modules",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2540"
+	},
+	{
+		"slug": "nipa@JAX-London-2016",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "riga-dev-days-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2976"
+	},
+	{
+		"slug": "42-talents-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "3704"
+	},
+	{
+		"slug": "anonymous-classes",
+		"credits": {
+			"description": "Author:\nAnon Atlas\nhttps://www.flickr.com/photos/anonatlas/\n\nSource:\nhttps://www.flickr.com/photos/anonatlas/28774407766\n\nLicense:\nCC-BY-ND 2.0\nhttps://creativecommons.org/licenses/by-nd/2.0/",
+			"author": {
+				"name": "Anon Atlas",
+				"url": "https://www.flickr.com/photos/anonatlas/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/anonatlas/28774407766"
+			},
+			"license": {
+				"name": "CC-BY-ND 2.0",
+				"url": "https://creativecommons.org/licenses/by-nd/2.0/"
+			}
+		},
+		"postId": "1317"
+	},
+	{
+		"slug": "stream-performance",
+		"credits": {
+			"description": "Author:\nBart\nhttps://www.flickr.com/photos/muffinman71xx\n\nSource: \nhttps://www.flickr.com/photos/muffinman71xx/2325192005\n\nLicense:\nCC-BY-SA 2.0\nhttps://creativecommons.org/licenses/by-sa/2.0/",
+			"author": {
+				"name": "Bart",
+				"url": "https://www.flickr.com/photos/muffinman71xx"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/muffinman71xx/2325192005"
+			},
+			"license": {
+				"name": "CC-BY-SA 2.0",
+				"url": "https://creativecommons.org/licenses/by-sa/2.0/"
+			}
+		},
+		"postId": "1907"
+	},
+	{
+		"slug": "jug-ostfalen-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2976"
+	},
+	{
+		"slug": "repackage-stream-exceptions",
+		"credits": {
+			"description": "Source: https://pixabay.com/en/parcel-field-landscape-sunset-22189/",
+			"source": {
+				"url": "https://pixabay.com/en/parcel-field-landscape-sunset-22189/"
+			}
+		},
+		"postId": "3786"
+	},
+	{
+		"slug": "medium_black",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "medium_orange",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "medium_purple",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "j9ms-cover",
+		"credits": {
+			"description": "Yes, this is going to be the cover."
+		},
+		"postId": "3095"
+	},
+	{
+		"slug": "jug-fr-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2976"
+	},
+	{
+		"slug": "lego-bucket-wheel-excavator",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "meap",
+		"credits": {
+			"description": ""
+		},
+		"postId": "3095"
+	},
+	{
+		"slug": "j9ms-cover-meap",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jpms-optional-dependency-coding-checked",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jpms-optional-dependency-coding-established",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jpms-optional-dependency-coding-internal",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jpms-optional-dependency-conundrum",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jpms-optional-dependency",
+		"credits": {
+			"description": "Source: https://pixabay.com/en/forking-road-split-road-travel-839830/",
+			"source": {
+				"url": "https://pixabay.com/en/forking-road-split-road-travel-839830/"
+			}
+		},
+		"postId": "3846"
+	},
+	{
+		"slug": "bucketwheel",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "lego-sorted",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "java-9-resources",
+		"credits": {
+			"description": "Source: https://pixabay.com/en/books-door-entrance-italy-colors-1655783/",
+			"source": {
+				"url": "https://pixabay.com/en/books-door-entrance-italy-colors-1655783/"
+			}
+		},
+		"postId": "3879"
+	},
+	{
+		"slug": "jug-bremen-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2976"
+	},
+	{
+		"slug": "jug-do-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2976"
+	},
+	{
+		"slug": "junit-5-params-two-values",
+		"credits": {
+			"description": ""
+		},
+		"postId": "3913"
+	},
+	{
+		"slug": "junit-5-params-fancy-name",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "junit-5-params",
+		"credits": {
+			"description": "Source: https://pixabay.com/en/complex-fractal-chaos-grid-clock-664440/",
+			"source": {
+				"url": "https://pixabay.com/en/complex-fractal-chaos-grid-clock-664440/"
+			}
+		},
+		"postId": "3913"
+	},
+	{
+		"slug": "javaforumnord-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jee-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jug-darmstadt-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jug-mannheim-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "nipa_talk",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "weekly#25-bell",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "weekly#25-league",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "weekly#25-scrimmage",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "weekly#25-show",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jdeps-scaffoldhunter-jars",
+		"credits": {
+			"description": ""
+		},
+		"postId": "3954"
+	},
+	{
+		"slug": "jdeps-scaffoldhunter-jars-small",
+		"credits": {
+			"description": ""
+		},
+		"postId": "3954"
+	},
+	{
+		"slug": "jdeps-network",
+		"credits": {
+			"description": "Source: https://pixabay.com/en/star-golden-christmas-connection-209371/",
+			"source": {
+				"url": "https://pixabay.com/en/star-golden-christmas-connection-209371/"
+			}
+		},
+		"postId": "3954"
+	},
+	{
+		"slug": "npr-majors",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "objektforum-ffm-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "basel-one-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "javazone-2017-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "java-9-migration",
+		"credits": {
+			"description": "Source: https://pixabay.com/en/bison-buffalo-group-herd-snow-2237654/",
+			"source": {
+				"url": "https://pixabay.com/en/bison-buffalo-group-herd-snow-2237654/"
+			}
+		},
+		"postId": "3991"
+	},
+	{
+		"slug": "exclamation",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "java-9-migration-planning",
+		"credits": {
+			"description": "Source: https://pixabay.com/en/world-europe-map-connections-1264062/",
+			"source": {
+				"url": "https://pixabay.com/en/world-europe-map-connections-1264062/"
+			}
+		},
+		"postId": "4018"
+	},
+	{
+		"slug": "happy-holidays-2017",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "code-europe-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "gesellschaft-für-informatik-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "java-9-command-line-options",
+		"credits": {
+			"description": ""
+		},
+		"postId": "4044"
+	},
+	{
+		"slug": "JavaZone 2017 - Overflow",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jms-meap-cover",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jms-meap-cover-small",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "welcome-java-9-thumbnail-small",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "playvideo_orange",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "unified-logging",
+		"credits": {
+			"description": "Source: https://unsplash.com/photos/4B-Iz7n26Pk",
+			"source": {
+				"url": "https://unsplash.com/photos/4B-Iz7n26Pk"
+			}
+		},
+		"postId": "4077"
+	},
+	{
+		"slug": "jpms-tutorial-monitor-classes",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jpms-tutorial-monitor-modules",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jpms-tutorial-pieces",
+		"credits": {
+			"description": ""
+		},
+		"postId": "4103"
+	},
+	{
+		"slug": "jpms-tutorial-monitor-classes",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jpms-tutorial-monitor-modules",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jpms-tutorial-directory-hw",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "javaday-2017-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jsr-305",
+		"credits": {
+			"description": ""
+		},
+		"postId": "4156"
+	},
+	{
+		"slug": "var-example",
+		"credits": {
+			"description": ""
+		},
+		"postId": "4184"
+	},
+	{
+		"slug": "thumbnail-Java-10-var-small",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "thumbnail-Java-10-var",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jfokus-2018-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "maven-java-9",
+		"credits": {
+			"description": ""
+		},
+		"postId": "4231"
+	},
+	{
+		"slug": "2017-2018",
+		"credits": {
+			"description": ""
+		},
+		"postId": "4268"
+	},
+	{
+		"slug": "jprofessionals-2017-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2976"
+	},
+	{
+		"slug": "geekout-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "java-9-tutorial",
+		"credits": {
+			"description": "Source: https://pixabay.com/en/number-digit-nine-9-background-1982274/",
+			"source": {
+				"url": "https://pixabay.com/en/number-digit-nine-9-background-1982274/"
+			}
+		},
+		"postId": "4289"
+	},
+	{
+		"slug": "multi-release-jars",
+		"credits": {
+			"description": "Source: https://unsplash.com/photos/4UbSaPKGRqc",
+			"source": {
+				"url": "https://unsplash.com/photos/4UbSaPKGRqc"
+			}
+		},
+		"postId": "4334"
+	},
+	{
+		"slug": "unified-logging-diagram",
+		"credits": {
+			"description": ""
+		},
+		"postId": "4077"
+	},
+	{
+		"slug": "mr-jars-version-jar",
+		"credits": {
+			"description": ""
+		},
+		"postId": "4334"
+	},
+	{
+		"slug": "mr-jars-version-src",
+		"credits": {
+			"description": ""
+		},
+		"postId": "4334"
+	},
+	{
+		"slug": "casting-java-8-and-beyond",
+		"credits": {
+			"description": "Source: https://pixabay.com/en/drain-domain-domna-slag-2747070/",
+			"source": {
+				"url": "https://pixabay.com/en/drain-domain-domna-slag-2747070/"
+			}
+		},
+		"postId": "1683"
+	},
+	{
+		"slug": "devoxx-uk",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "inovex-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "app-cds",
+		"credits": {
+			"description": "Source; https://unsplash.com/photos/ttbCwN_mWic"
+		},
+		"postId": "4390"
+	},
+	{
+		"slug": "java-saigon-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "2976"
+	},
+	{
+		"slug": "write-the-docs-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jdays-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "javazone-2018-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "var-intersection-type-venn",
+		"credits": {
+			"description": ""
+		},
+		"postId": "4447"
+	},
+	{
+		"slug": "var-anonymous-classes",
+		"credits": {
+			"description": "Image: https://www.flickr.com/photos/wendelinjacober/14881778717/\nArtist: Wendelin Jacober, https://www.flickr.com/photos/wendelinjacober\nLicense: CC-BY 2.0, https://creativecommons.org/licenses/by/2.0/",
+			"source": {
+				"url": "https://www.flickr.com/photos/wendelinjacober/14881778717/"
+			},
+			"license": {
+				"name": "CC-BY 2.0,",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		},
+		"postId": "4464"
+	},
+	{
+		"slug": "softwerkskammer-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "var-traits",
+		"credits": {
+			"description": "Source: https://pixabay.com/en/peas-pea-pod-vegetables-food-pod-610184/\nLicense: CC0",
+			"source": {
+				"url": "https://pixabay.com/en/peas-pea-pod-vegetables-food-pod-610184/"
+			},
+			"license": {
+				"name": "CC0",
+				"url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+			}
+		},
+		"postId": "4482"
+	},
+	{
+		"slug": "junit-5-basics-named-test",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "junit-5-hierarchical-test-output",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "bedcon-logo-2018",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jokerconf-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "junit-5-dynamic-point-tests-output",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "Drukwerk",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "java-11-migration",
+		"credits": {
+			"description": "Alternatives: https://unsplash.com/photos/MagqGwVEK7Q\n\nLicense: CC0\nsource: https://pixabay.com/en/bison-buffalo-herd-wildlife-1581895/",
+			"source": {
+				"url": "https://pixabay.com/en/bison-buffalo-herd-wildlife-1581895/"
+			},
+			"license": {
+				"name": "CC0\nsource",
+				"url": "https://pixabay.com/en/bison-buffalo-herd-wildlife-1581895/"
+			}
+		},
+		"postId": "4575"
+	},
+	{
+		"slug": "thumbnail-java-next-small",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "http2-basics",
+		"credits": {
+			"description": "Source: https://unsplash.com/photos/8gWEAAXJjtI\nCreator: https://unsplash.com/@quinoal\nLicense: https://unsplash.com/license",
+			"author": {
+				"url": "https://unsplash.com/@quinoal"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/8gWEAAXJjtI"
+			},
+			"license": {
+				"url": "https://unsplash.com/license"
+			}
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "http2-reactive",
+		"credits": {
+			"description": "Source: https://unsplash.com/photos/ImcUkZ72oUs",
+			"source": {
+				"url": "https://unsplash.com/photos/ImcUkZ72oUs"
+			}
+		},
+		"postId": "4659"
+	},
+	{
+		"slug": "thumbnail-Java-12-switch-small",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "java-scripts",
+		"credits": {
+			"description": "Source: https://unsplash.com/photos/gL-7_NtZpYI",
+			"source": {
+				"url": "https://unsplash.com/photos/gL-7_NtZpYI"
+			}
+		},
+		"postId": "4690"
+	},
+	{
+		"slug": "java-11-gems-jdk-8197594",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "java-11-gems-so-a",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "java-11-gems-so-qa",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "java-11-gems-money",
+		"credits": {
+			"description": ""
+		},
+		"postId": "4706"
+	},
+	{
+		"slug": "java-11-gems-diamond",
+		"credits": {
+			"description": "Source: https://pixabay.com/en/diamond-brilliant-gem-jewel-shiny-1186139/",
+			"source": {
+				"url": "https://pixabay.com/en/diamond-brilliant-gem-jewel-shiny-1186139/"
+			}
+		},
+		"postId": "4706"
+	},
+	{
+		"slug": "java-12-switch",
+		"credits": {
+			"description": "Source: https://unsplash.com/photos/siRbJlln-xA",
+			"source": {
+				"url": "https://unsplash.com/photos/siRbJlln-xA"
+			}
+		},
+		"postId": "4737"
+	},
+	{
+		"slug": "twitch_black",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "twitch_orange",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "twitch_purple",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "teeing-collector",
+		"credits": {
+			"description": "Source: https://pixabay.com/photos/dinosaur-tyrannosaurus-dino-t-rex-3960178/",
+			"source": {
+				"url": "https://pixabay.com/photos/dinosaur-tyrannosaurus-dino-t-rex-3960178/"
+			}
+		},
+		"postId": "4798"
+	},
+	{
+		"slug": "devsum-2019-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "java-12-guide",
+		"credits": {
+			"description": "Source: https://unsplash.com/photos/Gc-sbPFGmYc",
+			"source": {
+				"url": "https://unsplash.com/photos/Gc-sbPFGmYc"
+			}
+		},
+		"postId": "4816"
+	},
+	{
+		"slug": "jug-nürnberg-logo",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "accento-save",
+		"credits": {
+			"description": ""
+		},
+		"postId": "0"
+	},
+	{
+		"slug": "jakarta-ee-turmoil",
+		"credits": {
+			"description": ""
+		},
+		"postId": "4848"
+	}
+]
