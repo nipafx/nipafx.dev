@@ -2,15 +2,15 @@ import React from "react"
 
 import { flatten, setAltColorVar } from "../infra/functions"
 
-import Header from "../components/header"
-import Footer from "../components/footer"
+import SiteHeader from "../components/siteHeader"
+import SiteFooter from "../components/siteFooter"
 
 const Site = ({ altColor, children }) =>
 	flatten(
 		<div style={setAltColorVar(altColor)}>
-			<Header />
+			<SiteHeader />
 			{children}
-			<Footer />
+			<SiteFooter />
 		</div>
 	)
 

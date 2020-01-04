@@ -13,6 +13,16 @@ exports.sourceNodes = ({ actions, createContentDigest }) => {
 		},
 	})
 	createNode({
+		id: `article`,
+		parent: null,
+		children: [],
+		internal: {
+			type: `ArticleCollection`,
+			content: ``,
+			contentDigest: createContentDigest(``),
+		},
+	})
+	createNode({
 		id: `tag`,
 		parent: null,
 		children: [],
@@ -27,24 +37,7 @@ exports.sourceNodes = ({ actions, createContentDigest }) => {
 exports.onCreateNode = ({ node, getNode, actions, createContentDigest }) => {
 	const { createNodeField, createNode, deleteNode } = actions
 
-	if ([`ImageSharp`, `MarkdownRemark`].includes(node.internal.type)) {
-		// add a field `collection` with the source instance (e.g. `src-images`),
-		// so GraphQL queries can use that information to filter by it
-		createNodeField({
-			node,
-			name: `collection`,
-			value: getNode(node.parent).sourceInstanceName,
-		})
-
-		// add a field `id` matching the file name, so it can be used to easily identify nodes by file name
-		const relative = getNode(node.parent).relativePath
-		const file = relative.substring(0, relative.lastIndexOf(`.`)).replace(`/`, `-`)
-		createNodeField({
-			node,
-			name: `id`,
-			value: file,
-		})
-	}
+	createFields(node, getNode, createNodeField)
 
 	if (node.internal.type === `MarkdownRemark`) {
 		// draft nodes shouldn't show up anywhere during a production build
@@ -54,15 +47,64 @@ exports.onCreateNode = ({ node, getNode, actions, createContentDigest }) => {
 		}
 
 		createPostNodes(node, createNode, createContentDigest)
+		createArticleNodes(node, createNode, createContentDigest)
 		createTagNodes(node, createNode, createContentDigest)
 	}
 }
 
+createFields = (node, getNode, createNodeField) => {
+	if (![`ImageSharp`, `MarkdownRemark`].includes(node.internal.type)) return
+
+	// add a field `collection` with the source instance (e.g. `articles`),
+	// so GraphQL queries can use that information to filter by it
+	createNodeField({
+		node,
+		name: `collection`,
+		value: getNode(node.parent).sourceInstanceName,
+	})
+
+	// add a field `id` matching the file name, so it can be used to easily identify nodes by file name
+	const relative = getNode(node.parent).relativePath
+	const file = relative.substring(0, relative.lastIndexOf(`.`)).replace(`/`, `-`)
+	createNodeField({
+		node,
+		name: `id`,
+		value: file,
+	})
+}
+
 createPostNodes = (node, createNode, createContentDigest) => {
-	if (node.fields.collection !== `posts`)
-		return
+	if (![`articles`].includes(node.fields.collection)) return
 
 	const post = {
+		id: `${node.fields.id}-as-post`,
+
+		title: node.frontmatter.title,
+		slug: node.frontmatter.slug,
+		type: node.fields.collection,
+		date: node.frontmatter.date,
+		tags: node.frontmatter.tags,
+		description: node.frontmatter.description,
+		featuredImage: node.frontmatter.featuredImage,
+
+		parent: `post`,
+		children: [],
+		internal: {
+			type: `Post`,
+			content: ``,
+			contentDigest: createContentDigest(``),
+		},
+	}
+
+	if (node.frontmatter.draft) post.draft = node.frontmatter.draft
+
+	createNode(post)
+}
+
+createArticleNodes = (node, createNode, createContentDigest) => {
+	if (node.fields.collection !== `articles`) return
+
+	const article = {
 		id: node.fields.id,
 
 		title: node.frontmatter.title,
@@ -77,29 +119,28 @@ createPostNodes = (node, createNode, createContentDigest) => {
 		// it would be nice to simply assign `node.html`/`node.htmlAst` to a field,
 		// but remark creates them later (in setFieldsOnGraphQLNodeType[1]), so they
 		// don't exist yet; hooking into that phase seems complicated;
-		// the best solution seems to be to refer to the entire node (ugh!) with an
-		// undocumented API[2] and query `html` one step removed
+		// the best solution seems to be to refer to the entire node (ugh!) with
+		// `___NODE`[2] and query `html` one step removed
 		// [1] https://github.com/gatsbyjs/gatsby/issues/6230#issuecomment-401438659
-		// [2] https://github.com/gatsbyjs/gatsby/issues/1583#issuecomment-317827660
+		// [2] https://www.gatsbyjs.org/docs/node-creation/#foreign-key-reference-___node
 		content___NODE: node.id,
 
-		parent: `post`,
+		parent: `article`,
 		children: [],
 		internal: {
-			type: `BlogPost`,
+			type: `Article`,
 			content: ``,
 			contentDigest: createContentDigest(``),
 		},
 	}
 
-	if (node.frontmatter.draft) post.draft = node.frontmatter.draft
+	if (node.frontmatter.draft) article.draft = node.frontmatter.draft
 
-	createNode(post)
+	createNode(article)
 }
 
 createTagNodes = (node, createNode, createContentDigest) => {
-	if (node.fields.collection !== `tags`)
-		return
+	if (node.fields.collection !== `tags`) return
 
 	const tag = {
 		id: node.fields.id,
@@ -107,7 +148,7 @@ createTagNodes = (node, createNode, createContentDigest) => {
 		title: node.frontmatter.title,
 		slug: node.frontmatter.slug,
 
-		// see comment on creating blog post nodes
+		// see comment on creating article nodes
 		content___NODE: node.id,
 
 		parent: `tag`,
@@ -129,30 +170,29 @@ exports.createPages = ({ graphql, actions }) => {
 	const { createPage } = actions
 
 	return Promise.all([
-		createPostPages(graphql, createPage),
+		createArticlePages(graphql, createPage),
 		createTagPages(graphql, createPage),
 	])
 }
 
-createPostPages = (graphql, createPage) => {
-	const postTemplate = path.resolve(`./src/templates/post.js`)
+createArticlePages = (graphql, createPage) => {
+	const articleTemplate = path.resolve(`./src/templates/article.js`)
 
 	return graphql(`
 		{
-			posts: allBlogPost {
+			articles: allArticle {
 				nodes {
-					id
 					slug
 				}
 			}
 		}
 	`).then(({ data }) => {
-		data.posts.nodes.forEach(post => {
+		data.articles.nodes.forEach(article => {
 			createPage({
-				path: post.slug,
-				component: postTemplate,
+				path: article.slug,
+				component: articleTemplate,
 				context: {
-					slug: post.slug,
+					slug: article.slug,
 				},
 			})
 		})
@@ -164,7 +204,7 @@ createTagPages = (graphql, createPage) => {
 
 	return graphql(`
 		{
-			tags: allBlogPost {
+			tags: allArticle {
 				group(field: tags) {
 					name: fieldValue
 				}
@@ -176,7 +216,7 @@ createTagPages = (graphql, createPage) => {
 				path: tag.name,
 				component: tagTemplate,
 				context: {
-					tag: tag.name
+					tag: tag.name,
 				},
 			})
 		})

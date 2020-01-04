@@ -7,9 +7,9 @@ import Image from "./image"
 import { className } from "../infra/functions"
 
 import layout from "../layout/container.module.css"
-import style from "./articleHeader.module.css"
+import style from "./postHeader.module.css"
 
-const ArticleHeader = ({ title, tags, date, featuredImage }) => {
+const PostHeader = ({ title, tags, date, featuredImage }) => {
 	return (
 		<header {...className(layout.container)}>
 			{showDate(date)}
@@ -51,4 +51,4 @@ const showImage = featuredImage =>
 		/>
 	)
 
-export default ArticleHeader
+export default PostHeader

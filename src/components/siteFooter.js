@@ -4,7 +4,7 @@ import Link from "./link"
 
 import layout from "../layout/container.module.css"
 
-const Footer = () => (
+const SiteFooter = () => (
 	<header className={layout.container}>
 		<nav>Posts</nav>
 		<div>Logo</div>
@@ -13,4 +13,4 @@ const Footer = () => (
 	</header>
 )
 
-export default Footer
+export default SiteFooter

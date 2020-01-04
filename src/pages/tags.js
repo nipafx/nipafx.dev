@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Site from "../layout/site"
-import ArticleHeader from "../components/articleHeader"
+import PostHeader from "../components/postHeader"
 import Tag from "../components/tag"
 
 import layout from "../layout/container.module.css"
@@ -12,7 +12,7 @@ const TagsPage = ({ data }) => (
 		<main>
 			<section>
 				{/* TODO. progress */}
-				<ArticleHeader title={<Tag tag={"tags"} />} />
+				<PostHeader title={<Tag tag={"tags"} />} />
 				<div className={layout.container}>
 					<ul>
 						{data.tags.group.map(tag => (
@@ -30,7 +30,7 @@ const TagsPage = ({ data }) => (
 
 export const query = graphql`
 	{
-		tags: allBlogPost {
+		tags: allPost {
 			group(field: tags) {
 				slug: fieldValue
 				count: totalCount

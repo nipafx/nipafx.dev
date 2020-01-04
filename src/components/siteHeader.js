@@ -4,7 +4,7 @@ import Link from "./link"
 
 import layout from "../layout/container.module.css"
 
-const Header = () => (
+const SiteHeader = () => (
 	<header className={layout.container}>
 		<div>Logo</div>
 		<Link to="https://codefx.org">Links</Link>
@@ -12,4 +12,4 @@ const Header = () => (
 	</header>
 )
 
-export default Header
+export default SiteHeader

@@ -5,7 +5,7 @@ import { useStaticQuery } from "gatsby"
 import PostList from "./postList"
 
 const SeriesList = ({ slug }) => {
-	return <PostList postSlugs={getPostSlugs(slug)} />
+	return <PostList slugs={getPostSlugs(slug)} />
 }
 
 const getPostSlugs = slug => {

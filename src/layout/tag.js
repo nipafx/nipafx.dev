@@ -1,6 +1,6 @@
 import React from "react"
 
-import ArticleHeader from "../components/articleHeader"
+import PostHeader from "../components/postHeader"
 import Tag from "../components/tag"
 import PostList from "../components/postList"
 import RenderHtml from "../infra/renderHtml"
@@ -12,9 +12,9 @@ const TagLayout = ({ tag, descriptionHtmlAst, postSlugs }) => {
 		<main>
 			<section>
 				{/* TODO. progress */}
-				<ArticleHeader title={<Tag tag={tag} />} tags={["tags"]} />
+				<PostHeader title={<Tag tag={tag} />} tags={["tags"]} />
 				{showDescription(descriptionHtmlAst)}
-				<PostList postSlugs={postSlugs} />
+				<PostList slugs={postSlugs} />
 			</section>
 		</main>
 	)

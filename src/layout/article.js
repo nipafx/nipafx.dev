@@ -1,18 +1,18 @@
 import React from "react"
 
-import ArticleHeader from "../components/articleHeader"
+import PostHeader from "../components/postHeader"
 import PostContent from "../components/postContent"
 
-const Post = ({ title, date, tags, featuredImage, htmlAst }) => {
+const Article = ({ title, date, tags, featuredImage, htmlAst }) => {
 	return (
 		<main>
 			<section>
 				{/* TODO. progress */}
-				<ArticleHeader {...{ title, date, tags, featuredImage }} />
+				<PostHeader {...{ title, date, tags, featuredImage }} />
 				<PostContent htmlAst={htmlAst} />
 			</section>
 		</main>
 	)
 }
 
-export default Post
+export default Article

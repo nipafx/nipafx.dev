@@ -6,10 +6,10 @@ import Link from "./link"
 
 import layout from "../layout/container.module.css"
 
-const PostList = ({ postSlugs }) => {
-	if (postSlugs.length === 0) return null
+const PostList = ({ slugs }) => {
+	if (slugs.length === 0) return null
 
-	const posts = getPosts(postSlugs)
+	const posts = getPosts(slugs)
 
 	return (
 		<div className={layout.container}>
@@ -28,7 +28,7 @@ const getPosts = slugs => {
 	const { posts } = useStaticQuery(
 		graphql`
 			query {
-				posts: allBlogPost {
+				posts: allPost {
 					nodes {
 						slug
 						title

@@ -7,14 +7,14 @@ import Cards from "../components/cards"
 
 const IndexPage = ({ data }) => (
 	<Site>
-		<PostList postSlugs={data.posts.nodes.map(post => post.slug)} />
+		<PostList slugs={data.posts.nodes.map(post => post.slug)} />
 		<Cards />
 	</Site>
 )
 
 export const query = graphql`
 	{
-		posts: allBlogPost(sort: { fields: [date], order: DESC }) {
+		posts: allPost(sort: { fields: [date], order: DESC }) {
 			nodes {
 				slug
 			}

@@ -14,7 +14,7 @@ export default ({ pageContext, data }) => {
 	}
 	if (tag.content) options.descriptionHtmlAst = tag.content.htmlAst
 	return (
-		<Site altColor="blog">
+		<Site altColor="article">
 			<Tag {...options} />
 		</Site>
 	)
@@ -46,7 +46,7 @@ export const pageQuery = graphql`
 				}
 			}
 		}
-		posts: allBlogPost(
+		posts: allPost(
 			sort: { fields: [date], order: DESC }
 			filter: { tags: { in: [$tag] } }
 		) {
