@@ -23,6 +23,16 @@ exports.sourceNodes = ({ actions, createContentDigest }) => {
 		},
 	})
 	createNode({
+		id: `video`,
+		parent: null,
+		children: [],
+		internal: {
+			type: `VideoCollection`,
+			content: ``,
+			contentDigest: createContentDigest(``),
+		},
+	})
+	createNode({
 		id: `tag`,
 		parent: null,
 		children: [],
@@ -48,6 +58,7 @@ exports.onCreateNode = ({ node, getNode, actions, createContentDigest }) => {
 
 		createPostNodes(node, createNode, createContentDigest)
 		createArticleNodes(node, createNode, createContentDigest)
+		createVideoNodes(node, createNode, createContentDigest)
 		createTagNodes(node, createNode, createContentDigest)
 	}
 }
@@ -74,7 +85,7 @@ createFields = (node, getNode, createNodeField) => {
 }
 
 createPostNodes = (node, createNode, createContentDigest) => {
-	if (![`articles`].includes(node.fields.collection)) return
+	if (![`articles`, `videos`].includes(node.fields.collection)) return
 
 	const post = {
 		id: `${node.fields.id}-as-post`,
@@ -139,6 +150,37 @@ createArticleNodes = (node, createNode, createContentDigest) => {
 	createNode(article)
 }
 
+createVideoNodes = (node, createNode, createContentDigest) => {
+	if (node.fields.collection !== `videos`) return
+
+	const video = {
+		id: node.fields.id,
+
+		title: node.frontmatter.title,
+		slug: node.frontmatter.slug,
+		date: node.frontmatter.date,
+		tags: node.frontmatter.tags,
+		description: node.frontmatter.description,
+		socialDescription: node.frontmatter.searchDescription,
+		url: node.frontmatter.url,
+
+		// see comment on creating article nodes
+		content___NODE: node.id,
+
+		parent: `video`,
+		children: [],
+		internal: {
+			type: `Video`,
+			content: ``,
+			contentDigest: createContentDigest(``),
+		},
+	}
+
+	if (node.frontmatter.draft) video.draft = node.frontmatter.draft
+
+	createNode(video)
+}
+
 createTagNodes = (node, createNode, createContentDigest) => {
 	if (node.fields.collection !== `tags`) return
 
@@ -171,6 +213,7 @@ exports.createPages = ({ graphql, actions }) => {
 
 	return Promise.all([
 		createArticlePages(graphql, createPage),
+		createVideoPages(graphql, createPage),
 		createTagPages(graphql, createPage),
 	])
 }
@@ -193,6 +236,30 @@ createArticlePages = (graphql, createPage) => {
 				component: articleTemplate,
 				context: {
 					slug: article.slug,
+				},
+			})
+		})
+	})
+}
+
+createVideoPages = (graphql, createPage) => {
+	const articleTemplate = path.resolve(`./src/templates/video.js`)
+
+	return graphql(`
+		{
+			videos: allVideo {
+				nodes {
+					slug
+				}
+			}
+		}
+	`).then(({ data }) => {
+		data.videos.nodes.forEach(video => {
+			createPage({
+				path: video.slug,
+				component: articleTemplate,
+				context: {
+					slug: video.slug,
 				},
 			})
 		})
