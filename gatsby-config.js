@@ -65,6 +65,18 @@ module.exports = {
 						},
 					},
 					{
+						// use before prismjs (https://www.gatsbyjs.org/packages/gatsby-remark-autolink-headers/#how-to-use)
+						resolve: "gatsby-remark-autolink-headers",
+						options: {
+							icon: `▚`,
+							// for no apparent reason, the resulting HTML does not include this class
+							// (or, for that matter, the aria tag that the plugin adds)
+							className: `header-id-link`,
+							removeAccents: true,
+							enableCustomId: true,
+						},
+					},
+					{
 						resolve: `gatsby-remark-add-inline-code-language`,
 						options: {
 							inlineCodeMarker: "§",
