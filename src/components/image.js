@@ -10,6 +10,7 @@ import style from "./image.module.css"
 
 const Image = ({ id, type, className }) => {
 	const image = getImage(type, id)
+	if (!image.image) return null
 	return (
 		<div {...classNames(className, style.container)}>
 			{/* TODO: specify dimensions (see console warning) / add alt text */}
@@ -52,8 +53,13 @@ const Credits = credits => {
 const getImage = (type, id) => {
 	const imageData = getImageData(type)
 	const img = imageData.allImageSharp.nodes.find(node => node.fields.id === id)
-	const image = isFixedType(type) ? { fixed: img.fixed } : { fluid: img.fluid }
-	const credits = imageData.allImagesJson.nodes.find(node => node.slug === id).credits
+	const image = img
+		? isFixedType(type)
+			? { fixed: img.fixed }
+			: { fluid: img.fluid }
+		: undefined
+	const json = imageData.allImagesJson.nodes.find(node => node.slug === id)
+	const credits = json ? json.credits : undefined
 	return {
 		image,
 		credits,
