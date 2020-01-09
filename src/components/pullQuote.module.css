@@ -3,8 +3,9 @@
 .pull {
 	color: var(--alt-color);
 	font-size: 24px;
-	margin: 4px 0 0 24px;
 	line-height: 1.5;
+
+	margin: 4px 0 0;
 }
 
 .pull code {

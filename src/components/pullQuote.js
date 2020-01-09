@@ -6,7 +6,9 @@ import layout from "../layout/container.module.css"
 import style from "./pullQuote.module.css"
 
 const PullQuote = ({ children }) => (
-	<blockquote {...className(layout.sidebar, style.pull)}>{children}</blockquote>
+	<div {...className(layout.sidebar)}>
+		<blockquote {...className(style.pull)}>{children}</blockquote>
+	</div>
 )
 
 export default PullQuote
