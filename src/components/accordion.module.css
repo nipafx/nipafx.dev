@@ -1,0 +1,39 @@
+.container {
+	overflow: hidden;
+}
+
+.item {
+	width: 100%;
+	overflow: hidden;
+}
+
+.item-checkbox {
+	position: absolute;
+	opacity: 0;
+}
+
+.item-label {
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.item-label:after {
+	content: "▟";
+	margin-right: 8px;
+	text-align: center;
+	transition: all 0.3s;
+}
+
+.item-content {
+	max-height: 0;
+	transition: all 0.3s;
+}
+
+.item-checkbox:checked + .item-label:after {
+	transform: rotate(90deg);
+}
+
+.item-checkbox:checked ~ .item-content {
+	max-height: 100vh;
+}

@@ -10,6 +10,7 @@ export default ({ data }) => {
 		date: data.article.date,
 		tags: data.article.tags,
 		featuredImage: data.article.featuredImage,
+		toc: createTableOfContents(data.article),
 		htmlAst: data.article.content.htmlAst,
 	}
 	return (
@@ -18,6 +19,11 @@ export default ({ data }) => {
 		</Site>
 	)
 }
+
+const createTableOfContents = article =>
+	article.content.tableOfContents
+		.replace(/<a href="[^#"]*(#[^"]*)">([^<]*)<\/a>/g, `<a href="$1" title="$2">$2<\/a>`)
+		.replace(/<p>|<\/p>/g, "")
 
 export const query = graphql`
 	query($slug: String!) {
@@ -28,6 +34,7 @@ export const query = graphql`
 			featuredImage
 			content {
 				htmlAst
+				tableOfContents(pathToSlugField: "frontmatter.slug")
 			}
 		}
 	}

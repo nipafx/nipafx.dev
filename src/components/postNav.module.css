@@ -1,0 +1,76 @@
+.container {
+	display: flex;
+	height: 100%;
+}
+
+.nav {
+	position: sticky;
+	bottom: 100px;
+	align-self: flex-end;
+	width: 100%;
+	margin-top: 1em;
+
+	background-color: var(--bg-color);
+	border: 1px solid var(--fg-color);
+
+	font-size: 16px;
+}
+
+.title {
+	color: var(--bg-color);
+	background-color: var(--fg-color);
+	border-bottom: 1px solid var(--bg-color);
+	margin: 0;
+	padding: 0 8px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.entry-title {
+	padding: 0 8px;
+	font-weight: bold;
+	color: var(--bg-color);
+	background-color: var(--fg-color);
+}
+
+.toc {
+	padding: 0.5em 0;
+}
+
+.toc li {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 0;
+	padding-left: 1.25em;
+	line-height: 1.5em;
+}
+
+.toc li:before {
+	content: "├";
+	font-size: 1.5em;
+}
+
+.toc li:first-child:before {
+	content: "┌";
+}
+
+.toc li:last-child:before {
+	content: "└";
+}
+
+.toc li:only-child:before {
+	content: "╶";
+}
+
+.toc a {
+	text-decoration: none;
+}
+
+.toc a:visited {
+	color: unset;
+}
+
+.toc a:hover {
+	color: var(--alt-color);
+}
