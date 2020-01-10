@@ -33,6 +33,16 @@ exports.sourceNodes = ({ actions, createContentDigest }) => {
 		},
 	})
 	createNode({
+		id: `repo`,
+		parent: null,
+		children: [],
+		internal: {
+			type: `RepoCollection`,
+			content: ``,
+			contentDigest: createContentDigest(``),
+		},
+	})
+	createNode({
 		id: `tag`,
 		parent: null,
 		children: [],
@@ -59,6 +69,7 @@ exports.onCreateNode = ({ node, getNode, actions, createContentDigest }) => {
 		createPostNodes(node, createNode, createContentDigest)
 		createArticleNodes(node, createNode, createContentDigest)
 		createVideoNodes(node, createNode, createContentDigest)
+		createRepoNodes(node, createNode, createContentDigest)
 		createTagNodes(node, createNode, createContentDigest)
 	}
 }
@@ -126,6 +137,7 @@ createArticleNodes = (node, createNode, createContentDigest) => {
 		socialDescription: node.frontmatter.searchDescription,
 		featuredImage: node.frontmatter.featuredImage,
 		searchKeywords: node.frontmatter.searchKeywords,
+		repo: node.frontmatter.repo,
 
 		// it would be nice to simply assign `node.html`/`node.htmlAst` to a field,
 		// but remark creates them later (in setFieldsOnGraphQLNodeType[1]), so they
@@ -162,6 +174,7 @@ createVideoNodes = (node, createNode, createContentDigest) => {
 		tags: node.frontmatter.tags,
 		description: node.frontmatter.description,
 		socialDescription: node.frontmatter.searchDescription,
+		repo: node.frontmatter.repo,
 		url: node.frontmatter.url,
 
 		// see comment on creating article nodes
@@ -179,6 +192,32 @@ createVideoNodes = (node, createNode, createContentDigest) => {
 	if (node.frontmatter.draft) video.draft = node.frontmatter.draft
 
 	createNode(video)
+}
+
+createRepoNodes = (node, createNode, createContentDigest) => {
+	if (node.fields.collection !== `repos`) return
+
+	const repo = {
+		id: node.fields.id,
+
+		title: node.frontmatter.title,
+		slug: node.frontmatter.slug,
+		tags: node.frontmatter.tags,
+		description: node.frontmatter.description,
+		url: node.frontmatter.url,
+
+		parent: `repo`,
+		children: [],
+		internal: {
+			type: `Repo`,
+			content: ``,
+			contentDigest: createContentDigest(``),
+		},
+	}
+
+	if (node.frontmatter.draft) repo.draft = node.frontmatter.draft
+
+	createNode(repo)
 }
 
 createTagNodes = (node, createNode, createContentDigest) => {

@@ -41,6 +41,13 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
+				name: `repos`,
+				path: `${__dirname}/content/repos`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
 				name: `videos`,
 				path: `${__dirname}/content/videos`,
 			},
@@ -104,4 +111,7 @@ module.exports = {
 			},
 		},
 	],
+	mapping: {
+		"Article.repo": `Repo.slug`,
+	},
 }

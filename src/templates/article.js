@@ -12,6 +12,7 @@ export default ({ data }) => {
 		featuredImage: data.article.featuredImage,
 		toc: createTableOfContents(data.article),
 		htmlAst: data.article.content.htmlAst,
+		repo: data.article.repo,
 	}
 	return (
 		<Site altColor="article">
@@ -35,6 +36,11 @@ export const query = graphql`
 			content {
 				htmlAst
 				tableOfContents(pathToSlugField: "frontmatter.slug")
+			}
+			repo {
+				url
+				title
+				description
 			}
 		}
 	}
