@@ -19,7 +19,6 @@
 .title {
 	color: var(--bg-color);
 	background-color: var(--fg-color);
-	border-bottom: 1px solid var(--bg-color);
 	margin: 0;
 	padding: 0 8px;
 	font-size: 18px;
@@ -29,8 +28,6 @@
 .entry-title {
 	padding: 0 8px;
 	font-weight: bold;
-	color: var(--bg-color);
-	background-color: var(--fg-color);
 }
 
 .toc {

@@ -19,7 +19,7 @@
 }
 
 .item-label:after {
-	content: "▟";
+	content: "┛";
 	margin-right: 8px;
 	text-align: center;
 	transition: all 0.3s;
