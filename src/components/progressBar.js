@@ -87,7 +87,10 @@ class ProgressBar extends Component {
 		const viewportHeight = document.documentElement.clientHeight
 
 		const absoluteTarget = (height + this.offset - viewportHeight) * relativeTarget
-		window.scrollTo(0, absoluteTarget)
+		window.scrollTo({
+			top: absoluteTarget,
+			behavior: "smooth",
+		})
 	}
 }
 

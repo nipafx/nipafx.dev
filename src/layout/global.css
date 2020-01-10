@@ -5,6 +5,10 @@ body {
 	--menu-icon-transition: transform var(--menu-transition-duration);
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 /*
  * HEADERS
  */
