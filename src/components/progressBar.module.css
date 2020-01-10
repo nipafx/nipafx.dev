@@ -1,0 +1,9 @@
+.container {
+	background-color: var(--bg-color-shade-1);
+}
+
+.bar {
+	background-color: var(--alt-color);
+	height: 6px;
+	width: 40%;
+}

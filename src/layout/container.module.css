@@ -15,6 +15,10 @@
 	grid-column: 3 / span 10;
 }
 
+.container > .fullWidth {
+	grid-column: 1 / span 14;
+}
+
 .container > .navbar {
 	grid-column: 2 / span 3;
 	/* span all the rows so the nav can be sticky in there;
