@@ -1,6 +1,6 @@
 import React from "react"
 
-import { className } from "../infra/functions"
+import { classNames } from "../infra/functions"
 
 import Accordion from "./accordion"
 import Link from "./link"
@@ -13,8 +13,8 @@ const PostNav = ({ title, repo, toc }) => {
 	if (!toc && !repo) return null
 
 	return (
-		<div {...className(layout.navbar, style.container)}>
-			<section {...className(style.nav)}>
+		<div {...classNames(layout.navbar, style.container)}>
+			<section {...classNames(style.nav)}>
 				<p className={style.title}>{title}</p>
 				<Accordion
 					titleClassName={style.entryTitle}

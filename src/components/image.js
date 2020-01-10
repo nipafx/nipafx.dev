@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-import { className as classNames } from "../infra/functions"
+import { classNames } from "../infra/functions"
 
 import Link from "./link"
 

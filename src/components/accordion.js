@@ -1,6 +1,6 @@
 import React from "react"
 
-import { className } from "../infra/functions"
+import { classNames } from "../infra/functions"
 
 import style from "./accordion.module.css"
 
@@ -27,7 +27,7 @@ const item = (titleClassName, title, item, index) => {
 				type="checkbox"
 				onChange={() => toggleContent(event.target.checked, contentId)}
 			/>
-			<label {...className(style.itemLabel, titleClassName)} htmlFor={checkboxId}>
+			<label {...classNames(style.itemLabel, titleClassName)} htmlFor={checkboxId}>
 				{title}
 			</label>
 			<div id={contentId} className={style.itemContent}>

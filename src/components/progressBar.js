@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-import { className } from "../infra/functions"
+import { classNames } from "../infra/functions"
 
 import style from "./progressBar.module.css"
 
@@ -24,7 +24,7 @@ class ProgressBar extends Component {
 		return (
 			<div
 				id={ProgressBar.CONTAINER}
-				{...className(this.props.className, style.container)}
+				{...classNames(this.props.className, style.container)}
 				onClick={event => this.jumpToPosition(event)}
 			>
 				<div id={ProgressBar.DISPLAY} className={style.bar}></div>

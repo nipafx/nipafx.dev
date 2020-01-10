@@ -4,14 +4,14 @@ import FormattedDate from "./formattedDate"
 import Tag from "./tag"
 import Image from "./image"
 
-import { className } from "../infra/functions"
+import { classNames } from "../infra/functions"
 
 import layout from "../layout/container.module.css"
 import style from "./postHeader.module.css"
 
 const PostHeader = ({ title, tags, date, featuredImage }) => {
 	return (
-		<header {...className(layout.container)}>
+		<header {...classNames(layout.container)}>
 			{showDate(date)}
 			{showTitle(title)}
 			{showTags(tags)}
@@ -23,17 +23,17 @@ const PostHeader = ({ title, tags, date, featuredImage }) => {
 
 const showDate = date =>
 	date && (
-		<div {...className(layout.header, style.date)}>
+		<div {...classNames(layout.header, style.date)}>
 			<FormattedDate date={date} />
 		</div>
 	)
 
-const showTitle = title => title && <h1 {...className(layout.header, style.title)}>{title}</h1>
+const showTitle = title => title && <h1 {...classNames(layout.header, style.title)}>{title}</h1>
 
 const showTags = tags =>
 	tags &&
 	tags.length > 0 && (
-		<ul {...className(layout.header, style.tags)}>
+		<ul {...classNames(layout.header, style.tags)}>
 			{tags.map(tag => (
 				<li key={tag}>
 					<Tag tag={tag} link />
@@ -47,7 +47,7 @@ const showImage = featuredImage =>
 		<Image
 			id={featuredImage}
 			type="post-title"
-			{...className(layout.headerImage, style.image)}
+			{...classNames(layout.headerImage, style.image)}
 		/>
 	)
 

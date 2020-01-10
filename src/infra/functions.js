@@ -10,20 +10,19 @@ export function flatten(nodes) {
 	}, [])
 }
 
-export function altColor(color) {
-	return color
-		? `var(--${color}-color)`
-		: `var(--alt-color)`
+function altColor(color) {
+	return color ? `var(--${color}-color)` : `var(--alt-color)`
 }
 
 export function setAltColorVar(color) {
-	return color
-		? { "--alt-color": `${altColor(color)}` }
-		: null
+	return color ? { "--alt-color": `${altColor(color)}` } : null
 }
 
-export function className() {
+export function classNames() {
 	return {
-		className: Array.prototype.slice.call(arguments).reduce((acc, cur) => `${acc} ${cur}`),
+		className: Array.prototype.slice
+			.call(arguments)
+			.filter(cls => cls !== undefined && cls !== null && cls !== "")
+			.reduce((acc, cur) => `${acc} ${cur}`, ""),
 	}
 }
