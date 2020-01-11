@@ -30,48 +30,6 @@
 	font-weight: bold;
 }
 
-.toc {
-	padding: 0.5em 0;
-}
-
-.toc li {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	padding: 0;
-	padding-left: 1.25em;
-	line-height: 1.5em;
-}
-
-.toc li:before {
-	content: "├";
-	font-size: 1.5em;
-}
-
-.toc li:first-child:before {
-	content: "┌";
-}
-
-.toc li:last-child:before {
-	content: "└";
-}
-
-.toc li:only-child:before {
-	content: "╶";
-}
-
-.toc a {
-	text-decoration: none;
-}
-
-.toc a:visited {
-	color: unset;
-}
-
-.toc a:hover {
-	color: var(--alt-color);
-}
-
 .repo {
 	margin: 0;
 	padding: 0.5em 0.5em 0.5em 1.25em;

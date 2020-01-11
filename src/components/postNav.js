@@ -4,6 +4,7 @@ import { className } from "../infra/functions"
 
 import Accordion from "./accordion"
 import Link from "./link"
+import Toc from "./toc"
 
 import layout from "../layout/container.module.css"
 import style from "./postNav.module.css"
@@ -19,15 +20,13 @@ const PostNav = ({ title, repo, toc }) => {
 					titleClassName={style.entryTitle}
 					titles={["table of contents", "source code"]}
 				>
-					{toc && showToc(toc)}
+					{toc && <Toc toc={toc} />}
 					{repo && showRepo(repo)}
 				</Accordion>
 			</section>
 		</div>
 	)
 }
-
-const showToc = toc => <nav className={style.toc} dangerouslySetInnerHTML={{ __html: toc }} />
 
 const showRepo = repo => (
 	<p className={style.repo}>
