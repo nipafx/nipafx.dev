@@ -128,7 +128,6 @@ pre[data-line] {
 }
 pre[class*="language-"] > code[class*="language-"] {
 	position: relative;
-	z-index: 1;
 }
 .line-highlight {
 	position: absolute;
@@ -138,7 +137,6 @@ pre[class*="language-"] > code[class*="language-"] {
 	margin-top: 1em;
 	background: var(--code-bg-color-shade-1);
 	box-shadow: inset 5px 0 0 var(--code-alt-color);
-	z-index: 0;
 	pointer-events: none;
 	line-height: inherit;
 	white-space: pre;
