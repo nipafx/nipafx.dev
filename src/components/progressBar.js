@@ -1,97 +1,93 @@
-import React, { Component } from "react"
+import React, { useRef, useEffect } from "react"
 
 import { classNames } from "../infra/functions"
 
 import style from "./progressBar.module.css"
 
-class ProgressBar extends Component {
-	static REFERENCE = "progress-bar-reference"
-	static CONTAINER = "progress-bar-container"
-	static DISPLAY = "progress-bar-display"
+export const PROGRESS_BAR_OFFSET = "progress-bar-offset"
+export const PROGRESS_BAR_REFERENCE = "progress-bar-reference"
+const CONTAINER = "progress-bar-container"
+const DISPLAY = "progress-bar-display"
 
-	referenceElement
-	containerElement
-	displayElement
-	active
-	// the offset is needed so that progress is positive on first scroll
-	offset
+const ProgressBar = ({ className }) => {
+	const active = useRef(false)
+	const offset = useRef(0)
+	const referenceElement = useRef(null)
+	const containerElement = useRef(null)
+	const displayElement = useRef(null)
 
-	constructor(props) {
-		super(props)
-	}
-
-	render() {
-		return (
-			<div
-				id={ProgressBar.CONTAINER}
-				{...classNames(this.props.className, style.container)}
-				onClick={event => this.jumpToPosition(event)}
-			>
-				<div id={ProgressBar.DISPLAY} className={style.bar}></div>
-			</div>
-		)
-	}
-
-	componentDidMount() {
-		this.initializeProgress()
-		if (this.active) window.onscroll = () => this.updateProgress()
-		else window.onscroll = null
-	}
-
-	initializeProgress() {
-		this.active = false
-		this.containerElement = document.querySelector("#" + ProgressBar.CONTAINER)
-
-		this.displayElement = document.querySelector("#" + ProgressBar.DISPLAY)
-		if (!this.displayElement) return
-		this.displayProgress(0)
-
-		this.referenceElement = document.querySelector("#" + ProgressBar.REFERENCE)
-		if (!this.referenceElement) return
-		const { top } = this.referenceElement.getBoundingClientRect()
-		this.offset = top
-
-		this.active = true
-		this.containerElement.className += " " + style.active
-		this.updateProgress()
-	}
-
-	updateProgress() {
-		if (!this.active) return
-
-		const { height, top } = this.referenceElement.getBoundingClientRect()
-		const viewportHeight = document.documentElement.clientHeight
-		if (height <= viewportHeight - this.offset) this.displayProgress(1)
-		else {
-			const scrolled = this.offset - top
-			const total = height + this.offset - viewportHeight
-			this.displayProgress(scrolled / total)
+	useEffect(() => {
+		initializeProgress(active, offset, referenceElement, containerElement, displayElement)
+		const scrollListener = () => updateProgress(offset, referenceElement, displayElement)
+		if (active.current) window.addEventListener("scroll", scrollListener)
+		return () => {
+			if (active.current) window.removeEventListener("scroll", scrollListener)
+			containerElement.current.classList.remove(style.active)
 		}
+	})
+	return (
+		<div
+			id={CONTAINER}
+			{...classNames(className, style.container)}
+			onClick={event =>
+				jumpToPosition(active, offset, referenceElement, containerElement, event)
+			}
+		>
+			<div id={DISPLAY} className={style.bar}></div>
+		</div>
+	)
+}
+
+const initializeProgress = (active, offset, referenceElement, containerElement, displayElement) => {
+	containerElement.current = document.querySelector("#" + CONTAINER)
+	displayElement.current = document.querySelector("#" + DISPLAY)
+	if (!displayElement.current) return
+
+	referenceElement.current = document.querySelector("#" + PROGRESS_BAR_REFERENCE)
+	if (!referenceElement.current) return
+	const offsetElement = document.querySelector("#" + PROGRESS_BAR_OFFSET)
+	if (offsetElement) {
+		const { height } = offsetElement.getBoundingClientRect()
+		offset.current = height
 	}
 
-	displayProgress(progress) {
-		const width = Math.max(0, Math.min(progress * 100, 100))
-		this.displayElement.style.width = width + "%"
+	active.current = true
+	containerElement.current.classList.add(style.active)
+	updateProgress(offset, referenceElement, displayElement)
+}
+
+const updateProgress = (offset, referenceElement, displayElement) => {
+	const { height, top } = referenceElement.current.getBoundingClientRect()
+	const viewportHeight = document.documentElement.clientHeight
+	if (height <= viewportHeight - offset.current) displayProgress(displayElement, 1)
+	else {
+		const scrolled = offset.current - top
+		const total = height + offset.current - viewportHeight
+		displayProgress(displayElement, scrolled / total)
 	}
+}
 
-	jumpToPosition(event) {
-		if (!this.active) return
+const displayProgress = (displayElement, progress) => {
+	const width = Math.max(0, Math.min(progress * 100, 100))
+	displayElement.current.style.width = width + "%"
+}
 
-		if (!this.containerElement) return
+const jumpToPosition = (active, offset, referenceElement, containerElement, event) => {
+	if (!active.current || !containerElement.current) return
 
-		const clicked = event.clientX
-		const total = this.containerElement.clientWidth
-		const relativeTarget = clicked / total
+	const { left } = containerElement.current.getBoundingClientRect()
+	const clicked = event.clientX - left
+	const total = containerElement.current.clientWidth
+	const relativeTarget = clicked / total
 
-		const height = this.referenceElement.clientHeight
-		const viewportHeight = document.documentElement.clientHeight
+	const height = referenceElement.current.clientHeight
+	const viewportHeight = document.documentElement.clientHeight
 
-		const absoluteTarget = (height + this.offset - viewportHeight) * relativeTarget
-		window.scrollTo({
-			top: absoluteTarget,
-			behavior: "smooth",
-		})
-	}
+	const absoluteTarget = (height + offset.current - viewportHeight) * relativeTarget
+	window.scrollTo({
+		top: absoluteTarget,
+		behavior: "smooth",
+	})
 }
 
 export default ProgressBar

@@ -9,5 +9,5 @@
 .bar {
 	background-color: var(--alt-color);
 	height: 6px;
-	width: 40%;
+	width: 0;
 }
