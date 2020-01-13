@@ -10,6 +10,8 @@
 .item-checkbox {
 	position: absolute;
 	opacity: 0;
+	/* move to background, so label captures all events (e.g. hover) */
+	z-index: -1;
 }
 
 .item-label {

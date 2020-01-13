@@ -9,13 +9,13 @@ const Accordion = ({ titleClassName, titles, children }) => {
 	return (
 		<div className={style.container}>
 			{children.map((child, index) =>
-				child ? item(titleClassName, titles[index], child, index) : null
+				child ? item(titleClassName, titles[index], child) : null
 			)}
 		</div>
 	)
 }
 
-const item = (titleClassName, title, item, index) => {
+const item = (titleClassName, title, item) => {
 	const id = ("accordion-item-" + Math.random()).replace("0.", "")
 	const checkboxId = id + "-checkbox"
 	const contentId = id + "-content"
@@ -25,7 +25,7 @@ const item = (titleClassName, title, item, index) => {
 				id={checkboxId}
 				className={style.itemCheckbox}
 				type="checkbox"
-				onChange={() => toggleContent(event.target.checked, contentId)}
+				onChange={event => toggleContent(event.target.checked, contentId)}
 			/>
 			<label {...classNames(style.itemLabel, titleClassName)} htmlFor={checkboxId}>
 				{title}
