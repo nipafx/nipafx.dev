@@ -1,6 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
-import { useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 import Link from "./link"
 
