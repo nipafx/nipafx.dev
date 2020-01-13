@@ -1,3 +1,9 @@
+body {
+	--menu-icon: "┛";
+	--menu-transition-duration: 0.3s;
+	--menu-icon-transition: transform var(--menu-transition-duration);
+}
+
 /*
  * HEADERS
  */

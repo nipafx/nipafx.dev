@@ -19,15 +19,15 @@
 }
 
 .item-label:after {
-	content: "┛";
+	content: var(--menu-icon);
 	margin-right: 8px;
 	text-align: center;
-	transition: all 0.3s;
+	transition: transform var(--menu-transition-duration);
 }
 
 .item-content {
 	max-height: 0;
-	transition: all 0.3s;
+	transition: all var(--menu-transition-duration);
 }
 
 .item-checkbox:checked + .item-label:after {
