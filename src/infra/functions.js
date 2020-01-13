@@ -10,14 +10,6 @@ export function flatten(nodes) {
 	}, [])
 }
 
-function altColor(color) {
-	return color ? `var(--${color}-color)` : `var(--alt-color)`
-}
-
-export function setAltColorVar(color) {
-	return color ? { "--alt-color": `${altColor(color)}` } : null
-}
-
 export function classNames() {
 	return {
 		className: Array.prototype.slice

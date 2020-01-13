@@ -14,7 +14,7 @@ export default ({ pageContext, data }) => {
 	}
 	if (tag.content) options.descriptionHtmlAst = tag.content.htmlAst
 	return (
-		<Site altColor="article">
+		<Site className="site">
 			<Tag {...options} />
 		</Site>
 	)

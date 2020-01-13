@@ -4,23 +4,52 @@ body {
 	--bg-color-shade-2: #606060;
 
 	--fg-color: white;
-	--fg-color-shade-1: #CCC;
-	--fg-color-shade-2: #AAA;
+	--fg-color-shade-1: #ccc;
+	--fg-color-shade-2: #aaa;
 
-	--alt-color: #69EA7D;
+	--alt-color: var(--codefx-color);
 
-	--article-color: #ffa500;
+	--nipafx-color: #69ea7d;
+	--codefx-color: #ffa500;
 	--books-color: #7e180a;
 	--discord-color: #7389dc;
-	--github-color: #000;
+	--github-color: #f6f8fa;
 	--hire-color: #666;
 	--medium-color: #18b475;
 	--stackoverflow-color: #f58023;
 	--talks-color: #ff8c6a;
-	--twitch-color: #593e83;
+	--twitch-color: #a970ff;
 	--twitter-color: #1da1f3;
 	--youtube-color: #da281e;
 
 	color: var(--fg-color);
 	background: var(--bg-color);
+}
+
+.article {
+	--alt-color: var(--nipafx-color);
+}
+
+.twitter {
+	--alt-color: var(--twitter-color);
+}
+
+.medium {
+	--alt-color: var(--medium-color);
+}
+
+.youtube {
+	--alt-color: var(--youtube-color);
+}
+
+.twitch {
+	--alt-color: var(--twitch-color);
+}
+
+.github {
+	--alt-color: var(--github-color);
+}
+
+.stackoverflow {
+	--alt-color: var(--stackoverflow-color);
 }

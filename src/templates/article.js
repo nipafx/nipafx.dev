@@ -15,7 +15,7 @@ export default ({ data }) => {
 		repo: data.article.repo,
 	}
 	return (
-		<Site altColor="article">
+		<Site className="article">
 			<Article {...article} />
 		</Site>
 	)

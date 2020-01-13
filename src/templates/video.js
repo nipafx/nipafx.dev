@@ -13,7 +13,7 @@ export default ({ data }) => {
 		htmlAst: data.video.content.htmlAst,
 	}
 	return (
-		<Site altColor="youtube">
+		<Site className="youtube">
 			<Video {...video} />
 		</Site>
 	)

@@ -1,17 +1,19 @@
 import React from "react"
 
-import { flatten, setAltColorVar } from "../infra/functions"
+import { flatten } from "../infra/functions"
 
 import SiteHeader from "../components/siteHeader"
 import SiteFooter from "../components/siteFooter"
 
-const Site = ({ altColor, children }) =>
-	flatten(
-		<div style={setAltColorVar(altColor)}>
+const Site = ({ className, children }) => {
+	className = className || ""
+	return flatten(
+		<div className={className}>
 			<SiteHeader />
 			{children}
 			<SiteFooter />
 		</div>
 	)
+}
 
 export default Site
