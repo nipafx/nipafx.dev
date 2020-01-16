@@ -11,6 +11,7 @@ body {
 
 	--nipafx-color: #69ea7d;
 	--codefx-color: #ffa500;
+	--rss-color: #f0941a;
 	--books-color: #7e180a;
 	--discord-color: #7389dc;
 	--github-color: #f6f8fa;
@@ -28,6 +29,10 @@ body {
 
 .article {
 	--alt-color: var(--nipafx-color);
+}
+
+.rss {
+	--alt-color: var(--rss-color);
 }
 
 .twitter {

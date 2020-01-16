@@ -99,7 +99,7 @@ module.exports = {
 							// This is used to allow setting a language for inline code
 							// (i.e. single backticks) by creating a separator.
 							inlineCodeMarker: "§",
-							// This lets you set up language aliases.  For example,
+							// This lets you set up language aliases. For example,
 							// setting this to '{ sh: "bash" }' will let you use
 							// the language "sh" which will highlight using the
 							// bash highlighter.
@@ -109,6 +109,104 @@ module.exports = {
 					},
 					{
 						resolve: `gatsby-remark-site-specific`,
+					},
+				],
+			},
+		},
+		{
+			resolve: `gatsby-plugin-feed`,
+			options: {
+				query: `
+				{
+					site {
+						siteMetadata {
+							title
+							description
+							siteUrl
+							author
+						}
+					}
+				}
+				`,
+				feeds: [
+					// see "rss" module for documentation on the settings:
+					// https://www.npmjs.com/package/rss#usage
+					{
+						setup: ({ query: { site } }) => {
+							return {
+								title: site.siteMetadata.title,
+								description: site.siteMetadata.description,
+								generator: `Gatsby using "gatsby-plugin-feed" using "rss" (node module)`,
+								feed_url: `${site.siteMetadata.siteUrl}/feed.xml`,
+								site_url: site.siteMetadata.siteUrl,
+								// TODO: add logo as `image_url`
+								managingEditor: site.siteMetadata.author,
+								webMaster: site.siteMetadata.author,
+								// TODO add `copyright` notice
+								language: "en-us",
+								categories: ["java", "software-development", "programming"],
+								pubDate: new Date(),
+							}
+						},
+						serialize: ({ query: { site, posts, articles, videos } }) =>
+							posts.nodes.map(post => {
+								const item = {
+									title: post.title,
+									description: post.description,
+									url: `${site.siteMetadata.siteUrl}/${post.slug}`,
+									guid: `${site.siteMetadata.siteUrl}/${post.slug}`,
+									categories: post.tags,
+									author: site.siteMetadata.author,
+									date: post.date,
+								}
+
+								const article = articles.nodes.find(
+									article => article.slug === post.slug
+								)
+								const video = videos.nodes.find(video => video.slug === post.slug)
+								const content = article
+									? article.content.html
+									: video
+									? `<p><a href="${video.url}">Watch the video.</a></p>${video.content.html}`
+									: null
+								if (content) item.custom_elements = [{ "content:encoded": content }]
+
+								return item
+							}),
+						query: `
+							{
+								posts: allPost(sort: {fields: [date], order: DESC}) {
+									nodes {
+										title
+										slug
+										date
+										description
+										tags
+									}
+								}
+								articles: allArticle {
+									nodes {
+										slug
+										content {
+											html
+										}
+									}
+								}
+								videos: allVideo {
+									nodes {
+										slug
+										url
+										content {
+											html
+										}
+									}
+								}
+							}
+							`,
+						output: "/feed.xml",
+						// `setup` (see above) overrides this, but without `title`,
+						// the plugin logs a warning during the build
+						title: "nipafx",
 					},
 				],
 			},

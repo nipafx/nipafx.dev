@@ -1,6 +1,11 @@
 {
 	"links": [
 		{
+			"title": "RSS",
+			"url": "https://nipafx.dev/feed.xml",
+			"className": "rss"
+		},
+		{
 			"title": "Twitter",
 			"url": "https://twitter.com/nipafx/",
 			"className": "twitter"
