@@ -1,8 +1,9 @@
 body {
 	margin: 0;
 	--menu-icon: "┛";
-	--menu-transition-duration: 0.3s;
 	--menu-icon-transition: transform var(--menu-transition-duration);
+	--menu-transition-duration: 0.2s;
+	--menu-transition: ease-in-out var(--menu-transition-duration)
 }
 
 html {

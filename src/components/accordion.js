@@ -53,9 +53,6 @@ const collapseContent = item => {
 		item.style.transition = null
 		item.style.maxHeight = null
 	})
-
-	// once that is done, restore the transition and
-	requestAnimationFrame(() => {})
 }
 
 const expandContent = item => {

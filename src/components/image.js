@@ -46,8 +46,6 @@ const Credits = credits => {
 			)}
 		</ul>
 	)
-
-	return creditText
 }
 
 const getImage = (type, id) => {

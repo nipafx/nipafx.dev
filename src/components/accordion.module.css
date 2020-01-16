@@ -24,12 +24,12 @@
 	content: var(--menu-icon);
 	margin-right: 8px;
 	text-align: center;
-	transition: transform var(--menu-transition-duration);
+	transition: transform var(--menu-transition);
 }
 
 .item-content {
 	max-height: 0;
-	transition: all var(--menu-transition-duration);
+	transition: all var(--menu-transition);
 }
 
 .item-checkbox:checked + .item-label:after {
