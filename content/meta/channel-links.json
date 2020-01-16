@@ -1,0 +1,34 @@
+{
+	"links": [
+		{
+			"title": "Twitter",
+			"url": "https://twitter.com/nipafx/",
+			"className": "twitter"
+		},
+		{
+			"title": "Medium",
+			"url": "https://medium.com/codefx-weekly",
+			"className": "medium"
+		},
+		{
+			"title": "YouTube",
+			"url": "https://youtube.com/codefx",
+			"className": "youtube"
+		},
+		{
+			"title": "Twitch",
+			"url": "https://twitch.tv/nipafx",
+			"className": "twitch"
+		},
+		{
+			"title": "GitHub",
+			"url": "https://github.com/codefx-org",
+			"className": "github"
+		},
+		{
+			"title": "StackOverflow",
+			"url": "http://stackoverflow.com/users/2525313/nicolai-parlog",
+			"className": "stackoverflow"
+		}
+	]
+}

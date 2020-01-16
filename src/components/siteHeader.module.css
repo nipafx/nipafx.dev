@@ -1,0 +1,32 @@
+.header {
+	position: sticky;
+	top: 0;
+	background-color: var(--bg-color);
+	/* for some unknown reason title images scroll on top of the header */
+	z-index: 1;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto auto;
+	grid-template-areas:
+		"logo links"
+		"logo menu";
+}
+
+.logo {
+	grid-area: logo;
+	justify-self: start;
+	align-self: center;
+}
+
+.links {
+	grid-area: links;
+	justify-self: end;
+}
+
+.menu {
+	grid-area: menu;
+	justify-self: end;
+}

@@ -1,0 +1,122 @@
+{
+	"entries": [
+		{
+			"title": "Words",
+			"children": [
+				{
+					"title": "Tags",
+					"children": "$ARTICLE-TAGS"
+				},
+				{
+					"title": "Blog Posts",
+					"url": "/",
+					"className": "article"
+				},
+				{
+					"title": "Newsletters",
+					"url": "https://medium.com/codefx-weekly",
+					"className": "medium"
+				},
+				{
+					"title": "Articles",
+					"url": "/"
+				},
+				{
+					"title": "The JMS",
+					"url": "https://www.manning.com/books/the-java-module-system?a_aid=nipa&a_bid=869915cb"
+				}
+			]
+		},
+		{
+			"title": "Videos",
+			"children": [
+				{
+					"title": "Tags",
+					"children": "$VIDEO-TAGS"
+				},
+				{
+					"title": "Recordings",
+					"url": "/",
+					"className": "youtube"
+				},
+				{
+					"title": "Streams",
+					"url": "/",
+					"className": "twitch"
+				}
+			]
+		},
+		{
+			"title": "Code",
+			"children": [
+				{
+					"title": "Java After Eight",
+					"url": "/java-after-eight"
+				},
+				{
+					"title": "Demos, demos, demos",
+					"url": "/demos"
+				},
+				{
+					"title": "JUnit Pioneer",
+					"url": "/junit-pioneer"
+				},
+				{
+					"title": "LibFX",
+					"url": "/libfx"
+				}
+			]
+		},
+		{
+			"title": "Talks",
+			"children": [
+				{
+					"title": "Past",
+					"url": "/past-talks"
+				},
+				{
+					"title": "Upcoming",
+					"url": "/upcoming-talks"
+				},
+				{
+					"title": "Slides",
+					"url": "https://slides.codefx.org"
+				}
+			]
+		},
+		{
+			"title": "Trainings",
+			"children": [
+				{
+					"title": "In-house",
+					"url": "/trainings#in-house"
+				},
+				{
+					"title": "Conferences",
+					"url": "/trainings#conferences"
+				},
+				{
+					"title": "Online",
+					"url": "https://courses.codefx.org"
+				}
+			]
+		},
+		{
+			"title": "About",
+			"children": [
+				{
+					"title": "About Me",
+					"url": "/nicolai-parlog"
+				},
+				{
+					"title": "Hire Me",
+					"url": "/hire"
+				},
+				{
+					"title": "Privacy",
+					"url": "/privacy"
+				}
+			]
+		}
+	]
+}

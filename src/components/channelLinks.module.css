@@ -1,0 +1,22 @@
+.container {
+	color: var(--fg-color-shade-2);
+	font-size: 0.75em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.container a {
+	text-decoration: none;
+}
+
+.container > *:not(:last-child):after {
+	content: " // "
+}
+
+.container a:visited {
+	color: var(--fg-color-shade-2)
+}
+
+.container a:hover {
+	color: var(--alt-color)
+}

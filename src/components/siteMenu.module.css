@@ -1,0 +1,177 @@
+.menu {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	white-space: nowrap;
+	/* clicking a menu entry twice to open and close it,
+	   shouldn't select the text */
+	user-select: none;
+
+	margin: 0.75em 0;
+}
+
+.menu a {
+	text-decoration: none;
+}
+
+.menu a:visited {
+	color: var(--bg-color);
+}
+
+.menu a:hover {
+	color: var(--alt-color);
+}
+
+.menu input {
+	position: absolute;
+	opacity: 0;
+	/* move to background, so label captures all events (e.g. hover) */
+	z-index: -1;
+}
+
+.menu label {
+	cursor: pointer;
+}
+
+.menu label:hover {
+	color: var(--alt-color);
+}
+
+.menu input:checked + label {
+	color: var(--alt-color);
+}
+
+.animated label:after {
+	transition: var(--menu-icon-transition)
+}
+
+/*
+ * TOP LEVEL
+ */
+
+.top-level-container {
+	display: flex;
+}
+
+.top-level-entry {
+	position: relative;
+	margin: 0 12px;
+}
+
+.top-level-entry:first-child {
+	margin-left: 0;
+}
+
+.top-level-entry:last-child {
+	margin-right: 0;
+}
+
+.top-level-label:after {
+	display: inline-block;
+	content: var(--menu-icon);
+	margin-left: 8px;
+	text-align: center;
+}
+
+.top-level-checkbox:checked + .top-level-label:after {
+	transform: rotate(90deg);
+}
+
+/*
+ * SECOND LEVEL
+ */
+
+.second-level-outer-container {
+	max-height: 0;
+	overflow: hidden;
+	position: absolute;
+
+	margin: 0 -2em;
+}
+
+.top-level-checkbox:checked ~ .second-level-outer-container {
+	max-height: 100vh;
+	overflow: unset;
+}
+
+.second-level-container {
+	color: var(--bg-color);
+	background-color: var(--fg-color);
+	padding: 1em 2em;
+	margin-top: 0.75em;
+}
+
+.second-level-container:before {
+	color: var(--fg-color);
+	position: absolute;
+	content: "◆";
+	font-size: 2.5em;
+	margin-top: -1.25em;
+	margin-left: 1rem;
+	z-index: -1;
+}
+
+.second-level-entry {
+	position: relative;
+}
+
+.second-level-label {
+	display: flex;
+	justify-content: space-between;
+}
+
+.second-level-label:after {
+	display: inline-block;
+	content: var(--menu-icon);
+	text-align: center;
+}
+
+.second-level-checkbox:checked + .second-level-label:after {
+	transform: rotate(90deg);
+}
+
+/*
+ * THIRD LEVEL
+ */
+
+.third-level-outer-container {
+	max-width: 0;
+	max-height: 0;
+	overflow: hidden;
+	position: absolute;
+	left: calc(100% + 2em);
+	top: -1em;
+}
+
+.second-level-checkbox:checked ~ .third-level-outer-container {
+	max-width: 100vw;
+	max-height: 100vh;
+}
+
+.third-level-container {
+	background-color: var(--fg-color-shade-1);
+	white-space: normal;
+	padding: 1em 2em;
+	width: 400px;
+}
+
+.third-level-entry:not(:last-child) {
+	margin-right: 1em;
+}
+
+.tag {
+	text-transform: initial;
+	letter-spacing: initial;
+	font-size: 16px;
+}
+
+/*
+ * ANIMATION
+ */
+
+.animated-max-height {
+	transition: max-height 3s;
+}
+
+.animated {
+	transition: width var(--menu-transition), height var(--menu-transition);
+}
