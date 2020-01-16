@@ -1,6 +1,9 @@
 module.exports = {
 	siteMetadata: {
-		title: `blog.nipafx.org`,
+		title: `nipafx`,
+		description: `You. Me. Java.`,
+		siteUrl: `https://nipafx.dev`,
+		author: `Nicolai Parlog`,
 	},
 	plugins: [
 		{

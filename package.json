@@ -1,9 +1,9 @@
 {
-	"name": "nipafx.org",
+	"name": "nipafx.dev",
 	"private": true,
-	"description": "Gatsby sites for nipafx.org",
+	"description": "Gatsby sites for nipafx.dev",
 	"version": "0.1.0",
-	"author": "Nicolai Parlog <nicolai@nipafx.org>",
+	"author": "Nicolai Parlog <nicolai@nipafx.dev>",
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^1.2.25",
 		"@fortawesome/free-brands-svg-icons": "^5.11.2",
