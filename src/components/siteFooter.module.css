@@ -1,5 +1,5 @@
 .footer {
-	border-top: 6px solid var(--alt-color);
+	border-top: var(--separator-height) solid var(--alt-color);
 	margin-top: 2em;
 	padding: 1em 0;
 }

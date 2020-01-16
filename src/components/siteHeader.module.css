@@ -4,6 +4,8 @@
 	background-color: var(--bg-color);
 	/* for some unknown reason title images scroll on top of the header */
 	z-index: 1;
+
+	letter-spacing: 1px;
 }
 
 .container {

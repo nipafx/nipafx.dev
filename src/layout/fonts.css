@@ -2,8 +2,12 @@
 @import url('https://fontlibrary.org/face/bedstead');
 
 body {
+	--larger-font-size: 24px;
+	--regular-font-size: 18px;
+	--smaller-font-size: 16px;
+
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 18px;
+	font-size: var(--regular-font-size);
 	font-weight: normal;
 	line-height: 1.75;
 }
@@ -40,9 +44,9 @@ h4 {
 
 code {
 	font-family: 'BedsteadRegular', monospace;
-	font-size: 18px;
+	font-size: var(--regular-font-size);
 }
 
 pre > code {
-	font-size: 16px;
+	font-size: var(--smaller-font-size);
 }

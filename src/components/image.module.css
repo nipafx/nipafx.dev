@@ -5,7 +5,7 @@
 .credits {
 	position: absolute;
 	bottom: 1em;
-	right: 1em;
+	right: 2em;
 
 	padding: 0.5em 1em;
 	line-height: 1;
@@ -14,16 +14,8 @@
 	display: flex;
 }
 
-.credits > li {
-	padding: 0;
-	text-indent: 0;
-}
-
-.credits > li::before {
-	padding: 0 0.5em;
-	content: "//";
-}
-
-.credits > li:nth-child(1)::before {
-	content: none;
+.credits > *:not(:last-child)::after {
+	color: var(--alt-color);
+	white-space: break-spaces;
+	content: " // ";
 }

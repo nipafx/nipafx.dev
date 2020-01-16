@@ -6,7 +6,7 @@ body {
 	--menu-transition-duration: 0.2s;
 	--menu-transition: ease-in-out var(--menu-transition-duration);
 
-	--separator-height: 6px;
+	--separator-height: calc(var(--regular-font-size) / 4);
 }
 
 html {
@@ -74,7 +74,7 @@ h2:hover > a, h3:hover > a, h4:hover > a, h5:hover > a {
  */
 
 p {
-	margin: 8px 0;
+	margin: 0.5em 0;
 }
 
 /*
@@ -102,7 +102,7 @@ ul > li {
 ul > li::before {
 	color: var(--alt-color);
 	content: "┘";
-	padding-right: 0.3em;
+	padding-right: 0.25em;
 }
 
 ol {
@@ -118,7 +118,7 @@ ol > li:before {
 	color: var(--alt-color);
 	content: counter(item) ".";
 	counter-increment: item;
-	padding-right: 0.3em;
+	padding-right: 0.25em;
 }
 
 /*

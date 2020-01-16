@@ -33,13 +33,11 @@ const showTitle = title => title && <h1 {...classNames(layout.header, style.titl
 const showTags = tags =>
 	tags &&
 	tags.length > 0 && (
-		<ul {...classNames(layout.header, style.tags)}>
+		<div {...classNames(layout.header, style.tags)}>
 			{tags.map(tag => (
-				<li key={tag}>
-					<Tag tag={tag} link />
-				</li>
+				<Tag key={tag} tag={tag} link />
 			))}
-		</ul>
+		</div>
 	)
 
 const showImage = featuredImage =>

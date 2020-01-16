@@ -3,7 +3,7 @@
 .date {
 	text-align: center;
 	color: var(--fg-color-shade-2);
-	font-size: 16px;
+	font-size: var(--smaller-font-size);
 }
 
 .title {
@@ -12,18 +12,14 @@
 }
 
 .tags {
-	font-size: 16px;
+	font-size: var(--smaller-font-size);
 	display: flex;
 	justify-content: center;
 }
 
-.tags > li {
-	padding: 0 1em;
-	text-indent: 0;
-}
-
-.tags > li::before {
-	content: none;
+.tags > *:not(:last-child):after {
+	white-space: break-spaces;
+	content: "   ";
 }
 
 .tags a:visited {

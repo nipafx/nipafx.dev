@@ -22,7 +22,6 @@
 
 .item-label:after {
 	content: var(--menu-icon);
-	margin-right: 8px;
 	text-align: center;
 	transition: transform var(--menu-transition);
 }

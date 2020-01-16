@@ -24,27 +24,27 @@ const Credits = credits => {
 	if (!credits || (!credits.author && !credits.source && !credits.license)) return null
 
 	return (
-		<ul className={style.credits}>
+		<div className={style.credits}>
 			{credits.source && (
-				<li key="source">
+				<span key="source">
 					<Link to={credits.source.url}>source</Link>
-				</li>
+				</span>
 			)}
 			{credits.author && (
-				<li key="author">
+				<span key="author">
 					<Link to={credits.author.url}>
 						{credits.author.name ? credits.author.name : "artist"}
 					</Link>
-				</li>
+				</span>
 			)}
 			{credits.license && (
-				<li key="license">
+				<span key="license">
 					<Link to={credits.license.url}>
 						{credits.license.name ? credits.license.name : "license"}
 					</Link>
-				</li>
+				</span>
 			)}
-		</ul>
+		</div>
 	)
 }
 
