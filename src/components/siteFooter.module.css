@@ -1,9 +1,7 @@
-.header {
-	position: sticky;
-	top: 0;
-	background-color: var(--bg-color);
-	/* for some unknown reason title images scroll on top of the header */
-	z-index: 1;
+.footer {
+	border-top: 6px solid var(--alt-color);
+	margin-top: 2em;
+	padding: 1em 0;
 }
 
 .container {
@@ -11,8 +9,8 @@
 	grid-template-columns: auto 1fr;
 	grid-template-rows: auto auto;
 	grid-template-areas:
-		"logo links"
-		"logo menu";
+		"logo channels"
+		"logo meta";
 }
 
 .logo {
@@ -22,11 +20,13 @@
 }
 
 .channels {
-	grid-area: links;
+	grid-area: channels;
 	justify-self: end;
+	align-self: center;
 }
 
-.menu {
-	grid-area: menu;
+.meta {
+	grid-area: meta;
 	justify-self: end;
+	align-self: center;
 }

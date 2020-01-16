@@ -1,0 +1,20 @@
+{
+	"links": [
+		{
+			"title": "Imprint",
+			"url": "/imprint"
+		},
+		{
+			"title": "Privacy",
+			"url": "/privacy"
+		},
+		{
+			"title": "Contact",
+			"url": "/contact"
+		},
+		{
+			"title": "License",
+			"url": "/license"
+		}
+	]
+}

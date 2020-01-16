@@ -1,9 +1,12 @@
 body {
 	margin: 0;
+
 	--menu-icon: "┛";
 	--menu-icon-transition: transform var(--menu-transition-duration);
 	--menu-transition-duration: 0.2s;
-	--menu-transition: ease-in-out var(--menu-transition-duration)
+	--menu-transition: ease-in-out var(--menu-transition-duration);
+
+	--separator-height: 6px;
 }
 
 html {
