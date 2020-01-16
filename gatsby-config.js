@@ -99,12 +99,17 @@ module.exports = {
 							// This is used to allow setting a language for inline code
 							// (i.e. single backticks) by creating a separator.
 							inlineCodeMarker: "§",
-							// This lets you set up language aliases. For example,
-							// setting this to '{ sh: "bash" }' will let you use
-							// the language "sh" which will highlight using the
-							// bash highlighter.
-							aliases: {},
 							showLineNumbers: false,
+							languageExtensions: [
+								{
+									extend: "java",
+									definition: {
+										// This setting overrides the existing keyword matcher; this is hence
+										// a modified version of node_modules/prismjs/components/prism-java.js
+										keyword: /\b(?:abstract|continue|for|new|switch|assert|default|goto|package|synchronized|boolean|do|if|private|this|break|double|implements|protected|throw|byte|else|import|public|throws|case|enum|instanceof|return|transient|catch|extends|int|short|try|char|final|interface|static|void|class|finally|long|strictfp|volatile|const|float|native|super|while|var|null|exports|module|open|opens|provides|requires|to|transitive|uses|with|record)\b/,
+									},
+								},
+							],
 						},
 					},
 					{
