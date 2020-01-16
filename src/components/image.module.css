@@ -4,14 +4,22 @@
 
 .credits {
 	position: absolute;
+	transform: rotate(-90deg) translateX(100%);
+	transform-origin: 100% 100%;
 	bottom: 1em;
-	right: 2em;
+	right: 1em;
 
 	padding: 0.5em 1em;
-	line-height: 1;
 	background-color: var(--bg-color);
 
+	text-transform: uppercase;
+	line-height: 1;
+
 	display: flex;
+}
+
+.credits a {
+	text-decoration: none;
 }
 
 .credits > *:not(:last-child)::after {
