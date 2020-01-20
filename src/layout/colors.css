@@ -31,6 +31,10 @@ body {
 	--alt-color: var(--nipafx-color);
 }
 
+.page {
+	--alt-color: var(--nipafx-color);
+}
+
 .rss {
 	--alt-color: var(--rss-color);
 }

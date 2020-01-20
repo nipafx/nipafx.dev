@@ -23,13 +23,6 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
-				name: `tags`,
-				path: `${__dirname}/content/tags`,
-			},
-		},
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
 				name: `content-images`,
 				path: `${__dirname}/content/images`,
 			},
@@ -44,8 +37,22 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
+				name: `pages`,
+				path: `${__dirname}/content/pages/`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
 				name: `repos`,
 				path: `${__dirname}/content/repos`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `tags`,
+				path: `${__dirname}/content/tags`,
 			},
 		},
 		{
@@ -71,7 +78,7 @@ module.exports = {
 					{
 						resolve: `gatsby-remark-promote-tags`,
 						options: {
-							tags: ["series-list", "pullquote"],
+							tags: ["series-list", "pullimage", "pullquote"],
 						},
 					},
 					{

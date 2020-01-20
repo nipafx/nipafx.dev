@@ -50,13 +50,13 @@ const Credits = credits => {
 
 const getImage = (type, id) => {
 	const imageData = getImageData(type)
-	const img = imageData.allImageSharp.nodes.find(node => node.fields.id === id)
+	const img = imageData[type].nodes.find(node => node.fields.id === id)
 	const image = img
 		? isFixedType(type)
 			? { fixed: img.fixed }
 			: { fluid: img.fluid }
 		: undefined
-	const json = imageData.allImagesJson.nodes.find(node => node.slug === id)
+	const json = imageData.meta.nodes.find(node => node.slug === id)
 	const credits = json ? json.credits : undefined
 	return {
 		image,
@@ -64,68 +64,66 @@ const getImage = (type, id) => {
 	}
 }
 
-const getImageData = type => {
-	switch (type) {
-		case "post-title":
-			return useStaticQuery(
-				graphql`
-					query {
-						...Credits
-						...PostTitleImage
+const getImageData = () => {
+	return useStaticQuery(
+		graphql`
+			query {
+				postTitle: allImageSharp(
+					filter: { fields: { collection: { eq: "content-images" } } }
+				) {
+					nodes {
+						fields {
+							id
+						}
+						fluid(maxWidth: 1280) {
+							...GatsbyImageSharpFluid
+						}
 					}
-				`
-			)
-		default:
-			throw `Unknown image type "${type}".`
-	}
+				}
+				sidebar: allImageSharp(
+					filter: { fields: { collection: { eq: "content-images" } } }
+				) {
+					nodes {
+						fields {
+							id
+						}
+						fluid(maxWidth: 300) {
+							...GatsbyImageSharpFluid
+						}
+					}
+				}
+				meta: allImagesJson {
+					nodes {
+						slug
+						credits {
+							author {
+								name
+								url
+							}
+							source {
+								name
+								url
+							}
+							license {
+								name
+								url
+							}
+						}
+					}
+				}
+			}
+		`
+	)
 }
 
 const isFixedType = type => {
 	switch (type) {
-		case "post-title":
+		case "postTitle":
+		case "sidebar":
 			return false
 		default:
 			throw `Unknown image type "${type}".`
 	}
 }
-
-export const imageAsPostTitleQuery = graphql`
-	fragment PostTitleImage on Query {
-		allImageSharp(filter: { fields: { collection: { eq: "content-images" } } }) {
-			nodes {
-				fields {
-					id
-				}
-				fluid(maxWidth: 1280) {
-					...GatsbyImageSharpFluid
-				}
-			}
-		}
-	}
-`
-
-export const metaQuery = graphql`
-	fragment Credits on Query {
-		allImagesJson {
-			nodes {
-				slug
-				credits {
-					author {
-						name
-						url
-					}
-					source {
-						name
-						url
-					}
-					license {
-						name
-						url
-					}
-				}
-			}
-		}
-	}
-`
 
 export default Image

@@ -1,58 +1,29 @@
 const path = require(`path`)
 
 exports.sourceNodes = ({ actions, createContentDigest }) => {
-	const { createNode } = actions
-	createNode({
-		id: `post`,
-		parent: null,
-		children: [],
-		internal: {
-			type: `PostCollection`,
-			content: ``,
-			contentDigest: createContentDigest(``),
-		},
-	})
-	createNode({
-		id: `article`,
-		parent: null,
-		children: [],
-		internal: {
-			type: `ArticleCollection`,
-			content: ``,
-			contentDigest: createContentDigest(``),
-		},
-	})
-	createNode({
-		id: `video`,
-		parent: null,
-		children: [],
-		internal: {
-			type: `VideoCollection`,
-			content: ``,
-			contentDigest: createContentDigest(``),
-		},
-	})
-	createNode({
-		id: `repo`,
-		parent: null,
-		children: [],
-		internal: {
-			type: `RepoCollection`,
-			content: ``,
-			contentDigest: createContentDigest(``),
-		},
-	})
-	createNode({
-		id: `tag`,
-		parent: null,
-		children: [],
-		internal: {
-			type: `TagCollection`,
-			content: ``,
-			contentDigest: createContentDigest(``),
-		},
-	})
+	const createRootNode = createCreateRootNode(actions.createNode, createContentDigest)
+	createRootNode(`article`, `ArticleCollection`)
+	createRootNode(`page`, `PageCollection`)
+	createRootNode(`post`, `PostCollection`)
+	createRootNode(`repo`, `RepoCollection`)
+	createRootNode(`tag`, `TagCollection`)
+	createRootNode(`video`, `VideoCollection`)
 }
+
+const createCreateRootNode = (createNode, createContentDigest) => (id, type) =>
+	createRootNode(createNode, id, type, createContentDigest)
+
+const createRootNode = (createNode, id, type, createContentDigest) =>
+	createNode({
+		id,
+		parent: null,
+		children: [],
+		internal: {
+			type,
+			content: ``,
+			contentDigest: createContentDigest(``),
+		},
+	})
 
 exports.onCreateNode = ({ node, getNode, actions, createContentDigest }) => {
 	const { createNodeField, createNode, deleteNode } = actions
@@ -68,9 +39,10 @@ exports.onCreateNode = ({ node, getNode, actions, createContentDigest }) => {
 
 		createPostNodes(node, createNode, createContentDigest)
 		createArticleNodes(node, createNode, createContentDigest)
-		createVideoNodes(node, createNode, createContentDigest)
+		createPageNodes(node, createNode, createContentDigest)
 		createRepoNodes(node, createNode, createContentDigest)
 		createTagNodes(node, createNode, createContentDigest)
+		createVideoNodes(node, createNode, createContentDigest)
 	}
 }
 
@@ -96,7 +68,7 @@ createFields = (node, getNode, createNodeField) => {
 }
 
 createPostNodes = (node, createNode, createContentDigest) => {
-	if (![`articles`, `videos`].includes(node.fields.collection)) return
+	if (![`articles`, `pages`, `videos`].includes(node.fields.collection)) return
 
 	const post = {
 		id: `${node.fields.id}-as-post`,
@@ -162,10 +134,10 @@ createArticleNodes = (node, createNode, createContentDigest) => {
 	createNode(article)
 }
 
-createVideoNodes = (node, createNode, createContentDigest) => {
-	if (node.fields.collection !== `videos`) return
+createPageNodes = (node, createNode, createContentDigest) => {
+	if (node.fields.collection !== `pages`) return
 
-	const video = {
+	const page = {
 		id: node.fields.id,
 
 		title: node.frontmatter.title,
@@ -173,25 +145,22 @@ createVideoNodes = (node, createNode, createContentDigest) => {
 		date: node.frontmatter.date,
 		tags: node.frontmatter.tags,
 		description: node.frontmatter.description,
-		socialDescription: node.frontmatter.searchDescription,
-		repo: node.frontmatter.repo,
-		url: node.frontmatter.url,
 
 		// see comment on creating article nodes
 		content___NODE: node.id,
 
-		parent: `video`,
+		parent: `page`,
 		children: [],
 		internal: {
-			type: `Video`,
+			type: `Page`,
 			content: ``,
 			contentDigest: createContentDigest(``),
 		},
 	}
 
-	if (node.frontmatter.draft) video.draft = node.frontmatter.draft
+	if (node.frontmatter.draft) page.draft = node.frontmatter.draft
 
-	createNode(video)
+	createNode(page)
 }
 
 createRepoNodes = (node, createNode, createContentDigest) => {
@@ -247,13 +216,46 @@ createTagNodes = (node, createNode, createContentDigest) => {
 	createNode(tag)
 }
 
+createVideoNodes = (node, createNode, createContentDigest) => {
+	if (node.fields.collection !== `videos`) return
+
+	const video = {
+		id: node.fields.id,
+
+		title: node.frontmatter.title,
+		slug: node.frontmatter.slug,
+		date: node.frontmatter.date,
+		tags: node.frontmatter.tags,
+		description: node.frontmatter.description,
+		socialDescription: node.frontmatter.searchDescription,
+		repo: node.frontmatter.repo,
+		url: node.frontmatter.url,
+
+		// see comment on creating article nodes
+		content___NODE: node.id,
+
+		parent: `video`,
+		children: [],
+		internal: {
+			type: `Video`,
+			content: ``,
+			contentDigest: createContentDigest(``),
+		},
+	}
+
+	if (node.frontmatter.draft) video.draft = node.frontmatter.draft
+
+	createNode(video)
+}
+
 exports.createPages = ({ graphql, actions }) => {
 	const { createPage } = actions
 
 	return Promise.all([
 		createArticlePages(graphql, createPage),
-		createVideoPages(graphql, createPage),
+		createPagePages(graphql, createPage),
 		createTagPages(graphql, createPage),
+		createVideoPages(graphql, createPage),
 	])
 }
 
@@ -275,6 +277,54 @@ createArticlePages = (graphql, createPage) => {
 				component: articleTemplate,
 				context: {
 					slug: article.slug,
+				},
+			})
+		})
+	})
+}
+
+createPagePages = (graphql, createPage) => {
+	const pageTemplate = path.resolve(`./src/templates/page.js`)
+
+	return graphql(`
+		{
+			pages: allPage {
+				nodes {
+					slug
+				}
+			}
+		}
+	`).then(({ data }) => {
+		data.pages.nodes.forEach(page => {
+			createPage({
+				path: page.slug,
+				component: pageTemplate,
+				context: {
+					slug: page.slug,
+				},
+			})
+		})
+	})
+}
+
+createTagPages = (graphql, createPage) => {
+	const tagTemplate = path.resolve(`./src/templates/tag.js`)
+
+	return graphql(`
+		{
+			tags: allArticle {
+				group(field: tags) {
+					name: fieldValue
+				}
+			}
+		}
+	`).then(({ data }) => {
+		data.tags.group.forEach(tag => {
+			createPage({
+				path: tag.name,
+				component: tagTemplate,
+				context: {
+					tag: tag.name,
 				},
 			})
 		})
@@ -305,26 +355,3 @@ createVideoPages = (graphql, createPage) => {
 	})
 }
 
-createTagPages = (graphql, createPage) => {
-	const tagTemplate = path.resolve(`./src/templates/tag.js`)
-
-	return graphql(`
-		{
-			tags: allArticle {
-				group(field: tags) {
-					name: fieldValue
-				}
-			}
-		}
-	`).then(({ data }) => {
-		data.tags.group.forEach(tag => {
-			createPage({
-				path: tag.name,
-				component: tagTemplate,
-				context: {
-					tag: tag.name,
-				},
-			})
-		})
-	})
-}

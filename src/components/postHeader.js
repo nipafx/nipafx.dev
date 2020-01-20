@@ -44,7 +44,7 @@ const showImage = featuredImage =>
 	featuredImage && (
 		<Image
 			id={featuredImage}
-			type="post-title"
+			type="postTitle"
 			{...classNames(layout.headerImage, style.image)}
 		/>
 	)
