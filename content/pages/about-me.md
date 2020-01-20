@@ -12,6 +12,8 @@ I’m a thirty year old boy, as the narrator would put it, who has found his pas
 
 Initially, I considered this whole blogging thing a hobby, aimed at improving my knowledge and giving back to the great community which enabled me to even call myself a developer (as opposed to just some guy hacking away at his keyboard). But after about a year and a half it turned into much more. Researching topics that really interested me, I inadvertently acquired knowledge that others seek.
 
+<pullimage slug="portrait"></pullimage>
+
 This enabled me to speak at conferences and writing became a (semi-)professional activity. It also gave me the chance to diversify my work life! If you need someone to write, speak, teach, or consult about bleeding edge topics like Project Jigsaw, Java 9, JUnit 5, Clean Comments, or Java in general, you should ping me – I am for hire.
 
 ## Bio
