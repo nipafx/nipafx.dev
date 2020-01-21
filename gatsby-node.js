@@ -360,7 +360,7 @@ createTagPages = (graphql, createPage) => {
 
 	return graphql(`
 		{
-			tags: allArticle {
+			tags: allPost {
 				group(field: tags) {
 					name: fieldValue
 				}
