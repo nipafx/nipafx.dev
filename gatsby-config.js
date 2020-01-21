@@ -226,5 +226,6 @@ module.exports = {
 	],
 	mapping: {
 		"Article.repo": `Repo.slug`,
+		"Video.repo": `Repo.slug`,
 	},
 }

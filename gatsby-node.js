@@ -32,9 +32,15 @@ exports.onCreateNode = ({ node, getNode, actions, createContentDigest }) => {
 
 	if (node.internal.type === `MarkdownRemark`) {
 		// draft nodes shouldn't show up anywhere during a production build
-		if (process.env.NODE_ENV === `production` && node.frontmatter.draft) {
-			deleteNode(node)
-			return
+		if (node.frontmatter.draft) {
+			console.warn(
+				"Draft: ",
+				node.fileAbsolutePath.substring(node.fileAbsolutePath.lastIndexOf("/") + 1)
+			)
+			if (process.env.NODE_ENV === `production`) {
+				deleteNode(node)
+				return
+			}
 		}
 
 		createPostNodes(node, createNode, createContentDigest)
@@ -67,6 +73,60 @@ createFields = (node, getNode, createNodeField) => {
 	})
 }
 
+exports.createSchemaCustomization = ({ actions }) => {
+	const { createTypes } = actions
+	const typeDefs = `
+		type Post implements Node {
+			title: String!
+			slug: String!
+			type: String!
+			date: Date! @dateformat
+			tags: [String!]!
+			description: String!
+			featuredImage: String
+		}
+		type Article implements Node {
+			title: String!
+			slug: String!
+			date: Date! @dateformat
+			tags: [String!]!
+			description: String!
+			intro: String!
+			featuredImage: String
+			searchKeywords: [String!]!
+		}
+		type Page implements Node {
+			title: String!
+			slug: String!
+			date: Date! @dateformat
+			tags: [String!]!
+			description: String!
+		}
+		type Repo implements Node {
+			title: String!
+			slug: String!
+			tags: [String!]!
+			description: String!
+			url: String!
+		}
+		type Tag implements Node {
+			title: String!
+			slug: String!
+			series: [String!]
+		}
+		type Video implements Node {
+			title: String!
+			slug: String!
+			date: Date! @dateformat
+			tags: [String!]!
+			description: String!
+			intro: String
+			url: String!
+		}
+	`
+	createTypes(typeDefs)
+}
+
 createPostNodes = (node, createNode, createContentDigest) => {
 	if (![`articles`, `pages`, `videos`].includes(node.fields.collection)) return
 
@@ -90,8 +150,6 @@ createPostNodes = (node, createNode, createContentDigest) => {
 		},
 	}
 
-	if (node.frontmatter.draft) post.draft = node.frontmatter.draft
-
 	createNode(post)
 }
 
@@ -106,7 +164,7 @@ createArticleNodes = (node, createNode, createContentDigest) => {
 		date: node.frontmatter.date,
 		tags: node.frontmatter.tags,
 		description: node.frontmatter.description,
-		socialDescription: node.frontmatter.searchDescription,
+		intro: node.frontmatter.intro,
 		featuredImage: node.frontmatter.featuredImage,
 		searchKeywords: node.frontmatter.searchKeywords,
 		repo: node.frontmatter.repo,
@@ -128,8 +186,6 @@ createArticleNodes = (node, createNode, createContentDigest) => {
 			contentDigest: createContentDigest(``),
 		},
 	}
-
-	if (node.frontmatter.draft) article.draft = node.frontmatter.draft
 
 	createNode(article)
 }
@@ -158,8 +214,6 @@ createPageNodes = (node, createNode, createContentDigest) => {
 		},
 	}
 
-	if (node.frontmatter.draft) page.draft = node.frontmatter.draft
-
 	createNode(page)
 }
 
@@ -184,8 +238,6 @@ createRepoNodes = (node, createNode, createContentDigest) => {
 		},
 	}
 
-	if (node.frontmatter.draft) repo.draft = node.frontmatter.draft
-
 	createNode(repo)
 }
 
@@ -197,6 +249,7 @@ createTagNodes = (node, createNode, createContentDigest) => {
 
 		title: node.frontmatter.title,
 		slug: node.frontmatter.slug,
+		series: node.frontmatter.series,
 
 		// see comment on creating article nodes
 		content___NODE: node.id,
@@ -209,9 +262,6 @@ createTagNodes = (node, createNode, createContentDigest) => {
 			contentDigest: createContentDigest(``),
 		},
 	}
-
-	if (node.frontmatter.series) tag.series = node.frontmatter.series
-	if (node.frontmatter.draft) tag.draft = node.frontmatter.draft
 
 	createNode(tag)
 }
@@ -227,7 +277,7 @@ createVideoNodes = (node, createNode, createContentDigest) => {
 		date: node.frontmatter.date,
 		tags: node.frontmatter.tags,
 		description: node.frontmatter.description,
-		socialDescription: node.frontmatter.searchDescription,
+		intro: node.frontmatter.intro,
 		repo: node.frontmatter.repo,
 		url: node.frontmatter.url,
 
@@ -242,8 +292,6 @@ createVideoNodes = (node, createNode, createContentDigest) => {
 			contentDigest: createContentDigest(``),
 		},
 	}
-
-	if (node.frontmatter.draft) video.draft = node.frontmatter.draft
 
 	createNode(video)
 }
@@ -354,4 +402,3 @@ createVideoPages = (graphql, createPage) => {
 		})
 	})
 }
-
