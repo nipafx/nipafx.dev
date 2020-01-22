@@ -9,8 +9,9 @@ import Link from "./link"
 import style from "./image.module.css"
 
 const Image = ({ id, type, className }) => {
-	const image = getImage(type, id)
-	if (!image.image) return null
+	const image = getImage(id, type)
+	if (!exists(image, id, type)) return null
+
 	return (
 		<div {...classNames(className, style.container)}>
 			{/* TODO: specify dimensions (see console warning) / add alt text */}
@@ -48,9 +49,9 @@ const Credits = credits => {
 	)
 }
 
-const getImage = (type, id) => {
-	const imageData = getImageData(type)
-	const img = imageData[type].nodes.find(node => node.fields.id === id)
+const getImage = (id, type) => {
+	const imageData = getImageData()
+	const img = findImageInData(imageData, type, id)
 	const image = img
 		? isFixedType(type)
 			? { fixed: img.fixed }
@@ -65,29 +66,58 @@ const getImage = (type, id) => {
 }
 
 const getImageData = () => {
+	// TODO: decide on duotone (in `fluid(...)`)
+	//			duotone: { highlight: "#69ea7d", shadow: "#262429" }
+	// neon green: #69ea7d
+	// neon pink: #fe019a
+	// bg: #262429
 	return useStaticQuery(
 		graphql`
 			query {
-				postTitle: allImageSharp(
-					filter: { fields: { collection: { eq: "content-images" } } }
+				articleTitle: allImageSharp(
+					filter: { fields: { collection: { eq: "article-title-images" } } }
 				) {
 					nodes {
 						fields {
 							id
 						}
-						fluid(maxWidth: 1280) {
+						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 80) {
 							...GatsbyImageSharpFluid
 						}
 					}
 				}
-				sidebar: allImageSharp(
+				pageTitle: allImageSharp(
+					filter: { fields: { collection: { eq: "page-title-images" } } }
+				) {
+					nodes {
+						fields {
+							id
+						}
+						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 80) {
+							...GatsbyImageSharpFluid
+						}
+					}
+				}
+				videoTitle: allImageSharp(
+					filter: { fields: { collection: { eq: "video-title-images" } } }
+				) {
+					nodes {
+						fields {
+							id
+						}
+						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 80) {
+							...GatsbyImageSharpFluid
+						}
+					}
+				}
+				content: allImageSharp(
 					filter: { fields: { collection: { eq: "content-images" } } }
 				) {
 					nodes {
 						fields {
 							id
 						}
-						fluid(maxWidth: 300) {
+						fluid(maxWidth: 800, srcSetBreakpoints: [300, 800]) {
 							...GatsbyImageSharpFluid
 						}
 					}
@@ -116,14 +146,39 @@ const getImageData = () => {
 	)
 }
 
+const findImageInData = (imageData, type, id) => {
+	switch (type) {
+		case "postTitle":
+			return (
+				imageData.articleTitle.nodes.find(node => node.fields.id === id) ||
+				imageData.pageTitle.nodes.find(node => node.fields.id === id) ||
+				imageData.videoTitle.nodes.find(node => node.fields.id === id)
+			)
+		case "content":
+		case "sidebar":
+			return imageData.content.nodes.find(node => node.fields.id === id)
+	}
+}
+
 const isFixedType = type => {
 	switch (type) {
 		case "postTitle":
+		case "content":
 		case "sidebar":
 			return false
 		default:
 			throw `Unknown image type "${type}".`
 	}
+}
+
+const exists = (image, id, type) => {
+	if (image.image) return true
+
+	const message = `Missing ${type} image: ${id}`
+	if (process.env.NODE_ENV === `production`) throw message
+	else console.warn(message)
+
+	return false
 }
 
 export default Image

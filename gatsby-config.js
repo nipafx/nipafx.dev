@@ -24,13 +24,6 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
-				name: `content-images`,
-				path: `${__dirname}/content/images`,
-			},
-		},
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
 				name: `meta`,
 				path: `${__dirname}/content/meta/`,
 			},
@@ -64,6 +57,34 @@ module.exports = {
 			},
 		},
 		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `content-images`,
+				path: `${__dirname}/images/content`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `article-title-images`,
+				path: `${__dirname}/images/title-articles`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `page-title-images`,
+				path: `${__dirname}/images/title-pages`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `video-title-images`,
+				path: `${__dirname}/images/title-videos`,
+			},
+		},
+		{
 			resolve: `gatsby-transformer-json`,
 		},
 		{
@@ -79,7 +100,7 @@ module.exports = {
 					{
 						resolve: `gatsby-remark-promote-tags`,
 						options: {
-							tags: ["series-list", "pullimage", "pullquote"],
+							tags: ["series-list", "contentimage", "pullquote"],
 						},
 					},
 					{

@@ -25,7 +25,7 @@ const logo = () =>
 				fields {
 					id
 				}
-				fluid(maxWidth: 640) {
+				fluid(maxWidth: 200, srcSetBreakpoints: [100, 200, 400], jpegQuality: 80) {
 					...GatsbyImageSharpFluid
 				}
 			}

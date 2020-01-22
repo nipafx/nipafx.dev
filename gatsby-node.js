@@ -93,8 +93,8 @@ exports.createSchemaCustomization = ({ actions }) => {
 			tags: [String!]!
 			description: String!
 			intro: String!
-			featuredImage: String
 			searchKeywords: String!
+			featuredImage: String
 		}
 		type Page implements Node {
 			title: String!
@@ -103,6 +103,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			tags: [String!]!
 			description: String!
 			searchKeywords: String!
+			featuredImage: String
 		}
 		type Repo implements Node {
 			title: String!
@@ -124,6 +125,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			description: String!
 			intro: String
 			searchKeywords: String!
+			featuredImage: String
 			url: String!
 		}
 	`

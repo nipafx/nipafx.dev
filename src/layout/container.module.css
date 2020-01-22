@@ -31,6 +31,10 @@
 	height: 0;
 }
 
+.container > .wide {
+	grid-column: 5 / span 9;
+}
+
 .textContainer {
 	grid-column: 1 / span 14;
 	display: grid;
@@ -48,8 +52,4 @@
 
 .textContainer > :global(.gatsby-highlight) > pre {
 	display: inline-block;
-}
-
-.textContainer > :global(.stretch) {
-	grid-column: 2 / span 12;
 }

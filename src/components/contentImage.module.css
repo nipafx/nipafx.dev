@@ -1,0 +1,11 @@
+.margins {
+	margin: 1.5em 0;
+}
+
+.bg {
+	background: linear-gradient(to left, var(--bg-color-shade-1), var(--bg-color-shade-2));
+}
+
+.border {
+	border: 1px solid var(--alt-color);
+}
