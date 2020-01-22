@@ -75,6 +75,7 @@ createFields = (node, getNode, createNodeField) => {
 
 exports.createSchemaCustomization = ({ actions }) => {
 	const { createTypes } = actions
+	// NOTE: title, description, and intro can use Markdown syntax!
 	const typeDefs = `
 		type Post implements Node {
 			title: String!

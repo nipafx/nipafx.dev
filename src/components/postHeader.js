@@ -4,6 +4,7 @@ import FormattedDate from "./formattedDate"
 import Tag from "./tag"
 import Image from "./image"
 
+import MdAsHtml from "../infra/mdAsHtml"
 import { classNames } from "../infra/functions"
 
 import layout from "../layout/container.module.css"
@@ -28,7 +29,12 @@ const showDate = date =>
 		</div>
 	)
 
-const showTitle = title => title && <h1 {...classNames(layout.header, style.title)}>{title}</h1>
+const showTitle = title =>
+	title && (
+		<h1 {...classNames(layout.header, style.title)}>
+			<MdAsHtml>{title}</MdAsHtml>
+		</h1>
+	)
 
 const showTags = tags =>
 	tags &&

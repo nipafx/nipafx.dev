@@ -34,6 +34,8 @@
 		"react-error-overlay": "^5.1.6",
 		"react-helmet": "^5.2.1",
 		"rehype-react": "^4.0.1",
+		"remark": "^11.0.2",
+		"remark-html": "^10.0.0",
 		"shallow-compare": "^1.2.2"
 	},
 	"devDependencies": {
