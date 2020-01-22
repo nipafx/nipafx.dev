@@ -4,6 +4,7 @@ module.exports = {
 		description: `You. Me. Java.`,
 		siteUrl: `https://nipafx.dev`,
 		author: `Nicolai Parlog`,
+		twitter: `@nipafx`
 	},
 	plugins: [
 		{

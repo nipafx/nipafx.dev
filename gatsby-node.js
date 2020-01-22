@@ -93,7 +93,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			description: String!
 			intro: String!
 			featuredImage: String
-			searchKeywords: [String!]!
+			searchKeywords: String!
 		}
 		type Page implements Node {
 			title: String!
@@ -101,6 +101,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			date: Date! @dateformat
 			tags: [String!]!
 			description: String!
+			searchKeywords: String!
 		}
 		type Repo implements Node {
 			title: String!
@@ -121,6 +122,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			tags: [String!]!
 			description: String!
 			intro: String
+			searchKeywords: String!
 			url: String!
 		}
 	`
@@ -165,8 +167,8 @@ createArticleNodes = (node, createNode, createContentDigest) => {
 		tags: node.frontmatter.tags,
 		description: node.frontmatter.description,
 		intro: node.frontmatter.intro,
-		featuredImage: node.frontmatter.featuredImage,
 		searchKeywords: node.frontmatter.searchKeywords,
+		featuredImage: node.frontmatter.featuredImage,
 		repo: node.frontmatter.repo,
 
 		// it would be nice to simply assign `node.html`/`node.htmlAst` to a field,
@@ -201,6 +203,7 @@ createPageNodes = (node, createNode, createContentDigest) => {
 		date: node.frontmatter.date,
 		tags: node.frontmatter.tags,
 		description: node.frontmatter.description,
+		searchKeywords: node.frontmatter.searchKeywords,
 
 		// see comment on creating article nodes
 		content___NODE: node.id,
@@ -278,6 +281,7 @@ createVideoNodes = (node, createNode, createContentDigest) => {
 		tags: node.frontmatter.tags,
 		description: node.frontmatter.description,
 		intro: node.frontmatter.intro,
+		searchKeywords: node.frontmatter.searchKeywords,
 		repo: node.frontmatter.repo,
 		url: node.frontmatter.url,
 

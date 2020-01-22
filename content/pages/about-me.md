@@ -4,6 +4,7 @@ tags: [personal]
 date: 2019-01-19
 slug: about-nicolai-parlog
 description: "About me - TODO"
+searchKeywords: "Nicolai Parlog"
 ---
 
 TODO!

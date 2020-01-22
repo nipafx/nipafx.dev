@@ -7,8 +7,11 @@ import Page from "../layout/page"
 export default ({ data }) => {
 	const page = {
 		title: data.page.title,
+		slug: data.page.slug,
 		date: data.page.date,
 		tags: data.page.tags,
+		description: data.page.description,
+		searchKeywords: data.page.searchKeywords,
 		toc: createTableOfContents(data.page),
 		htmlAst: data.page.content.htmlAst,
 	}
@@ -28,8 +31,11 @@ export const query = graphql`
 	query($slug: String!) {
 		page: page(slug: { eq: $slug }) {
 			title
-			tags
+			slug
 			date
+			tags
+			description
+			searchKeywords
 			content {
 				htmlAst
 				tableOfContents(pathToSlugField: "frontmatter.slug")
