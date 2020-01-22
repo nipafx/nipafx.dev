@@ -4,6 +4,7 @@ import PostHeader from "../components/postHeader"
 import Tag from "../components/tag"
 import PostList from "../components/postList"
 import RenderHtml from "../infra/renderHtml"
+import PostEnd from "../components/postEnd"
 
 import layout from "./container.module.css"
 
@@ -15,6 +16,7 @@ const TagLayout = ({ tag, descriptionHtmlAst, postSlugs }) => {
 				<PostHeader title={<Tag tag={tag} />} tags={["tags"]} />
 				{showDescription(descriptionHtmlAst)}
 				<PostList slugs={postSlugs} />
+				<PostEnd type="tag" />
 			</section>
 		</main>
 	)

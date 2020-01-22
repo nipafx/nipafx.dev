@@ -1,0 +1,4 @@
+.content > *:last-child {
+	/* no bottom margin aligns last line of content with toc */
+	margin-bottom: 0;
+}

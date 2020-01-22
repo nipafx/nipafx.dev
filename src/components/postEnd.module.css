@@ -1,0 +1,24 @@
+.block::after {
+	white-space: pre;
+	display: block;
+	text-align: center;
+	color: var(--bg-color-shade-2);
+	margin: 1em 0;
+}
+
+.article::after {
+	content: "//\Apost.end\A//";
+}
+
+.page::after {
+	content: "//\Apage.end\A//";
+}
+
+.tag::after {
+	content: "//\Atag.end\A//";
+}
+
+.video::after {
+	content: "//\Avideo.end\A//";
+}
+

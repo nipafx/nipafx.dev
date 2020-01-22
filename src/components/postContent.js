@@ -6,12 +6,13 @@ import { classNames } from "../infra/functions"
 import PostNav from "../components/postNav"
 
 import layout from "../layout/container.module.css"
+import style from "./postContent.module.css"
 
 const PostContent = ({ title, repo, toc, htmlAst }) => {
 	return (
-		<article {...classNames(layout.container, layout.textContainer)}>
+		<article {...classNames(layout.container, layout.textContainer, style.content)}>
 			<PostNav {...{ title, repo, toc }} />
-			<RenderHtml htmlAst={htmlAst}/>
+			<RenderHtml htmlAst={htmlAst} />
 		</article>
 	)
 }
