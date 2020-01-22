@@ -13,5 +13,4 @@
 .pull code {
 	--code-alt-color: var(--fg-color);
 	--code-fg-color: var(--alt-color);
-	font-size: var(--larger-font-size);
 }

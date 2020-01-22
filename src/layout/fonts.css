@@ -52,7 +52,6 @@ h4 {
 
 code {
 	font-family: 'BedsteadRegular', monospace;
-	font-size: var(--regular-font-size);
 }
 
 pre > code {
