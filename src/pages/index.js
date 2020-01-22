@@ -1,12 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
 import PostList from "../components/postList"
 import Site from "../layout/site"
 
 const IndexPage = ({ data }) => (
 	<Site>
-		<PostList slugs={data.posts.nodes.map(post => post.slug)} />
+		<div id={PROGRESS_BAR_REFERENCE}>
+			<PostList slugs={data.posts.nodes.map(post => post.slug)} />
+		</div>
 	</Site>
 )
 
