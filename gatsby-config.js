@@ -148,6 +148,17 @@ module.exports = {
 			},
 		},
 		{
+			resolve: "gatsby-plugin-matomo",
+			options: {
+				siteId: "1",
+				matomoUrl: "https://matomo.nipafx.dev",
+				siteUrl: "https://nipafx.dev",
+				disableCookies: true,
+				// activate to run on localhost (and turn off do-not-track)
+				// dev: true,
+			},
+		},
+		{
 			resolve: `gatsby-plugin-feed`,
 			options: {
 				query: `
