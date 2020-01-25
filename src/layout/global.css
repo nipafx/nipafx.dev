@@ -125,6 +125,14 @@ ol > li:before {
  * MISC
  */
 
+#gatsby-noscript {
+	display: flex;
+	justify-content: center;
+	background-color: var(--fg-color);
+	color: var(--bg-color);
+	font-weight: bold;
+}
+
 img {
 	max-width: 100%;
 }
