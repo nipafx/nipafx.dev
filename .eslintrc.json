@@ -1,1 +1,8 @@
-/home/nipa/code/nipafx.org/shared/.eslintrc.json
+{
+	"env": {
+		"browser": true
+	},
+	"globals": {
+		"graphql": false
+	}
+}

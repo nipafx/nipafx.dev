@@ -1,1 +1,9 @@
-/home/nipa/code/nipafx.org/shared/.prettierrc
+{
+	"endOfLine": "lf",
+	"semi": false,
+	"singleQuote": false,
+	"useTabs": true,
+	"tabWidth": 4,
+	"trailingComma": "es5",
+	"printWidth": 100
+}
