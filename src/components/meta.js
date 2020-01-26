@@ -32,6 +32,8 @@ const Meta = ({ title, slug, description, searchKeywords, videoUrl }) => {
 	if (pageDescription.length > 180) console.warn("Long description: ", slug)
 
 	const meta = {
+		// TODO: remove before publication
+		robots: "noindex",
 		// Google
 		description,
 		// yes, it's useless for search engines, but it's documentation what I'm aiming for
