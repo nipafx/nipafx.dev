@@ -50,6 +50,7 @@
 	"scripts": {
 		"develop": "gatsby develop",
 		"build": "gatsby build",
-		"start": "npm run develop"
+		"start": "npm run develop",
+		"deploy": "./deploy.sh"
 	}
 }
