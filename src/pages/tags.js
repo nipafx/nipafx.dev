@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
 import Site from "../layout/site"
 import PostHeader from "../components/postHeader"
 import Tag from "../components/tag"
@@ -16,8 +17,7 @@ const TagsPage = ({ data }) => (
 		}}
 	>
 		<main>
-			<section>
-				{/* TODO. progress */}
+			<section id={PROGRESS_BAR_REFERENCE}>
 				<PostHeader title={<Tag tag={"tags"} />} />
 				<div className={layout.container}>
 					<ul>
