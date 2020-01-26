@@ -2,15 +2,17 @@ import React from "react"
 
 import { flatten } from "../infra/functions"
 
+import CodeFXForward from "../components/codefxForward"
+import Meta from "../components/meta"
 import SiteHeader from "../components/siteHeader"
 import SiteFooter from "../components/siteFooter"
-import CodeFXForward from "../components/codefxForward"
 
-const Site = ({ className, children }) => {
+const Site = ({ className, children, meta }) => {
 	className = className || ""
 	return flatten(
 		<div className={className}>
 			<CodeFXForward />
+			{meta && <Meta {...meta} />}
 			<SiteHeader />
 			{children}
 			<SiteFooter />

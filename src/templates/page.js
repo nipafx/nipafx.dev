@@ -7,16 +7,19 @@ import Page from "../layout/page"
 export default ({ data }) => {
 	const page = {
 		title: data.page.title,
-		slug: data.page.slug,
 		date: data.page.date,
 		tags: data.page.tags,
-		description: data.page.description,
-		searchKeywords: data.page.searchKeywords,
 		toc: createTableOfContents(data.page),
 		htmlAst: data.page.content.htmlAst,
 	}
+	const meta = {
+		title: data.page.title,
+		slug: data.page.slug,
+		description: data.page.description,
+		searchKeywords: data.page.searchKeywords,
+	}
 	return (
-		<Site className="page">
+		<Site className="page" meta={meta}>
 			<Page {...page} />
 		</Site>
 	)

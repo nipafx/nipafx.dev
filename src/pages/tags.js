@@ -8,7 +8,13 @@ import Tag from "../components/tag"
 import layout from "../layout/container.module.css"
 
 const TagsPage = ({ data }) => (
-	<Site>
+	<Site
+		meta={{
+			title: "All tags",
+			slug: "tags",
+			description: "All tags of all articles, videos, newsletters, etc.",
+		}}
+	>
 		<main>
 			<section>
 				{/* TODO. progress */}

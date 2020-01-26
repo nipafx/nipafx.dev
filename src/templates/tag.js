@@ -8,14 +8,20 @@ import Tag from "../layout/tag"
 export default ({ pageContext, data }) => {
 	const tag = extractTag(pageContext.tag, data.tags.nodes)
 	const postSlugs = extractSlugsWithoutSeries(tag, data.posts.nodes)
-	const options = {
+	const tagOptions = {
 		tag: tag.slug,
 		postSlugs,
 	}
-	if (tag.content) options.descriptionHtmlAst = tag.content.htmlAst
+	if (tag.content) tagOptions.descriptionHtmlAst = tag.content.htmlAst
+	const meta = {
+		title: tag.title,
+		slug: tag.slug,
+		searchKeywords: pageContext.tag,
+	}
+
 	return (
-		<Site className="site">
-			<Tag {...options} />
+		<Site className="site" meta={meta}>
+			<Tag {...tagOptions} />
 		</Site>
 	)
 }

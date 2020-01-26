@@ -7,18 +7,21 @@ import Article from "../layout/article"
 export default ({ data }) => {
 	const article = {
 		title: data.article.title,
-		slug: data.article.slug,
 		date: data.article.date,
 		tags: data.article.tags,
-		description: data.article.description,
-		searchKeywords: data.article.searchKeywords,
 		featuredImage: data.article.featuredImage,
+		repo: data.article.repo,
 		toc: createTableOfContents(data.article),
 		htmlAst: data.article.content.htmlAst,
-		repo: data.article.repo,
+	}
+	const meta = {
+		title: data.article.title,
+		slug: data.article.slug,
+		description: data.article.description,
+		searchKeywords: data.article.searchKeywords,
 	}
 	return (
-		<Site className="article">
+		<Site className="article" meta={meta}>
 			<Article {...article} />
 		</Site>
 	)

@@ -9,7 +9,14 @@ import Link from "../components/link"
 import layout from "../layout/container.module.css"
 
 const FourOhFourPage = () => (
-	<Site className="article">
+	<Site
+		className="article"
+		meta={{
+			title: "404",
+			slug: "404",
+			description: "Damn, that didn't go as planned. 🤕",
+		}}
+	>
 		<main>
 			<section
 				id={PROGRESS_BAR_REFERENCE}

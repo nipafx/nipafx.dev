@@ -6,7 +6,12 @@ import PostList from "../components/postList"
 import Site from "../layout/site"
 
 const IndexPage = ({ data }) => (
-	<Site>
+	<Site
+		meta={{
+			slug: "",
+			searchKeywords: "Java",
+		}}
+	>
 		<div id={PROGRESS_BAR_REFERENCE}>
 			<PostList slugs={data.posts.nodes.map(post => post.slug)} />
 		</div>

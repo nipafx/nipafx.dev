@@ -28,7 +28,7 @@ const Meta = ({ title, slug, description, searchKeywords, videoUrl }) => {
 	const pageImage = null
 	const pageImageAlt = null
 
-	if (pageTitle.length > 60) console.warn("Long description: ", slug)
+	if (pageTitle.length > 60) console.warn("Long title: ", slug)
 	if (pageDescription.length > 180) console.warn("Long description: ", slug)
 
 	const meta = {
@@ -61,10 +61,11 @@ const Meta = ({ title, slug, description, searchKeywords, videoUrl }) => {
 	return (
 		<Helmet>
 			<title key="title">{pageTitle}</title>
-			{/* "charset" and "viewport" seem to have be set elsewhere (by Gatsby?) */}
+			{/* "charset" and "viewport" are defined in html.js */}
 			{Object.getOwnPropertyNames(meta)
 				.map(prop => [prop, meta[prop]])
-				.filter(([key, value]) => (value))
+				// don't create keys with undefined values
+				.filter(([key, value]) => value)
 				.map(([key, value]) => (
 					<meta key={key} name={key} content={value} />
 				))}
