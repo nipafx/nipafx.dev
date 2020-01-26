@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Site from "../layout/site"
 import Tag from "../layout/tag"
 
-export default ({ pageContext, data }) => {
+const TagPage = ({ pageContext, data }) => {
 	const tag = extractTag(pageContext.tag, data.tags.nodes)
 	const postSlugs = extractSlugsWithoutSeries(tag, data.posts.nodes)
 	const tagOptions = {
@@ -16,6 +16,7 @@ export default ({ pageContext, data }) => {
 	const meta = {
 		title: tag.title,
 		slug: tag.slug,
+		description: tag.description || "Articles about " + pageContext.tag,
 		searchKeywords: pageContext.tag,
 	}
 
@@ -46,6 +47,7 @@ export const pageQuery = graphql`
 			nodes {
 				slug
 				title
+				description
 				series
 				content {
 					htmlAst
@@ -62,3 +64,5 @@ export const pageQuery = graphql`
 		}
 	}
 `
+
+export default TagPage

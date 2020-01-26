@@ -1,6 +1,7 @@
 ---
 title: "JUnit 5"
 slug: "junit-5"
+description: "An introductory series about JUnit 5 as well as a few articles that dive deeper."
 series: ["junit-5-setup", "junit-5-basics", "junit-5-disabled-conditions"]
 ---
 

@@ -115,6 +115,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 		type Tag implements Node {
 			title: String!
 			slug: String!
+			description: String!
 			series: [String!]
 		}
 		type Video implements Node {
@@ -255,6 +256,7 @@ createTagNodes = (node, createNode, createContentDigest) => {
 
 		title: node.frontmatter.title,
 		slug: node.frontmatter.slug,
+		description: node.frontmatter.description,
 		series: node.frontmatter.series,
 
 		// see comment on creating article nodes
