@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { classNames } from "../infra/functions"
 
 import Link from "./link"
-import Tag from "./tag"
+import { Tag } from "./tag"
 
 import style from "./siteMenu.module.css"
 

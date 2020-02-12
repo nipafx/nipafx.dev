@@ -9,7 +9,7 @@ const Article = ({ title, date, tags, featuredImage, repo, toc, htmlAst }) => {
 	return (
 		<main>
 			<section id={PROGRESS_BAR_REFERENCE}>
-				<PostHeader {...{ title, date, tags, featuredImage }} />
+				<PostHeader {...{ title, date, channel: "articles", tags, featuredImage }} />
 				<PostContent {...{ title, repo, toc, htmlAst }} />
 				<PostEnd type="article" />
 			</section>

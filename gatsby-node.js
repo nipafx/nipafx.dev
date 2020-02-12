@@ -80,8 +80,8 @@ exports.createSchemaCustomization = ({ actions }) => {
 		type Post implements Node {
 			title: String!
 			slug: String!
-			type: String!
 			date: Date! @dateformat
+			channel: String!
 			tags: [String!]!
 			description: String!
 			featuredImage: String
@@ -141,8 +141,8 @@ createPostNodes = (node, createNode, createContentDigest) => {
 
 		title: node.frontmatter.title,
 		slug: node.frontmatter.slug,
-		type: node.fields.collection,
 		date: node.frontmatter.date,
+		channel: node.fields.collection,
 		tags: node.frontmatter.tags,
 		description: node.frontmatter.description,
 		featuredImage: node.frontmatter.featuredImage,

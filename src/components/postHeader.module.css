@@ -26,12 +26,9 @@
 	content: "   ";
 }
 
-.tags a:visited {
-	color: unset;
-}
-
-.tags a:hover {
-	color: var(--alt-color);
+.tags > .channel:after {
+	color: var(--fg-color);
+	content: "  //  ";
 }
 
 .image {

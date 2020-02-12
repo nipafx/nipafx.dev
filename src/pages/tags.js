@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
 import Site from "../layout/site"
 import PostHeader from "../components/postHeader"
-import Tag from "../components/tag"
+import { Tag } from "../components/tag"
 
 import layout from "../layout/container.module.css"
 

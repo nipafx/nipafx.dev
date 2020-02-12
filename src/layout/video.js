@@ -9,7 +9,7 @@ const Video = ({ title, date, tags, htmlAst }) => {
 	return (
 		<main>
 			<section id={PROGRESS_BAR_REFERENCE}>
-				<PostHeader {...{ title, date, tags }} />
+				<PostHeader {...{ title, date, channel: "videos", tags }} />
 				{/* TODO: embed video from frontmatter URL instead of showing content */}
 				{/* TODO: show toc and repo */}
 				<PostContent htmlAst={htmlAst} />

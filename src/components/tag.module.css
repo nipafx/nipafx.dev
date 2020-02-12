@@ -1,7 +1,23 @@
-.tag {
+.channel, .tag {
 	font-family: 'BedsteadRegular', monospace;
 }
 
-.tag a {
+.channel {
+	color: var(--alt-color)
+}
+
+.channel a, .tag a {
 	text-decoration: none;
+}
+
+.channel a:visited, .tag a:visited {
+	color: unset;
+}
+
+.tag a:hover {
+	color: var(--alt-color);
+}
+
+.channel a:hover {
+	color: var(--fg-color)
 }

@@ -2,7 +2,7 @@ import React from "react"
 
 import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
 import PostHeader from "../components/postHeader"
-import Tag from "../components/tag"
+import { Tag } from "../components/tag"
 import PostList from "../components/postList"
 import RenderHtml from "../infra/renderHtml"
 import PostEnd from "../components/postEnd"
