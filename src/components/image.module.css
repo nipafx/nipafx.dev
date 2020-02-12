@@ -54,6 +54,6 @@
 
 .credits > *:not(:last-child)::after {
 	color: var(--alt-color);
-	white-space: break-spaces;
+	white-space: pre;
 	content: " // ";
 }

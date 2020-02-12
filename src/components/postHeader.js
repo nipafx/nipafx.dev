@@ -12,7 +12,7 @@ import style from "./postHeader.module.css"
 
 const PostHeader = ({ title, tags, date, featuredImage }) => {
 	return (
-		<header {...classNames(layout.container)}>
+		<header {...classNames(layout.container, style.header)}>
 			{showDate(date)}
 			{showTitle(title)}
 			{showTags(tags)}

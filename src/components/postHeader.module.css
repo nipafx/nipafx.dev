@@ -1,5 +1,9 @@
 /* based on global.css, fonts.css */
 
+.header {
+	margin: 1em 0;
+}
+
 .date {
 	text-align: center;
 	color: var(--fg-color-shade-2);
@@ -18,7 +22,7 @@
 }
 
 .tags > *:not(:last-child):after {
-	white-space: break-spaces;
+	white-space: pre;
 	content: "   ";
 }
 
@@ -31,5 +35,5 @@
 }
 
 .image {
-	margin: 2em 0;
+	margin: 1em 0 0;
 }

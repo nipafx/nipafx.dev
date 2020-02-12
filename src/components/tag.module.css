@@ -1,3 +1,7 @@
 .tag {
 	font-family: 'BedsteadRegular', monospace;
 }
+
+.tag a {
+	text-decoration: none;
+}
