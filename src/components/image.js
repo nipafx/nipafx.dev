@@ -167,7 +167,7 @@ const isFixedType = type => {
 		case "sidebar":
 			return false
 		default:
-			throw `Unknown image type "${type}".`
+			throw new Error(`Unknown image type "${type}".`)
 	}
 }
 
@@ -175,7 +175,7 @@ const exists = (image, id, type) => {
 	if (image.image) return true
 
 	const message = `Missing ${type} image: ${id}`
-	if (process.env.NODE_ENV === `production`) throw message
+	if (process.env.NODE_ENV === `production`) throw new Error(message)
 	else console.warn(message)
 
 	return false

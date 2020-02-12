@@ -158,10 +158,6 @@
  * ANIMATION
  */
 
-.animated-max-height {
-	transition: max-height 3s;
-}
-
 .animated {
 	transition: width var(--menu-transition), height var(--menu-transition);
 }

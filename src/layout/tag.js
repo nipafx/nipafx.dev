@@ -11,7 +11,7 @@ import layout from "./container.module.css"
 
 const TagLayout = ({ channel, tag, descriptionHtmlAst, postSlugs }) => {
 	const xor = channel ? !tag : tag
-	if (!xor) throw new Error("Use this layout with either `channel` or `tag`.")
+	if (!xor) throw new Error(`Specify either \`channel\` ("${channel}") or \`tag\` ("${tag}").`)
 
 	const title = channel ? <Channel channel={channel} plural /> : <Tag tag={tag} />
 	const tags = channel ? null : ["tags"]
@@ -22,7 +22,7 @@ const TagLayout = ({ channel, tag, descriptionHtmlAst, postSlugs }) => {
 				<PostHeader title={title} tags={tags} />
 				{showDescription(descriptionHtmlAst)}
 				<PostList slugs={postSlugs} />
-				<PostEnd type={endType}/>
+				<PostEnd type={endType} />
 			</section>
 		</main>
 	)

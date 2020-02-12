@@ -58,7 +58,7 @@ const topLevelEntry = ({ title, url, children, className }) => {
 			</div>
 		)
 	}
-	throw `Nav entry "${title}" with neither URL nor children.`
+	throw new Error(`Nav entry "${title}" with neither URL nor children.`)
 }
 
 const secondLevelEntry = ({ title, url, children, className }) => {
@@ -94,7 +94,7 @@ const secondLevelEntry = ({ title, url, children, className }) => {
 			</div>
 		)
 	}
-	throw `Nav entry "${title}" with neither URL nor children.`
+	throw new Error(`Nav entry "${title}" with neither URL nor children.`)
 }
 
 const thirdLevelEntry = ({ title, url, tag, className }) => {
@@ -114,7 +114,7 @@ const thirdLevelEntry = ({ title, url, tag, className }) => {
 				<Tag key={tag} className={className} tag={tag} link />{" "}
 			</span>
 		)
-	throw `Nav entry "${title}" with neither URL nor tag.`
+	throw new Error(`Nav entry "${title}" with neither URL nor tag.`)
 }
 
 const loadChildren = tag => {
