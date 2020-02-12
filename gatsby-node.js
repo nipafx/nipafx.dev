@@ -3,6 +3,7 @@ const path = require(`path`)
 exports.sourceNodes = ({ actions, createContentDigest }) => {
 	const createRootNode = createCreateRootNode(actions.createNode, createContentDigest)
 	createRootNode(`article`, `ArticleCollection`)
+	createRootNode(`channel`, `ChannelCollection`)
 	createRootNode(`page`, `PageCollection`)
 	createRootNode(`post`, `PostCollection`)
 	createRootNode(`repo`, `RepoCollection`)
@@ -45,6 +46,7 @@ exports.onCreateNode = ({ node, getNode, actions, createContentDigest }) => {
 
 		createPostNodes(node, createNode, createContentDigest)
 		createArticleNodes(node, createNode, createContentDigest)
+		createChannelNodes(node, createNode, createContentDigest)
 		createPageNodes(node, createNode, createContentDigest)
 		createRepoNodes(node, createNode, createContentDigest)
 		createTagNodes(node, createNode, createContentDigest)
@@ -95,6 +97,14 @@ exports.createSchemaCustomization = ({ actions }) => {
 			intro: String!
 			searchKeywords: String!
 			featuredImage: String
+		}
+		type Channel implements Node {
+			title: String!
+			internalName: String!
+			singularName: String!
+			pluralName: String!
+			slug: String!
+			description: String!
 		}
 		type Page implements Node {
 			title: String!
@@ -194,6 +204,38 @@ createArticleNodes = (node, createNode, createContentDigest) => {
 	}
 
 	createNode(article)
+}
+
+createChannelNodes = (node, createNode, createContentDigest) => {
+	if (node.fields.collection !== `channels`) return
+
+	const path = node.fileAbsolutePath
+	// remove directories and file extension ".md"
+	const fileName = path.substring(path.lastIndexOf(`/`) + 1, path.length - 3)
+
+	const channel = {
+		id: node.fields.id,
+
+		title: node.frontmatter.title,
+		internalName: fileName,
+		singularName: node.frontmatter.singularName,
+		pluralName: node.frontmatter.pluralName,
+		slug: node.frontmatter.slug,
+		description: node.frontmatter.description,
+
+		// see comment on creating article nodes
+		content___NODE: node.id,
+
+		parent: `channel`,
+		children: [],
+		internal: {
+			type: `Channel`,
+			content: ``,
+			contentDigest: createContentDigest(``),
+		},
+	}
+
+	createNode(channel)
 }
 
 createPageNodes = (node, createNode, createContentDigest) => {
@@ -310,6 +352,7 @@ exports.createPages = ({ graphql, actions }) => {
 
 	return Promise.all([
 		createArticlePages(graphql, createPage),
+		createChannelPages(graphql, createPage),
 		createPagePages(graphql, createPage),
 		createTagPages(graphql, createPage),
 		createVideoPages(graphql, createPage),
@@ -334,6 +377,31 @@ createArticlePages = (graphql, createPage) => {
 				component: articleTemplate,
 				context: {
 					slug: article.slug,
+				},
+			})
+		})
+	})
+}
+
+createChannelPages = (graphql, createPage) => {
+	const pageTemplate = path.resolve(`./src/templates/channel.js`)
+
+	return graphql(`
+		{
+			channels: allChannel {
+				nodes {
+					internalName
+					slug
+				}
+			}
+		}
+	`).then(({ data }) => {
+		data.channels.nodes.forEach(channel => {
+			createPage({
+				path: channel.slug,
+				component: pageTemplate,
+				context: {
+					channel: channel.internalName,
 				},
 			})
 		})

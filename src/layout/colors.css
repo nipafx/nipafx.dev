@@ -27,11 +27,11 @@ body {
 	background: var(--bg-color);
 }
 
-.article {
+.article, .articles {
 	--alt-color: var(--nipafx-color);
 }
 
-.page {
+.page, .pages {
 	--alt-color: var(--nipafx-color);
 }
 
@@ -47,7 +47,7 @@ body {
 	--alt-color: var(--medium-color);
 }
 
-.youtube {
+.youtube, .videos {
 	--alt-color: var(--youtube-color);
 }
 

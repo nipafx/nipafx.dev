@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
 import { classNames } from "../infra/functions"
 
@@ -15,10 +16,10 @@ export const Tag = ({ tag, link, className }) => {
 	)
 }
 
-export const Channel = ({ channel, link, className }) => {
+export const Channel = ({ channel, plural, link, className }) => {
 	className = className || ""
-	const name = channelName(channel)
-	const slug = channelSlug(channel)
+	const { singularName, pluralName, slug } = channelInfo(channel)
+	const name = plural ? pluralName : singularName
 	return (
 		<span {...classNames(className, style.channel)}>
 			{link ? <Link to={slug}>#{name}</Link> : `#${name}`}
@@ -26,18 +27,16 @@ export const Channel = ({ channel, link, className }) => {
 	)
 }
 
-const channelName = channel => {
-	switch (channel) {
-		case "articles": return "blog-post"
-		case "pages": return "page"
-		case "videos": return "video"
-	}
-}
-
-const channelSlug = channel => {
-	switch (channel) {
-		case "articles": return "/posts"
-		case "pages": return "/pages"
-		case "videos": return "/videos"
-	}
-}
+const channelInfo = channel =>
+	useStaticQuery(graphql`
+		query {
+			allChannel {
+				channels: nodes {
+					internalName
+					singularName
+					pluralName
+					slug
+				}
+			}
+		}
+	`).allChannel.channels.find(ch => ch.internalName === channel)

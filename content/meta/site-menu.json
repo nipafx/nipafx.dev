@@ -9,8 +9,8 @@
 				},
 				{
 					"title": "Blog Posts",
-					"url": "/",
-					"className": "article"
+					"url": "/posts",
+					"className": "articles"
 				},
 				{
 					"title": "Newsletters",
@@ -36,8 +36,8 @@
 				},
 				{
 					"title": "Recordings",
-					"url": "/",
-					"className": "youtube"
+					"url": "/videos",
+					"className": "videos"
 				},
 				{
 					"title": "Streams",

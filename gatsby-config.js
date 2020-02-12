@@ -24,6 +24,13 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
+				name: `channels`,
+				path: `${__dirname}/content/channels`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
 				name: `meta`,
 				path: `${__dirname}/content/meta/`,
 			},
