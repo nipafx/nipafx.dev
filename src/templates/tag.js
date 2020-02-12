@@ -2,8 +2,8 @@ import React from "react"
 
 import { graphql } from "gatsby"
 
-import Site from "../layout/site"
-import Tag from "../layout/tag"
+import SiteLayout from "../layout/site"
+import TagLayout from "../layout/tag"
 
 const TagPage = ({ pageContext, data }) => {
 	const tag = extractTag(pageContext.tag, data.tags.nodes)
@@ -21,9 +21,9 @@ const TagPage = ({ pageContext, data }) => {
 	}
 
 	return (
-		<Site className="site" meta={meta}>
-			<Tag {...tagOptions} />
-		</Site>
+		<SiteLayout className="site" meta={meta}>
+			<TagLayout {...tagOptions} />
+		</SiteLayout>
 	)
 }
 

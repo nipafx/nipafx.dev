@@ -5,7 +5,7 @@ import PostHeader from "../components/postHeader"
 import PostContent from "../components/postContent"
 import PostEnd from "../components/postEnd"
 
-const Video = ({ title, date, tags, htmlAst }) => {
+const VideoLayout = ({ title, date, tags, htmlAst }) => {
 	return (
 		<main>
 			<section id={PROGRESS_BAR_REFERENCE}>
@@ -19,4 +19,4 @@ const Video = ({ title, date, tags, htmlAst }) => {
 	)
 }
 
-export default Video
+export default VideoLayout

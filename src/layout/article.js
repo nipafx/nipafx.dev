@@ -5,7 +5,7 @@ import PostHeader from "../components/postHeader"
 import PostContent from "../components/postContent"
 import PostEnd from "../components/postEnd"
 
-const Article = ({ title, date, tags, featuredImage, repo, toc, htmlAst }) => {
+const ArticleLayout = ({ title, date, tags, featuredImage, repo, toc, htmlAst }) => {
 	return (
 		<main>
 			<section id={PROGRESS_BAR_REFERENCE}>
@@ -17,4 +17,4 @@ const Article = ({ title, date, tags, featuredImage, repo, toc, htmlAst }) => {
 	)
 }
 
-export default Article
+export default ArticleLayout

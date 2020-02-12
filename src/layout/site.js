@@ -7,7 +7,7 @@ import Meta from "../components/meta"
 import SiteHeader from "../components/siteHeader"
 import SiteFooter from "../components/siteFooter"
 
-const Site = ({ className, children, meta }) => {
+const SiteLayout = ({ className, children, meta }) => {
 	className = className || ""
 	return flatten(
 		<div className={className}>
@@ -20,4 +20,4 @@ const Site = ({ className, children, meta }) => {
 	)
 }
 
-export default Site
+export default SiteLayout

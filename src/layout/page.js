@@ -5,7 +5,7 @@ import PostHeader from "../components/postHeader"
 import PostContent from "../components/postContent"
 import PostEnd from "../components/postEnd"
 
-const Page = ({ title, date, tags, toc, htmlAst }) => {
+const PageLayout = ({ title, date, tags, toc, htmlAst }) => {
 	return (
 		<main>
 			<section id={PROGRESS_BAR_REFERENCE}>
@@ -17,4 +17,4 @@ const Page = ({ title, date, tags, toc, htmlAst }) => {
 	)
 }
 
-export default Page
+export default PageLayout

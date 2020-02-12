@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Site from "../layout/site"
-import Video from "../layout/video"
+import SiteLayout from "../layout/site"
+import VideoLayout from "../layout/video"
 
 export default ({ data }) => {
 	const video = {
@@ -19,9 +19,9 @@ export default ({ data }) => {
 		videoUrl: data.video.url,
 	}
 	return (
-		<Site className="youtube" meta={meta}>
-			<Video {...video} />
-		</Site>
+		<SiteLayout className="youtube" meta={meta}>
+			<VideoLayout {...video} />
+		</SiteLayout>
 	)
 }
 

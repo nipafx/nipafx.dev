@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Site from "../layout/site"
-import Article from "../layout/article"
+import SiteLayout from "../layout/site"
+import ArticleLayout from "../layout/article"
 
 export default ({ data }) => {
 	const article = {
@@ -21,9 +21,9 @@ export default ({ data }) => {
 		searchKeywords: data.article.searchKeywords,
 	}
 	return (
-		<Site className="article" meta={meta}>
-			<Article {...article} />
-		</Site>
+		<SiteLayout className="article" meta={meta}>
+			<ArticleLayout {...article} />
+		</SiteLayout>
 	)
 }
 
