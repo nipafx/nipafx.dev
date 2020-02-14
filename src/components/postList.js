@@ -1,44 +1,22 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 
-import Link from "./link"
+import { classNames } from "../infra/functions"
 
-import layout from "../layout/container.module.css"
+import PostCard from "./postCard"
 
-const PostList = ({ slugs }) => {
+import style from "./postList.module.css"
+
+const PostList = ({ slugs, highlightFirst }) => {
 	if (slugs.length === 0) return null
-
-	const posts = getPosts(slugs)
-
+	const classes = [style.container]
+	if (highlightFirst) classes.push("highlight-first-post-card")
 	return (
-		<div className={layout.container}>
-			<ul>
-				{posts.map(post => (
-					<li key={post.slug}>
-						<Link to={post.slug}>{post.title}</Link>
-					</li>
-				))}
-			</ul>
+		<div {...classNames(...classes)}>
+			{slugs.map(slug => (
+				<PostCard key={slug} slug={slug} className={style.card} />
+			))}
 		</div>
 	)
-}
-
-const getPosts = slugs => {
-	const { posts } = useStaticQuery(
-		graphql`
-			query {
-				posts: allPost {
-					nodes {
-						slug
-						title
-					}
-				}
-			}
-		`
-	)
-	return posts.nodes
-		.filter(post => slugs.includes(post.slug))
-		.sort((left, right) => slugs.indexOf(left.slug) - slugs.indexOf(right.slug))
 }
 
 export default PostList

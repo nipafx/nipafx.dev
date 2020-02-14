@@ -8,9 +8,13 @@ body {
 	--fg-color-shade-2: #aaa;
 
 	--alt-color: var(--codefx-color);
+	--alt-color-rgb: var(--codefx-color-rgb);
+	--alt-contrast-color: var(--bg-color);
 
 	--nipafx-color: #69ea7d;
+	--nipafx-color-rgb: 105, 234, 125;
 	--codefx-color: #ffa500;
+	--codefx-color: 255, 165, 0;
 	--rss-color: #f0941a;
 	--books-color: #7e180a;
 	--discord-color: #7389dc;
@@ -22,17 +26,24 @@ body {
 	--twitch-color: #a970ff;
 	--twitter-color: #1da1f3;
 	--youtube-color: #da281e;
+	--youtube-color-rgb: 218, 40, 30;
 
 	color: var(--fg-color);
 	background: var(--bg-color);
 }
 
-.article, .articles {
+.article,
+.articles {
 	--alt-color: var(--nipafx-color);
+	--alt-color-rgb: var(--nipafx-color-rgb);
+	--alt-contrast-color: var(--bg-color);
 }
 
-.page, .pages {
+.page,
+.pages {
 	--alt-color: var(--nipafx-color);
+	--alt-color-rgb: var(--nipafx-color-rgb);
+	--alt-contrast-color: var(--bg-color);
 }
 
 .rss {
@@ -47,8 +58,11 @@ body {
 	--alt-color: var(--medium-color);
 }
 
-.youtube, .videos {
+.youtube,
+.videos {
 	--alt-color: var(--youtube-color);
+	--alt-color-rgb: var(--youtube-color-rgb);
+	--alt-contrast-color: var(--fg-color);
 }
 
 .twitch {

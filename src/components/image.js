@@ -16,7 +16,7 @@ const Image = ({ id, type, className }) => {
 		<div {...classNames(className, style.container)}>
 			{/* TODO: specify dimensions (see console warning) / add alt text */}
 			<Img {...image.image} />
-			<Credits {...image.credits} />
+			{showCredits(type) && <Credits {...image.credits} />}
 		</div>
 	)
 }
@@ -58,7 +58,7 @@ const getImage = (id, type) => {
 			: { fluid: img.fluid }
 		: undefined
 	const json = imageData.meta.nodes.find(node => node.slug === id)
-	const credits = json ? json.credits : undefined
+	const credits = findCreditsInData(json)
 	return {
 		image,
 		credits,
@@ -66,11 +66,6 @@ const getImage = (id, type) => {
 }
 
 const getImageData = () => {
-	// TODO: decide on duotone (in `fluid(...)`)
-	//			duotone: { highlight: "#69ea7d", shadow: "#262429" }
-	// neon green: #69ea7d
-	// neon pink: #fe019a
-	// bg: #262429
 	return useStaticQuery(
 		graphql`
 			query {
@@ -131,7 +126,6 @@ const getImageData = () => {
 								url
 							}
 							source {
-								name
 								url
 							}
 							license {
@@ -149,6 +143,7 @@ const getImageData = () => {
 const findImageInData = (imageData, type, id) => {
 	switch (type) {
 		case "postTitle":
+		case "postCard":
 			return (
 				imageData.articleTitle.nodes.find(node => node.fields.id === id) ||
 				imageData.pageTitle.nodes.find(node => node.fields.id === id) ||
@@ -160,11 +155,43 @@ const findImageInData = (imageData, type, id) => {
 	}
 }
 
+const findCreditsInData = json => {
+	if (!json || !json.credits) return undefined
+
+	if (json.credits.author && json.credits.author.name === "me")
+		return {
+			author: {
+				name: "me",
+				url: "/about-nicolai-parlog",
+			},
+			license: {
+				name: "CC-BY-NC 4.0",
+				url: "https://creativecommons.org/licenses/by-nc/4.0/",
+			},
+		}
+
+	return json.credits
+}
+
 const isFixedType = type => {
+	switch (type) {
+		case "postTitle":
+		case "postCard":
+		case "content":
+		case "sidebar":
+			return false
+		default:
+			throw new Error(`Unknown image type "${type}".`)
+	}
+}
+
+const showCredits = type => {
 	switch (type) {
 		case "postTitle":
 		case "content":
 		case "sidebar":
+			return true
+		case "postCard":
 			return false
 		default:
 			throw new Error(`Unknown image type "${type}".`)

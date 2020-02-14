@@ -26,6 +26,14 @@
 	grid-row: 1 / 1000000;
 }
 
+.container > .main-center {
+	grid-column: 4 / span 8;
+}
+
+.container > .main-off-center {
+	grid-column: 6 / span 8;
+}
+
 .container > .sidebar {
 	grid-column: 12 / span 2;
 	height: 0;

@@ -15,6 +15,6 @@ export function classNames() {
 		className: Array.prototype.slice
 			.call(arguments)
 			.filter(cls => cls !== undefined && cls !== null && cls !== "")
-			.reduce((acc, cur) => `${acc} ${cur}`, ""),
+			.join(" ")
 	}
 }

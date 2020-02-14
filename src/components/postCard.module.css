@@ -1,0 +1,141 @@
+.card {
+	height: 100%;
+}
+
+.card a {
+	text-decoration: none;
+	transition: color var(--menu-transition);
+}
+
+.card a:visited {
+	color: var(--fg-color);
+}
+
+.image {
+	height: 100%;
+	width: 100%;
+}
+
+.cover {
+	height: 100%;
+	width: 100%;
+	transition: background-color var(--menu-transition);
+}
+
+.content {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+
+	font-size: var(--smaller-font-size);
+}
+
+:global(.highlight-first-post-card) .card:first-child .content {
+	font-size: var(--regular-font-size);
+}
+
+.details {
+	padding: 0 1em 0.5em;
+	line-height: 1.5;
+
+	background-color: rgba(0, 0, 0, 0.7);
+	transition: background-color var(--menu-transition);
+}
+
+.top {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto auto;
+
+	grid-template-areas:
+		"title title"
+		"channel tags";
+}
+
+.title {
+	grid-area: title;
+	font-size: var(--regular-font-size);
+	font-weight: bold;
+}
+
+:global(.highlight-first-post-card) .card:first-child .title {
+	font-size: var(--larger-font-size);
+}
+
+.channel {
+	grid-area: channel;
+	overflow: hidden;
+}
+
+.channel > span {
+	transition: color var(--menu-transition);
+}
+
+.channel:after {
+	color: var(--fg-color);
+	font-family: "BedsteadRegular", monospace;
+	content: " // ";
+	white-space: pre;
+	transition: color var(--menu-transition);
+}
+
+.tags {
+	grid-area: tags;
+	overflow: hidden;
+	max-height: 8em;
+}
+
+.tags > *:not(:last-child):after {
+	content: " ";
+}
+
+.description {
+	max-height: 0;
+	overflow: hidden;
+	margin: 0;
+}
+
+.date {
+	float: right;
+	text-align: right;
+	white-space: nowrap;
+}
+
+/*
+ * HOVER
+ */
+
+.channel,
+.tags,
+.description {
+	transition: max-height var(--menu-transition);
+}
+
+.card:hover .channel,
+.card:hover .tags,
+.card:hover .description {
+	transition: max-height var(--menu-transition);
+}
+
+.card a:hover,
+.card:hover a:hover .channel > span,
+.card:hover a:hover .channel:after {
+	color: var(--alt-contrast-color);
+}
+
+.card:hover .cover {
+	background-color: rgba(var(--alt-color-rgb), 0.8);
+}
+
+.card:hover .details {
+	background-color: rgba(var(--alt-color-rgb), 0.8);
+}
+
+.card:hover .description {
+	max-height: 6em;
+}
+
+.card:first-child:hover .description {
+	max-height: 4.5em;
+}

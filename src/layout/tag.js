@@ -1,5 +1,7 @@
 import React from "react"
 
+import { classNames } from  "../infra/functions"
+
 import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
 import PostHeader from "../components/postHeader"
 import { Channel, Tag } from "../components/tag"
@@ -8,6 +10,7 @@ import RenderHtml from "../infra/renderHtml"
 import PostEnd from "../components/postEnd"
 
 import layout from "./container.module.css"
+import style from "./tag.module.css"
 
 const TagLayout = ({ channel, tag, descriptionHtmlAst, postSlugs }) => {
 	const xor = channel ? !tag : tag
@@ -20,19 +23,16 @@ const TagLayout = ({ channel, tag, descriptionHtmlAst, postSlugs }) => {
 		<main>
 			<section id={PROGRESS_BAR_REFERENCE}>
 				<PostHeader title={title} tags={tags} />
-				{showDescription(descriptionHtmlAst)}
-				<PostList slugs={postSlugs} />
+				<div className={layout.container}>
+					<div {...classNames(layout.mainCenter, style.description)}>
+						{descriptionHtmlAst && <RenderHtml htmlAst={descriptionHtmlAst} />}
+						<PostList slugs={postSlugs} />
+					</div>
+				</div>
 				<PostEnd type={endType} />
 			</section>
 		</main>
 	)
 }
-
-const showDescription = htmlAst =>
-	htmlAst && (
-		<div className={layout.container}>
-			<RenderHtml htmlAst={htmlAst} />
-		</div>
-	)
 
 export default TagLayout

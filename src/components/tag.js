@@ -9,9 +9,11 @@ import style from "./tag.module.css"
 
 export const Tag = ({ tag, link, className }) => {
 	className = className || ""
+	// replace hyphen with non-breaking hyphen
+	const tagText = tag.replace("-", "‑")
 	return (
 		<span {...classNames(className, style.tag)}>
-			{link ? <Link to={tag}>#{tag}</Link> : `#${tag}`}
+			{link ? <Link to={tag}>#{tagText}</Link> : `#${tagText}`}
 		</span>
 	)
 }
