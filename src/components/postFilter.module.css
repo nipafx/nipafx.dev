@@ -1,0 +1,7 @@
+.entries {
+	padding: 0.5em 0.5em 0.5em 1.25em;
+}
+
+.entries > *:not(:last-child):after {
+	content: " ";
+}

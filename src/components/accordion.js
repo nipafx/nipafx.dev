@@ -4,12 +4,12 @@ import { classNames } from "../infra/functions"
 
 import style from "./accordion.module.css"
 
-const Accordion = ({ titleClassName, titles, children }) => {
+const Accordion = ({ headerClassName, headers, children }) => {
 	children = Array.isArray(children) ? children : [children]
 	return (
 		<div className={style.container}>
 			{children.map((child, index) =>
-				child ? item(titleClassName, titles[index], child) : null
+				child ? item(headerClassName, headers[index], child) : null
 			)}
 		</div>
 	)

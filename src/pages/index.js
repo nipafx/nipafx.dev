@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
+import PostFilter from "../components/postFilter"
 import PostList from "../components/postList"
 import Site from "../layout/site"
 
@@ -16,6 +17,7 @@ const IndexPage = ({ data }) => (
 		}}
 	>
 		<div id={PROGRESS_BAR_REFERENCE} className={layout.container}>
+			<PostFilter />
 			<div className={layout.mainOffCenter}>
 				<PostList slugs={data.posts.nodes.map(post => post.slug)} highlightFirst />
 			</div>

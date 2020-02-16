@@ -2,8 +2,8 @@ import React from "react"
 
 import { classNames } from "../infra/functions"
 
-import Accordion from "./accordion"
 import Link from "./link"
+import Nav from "./nav"
 import Toc from "./toc"
 
 import MdAsHtml from "../infra/mdAsHtml"
@@ -15,20 +15,10 @@ const PostNav = ({ title, repo, toc }) => {
 	if (!toc && !repo) return null
 
 	return (
-		<div {...classNames(layout.navbar, style.container)}>
-			<section {...classNames(style.nav)}>
-				<p className={style.title}>
-					<MdAsHtml>{title}</MdAsHtml>
-				</p>
-				<Accordion
-					titleClassName={style.entryTitle}
-					titles={["table of contents", "source code"]}
-				>
-					{toc && <Toc toc={toc} />}
-					{repo && showRepo(repo)}
-				</Accordion>
-			</section>
-		</div>
+		<Nav title={title} headers={["table of contents", "source code"]}>
+			{toc && <Toc toc={toc} />}
+			{repo && showRepo(repo)}
+		</Nav>
 	)
 }
 

@@ -32,8 +32,8 @@ export const Channel = ({ channel, plural, link, className }) => {
 const channelInfo = channel =>
 	useStaticQuery(graphql`
 		query {
-			allChannel {
-				channels: nodes {
+			channels: allChannel {
+				nodes {
 					internalName
 					singularName
 					pluralName
@@ -41,4 +41,4 @@ const channelInfo = channel =>
 				}
 			}
 		}
-	`).allChannel.channels.find(ch => ch.internalName === channel)
+	`).channels.nodes.find(node => node.internalName === channel)

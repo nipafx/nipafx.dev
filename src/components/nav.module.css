@@ -1,0 +1,33 @@
+.container {
+	display: flex;
+	height: 100%;
+}
+
+.nav {
+	position: sticky;
+	bottom: 2em;
+	align-self: flex-end;
+	width: 100%;
+	margin-top: 1em;
+
+	background-color: var(--bg-color);
+	border: 1px solid var(--fg-color);
+
+	font-size: var(--smaller-font-size);
+}
+
+.title {
+	color: var(--bg-color);
+	background-color: var(--fg-color);
+	margin: 0;
+	/* avoid `0.5em` because indent should be the same for .title and .entry.title */
+	padding: 0 calc(var(--regular-font-size) / 2);
+	font-size: var(--regular-font-size);
+	font-weight: bold;
+}
+
+.header {
+	/* avoid `0.5em` because indent should be the same for .title and .entry.title */
+	padding: 0 calc(var(--regular-font-size) / 2);
+	font-weight: bold;
+}
