@@ -7,6 +7,12 @@
 
 .card {
 	height: 240px;
+	opacity: 1;
+	transition: opacity var(--transition-duration);
+}
+
+.hidden {
+	opacity: 0;
 }
 
 :global(.highlight-first-post-card) .card:first-child {

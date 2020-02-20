@@ -13,7 +13,7 @@ import style from "./postCard.module.css"
 const PostCard = ({ slug, className }) => {
 	const { title, date, channel, tags, description, image } = getPost(slug)
 	return (
-		<div {...classNames(style.card, channel, className)}>
+		<div data-channel={channel} data-tags={tags} {...classNames(style.card, channel, className)}>
 			<Link to={slug}>
 				<ImageCard image={image}>
 					<div className={style.content}>
