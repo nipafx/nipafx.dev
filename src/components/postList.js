@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 
-import { classNames, tagletsFromHash } from "../infra/functions"
+import { classNames, tagletsFromPath } from "../infra/functions"
 
 import PostCard from "./postCard"
 
@@ -12,10 +12,10 @@ const PostList = ({ slugs, highlightFirst }) => {
 	const id = ("post-list-" + Math.random()).replace("0.", "")
 	useEffect(() => {
 		const postList = document.getElementById(id)
-		const hashChangeHandler = () => showSelectedPosts(postList, tagletsFromHash())
-		window.addEventListener("hashchange", hashChangeHandler, false)
+		const pathChangeHandler = () => showSelectedPosts(postList, tagletsFromPath())
+		window.addEventListener("hashchange", pathChangeHandler, false)
 		return () => {
-			window.removeEventListener("hashchange", hashChangeHandler)
+			window.removeEventListener("hashchange", pathChangeHandler)
 		}
 	})
 

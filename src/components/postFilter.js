@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import { tagletsFromHash } from "../infra/functions"
+import { tagletsFromPath } from "../infra/functions"
 
 import { Channel, Tag } from "./tag"
 import Nav from "./nav"
@@ -15,11 +15,11 @@ const PostFilter = () => {
 	useEffect(() => {
 		const channelList = document.getElementById(channelListId)
 		const tagList = document.getElementById(tagListId)
-		const hashChangeHandler = () =>
-			highlightSelectedTaglets(channelList, tagList, tagletsFromHash())
-		window.addEventListener("hashchange", hashChangeHandler, false)
+		const pathChangeHandler = () =>
+			highlightSelectedTaglets(channelList, tagList, tagletsFromPath())
+		window.addEventListener("hashchange", pathChangeHandler, false)
 		return () => {
-			window.removeEventListener("hashchange", hashChangeHandler)
+			window.removeEventListener("hashchange", pathChangeHandler)
 		}
 	})
 

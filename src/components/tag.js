@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import { classNames, tagletsFromHash } from "../infra/functions"
+import { classNames, tagletsFromPath } from "../infra/functions"
 
 import Link from "./link"
 
@@ -49,9 +49,9 @@ export const Channel = ({ channel, plural, link, uplink, colorize, className }) 
 
 const handleClick = (kind, taglet, event) => {
 	event.preventDefault()
-	tagletsFromHash()
+	tagletsFromPath()
 		.toggleSelection(kind, taglet)
-		.setToHash()
+		.writePath()
 }
 
 const channelInfo = channel =>

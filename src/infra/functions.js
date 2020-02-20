@@ -19,7 +19,7 @@ export function classNames() {
 	}
 }
 
-export function tagletsFromHash() {
+export function tagletsFromPath() {
 	const hash = (window.location.hash || "").replace("#", "")
 
 	const allChannels = !hash.includes("channels__")
@@ -88,7 +88,7 @@ export function tagletsFromHash() {
 			return this
 		},
 
-		setToHash: function() {
+		writePath: function() {
 			const channelHash = this._channels.all
 				? null
 				: "channels__" + this._channels.entries.join("_")
