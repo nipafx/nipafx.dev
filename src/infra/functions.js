@@ -47,6 +47,20 @@ export function tagletsFromHash() {
 			entries: tags,
 		},
 
+		isChannelSelected: function(channel) {
+			return (
+				(channel === "all" && this._channels.all) ||
+				(channel !== "all" && this._channels.entries.includes(channel))
+			)
+		},
+
+		isTagSelected: function(tag) {
+			return (
+				(tag === "all" && this._tags.all) ||
+				(tag !== "all" && this._tags.entries.includes(tag))
+			)
+		},
+
 		toggleSelection: function(kind, taglet) {
 			const taglets = this[`_${kind}s`]
 			if (taglet === "all") {

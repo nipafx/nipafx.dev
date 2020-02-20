@@ -14,10 +14,10 @@
 	color: var(--alt-color);
 }
 
-.channel.colorize, .tag.colorize {
+.channel.colorize, .channel.selected, .tag.colorize, .tag.selected {
 	color: var(--alt-color)
 }
 
-.channel.colorize a:hover, .tag.colorize a:hover {
+.channel.colorize a:hover, .channel.selected a:hover, .tag.colorize a:hover, .tag.selected a:hover {
 	color: var(--fg-color)
 }

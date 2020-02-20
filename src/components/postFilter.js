@@ -1,29 +1,65 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import { classNames } from "../infra/functions"
+import { tagletsFromHash } from "../infra/functions"
 
 import { Channel, Tag } from "./tag"
 import Nav from "./nav"
 
 import style from "./postFilter.module.css"
+import tagletStyle from "./tag.module.css"
 
 const PostFilter = () => {
+	const channelListId = ("post-filter-channels-" + Math.random()).replace("0.", "")
+	const tagListId = ("post-filter-tags-" + Math.random()).replace("0.", "")
+	useEffect(() => {
+		const channelList = document.getElementById(channelListId)
+		const tagList = document.getElementById(tagListId)
+		const hashChangeHandler = () =>
+			highlightSelectedTaglets(channelList, tagList, tagletsFromHash())
+		window.addEventListener("hashchange", hashChangeHandler, false)
+		return () => {
+			window.removeEventListener("hashchange", hashChangeHandler)
+		}
+	})
+
 	const { channels, tags } = channelsAndTags()
 	return (
 		<Nav title="Filter" headers={["channels", "tags"]}>
-			<div className={style.entries}>
+			<div id={channelListId} className={style.entries}>
+				<Channel key="all" channel="all" uplink plural />
+				<br />
 				{channels.map(channel => (
-					<Channel key={channel} channel={channel} link plural className={channel}/>
+					<Channel key={channel} channel={channel} uplink plural className={channel} />
 				))}
 			</div>
-			<div className={style.entries}>
+			<div id={tagListId} className={style.entries}>
+				<Tag key="all" uplink tag="all" />
+				<br />
 				{tags.map(tag => (
-					<Tag key={tag} tag={tag} link />
+					<Tag key={tag} tag={tag} uplink />
 				))}
 			</div>
 		</Nav>
 	)
+}
+
+const highlightSelectedTaglets = (channelList, tagList, selectedTaglets) => {
+	for (let channel = channelList.firstChild; channel !== null; channel = channel.nextSibling) {
+		if (channel.dataset.channel) {
+			const selected = selectedTaglets.isChannelSelected(channel.dataset.channel)
+			channel.classList.toggle(tagletStyle.selected, selected)
+		}
+	}
+
+	for (let tag = tagList.firstChild; tag !== null; tag = tag.nextSibling) {
+		if (tag.dataset.tag) {
+			const selected = selectedTaglets.isTagSelected(tag.dataset.tag)
+			console.log(tag.dataset.tag, selected)
+			const on = tag.classList.toggle(tagletStyle.selected, selected)
+			console.log(tag.dataset.tag, on)
+		}
+	}
 }
 
 const channelsAndTags = () => {
