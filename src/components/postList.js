@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useLayoutEffect } from "react"
 
 import { classNames, tagletsFromPath } from "../infra/functions"
 
@@ -10,6 +10,10 @@ const PostList = ({ slugs, highlightFirst }) => {
 	if (slugs.length === 0) return null
 
 	const id = ("post-list-" + Math.random()).replace("0.", "")
+	useLayoutEffect(() => {
+		const postList = document.getElementById(id)
+		updateVisibility(postList, tagletsFromPath())
+	}, [])
 	useEffect(() => {
 		const postList = document.getElementById(id)
 		const pathChangeHandler = () => showSelectedPosts(postList, tagletsFromPath())

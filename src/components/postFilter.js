@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useLayoutEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import { tagletsFromPath } from "../infra/functions"
@@ -12,6 +12,11 @@ import tagletStyle from "./tag.module.css"
 const PostFilter = () => {
 	const channelListId = ("post-filter-channels-" + Math.random()).replace("0.", "")
 	const tagListId = ("post-filter-tags-" + Math.random()).replace("0.", "")
+	useLayoutEffect(() => {
+		const channelList = document.getElementById(channelListId)
+		const tagList = document.getElementById(tagListId)
+		highlightSelectedTaglets(channelList, tagList, tagletsFromPath())
+	}, [])
 	useEffect(() => {
 		const channelList = document.getElementById(channelListId)
 		const tagList = document.getElementById(tagListId)
