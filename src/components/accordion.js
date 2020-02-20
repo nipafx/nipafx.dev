@@ -4,18 +4,18 @@ import { classNames } from "../infra/functions"
 
 import style from "./accordion.module.css"
 
-const Accordion = ({ headerClassName, headers, children }) => {
+const Accordion = ({ headerClassName, headers, open, children }) => {
 	children = Array.isArray(children) ? children : [children]
 	return (
 		<div className={style.container}>
 			{children.map((child, index) =>
-				child ? item(headerClassName, headers[index], child) : null
+				child ? item(headerClassName, headers[index], open, child) : null
 			)}
 		</div>
 	)
 }
 
-const item = (titleClassName, title, item) => {
+const item = (titleClassName, title, open, item) => {
 	const id = ("accordion-item-" + Math.random()).replace("0.", "")
 	const checkboxId = id + "-checkbox"
 	const contentId = id + "-content"
@@ -25,6 +25,7 @@ const item = (titleClassName, title, item) => {
 				id={checkboxId}
 				className={style.itemCheckbox}
 				type="checkbox"
+				defaultChecked={open}
 				onChange={event => toggleContent(event.target.checked, contentId)}
 			/>
 			<label {...classNames(style.itemLabel, titleClassName)} htmlFor={checkboxId}>

@@ -25,7 +25,7 @@ const PostFilter = () => {
 
 	const { channels, tags } = channelsAndTags()
 	return (
-		<Nav title="Filter" headers={["channels", "tags"]}>
+		<Nav title="Filter" headers={["channels", "tags"]} open>
 			<div id={channelListId} className={style.entries}>
 				<Channel key="all" channel="all" uplink plural />
 				<br />

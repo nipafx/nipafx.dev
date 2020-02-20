@@ -9,7 +9,7 @@ import MdAsHtml from "../infra/mdAsHtml"
 import layout from "../layout/container.module.css"
 import style from "./nav.module.css"
 
-const Nav = ({ title, headers, children }) => {
+const Nav = ({ title, headers, open, children }) => {
 	return (
 		<div {...classNames(layout.navbar, style.container)}>
 			<section {...classNames(style.nav)}>
@@ -19,6 +19,7 @@ const Nav = ({ title, headers, children }) => {
 				<Accordion
 					headerClassName={style.header}
 					headers={headers}
+					open={open}
 				>
 					{children}
 				</Accordion>
