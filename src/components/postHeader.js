@@ -42,7 +42,7 @@ const showTags = (channel, tags) => {
 	if (!channelExists && !tagsExist) return null
 	return (
 		<div {...classNames(layout.header, style.tags)}>
-			{channelExists && <Channel key={channel} channel={channel} link className={style.channel} />}
+			{channelExists && <Channel key={channel} channel={channel} link colorize className={style.channel} />}
 			{tagsExist && tags.map(tag => <Tag key={tag} tag={tag} link />)}
 		</div>
 	)

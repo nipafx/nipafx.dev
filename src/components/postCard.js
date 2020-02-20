@@ -22,7 +22,7 @@ const PostCard = ({ slug, className }) => {
 							<div className={style.top}>
 								<span className={style.title}>{title}</span>
 								<span className={style.channel}>
-									<Channel channel={channel} />
+									<Channel channel={channel} colorize />
 								</span>
 								<span className={style.tags}>
 									{tags.map(tag => (

@@ -2,10 +2,6 @@
 	font-family: 'BedsteadRegular', monospace;
 }
 
-.channel {
-	color: var(--alt-color)
-}
-
 .channel a, .tag a {
 	text-decoration: none;
 }
@@ -14,10 +10,14 @@
 	color: unset;
 }
 
-.tag a:hover {
+.channel a:hover, .tag a:hover {
 	color: var(--alt-color);
 }
 
-.channel a:hover {
+.channel.colorize, .tag.colorize {
+	color: var(--alt-color)
+}
+
+.channel.colorize a:hover, .tag.colorize a:hover {
 	color: var(--fg-color)
 }
