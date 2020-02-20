@@ -19,6 +19,7 @@ const TagLayout = ({ channel, tag, descriptionHtmlAst, postSlugs }) => {
 	const title = channel ? <Channel channel={channel} plural /> : <Tag tag={tag} />
 	const tags = channel ? null : ["tags"]
 	const endType = channel ? "channel" : "tag"
+
 	return (
 		<main>
 			<section id={PROGRESS_BAR_REFERENCE}>

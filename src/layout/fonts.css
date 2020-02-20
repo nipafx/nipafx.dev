@@ -28,7 +28,7 @@ h2::before {
 	font-weight: normal;
 }
 
-.separator {
+.separator:after {
 	/* same as h2::before */
 	font-family: 'BedsteadRegular', monospace;
 	font-size: 32px;

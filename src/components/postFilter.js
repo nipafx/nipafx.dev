@@ -57,18 +57,16 @@ const PostFilter = () => {
 
 const highlightSelectedTaglets = (channelList, tagList, selectedTaglets) => {
 	for (let channel = channelList.firstChild; channel !== null; channel = channel.nextSibling) {
-		if (channel.dataset.channel) {
+		if (channel.dataset && channel.dataset.channel) {
 			const selected = selectedTaglets.isChannelSelected(channel.dataset.channel)
 			channel.classList.toggle(tagletStyle.selected, selected)
 		}
 	}
 
 	for (let tag = tagList.firstChild; tag !== null; tag = tag.nextSibling) {
-		if (tag.dataset.tag) {
+		if (tag.dataset && tag.dataset.tag) {
 			const selected = selectedTaglets.isTagSelected(tag.dataset.tag)
-			console.log(tag.dataset.tag, selected)
-			const on = tag.classList.toggle(tagletStyle.selected, selected)
-			console.log(tag.dataset.tag, on)
+			tag.classList.toggle(tagletStyle.selected, selected)
 		}
 	}
 }
