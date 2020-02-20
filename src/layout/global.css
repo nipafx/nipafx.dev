@@ -12,6 +12,8 @@ body {
 
 html {
 	scroll-behavior: smooth;
+	/* always show scroll bar, so site jumps less on filter */
+	overflow-y: scroll;
 }
 
 /*

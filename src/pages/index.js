@@ -16,6 +16,10 @@ const IndexPage = ({ data }) => (
 			searchKeywords: "Java",
 		}}
 	>
+		{/* to position nav menu at the bottom (at least in FF):
+		 *   - change site.module.css to make inner div span all vertical space with flex and flex-grow
+		 *   - add `style={{gridTemplateRows: "max-content 1fr"}}` to the following element
+		 */}
 		<div id={PROGRESS_BAR_REFERENCE} className={layout.container}>
 			<PostFilter />
 			<div className={layout.mainOffCenter}>
