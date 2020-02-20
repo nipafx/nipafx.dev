@@ -1,10 +1,10 @@
 import React from "react"
 
 // maybe prefix with https://commons.wikimedia.org/wiki/File:External.svg ?
-const ExternalLink = ({ to, className, children }) => {
+const ExternalLink = ({ to, onClick, className, children }) => {
 	className = className || ""
 	return (
-		<a className={className} rel="noopener noreferrer" href={to}>
+		<a className={className} rel="noopener noreferrer" href={to} onClick={onClick}>
 			{children}
 		</a>
 	)
