@@ -1,8 +1,8 @@
 :global(#codefx-forward), :global(#codefx-catch-all) {
 	transform: translateY(-100vh);
 	opacity: 0;
-	transition: opacity var(--menu-transition-duration),
-		transform 0s var(--menu-transition-duration);
+	transition: opacity var(--transition-duration),
+		transform 0s var(--transition-duration);
 }
 
 :global(#codefx-forward):target, :global(#codefx-catch-all):target {
@@ -12,7 +12,7 @@
 	   but JS takes a moment to run and remove "#codefx-forward" from
 	   the URL. The transition delay (last value) should prevent the
 	   popover from being visible for a split second. */
-	transition: opacity var(--menu-transition-duration) 1s;
+	transition: opacity var(--transition-duration) 1s;
 }
 
 .background {

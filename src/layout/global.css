@@ -1,10 +1,11 @@
 body {
 	margin: 0;
 
+	--transition-duration: 0.2s;
+
 	--menu-icon: "┛";
-	--menu-icon-transition: transform var(--menu-transition-duration);
-	--menu-transition-duration: 0.2s;
-	--menu-transition: ease-in-out var(--menu-transition-duration);
+	--menu-icon-transition: transform var(--transition-duration);
+	--menu-transition: ease-in-out var(--transition-duration);
 
 	--separator-height: calc(var(--regular-font-size) / 4);
 }
