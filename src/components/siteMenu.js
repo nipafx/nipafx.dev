@@ -111,7 +111,7 @@ const thirdLevelEntry = ({ title, url, tag, className }) => {
 		return (
 			<span key={tag} {...classNames(style.thirdLevelEntry, style.tag)}>
 				{/* the trailing space is important - without it, browsers won't line-break */}
-				<Tag key={tag} className={className} tag={tag} link />{" "}
+				<Tag key={tag} className={className} tag={tag} mode="forward" />{" "}
 			</span>
 		)
 	throw new Error(`Nav entry "${title}" with neither URL nor tag.`)

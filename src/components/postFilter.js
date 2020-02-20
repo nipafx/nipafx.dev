@@ -32,17 +32,23 @@ const PostFilter = () => {
 	return (
 		<Nav title="Filter" headers={["channels", "tags"]} open>
 			<div id={channelListId} className={style.entries}>
-				<Channel key="all" channel="all" uplink plural />
+				<Channel key="all" channel="all" plural mode="uplink" />
 				<br />
 				{channels.map(channel => (
-					<Channel key={channel} channel={channel} uplink plural className={channel} />
+					<Channel
+						key={channel}
+						channel={channel}
+						plural
+						mode="uplink"
+						className={channel}
+					/>
 				))}
 			</div>
 			<div id={tagListId} className={style.entries}>
-				<Tag key="all" uplink tag="all" />
+				<Tag key="all" tag="all" mode="uplink" />
 				<br />
 				{tags.map(tag => (
-					<Tag key={tag} tag={tag} uplink />
+					<Tag key={tag} tag={tag} mode="uplink" />
 				))}
 			</div>
 		</Nav>

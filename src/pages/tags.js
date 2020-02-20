@@ -23,7 +23,7 @@ const TagsPage = ({ data }) => (
 					<ul>
 						{data.tags.group.map(tag => (
 							<li key={tag.slug}>
-								<Tag tag={tag.slug} link />
+								<Tag tag={tag.slug} mode="forward" />
 								<span>{` (${tag.count})`}</span>
 							</li>
 						))}

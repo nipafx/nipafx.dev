@@ -19,6 +19,12 @@ export function classNames() {
 	}
 }
 
+export function tagletPath(kind, taglet) {
+	if (kind === "tag") return taglet === "all" ? "/" : `/#tags__${taglet}`
+	if (kind === "channel") return taglet === "all" ? "/" : `/#channels__${taglet}`
+	throw new Error("Unknown kind: " + kind)
+}
+
 export function tagletsFromPath() {
 	const hash = (window.location.hash || "").replace("#", "")
 
