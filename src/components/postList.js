@@ -50,7 +50,7 @@ const updateVisibility = (postList, selectedTaglets) => {
 		const visible =
 			selectedTaglets.isChannelShown(post.dataset.channel) &&
 			selectedTaglets.areTagsShown(post.dataset.tags.split(","))
-		post.style.display = visible ? "" : "none"
+		post.classList.toggle(style.removed, !visible)
 		post.classList.remove(style.hidden)
 	}
 }
