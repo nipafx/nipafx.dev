@@ -10,7 +10,7 @@ import layout from "../layout/container.module.css"
 
 const IndexPage = ({ data }) => (
 	<Site
-		className="page"
+		className="list"
 		meta={{
 			slug: "",
 			searchKeywords: "Java",

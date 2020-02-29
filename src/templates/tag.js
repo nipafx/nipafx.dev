@@ -21,7 +21,7 @@ const TagPage = ({ pageContext, data }) => {
 	}
 
 	return (
-		<SiteLayout className="page" meta={meta}>
+		<SiteLayout className="list" meta={meta}>
 			<TagLayout {...tagOptions} />
 		</SiteLayout>
 	)

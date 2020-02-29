@@ -7,14 +7,28 @@ body {
 	--fg-color-shade-1: #ccc;
 	--fg-color-shade-2: #aaa;
 
-	--alt-color: var(--codefx-color);
-	--alt-color-rgb: var(--codefx-color-rgb);
+	--alt-color: var(--theme-green);
+	--alt-color-rgb: var(--theme-green-rgb);
 	--alt-contrast-color: var(--bg-color);
 
-	--nipafx-color: #69ea7d;
-	--nipafx-color-rgb: 105, 234, 125;
+	--theme-green: #69ea7d;
+	--theme-green-rgb: 105, 234, 125;
+	--theme-blue-dark: #2368CB;
+	--theme-blue-dark-rgb: 35, 104, 203;
+	--theme-blue-light: #26B9D7;
+	--theme-blue-light-rgb: 38, 185, 215;
+	--theme-pink: #E83D89;
+	--theme-pink-rgb: 232, 61, 137;
+	--theme-purple: #A83EA6;
+	--theme-purple-rgb: 168, 62, 166;
+	--theme-red: #EF4E4E;
+	--theme-red-rgb: 239, 78, 78;
+	--theme-orange: #EFB74E;
+	--theme-orange-rgb: 239, 183, 78;
+	--theme-yellow: #EFE359;
+	--theme-yellow-rgb: 239, 227, 89;
+
 	--codefx-color: #ffa500;
-	--codefx-color-rgb: 255, 165, 0;
 	--rss-color: #f0941a;
 	--books-color: #7e180a;
 	--discord-color: #7389dc;
@@ -26,7 +40,6 @@ body {
 	--twitch-color: #a970ff;
 	--twitter-color: #1da1f3;
 	--youtube-color: #da281e;
-	--youtube-color-rgb: 218, 40, 30;
 
 	color: var(--fg-color);
 	background: var(--bg-color);
@@ -34,16 +47,29 @@ body {
 
 .article,
 .articles {
-	--alt-color: var(--nipafx-color);
-	--alt-color-rgb: var(--nipafx-color-rgb);
+	--alt-color: var(--theme-green);
+	--alt-color-rgb: var(--theme-green-rgb);
+	--alt-contrast-color: var(--bg-color);
+}
+
+.list {
+	--alt-color: var(--theme-green);
+	--alt-color-rgb: var(--theme-green-rgb);
 	--alt-contrast-color: var(--bg-color);
 }
 
 .page,
 .pages {
-	--alt-color: var(--nipafx-color);
-	--alt-color-rgb: var(--nipafx-color-rgb);
+	--alt-color: var(--theme-yellow);
+	--alt-color-rgb: var(--theme-yellow-rgb);
 	--alt-contrast-color: var(--bg-color);
+}
+
+.video,
+.videos {
+	--alt-color: var(--theme-red);
+	--alt-color-rgb: var(--theme-red-rgb);
+	--alt-contrast-color: var(--fg-color);
 }
 
 .rss {
@@ -58,11 +84,8 @@ body {
 	--alt-color: var(--medium-color);
 }
 
-.youtube,
-.videos {
+.youtube {
 	--alt-color: var(--youtube-color);
-	--alt-color-rgb: var(--youtube-color-rgb);
-	--alt-contrast-color: var(--fg-color);
 }
 
 .twitch {
