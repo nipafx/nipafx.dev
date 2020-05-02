@@ -162,7 +162,7 @@ const findCreditsInData = json => {
 		return {
 			author: {
 				name: "me",
-				url: "/about-nicolai-parlog",
+				url: "/nicolai-parlog",
 			},
 			license: {
 				name: "CC-BY-NC 4.0",

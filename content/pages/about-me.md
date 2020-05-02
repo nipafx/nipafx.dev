@@ -2,7 +2,7 @@
 title: "About Nicolai Parlog"
 tags: [personal]
 date: 2019-01-19
-slug: about-nicolai-parlog
+slug: nicolai-parlog
 description: "About me - TODO"
 searchKeywords: "Nicolai Parlog"
 ---
