@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
+import { IndexHeader } from "../components/header"
 import PostFilter from "../components/postFilter"
 import PostList from "../components/postList"
 import Site from "../layout/site"
@@ -16,10 +17,7 @@ const IndexPage = ({ data }) => (
 			searchKeywords: "Java",
 		}}
 	>
-		{/* to position nav menu at the bottom (at least in FF):
-		 *   - change site.module.css to make inner div span all vertical space with flex and flex-grow
-		 *   - add `style={{gridTemplateRows: "max-content 1fr"}}` to the following element
-		 */}
+		<IndexHeader />
 		<div id={PROGRESS_BAR_REFERENCE} className={layout.container}>
 			<PostFilter />
 			<div className={layout.mainOffCenter}>

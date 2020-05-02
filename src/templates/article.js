@@ -9,6 +9,7 @@ export default ({ data }) => {
 		title: data.article.title,
 		date: data.article.date,
 		tags: data.article.tags,
+		intro: data.article.intro ? data.article.intro : data.article.description,
 		featuredImage: data.article.featuredImage,
 		repo: data.article.repo,
 		toc: createTableOfContents(data.article),
@@ -40,6 +41,7 @@ export const query = graphql`
 			date
 			tags
 			description
+			intro
 			searchKeywords
 			featuredImage
 			content {

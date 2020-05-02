@@ -12,7 +12,7 @@ export const Tag = ({ tag, mode, className }) => {
 
 	const id = ("tag-" + tag + "-" + Math.random()).replace("0.", "")
 	// replace hyphen with non-breaking hyphen
-	const text = tag === "all" ? "ALL-TAGS" : tag.replace("-", "‑")
+	const text = tag === "all" ? "ALL‑TAGS" : tag.replace("-", "‑")
 
 	return (
 		<span id={id} data-tag={tag} {...classNames(className, style.tag)}>

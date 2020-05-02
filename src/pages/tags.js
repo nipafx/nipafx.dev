@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
 import Site from "../layout/site"
-import PostHeader from "../components/postHeader"
+import { AllTagsHeader } from "../components/header"
 import { Tag } from "../components/tag"
 
 import layout from "../layout/container.module.css"
@@ -18,7 +18,8 @@ const TagsPage = ({ data }) => (
 	>
 		<main>
 			<section id={PROGRESS_BAR_REFERENCE}>
-				<PostHeader title={<Tag tag={"tags"} />} />
+				<AllTagsHeader />
+				{/* TODO: more beautiful list */}
 				<div className={layout.container}>
 					<ul>
 						{data.tags.group.map(tag => (

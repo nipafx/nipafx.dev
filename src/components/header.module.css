@@ -1,10 +1,20 @@
-/* based on global.css, fonts.css */
-
 .header {
-	margin: 1em 0;
+	margin: 1em 0 2em;
+	grid-row-gap: 1em;
+	row-gap: 1em;
 }
 
-.date {
+/* for uniform distances, row-gap is used to spread header elements out */
+.header * {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.highlight {
+	color: var(--alt-color);
+}
+
+.first-line {
 	text-align: center;
 	color: var(--fg-color-shade-2);
 	font-size: var(--smaller-font-size);
@@ -12,7 +22,6 @@
 
 .title {
 	text-align: center;
-	margin: 0.5em 0;
 }
 
 .tags {
@@ -31,6 +40,6 @@
 	content: "  //  ";
 }
 
-.image {
-	margin: 1em 0 0;
+.intro {
+	font-size: var(--larger-font-size);
 }

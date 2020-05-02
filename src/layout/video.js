@@ -1,7 +1,7 @@
 import React from "react"
 
 import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
-import PostHeader from "../components/postHeader"
+import { PostHeader } from "../components/header"
 import PostContent from "../components/postContent"
 import PostEnd from "../components/postEnd"
 

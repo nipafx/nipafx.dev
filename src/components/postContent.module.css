@@ -1,3 +1,8 @@
+.content > *:nth-child(2) {
+	/* no top margin on first element after toc aligns the two */
+	margin-top: 0;
+}
+
 .content > *:last-child {
 	/* no bottom margin aligns last line of content with toc */
 	margin-bottom: 0;
