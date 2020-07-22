@@ -94,7 +94,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			date: Date! @dateformat
 			tags: [String!]!
 			description: String!
-			intro: String!
+			intro: String
 			searchKeywords: String!
 			featuredImage: String
 		}

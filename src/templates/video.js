@@ -9,6 +9,7 @@ export default ({ data }) => {
 		title: data.video.title,
 		date: data.video.date,
 		tags: data.video.tags,
+		intro: data.video.intro ?? data.video.description,
 		htmlAst: data.video.content.htmlAst,
 	}
 	const meta = {
@@ -33,6 +34,7 @@ export const query = graphql`
 			date
 			tags
 			description
+			intro
 			searchKeywords
 			url
 			content {
