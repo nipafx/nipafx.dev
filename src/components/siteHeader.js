@@ -12,12 +12,12 @@ import channels from "../../content/meta/channel-links.json"
 import layout from "../layout/container.module.css"
 import style from "./siteHeader.module.css"
 
-const SiteHeader = () => (
+const SiteHeader = ({ onIndexPage }) => (
 	<header id={PROGRESS_BAR_OFFSET} {...classNames(layout.container, style.header)}>
 		<div className={style.container}>
-			<SiteLogo className={style.logo} />
+			<SiteLogo className={style.logo} onIndexPage={onIndexPage} />
 			<LinkList className={style.channels} links={channels.links} />
-			<SiteMenu className={style.menu} />
+			<SiteMenu className={style.menu} onIndexPage={onIndexPage} />
 		</div>
 		<ProgressBar className={layout.fullWidth} />
 	</header>

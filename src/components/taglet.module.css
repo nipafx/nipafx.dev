@@ -1,0 +1,23 @@
+.taglet {
+	font-family: 'BedsteadRegular', monospace;
+}
+
+.taglet a {
+	text-decoration: none;
+}
+
+.taglet a:visited {
+	color: unset;
+}
+
+.taglet a:hover {
+	color: var(--alt-color);
+}
+
+.taglet.colorize, .taglet.selected {
+	color: var(--alt-color)
+}
+
+.taglet.colorize a:hover, .taglet.selected a:hover {
+	color: var(--fg-color)
+}

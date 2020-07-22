@@ -4,7 +4,7 @@ import BackgroundImage from "gatsby-background-image"
 
 import { classNames } from "../infra/functions"
 
-import { Channel, Tag } from "./tag"
+import { Channel, Tag } from "./taglet"
 import FormattedDate from "./formattedDate"
 import Link from "./link"
 

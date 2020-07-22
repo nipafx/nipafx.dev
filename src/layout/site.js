@@ -9,13 +9,13 @@ import SiteFooter from "../components/siteFooter"
 
 import style from "./site.module.css"
 
-const SiteLayout = ({ className, children, meta }) => {
+const SiteLayout = ({ className, meta, onIndexPage, children }) => {
 	className = className || ""
 	return flatten(
 		<div {...classNames(style.site, className)}>
 			<CodeFXForward />
 			{meta && <Meta {...meta} />}
-			<SiteHeader />
+			<SiteHeader onIndexPage={onIndexPage} />
 			<div className={style.content}>{children}</div>
 			<SiteFooter />
 		</div>

@@ -1,7 +1,7 @@
 import React from "react"
 
 import FormattedDate from "./formattedDate"
-import { Tag, Channel } from "./tag"
+import { Tag, Channel } from "./taglet"
 import Image from "./image"
 
 import MarkdownAsHtml from "../infra/markdownAsHtml"
@@ -109,7 +109,7 @@ export const TagHeader = ({ tag }) => {
 		<Header>
 			<span>Everything about</span>
 			<Tag tag={tag} />
-			{showTags(null, ["tags"])}
+			{null}
 			{null /* TODO: description */}
 		</Header>
 	)

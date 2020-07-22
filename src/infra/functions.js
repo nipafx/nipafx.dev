@@ -25,6 +25,14 @@ export function tagletPath(kind, taglet) {
 	throw new Error("Unknown kind: " + kind)
 }
 
+export function tagletsPath(channel, tag) {
+	return `/#channels__${channel}___tags__${tag}`
+}
+
+export function emptyTaglets() {
+	return tagletsFrom(true, [], true, [])
+}
+
 export function tagletsFromPath() {
 	const hash = (window.location.hash || "").replace("#", "")
 
@@ -42,6 +50,11 @@ export function tagletsFromPath() {
 				.replace(/channels__.*___/, "")
 				.replace("tags__", "")
 				.split("_")
+
+	return tagletsFrom(allChannels, channels, allTags, tags)
+}
+
+function tagletsFrom(allChannels, channels, allTags, tags) {
 	return {
 		_channels: {
 			all: allChannels,
@@ -106,15 +119,13 @@ export function tagletsFromPath() {
 				else hash = tagHash
 
 			if (hash) window.location.hash = hash
-			else {
-				window.location.hash = ""
-				// remove the hash from the URL that the previous line left behind
-				window.history.pushState(
-					"",
-					document.title,
-					window.location.pathname + window.location.search
-				)
-			}
+			else resetPath()
 		},
 	}
+}
+
+export function resetPath() {
+	window.location.hash = ""
+	// remove the hash from the URL that the previous line left behind
+	window.history.pushState("", document.title, window.location.pathname + window.location.search)
 }

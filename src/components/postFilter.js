@@ -3,11 +3,11 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import { tagletsFromPath } from "../infra/functions"
 
-import { Channel, Tag } from "./tag"
+import { Channel, Tag } from "./taglet"
 import Nav from "./nav"
 
 import style from "./postFilter.module.css"
-import tagletStyle from "./tag.module.css"
+import tagletStyle from "./taglet.module.css"
 
 const PostFilter = () => {
 	const channelListId = "post-filter-channels-426396"

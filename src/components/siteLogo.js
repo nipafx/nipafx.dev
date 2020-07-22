@@ -2,16 +2,17 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-import { classNames } from "../infra/functions"
+import { classNames, resetPath } from "../infra/functions"
 
 import Link from "./link"
 
 import style from "./siteLogo.module.css"
 
-const SiteLogo = ({ className }) => {
+const SiteLogo = ({ className, onIndexPage }) => {
+	const onClick = onIndexPage ? _ => resetPath() : null
 	return (
 		<div {...classNames(className, style.logo)}>
-			<Link to="/">
+			<Link to="/" onClick={onClick}>
 				<Img {...logo()} />
 			</Link>
 		</div>

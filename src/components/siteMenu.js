@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { classNames } from "../infra/functions"
 
 import Link from "./link"
-import { Tag } from "./tag"
+import { MenuTag } from "./taglet"
 
 import style from "./siteMenu.module.css"
 
@@ -12,7 +12,7 @@ import json from "../../content/meta/site-menu.json"
 
 const SITE_NAV = "site-nav"
 
-const SiteMenu = ({ className }) => {
+const SiteMenu = ({ className, onIndexPage }) => {
 	useEffect(() => {
 		document.getElementById(SITE_NAV).classList.add(style.animated)
 		window.addEventListener("click", closeOpenMenus)
@@ -20,12 +20,12 @@ const SiteMenu = ({ className }) => {
 	})
 	return (
 		<nav id={SITE_NAV} {...classNames(className, style.menu, style.topLevelContainer)}>
-			{json.entries.map(entry => topLevelEntry(entry))}
+			{json.entries.map(entry => topLevelEntry(entry, onIndexPage))}
 		</nav>
 	)
 }
 
-const topLevelEntry = ({ title, url, children, className }) => {
+const topLevelEntry = ({ title, url, children, className }, onIndexPage) => {
 	const id = ("site-nav-top-level-entry-" + Math.random()).replace("0.", "")
 	const checkboxId = id + "-checkbox"
 	const contentId = id + "-content"
@@ -52,7 +52,7 @@ const topLevelEntry = ({ title, url, children, className }) => {
 				</label>
 				<div id={contentId} className={style.secondLevelOuterContainer}>
 					<div className={style.secondLevelContainer}>
-						{children.map(entry => secondLevelEntry(entry))}
+						{children.map(entry => secondLevelEntry(entry, onIndexPage))}
 					</div>
 				</div>
 			</div>
@@ -61,7 +61,7 @@ const topLevelEntry = ({ title, url, children, className }) => {
 	throw new Error(`Nav entry "${title}" with neither URL nor children.`)
 }
 
-const secondLevelEntry = ({ title, url, children, className }) => {
+const secondLevelEntry = ({ title, url, children, className }, onIndexPage) => {
 	const id = ("site-nav-second-level-entry-" + Math.random()).replace("0.", "")
 	const checkboxId = id + "-checkbox"
 	const contentId = id + "-content"
@@ -88,7 +88,7 @@ const secondLevelEntry = ({ title, url, children, className }) => {
 				</label>
 				<div id={contentId} className={style.thirdLevelOuterContainer}>
 					<div className={style.thirdLevelContainer}>
-						{children.map(entry => thirdLevelEntry(entry))}
+						{children.map(entry => thirdLevelEntry(entry, onIndexPage))}
 					</div>
 				</div>
 			</div>
@@ -97,7 +97,7 @@ const secondLevelEntry = ({ title, url, children, className }) => {
 	throw new Error(`Nav entry "${title}" with neither URL nor children.`)
 }
 
-const thirdLevelEntry = ({ title, url, tag, className }) => {
+const thirdLevelEntry = ({ title, url, channel, tag, className }, onIndexPage) => {
 	if (url)
 		return (
 			<span key={title} className={style.thirdLevelEntry}>
@@ -111,7 +111,7 @@ const thirdLevelEntry = ({ title, url, tag, className }) => {
 		return (
 			<span key={tag} {...classNames(style.thirdLevelEntry, style.tag)}>
 				{/* the trailing space is important - without it, browsers won't line-break */}
-				<Tag key={tag} className={className} tag={tag} mode="forward" />{" "}
+				<MenuTag key={tag} channel={channel} tag={tag} onIndexPage={onIndexPage} className={className} />{" "}
 			</span>
 		)
 	throw new Error(`Nav entry "${title}" with neither URL nor tag.`)
@@ -136,9 +136,13 @@ const loadChildren = tag => {
 	)
 	switch (tag) {
 		case "$ARTICLE-TAGS":
-			return articleTags.group
+			return articleTags.group.map(tag => {
+				return { channel: "articles", tag: tag.tag }
+			})
 		case "$VIDEO-TAGS":
-			return videoTags.group
+			return videoTags.group.map(tag => {
+				return { channel: "videos", tag: tag.tag }
+			})
 	}
 }
 
@@ -238,7 +242,7 @@ const expandThirdLevel = container => {
 const collapseThirdLevel = container => {
 	const secondLevelContainer = container.closest(`.${style.secondLevelContainer}`)
 	const currentHeight = secondLevelContainer.style.minHeight
-	secondLevelContainer.style.minHeight = 0;
+	secondLevelContainer.style.minHeight = 0
 	const targetHeight = secondLevelContainer.scrollHeight
 	secondLevelContainer.style.minHeight = currentHeight
 
@@ -252,7 +256,7 @@ const collapseThirdLevel = container => {
 
 		secondLevelContainer.style.transition = "min-height var(--menu-transition)"
 		secondLevelContainer.style.minHeight = `calc(${targetHeight}px - 2em)`
-})
+	})
 
 	const resetStyle = () => {
 		container.removeEventListener("transitionend", resetStyle)

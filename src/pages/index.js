@@ -16,6 +16,7 @@ const IndexPage = ({ data }) => (
 			slug: "",
 			searchKeywords: "Java",
 		}}
+		onIndexPage
 	>
 		<IndexHeader />
 		<div id={PROGRESS_BAR_REFERENCE} className={layout.container}>
