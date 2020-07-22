@@ -10,8 +10,8 @@ import style from "./postFilter.module.css"
 import tagletStyle from "./tag.module.css"
 
 const PostFilter = () => {
-	const channelListId = ("post-filter-channels-" + Math.random()).replace("0.", "")
-	const tagListId = ("post-filter-tags-" + Math.random()).replace("0.", "")
+	const channelListId = "post-filter-channels-426396"
+	const tagListId = "post-filter-tags-247802"
 	useLayoutEffect(() => {
 		const channelList = document.getElementById(channelListId)
 		const tagList = document.getElementById(tagListId)

@@ -9,7 +9,7 @@ import style from "./postList.module.css"
 const PostList = ({ slugs, highlightFirst }) => {
 	if (slugs.length === 0) return null
 
-	const id = ("post-list-" + Math.random()).replace("0.", "")
+	const id = "post-list-462383"
 	useLayoutEffect(() => {
 		const postList = document.getElementById(id)
 		updateVisibility(postList, tagletsFromPath())
