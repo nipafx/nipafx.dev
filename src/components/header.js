@@ -1,11 +1,10 @@
 import React from "react"
 
-import Link from "./link"
 import FormattedDate from "./formattedDate"
 import { Tag, Channel } from "./tag"
 import Image from "./image"
 
-import MdAsHtml from "../infra/mdAsHtml"
+import MarkdownAsHtml from "../infra/markdownAsHtml"
 import { classNames } from "../infra/functions"
 
 import layout from "../layout/container.module.css"
@@ -50,9 +49,9 @@ export const PostHeader = ({ title, date, channel, tags, intro, featuredImage })
 	return (
 		<Header featuredImage={featuredImage}>
 			<FormattedDate date={date} />
-			<MdAsHtml>{title}</MdAsHtml>
+			<MarkdownAsHtml>{title}</MarkdownAsHtml>
 			{showTags(channel, tags)}
-			<MdAsHtml>{intro}</MdAsHtml>
+			<MarkdownAsHtml>{intro}</MarkdownAsHtml>
 		</Header>
 	)
 }
@@ -83,7 +82,7 @@ export const PageHeader = ({ title, date, tags }) => {
 	return (
 		<Header>
 			<FormattedDate date={date} />
-			<MdAsHtml>{title}</MdAsHtml>
+			<MarkdownAsHtml>{title}</MarkdownAsHtml>
 			{showTags("pages", tags)}
 			{null /* TODO: teaser */}
 		</Header>

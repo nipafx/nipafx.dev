@@ -6,9 +6,8 @@ import Link from "./link"
 import Nav from "./nav"
 import Toc from "./toc"
 
-import MdAsHtml from "../infra/mdAsHtml"
+import MarkdownAsHtml from "../infra/markdownAsHtml"
 
-import layout from "../layout/container.module.css"
 import style from "./postNav.module.css"
 
 const PostNav = ({ title, repo, toc }) => {
@@ -26,7 +25,7 @@ const showRepo = repo => (
 	<p className={style.repo}>
 		Want to play around with the code yourself? Check out{" "}
 		<Link to={repo.url}>{repo.title}</Link>,{" "}
-		<MdAsHtml>{lowercaseFirstLetter(repo.description)}</MdAsHtml> - it contains many of the
+		<MarkdownAsHtml>{lowercaseFirstLetter(repo.description)}</MarkdownAsHtml> - it contains many of the
 		snippets shown here.
 	</p>
 )
