@@ -271,6 +271,21 @@ module.exports = {
 				],
 			},
 		},
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: `nipafx.dev - You. Me. Java.`,
+				short_name: `nipafx.dev`,
+				description: `Website of Nicolai (aka nipafx), a Java enthusiast with a passion for learning and sharing, online and offline`,
+				start_url: `/`,
+				background_color: `#262429`,
+				theme_color: `#69ea7d`,
+				// `icons` set by gatsby-plugin-favicon
+				display: `minimal-ui`,
+				categories: [`software`, `development`, `programming`, `java`],
+				lang: `en-US`,
+			},
+		},
 	],
 	mapping: {
 		"Article.repo": `Repo.slug`,
