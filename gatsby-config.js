@@ -95,6 +95,14 @@ module.exports = {
 			resolve: `gatsby-transformer-json`,
 		},
 		{
+			resolve: `gatsby-plugin-favicon`,
+			options: {
+				logo: "./src/images/favicon.png",
+				background: "#262429",
+				theme_color: "#69ea7d",
+			},
+		},
+		{
 			resolve: `gatsby-plugin-sharp`,
 		},
 		{
