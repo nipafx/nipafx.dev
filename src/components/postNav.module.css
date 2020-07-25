@@ -1,3 +1,22 @@
+.series {
+	margin: 0;
+	padding: 0.5em 0.5em 0.5em 1.25em;
+}
+
+.series > *:first-child {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.series > *:last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.currentPost {
+	color: var(--fg-color-shade-1)
+}
+
 .repo {
 	margin: 0;
 	padding: 0.5em 0.5em 0.5em 1.25em;

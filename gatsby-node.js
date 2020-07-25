@@ -77,7 +77,9 @@ createFields = (node, getNode, createNodeField) => {
 
 exports.createSchemaCustomization = ({ actions }) => {
 	const { createTypes } = actions
-	// NOTE: title, description, and intro can use Markdown syntax!
+	// NOTE:
+	//  - title, description, and intro can use Markdown syntax!
+	//  - linked nodes (see `mapping` in `gatsby-config` must not be part of the schema)
 	const typeDefs = `
 		type Post implements Node {
 			title: String!
@@ -126,7 +128,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			title: String!
 			slug: String!
 			description: String!
-			series: [String!]
+			seriesDescription: String
 		}
 		type Video implements Node {
 			title: String!
@@ -300,6 +302,7 @@ createTagNodes = (node, createNode, createContentDigest) => {
 		slug: node.frontmatter.slug,
 		description: node.frontmatter.description,
 		series: node.frontmatter.series,
+		seriesDescription: node.frontmatter.seriesDescription,
 
 		// see comment on creating article nodes
 		content___NODE: node.id,

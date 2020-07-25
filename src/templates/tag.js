@@ -36,7 +36,7 @@ const extractTag = (contextTag, dataTags) =>
 
 const extractSlugsWithoutSeries = (tag, posts) => {
 	const nonSeriesPosts = tag.series
-		? posts.filter(post => !tag.series.includes(post.slug))
+		? posts.filter(post => !tag.series.map(post => post.slug).includes(post.slug))
 		: posts
 	return nonSeriesPosts.map(post => post.slug)
 }
@@ -48,7 +48,9 @@ export const pageQuery = graphql`
 				slug
 				title
 				description
-				series
+				series {
+					slug
+				}
 				content {
 					htmlAst
 				}

@@ -14,13 +14,15 @@ const getPostSlugs = slug => {
 				tags: allTag {
 					nodes {
 						slug
-						series
+						series {
+							slug
+						}
 					}
 				}
 			}
 		`
 	)
-	return tags.nodes.find(tag => tag.slug === slug).series
+	return tags.nodes.find(tag => tag.slug === slug).series.map(post => post.slug)
 }
 
 export default SeriesList

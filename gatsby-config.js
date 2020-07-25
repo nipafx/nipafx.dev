@@ -288,7 +288,9 @@ module.exports = {
 		},
 	],
 	mapping: {
+		// NOTE: don't declare the fields on the left-hand side in the schema in `gatsby-node`
 		"Article.repo": `Repo.slug`,
 		"Video.repo": `Repo.slug`,
+		"Tag.series": `Post.slug`,
 	},
 }

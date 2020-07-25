@@ -5,12 +5,12 @@ import { PostHeader } from "../components/header"
 import PostContent from "../components/postContent"
 import PostEnd from "../components/postEnd"
 
-const ArticleLayout = ({ title, date, tags, intro, featuredImage, repo, toc, htmlAst }) => {
+const ArticleLayout = ({ title, date, tags, intro, featuredImage, toc, series, repo, htmlAst }) => {
 	return (
 		<main>
 			<section id={PROGRESS_BAR_REFERENCE}>
 				<PostHeader {...{ title, date, channel: "articles", tags, intro, featuredImage }} />
-				<PostContent {...{ title, repo, toc, htmlAst }} />
+				<PostContent {...{ title, toc, series, repo, htmlAst }} />
 				<PostEnd type="article" />
 			</section>
 		</main>

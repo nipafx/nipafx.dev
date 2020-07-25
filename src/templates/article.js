@@ -11,8 +11,9 @@ export default ({ data }) => {
 		tags: data.article.tags,
 		intro: data.article.intro ?? data.article.description,
 		featuredImage: data.article.featuredImage,
-		repo: data.article.repo,
 		toc: createTableOfContents(data.article),
+		repo: data.article.repo,
+		series: findSeries(data),
 		htmlAst: data.article.content.htmlAst,
 	}
 	const meta = {
@@ -26,6 +27,21 @@ export default ({ data }) => {
 			<ArticleLayout {...article} />
 		</SiteLayout>
 	)
+}
+
+const findSeries = data => {
+	const article = data.article.slug
+	const seriesTags = data.tags.nodes
+		.filter(tag => tag.series)
+		.filter(tag => tag.series.map(post => post.slug).includes(article))
+
+	if (seriesTags.length == 0) return null
+	// I assume each post can only be part of at most one series - hence `seriesTags[0]`
+	const description = seriesTags[0].seriesDescription
+	const posts = seriesTags[0].series.map(post =>
+		post.slug === article ? { ...post, current: true } : post
+	)
+	return { description, posts }
 }
 
 const createTableOfContents = article =>
@@ -52,6 +68,17 @@ export const query = graphql`
 				url
 				title
 				description
+			}
+		}
+		tags: allTag {
+			nodes {
+				title
+				slug
+				series {
+					title
+					slug
+				}
+				seriesDescription
 			}
 		}
 	}
