@@ -3,7 +3,11 @@ body {
 
 	--transition-duration: 0.2s;
 
-	--menu-icon: "┛";
+	--menu-icon: "↻"; /* ⮟ ⮋ 𒂟 𒃽 */
+	--menu-icon-vertical-closed: rotate(135deg);
+	--menu-icon-vertical-open: rotate(315deg);
+	--menu-icon-horizontal-closed: rotate(90deg);
+	--menu-icon-horizontal-open: rotate(270deg);
 	--menu-icon-transition: transform var(--transition-duration);
 	--menu-transition: ease-in-out var(--transition-duration);
 

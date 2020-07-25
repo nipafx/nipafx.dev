@@ -59,12 +59,13 @@
 .top-level-label:after {
 	display: inline-block;
 	content: var(--menu-icon);
+	transform: var(--menu-icon-vertical-closed);
 	margin-left: 0.5em;
 	text-align: center;
 }
 
 .top-level-checkbox:checked + .top-level-label:after {
-	transform: rotate(90deg);
+	transform: var(--menu-icon-vertical-open);
 }
 
 /*
@@ -113,11 +114,12 @@
 .second-level-label:after {
 	display: inline-block;
 	content: var(--menu-icon);
+	transform: var(--menu-icon-horizontal-closed);
 	text-align: center;
 }
 
 .second-level-checkbox:checked + .second-level-label:after {
-	transform: rotate(90deg);
+	transform: var(--menu-icon-horizontal-open);
 }
 
 /*

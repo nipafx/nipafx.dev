@@ -22,8 +22,9 @@
 
 .item-label:after {
 	content: var(--menu-icon);
-	text-align: center;
+	transform: var(--menu-icon-vertical-closed);
 	transition: transform var(--menu-transition);
+	text-align: center;
 }
 
 .item-content {
@@ -32,7 +33,7 @@
 }
 
 .item-checkbox:checked + .item-label:after {
-	transform: rotate(90deg);
+	transform: var(--menu-icon-vertical-open);
 }
 
 .item-checkbox:checked ~ .item-content {
