@@ -1,12 +1,57 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600&display=swap');
-@import url('https://fontlibrary.org/face/bedstead');
+@font-face {
+	font-family: "Source Sans Pro";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Source Sans Pro Regular"), local("Source-Sans-Pro-Regular"),
+		url("../fonts/SourceSansPro-Regular.woff2") format("woff2"),
+		url("../fonts/SourceSansPro-Regular.woff") format("woff"),
+		url("../fonts/SourceSansPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Source Sans Pro";
+	font-style: normal;
+	font-weight: bold;
+	src: local("Source Sans Pro SemiBold"), local("Source-Sans-Pro-SemiBold"),
+		url("../fonts/SourceSansPro-SemiBold.woff2") format("woff2"),
+		url("../fonts/SourceSansPro-SemiBold.woff") format("woff"),
+		url("../fonts/SourceSansPro-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Source Sans Pro";
+	font-style: italic;
+	font-weight: normal;
+	src: local("Source Sans Pro Italic"), local("Source-Sans-Pro-Italic"),
+		url("../fonts/SourceSansPro-Italic.woff2") format("woff2"),
+		url("../fonts/SourceSansPro-Italic.woff") format("woff"),
+		url("../fonts/SourceSansPro-Italic.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Source Sans Pro";
+	font-style: italic;
+	font-weight: bold;
+	src: local("Source Sans Pro SemiBoldItalic"), local("Source-Sans-Pro-SemiBoldItalic"),
+		url("../fonts/SourceSansPro-SemiBoldItalic.woff2") format("woff2"),
+		url("../fonts/SourceSansPro-SemiBoldItalic.woff") format("woff"),
+		url("../fonts/SourceSansPro-SemiBoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Bedstead";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Bedstead Regular"), local("Bedstead-Regular"), local("BedsteadRegular"),
+		url("../fonts/Bedstead-Regular.otf") format("opentype");
+}
 
 body {
 	--larger-font-size: 24px;
 	--regular-font-size: 18px;
 	--smaller-font-size: 16px;
 
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: "Source Sans Pro", sans-serif;
 	font-size: var(--regular-font-size);
 	font-weight: normal;
 	line-height: 1.75;
@@ -23,14 +68,14 @@ h2 {
 }
 
 h2::before {
-	font-family: 'BedsteadRegular', monospace;
+	font-family: "Bedstead", monospace;
 	font-size: 32px;
 	font-weight: normal;
 }
 
 .separator:after {
 	/* same as h2::before */
-	font-family: 'BedsteadRegular', monospace;
+	font-family: "Bedstead", monospace;
 	font-size: 32px;
 	font-weight: normal;
 }
@@ -51,7 +96,7 @@ h4 {
 }
 
 code {
-	font-family: 'BedsteadRegular', monospace;
+	font-family: "Bedstead", monospace;
 }
 
 pre > code {

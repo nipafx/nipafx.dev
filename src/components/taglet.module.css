@@ -1,5 +1,5 @@
 .taglet {
-	font-family: 'BedsteadRegular', monospace;
+	font-family: "Bedstead", monospace;
 }
 
 .taglet a {
@@ -15,9 +15,9 @@
 }
 
 .taglet.colorize, .taglet.selected {
-	color: var(--alt-color)
+	color: var(--alt-color);
 }
 
 .taglet.colorize a:hover, .taglet.selected a:hover {
-	color: var(--fg-color)
+	color: var(--fg-color);
 }
