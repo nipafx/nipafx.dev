@@ -20,6 +20,15 @@
 	cursor: pointer;
 }
 
+.item-label:hover {
+	color: var(--alt-color);
+}
+
+.item input:checked + .item-label {
+	color: var(--alt-color);
+}
+
+
 .item-label:after {
 	content: var(--menu-icon);
 	transform: var(--menu-icon-vertical-closed);
