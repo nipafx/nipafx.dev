@@ -44,10 +44,12 @@ const findSeries = data => {
 	return { description, posts }
 }
 
-const createTableOfContents = article =>
-	article.content.tableOfContents
-		.replace(/<a href="[^#"]*(#[^"]*)">([^<]*)<\/a>/g, `<a href="$1" title="$2">$2<\/a>`)
+const createTableOfContents = article => {
+	return article.content.tableOfContents
+		.replace(/"/g, `'`)
+		.replace(/<a href='[^#"]*(#[^']*)'>(.*)<\/a>/g, `<a href="$1" title="$2">$2<\/a>`)
 		.replace(/<p>|<\/p>/g, "")
+}
 
 export const query = graphql`
 	query($slug: String!) {

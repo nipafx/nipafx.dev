@@ -36,14 +36,14 @@
 	color: unset;
 }
 
-#toc a:hover {
+#toc a:hover, #toc a:hover * {
 	color: var(--alt-color);
 }
 
-#toc .highlighted {
+#toc .highlighted, #toc .highlighted * {
 	color: var(--alt-color);
 }
 
-#toc .highlighted:visited {
+#toc .highlighted:visited, #toc .highlighted:visited * {
 	color: var(--alt-color);
 }
