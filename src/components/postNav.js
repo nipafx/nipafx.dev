@@ -34,6 +34,7 @@ const showSeries = series => {
 						</li>
 					)
 				)}
+				{series.ongoing && <li>to be continued...</li>}
 			</ul>
 			<p>{series.description}</p>
 		</div>

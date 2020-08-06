@@ -33,15 +33,24 @@ const findSeries = data => {
 	const article = data.article.slug
 	const seriesTags = data.tags.nodes
 		.filter(tag => tag.series)
-		.filter(tag => tag.series.map(post => post.slug).includes(article))
+		.filter(tag =>
+			tag.series
+				// `null` post is allowed to indicate an ongoing series
+				.filter(post => post)
+				.map(post => post.slug)
+				.includes(article)
+		)
 
 	if (seriesTags.length == 0) return null
 	// I assume each post can only be part of at most one series - hence `seriesTags[0]`
-	const description = seriesTags[0].seriesDescription
-	const posts = seriesTags[0].series.map(post =>
-		post.slug === article ? { ...post, current: true } : post
-	)
-	return { description, posts }
+	const series = seriesTags[0]
+	const description = series.seriesDescription
+	// `null` post is allowed to indicate an ongoing series
+	const ongoing = series.series.includes(null)
+	const posts = series.series
+		.filter(post => post)
+		.map(post => (post.slug === article ? { ...post, current: true } : post))
+	return { description, posts, ongoing }
 }
 
 const createTableOfContents = article => {
