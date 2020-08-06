@@ -99,6 +99,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			intro: String
 			searchKeywords: String!
 			featuredImage: String
+			source: String
 		}
 		type Channel implements Node {
 			title: String!
@@ -123,6 +124,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			tags: [String!]!
 			description: String!
 			url: String!
+			restrictive: Boolean
 		}
 		type Tag implements Node {
 			title: String!
@@ -186,6 +188,7 @@ createArticleNodes = (node, createNode, createContentDigest) => {
 		searchKeywords: node.frontmatter.searchKeywords,
 		featuredImage: node.frontmatter.featuredImage,
 		repo: node.frontmatter.repo,
+		source: node.frontmatter.source,
 
 		// it would be nice to simply assign `node.html`/`node.htmlAst` to a field,
 		// but remark creates them later (in setFieldsOnGraphQLNodeType[1]), so they

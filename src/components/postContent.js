@@ -8,10 +8,10 @@ import PostNav from "../components/postNav"
 import layout from "../layout/container.module.css"
 import style from "./postContent.module.css"
 
-const PostContent = ({ title, toc, series, repo, htmlAst }) => {
+const PostContent = ({ title, toc, series, source, htmlAst }) => {
 	return (
 		<article {...classNames(layout.container, layout.textContainer, style.content)}>
-			<PostNav {...{ title, toc, series, repo }} />
+			<PostNav {...{ title, toc, series, source }} />
 			<RenderHtml htmlAst={htmlAst} />
 		</article>
 	)

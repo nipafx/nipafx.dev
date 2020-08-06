@@ -12,7 +12,10 @@ export default ({ data }) => {
 		intro: data.article.intro ?? data.article.description,
 		featuredImage: data.article.featuredImage,
 		toc: createTableOfContents(data.article),
-		repo: data.article.repo,
+		source:
+			data.article.repo || data.article.source
+				? { repo: data.article.repo, text: data.article.source }
+				: undefined,
 		series: findSeries(data),
 		htmlAst: data.article.content.htmlAst,
 	}
@@ -79,7 +82,9 @@ export const query = graphql`
 				url
 				title
 				description
+				restrictive
 			}
+			source
 		}
 		tags: allTag {
 			nodes {

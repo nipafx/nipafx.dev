@@ -8,14 +8,14 @@ import MarkdownAsHtml from "../infra/markdownAsHtml"
 
 import style from "./postNav.module.css"
 
-const PostNav = ({ title, toc, series, repo }) => {
-	if (!toc && !series && !repo) return null
+const PostNav = ({ title, toc, series, source }) => {
+	if (!toc && !series && !source) return null
 
 	return (
 		<Nav title={title} headers={["table of contents", "series", "source code"]}>
 			{toc && <Toc toc={toc} />}
 			{series && showSeries(series)}
-			{repo && showRepo(repo)}
+			{source && showSource(source)}
 		</Nav>
 	)
 }
@@ -41,13 +41,24 @@ const showSeries = series => {
 	)
 }
 
-const showRepo = repo => (
-	<p className={style.repo}>
-		Want to play around with the code yourself? Check out{" "}
-		<Link to={repo.url}>{repo.title}</Link>,{" "}
-		<MarkdownAsHtml>{lowercaseFirstLetter(repo.description)}</MarkdownAsHtml> - it contains many
-		of the snippets shown here.
-	</p>
+const showSource = source => (
+	<React.Fragment>
+		{source.repo && (
+			<p className={style.source}>
+				Want to play around with the code yourself? Check out the repository{" "}
+				<Link to={source.repo.url}>{source.repo.title}</Link>,{" "}
+				<MarkdownAsHtml>{lowercaseFirstLetter(source.repo.description)}</MarkdownAsHtml> -
+				it contains many of the snippets shown here.
+				{!source.repo.restrictive &&
+					" It has a permissive license, so you can reuse the code for your projects."}
+			</p>
+		)}
+		{source.text && (
+			<p className={style.source}>
+				<MarkdownAsHtml>{source.text}</MarkdownAsHtml>
+			</p>
+		)}
+	</React.Fragment>
 )
 
 const lowercaseFirstLetter = string => string.charAt(0).toLowerCase() + string.substring(1)

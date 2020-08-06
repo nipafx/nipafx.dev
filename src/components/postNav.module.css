@@ -17,7 +17,6 @@
 	color: var(--fg-color-shade-1)
 }
 
-.repo {
-	margin: 0;
-	padding: 0.5em 0.5em 0.5em 1.25em;
+.source {
+	margin: 0.5em 0.5em 0.5em 1.25em;
 }
