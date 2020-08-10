@@ -14,3 +14,9 @@
 	--code-alt-color: var(--fg-color);
 	--code-fg-color: var(--alt-color);
 }
+
+.block {
+	margin: 1em 0 1em 1em;
+	padding-left: 1em;
+	border-left: 1px solid var(--alt-color);
+}
