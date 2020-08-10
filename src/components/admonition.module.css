@@ -1,0 +1,20 @@
+.shortAdmonition, .longAdmonition {
+	margin-left: 1em;
+}
+
+.shortAdmonition {
+	text-indent: -1em;
+}
+
+.shortAdmonition > * {
+	display: inline;
+}
+
+.longAdmonition .type {
+	margin-left: -1em;
+}
+
+.type {
+	font-weight: bold;
+	color: var(--alt-color);
+}
