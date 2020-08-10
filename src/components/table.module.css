@@ -1,0 +1,38 @@
+.container {
+	margin-left: 1em;
+	overflow-x: scroll;
+
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.table {
+	border-collapse: collapse;
+}
+
+.table thead, .table tbody {
+	display: block;
+}
+
+.table th, .table td {
+	padding: 0 0.5em;
+	border-right: 1px solid var(--alt-color);
+}
+
+.table td {
+	margin: 1.5em;
+}
+
+/* ALIGNMENT (check existing posts when changing these (e.g. "Stream performance") */
+
+.table th, .table td {
+	text-align: center;
+}
+
+.table tr th:first-child, .table tr td:first-child {
+	text-align: left;
+}
+
+.table tr *:first-child:global(.centered-cell) {
+	text-align: center;
+}

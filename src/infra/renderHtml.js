@@ -2,11 +2,12 @@ import React from "react"
 import RehypeReact from "rehype-react"
 
 import { H1, H2, H3, H4, H5, H6 } from "../components/headings"
-import Link from "../components/link"
-import ContentImage from "../components/contentImage"
 import Admonition from "../components/admonition"
+import ContentImage from "../components/contentImage"
+import Link from "../components/link"
 import { PullQuote, BlockQuote } from "../components/quote"
 import SeriesList from "../components/seriesList"
+import Table from "../components/table"
 
 const RenderHtml = ({ withAst, htmlAst }) => {
 	const renderAst = new RehypeReact({
@@ -23,11 +24,12 @@ const RenderHtml = ({ withAst, htmlAst }) => {
 			h5: H5,
 			h6: H6,
 			a: renderLink,
+			admonition: Admonition,
 			blockquote: BlockQuote,
 			contentimage: ContentImage,
-			admonition: Admonition,
 			pullquote: PullQuote,
 			"series-list": SeriesList,
+			table: Table,
 		},
 	}).Compiler
 
