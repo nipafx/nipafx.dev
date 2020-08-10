@@ -133,6 +133,7 @@ module.exports = {
 					{
 						resolve: `gatsby-remark-add-inline-code-language`,
 						options: {
+							defaultInlineLanguage: "java",
 							inlineCodeMarker: "§",
 						},
 					},

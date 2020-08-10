@@ -2,6 +2,7 @@ const visit = require(`unist-util-visit`)
 
 module.exports = ({ markdownAST, markdownNode }, userOptions) => {
 	const defaults = {
+		defaultInlineLanguage: null,
 		frontmatterProperty: "inlineCodeLanguage",
 		inlineCodeMarker: null
 	}
@@ -9,7 +10,7 @@ module.exports = ({ markdownAST, markdownNode }, userOptions) => {
 	if (!options.inlineCodeMarker)
 		throw new Error("Please define option 'inlineCodeMarker' for plugin 'gatsby-remark-add-inline-code-language'.")
 
-	const language = markdownNode.frontmatter[options.frontmatterProperty]
+	const language = markdownNode.frontmatter[options.frontmatterProperty] || options.defaultInlineLanguage
 	if (!language)
 		return
 	const marker = options.inlineCodeMarker
