@@ -90,42 +90,27 @@ p {
 
 ul, ol {
 	padding: 0;
-	margin: 0;
+	margin: 1em 0 0 2em;
 }
 
 li {
-	padding-left: 2em;
-	padding-bottom: 1em;
-}
-
-ul {
-	list-style: none;
-}
-
-ul > li {
-	text-indent: -1em;
-}
-
-ul > li::before {
-	color: var(--alt-color);
-	content: "┘";
-	padding-right: 0.25em;
+	margin: 0 0 1em 0.5em;
 }
 
 ol {
 	counter-reset: item;
 }
 
-ol > li {
-	display: block;
-	text-indent: -1em;
+/* in August 2020, only Firefox and Safari
+   supported ::marker out of the box */
+
+ul > li::marker {
+	color: var(--alt-color);
+	content: "┘";
 }
 
-ol > li:before {
+ol > li::marker {
 	color: var(--alt-color);
-	content: counter(item) ".";
-	counter-increment: item;
-	padding-right: 0.25em;
 }
 
 /*
