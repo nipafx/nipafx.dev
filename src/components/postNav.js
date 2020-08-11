@@ -6,19 +6,38 @@ import Toc from "./toc"
 
 import MarkdownAsHtml from "../infra/markdownAsHtml"
 
+import canonicalSites from "../../content/meta/canonical-sites.json"
+
 import style from "./postNav.module.css"
 
-const PostNav = ({ title, toc, series, source }) => {
+const PostNav = ({ title, toc, canonical, series, source }) => {
 	if (!toc && !series && !source) return null
 
 	return (
-		<Nav title={title} headers={["table of contents", "series", "source code"]}>
+		<Nav title={title} headers={["table of contents", "origin", "series", "source code"]}>
 			{toc && <Toc toc={toc} />}
+			{canonical && showCanonical(canonical, title)}
 			{series && showSeries(series)}
 			{source && showSource(source)}
 		</Nav>
 	)
 }
+
+const showCanonical = (canonical, title) => {
+	const text = (canonical.text || findTextInCanonicalSites(canonical))
+		.replace("$URL", canonical.url)
+		.replace("$TITLE", title)
+	return (
+		<div className={style.canonical}>
+			<p>
+				<MarkdownAsHtml>{text}</MarkdownAsHtml>
+			</p>
+		</div>
+	)
+}
+
+const findTextInCanonicalSites = canonical =>
+	canonicalSites.sites.find(site => canonical.url.match(site.url)).text
 
 const showSeries = series => {
 	return (
@@ -27,7 +46,9 @@ const showSeries = series => {
 			<ul>
 				{series.posts.map(post =>
 					post.current ? (
-						<li key={post.slug} className={style.currentPost}>{post.title} (this one)</li>
+						<li key={post.slug} className={style.currentPost}>
+							{post.title} (this one)
+						</li>
 					) : (
 						<li key={post.slug}>
 							<Link to={post.slug}>{post.title}</Link>

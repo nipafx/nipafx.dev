@@ -96,6 +96,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			date: Date! @dateformat
 			tags: [String!]!
 			canonicalUrl: String
+			canonicalText: String
 			description: String!
 			intro: String
 			searchKeywords: String!
@@ -185,6 +186,7 @@ createArticleNodes = (node, createNode, createContentDigest) => {
 		date: node.frontmatter.date,
 		tags: node.frontmatter.tags,
 		canonicalUrl: node.frontmatter.canonicalUrl,
+		canonicalText: node.frontmatter.canonicalText,
 		description: node.frontmatter.description,
 		intro: node.frontmatter.intro,
 		searchKeywords: node.frontmatter.searchKeywords,

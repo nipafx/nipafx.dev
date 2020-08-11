@@ -1,4 +1,4 @@
-.series {
+.canonical, .series, .source {
 	margin: 0.5em 0.5em 0.5em 1.25em;
 }
 
@@ -14,8 +14,4 @@
 
 .currentPost {
 	color: var(--fg-color-shade-1)
-}
-
-.source {
-	margin: 0.5em 0.5em 0.5em 1.25em;
 }

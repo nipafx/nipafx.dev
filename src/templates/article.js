@@ -9,6 +9,9 @@ export default ({ data }) => {
 		title: data.article.title,
 		date: data.article.date,
 		tags: data.article.tags,
+		canonical: data.article.canonicalUrl
+			? { url: data.article.canonicalUrl, text: data.article.canonicalText }
+			: undefined,
 		intro: data.article.intro ?? data.article.description,
 		featuredImage: data.article.featuredImage,
 		toc: createTableOfContents(data.article),
@@ -75,6 +78,7 @@ export const query = graphql`
 			date
 			tags
 			canonicalUrl
+			canonicalText
 			description
 			intro
 			searchKeywords
