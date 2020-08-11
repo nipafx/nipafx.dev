@@ -56,12 +56,15 @@ const findSeries = data => {
 	return { description, posts, ongoing }
 }
 
-const createTableOfContents = article => {
-	return article.content.tableOfContents
+const createTableOfContents = article =>
+	article.content.tableOfContents
 		.replace(/"/g, `'`)
 		.replace(/<a href='[^#"]*(#[^']*)'>(.*)<\/a>/g, `<a href="$1" title="$2">$2<\/a>`)
 		.replace(/<p>|<\/p>/g, "")
-}
+		// the Remark-generated ToC contains line-breaks, some of which Firefox
+		// displays as a whitespace where there shouldn't be one
+		// (e.g. before <li>s that contain a <ul>)
+		.replace(/\n/g, ``)
 
 export const query = graphql`
 	query($slug: String!) {

@@ -1,19 +1,42 @@
 #toc {
-	padding: 0.5em 0;
+	/* using `margin` adds unwanted vertical space below the collapsed ToC */
+	padding: 0.5em 0.5em 0.5em 1em;
+}
+
+#toc ul {
+	margin: 0;
+	margin-left: 1.5em;
+	list-style: none;
+	line-height: 1.5em;
+}
+
+#toc > ul:first-child {
+	margin-left: 0;
 }
 
 #toc li {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	margin: 0;
 	padding: 0;
-	padding-left: 1.5em;
-	line-height: 1.5em;
 }
 
+/*
+	It would have been nice to use ::marker instead of :before, but I didn't
+	get it to look properly across browsers. To work with `overflow: hidden`
+	(which prevents long headers from wrapping in the ToC), I need to put the
+	marker inside the element (i.e. `list-style-position: inside`), but then
+	Firefox and Webkit picked different right margins (0 vs 1em) and neither
+	allows to reset it.
+	(See https://bugs.chromium.org/p/chromium/issues/detail?id=644630)
+*/
+
 #toc li:before {
+	color: var(--alt-color);
 	content: "├";
 	font-size: 1.5em;
+	margin-right: 0.25em;
 }
 
 #toc li:first-child:before {
