@@ -39,7 +39,7 @@ const Meta = ({ title, slug, canonicalUrl, description, searchKeywords, videoUrl
 		canonical: pageCanonicalUrl,
 	}
 
-	const meta = {
+	const metaNames = {
 		// TODO: remove before publication
 		robots: "noindex",
 		// Google
@@ -58,6 +58,9 @@ const Meta = ({ title, slug, canonicalUrl, description, searchKeywords, videoUrl
 		"twitter:player": videoUrl,
 		"twitter:player:width": videoUrl ? 1280 : null,
 		"twitter:player:height": videoUrl ? 720 : null,
+	}
+
+	const metaProperties = {
 		// Open Graph
 		"og:title": pageTitle,
 		"og:type": "article",
@@ -72,22 +75,23 @@ const Meta = ({ title, slug, canonicalUrl, description, searchKeywords, videoUrl
 		<Helmet>
 			<title key="title">{pageTitle}</title>
 			{/* "charset" and "viewport" are defined in html.js */}
-			{Object.getOwnPropertyNames(links)
-				.map(prop => [prop, link[prop]])
-				// don't create keys with undefined values
-				.filter(([key, value]) => value)
-				.map(([key, value]) => (
-					<link key={key} rel={key} href={value} />
-				))}
-			{Object.getOwnPropertyNames(meta)
-				.map(prop => [prop, meta[prop]])
-				// don't create keys with undefined values
-				.filter(([key, value]) => value)
-				.map(([key, value]) => (
-					<meta key={key} name={key} content={value} />
-				))}
+			{propertiesOf(links).map(([key, value]) => (
+				<link key={key} rel={key} href={value} />
+			))}
+			{propertiesOf(metaNames).map(([key, value]) => (
+				<meta key={key} name={key} content={value} />
+			))}
+			{propertiesOf(metaProperties).map(([key, value]) => (
+				<meta key={key} property={key} content={value} />
+			))}
 		</Helmet>
 	)
 }
+
+const propertiesOf = object =>
+	Object.getOwnPropertyNames(object)
+		.map(prop => [prop, object[prop]])
+		// filter out pairs with undefined values
+		.filter(([key, value]) => value)
 
 export default Meta
