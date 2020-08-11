@@ -8,17 +8,24 @@ const EXTRA_MARGIN = 50
 const INTERSECTION_THRESHOLD = 1
 
 const Toc = ({ toc }) => {
-	useEffect(() => {
-		const observer = createIntersectionObserver()
-		document
-			.querySelectorAll(`article h2, article h3, article h4, article h5, article h6`)
-			.forEach(heading => observer.observe(heading))
-		return () => {
-			document
-				.querySelectorAll(`article h2, article h3, article h4, article h5, article h6`)
-				.forEach(heading => observer.unobserve(heading))
-		}
-	})
+	/* TODO: Make this work again.
+		This worked fine until it didn't. Even when hooking into `useEffect`, no ToC items
+		are highlighted. That changes when the properties in `new IntersectionObserver` are
+		removed, but the resulting behavior is very buggy.
+	 */
+
+	// useEffect(() => {
+	// 	const observer = createIntersectionObserver()
+	// 	document
+	// 		.querySelectorAll(`article h2, article h3, article h4, article h5, article h6`)
+	// 		.forEach(heading => observer.observe(heading))
+	// 	return () => {
+	// 		document
+	// 			.querySelectorAll(`article h2, article h3, article h4, article h5, article h6`)
+	// 			.forEach(heading => observer.unobserve(heading))
+	// 	}
+	// })
+
 	return <nav id={style.toc} dangerouslySetInnerHTML={{ __html: toc }} />
 }
 

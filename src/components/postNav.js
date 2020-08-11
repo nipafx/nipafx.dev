@@ -27,9 +27,9 @@ const showSeries = series => {
 			<ul>
 				{series.posts.map(post =>
 					post.current ? (
-						<li className={style.currentPost}>{post.title} (this one)</li>
+						<li key={post.slug} className={style.currentPost}>{post.title} (this one)</li>
 					) : (
-						<li>
+						<li key={post.slug}>
 							<Link to={post.slug}>{post.title}</Link>
 						</li>
 					)
