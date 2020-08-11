@@ -47,11 +47,11 @@ const showSeries = series => {
 				{series.posts.map(post =>
 					post.current ? (
 						<li key={post.slug} className={style.currentPost}>
-							{post.title} (this one)
+							<MarkdownAsHtml>{post.title}</MarkdownAsHtml> (this one)
 						</li>
 					) : (
 						<li key={post.slug}>
-							<Link to={post.slug}>{post.title}</Link>
+							<Link to={post.slug}><MarkdownAsHtml>{post.title}</MarkdownAsHtml></Link>
 						</li>
 					)
 				)}
