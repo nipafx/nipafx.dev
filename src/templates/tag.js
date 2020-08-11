@@ -3,7 +3,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import SiteLayout from "../layout/site"
-import TagLayout from "../layout/tag"
+import TagletLayout from "../layout/taglet"
 
 const TagPage = ({ pageContext, data }) => {
 	const tag = extractTag(pageContext.tag, data.tags.nodes)
@@ -22,7 +22,7 @@ const TagPage = ({ pageContext, data }) => {
 
 	return (
 		<SiteLayout className="list" meta={meta}>
-			<TagLayout {...tagOptions} />
+			<TagletLayout {...tagOptions} />
 		</SiteLayout>
 	)
 }

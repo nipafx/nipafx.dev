@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import SiteLayout from "../layout/site"
-import TagLayout from "../layout/tag"
+import TagletLayout from "../layout/taglet"
 
 export default ({ data }) => {
 	const channel = {
@@ -17,7 +17,7 @@ export default ({ data }) => {
 	}
 	return (
 		<SiteLayout className={channel.channel} meta={meta}>
-			<TagLayout {...channel} />
+			<TagletLayout {...channel} />
 		</SiteLayout>
 	)
 }

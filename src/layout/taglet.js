@@ -9,9 +9,9 @@ import RenderHtml from "../infra/renderHtml"
 import PostEnd from "../components/postEnd"
 
 import layout from "./container.module.css"
-import style from "./tag.module.css"
+import style from "./taglet.module.css"
 
-const TagLayout = ({ channel, tag, descriptionHtmlAst, postSlugs }) => {
+const TagletLayout = ({ channel, tag, descriptionHtmlAst, postSlugs }) => {
 	const xor = channel ? !tag : tag
 	if (!xor) throw new Error(`Specify either \`channel\` ("${channel}") or \`tag\` ("${tag}").`)
 
@@ -31,4 +31,4 @@ const TagLayout = ({ channel, tag, descriptionHtmlAst, postSlugs }) => {
 	)
 }
 
-export default TagLayout
+export default TagletLayout
