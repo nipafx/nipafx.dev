@@ -3,7 +3,7 @@ import Helmet from "react-helmet"
 
 import { graphql, useStaticQuery } from "gatsby"
 
-const Meta = ({ title, slug, description, searchKeywords, videoUrl }) => {
+const Meta = ({ title, slug, canonicalUrl, description, searchKeywords, videoUrl }) => {
 	const data = useStaticQuery(
 		graphql`
 			query {
@@ -24,12 +24,20 @@ const Meta = ({ title, slug, description, searchKeywords, videoUrl }) => {
 	const pageTitle = title ? `${title} // ${site.title}` : siteName
 	const pageDescription = description || site.description
 	const pageUrl = `${site.siteUrl}/${slug}`
+	// because pages are reachable with and without trailing slash
+	// (which Google treats as two different pages), the canonical URL
+	// has to be used to identify one of them as the... well, canonical URL
+	const pageCanonicalUrl = canonicalUrl || pageUrl
 	// TODO: image
 	const pageImage = null
 	const pageImageAlt = null
 
 	if (pageTitle.length > 60) console.warn("Long title: ", slug)
 	if (pageDescription.length > 180) console.warn("Long description: ", slug)
+
+	const links = {
+		canonical: pageCanonicalUrl,
+	}
 
 	const meta = {
 		// TODO: remove before publication
@@ -64,6 +72,13 @@ const Meta = ({ title, slug, description, searchKeywords, videoUrl }) => {
 		<Helmet>
 			<title key="title">{pageTitle}</title>
 			{/* "charset" and "viewport" are defined in html.js */}
+			{Object.getOwnPropertyNames(links)
+				.map(prop => [prop, link[prop]])
+				// don't create keys with undefined values
+				.filter(([key, value]) => value)
+				.map(([key, value]) => (
+					<link key={key} rel={key} href={value} />
+				))}
 			{Object.getOwnPropertyNames(meta)
 				.map(prop => [prop, meta[prop]])
 				// don't create keys with undefined values

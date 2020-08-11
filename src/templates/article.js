@@ -22,6 +22,7 @@ export default ({ data }) => {
 	const meta = {
 		title: data.article.title,
 		slug: data.article.slug,
+		canonicalUrl: data.article.canonicalUrl,
 		description: data.article.description,
 		searchKeywords: data.article.searchKeywords,
 	}
@@ -73,6 +74,7 @@ export const query = graphql`
 			slug
 			date
 			tags
+			canonicalUrl
 			description
 			intro
 			searchKeywords
