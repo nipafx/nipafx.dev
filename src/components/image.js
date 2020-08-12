@@ -33,9 +33,7 @@ const Credits = credits => {
 			)}
 			{credits.author && (
 				<span key="author">
-					<Link to={credits.author.url}>
-						{credits.author.name ? credits.author.name : "artist"}
-					</Link>
+					<Link to={credits.author.url}>artist</Link>
 					{credits.edited && (
 						<span> (edited by me)</span>
 					)}

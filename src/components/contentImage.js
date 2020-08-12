@@ -19,13 +19,14 @@ const ContentImage = ({ slug, options }) => {
 	}
 	if (options.includes("sidebar")) {
 		divClasses.push(layout.sidebar)
-		type="sidebar"
+		type = "sidebar"
 	}
+	if (options.includes("border")) divClasses.push(style.border)
 	if (options.includes("bg")) imageClasses.push(style.bg)
 
 	return (
 		<div {...classNames(...divClasses)}>
-			<Image id={slug} type={type} {...classNames(style.image, ...imageClasses)} />
+			<Image id={slug} type={type} {...classNames(...imageClasses)} />
 		</div>
 	)
 }
