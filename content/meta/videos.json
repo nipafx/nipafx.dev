@@ -1,0 +1,16 @@
+{
+	"videos": [
+		{
+			"slug": "jpms-sander-mak",
+			"url": "https://www.youtube.com/watch?v=6VoCwyzrMfQ",
+			"title": "The Java Module System with Sander Mak",
+			"thumbnail": "jpms-sander-mak"
+		},
+		{
+			"slug": "workflows-refactoring",
+			"url": "http://www.youtube.com/watch?v=vqEg37e4Mkw",
+			"title": "Workflows of Refactoring",
+			"thumbnail": "workflows-of-refactoring"
+		}
+	]
+}

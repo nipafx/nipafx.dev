@@ -73,6 +73,13 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
+				name: `video-thumbnail-images`,
+				path: `${__dirname}/images/video-thumbnails`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
 				name: `article-title-images`,
 				path: `${__dirname}/images/title-articles`,
 			},
@@ -103,6 +110,14 @@ module.exports = {
 			},
 		},
 		{
+			resolve: "gatsby-plugin-react-svg",
+			options: {
+				rule: {
+					include: /src\/images/,
+				},
+			},
+		},
+		{
 			resolve: `gatsby-plugin-sharp`,
 		},
 		{
@@ -115,7 +130,7 @@ module.exports = {
 					{
 						resolve: `gatsby-remark-promote-tags`,
 						options: {
-							tags: ["series-list", "contentimage", "pullquote"],
+							tags: ["admonition", "contentimage", "contentvideo", "pullquote", "series-list"],
 						},
 					},
 					{

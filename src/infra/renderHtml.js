@@ -4,6 +4,7 @@ import RehypeReact from "rehype-react"
 import { H1, H2, H3, H4, H5, H6 } from "../components/headings"
 import Admonition from "../components/admonition"
 import ContentImage from "../components/contentImage"
+import ContentVideo from "../components/contentVideo"
 import Link from "../components/link"
 import { PullQuote, BlockQuote } from "../components/quote"
 import SeriesList from "../components/seriesList"
@@ -27,6 +28,7 @@ const RenderHtml = ({ withAst, htmlAst }) => {
 			admonition: Admonition,
 			blockquote: BlockQuote,
 			contentimage: ContentImage,
+			contentvideo: ContentVideo,
 			pullquote: PullQuote,
 			"series-list": SeriesList,
 			table: Table,

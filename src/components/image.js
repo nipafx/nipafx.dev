@@ -108,6 +108,18 @@ const getImageData = () => {
 						}
 					}
 				}
+				videoThumbnail: allImageSharp(
+					filter: { fields: { collection: { eq: "video-thumbnail-images" } } }
+				) {
+					nodes {
+						fields {
+							id
+						}
+						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 80) {
+							...GatsbyImageSharpFluid
+						}
+					}
+				}
 				content: allImageSharp(
 					filter: { fields: { collection: { eq: "content-images" } } }
 				) {
@@ -155,6 +167,8 @@ const findImageInData = (imageData, type, id) => {
 		case "content":
 		case "sidebar":
 			return imageData.content.nodes.find(node => node.fields.id === id)
+		case "videoThumbnail":
+			return imageData.videoThumbnail.nodes.find(node => node.fields.id === id)
 	}
 }
 
@@ -182,7 +196,8 @@ const isFixedType = type => {
 		case "postCard":
 		case "content":
 		case "sidebar":
-			return false
+		case "videoThumbnail":
+				return false
 		default:
 			throw new Error(`Unknown image type "${type}".`)
 	}
@@ -195,6 +210,7 @@ const showCredits = type => {
 		case "sidebar":
 			return true
 		case "postCard":
+		case "videoThumbnail":
 			return false
 		default:
 			throw new Error(`Unknown image type "${type}".`)

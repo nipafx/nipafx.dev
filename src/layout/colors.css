@@ -1,5 +1,6 @@
 body {
 	--bg-color: #262429;
+	--bg-color-transparent: rgb(38, 36, 41, 0.9);
 	--bg-color-shade-1: #404040;
 	--bg-color-shade-2: #606060;
 
