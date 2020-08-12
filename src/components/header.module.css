@@ -24,20 +24,33 @@
 	text-align: center;
 }
 
-.tags {
+.taglets {
 	font-size: var(--smaller-font-size);
 	display: flex;
 	justify-content: center;
 }
 
+.channel {
+	word-wrap: none;
+}
+
+.separator {
+	font-family: "Bedstead", monospace;
+	white-space: pre;
+	color: var(--fg-color);
+}
+
+.tags {
+	overflow-wrap: break-word;
+}
+
+.tags > * {
+	display: inline-block;
+}
+
 .tags > *:not(:last-child):after {
 	white-space: pre;
 	content: "   ";
-}
-
-.tags > .channel:after {
-	color: var(--fg-color);
-	content: "  //  ";
 }
 
 .intro {

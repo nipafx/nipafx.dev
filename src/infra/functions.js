@@ -26,7 +26,12 @@ export function tagletPath(kind, taglet) {
 }
 
 export function tagletsPath(channel, tag) {
-	return `/#channels~~${channel}~~~tags~~${tag}`
+	if (!channel && !tag) return ``
+	const path = [`/#`]
+	if (channel) path.push(`channels~~${channel}`)
+	if (channel && tag) path.push(`~~~`)
+	if (tag) path.push(`tags~~${tag}`)
+	return path.join(``)
 }
 
 export function emptyTaglets() {

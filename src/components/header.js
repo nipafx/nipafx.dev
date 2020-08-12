@@ -14,7 +14,7 @@ const Header = ({ children, featuredImage }) => (
 	<header {...classNames(layout.container, style.header)}>
 		{children[0] && <div {...classNames(layout.header, style.firstLine)}>{children[0]}</div>}
 		{children[1] && <h1 {...classNames(layout.header, style.title)}>{children[1]}</h1>}
-		{children[2] && <div {...classNames(layout.header, style.tags)}>{children[2]}</div>}
+		{children[2] && <div {...classNames(layout.header, style.taglets)}>{children[2]}</div>}
 		{children[3] && <div {...classNames(layout.header, style.intro)}><p>{children[3]}</p></div>}
 		{featuredImage && (
 			<Image
@@ -71,7 +71,19 @@ const showTags = (channel, tags) => {
 					className={style.channel}
 				/>
 			)}
-			{tagsExist && tags.map(tag => <Tag key={tag} tag={tag} mode="forward" />)}
+			{channelExists && tagsExist && (
+				<span key="separator" className={style.separator}>
+					{" "}
+					//{" "}
+				</span>
+			)}
+			{tagsExist && (
+				<div key="tags" className={style.tags}>
+					{tags.map(tag => (
+						<Tag key={tag} tag={tag} mode="forward" />
+					))}
+				</div>
+			)}
 		</React.Fragment>
 	)
 }

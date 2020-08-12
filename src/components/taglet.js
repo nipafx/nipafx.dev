@@ -93,20 +93,31 @@ const taglet = (text, link, forward, onClick) => {
  */
 const detectMode = (mode, kind, taglet, otherTaglet) => {
 	mode = mode || "text"
-	return {
-		link: mode === "text" ? null : taglet,
-		forward:
-			mode === "forward" || mode === "uplink"
-				? tagletPath(kind, taglet)
-				: mode === "overlink"
-				? tagletsPath(otherTaglet, taglet)
-				: null,
-		onClick:
-			mode === "uplink"
-				? event => updatePath(kind, taglet, event)
-				: mode === "overlink"
-				? event => overridePath(otherTaglet, taglet, event)
-				: null,
+	switch (mode) {
+		case "text":
+			return {
+				link: null,
+				forward: null,
+				onClick: null,
+			}
+		case "forward":
+			return {
+				link: taglet,
+				forward: tagletPath(kind, taglet),
+				onClick: null,
+			}
+		case "uplink":
+			return {
+				link: taglet,
+				forward: tagletPath(kind, taglet),
+				onClick: event => updatePath(kind, taglet, event),
+			}
+		case "overlink":
+			return {
+				link: taglet,
+				forward: tagletsPath(otherTaglet, taglet),
+				onClick: event => overridePath(otherTaglet, taglet, event),
+			}
 	}
 }
 
