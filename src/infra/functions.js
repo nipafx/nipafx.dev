@@ -20,13 +20,13 @@ export function classNames() {
 }
 
 export function tagletPath(kind, taglet) {
-	if (kind === "tag") return taglet === "all" ? "/" : `/#tags__${taglet}`
-	if (kind === "channel") return taglet === "all" ? "/" : `/#channels__${taglet}`
+	if (kind === "tag") return taglet === "all" ? "/" : `/#tags~~${taglet}`
+	if (kind === "channel") return taglet === "all" ? "/" : `/#channels~~${taglet}`
 	throw new Error("Unknown kind: " + kind)
 }
 
 export function tagletsPath(channel, tag) {
-	return `/#channels__${channel}___tags__${tag}`
+	return `/#channels~~${channel}~~~tags~~${tag}`
 }
 
 export function emptyTaglets() {
@@ -36,20 +36,20 @@ export function emptyTaglets() {
 export function tagletsFromPath() {
 	const hash = (window.location.hash || "").replace("#", "")
 
-	const allChannels = !hash.includes("channels__")
-	const allTags = !hash.includes("tags__")
+	const allChannels = !hash.includes("channels~~")
+	const allTags = !hash.includes("tags~~")
 	const channels = allChannels
 		? []
 		: hash
-				.replace("channels__", "")
-				.replace(/___tags__.*/, "")
-				.split("_")
+				.replace("channels~~", "")
+				.replace(/~~~tags~~.*/, "")
+				.split("~")
 	const tags = allTags
 		? []
 		: hash
-				.replace(/channels__.*___/, "")
-				.replace("tags__", "")
-				.split("_")
+				.replace(/channels~~.*~~~/, "")
+				.replace("tags~~", "")
+				.split("~")
 
 	return tagletsFrom(allChannels, channels, allTags, tags)
 }
@@ -110,12 +110,12 @@ function tagletsFrom(allChannels, channels, allTags, tags) {
 		writePath: function() {
 			const channelHash = this._channels.all
 				? null
-				: "channels__" + this._channels.entries.join("_")
-			const tagHash = this._tags.all ? null : "tags__" + this._tags.entries.join("_")
+				: "channels~~" + this._channels.entries.join("~")
+			const tagHash = this._tags.all ? null : "tags~~" + this._tags.entries.join("~")
 
 			let hash = channelHash
 			if (tagHash)
-				if (hash) hash += "___" + tagHash
+				if (hash) hash += "~~~" + tagHash
 				else hash = tagHash
 
 			if (hash) window.location.hash = hash
