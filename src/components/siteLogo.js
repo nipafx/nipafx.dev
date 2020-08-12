@@ -20,14 +20,16 @@ const SiteLogo = ({ className, onIndexPage }) => {
 }
 
 const logo = () =>
+	// * using "fixed" images because "fluid" cut off a few pixels on the left - not sure why
+	// * using "noBase64" prevents the blur-up effect, which I don't like for the logo
 	useStaticQuery(graphql`
 		query {
 			logo: imageSharp(fields: { id: { eq: "logo" } }) {
 				fields {
 					id
 				}
-				fluid(maxWidth: 200, srcSetBreakpoints: [100, 200, 400], jpegQuality: 80) {
-					...GatsbyImageSharpFluid
+				fixed(width: 200, jpegQuality: 80) {
+					...GatsbyImageSharpFixed_noBase64
 				}
 			}
 		}
