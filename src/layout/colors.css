@@ -41,6 +41,12 @@ body {
 	--twitch-color: #a970ff;
 	--twitter-color: #1da1f3;
 	--youtube-color: #da281e;
+	--facebook-color: #1877F2;
+	--linkedin-color: #2977C9;
+	--xing-color: #C6F16D;
+	--vk-color: #4A76A8;
+	--reddit-color: #F73000;
+	--hackernews-color: #FF6600;
 
 	color: var(--fg-color);
 	background: var(--bg-color);
@@ -99,4 +105,28 @@ body {
 
 .stackoverflow {
 	--alt-color: var(--stackoverflow-color);
+}
+
+.facebook {
+	--alt-color: var(--facebook-color);
+}
+
+.linkedin {
+	--alt-color: var(--linkedin-color);
+}
+
+.xing {
+	--alt-color: var(--xing-color);
+}
+
+.vk {
+	--alt-color: var(--vk-color);
+}
+
+.reddit {
+	--alt-color: var(--reddit-color);
+}
+
+.hackernews {
+	--alt-color: var(--hackernews-color);
 }

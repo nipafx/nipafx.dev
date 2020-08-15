@@ -7,11 +7,13 @@ import ArticleLayout from "../layout/article"
 export default ({ data }) => {
 	const article = {
 		title: data.article.title,
+		slug: data.article.slug,
 		date: data.article.date,
 		tags: data.article.tags,
 		canonical: data.article.canonicalUrl
 			? { url: data.article.canonicalUrl, text: data.article.canonicalText }
 			: undefined,
+		description: data.article.description,
 		intro: data.article.intro ?? data.article.description,
 		featuredImage: data.article.featuredImage,
 		toc: createTableOfContents(data.article),

@@ -7,8 +7,10 @@ import PageLayout from "../layout/page"
 export default ({ data }) => {
 	const page = {
 		title: data.page.title,
+		slug: data.page.slug,
 		date: data.page.date,
 		tags: data.page.tags,
+		description: data.page.description,
 		toc: createTableOfContents(data.page),
 		htmlAst: data.page.content.htmlAst,
 	}

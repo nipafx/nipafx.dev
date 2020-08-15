@@ -7,8 +7,10 @@ import VideoLayout from "../layout/video"
 export default ({ data }) => {
 	const video = {
 		title: data.video.title,
+		slug: data.video.slug,
 		date: data.video.date,
 		tags: data.video.tags,
+		description: data.video.description,
 		intro: data.video.intro ?? data.video.description,
 		htmlAst: data.video.content.htmlAst,
 	}

@@ -1,6 +1,7 @@
 import React from "react"
 
 import Link from "./link"
+import LinkList from "./linkList"
 import Nav from "./nav"
 import Toc from "./toc"
 
@@ -8,18 +9,24 @@ import { classNames } from "../infra/functions"
 import MarkdownAsHtml from "../infra/markdownAsHtml"
 
 import canonicalSites from "../../content/meta/canonical-sites.json"
+import channelLinks from "../../content/meta/channel-links.json"
+import shareLinks from "../../content/meta/share-links.json"
 
 import style from "./postNav.module.css"
 
-const PostNav = ({ title, toc, canonical, series, source }) => {
+const PostNav = ({ title, slug, description, toc, canonical, series, source }) => {
 	if (!toc && !series && !source) return null
 
 	return (
-		<Nav title={title} headers={["origin", "series", "source code", "table of contents"]}>
+		<Nav
+			title={title}
+			headers={["origin", "series", "source code", "table of contents", "share & follow"]}
+		>
 			{canonical && showCanonical(canonical, title)}
 			{series && showSeries(series)}
 			{source && showSource(source)}
 			{toc && showToc(toc)}
+			{showShare(title, slug, description)}
 		</Nav>
 	)
 }
@@ -84,13 +91,51 @@ const showSource = source => (
 			</p>
 		)}
 		{source.text && (
-			<p className={style.source}>
+			<p>
 				<MarkdownAsHtml>{source.text}</MarkdownAsHtml>
 			</p>
 		)}
-	</React.Fragment>
+	</div>
 )
 
 const lowercaseFirstLetter = string => string.charAt(0).toLowerCase() + string.substring(1)
+
+const showShare = (title, slug, description) => {
+	return (
+		<div className={style.entry}>
+			<p>Share this post with your community:</p>
+			<p className={style.icons}>
+				<LinkList
+					showIcons
+					links={shareLinks.links.map(link =>
+						updateShareUrl(link, title, slug, description)
+					)}
+				/>
+			</p>
+			<p>
+				I'm active on various platforms. Watch this space or follow me there to get
+				notified when I publish new content:
+			</p>
+			<p className={style.icons}>
+				<LinkList showIcons links={channelLinks.links} />
+			</p>
+		</div>
+	)
+}
+
+const updateShareUrl = (
+	{ title, fontAwesome, url, className },
+	articleTitle,
+	articleSlug,
+	articleDescription
+) => {
+	articleTitle = articleTitle.replace(/[/`/]/g, "")
+	url = url
+		.replace(/\n/g, encodeURI("\n"))
+		.replace("$DESCRIPTION", articleDescription)
+		.replace("$TITLE", articleTitle)
+		.replace("$SLUG", articleSlug)
+	return { title, fontAwesome, url, className }
+}
 
 export default PostNav

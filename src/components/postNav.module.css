@@ -19,3 +19,8 @@
 .currentPost {
 	color: var(--fg-color-shade-1)
 }
+
+.icons {
+	font-size: var(--regular-font-size);
+	text-align: center;
+}
