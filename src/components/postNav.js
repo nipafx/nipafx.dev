@@ -4,6 +4,7 @@ import Link from "./link"
 import Nav from "./nav"
 import Toc from "./toc"
 
+import { classNames } from "../infra/functions"
 import MarkdownAsHtml from "../infra/markdownAsHtml"
 
 import canonicalSites from "../../content/meta/canonical-sites.json"
@@ -14,21 +15,27 @@ const PostNav = ({ title, toc, canonical, series, source }) => {
 	if (!toc && !series && !source) return null
 
 	return (
-		<Nav title={title} headers={["table of contents", "origin", "series", "source code"]}>
-			{toc && <Toc toc={toc} />}
+		<Nav title={title} headers={["origin", "series", "source code", "table of contents"]}>
 			{canonical && showCanonical(canonical, title)}
 			{series && showSeries(series)}
 			{source && showSource(source)}
+			{toc && showToc(toc)}
 		</Nav>
 	)
 }
+
+const showToc = toc => (
+	<div {...classNames(style.entry, style.toc)}>
+		<Toc toc={toc} />
+	</div>
+)
 
 const showCanonical = (canonical, title) => {
 	const text = (canonical.text || findTextInCanonicalSites(canonical))
 		.replace("$URL", canonical.url)
 		.replace("$TITLE", title)
 	return (
-		<div className={style.canonical}>
+		<div className={style.entry}>
 			<p>
 				<MarkdownAsHtml>{text}</MarkdownAsHtml>
 			</p>
@@ -41,9 +48,9 @@ const findTextInCanonicalSites = canonical =>
 
 const showSeries = series => {
 	return (
-		<div className={style.series}>
+		<div className={style.entry}>
 			<p>This post is part of a series:</p>
-			<ul>
+			<ul className={style.seriesList}>
 				{series.posts.map(post =>
 					post.current ? (
 						<li key={post.slug} className={style.currentPost}>
@@ -51,7 +58,9 @@ const showSeries = series => {
 						</li>
 					) : (
 						<li key={post.slug}>
-							<Link to={post.slug}><MarkdownAsHtml>{post.title}</MarkdownAsHtml></Link>
+							<Link to={post.slug}>
+								<MarkdownAsHtml>{post.title}</MarkdownAsHtml>
+							</Link>
 						</li>
 					)
 				)}
@@ -63,9 +72,9 @@ const showSeries = series => {
 }
 
 const showSource = source => (
-	<React.Fragment>
+	<div className={style.entry}>
 		{source.repo && (
-			<p className={style.source}>
+			<p>
 				Want to play around with the code yourself? Check out the repository{" "}
 				<Link to={source.repo.url}>{source.repo.title}</Link>,{" "}
 				<MarkdownAsHtml>{lowercaseFirstLetter(source.repo.description)}</MarkdownAsHtml> -

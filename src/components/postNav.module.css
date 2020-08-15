@@ -1,15 +1,19 @@
-.canonical, .series, .source {
-	margin: 0.5em 0.5em 0.5em 1.25em;
+.entry {
+	margin: 0 0.5em 0 1.5em;
 }
 
-.series > *:first-child {
+.toc {
+	/* ToC needs a slightly smaller left margin to properly align it with other entries */
+	margin-left: 1.25em;
+}
+
+.entry > *:first-child {
 	margin-top: 0;
 	padding-top: 0;
 }
 
-.series > *:last-child {
-	margin-bottom: 0;
-	padding-bottom: 0;
+.seriesList li {
+	margin-bottom: 0.5em;
 }
 
 .currentPost {

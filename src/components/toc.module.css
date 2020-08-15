@@ -1,8 +1,3 @@
-#toc {
-	/* using `margin` adds unwanted vertical space below the collapsed ToC */
-	padding: 0.5em 0.5em 0.5em 1em;
-}
-
 #toc ul {
 	margin: 0;
 	margin-left: 1.5em;
