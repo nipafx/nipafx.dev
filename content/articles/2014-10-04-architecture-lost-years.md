@@ -5,34 +5,27 @@ date: 2014-10-04
 slug: architecture-lost-years
 description: "Discussing the talk \"Architecture - The Lost Years\", which Robert C. Martin held on several occasions."
 searchKeywords: "Architecture Lost Years"
-featuredImage: architecture-the-lost-years
+featuredImage: architecture-lost-years
 ---
 
 Wow!
 
 There's not much more to say.
 The architecture Robert C.
-Martin presents in [this talk](http://www.youtube.com/watch?v=WpkDN78P884 "Robert C.
-Martin at Ruby Midwest 2011") is mind-blowing.
+Martin presents in [this talk](http://www.youtube.com/watch?v=WpkDN78P884 "Robert C. Martin at Ruby Midwest 2011") is mind-blowing.
 Never mind that it's 20 years old - nobody seems to use it so it counts as new.
 (By the way those are the lost years in the title "Architecture - The Lost Years".)
 
 Just go and watch the video!
 
-### Overview
-
 I'll not even try to properly summarize the talk as I think it should be watched in its entirety.
 But just in case you wonder whether you really want to do that, I'll try to make you curious.
 
-[toc exclude=Overview]
-
 ## The Talk
 
-([Link to YouTube](http://www.youtube.com/watch?v=WpkDN78P884 "Robert C.
-Martin at Ruby Midwest 2011"))
+([Link to YouTube](http://www.youtube.com/watch?v=WpkDN78P884 "Robert C. Martin at Ruby Midwest 2011"))
 
-Just in case you want to watch it again, use [this link](http://www.youtube.com/watch?v=asLUTiJJqdE "Robert C.
-Martin at COHAA").
+Just in case you want to watch it again, use [this link](http://www.youtube.com/watch?v=asLUTiJJqdE "Robert C. Martin at COHAA").
 It doesn't have the slides but a fun introduction about lasers.
 
 Unfortunately I couldn't find the slides online.
@@ -86,13 +79,16 @@ Martin goes on to explain the concept.
 I'm not going to summarize that part.
 It is too complex and important to be cramped into a few lines.
 I'm currently thinking about writing a small app just to test drive the concept.
-If I do, I might make some posts out of my experience, so stay tuned: [⇒ newsletter](http://blog.codefx.org/newsletter/), [⇒ RSS](http://blog.codefx.org/feed/)
+If I do, I might make some posts out of my experience, so stay tuned: [⇒ newsletter](http://blog.codefx.org/newsletter/), [⇒ RSS](feed.xml)
 
-Update
-:   *At GeeCON 2014 Sandro Mancuso gave a talk called *Crafted Design*.
+<admonition type="update">
+
+At GeeCON 2014 Sandro Mancuso gave a talk called *Crafted Design*.
 It is based on the same observation and problem statement as Martin's talk and comes to a very similar solution.
 I covered it in my post [Impulse: "Crafted Design"](crafted-design) and it contains a description of the architecture, which I did not write here.
 You should check it out!*
+
+</admonition>
 
 ### Effects
 

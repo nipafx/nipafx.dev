@@ -14,25 +14,12 @@ How to handle checked exceptions in stream pipelines is one such problem.
 The functional interfaces various Stream operations accept do not allow implementations to throw checked exceptions but many methods we might want to call do.
 Obviously, there's a tension here, which many developers have come across.
 
-I want to explore this topic in a short series of posts:
-
-Repackaging Exceptions In Streams
-:   Repackage exceptions in order to throw them without the compiler complaining about it.
-
-Handling Exceptions In Streams
-:   Catch and handle exceptions on the spot, possibly by deferring error handling.
-
-Throwing Exceptions From Streams
-:   How to handle deferred errors by throwing an exception after all.
-
 My main goal is to propose various solutions and, ideally, to establish a common terminology that makes discussions easier.
 I will also comment on my suggestions, adding my own assessment of how useful I find them - this is secondary, though, and I hope that it does not distract from the main goal: getting the ideas out there.
 
 This first post will look into repackaging exceptions so that the compiler stops complaining.
 
-[toc]
-
-## Setting the Scene {#settingthescene}
+## Setting the Scene
 
 The underlying scenario is something every frequent user of streams has encountered in one form or other: A method you would like to use in one of stream's intermediate operations throws a checked exceptions.
 
@@ -79,15 +66,13 @@ interface CheckedFunction<T, R, EX extends Exception> {
 This allows us to assign `User::parse` to a `CheckedFunction<String, User, ParseException>`.
 Note that the type of the exception is generic, which will come in handy later.
 
-<contentimage slug="repackage-stream-exceptions"></contentimage>
-
-## Repackaging Exceptions In Streams {#repackagingexceptionsinstreams}
+## Repackaging Exceptions In Streams
 
 So do you really have to handle the exceptions?
 Could you not just, I don't know, make the problem go away?
 The surprising answer is "Yes, you can." Whether you *should* remains to be seen...
 
-### Wrap In Unchecked Exception {#wrapinuncheckedexception}
+### Wrap In Unchecked Exception
 
 Given a function that throws a checked exception, it is pretty easy to transform it into one that throws an unchecked one instead:
 
@@ -124,7 +109,7 @@ It feels a little like hiding a bomb in the stream.
 Finally, note that this aborts the stream as soon as the first error occurs - something that might or might not be ok.
 Deciding whether it is ok can be tough if the method returns a stream instead of consuming it because different callers might have different requirements.
 
-### Sneaky-Throw Exception {#sneakythrowexception}
+### Sneaky-Throw Exception
 
 Another way to fix this whole thing, is to "sneaky-throw" the exception.
 This technique uses generics to confuse the compiler and `@SuppressWarnings` to silence its remaining complaints.
@@ -189,7 +174,7 @@ But as we have seen there is no good way to declare / catch such an exception, s
 > It's a nice experiment but never actually do it!
 If you really want to throw, wrap in a runtime exception.
 
-### Lift Exception {#liftexception}
+### Lift Exception
 
 The problem with sneaky-throw was that it surprises consumers of the stream *and* makes it hard to handle that exception even once they overcame that surprise.
 For the latter, at least, there is a way out.
@@ -245,12 +230,10 @@ List<User> parse(List<String> userStrings) throws ParseException {
 But as I said before, I think this only works well if you never return streams.
 Because if you do, even only occasionally, there is a risk that you or a colleague takes the pipeline apart during a refactoring, arming the bomb that is an undeclared checked exception, hidden in a stream.
 
-There is another drawback that [Sebastian Millies pointed out](http://blog.codefx.org/java/repackaging-exceptions-streams/#comment-3154058536), namely that the interfaces and methods used so far only allow a single exception.
+There is another drawback that [Sebastian Millies pointed out](java-repackaging-exceptions-streams)<!-- comment-3154058536 -->, namely that the interfaces and methods used so far only allow a single exception.
 As soon as a method declares more than one checked exception, things get problematic.
 Either you let Java derive a common supertype (likely to be `Exception`) or you declare additional `CheckedFunction` interfaces and `liftException` methods for more than one exception.
 Both not exactly great options.
-
-[java_8]
 
 ## Reflection
 

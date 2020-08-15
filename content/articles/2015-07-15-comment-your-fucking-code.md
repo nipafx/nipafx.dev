@@ -1,6 +1,6 @@
 ---
 title: "Comment Your Fucking Code!"
-tags: [agile, clean-code, clean-comments, documentation, rant]
+tags: [clean-code, clean-comments, documentation, rant]
 date: 2015-07-15
 slug: comment-your-fucking-code
 description: "You think your code is so clean that it doesn't need comments? Then this rant is just for you!"
@@ -54,8 +54,6 @@ Easy, just start wiring us a monthly fee and we'll cover you, they answer.
 
 Awesome self-documenting insurance policy!
 But would you trust them with your family's well-being?&lt;
-
-<contentimage slug="comment-your-fucking-code"></contentimage>
 
 ## Tests
 
@@ -164,7 +162,4 @@ So please, stop being so full of yourself and just add a useful comment here and
 Where?
 I'll write about that in [my next post](thoughts-on-comments).
 
-Want to tell others to comment their fucking code?
-Here you go:
-
-[feather_share]
+In the meantime, to tell others to comment their fucking code!

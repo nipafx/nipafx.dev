@@ -7,27 +7,20 @@ description: "A close look at stream performance. How do they compare to for and
 intro: "A close look at stream performance. How do they compare to for and for-each loops oder arrays and lists. And what roles play boxing and the complexity of the executed operation?"
 searchKeywords: "stream performance"
 featuredImage: stream-performance
+repo: benchmarks
+source: "[This Google spreadsheet](https://docs.google.com/spreadsheets/d/1K-y44zFrBWpZXkdaBI80-g_MqJiuphmuZAP6gg6zz_4/edit#gid=1205798000) contains the resulting data."
 ---
 
-When I read [Angelika Langer's *Java performance tutorial – How fast are the Java 8 streams?*](https://jaxenter.com/java-performance-tutorial-how-fast-are-the-java-8-streams-118830.html "Java performance tutorial - How fast are the Java 8 streams?
-- JAXEnter") I couldn't believe that for a specific operation they took about 15 times longer than for loops.
+When I read [Angelika Langer's *Java performance tutorial – How fast are the Java 8 streams?*](https://jaxenter.com/java-performance-tutorial-how-fast-are-the-java-8-streams-118830.html "Java performance tutorial - How fast are the Java 8 streams? - JAXEnter") I couldn't believe that for a specific operation they took about 15 times longer than for loops.
 Could stream performance really be that bad?
 I had to find out!
 
-Coincidently, I recently watched [a cool talk about microbenchmarking Java code](https://www.parleys.com/tutorial/java-microbenchmark-harness-the-lesser-two-evils) and I decided to put to work what I learned there.
+Coincidentally, I recently watched [a cool talk about microbenchmarking Java code](https://www.parleys.com/tutorial/java-microbenchmark-harness-the-lesser-two-evils) and I decided to put to work what I learned there.
 So lets see whether streams really are that slow.
 
-### Overview
-
-As usual I will start with a dull prologue.
-This one will explain why you should be very careful with what I present here, how I produced the numbers, and how you can easily repeat and tweak the benchmark.
-If you don't care about any of this, jump right to [Stream Performance](#Stream-Performance).
-
-But first, two quick pointers: All benchmark code is [up on GitHub](https://github.com/CodeFX-org/lab-java8streamperformancebenchmark) and [this Google spreadsheet](https://docs.google.com/spreadsheets/d/1K-y44zFrBWpZXkdaBI80-g_MqJiuphmuZAP6gg6zz_4/edit#gid=1205798000) contains the resulting data.
-
-[toc exclude=Overview]
-
 ## Prologue
+
+Unfortunately, I have to start with a dull prologue.
 
 ### Disclaimer
 
@@ -48,8 +41,7 @@ It is entirely possible that my benchmarks fell victim to optimizations that ske
 
 -   **CPU**: Intel(R) Core(TM) i7-4800MQ CPU @ 2.70GHz
 -   **RAM**: Samsung DDR3 16GB @ 1.60GHz (the tests ran entirely in RAM)
--   **OS**: Ubuntu 15.04.
-Kernel version 3.19.0-26-generic
+-   **OS**: Ubuntu 15.04. Kernel version 3.19.0-26-generic
 -   **Java**: 1.8.0\_60
 -   **JMH**: 1.10.5
 
@@ -84,7 +76,7 @@ Since creating millions of randomized integers takes considerable time, I opted 
 The benchmark code itself is [available on GitHub](https://github.com/CodeFX-org/lab-java8streamperformancebenchmark).
 To run it, simply go to the command line, build the project, and execute the resulting jar:
 
-```shell
+```
 mvn clean install
 java -jar target/benchmarks.jar
 ```
@@ -93,15 +85,13 @@ Some easy tweaks:
 
 -   adding a regular expression at the end of the execution call will only benchmark methods whose fully-qualified name matches that expression; e.g. to only run `ControlStructuresBenchmark` :
 
-	``` {.lang:sh .decode:true title="Define Which Benchmarks To Run"}
+	```
 	java -jar target/benchmarks.jar Control
 	```
 
 -   the annotations on `AbstractIterationBenchmark` govern how often and how long each benchmark is executed
 -   the constant `NUMBER_OF_ELEMENTS` defines the length of the array/list that is being iterated over
 -   tweak `CREATE_ELEMENTS_RANDOMLY` to switch between an array of ordered or of random numbers
-
-<contentimage slug="stream-performance"></contentimage>
 
 ## Stream Performance
 
@@ -141,9 +131,9 @@ int m = Integer.MIN_VALUE;
 for (int i = 0; i < intList.size(); i++)
 	if (intList.get(i) > m)
 		m = intList.get(i);
-```
 
-```java
+// vs
+
 intList.stream().max(Math::max);
 ```
 
@@ -151,23 +141,48 @@ The results are 6.55 ms for the for loop and 8.33 ms for the stream.
 My measurements are 0.700 ms and 3.272 ms.
 While this changes their relative performance considerably, it creates the same order:
 
-  --------------------------------------------------------------------------
-					       Angelika Langer          Me
-  ------------------------ ------------------------ ------------------------
-  operation                time (ms)                slower
-
-  `array_max_for`          -                        0.123
-  0.36                                              
-
-  `array_max_stream`       14'861%                  0.599
-  5.35                                              
-
-  `list_max_for`           22%                      0.700
-  6.55                                              
-
-  `list_max_stream`        27%                      3.272
-  8.33                                              
-  --------------------------------------------------------------------------
+<table>
+  <tr>
+    <th></th>
+    <th colspan="2">Angelika Langer</th>
+    <th colspan="2">Me</th>
+  </tr>
+  <tr>
+    <th className="centered-cell">operation</th>
+    <th>time (ms)</th>
+    <th>slower</th>
+    <th>time (ms)</th>
+    <th>slower</th>
+  </tr>
+  <tr>
+    <td><code>array_max_for</code></th>
+    <td>0.36</td>
+    <td>-</td>
+    <td>0.123</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><code>array_max_stream</code></th>
+    <td>5.35</td>
+    <td>14'861%</td>
+    <td>0.599</td>
+    <td>487%</td>
+  </tr>
+  <tr>
+    <td><code>list_max_for</code></th>
+    <td>6.55</td>
+    <td>22%</td>
+    <td>0.700</td>
+    <td>17%</td>
+  </tr>
+  <tr>
+    <td><code>list_max_stream</code></th>
+    <td>8.33</td>
+    <td>27%</td>
+    <td>3.272</td>
+    <td>467%</td>
+  </tr>
+</table>
 
 I ascribe the marked difference between iterations over arrays and lists to boxing; or rather to the resulting indirection.
 The primitive array is packed with the values we need but the list is backed by an array of `Integer`s, i.e.
@@ -188,25 +203,59 @@ So let's have a lock at something else than just integer comparison.
 
 I compared the following operations:
 
-max
-:   Finding the maximum value.
-
-sum
-:   Computing the sum of all values; aggregated in an `int` ignoring overflows.
-
-arithmetic
-:   To model a less simple numeric operation I combined the values with a a handful of bit shifts and multiplications.
-
-string
-:   To model a complex operation that creates new objects I converted the elements to strings and xor'ed them character by character.
+* **max**:
+Finding the maximum value.
+* **sum**:
+Computing the sum of all values; aggregated in an `int` ignoring overflows.
+* **arithmetic**:
+To model a less simple numeric operation I combined the values with a a handful of bit shifts and multiplications.
+* **string**:
+To model a complex operation that creates new objects I converted the elements to strings and xor'ed them character by character.
 
 These were the results (for 500'000 ordered elements; in milliseconds):
 
-		   max     sum     arithmetic   string
-  -------- ------- ------- ------------ -------- ------- ------- -------- --------
-		   array   list    array        list
-  for      0.123   0.700   0.186        0.714
-  stream   0.559   3.272   1.394        3.584
+<table>
+  <tr>
+    <th></th>
+    <th colspan="2">max</th>
+    <th colspan="2">sum</th>
+    <th colspan="2"">arithmetic</th>
+    <th colspan="2"">string</th>
+  </tr>
+  <tr>
+    <th></th>
+    <th>array</th>
+    <th>list</th>
+    <th>array</th>
+    <th>list</th>
+    <th>array</th>
+    <th>list</th>
+    <th>array</th>
+    <th>list</th>
+  </tr>
+  <tr>
+    <th><code>for</code></th>
+    <td>0.123</td>
+    <td>0.700</td>
+    <td>0.186</td>
+    <td>0.714</td>
+    <td>4.405</td>
+    <td>4.099</td>
+    <td>49.533</td>
+    <td>49.943</td>
+  </tr>
+  <tr>
+    <th><code>stream</code></th>
+    <td>0.559</td>
+    <td>3.272</td>
+    <td>1.394</td>
+    <td>3.584</td>
+    <td>4.100</td>
+    <td>7.776</td>
+    <td>52.236</td>
+    <td>64.989</td>
+  </tr>
+</table>
 
 This underlines how cheap comparison really is, even addition takes a whooping 50% longer.
 We can also see how more complex operations bring looping and streaming closer together.
@@ -274,13 +323,37 @@ no specialized `IntArrayList`), it returns a `Stream<Integer>`.
 The last benchmark method calls `mapToInt`, which returns an `IntStream`.
 This is a naive attempt to unbox the stream elements.
 
-					 arithmetic
-  ------------------ ------------ -------
-					 array
-  for                4.405
-  forEach            4.434
-  stream (unboxed)   4.100
-  stream (boxed)     7.694
+<table>
+  <tr>
+    <th></th>
+    <th colspan="2">arithmetic</th>
+  </tr>
+  <tr>
+    <th></th>
+    <th>array</th>
+    <th>list</th>
+  </tr>
+  <tr>
+    <th><code>for</code></th>
+    <td>4.405</td>
+    <td>4.099</td>
+  </tr>
+  <tr>
+    <th><code>forEach</code></th>
+    <td>4.434</td>
+    <td>4.707</td>
+  </tr>
+  <tr>
+    <th><code>stream</code> (unboxed)</th>
+    <td>4.100</td>
+    <td>4.518</td>
+  </tr>
+  <tr>
+    <th><code>stream</code> (boxed)</th>
+    <td>7.694</td>
+    <td>7.776</td>
+  </tr>
+</table>
 
 Well, look at that!
 Apparently the naive unboxing *does* work (in this case).
@@ -301,40 +374,131 @@ But I was pretty astonished that performance does not automatically improve with
 My simple mind assumed, that this would give the JVM the opportunity to apply more optimizations.
 Instead there are some notable cases were performance actually dropped:
 
-  From 500'000 to 50'000'000 Elements
-  ------------------------------------- ---------
-  method
-  `array_max_for`
-  `array_sum_for`
-  `list_max_for`
+<table>
+  <tr>
+    <th colspan="2">From 500'000 to 50'000'000 Elements</th>
+  </tr>
+  <tr>
+    <th className="centered-cell">method</th>
+    <th>time</th>
+  </tr>
+  <tr>
+    <td><code>array_max_for</code></td>
+    <td>+ 44.3%</td>
+  </tr>
+  <tr>
+    <td><code>array_sum_for</code></td>
+    <td>+ 13.4%</td>
+  </tr>
+  <tr>
+    <td><code>list_max_for</code></td>
+    <td>+ 12.8%</td>
+  </tr>
+</table>
 
 Interesting that these are the simplest iteration mechanisms and operations.
 
 Winners are more complex iteration mechanisms over simple operations:
 
-  From 500'000 to 50'000'000 Elements
-  ------------------------------------- ---------
-  method
-  `array_sum_stream`
-  `list_max_stream`
-  `list_sum_stream`
+
+<table>
+  <tr>
+    <th colspan="2">From 500'000 to 50'000'000 Elements</th>
+  </tr>
+  <tr>
+    <th className="centered-cell">method</th>
+    <th>time</th>
+  </tr>
+  <tr>
+    <td><code>array_sum_stream</code></td>
+    <td>- 84.9%</td>
+  </tr>
+  <tr>
+    <td><code>list_max_stream</code></td>
+    <td>- 13.5%</td>
+  </tr>
+  <tr>
+    <td><code>list_sum_stream</code></td>
+    <td>- 7.0%</td>
+  </tr>
+</table>
 
 This means that the table we have seen above for 500'000 elements looks a little different for 50'000'000 (normalized to 1'000'000 elements; in milliseconds):
 
-		   max                   sum     arithmetic   string
-  -------- --------------------- ------- ------------ -------- ------- -------- --------- ---------
-		   array                 list    array        list
-		   500'000 elements                           
-  for      0.246                 1.400   0.372        1.428
-  stream   1.118                 6.544   2.788        7.168
-		   50'000'000 elements                        
-  for      0.355                 1.579   0.422        1.522
-  stream   1.203                 3.954   0.421        6.710
+<table>
+  <tr>
+    <th></th>
+    <th colspan="2">max</th>
+    <th colspan="2">sum</th>
+    <th colspan="2"">arithmetic</th>
+    <th colspan="2"">string</th>
+  </tr>
+  <tr>
+    <th></th>
+    <th>array</th>
+    <th>list</th>
+    <th>array</th>
+    <th>list</th>
+    <th>array</th>
+    <th>list</th>
+    <th>array</th>
+    <th>list</th>
+  </tr>
+  <tr>
+    <th></th>
+    <th colspan="8">500'000 elements</th>
+  </tr>
+  <tr>
+    <th><code>for</code></th>
+    <td>0.246</td>
+    <td>1.400</td>
+    <td>0.372</td>
+    <td>1.428</td>
+    <td>8.810</td>
+    <td>8.199</td>
+    <td>99.066</td>
+    <td>98.650</td>
+  </tr>
+  <tr>
+    <th><code>stream</code></th>
+    <td>1.118</td>
+    <td>6.544</td>
+    <td>2.788</td>
+    <td>7.168</td>
+    <td>8.200</td>
+    <td>15.552</td>
+    <td>104.472</td>
+    <td>129.978</td>
+  </tr>
+  <tr>
+    <th></th>
+    <th colspan="8">50'000'000 elements</th>
+  </tr>
+  <tr>
+    <th><code>for</code></th>
+    <td>0.355</td>
+    <td>1.579</td>
+    <td>0.422</td>
+    <td>1.522</td>
+    <td>8.884</td>
+    <td>8.313</td>
+    <td>93.949</td>
+    <td>97.900</td>
+  </tr>
+  <tr>
+    <th><code>stream</code></th>
+    <td>1.203</td>
+    <td>3.954</td>
+    <td>0.421</td>
+    <td>6.710</td>
+    <td>8.408</td>
+    <td>15.723</td>
+    <td>96.550</td>
+    <td>117.690</td>
+</table>
 
 We can see that there is almost no change for the **arithmetic** and **string** operations.
 But things changes for the simpler **max** and **sum** operations, where more elements brought the field closer together.
-
-[java_8]
 
 ## Reflection
 
@@ -349,7 +513,11 @@ Then I am curious to find out at which operation complexity I can see the change
 I also wonder about the impact of hardware.
 Sure, it will change the numbers, but will there be qualitative differences as well?
 
-**Update**: *You also had some ideas and I benchmarked them for [a follow-up post](java-stream-performance-your-ideas).*
+<admonition type="update">
+
+You also had some ideas and I benchmarked them for [a follow-up post](java-stream-performance-your-ideas).
+
+</admonition>
 
 Another takeaway for me is that microbenchmarking is not so hard.
 Or so I think until someone points out all my errors...

@@ -6,6 +6,7 @@ slug: java-13-switch-expressions
 description: "Java 12 introduces switch expressions. Together with a new lambda-style arrow syntax, this makes switch more expressive and less error-prone."
 searchKeywords: "switch expression"
 featuredImage: java-12-switch
+repo: java-x-demo
 ---
 
 Good old `switch` has been with Java from day one.
@@ -28,17 +29,9 @@ boolean result = switch (ternaryBool) {
 With switch expressions, the entire switch block "gets a value" that can then be assigned; you can use a lambda-style syntax and enjoy straightforward control flow, free of fall-through.
 Beyond the obvious, there are a few details to consider - in this guide I'll cover everything you need to know about switch expressions in Java 13.
 
-### Overview
-
 While Java 12 introduces and 13 refines [switch expressions](http://openjdk.java.net/jeps/325), they do so as a [preview language feature](enable-preview-language-features).
 That means (a) it can still change over the next few releases (as it did between 12 and 13) and (b) it needs to be unlocked, at compile time and run time, with the new command line option `--enable-preview`.
 Then keep in mind that this isn't the endgame for `switch` - it's just a step on the way to full [pattern matching](http://openjdk.java.net/jeps/305).
-
-If you want to play around with it yourself, have a look at [my *Java X* demo project on GitHub](https://github.com/CodeFX-org/demo-java-x).
-
-[toc exclude=Overview]
-
-[codefx_youtube url="https://www.youtube.com/watch?v=1znHEf3oSNI&list=PL\_-IO8LOLuNp2stY1qBUtXlfMdJW7wvfT" thumbnail="//blog.codefx.org/wp-content/uploads/thumbnail-Java-12-switch-small.jpg" topic="switch expressions in Java 12"]
 
 ## Trouble With Switch Statements
 
@@ -235,8 +228,6 @@ All examples in this post switch over an enum.
 What about other types?
 Switch expressions and statements alike can also switch over a `String`, `int` (checks [the docs](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html)) `short`, `byte`, `char`, and their wrapper types.
 So far nothing changed here, although extending this with `float` and `long` [is still on the table](http://openjdk.java.net/jeps/325) (second to last paragraph).
-
-<contentimage slug="java-12-switch"></contentimage>
 
 ## Arrow-Form In Depth
 

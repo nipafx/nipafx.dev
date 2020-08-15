@@ -5,9 +5,8 @@ date: 2015-05-02
 slug: libfx-0-2-1
 description: "Release post for LibFX 0.2.1 including pointers to GitHub, feature descriptions, Maven coordinates and the Javadoc."
 searchKeywords: "libfx 0.2.1"
+featuredImage: libfx-library
 ---
-
-<contentimage slug="LibFX-v0"></contentimage>
 
 I released [**LibFX 0.2.1**](https://github.com/CodeFX-org/LibFX/releases/tag/v0.2.1) yesterday!
 It contains a bugfix in [Nestings](https://github.com/CodeFX-org/LibFX/wiki/Nestings).
@@ -25,7 +24,9 @@ Finally, there's extensive Javadoc under [libfx.codefx.org/javadoc](http://libfx
 
 You can get **LibFX 0.2.1** here:
 
-```html
+<contentimage slug="LibFX-v0.2.1" options="sidebar"></contentimage>
+
+```xml
 <dependency>
 	<groupId>org.codefx.libfx</groupId>
 	<artifactId>LibFX</artifactId>
@@ -33,7 +34,7 @@ You can get **LibFX 0.2.1** here:
 </dependency>
 ```
 
-```java
+```groovy
 compile 'org.codefx.libfx:LibFX:0.2.1'
 ```
 

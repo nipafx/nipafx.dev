@@ -64,6 +64,38 @@
 		}
 	},
 	{
+		"slug": "vaskas-complex-allinone",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "vaskas-complex-inheritance",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "vaskas-complex-decorator",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "vaskas-complex-decorated",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
 		"slug": "decorator-pattern-default-methods",
 		"credits": {
 			"author": {
@@ -76,6 +108,22 @@
 			"license": {
 				"name": "Unsplash License",
 				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "decorator-pattern-diagram-vanilla",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "decorator-pattern-diagram-default-methods",
+		"credits": {
+			"author": {
+				"name": "me"
 			}
 		}
 	},
@@ -169,6 +217,22 @@
 			"license": {
 				"name": "Unsplash License",
 				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "serialization-proxy",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "javafx-with-attached-source",
+		"credits": {
+			"author": {
+				"name": "me"
 			}
 		}
 	},
@@ -530,6 +594,22 @@
 		}
 	},
 	{
+		"slug": "adventures-on-the-road-to-project-valhalla-multiple-inheritance",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "adventures-on-the-road-to-project-valhalla-any-interface",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
 		"slug": "project-jigsaw-on-infoq",
 		"credits": {
 			"author": {
@@ -622,6 +702,38 @@
 			"license": {
 				"name": "CC-BY-ND 2.0",
 				"url": "https://creativecommons.org/licenses/by-nd/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "jmeter-tutorial-basic-elements",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "jmeter-tutorial-advanced-elements",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "jmeter-tutorial-login-with-csv",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "jmeter-tutorial-extracting-variables-from-response",
+		"credits": {
+			"author": {
+				"name": "me"
 			}
 		}
 	},
@@ -815,26 +927,1007 @@
 			}
 		}
 	},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	{
+		"slug": "delay-of-Java-9-release-proposed",
+		"credits": {
+			"author": {
+				"name": "Lee Jordan",
+				"url": "https://www.flickr.com/photos/leejordan/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/leejordan/2347982593/"
+			},
+			"license": {
+				"name": "CC-BY-SA 2.0",
+				"url": "https://creativecommons.org/licenses/by-sa/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "jigsaw-hands-on-guide-advent",
+		"credits": {
+			"author": {
+				"name": "Tina D",
+				"url": "https://www.flickr.com/photos/littlestuffme/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/littlestuffme/10599733413/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "jigsaw-hands-on-splitting-into-modules",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "jigsaw-hands-on-services",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "2015-end",
+		"credits": {
+			"author": {
+				"name": "Robert Anders",
+				"url": "https://www.flickr.com/photos/schwarzbrot/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/schwarzbrot/20447504269"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "2016-beginning",
+		"credits": {
+			"author": {
+				"name": "Ray Hennessy",
+				"url": "https://unsplash.com/@rayhennessy"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/gdTxVSAE5sk"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "stream-findfirst-findany-reduce",
+		"credits": {
+			"author": {
+				"name": "Stephen Depolo",
+				"url": "https://www.flickr.com/photos/stevendepolo/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/stevendepolo/6228420376/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "implied-readability",
+		"credits": {
+			"author": {
+				"name": "Jonas Jacobsson",
+				"url": "https://unsplash.com/@jonasjacobsson"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/0FRJ2SCuY4k"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "implied-readability-requires",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "implied-readability-requires-public",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "costs-benefits-comments",
+		"credits": {
+			"author": {
+				"name": "Deena Englard",
+				"url": "https://unsplash.com/@deenaenglard"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/RJrCj87zPJc"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "atom-on-gentoo",
+		"credits": {
+			"author": {
+				"name": "Luca Bravo",
+				"url": "https://unsplash.com/@lucabravo"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/XJXWbfSo2f0"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "atom-on-gentoo-larry",
+		"credits": {
+			"author": {
+				"name": "Matteo Pescarin",
+				"url": "http://peach.smartart.it/"
+			},
+			"source": {
+				"url": "https://wiki.gentoo.org/wiki/Project:Artwork/Artwork#Larry_the_Cow"
+			},
+			"license": {
+				"name": "CC-BY-SA/2.5 ",
+				"url": "https://creativecommons.org/licenses/by-sa/2.5/"
+			},
+			"edited": true
+		}
+	},
+	{
+		"slug": "reasons-against-blogging",
+		"credits": {
+			"author": {
+				"name": "darkday",
+				"url": "https://www.flickr.com/photos/drainrat/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/drainrat/16786733075/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "doomed-code-review",
+		"credits": {
+			"author": {
+				"name": "Ryan and Sarah Deeds",
+				"url": "https://www.flickr.com/photos/deedsfam/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/deedsfam/9515006780/"
+			},
+			"license": {
+				"name": "CC-BY-SA 2.0",
+				"url": "https://creativecommons.org/licenses/by-sa/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "level-up",
+		"credits": {
+			"author": {
+				"name": "A. Pagliaricci ♦",
+				"url": "https://www.flickr.com/photos/doscronopios/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/doscronopios/5459170197/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "jeeconf-2016-logo",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "jeeconf-2016-center",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "jeeconf-2016-maidan",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "jeeconf-2016-park",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "implementing-equals-correctly",
+		"credits": {
+			"author": {
+				"name": "Matt Popovich",
+				"url": "https://unsplash.com/@mattpopovich"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/UVe-5ZyDdAE"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "implementing-hashcode-correctly",
+		"credits": {
+			"author": {
+				"name": "Derek Gavey",
+				"url": "https://www.flickr.com/photos/derekgavey/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/derekgavey/5503822637/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "java-9-stream",
+		"credits": {
+			"author": {
+				"name": "Andy Arthur",
+				"url": "https://www.flickr.com/photos/andyarthur/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/andyarthur/10441404884/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "java-9-optional",
+		"credits": {
+			"author": {
+				"name": "Leo Leung",
+				"url": "https://www.flickr.com/photos/mleung311/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/mleung311/9468927282/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "goodbye-disy-hello-sitepoint",
+		"credits": {
+			"author": {
+				"name": "Damian Gadal",
+				"url": "https://www.flickr.com/photos/23024164@N06/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/23024164@N06/15984621614/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "disy-code-reviews-i",
+		"credits": {
+			"author": {
+				"name": "Sebastian Wiertz",
+				"url": "https://www.flickr.com/photos/wiertz"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/wiertz/4563724688"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "disy-code-reviews-ii",
+		"credits": {
+			"author": {
+				"name": "Sebastian Wiertz",
+				"url": "https://www.flickr.com/photos/wiertz"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/wiertz/4563205031"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "disy-code-reviews-iii",
+		"credits": {
+			"author": {
+				"name": "Sebastian Wiertz",
+				"url": "https://www.flickr.com/photos/wiertz"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/wiertz/5584753106"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "rebutting-stream-tropes",
+		"credits": {
+			"author": {
+				"name": "Dan Zen",
+				"url": "https://www.flickr.com/photos/danzen/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/danzen/2055899778/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "ultimate-guide-to-java-9",
+		"credits": {
+			"author": {
+				"name": "Guwashi",
+				"url": "http://www.flickr.com/people/16877319@N07"
+			},
+			"source": {
+				"url": "https://commons.wikimedia.org/wiki/File:Shibuya_Night_(HDR).jpg"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "spjcn-i-new-york",
+		"credits": {
+			"author": {
+				"name": "Anthony DELANOIX",
+				"url": "https://unsplash.com/@anthonydelanoix"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/RokFUDqlTIo"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "what-future-java-might-look-like",
+		"credits": {
+			"author": {
+				"name": "joffi",
+				"url": "https://pixabay.com/users/joffi-1229850/"
+			},
+			"source": {
+				"url": "https://pixabay.com/en/binocular-sky-telescope-looking-1698658/"
+			},
+			"license": {
+				"name": "Pixabay License",
+				"url": "https://pixabay.com/service/license/"
+			}
+		}
+	},
+	{
+		"slug": "whats-taking-so-long",
+		"credits": {
+			"author": {
+				"name": "Veri Ivanova",
+				"url": "https://unsplash.com/@veri_ivanova"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/p3Pj7jOYvnM"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "gradle-publish-snapshot-maven-publish",
+		"credits": {
+			"author": {
+				"name": "Alexander Dummer",
+				"url": "https://unsplash.com/@4dgraphic"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/aS4Duj2j7r4"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "spjcn-iii-javaone2016-nucleus",
+		"credits": {
+			"author": {
+				"name": "Hubble Heritage",
+				"url": "https://www.flickr.com/photos/hubble-heritage/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/hubble-heritage/8497132547/"
+			},
+			"license": {
+				"name": "CC-BY-SA 2.0",
+				"url": "https://creativecommons.org/licenses/by-sa/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "2016-end",
+		"credits": {
+			"author": {
+				"name": "thomasstaub",
+				"url": "https://pixabay.com/users/thomasstaub-551392/"
+			},
+			"source": {
+				"url": "https://pixabay.com/en/explosion-night-smoke-fireworks-1325471/"
+			},
+			"license": {
+				"name": "Pixabay License",
+				"url": "https://pixabay.com/service/license/"
+			}
+		}
+	},
+	{
+		"slug": "2017-beginning",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "reflection-vs-encapsulation-module-system",
+		"credits": {
+			"author": {
+				"name": "icatana56",
+				"url": "https://pixabay.com/users/icatana56-2693937/"
+			},
+			"source": {
+				"url": "https://pixabay.com/photos/bar-house-saloon-cowboy-1443826/"
+			},
+			"license": {
+				"name": "Pixabay License",
+				"url": "https://pixabay.com/service/license/"
+			}
+		}
+	},
+	{
+		"slug": "quo-vadis-scala",
+		"credits": {
+			"author": {
+				"name": "Vasile Barbu",
+				"url": "https://unsplash.com/@fotovalentin"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/po8eqh7Wtxc"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "elvis-in-java",
+		"credits": {
+			"author": {
+				"name": "Kevin Dooley",
+				"url": "https://www.flickr.com/photos/pagedooley/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/pagedooley/4464019859/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "repackage-stream-exceptions",
+		"credits": {
+			"author": {
+				"name": "Larisa-K",
+				"url": "https://pixabay.com/users/larisa-k-1107275/"
+			},
+			"source": {
+				"url": "https://pixabay.com/en/parcel-field-landscape-sunset-22189/"
+			},
+			"license": {
+				"name": "Pixabay License",
+				"url": "https://pixabay.com/service/license/"
+			}
+		}
+	},
+	{
+		"slug": "jpms-optional-dependency",
+		"credits": {
+			"author": {
+				"name": "Free-Photos",
+				"url": "https://pixabay.com/users/free-photos-242387/"
+			},
+			"source": {
+				"url": "https://pixabay.com/en/forking-road-split-road-travel-839830/"
+			},
+			"license": {
+				"name": "Pixabay License",
+				"url": "https://pixabay.com/service/license/"
+			}
+		}
+	},
+	{
+		"slug": "jpms-optional-dependency-coding-checked",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "jpms-optional-dependency-coding-established",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "jpms-optional-dependency-coding-internal",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "jpms-optional-dependency-conundrum",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "java-9-resources",
+		"credits": {
+			"author": {
+				"name": "ninocare",
+				"url": "https://pixabay.com/users/ninocare-3266770/"
+			},
+			"source": {
+				"url": "https://pixabay.com/en/books-door-entrance-italy-colors-1655783/"
+			},
+			"license": {
+				"name": "Pixabay License",
+				"url": "https://pixabay.com/service/license/"
+			}
+		}
+	},
+	{
+		"slug": "jdeps-tutorial",
+		"credits": {
+			"author": {
+				"name": "geralt",
+				"url": "https://pixabay.com/users/geralt-9301/"
+			},
+			"source": {
+				"url": "https://pixabay.com/en/star-golden-christmas-connection-209371/"
+			},
+			"license": {
+				"name": "Pixabay License",
+				"url": "https://pixabay.com/service/license/"
+			}
+		}
+	},
+	{
+		"slug": "jdeps-scaffoldhunter-jars",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "java-9-migration-planning",
+		"credits": {
+			"author": {
+				"name": "TheAndrasBarta",
+				"url": "https://pixabay.com/users/theandrasbarta-2004841/"
+			},
+			"source": {
+				"url": "https://pixabay.com/en/world-europe-map-connections-1264062/"
+			},
+			"license": {
+				"name": "Pixabay License",
+				"url": "https://pixabay.com/service/license/"
+			}
+		}
+	},
+	{
+		"slug": "java-9-command-line-options",
+		"credits": {
+			"author": {
+				"name": "Markus Spiske",
+				"url": "https://unsplash.com/@markusspiske"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/uPXs5Vx5bIg"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "unified-logging",
+		"credits": {
+			"author": {
+				"name": "Ben Senior",
+				"url": "https://unsplash.com/@b_sen"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/4B-Iz7n26Pk"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "unified-logging-diagram",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "jpms-tutorial-pieces",
+		"credits": {
+			"author": {
+				"name": "Iker Urteaga",
+				"url": "https://unsplash.com/@iurte"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/TL5Vy1IM-uA"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "jpms-tutorial-directory-hw",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "jpms-tutorial-monitor-classes",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "jpms-tutorial-monitor-modules",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "jsr-305",
+		"credits": {
+			"author": {
+				"name": "Cameron Venti",
+				"url": "https://unsplash.com/@ventiviews"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/ZWdJnTO1xbY"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "var-example",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "maven-java-9",
+		"credits": {
+			"author": {
+				"name": "Ant Rozetsky",
+				"url": "https://unsplash.com/@rozetsky"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/io7dX_1EFCg"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "2017-2018",
+		"credits": {
+			"author": {
+				"name": "mohamed_hassan",
+				"url": "https://pixabay.com/users/mohamed_hassan-5229782/"
+			},
+			"source": {
+				"url": "https://pixabay.com/photos/design-2017-2018-new-year-2711676/"
+			},
+			"license": {
+				"name": "Pixabay License",
+				"url": "https://pixabay.com/service/license/"
+			}
+		}
+	},
+	{
+		"slug": "multi-release-jars",
+		"credits": {
+			"author": {
+				"name": "Repeat fitness, odense, denmark",
+				"url": "https://unsplash.com/s/photos/repeat-fitness%2C-odense%2C-denmark"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/4UbSaPKGRqc"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "mr-jars-version-src",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "mr-jars-version-jar",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "var-intersection-type-venn",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "var-anonymous-classes",
+		"credits": {
+			"author": {
+				"name": "Wendelin Jacober",
+				"url": "https://www.flickr.com/photos/wendelinjacober/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/wendelinjacober/14881778717/"
+			},
+			"license": {
+				"name": "CC-BY 2.0,",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "var-traits",
+		"credits": {
+			"author": {
+				"name": "cocoparisienne",
+				"url": "https://pixabay.com/users/cocoparisienne-127419/"
+			},
+			"source": {
+				"url": "https://pixabay.com/en/peas-pea-pod-vegetables-food-pod-610184/"
+			},
+			"license": {
+				"name": "Pixabay License",
+				"url": "https://pixabay.com/service/license/"
+			}
+		}
+	},
+	{
+		"slug": "junit-5-setup",
+		"credits": {
+			"author": {
+				"name": "Thomas Leth-Olsen",
+				"url": "https://www.flickr.com/photos/thomasletholsen/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/thomasletholsen/8553236056/"
+			},
+			"license": {
+				"name": "CC-BY-SA 2.0",
+				"url": "https://creativecommons.org/licenses/by-sa/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "junit-5-dynamic-tests",
+		"credits": {
+			"author": {
+				"name": "NASA Goddard Space Flight Center ",
+				"url": "https://www.flickr.com/photos/gsfc/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/gsfc/7402440272/"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "junit-5-extension-model",
+		"credits": {
+			"author": {
+				"name": "Tony Walmsley",
+				"url": "https://www.flickr.com/photos/twalmsley/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/twalmsley/6825340663"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "junit-5-conditions",
+		"credits": {
+			"author": {
+				"name": "CWCS Managed Hosting",
+				"url": "http://www.cwcs.co.uk/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/122969584@N07/13778195773"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "junit-5-basics",
+		"credits": {
+			"author": {
+				"name": "OpenClipart-Vectors",
+				"url": "https://pixabay.com/users/openclipart-vectors-30363/"
+			},
+			"source": {
+				"url": "https://pixabay.com/vectors/test-pattern-tv-tv-test-pattern-152459/"
+			},
+			"license": {
+				"name": "Pixabay License",
+				"url": "https://pixabay.com/service/license/"
+			}
+		}
+	},
+	{
+		"slug": "junit-5-architecture",
+		"credits": {
+			"author": {
+				"name": "Steve driscoll",
+				"url": "https://unsplash.com/@ssdriscoll"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/VsBl5PwVZpY"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "junit-5-architecture-diagram",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
 	{
 		"slug": "java-11-migration",
 		"credits": {
@@ -979,6 +2072,30 @@
 		}
 	},
 	{
+		"slug": "immutable-collections-mutable-extends-immutable",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "immutable-collections-immutable-extends-mutable",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
+		"slug": "immutable-collections-both-extend-unmodifiable",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
+	},
+	{
 		"slug": "text-blocks",
 		"credits": {
 			"author": {
@@ -1007,14 +2124,6 @@
 			"license": {
 				"name": "Pixabay License",
 				"url": "https://pixabay.com/service/license/"
-			}
-		}
-	},
-	{
-		"slug": "jpms-maturity-model",
-		"credits": {
-			"author": {
-				"name": "me"
 			}
 		}
 	},

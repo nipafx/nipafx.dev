@@ -12,7 +12,7 @@ featuredImage: stream-findfirst-findany-reduce
 After filtering a [Java 8 `Stream`](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html) it is common to use [`findFirst()`](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#findFirst--) or [`findAny()`](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#findAny--) to get the element that survived the filter.
 But that might not do what you really meant and subtle bugs can ensue.
 
-## So What's Wrong With findFirst() And findAny()?
+## So What's Wrong With `findFirst()` And `findAny()`?
 
 As we can see from their Javadoc ([here](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#findFirst--) and [here](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#findAny--)) both methods return an arbitrary element from the stream - unless the stream has an [encounter order](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#Ordering), in which case `findFirst()` returns the first element.
 Easy.
@@ -63,8 +63,6 @@ Instead the system will misbehave subtly for a while before the effects are obse
 So of course there is nothing inherently wrong with `findFirst()` and `findAny()`.
 But it is easy to use them in a way that leads to bugs within the modeled domain logic.
 
-<contentimage slug="stream-findfirst-findany-reduce"></contentimage>
-
 ## Failing Fast
 
 So let's fix this!
@@ -94,9 +92,9 @@ Now, streams give us a much nicer way.
 We can use the often neglected `reduce`, about which [the documentation says](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#reduce-java.util.function.BinaryOperator-):
 
 > Performs a [reduction](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#Reduction) on the elements of this stream, using an [associative](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#Associativity) accumulation function, and returns an Optional describing the reduced value, if any.
-This is equivalent to:
+> This is equivalent to:
 >
-> ``` {.lang:java .decode:true title="Stream.reduce"}
+> ```java
 > boolean foundAny = false;
 > T result = null;
 > for (T element : this stream) {
@@ -108,7 +106,7 @@ This is equivalent to:
 >         result = accumulator.apply(result, element);
 > }
 > return foundAny ?
-Optional.of(result) : Optional.empty();
+> Optional.of(result) : Optional.empty();
 > ```
 >
 > but is not constrained to execute sequentially.
@@ -187,8 +185,6 @@ public Optional<Customer> findOnlyCustomer(String customerId) {
 It is also worth noting that Guava has a similar functionality for iterators, namely [`Iterables::getOnlyElement`, which returns the only element from the specified `Iterable`](https://google.github.io/guava/releases/snapshot/api/docs/com/google/common/collect/Iterables.html#getOnlyElement(java.lang.Iterable)).
 It behaves different for an empty iterable, though, where it throws a `NoSuchElementException`.
 ([.NET's `Enumerable::Single`](https://msdn.microsoft.com/en-us/library/bb155325(v=vs.110).aspx) does the same, by the way.)
-
-[java_8]
 
 ## Reflection
 

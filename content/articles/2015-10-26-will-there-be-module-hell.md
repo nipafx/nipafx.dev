@@ -8,18 +8,14 @@ searchKeywords: "module hell"
 featuredImage: module-hell
 ---
 
-Project Jigsaw has [ambitious objectives](http://blog.codefx.org/java/dev/motivation-goals-project-jigsaw/#Goals-Of-Project-Jigsaw), one of them is ["to escape the 'JAR hell' of the brittle and error-prone class-path mechanism"](http://mreinhold.org/blog/late-for-the-train).
+Project Jigsaw has [ambitious objectives](motivation-goals-project-jigsaw#goals-of-project-jigsaw), one of them is ["to escape the 'JAR hell' of the brittle and error-prone class-path mechanism"](http://mreinhold.org/blog/late-for-the-train).
 But while it will achieve many of its goals it looks like it may fall short on this one.
 
 So will there be module hell instead?
 
-### Overview
-
 To know what we are talking about we'll start with a quick recap of JAR hell.
 We will then discuss what aspects Jigsaw touches on and how that might not change the big picture.
 Lastly we will have a look at the official stance on the topic and formulate a proposal to prevent looming module hell.
-
-[toc exclude=Overview]
 
 ## JAR Hell
 
@@ -40,7 +36,7 @@ This leaves version conflicts as the most problematic aspect of JAR hell, influe
 I have already written about [all the features Project Jigsaw was planned to bring to Java 9](features-project-jigsaw) but this post will take a different angle.
 First, it is influenced by experiments with [the current early access build](https://jdk9.java.net/jigsaw/) and, second, it only looks at the aspects pertaining JAR/module hell.
 
-The core concept Jigsaw brings to Java are [*modules*](http://blog.codefx.org/java/dev/features-project-jigsaw-java-9/#The-Core-Concept).
+The core concept Jigsaw brings to Java are [*modules*](features-project-jigsaw#the-core-concept).
 Overly simplified, a module is like a JAR with some additional information and features.
 Some of those pieces of information are a module's name and the names of other modules it depends on.
 
@@ -150,11 +146,7 @@ Otherwise not much might change for many projects.
 They will still struggle with it and they will continue to get themselves into custom built class loader nightmares.
 Sounds like module hell to me.
 
-<contentimage slug="module-hell"></contentimage>
-
-[Published](https://commons.wikimedia.org/wiki/File:An_angel_leading_a_soul_into_hell._Oil_painting_by_a_followe_Wellcome_L0030887.jpg) by the [Wellcome Library](https://wellcomelibrary.org/) under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) - flipped by me.
-
-Yes, it looks just like [JAR hell](http://blog.codefx.org/java/jar-hell/#jar-hell-img) - that's because module hell will be so similar.
+Yes, it looks just like [JAR hell](jar-hell#jar-hell) - that's because module hell will be so similar.
 
 ## Official Stance On Versions
 
@@ -207,8 +199,7 @@ Given only an initial module and a universe of modules to resolve dependencies w
 This is very reasonable behavior and I would not change it.
 
 My proposal is to enable developers and build tools to pass additional information that solve ambiguous situations.
-(While I thought through the proposal [Ali Ebrahimi independently made the same one](http://mail.openjdk.java.net/pipermail/jpms-spec-observers/2015-October/000204.html "Why not use the Manifest?
-- Ali Ebrahimi").)
+(While I thought through the proposal [Ali Ebrahimi independently made the same one](http://mail.openjdk.java.net/pipermail/jpms-spec-observers/2015-October/000204.html "Why not use the Manifest? - Ali Ebrahimi").)
 
 ### How
 
@@ -261,8 +252,5 @@ To prevent that, a proposal was made that requires no notable changes to the mod
 
 **Enable explicitly specified configurations with multiple layers.**
 
-You can give this proposal more weight by sharing it with the community:
-
-[feather_share]
-
+You can give this proposal more weight by sharing it with the community.
 If you care about the topic, you might want to watch or participate in the ongoing discussions on the [Jigsaw-Dev](http://mail.openjdk.java.net/mailman/listinfo/jigsaw-dev) and [JPMS-Spec](http://mail.openjdk.java.net/mailman/listinfo/jpms-spec-observers) mailing lists.

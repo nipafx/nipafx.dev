@@ -5,21 +5,21 @@ date: 2014-09-22
 slug: decorator-pattern-saved-my-day
 description: "A real-life example how the decorator pattern enables future changes and improves code quality by upholding the Single Responsibility Principle."
 searchKeywords: "Decorator Pattern"
-featuredImage: vaskas_complex_allinone
+featuredImage: decorator-pattern-saved-day
 ---
 
-At work I am dealing with a huge Java code base, which was developed over the course of more than 15 years by many different developers.
+At work I am dealing with a large Java code base, which was developed over the course of more than 15 years by many different developers.
 Not all things were done by the books but at the same time I usually don't have the possibility to refactor every oddity I come across.
 
 Still, steps towards higher code quality can be taken every day.
 And today was just like that...
 
-### Overview
+<admonition type="caveat">
 
 This post does not aim at teaching the decorator pattern as [plenty](https://duckduckgo.com/?q=decorator+pattern) [tutorials](http://www.tutorialspoint.com/design_pattern/decorator_pattern.htm) [already](http://www.oodesign.com/decorator-pattern.html) [exist](http://en.wikipedia.org/wiki/Decorator_pattern).
 Instead, it gives a real life example of how it came in handy and saved the day.
 
-[toc exclude=Overview]
+</admonition>
 
 ## The Situation
 
@@ -44,7 +44,7 @@ So the question is: How do you implement these responses?
 
 You could just lump all this together in one class which implements `HyperlinkListener` and (de)activate the different responses with flags.
 
-<contentimage slug="vaskas_complex_allinone"></contentimage>
+<contentimage slug="vaskas-complex-allinone" options="narrow bg"></contentimage>
 
 This class would be hell!
 Yes, hell.
@@ -68,7 +68,7 @@ Instead I found a small hierarchy of classes which split these responsibilities 
 3. `ServiceRequestHandlingHL extends UrlProcessingHL`:\
 	processes the URL if it is a service request; otherwise delegates to its super class
 
-<contentimage slug="vaskas_complex_inheritance"></contentimage>
+<contentimage slug="vaskas-complex-inheritance" options="narrow bg"></contentimage>
 
 This looks better, doesn't it?
 Well...
@@ -131,7 +131,7 @@ It should be seen as a layered system, where each decorator adds another layer o
 
 The way was clear now: I refactored the above functionality into different decorators like `LoggingHyperlinkListenerDecorator` and `ServiceRequestHandlingHyperlinkListenerDecorator`.
 
-<contentimage slug="vaskas_complex_decorator"></contentimage>
+<contentimage slug="vaskas-complex-decorator" options="narrow bg"></contentimage>
 
 Then I removed the original classes and replaced their uses with the right combinations of decorators.
 Finally I got around to my new functionality and picked just the right decorators.
@@ -158,7 +158,7 @@ Besides the boilerplate, it is pretty obvious what happens here.
 First, there will be logging, before we identify service requests and handle them.
 Anything else will be opened in a browser if possible; otherwise we hand it to some external application.
 
-<contentimage slug="vaskas_complex_decorated"></contentimage>
+<contentimage slug="vaskas-complex-decorated" options="narrow bg"></contentimage>
 
 ### The Effect
 
@@ -184,5 +184,3 @@ This real life example showed how the application of the decorator pattern made 
 This is of course no automatism; the pattern should only be used where it really does make the code cleaner.
 But in oder to decide that, you have to know it and have to be able to reason about its effects.
 I hope this post helps with that.
-
-Big thanks to [Benjah over at Wikipedia](http://commons.wikimedia.org/wiki/User:Benjah-bmm27), who created [the beautiful image](http://en.wikipedia.org/wiki/File:Vaska%27s-complex-3D-balls.png) of [Vaska's complex](http://en.wikipedia.org/wiki/Vaska%27s_complex) and released it into the public domain.

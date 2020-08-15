@@ -1,12 +1,14 @@
 ---
 title: "Scripting Java 11, Shebang And All"
-tags: [java-11]
+tags: [java-11, tools]
 date: 2018-11-06
 slug: scripting-java-shebang
 description: "On Java 11+, you can run a single source file without compiling it. Beyond experimentation, you can write scripts this way. Even shebang is supported!"
 intro: "From Java 11 on, you can execute a single source file without compiling it first. Beyond experimentation, you can write scripts this way. Even the shebang is supported!"
 searchKeywords: "script"
 featuredImage: java-scripts
+repo: java-x-demo
+inlineCodeLanguage: shell
 ---
 
 There are several reasons why writing scripts in Java seems to be a bad idea, chief among them that it's always a two step process to run a source file: It first has to be compiled (with `javac`) before it can be executed (with `java`).
@@ -24,12 +26,6 @@ More than that, you can even define proper scripts, with shebang and everything,
 ```
 
 Let's see how!
-
-### Overview
-
-As usual, find the sources in [my *Java X* demo project](https://github.com/CodeFX-org/demo-java-x).
-
-[toc exclude=Overview]
 
 ## Single-Source-File Execution
 
@@ -154,8 +150,6 @@ $ java --source 12 --enable-preview Switch.java
 There's one other way to use single-source-files, though, and it will knock your socks off!
 (If you're on Linux or macOS.)
 
-<contentimage slug="java-scripts"></contentimage>
-
 ## Java Scripts With Shebang
 
 We've already seen most of the ingredients for scripts above but one is still missing: the [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)).
@@ -206,7 +200,7 @@ The second bullet *feels* true, but I'm not sure whether that's actually still t
 
 Admittedly, things like Java's file system interaction and [HTTP requests](java-http-2-api-tutorial) are powerful but not exactly elegant.
 Other things are, though.
-[Lambdas](https://blog.codefx.org/tag/lambda/) and [streams](https://blog.codefx.org/tag/stream/), [local-variable type inference with `var`](https://blog.codefx.org/tag/var/), the upcoming [switch expressions](https://www.youtube.com/watch?v=1znHEf3oSNI&list=PL_-IO8LOLuNp2stY1qBUtXlfMdJW7wvfT) - all of these make Java quite expressive and easy to achieve results with.
+[Lambdas](tag:lambda) and [streams](tag:stream), [local-variable type inference with `var`](tag:var), the upcoming [switch expressions](https://www.youtube.com/watch?v=1znHEf3oSNI&list=PL_-IO8LOLuNp2stY1qBUtXlfMdJW7wvfT) - all of these make Java quite expressive and easy to achieve results with.
 Let's see an example.
 
 ### Echo - The Java Way
@@ -234,8 +228,7 @@ public class Echo {
 	}
 
 	private static Stream<String> readInput() throws IOException {
-		var reader = new BufferedReader(
-			new InputStreamReader(System.in));
+		var reader = new BufferedReader(new InputStreamReader(System.in));
 		if (!reader.ready())
 			return Stream.empty();
 		else

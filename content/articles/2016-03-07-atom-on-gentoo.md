@@ -9,11 +9,9 @@ searchKeywords: "atom on gentoo"
 featuredImage: atom-on-gentoo
 ---
 
-I've been very happy with my [switch to Gentoo](http://blog.codefx.org/meta/hello-2016#linux).
+I've been very happy with my [switch to Gentoo](hello-2016#linux).
 One of the cool things is that I can use the package manager for most development tools as [Portage](https://wiki.gentoo.org/wiki/Portage) contains up-to-date versions of most of them.
 (Case in point, I just updated Node.js to a version that was released just four days ago.) All the more shocked was I when I found out that [Atom](https://atom.io/) isn't one of them and that information on how to install Atom on Gentoo is elusive.
-
-<contentimage slug="atom-on-gentoo"></contentimage>
 
 Maybe because in the end the process isn't that complicated.
 Basically I just had to build from source, mostly following the [documentation on how to do that](https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md#linux).
@@ -48,6 +46,8 @@ sudo script/grunt install
 
 Have fun!
 
+<contentimage slug="atom-on-gentoo-larry" options="narrow"></contentimage>
+
 ## Alternatives
 
 For an install that is better integrated with the OS you might want to use a real [ebuild](https://devmanual.gentoo.org/quickstart/).
@@ -55,5 +55,5 @@ For an install that is better integrated with the OS you might want to use a rea
 There are a couple of [Portage overlays containing Atom](https://gpo.zugaina.org/app-editors/atom), most noteworthy the ones belonging to the Gentoo-based distributions [Sabayon](https://en.wikipedia.org/wiki/Sabayon_Linux) and [Funtoo](https://en.wikipedia.org/wiki/Funtoo_Linux) but also others.
 I opted against this solution because using the overlay of another distribution looks like a troublesome move to a novice and using "some guy's overlay" doesn't sit well with my general paranoia.
 
-But you can also do it yourself - or so [Till claims](http://blog.codefx.org/tools/atom-on-gentoo/#comment-2557921347) in the comments.
+But you can also do it yourself - or so [Till claims](atom-on-gentoo)<!-- comment-2557921347 --> in the comments.
 If I find some time I'll try it and update this post.

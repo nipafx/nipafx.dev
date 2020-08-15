@@ -1,11 +1,13 @@
 ---
 title: "JUnit 5 Architecture or \"What's Jupiter?\""
-tags: [architecture, junit-5]
+tags: [architecture, junit-5, libraries, testing]
 date: 2018-08-05
 slug: junit-5-architecture-jupiter
 description: "The JUnit 5 architecture promotes a better separation of concerns than JUnit 4 did. It also provides clear APIs for testers (Jupiter) and tools (Platform)."
 intro: "JUnit 4 came in a single artifact, blending all uses cases into one bundle. The JUnit 5 architecture promotes a better separation of concerns and provides clear APIs for testers (Jupiter) and tools (Platform)."
 searchKeywords: "JUnit 5 architecture"
+featuredImage: junit-5-architecture
+repo: demo-junit-5
 ---
 
 JUnit 5 has a very interesting architecture.
@@ -13,12 +15,6 @@ First of all, the project is split into three sub-projects: Jupiter, Vintage, an
 They communicate via published APIs, which allows tools and libraries to inject customized behavior.
 Then, each sub-project is split into several artifacts to separate concerns and guarantee maintainability.
 In this post we'll explore the architecture itself as well as the reasons behind it.
-
-### Overview
-
-[codefx_junit5\_series]
-
-[toc exclude=Overview]
 
 ## JUnit 4
 
@@ -59,12 +55,11 @@ To decouple the concrete variant of tests from the concern of running them, the 
 
 1. an API two write tests against
 2. a mechanism to discover and run tests
-	a.
- a mechanism to discover and run a specific variant of tests
-	b.
- a mechanism to orchestrate the specific mechanisms
-	c.
- an API between them
+<ol style="list-style-type: lower-alpha;">
+	<li>a mechanism to discover and run a specific variant of tests</li>
+	<li>a mechanism to orchestrate the specific mechanisms</li>
+	<li>an API between them</li>
+</ol>
 
 ### Splitting JUnit 5
 
@@ -73,14 +68,14 @@ To drive the point home, the JUnit team decided to split JUnit 5 into three sub-
 
 <pullquote>"JUnit the tool" and "JUnit the platform" are clearly separated</pullquote>
 
-JUnit Jupiter
-:   The API against which we write tests (addresses concern 1.) and the engine that understands it (2a.).
+* **JUnit Jupiter**:
+The API against which we write tests (addresses concern 1.) and the engine that understands it (2a.).
 
-JUnit Vintage
-:   Implements an engine that allows to run tests written in JUnit 3 and 4 with JUnit 5 (2a.).
+* **JUnit Vintage**:
+Implements an engine that allows to run tests written in JUnit 3 and 4 with JUnit 5 (2a.).
 
-JUnit Platform
-:   Contains the engine API (2c.) and provides a uniform API to tools, so they can run tests (2b.).
+* **JUnit Platform**:
+Contains the engine API (2c.) and provides a uniform API to tools, so they can run tests (2b.).
 
 So when I've presented [the basics](junit-5-basics) and talked about "JUnit *5's* new API", I was lying, even if just a little.
 I actually explained JUnit *Jupiter's* API.
@@ -90,30 +85,30 @@ I actually explained JUnit *Jupiter's* API.
 JUnit 5's architecture is the result of that distinction.
 These are some of its artifacts:
 
-junit-jupiter-api (1)
-:   The API against which developers write tests.
+* _junit-jupiter-api_ (1):
+The API against which developers write tests.
 Contains all the annotations, assertions, etc.
 that we saw when we discussed [JUnit 5's basics](junit-5-basics).
 
-junit-jupiter-engine (2a)
-:   An implementation of the **junit-platform-engine** API that runs JUnit 5 tests.
+* _junit-jupiter-engine_ (2a):
+An implementation of the _junit-platform-engine_ API that runs JUnit 5 tests.
 
-junit-vintage-engine (2a)
-:   An implementation of the **junit-platform-engine** API that runs tests written with JUnit 3 or 4.
-Here, the JUnit 4 artifact **junit-4.12** acts as the API the developer implements her tests against (1) but also contains the main functionality of how to run the tests.
+* _junit-vintage-engine_ (2a):
+An implementation of the _junit-platform-engine_ API that runs tests written with JUnit 3 or 4.
+Here, the JUnit 4 artifact _junit-4.12_ acts as the API the developer implements her tests against (1) but also contains the main functionality of how to run the tests.
 The engine could be seen as an adapter of JUnit 3/4 for version 5.
 
-junit-platform-engine (2c)
-:   The API all test engines have to implement, so they are accessible in a uniform way.
+* _junit-platform-engine_ (2c):
+The API all test engines have to implement, so they are accessible in a uniform way.
 Engines might run typical JUnit tests but alternatively implementations could run tests written with [TestNG](http://testng.org/doc/index.html), [Spock](https://github.com/spockframework/spock), [Cucumber](https://cucumber.io/), etc.
 
-junit-platform-launcher (2b)
-:   Uses the `ServiceLoader` to discover test engine implementations and to orchestrate their execution.
+* _junit-platform-launcher_ (2b):
+Uses the `ServiceLoader` to discover test engine implementations and to orchestrate their execution.
 It provides an API to IDEs and build tools so they can interact with test execution, e.g. by launching individual tests and showing their results.
 
 Makes sense, right?
 
-<contentimage slug="junit-5-architecture"></contentimage>
+<contentimage slug="junit-5-architecture-diagram" options="narrow"></contentimage>
 
 Most of that structure is hidden from us front-line developers.
 Our projects only need a test dependency on the API and engine we are using; everything else comes with our tools.
@@ -124,24 +119,24 @@ Now, about those internal APIs everybody was using.
 The team wanted to solve this problem as well and created a lifecycle for its API.
 Here it is, with the explanations straight from [the source](https://github.com/apiguardian-team/apiguardian/blob/master/src/main/java/org/apiguardian/api/API.java):
 
-Internal
-:   Must not be used by any external code.
+* `Internal`:
+Must not be used by any external code.
 Might be removed without prior notice.
 
-Deprecated
-:   Should no longer be used, might disappear in the next minor release.
+* `Deprecated`:
+Should no longer be used, might disappear in the next minor release.
 
-Experimental
-:   Intended for new, experimental features where the publisher of the API is looking for feedback.
+* `Experimental`:
+Intended for new, experimental features where the publisher of the API is looking for feedback.
 Use with caution.
 Might be promoted to **Maintained** or **Stable** in the future, but might also be removed without prior notice.
 
-Maintained
-:   Intended for features that will not be changed in a backwards-incompatible way for at least the next minor release of the current major version.
+* `Maintained`:
+Intended for features that will not be changed in a backwards-incompatible way for at least the next minor release of the current major version.
 If scheduled for removal, such a feature will be demoted to **Deprecated** first.
 
-Stable
-:   Intended for features that will not be changed in a backwards-incompatible way in the current major version.
+* `Stable`:
+Intended for features that will not be changed in a backwards-incompatible way in the current major version.
 
 Publicly visible classes are annotated with with `@API(usage)` where `usage` is one of these values.
 (I wonder whether `@API` should be annotated with `@API`.
@@ -151,8 +146,6 @@ To quickly figure out which APIs are experimental, have the a look at the user g
 
 By the way, if you'd like to use this annotation in your own project, you can do that easily.
 It is maintained in [a separate project](https://github.com/apiguardian-team/apiguardian) and published under *org.apiguardian : apiguardian-api*, current version 1.0.0.
-
-[codefx_junit\_5\_product]
 
 ## Open Test Alliance
 
@@ -182,7 +175,7 @@ If you think this is a good idea, you could support it by bringing it up with th
 
 All the work that went into JUnit 5's architecture and particularly the decision to provide a stable API for test engines follows one goal: To make the success of JUnit as a platform available to other testing frameworks.
 
-JUnit 4 has had stellar tool support and IDE and build tool developers [are making the same true for JUnit 5](http://blog.codefx.org/libraries/junit-5-setup/#Running-Tests).
+JUnit 4 has had stellar tool support and IDE and build tool developers [are making the same true for JUnit 5](junit-5-setup#running-tests).
 But with the new version, the JUnit project is no longer the only one benefiting from that support!
 All that other testing frameworks need to do to get the same kind of support is to implement an engine for their framework that adheres to the API defined in **junit-platform-engine**.
 Then, bahm!, Maven can run them, Gradle can, and so can Eclipse, IntelliJ, and every other tool that has native support for JUnit 5.
@@ -211,4 +204,4 @@ This gives users lean artifacts to develop tests against (because they only cont
 
 The ease with which other projects can get top-level support is a boon to experimenting with new ideas and will bring us a new generation of testing frameworks.
 
-The next post in [this series about JUnit 5](https://blog.codefx.org/tag/junit-5/) discusses another architectural gem: its [extension model](junit-5-extension-model).
+The next post in [this series about JUnit 5](tag:junit-5) discusses another architectural gem: its [extension model](junit-5-extension-model).

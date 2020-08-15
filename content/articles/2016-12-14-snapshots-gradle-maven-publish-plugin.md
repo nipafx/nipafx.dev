@@ -12,17 +12,19 @@ featuredImage: gradle-publish-snapshot-maven-publish
 I've recently started [a new project](https://github.com/CodeFX-org/junit-io) with Gradle and decided to jump straight in - no Gradle experience, no clue about Groovy, no tutorials, just hammer on it until it works.
 That went surprisingly well until I decided to publish snapshots to Sonatype's Maven snapshot repository with the incubating [*maven-publish* plugin](https://docs.gradle.org/current/userguide/publishing_maven.html) - that took, ahh, a little convincing.
 
-Caveat: As I said, I'm a noob in both Groovy and Gradle, so don't believe anything I say.
+<admonition type="caveat">
+
+As I said, I'm a noob in both Groovy and Gradle, so don't believe anything I say.
 I write this down for myself as much as for you.
 
-The final (but still partial) `build.gradle` file can be found [here](https://gist.github.com/nicolaiparlog/d1850ac402f086e1b4fc42f58f5aa365), the actual variant I used in my project [here](https://github.com/CodeFX-org/junit-io/blob/3ab5fee6dfa2c8b99327d0d198fdaa58f044808e/build.gradle).
+</admonition>
 
-[toc]
+The final (but still partial) `build.gradle` file can be found [here](https://gist.github.com/nicolaiparlog/d1850ac402f086e1b4fc42f58f5aa365), the actual variant I used in my project [here](https://github.com/CodeFX-org/junit-io/blob/3ab5fee6dfa2c8b99327d0d198fdaa58f044808e/build.gradle).
 
 As a zeroth step make sure the project's group, id, and version are present.
 The first and last can usually be found in the `build.gradle` file, the project name doubles for its id and is defined in `settings.gradle`.
 
-## Activating *maven-publish* {#activating_mavenpublish_}
+## Activating *maven-publish*
 
 Ok, lets go!
 First of all I activated the plugin:
@@ -51,7 +53,7 @@ As you see I begin by publishing to the local repo.
 And indeed, running `gradle publish` should now create a JAR and a rudimentary pom in some `.m2` subfolder.
 From here on I can add more features step by step.
 
-## Filling the POM {#fillingthepom}
+## Filling the POM
 
 What do I need to publish an artifact?
 A full Maven pom.
@@ -112,7 +114,7 @@ Feel free to propose something.
 You might've noticed that the project group, id, and version do not need to be repeated.
 Running `gradle publish` should now publish a JAR with a complete, albeit somewhat ugly pom.
 
-## License and More {#licenseandmore}
+## License and More
 
 I want to add the project's license to the JAR's `META-INF` folder, so inside `mavenJava` I tell Gradle to include the file in every JAR task (or at least that's how I read it):
 
@@ -127,7 +129,7 @@ tasks.withType(Jar) {
 
 Looking good, `gradle publish` now creates a full pom and a JAR with the project's license.
 
-## Sources and Javadoc JARs {#sourcesandjavadocjars}
+## Sources and Javadoc JARs
 
 Most projects like to publish more than just the compiled `.class` files, though, namely sources and Javadoc.
 For this I add two tasks and reference them from `mavenJava`:
@@ -158,9 +160,7 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 Nice, now I get a full pom, an artifact for the project's classes and license, and JARs for sources and Javadoc.
 Time to take the last step: publish to the snapshot repo!
 
-<contentimage slug="gradle-publish-snapshot-maven-publish"></contentimage>
-
-## Publish To Snapshot Repository {#publishtosnapshotrepository}
+## Publish To Snapshot Repository
 
 For that I'll replace `mavenLocal()` with the actual repository.
 Besides the URL I also need to specify my credentials:

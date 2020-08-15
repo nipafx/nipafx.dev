@@ -1,18 +1,18 @@
 ---
-title: "Java 9 Additions To Stream"
+title: "Java 9 Additions To `Stream`"
 tags: [java-9, stream]
 date: 2016-06-20
 slug: java-9-stream
-description: "Java 9 is coming! One of the many changes are new Stream methods: 'takeWhile', 'dropWhile', and 'ofNullable'. For more fun with streams!"
-intro: "Java 9 is coming! And it is more than just Jigsaw. One of the many changes are new Stream methods: 'takeWhile', 'dropWhile', and 'ofNullable'. For more fun with streams!"
+description: "Java 9 is coming! One of the many changes are new Stream methods: `takeWhile`, `dropWhile`, and `ofNullable`. For more fun with streams!"
+intro: "Java 9 is coming! And it is more than just Jigsaw. One of the many changes are new Stream methods: `takeWhile`, `dropWhile`, and `ofNullable`. For more fun with streams!"
 searchKeywords: "Java 9 stream"
 featuredImage: java-9-stream
 ---
 
 Java 9 is coming!
-And it is more than just [Project Jigsaw](http://blog.codefx.org/tag/project-jigsaw/).
+And it is more than just [Project Jigsaw](tag:project-jigsaw).
 (I was surprised, too.) It is bringing a lot of small and not-so-small changes to the platform and I'd like to look at them one by one.
-I'll tag all these posts and you can find them [here](http://blog.codefx.org/tag/java-9/).
+I'll tag all these posts and you can find them [here](tag:java-9).
 
 Let's start with ...
 
@@ -22,7 +22,7 @@ Streams learned three new tricks.
 The first deals with prefixes, which streams now understand.
 We can use a predicate to test a stream's elements and, starting at the beginning, either take or drop them until the first fails a test.
 
-### Stream::takeWhile
+### `Stream::takeWhile`
 
 Let's look at `takeWhile` first:
 
@@ -80,9 +80,7 @@ Taking from an ordered parallel stream is not the best idea.
 The different threads have to cooperate to ensure that the longest prefix is returned.
 This overhead can degrade performance to the point where it makes more sense to make the stream [sequential](http://download.java.net/java/jdk9/docs/api/java/util/stream/BaseStream.html#sequential--).
 
-<contentimage slug="java-9-stream"></contentimage>
-
-### Stream::dropWhile
+### `Stream::dropWhile`
 
 Next is `dropWhile`:
 
@@ -110,7 +108,7 @@ Called on an unordered stream the operation will drop a subset of those elements
 Unless all of them do, in which case it will always return an empty stream.
 Everything else we said above about terminology and concurrency applies here as well.
 
-### Stream::iterate
+### `Stream::iterate`
 
 `Stream` already has a method `iterate`.
 It's a static factory method that takes a seed element of type `T` and a function from `T` to `T`.
@@ -154,20 +152,21 @@ if (en.hasMoreElements()) {
 You could also use it to manipulate a data structure while you stream over it, like [popping elements off a stack](http://stackoverflow.com/q/38159906/2525313).
 This not generally advisable, though, because the source may end up in a surprising state - you might want to discard it afterwards.
 
+<admonition type="note">
+
 Not True!
-
-:   **
-
-	Turns out neither the `Enumeration` above nor the `Stack` mentioned in the link can be streamed like this - at least not fully.
+Turns out neither the `Enumeration` above nor the `Stack` mentioned in the link can be streamed like this - at least not fully.
 The predicate (in our cases `el -> en.nextElement()` and `el -> stack.pop()`) is evaluated *after* an element was taken from the source.
 This is in line with how the traditional `for`-loop works but has an unfortunate effect.
 
-	After taking the last element from the source but before pushing it into the stream, the predicate is consulted and returns false because there is no element *after* the last one.
+After taking the last element from the source but before pushing it into the stream, the predicate is consulted and returns false because there is no element *after* the last one.
 The element does hence not appear in the stream, which means the last element is always missing.
 
-	Thanks to Piotr for pointing this out!
+Thanks to Piotr for pointing this out!
 
-### Stream::ofNullable
+</admonition>
+
+### `Stream::ofNullable`
 
 That one's really trivial.
 Instead of talking about it, lets see it in action:
@@ -229,7 +228,7 @@ Files.lines(htmlFile)
 
 We also learned about `ofNullable`.
 I wonder why it seems so familiar?
-Ah yes, [Optional](http://blog.codefx.org/tag/optional/) of course!
+Ah yes, [`Optional`](tag:optional) of course!
 Coincidently I will [cover that next](java-9-optional).
 :)
 

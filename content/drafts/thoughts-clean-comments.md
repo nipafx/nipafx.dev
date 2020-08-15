@@ -8,8 +8,6 @@ description: "If we want a clean codebase we need clean code and clean comments!
 searchKeywords: "Clean Comments"
 ---
 
-[toc exclude=Overview]
-
 ## Comments and Codebase
 
 ### Code vs Codebase
@@ -40,8 +38,6 @@ While it might not fail in as obvious ways, it is as much of a shortcoming and j
 
 So what is left to do is to decide what constitutes a clean comment.
 This must include considerations of the different trade-offs and especially where we might need them and where not.
-
-[Published](https://www.flickr.com/photos/duncan/215267578) by [duncan c](hhttps://www.flickr.com/photos/duncan/) under [CC-BY-NC 2.0](https://creativecommons.org/licenses/by-nc/2.0/).
 
 ## Thoughts On Clean Comments
 

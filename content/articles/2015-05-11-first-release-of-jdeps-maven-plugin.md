@@ -6,7 +6,8 @@ slug: jdeps-maven-plugin-0-1
 description: "The JDeps Maven Plugin will break a project's build if it contains dependencies on JDK-internal APIs. This helps to prepare for Java 9."
 intro: "The JDeps Maven Plugin will break a project's build if it contains dependencies on JDK-internal APIs. This helps to prepare for Java 9, where these dependencies will be unaccessible."
 searchKeywords: "JDeps Maven Plugin"
-featuredImage: JDeps-Maven-Plugin v0.1
+featuredImage: jdeps-mvn-motor
+repo: jdeps-maven-plugin
 ---
 
 Two weeks ago I wrote about [how Java 9 may break your code](how-java-9-and-project-jigsaw-may-break-your-code).
@@ -14,8 +15,6 @@ A substantial obstacle for the transition to Java 9 can be a project's dependenc
 These will be unaccessible in the new Java version and code containing them will not compile.
 It is hence important to weed them out in the remaining time.
 (Btw, Java 9 is [scheduled for September 2016](http://mail.openjdk.java.net/pipermail/jdk9-dev/2015-May/002172.html).)
-
-<contentimage slug="JDeps-Maven-Plugin-v0"></contentimage>
 
 To help our projects (and maybe yours) with that, I created the [*JDeps Maven Plugin*](https://github.com/CodeFX-org/JDeps-Maven-Plugin).
 It breaks the build if the code contains any problematic dependencies.
@@ -26,19 +25,21 @@ To help identify problematic dependencies the JDK 8 contains the [Java Dependenc
 Run against a jar, a folder or a single class it will analyze and output dependencies.
 Analysis and output can be configured with several command line options.
 
-Run as *jdeps -jdkinternals* it will only list the dependencies on JDK-internal API.
+Run as `jdeps -jdkinternals` it will only list the dependencies on JDK-internal API.
 Exactly these dependencies are the ones that would break if compiled against Java 9.
 It is hence the basis of the Maven plugin.
 
 ## JDeps Maven Plugin
 
-The plugin runs *jdeps -jdkinternals* against the compiled classes, parses the output and breaks the build if it contained any dependencies.
+The plugin runs `jdeps -jdkinternals` against the compiled classes, parses the output and breaks the build if it contained any dependencies.
+
+<contentimage slug="JDeps-Maven-Plugin-v0.1" options="sidebar"></contentimage>
 
 ### Configuration
 
 To use it in a project include this in its pom:
 
-```html
+```xml
 <build>
 	<plugins>
 		...
@@ -70,7 +71,9 @@ With `mvn jdeps:jdkinternals` it can be run directly.
 If your project contains any internal dependencies the build will fail with a message like this:
 
 ```
-[ERROR] Failed to execute goal org.codefx.maven.plugin:jdeps-maven-plugin:0.1:jdkinternals (default-cli) on project MavenLab:
+[ERROR] Failed to execute goal
+		org.codefx.maven.plugin:jdeps-maven-plugin:0.1:jdkinternals
+		(default-cli) on project MavenLab:
 [ERROR] Some classes contain dependencies on JDK-internal API:
 [ERROR] .       org.codefx.lab.ExampleClass
 [ERROR] .                -> sun.misc.BASE64Decoder [JDK internal API, rt.jar]
@@ -97,12 +100,12 @@ You can track the progress in [this issue](https://github.com/CodeFX-org/JDeps-M
 
 There are (at least) two Maven plugins which allow to use JDeps.
 
-[Maven JDeps by Philippe Marschall](https://github.com/marschall/jdeps-maven-plugin)
-:   Runs JDeps against the compiled classes and either prints the output or creates a report from it.
+**[Maven JDeps by Philippe Marschall](https://github.com/marschall/jdeps-maven-plugin)**:
+Runs JDeps against the compiled classes and either prints the output or creates a report from it.
 Has no consequences for the build.
 
-[Apache Maven JDeps](http://maven.apache.org/plugins-archives/maven-jdeps-plugin-LATEST/maven-jdeps-plugin/)
-:   In development.
+**[Apache Maven JDeps](http://maven.apache.org/plugins-archives/maven-jdeps-plugin-LATEST/maven-jdeps-plugin/)**:
+In development.
 Seems to be aimed at breaking the build when discovering internal dependencies but this does currently not work.
 
 I wanted fast results and full control over where this is going for my projects.

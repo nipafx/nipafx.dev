@@ -24,18 +24,19 @@ Still, it is sloppy and - and this is worse - many people out there make the sam
 Seeing them being recited in many different places (even if the respective authors might not defend these points when pressed), is surely not helping developers to get a good impression of how to use streams.
 So I decided to take this occasion and write a rebuttal - not only to this post but to all that repeat any of the five tropes I found in it.
 
-Note From The Future:
-:   *This post, and especially the introduction above, came out a little harsh.
+<admonition type="note">
+
+This post, and especially the introduction above, came out a little harsh.
 My intention was not to piss people off and if I were to write it again, I'd try to find a way to make my points just as forcefully but without the harshness.
 I considered editing the post but in the end I think it is not that hurtful.
-Feel free to judge me or reply in kind.*
+Feel free to judge me or reply in kind.
 
-[toc]
+</admonition>
 
 (Always pointing out that something is my opinion is redundant \[it's my blog, after all\] and tiresome, so I won't do it.
 Keep it in mind, though, because I say some things like they were facts even though they're only my point of view.)
 
-## The Problem {#theproblem}
+## The Problem
 
 There's a lot of explanations of what's going on and why but in the end, it comes down to this: We have a query string from an HTTP POST request and want to parse the parameters into a more convenient data structure.
 For example, given a string `a=foo&b=bar&a=fu` we want to get something like `a~>{foo,fu} b~>{bar}`.
@@ -86,12 +87,12 @@ private void parseQuery(String query, Map parameters)
 
 I assume it is kindness that the author's name is not mentioned because this snippet is wrong on so many levels that we will not even discuss it.
 
-## My Beef {#mybeef}
+## My Beef
 
 From here on, the article explains how to refactor towards streams.
 And this is where I start do disagree.
 
-### Streams For Succinctness {#streamsforsuccinctness}
+### Streams For Succinctness
 
 This is how the refactoring is motivated:
 
@@ -139,7 +140,7 @@ Again, this defeats the purpose behind streams!
 
 So, when you see some code and think about refactoring it to streams, don't count lines to determine your success!
 
-### Using Ugly Mechanics {#usinguglymechanics}
+### Using Ugly Mechanics
 
 The first thing the loop does is also the way to start off the stream: We split the query string along ampersands and operate on the resulting key-value-pairs.
 The article does it as follows:
@@ -163,7 +164,7 @@ public static Stream<String> splitIntoStream(String s, String regex) {
 Then we start the stream with `splitIntoStream(query, "[&]")`.
 A simple ["extract method"-refactoring](http://refactoring.com/catalog/extractMethod.html) but so much better.
 
-### Suboptimal Data Structures {#suboptimaldatastructures}
+### Suboptimal Data Structures
 
 Remember what we wanted to do?
 Parse something like `a=foo&b=bar&a=fu` to `a~>{foo,fu} b~>{bar}`.
@@ -212,14 +213,14 @@ After all, the article’s quest is to find a good way to process and represent 
 (While this is a recurring theme when it comes to design in general, it is not very stream specific.
 I didn't count it into the 5 common tropes but still wanted to mention it because it makes the final result much better.)
 
-### Corny Illustrations {#cornyillustrations}
+### Corny Illustrations
 
 Speaking of common tropes... One is to use a corny photo of a stream to give the post some color.
 With this, I am happy to oblige!
 
-<contentimage slug="rebutting-stream-tropes"></contentimage>
+<contentimage slug="rebutting-stream-tropes" options="sidebar"></contentimage>
 
-### Anemic Pipelines {#anemicpipelines}
+### Anemic Pipelines
 
 Did you ever see a pipeline that does almost nothing but then suddenly crams all functionality into a single operation?
 The article's solution to our little parsing problem is a perfect example (I removed some null handling to improve readability):
@@ -272,7 +273,7 @@ private Entry<String, String> parseParameter(String parameterString) {
 
 We still have that magic collector to deal with but at least a little less is happening there.
 
-### Collector Magic {#collectormagic}
+### Collector Magic
 
 Java 8 ships with some crazy [collectors](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html) (particularly those that forward to downstream collectors) and we already saw how they can be misused to create unreadable code.
 As I see it, they mostly exist because without tuples, there is no way to prepare complex reductions.
@@ -298,7 +299,7 @@ public static <T, K, V> Collector<T, ?, Map<K, List<V>>> toListMap(
 ```
 
 It's still hideous - although less so - but at least I don't have to look at it all the time.
-And if I do, the return type and the [contract comment](http://blog.codefx.org/techniques/documentation/taxonomy-comments/#Contracts) will make it much easier to understand what's going on.
+And if I do, the return type and the [contract comment](taxonomy-comments#contracts) will make it much easier to understand what's going on.
 
 Or, if we decided to use the Multimap, we shop around for [a matching collector](http://stackoverflow.com/a/23003630/2525313):
 
@@ -314,7 +315,7 @@ In both cases we could even go one step further and make a special case for stre
 I'll leave that as an exercise to you.
 :)
 
-### Exception Handling {#exceptionhandling}
+### Exception Handling
 
 The article culminates in the biggest challenge when working with streams: exception handling.
 It says:
@@ -365,8 +366,6 @@ private static Entry<String, String> parseValidParameter(
 
 We then use `parseParameter` in a `flatMap` instead of a `map` and get a stream of those entries that could be split and decoded (and a bunch of log messages telling us in which cases things went wrong).
 
-[java_8]
-
 ## Showdown
 
 Here's the article's final version:
@@ -415,13 +414,9 @@ Or right on target?
 Leave a comment and tell me.
 If you accidentally agree, you might want to share this post with your friends and followers.
 
-[feather_share]
-
 And if you like what I'm writing about, why don't you follow me?
 
-[feather_follow]
-
-## Post Scriptum {#postscriptum}
+## Post Scriptum
 
 By the way, with [Java 9's enhancements to the stream API](java-9-stream), we don't have to special-case a null query string:
 

@@ -10,8 +10,6 @@ featuredImage: javafx-with-attached-source
 
 Just a quickie about how to tell Eclipse to attach the JavaFX sources for an improved development experience.
 
-[toc]
-
 ## Java Sources
 
 When you're using [Eclipse](http://eclipse.org/) with a JDK as your system library, the IDE will helpfully display [Javadoc](https://en.wikipedia.org/wiki/Javadoc) when you hover over members of official Java classes and let you jump into the code whenever you want to.
@@ -42,8 +40,6 @@ In Eclipse:
 To verify that this worked, open the *Open Type* dialog (by default with *Ctrl-Shift-T*) and check that you can open types from JavaFX like `javafx.application.Application`, `javafx.application.Platform` or `javafx.beans.property.Property`.
 
 You should also be able to see tooltips like this one:
-
-<contentimage slug="javafx-with-attached-source"></contentimage>
 
 ## Reflection
 

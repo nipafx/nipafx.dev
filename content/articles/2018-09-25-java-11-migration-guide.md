@@ -18,11 +18,7 @@ If that describes yours, you've come to the right place - this migration guide t
 (**Small aside**: If you're interested in Java 11 features, check out my posts on [the new HTTP/2 client](java-http-2-api-tutorial) and [its reactive use](java-reactive-http-2-requests-responses), [scripting with Java](scripting-java-shebang), and [the eleven hidden gems in Java 11](java-11-gems).)
 
 We'll start with a super-quick tour through the new release cadence, licensing, and support before discussing how to prepare a migration (TL;DR: update all the things!) and finally, how to overcome the four most common hurdles (if you already [migrated to Java 9](java-9-migration-guide), you can skip most of that).
-Note that we're talking [*migration*](https://blog.codefx.org/tag/migration/), not *modularization* (that's not required and should be a separate step), so we won't be creating any modules.
-
-[toc heading_levels="2,3"]
-
-[codefx_youtube url="https://www.youtube.com/watch?v=7xkyV2kLb0c&list=PL\_-IO8LOLuNqMlbUSiThLaQda6ASUCrLm" thumbnail="//blog.codefx.org/wp-content/uploads/thumbnail-java-next-small.jpg" topic="releases, JDKs, and licenses"]
+Note that we're talking [*migration*](tag:migration), not *modularization* (that's not required and should be a separate step), so we won't be creating any modules.
 
 ## On Releases, JDKs, And Licenses
 
@@ -83,8 +79,7 @@ That covers the sources, but where can we get the final binaries from?
 Put together, we'd get free OpenJDK LTS, organized by companies that are well-known in the Java community and continuously built by AdoptOpenJDK.
 That would be awesome!
 
-⇝ [No Free Java LTS Version?
-- CodeFX Weekly \#56](https://medium.com/codefx-weekly/no-free-java-lts-version-b850192745fb)
+⇝ [No Free Java LTS Version? - CodeFX Weekly \#56](https://medium.com/codefx-weekly/no-free-java-lts-version-b850192745fb)
 
 ⇝ [Java is still available at zero-cost](https://blog.joda.org/2018/08/java-is-still-available-at-zero-cost.html)
 
@@ -111,8 +106,6 @@ Even if they don't then work to include those merges in the OpenJDK 11 repo, oth
 This makes a free, long-term supported, community-driven OpenJDK 11 all the more likely.
 Very cool!
 
-<contentimage slug="java-11-migration"></contentimage>
-
 ## Preparing Your Migration
 
 Here you are: With your favorite vendor's JDK installed (and maybe some LTS in the back pocket), you want your Java 8 project to work on Java 11.
@@ -132,7 +125,7 @@ If you don't want to raise the minimum version requirement or the project is too
 This way, you're not facing merge conflicts and can be sure that your colleagues' changes are always also built on Java 11.
 -   Configure your continuous integration server to run the build once in its common configuration and once on Java 11.
 -   Learn about your build tool's support for configuration specific to individual Java versions.
-(In Maven, that would be [profiles](https://blog.codefx.org/tools/maven-on-java-9/#Configuring-The-Build-For-Java-8-And-Java-9).) This way you can keep the old build running while adding required configuration for the new version.
+(In Maven, that would be [profiles](maven-on-java-9#configuring-the-build-for-java-8-and-java-9).) This way you can keep the old build running while adding required configuration for the new version.
 -   Try to keep the version-specific configuration to a minimum.
 For example, prefer updating dependencies over adding command line flags (more on that below).
 
@@ -153,7 +146,7 @@ You don't *have* to do all of these updates in advance, but if you can, you abso
 Here are the recommended minimum versions for a few tools:
 
 -   **IntelliJ IDEA**: [2018.2](https://blog.jetbrains.com/idea/2018/06/java-11-in-intellij-idea-2018-2/)
--   **Eclipse**: Photon 4.9RC2 with [Java 11 plugin](/https://marketplace.eclipse.org/content/java-11-support-eclipse-photon-49)
+-   **Eclipse**: Photon 4.9RC2 with [Java 11 plugin](https://marketplace.eclipse.org/content/java-11-support-eclipse-photon-49)
 -   **Maven**: 3.5.0
 	-   **compiler plugin**: 3.8.0
 	-   **surefire** and **failsafe**: 2.22.0
@@ -187,9 +180,8 @@ With an older version of Hibernate, for example, it was necessary to update Java
 	<version>5.2.12.Final</version>
 </dependency>
 <dependency>
-	<!-- update Hibernate dependency on
-			Javassist from 3.20.0 to 3.23.1
-			for Java 11 compatibility -->
+	<!-- update Hibernate dependency on Javassist
+			from 3.20.0 to 3.23.1 for Java 11 compatibility -->
 	<groupId>org.javassist</groupId>
 	<artifactId>javassist</artifactId>
 	<version>3.23.1-GA</version>
@@ -209,8 +201,8 @@ Likewise, with the outdated version 3.7.0 of the Maven compiler plugin, its ASM 
 	</configuration>
 	<dependencies>
 		<dependency>
-			<!-- update compiler plugin dependency on
-					ASM for Java 11 compatibility -->
+			<!-- update compiler plugin dependency on ASM
+					for Java 11 compatibility -->
 			<groupId>org.ow2.asm</groupId>
 			<artifactId>asm</artifactId>
 			<version>6.2</version>
@@ -228,15 +220,13 @@ Only if the problem lies in your own code or such updates/replacements don't hel
 
 ### A Word On The Module System
 
-I'm sure you've heard about [the Java Platform Module System (JPMS)](https://blog.codefx.org/tag/jpms/) that was introduced in Java 9.
+I'm sure you've heard about [the Java Platform Module System (JPMS)](tag:j_ms) that was introduced in Java 9.
 Since it's causing most of the compatibility challenges you're going to face during a migration from Java 8, it definitely helps a lot to understand its basics - for example, by reading [this fine module system tutorial](java-module-system-tutorial) (*cough*) or [my book](https://www.manning.com/books/the-java-module-system?a_aid=nipa&a_bid=869915cb) (*cough cough*).
 But keep in mind that you are not required to create modules to have your code run on Java 9 or later!
 
 The class path is here to stay and if your code or its dependencies don't do anything forbidden (more on that later), you can expect it to Just Work™ on Java 9, 10, or 11 exactly as it did on 8 - modules are no requirement and so this post does not address *modularization*, just *migration*.
 
 <pullquote>You don't need modules to run on Java 9+</pullquote>
-
-[codefx_jms\_product title="All about JPMS, migration, and modularization:"]
 
 ## Migrating From Java 8 To Java 11
 
@@ -337,18 +327,18 @@ Replace them with maintained APIs and you paid back some high-risk technical deb
 If that can't be done for whatever reason, the next best thing is to acknowledge the dependencies and inform the module system that you need to access it.
 To that end you can use two command line options:
 
--   The option `--add-exports module/package=$readingmodule` exports `$package` of *\$module* to *\$readingmodule*.
-Code in *\$readingmodule* can hence access all public types in `$package` but other modules can not.
-When setting *\$readingmodule* to `ALL-UNNAMED`, all code from the class path can access that package.
+-   The option `§--add-exports module/package=$readingmodule` exports `§$package` of *$module* to *$readingmodule*.
+Code in *$readingmodule* can hence access all public types in `§$package` but other modules can not.
+When setting *$readingmodule* to `§ALL-UNNAMED`, all code from the class path can access that package.
 During a migration to Java 11, you will always use that placeholder (you will have to change it when you modularize).
 The option is available for the `java` and `javac` commands.
 -   This covers access to public members of public types but reflection can do more than that: With the generous use of `setAccessible(true)` it allows interaction with non-public classes, fields, constructors, and methods (sometimes called *deep reflection*), which even in exported packages are still encapsulated.
-The `java` option `--add-opens` uses the same syntax as `--add-exports` and opens the package to deep reflection, meaning all of its types and their members are accessible regardless of their visibility modifiers.
+The `java` option `§--add-opens` uses the same syntax as `§--add-exports` and opens the package to deep reflection, meaning all of its types and their members are accessible regardless of their visibility modifiers.
 
-You obviously need `--add-exports` to appease the compiler but using `--add-exports` and `--add-opens` for the run time has advantages as well:
+You obviously need `§--add-exports` to appease the compiler but using `§--add-exports` and `§--add-opens` for the run time has advantages as well:
 
 1. the run time's permissive behavior will change in future Java releases, so you have to do that work at some point anyway
-2. `--add-opens` makes the warnings for illegal reflective access go away
+2. `§--add-opens` makes the warnings for illegal reflective access go away
 3. as I will show in a minute, you can make sure no new dependencies crop up by making the run time actually enforce strong encapsulation
 
 ⇝ [Five Command Line Options To Hack The Java Module System](five-command-line-options-hack-java-module-system)
@@ -366,22 +356,22 @@ Here's how to use it for the task at hand:
 jdeps --jdk-internals -R --class-path 'libs/*' $project
 ```
 
-Here, `libs` is a folder containing all of your dependencies and `$project` your project's JAR.
+Here, `§libs` is a folder containing all of your dependencies and `§$project` your project's JAR.
 Analyzing the output is beyond this article's scope but it's not that hard - you'll manage.
 
 Finding reflective access is a little tougher.
 The run time's default behavior is to warn you once for the first illegal access to a package, which is insufficient.
-Fortunately, there's the `--illegal-access=$value` option, where `$value` can be:
+Fortunately, there's the `§--illegal-access=$value` option, where `§$value` can be:
 
--   `permit`: Access to all JDK-internal APIs is permitted to code on the class path.
+-   `§permit`: Access to all JDK-internal APIs is permitted to code on the class path.
 For reflective access, a single warning is issued for the *first* access to each package.
 (Default in Java 9, but [will be removed in a future release](http://mail.openjdk.java.net/pipermail/jigsaw-dev/2017-June/012841.html).)
--   `warn`: Behaves like `permit` but a warning is issued for *each* reflective access.
--   `debug`: Behaves like `warn` but a stack trace is included in each warning.
--   `deny`: The option for those who believe in strong encapsulation: All illegal access is forbidden by default.
+-   `§warn`: Behaves like `§permit` but a warning is issued for *each* reflective access.
+-   `§debug`: Behaves like `§warn` but a stack trace is included in each warning.
+-   `§deny`: The option for those who believe in strong encapsulation: All illegal access is forbidden by default.
 
-Particularly `deny` is very helpful to hunt down reflective access.
-It is also a great default value to set once you've collected all required `--add-exports` and `--add-opens` options.
+Particularly `§deny` is very helpful to hunt down reflective access.
+It is also a great default value to set once you've collected all required `§--add-exports` and `§--add-opens` options.
 This way, no new dependencies can crop up without you noticing it.
 
 ### Removal Of Deprecated APIs and JavaFX
@@ -408,8 +398,8 @@ Here are some of the more common classes and methods that were removed between J
 
 #### Heeding Deprecation Warnings
 
-To make it easier to keep up with deprecation warnings, I recommend using the command line tools `jdeps` and `jdeprscan`.
-They work on class files and JARs and you can find them in your JDK's `bin` folder.
+To make it easier to keep up with deprecation warnings, I recommend using the command line tools `§jdeps` and `§jdeprscan`.
+They work on class files and JARs and you can find them in your JDK's `§bin` folder.
 The former is a multi-purpose dependency analysis tool while the latter focuses on reporting the use of deprecated APIs, highlighting those that will be removed.
 
 ⇝ [A JDeps Tutorial - Analyze Your Project’s Dependencies](jdeps-tutorial-analyze-java-project-dependencies)
@@ -452,7 +442,7 @@ Exception in thread "main" java.lang.ClassCastException:
 The class loader was probably cast to access methods specific to `URLClassLoader`.
 If so, you might have to face some serious changes.
 
-If you want to access the class path content, check the system property `java.class.path` and parse it:
+If you want to access the class path content, check the system property `§java.class.path` and parse it:
 
 ```java
 String pathSeparator = System
@@ -485,7 +475,7 @@ As executive summary:
 	-   keep the module system in mind
 -   challenges
 	-   replace Java EE modules with third-party implementations
-	-   if absolutely necessary, use `--add-exports` or `--add-opens` to gain access to internal APIs
+	-   if absolutely necessary, use `§--add-exports` or `§--add-opens` to gain access to internal APIs
 	-   heed deprecation warnings as classes and methods will be removed
 	-   add JavaFX as a regular dependency
 	-   don't cast the application class loader to `URLClassLoader`
@@ -502,7 +492,7 @@ Further reading:
 	-   [HTTP/2 client](java-http-2-api-tutorial) and [its reactive use](java-reactive-http-2-requests-responses)
 	-   [Single-Source-File Execution And Scripting](scripting-java-shebang)
 	-   [Eleven Hidden Gems In Java 11](java-11-gems)
-	-   [Improve Launch Times On Java 10 With Application Class-Data Sharing](https://blog.codefx.org/java/java-10-var-type-inference/%3EFirst%20Contact%20With%20'var'%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20href=)
+	-   [Improve Launch Times On Java 10 With Application Class-Data Sharing](java-10-var-type-inference)
 	-   [90 New Features (and APIs) in JDK 11](https://www.azul.com/90-new-features-and-apis-in-jdk-11/)
 -   Tools on Java 9 and later:
 	-   [Maven on Java 9 - Six Things You Need To Know](maven-on-java-9) (fully applies to Java 11)

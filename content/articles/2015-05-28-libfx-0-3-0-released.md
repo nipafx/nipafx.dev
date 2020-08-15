@@ -5,10 +5,8 @@ date: 2015-05-28
 slug: libfx-0-3-0
 description: "Release post for LibFX 0.3.0 including pointers to GitHub, feature descriptions, Maven coordinates and the Javadoc."
 searchKeywords: "libfx 0.3.0"
-featuredImage: LibFX v0.3.0
+featuredImage: libfx-library
 ---
-
-<contentimage slug="LibFX-v0"></contentimage>
 
 I just released [**LibFX 0.3.0**](https://github.com/CodeFX-org/LibFX/releases/tag/v0.3.0)!
 
@@ -20,20 +18,20 @@ I also created an easy way to stream nodes of all kinds of trees.
 
 And don't forget about the other features:
 
-[ControlPropertyListener](https://github.com/CodeFX-org/LibFX/wiki/ControlPropertyListener)
-:   Creating listeners for the property map of JavaFX' controls.
+**[ControlPropertyListener](https://github.com/CodeFX-org/LibFX/wiki/ControlPropertyListener)**:
+Creating listeners for the property map of JavaFX' controls.
 
-[ListenerHandle](https://github.com/CodeFX-org/LibFX/wiki/ListenerHandle)
-:   Encapsulating an observable and a listener for easier add/remove of the listener ([I blogged about it here](java-listenerhandles)).
+**[ListenerHandle](https://github.com/CodeFX-org/LibFX/wiki/ListenerHandle)**:
+Encapsulating an observable and a listener for easier add/remove of the listener ([I blogged about it here](java-listenerhandles)).
 
-[Nestings](https://github.com/CodeFX-org/LibFX/wiki/Nestings)
-:   Using all the power of JavaFX' properties for nested object aggregations.
+**[Nestings](https://github.com/CodeFX-org/LibFX/wiki/Nestings)**:
+Using all the power of JavaFX' properties for nested object aggregations.
 
-[SerializableOptional](https://github.com/CodeFX-org/LibFX/wiki/SerializableOptional)
-:   Serializable wrapper for `Optional`.
+**[SerializableOptional](https://github.com/CodeFX-org/LibFX/wiki/SerializableOptional)**:
+Serializable wrapper for `Optional`.
 
-[WebViewHyperlinkListener](https://github.com/CodeFX-org/LibFX/wiki/WebViewHyperlinkListener)
-:   Add hyperlink listeners to JavaFX' `WebView`.
+**[WebViewHyperlinkListener](https://github.com/CodeFX-org/LibFX/wiki/WebViewHyperlinkListener)**:
+Add hyperlink listeners to JavaFX' `WebView`.
 
 ## Getting Started
 
@@ -48,7 +46,9 @@ Finally, there's extensive Javadoc under [libfx.codefx.org/apidocs/](http://libf
 
 You can download the jars from the [GitHub release site](https://github.com/CodeFX-org/LibFX/releases/tag/v0.3.0) or use your favorite dependency management system:
 
-```html
+<contentimage slug="LibFX-v0.3.0"></contentimage>
+
+```xml
 <dependency>
 	<groupId>org.codefx.libfx</groupId>
 	<artifactId>LibFX</artifactId>
@@ -56,7 +56,7 @@ You can download the jars from the [GitHub release site](https://github.com/Code
 </dependency>
 ```
 
-```java
+```groovy
 compile 'org.codefx.libfx:LibFX:0.3.0'
 ```
 

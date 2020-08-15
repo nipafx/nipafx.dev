@@ -1,5 +1,5 @@
 ---
-title: "Definite Guide To Text Blocks In Java 13"
+title: "Definitive Guide To Text Blocks In Java 13"
 tags: [java-13, java-basics]
 date: 2019-06-19
 slug: java-13-text-blocks
@@ -7,10 +7,11 @@ description: "Java 13 introduces text blocks: string literals that span multiple
 intro: "Java 13 introduces text blocks: string literals that span multiple lines. Here's all you need to know about syntax, indentation, escape sequences, formatting, and more."
 searchKeywords: "text blocks"
 featuredImage: text-blocks
+repo: java-x-demo
 ---
 
 New version, new feature!
-Java 13 [previews](https://blog.codefx.org/java/java-12-guide/#Preview-Features) *text blocks*, string literals that can span multiple lines:
+Java 13 [previews](java-12-guide#preview-features) *text blocks*, string literals that can span multiple lines:
 
 ```java
 System.out.println("""
@@ -41,8 +42,6 @@ Raw strings are on the table, though, and thanks to [the fast releases](https://
 
 But that's for another post - in this one we'll dive into text blocks.
 If you know similar features from other languages, channel your inner Duke and ignore them for a moment to free your mind for Java's variant.
-
-[toc]
 
 ## Text Block Syntax
 
@@ -353,8 +352,6 @@ String hello = """
 You know everything you need to guess what happens.
 Otherwise, try it yourself.
 😁
-
-<contentimage slug="text-blocks"></contentimage>
 
 ## Odds and ends
 

@@ -1,6 +1,6 @@
 ---
 title: "Don't Remove Listeners - Use ListenerHandles"
-tags: [clean-code, javafx, libfx, techniques]
+tags: [clean-code, javafx, libfx]
 date: 2014-11-28
 slug: java-listenerhandles
 description: "Keeping references around to remove listeners is a hazard. ListenerHandles encapsulate the complexity and LibFX has an implementation."
@@ -12,22 +12,11 @@ Listening to an observable instance and reacting to its changes is fun.
 Doing what is necessary to interrupt or end this listening is way less fun.
 Let's have a look at where the trouble comes from and what can be done about it.
 
-### Overview
-
-The post will first describe the situation before discussing the common approach and what's wrong with it.
-It will then present an easy abstraction which solves most problems.
-
 While the examples use Java, the deficiency is present in many other languages as well.
 The proposed solution can be applied in all object oriented languages.
 Those too lazy to implement the abstraction in Java themselves, can use [**LibFX**](http://libfx.codefx.org).
 
-[toc exclude=Overview]
-
 ## The Situation
-
-<contentimage slug="use-listener-handle"></contentimage>
-
-[Published](https://www.flickr.com/photos/ky_olsen/3133347219/in/photolist-5LTdXV-5LTdXx-8LChMH-8LChMX) by [Ky Olsen](%20https://www.flickr.com/photos/ky_olsen/) under [CC-BY 2.0](https://creativecommons.org/licenses/by/2.0/).
 
 Say we want to listen to the changes of a property's value.
 That's straight forward:

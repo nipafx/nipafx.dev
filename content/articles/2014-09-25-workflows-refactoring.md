@@ -3,30 +3,23 @@ title: "Impulse: \"Workflows of Refactoring\""
 tags: [impulse, techniques]
 date: 2014-09-25
 slug: workflows-refactoring
-description: "Discussing the keynote \"Workflows of Refactoring\" by Martin Fowler at OOP 20014, where he categorizes different reasons for and ways of refactoring."
+description: "Discussing the keynote \"Workflows of Refactoring\" by Martin Fowler at OOP 2014, where he categorizes different reasons for and ways of refactoring."
 searchKeywords: "Refactoring"
-featuredImage: worflows-of-refactoring
+featuredImage: workflows-of-refactoring
 ---
 
 In February [Martin Fowler held the keynote at OOP 2014](http://www.oop-konferenz.de/nc/oop2014/oop2014-eng/conference/english-sessions/conference-detail/software-design-in-the-21st-century.html).
-Under the resourceful title "*Software Design in the 21st Century*" he gave a two-part talk.
-The first part is called "*Workflows of Refactoring*" and is the first installment of my *[Impulse](http://blog.codefx.org/tag/impulse/)* series.
+Under the resourceful title _Software Design in the 21st Century_ he gave a two-part talk.
+The first part is called _Workflows of Refactoring_ and is the first installment of my _[Impulse](tag:impulse)_ series.
 
-In this loose collection of posts I recommend to watch a video, read a blog post, listen to a podcast, get a book, tweet, … or use whatever other technology is available to waste some time on studying software development.
+In this loose collection of posts I recommend to watch a video, read a blog post, listen to a podcast, get a book, tweet, ... or use whatever other technology is available to waste some time on studying software development.
 Besides the prominent embedded media or link, each article will usually consist of a short summary.
-
-### Overview
-
-So the main goal of this post is to convince you to watch the keynote.
-I will also reiterate the main points here.
-
-[toc exclude=Overview]
 
 ## The Talk
 
 Enjoy:
 
-([Link to Youtube.](http://www.youtube.com/watch?v=vqEg37e4Mkw))
+<contentvideo slug="workflows-refactoring"></contentvideo>
 
 You can find [the slides on Martin Fowler's page](http://martinfowler.com/articles/workflowsOfRefactoring/).
 
@@ -174,10 +167,9 @@ Always leave the code cleaner than you found it!
 
 And when you find yourself in a situation where you consider refactoring, make it a deliberate decision:
 
--   Consider the impact on your current work and decide whether this is [the right time to refactor](http://blog.codeclimate.com/blog/2014/01/09/when-is-it-time-to-refactor/).
--   Remember the two hats and consciously switch between the two.
--   Reflect on the reason to refactor to make your goal clearer.
+* Consider the impact on your current work and decide whether this is [the right time to refactor](http://blog.codeclimate.com/blog/2014/01/09/when-is-it-time-to-refactor/).
+* Remember the two hats and consciously switch between the two.
+* Reflect on the reason to refactor to make your goal clearer.
 
 Any ideas on refactoring?
 Do you have a story to share?
-Engage in the discussion and leave a comment!

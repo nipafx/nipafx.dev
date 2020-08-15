@@ -1,17 +1,15 @@
 ---
 title: "CodeFX Up And Running"
-tags: []
+tags: [meta]
 date: 2014-09-17
 slug: codefx-up-and-running
 description: "Summer recess is officially over and shit got done! Finally, CodeFX is ready to take on the world."
 searchKeywords: "CodeFX"
-featuredImage: Batman-running
+featuredImage: codefx-up-and-running
 ---
 
 Summer recess is officially over and shit got done!
 Finally, **CodeFX** is up and running.
-
-<contentimage slug="Batman-running"></contentimage>
 
 ## Up
 
@@ -19,7 +17,7 @@ Besides starting my new day job, I finished some long waiting coding and infrast
 
 ### Code
 
-I cleaned up my *SnapshotView* over at [ControlsFX](http://controlsfx.org) ([which is currently waiting to be pulled](https://bitbucket.org/controlsfx/controlsfx/pull-request/407/major-redesign-of-snapshotview)) and finally got everything working to [release the first production-ready version of LibFX](/uncategorized/libfx-0-1-1-released/).
+I cleaned up my *SnapshotView* over at [ControlsFX](http://controlsfx.org) ([which is currently waiting to be pulled](https://bitbucket.org/controlsfx/controlsfx/pull-request/407/major-redesign-of-snapshotview)) and finally got everything working to [release the first production-ready version of LibFX](libfx-0-1-1).
 
 ### CodeFX
 
@@ -43,7 +41,9 @@ To keep the site loading fast, comments are only loaded on demand (see the butto
 
 Finally, I'm done fighting with newsletter plugins, be it *Mailpoet*, *Newsletter Ready!* or *Newsletter* (ha, no links for you!).
 I'm sticking with the latter and since it does not provide a convenient way to send out complete posts, you won't get them via the newsletter.
-So if you want to read without stopping by, you'll have to [subscribe to the RSS-feed](http://blog.codefx.org/feed/).
+So if you want to read without stopping by, you'll have to [subscribe to the RSS-feed](https://nipafx.dev/feed.xml).
+
+<!-- Batman-running.gif -->
 
 ## Running
 
@@ -52,8 +52,7 @@ I'm ready to [achieve ultimate blog success in one easy step](http://blog.coding
 :)
 
 And look at that, I even have some ideas of (interesting?) things to write about!
-Like a [tutorial on creating a first open source project](/open-source-project-tutorial/) - something I recently went through myself.
+Like a tutorial on creating a first open source project - something I recently went through myself.
 Or how to create a JavaFX control the way it's supposed to be done...
 
 So I’ll be back and I hope so will you!
-If there's anything you're interested in and for some reason believe I might know something about, join the discussion below or contact me under <nipa@codefx.org>.

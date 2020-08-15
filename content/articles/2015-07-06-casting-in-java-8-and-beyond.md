@@ -61,8 +61,6 @@ Because the type is unknown at compile type, we'll call this dynamic casting.
 
 The outcomes of tests and casts for instances of the wrong type and null references are exactly as for static casting.
 
-<contentimage slug="casting-java-8-and-beyond-1"></contentimage>
-
 ## Casting In Streams And Optionals
 
 ### The Present

@@ -1,6 +1,6 @@
 ---
 title: "Impulse: \"Agile Architecture\""
-tags: [agile, impulse]
+tags: [agile, architecture, impulse]
 date: 2015-03-26
 slug: agile-architecture
 description: "A summary of the talk \"Agile Architecture\" given by Molly Dishman and Martin Fowler as the keynote at the O'Reilly Software Architecture Conference."
@@ -14,13 +14,7 @@ So how can a team make sure that architecture is happening in an agile environme
 
 Molly Dishman and Martin Fowler answer this and other questions and help with creating an agile architecture.
 
-### Overview
-
-This post is going to outline the talk ["Agile Architecture"](http://softwarearchitecturecon.com/sa2015/public/schedule/detail/40388), which Dishman and Fowler held as the keynote at the [O'Reilly Software Architecture Conference in March 2015](http://softwarearchitecturecon.com/sa2015).
-
-As usual in [this series of posts](http://blog.codefx.org/tag/impulse/), some details are left out for brevity, so if you're interested, make sure to check out the video.
-
-[toc exclude=Overview]
+This post outlines their talk [_Agile Architecture_](http://softwarearchitecturecon.com/sa2015/public/schedule/detail/40388), held as the keynote at the [O'Reilly Software Architecture Conference in March 2015](http://softwarearchitecturecon.com/sa2015).
 
 ## The Talk
 

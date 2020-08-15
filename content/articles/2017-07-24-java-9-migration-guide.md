@@ -14,20 +14,11 @@ After doing exactly that, migrating an old and fairly large code base, I can tel
 It's more work than bumping to Java 8, true, but it's time well spent.
 More than anything else, the migration uncovered some small and a few not so small problems that needed fixing regardless of the migration itself and we took the opportunity to do just that.
 
-I collected a few surprising details over at [java9.wtf](http://java9.wtf) but condensed the seven largest issues into this Java 9 migration guide.
+I collected the seven largest issues into this Java 9 migration guide.
 It's as much a post as it is a resource to come back to, so put it on speed dial and search it when you have a concrete problem.
-Also note that while you need to know a bit about [the module system](https://blog.codefx.org/tag/jpms/) ([here's a tutorial](java-module-system-tutorial)), this is not about modularizing your application - it is only about getting it to compile and run on Java 9.
+Also note that while you need to know a bit about [the module system](tag:j_ms) ([here's a tutorial](java-module-system-tutorial)), this is not about modularizing your application - it is only about getting it to compile and run on Java 9.
 
-### Overview
-
-This is a list of the seven most likely problems to trip you up during a migration to Java 9:
-
-[toc heading_levels="2"]
-
-Each section explains the problem, the most common symptoms that help you identify it and a set of possible fixes (usually [command line options for `java` or `javac`](five-command-line-options-hack-java-module-system)).
-A future post will tie individual fixes into a larger migration strategy and make some recommendations based on my experiences.
-
-## Illegal Access To Internal APIs {#illegalaccesstointernalapis}
+## Illegal Access To Internal APIs
 
 One of the module system's biggest selling points is strong encapsulation.
 It makes sure non-public classes as well as classes from non-exported packages are inaccessible from outside the module.
@@ -88,7 +79,7 @@ You obviously need `--add-exports` to appease the compiler but gathering `--add-
 2. `--add-opens` makes the warnings for illegal reflective access go away
 3. as I will show in a minute, you can make sure no new dependencies crop up by making the run time actually enforce strong encapsulation
 
-### Going Further {#goingfurther}
+### Going Further
 
 Compiling against Java 9 helps hunting down dependencies on internal APIs in the project's code base.
 But the libraries and frameworks your project uses are just as likely to make trouble.
@@ -120,9 +111,7 @@ Particularly `deny` is very helpful to hunt down reflective access.
 It is also a great default value to set once you've collected all required `--add-exports` and `--add-opens` options.
 This way, no new dependencies can crop up without you noticing it.
 
-[jms_in\_action title="Only so many facts fit into a post - fortunately, there's a book with more of them:"]
-
-## Dependencies On Java EE Modules {#dependenciesonjavaeemodules}
+## Dependencies On Java EE Modules
 
 There's a lot of code in Java SE that's actually Java EE related.
 It ended up in these six modules:
@@ -161,18 +150,18 @@ Caused by: java.lang.ClassNotFoundException: javax.xml.bind.JAXBException
 	... 1 more
 ```
 
-### Fixes on Java 9 and 10 {#fixes-1}
+### Fixes on Java 9 and 10
 
 Once you modularized your code, you can declare a regular dependency in the module's declaration.
 Until then, `--add-modules $module` comes to your rescue, which makes sure `$module` is available and can be added to both `java` and `javac`.
 If you add *java.se.ee*, you'll have access to all Java EE modules.
 
-### Fixes on Java 11 and later {#fixes-1}
+### Fixes on Java 11 and later
 
 Java 11 [removes the Java EE modules](http://openjdk.java.net/jeps/320), so from then on you will need third-party implementations instead.
 [This StackOverflow answer contains a list of alternatives.](https://stackoverflow.com/a/48204154/2525313) Note that using third-party dependencies already works from Java 9 on, so you don't have to use `--add-modules` as a stopgap.
 
-## Split Packages {#splitpackages}
+## Split Packages
 
 This one is a little tricky... To enforce consistency a module is not allowed to read the same package from two different modules.
 The actual implementation is stricter, though, and no two modules are allowed to even *contain* the same package (exported or not).
@@ -203,7 +192,7 @@ One example where this can occur is with the various JSR-305 implementations.
 A project using, for example, the annotations `javax.annotation.Generated` (from *java.xml.ws.annotation*) and `java.annotation.Nonnull` (from *com.google.code.findbugs:jsr305*) will have trouble compiling.
 It is either missing the Java EE annotations or, when the module is added like described above, will encounter a split package and not see the JSR 305 module.
 
-### Fixes {#fixes-2}
+### Fixes
 
 The migration path will be different, depending on the artifact that splits the JDK package.
 In some cases it might be more than just some classes that go into a random JDK package but a replacement for an entire JDK module, for example because it [overrides an endorsed standard](https://docs.oracle.com/javase/8/docs/technotes/guides/standards/).
@@ -223,7 +212,7 @@ First of all, the patched module must actually make it into the module graph, fo
 Then, it must have access to all the dependencies that it needs to run successfully.
 Since named modules can not access code from the class path, this might make it necessary to start creating some [automatic modules](http://openjdk.java.net/projects/jigsaw/spec/sotms/#automatic-modules), which goes beyond the scope of this post.
 
-### Going Further {#goingfurther}
+### Going Further
 
 Finding split package by try and error is pretty unnerving.
 Fortunately [JDeps](jdeps-tutorial-analyze-java-project-dependencies) reports them, so if you analyze your project and its dependencies, the first lines of output will report split packages.
@@ -233,7 +222,7 @@ You can use the same command as above:
 jdeps --jdk-internals -R --class-path '$libs/*' project.jar
 ```
 
-## Casting To URL Class Loader {#castingtourlclassloader}
+## Casting To `URLClassLoader`
 
 The class loading strategy that I just described is implemented in a new type and in Java 9 the application class loader is of that type.
 That means it is not a `URLClassLoader`, anymore, so the occasional `(URLClassLoader) getClass().getClassLoader()` or `(URLClassLoader) ClassLoader.getSystemClassLoader()` sequences will no longer execute.
@@ -252,7 +241,7 @@ Exception in thread "main" java.lang.ClassCastException:
 		at monitor.Main.main(Main.java:28)
 ```
 
-### Fixes {#fixes-3}
+### Fixes
 
 The class loader was probably cast to access methods specific to `URLClassLoader`.
 If so, your chances to do a migration with only small changes are slim.
@@ -264,9 +253,7 @@ You should instead consider creating a new class loader for that.
 This has the added advantage that you'll be able to get rid of the new classes as they are not loaded into the application class loader.
 If you're compiling against Java 9, you should read up on [layers](https://docs.oracle.com/javase/9/docs/api/java/lang/ModuleLayer.html) - they give you a clean abstraction for loading an entirely new module graph.
 
-<contentimage slug="java-9-migration"></contentimage>
-
-## Rummaging Around In Runtime Images {#rummagingaroundinruntimeimages}
+## Rummaging Around In Runtime Images
 
 With the JDK being modularized the layout of the run time image fundamentally changed.
 Files like `rt.jar`, `tools.jar`, and `dt.jar` are gone; the JDK classes are now bundled into `jmod` files (one per module), a purposely unspecified file format that allows future optimizations without regards to backwards compatibility.
@@ -288,7 +275,7 @@ FileSystem fs = FileSystems.getFileSystem(URI.create("jrt:/"));
 fs.getPath("java.base", "java/lang/String.class"));
 ```
 
-## Boot Class Path {#bootclasspath}
+## Boot Class Path
 
 I'm in murky waters here because I never used the `-Xbootclasspath` option, which is mostly removed.
 Apparently its features are replaced by various new command line options (paraphrasing from [JEP 220](http://openjdk.java.net/jeps/220) here):
@@ -297,7 +284,7 @@ Apparently its features are replaced by various new command line options (paraph
 -   the `javac` option `--release` can be used to specify an alternate platform version
 -   the `java` option `--patch-module` option, mentioned above, can be used to inject content into modules in the initial module graph
 
-## New Version Strings {#newversionstrings}
+## New Version Strings
 
 After more than 20 years, Java has finally and officially accepted that it's no longer on version `1.x`.
 Hooray!
@@ -310,7 +297,7 @@ There are no clear-cut symptoms - pretty much everything could go wrong if some 
 It's not too hard to find, though.
 A full text search for the following strings should lead to all version-string-specific code: `java.version`, `java.runtime.version`, `java.vm.version`, `java.specification.version`, `java.vm.specification.version`.
 
-### Fixes {#fixes-4}
+### Fixes
 
 If you are willing to raise your project's requirements to Java 9, you can eschew the whole system property prodding and parsing and instead use [the new `Runtime.Version` type](https://docs.oracle.com/javase/9/docs/api/java/lang/Runtime.Version.html), which makes all of this much easier.
 If you want to stay compatible to pre Java 9, you could still use the new API by creating a [multi-release JAR](https://www.sitepoint.com/inside-java-9-part-i/#multireleasejars).

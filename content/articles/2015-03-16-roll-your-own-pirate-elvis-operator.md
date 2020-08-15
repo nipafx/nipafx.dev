@@ -6,6 +6,7 @@ slug: java-pirate-elvis-operator
 description: "Java has no Elvis operator (or null coalescing operator / null-safe member selection) but with lambda expressions / method references you can roll your own."
 searchKeywords: "elvis operator"
 featuredImage: elvis-operator
+repo: demo-elvis-operator
 ---
 
 So, Java doesn't have an Elvis operator (or, as it is more formally known, null coalescing operator or null-safe member selection) ... While I personally don't much care about it, some people seem to really like it.
@@ -14,26 +15,16 @@ And when a colleague needed one a couple of days back I sat down and explored ou
 And what do you know!
 You can get pretty close with method references.
 
-### Overview
-
 We will first have a look at what the Elvis operator is and why pirates are involved.
 I will then show how to implement it with a utility method.
 
-The implementation, a demo and most of the examples from this post can be found in [a dedicated GitHub project](https://github.com/CodeFX-org/demo-elvis-operator).
-The code is Public Domain so you can use it without limitations.
-
-[toc exclude=Overview]
-
 ## Elvis?
-Isn't he Dead?
+
+Isn't he dead?
 
 I thought so, too, but [apparently not](http://www.elvis-is-alive.com/).
 And much like rumors about The King being alive, people wishing for the Elvis operator also never quite die out.
 So let's see what they want.
-
-<contentimage slug="elvis-operator"></contentimage>
-
-[Published](https://www.flickr.com/photos/that_chrysler_guy/8361254955) by [That Hartford Guy](https://www.flickr.com/photos/that_chrysler_guy/) under [CC-BY-SA](https://creativecommons.org/licenses/by-sa/2.0/).
 
 (If you want to read one discussion about it for yourself, see [this thread on the OpenJDK mailing list](http://mail.openjdk.java.net/pipermail/coin-dev/2009-March/000047.html), where Stephen Colebourne proposed these operators for Java 7.)
 
@@ -110,7 +101,7 @@ Looks better, right?
 Yes.
 And it let's you forget about all those pesky nulls, mh?
 Yes.
-So that's why I think it's a bad idea.
+So that's why [I think it's a bad idea](why-elvis-should-not-visit-java).
 
 Fields being frequently null reeks of bad design.
 And with Java 8, you can instead [avoid null by using Optional](intention-revealing-code-java-8-optional).

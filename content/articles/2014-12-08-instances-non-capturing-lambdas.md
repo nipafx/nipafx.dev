@@ -12,14 +12,9 @@ Roughly a month ago, I summarized [Brian Goetz' peek under the hood of lambda ex
 Currently I'm researching for a post about default methods and to my mild surprise came back to how Java handles lambda expressions.
 The intersection of these two features can have a subtle but surprising effect, which I want to discuss.
 
-### Overview
-
-To make this more interesting I'll start the post with an example, which will culminate in my personal *WTF?!* moment.
+To make this more interesting I'll start with an example, which will culminate in my personal *WTF?!* moment.
 The full example can be found in a dedicated [GitHub project](https://github.com/CodeFX-org/demo-lambda-instances).
-
 We will then see the explanation for this somewhat unexpected behavior and finally draw some conclusions to prevent bugs.
-
-[toc exclude=Overview]
 
 ## Example
 
@@ -93,9 +88,7 @@ WTF?!
 So what's going on here?
 Well, with some background knowledge about the evaluation of lambda expressions it's actually not *that* surprising.
 If you're not too familiar with how Java does this, now is a good time to catch up.
-One way to do so is to watch Brian Goetz' talk ["Lambdas in Java: A peek under the hood"](https://www.youtube.com/watch?v=MLksirK9nnE) or read [my summary](http://blog.codefx.org/jdk/dev/impulse-lambdas-java-peek-hood/) of it.
-
-<contentimage slug="instances-non-capturing-lambdas"></contentimage>
+One way to do so is to watch Brian Goetz' talk ["Lambdas in Java: A peek under the hood"](https://www.youtube.com/watch?v=MLksirK9nnE) or read [my summary](lambdas-java-peek-hood) of it.
 
 ### Instances of Lambda Expressions
 
@@ -143,8 +136,6 @@ Hence the same is true for each call to `createWithDefaultResult()`.
 
 Remember, though, that this might only be true for the JRE version currently installed on my machine (Oracle 1.8.0\_25-b18 for Win 64).
 Yours can differ and so can the next gal's and so on.
-
-[java_8]
 
 ## Lessons Learned
 

@@ -12,17 +12,13 @@ featuredImage: implied-readability
 The [module system tutorial](jigsaw-hands-on-guide) brushes past a feature I would like to discuss in more detail: *implied readability*, which is expressed with `requires transitive`.
 With it, a module can reexport another module's API to its own dependents.
 
-*The post was updated in February 2017.*
+<admonition type="note">The post was updated in February 2017.</admonition>
 
-### Overview
-
-This post is based on a section of [an article I've recently written for InfoQ](http://www.infoq.com/articles/Latest-Project-Jigsaw-Usage-Tutorial "Programming with modularity and Project Jigsaw.
-A Tutorial Using the Latest Early Access Build - InfoQ").
+This post is based on a section of [an article I've recently written for InfoQ](http://www.infoq.com/articles/Latest-Project-Jigsaw-Usage-Tutorial).
 If you are interested in a Jigsaw walkthrough, you should read the entire piece.
 
 All non-attributed quotes are from the excellent [State Of The Module System](http://openjdk.java.net/projects/jigsaw/spec/sotms/).
 
-[toc exclude=Overview]
 
 ## Definition Of (Implied) Readability
 
@@ -35,9 +31,9 @@ In that case, the dependent module depends upon another but this relationship is
 
 Take, for example, [Guava](https://github.com/google/guava), where the code depending on a module does not care at all whether it internally uses [immutable lists](https://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html) or not.
 
-<contentimage slug="implied-readability-requires"></contentimage>
+<contentimage slug="implied-readability-requires" options="bg"></contentimage>
 
-This is the most common case and it is covered by the [concept of *readability*](https://blog.codefx.org/java/java-module-system-tutorial/#dependencies-readability):
+This is the most common case and it is covered by the [concept of *readability*](java-module-system-tutorial#dependencies-and-readability):
 
 > When one module depends directly upon another \[...\] then code in the first module will be able to refer to types in the second module.
 We therefore say that the first module *reads* the second or, equivalently, that the second module is *readable* by the first.
@@ -52,7 +48,7 @@ In that scenario one module depends on another, and exposes types from the depen
 
 In the example of Guava a module's exposed methods might expect or return immutable lists.
 
-<contentimage slug="implied-readability-requires-public"></contentimage>
+<contentimage slug="implied-readability-requires-public" options="bg"></contentimage>
 
 So code that wants to call the dependent module might have to use types from the depended-upon module.
 But it can't do that if it does not also read the second module.
@@ -88,7 +84,7 @@ module java.sql {
 
 ### From The Jigsaw Advent Calendar
 
-The [calendar](http://blog.codefx.org/java/dev/jigsaw-hands-on-guide/#Splitting-Into-Modules) contains a module *advent.calendar*, which holds a list of 24 surprises, presenting one on each day.
+The [calendar](jigsaw-hands-on-guide#splitting-into-modules) contains a module *advent.calendar*, which holds a list of 24 surprises, presenting one on each day.
 Surprises are part of the *advent.surprise* module.
 So far this looks like a open and shut case for a regular `requires` clause.
 
@@ -101,8 +97,6 @@ module org.codefx.demo.advent.calendar {
 	// exports ...
 }
 ```
-
-<contentimage slug="implied-readability"></contentimage>
 
 ## Beyond Module Boundaries
 
@@ -143,7 +137,7 @@ This is already being employed by the Jigsaw JDK, which models [compact profiles
 
 <pullquote>Aggregator modules bundle the functionality of related modules into a single unit.</pullquote>
 
-Another is, [what Alex Buckley calls *downward decomposability*](http://blog.codefx.org/java/dev/javaone-2015-under-the-hood-of-project-jigsaw/#The-Role-Of-Readability): A module can be decomposed into more specialized modules without compatibility implications if it turns into an aggregator for the new modules.
+Another is, [what Alex Buckley calls *downward decomposability*](javaone-2015-under-the-hood-of-project-jigsaw#the-role-of-readability): A module can be decomposed into more specialized modules without compatibility implications if it turns into an aggregator for the new modules.
 
 But creating aggregator modules brings clients into the situation where they internally use APIs of modules on which they don't explicitly depend.
 This can be seen as conflicting with what I said above, i.e.
@@ -156,8 +150,6 @@ Modifying the bundle's content is a pivotal change.
 
 This is somewhat similar to the distinction between composition and aggregation but (a) it's different and (b), lamentably, aggregator modules would be more on the side of composition.
 I'm happy to hear ideas on how to precisely express the difference.
-
-[jms_in\_action]
 
 ## Reflection
 

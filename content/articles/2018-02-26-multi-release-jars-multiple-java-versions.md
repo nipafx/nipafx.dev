@@ -15,8 +15,6 @@ From Java 9 on, multi-releas JARs give you an opportunity to reconcile these opp
 Multi-release JARs allow you to create a single JAR that contains bytecode for several Java versions.
 JVMs will then load the code that was included for their version.
 
-[toc exclude="overview"]
-
 ## Creating Multi-release JARs
 
 *Multi-release JARs* (MR-JARs) are specially prepared JARs that contain bytecode for several major Java versions, where...
@@ -41,7 +39,7 @@ To more easily observe what exactly is going on, you can add a message like `"I'
 These two variants of `DetectVersion` need to have the exact same fully-qualified name, which makes it challenging to work with them in your IDE.
 For ease of this introduction, let's say you organized them into two parallel source folders, `src/main/java` and `src/main/java-9`:
 
-<contentimage slug="mr-jars-version-src"></contentimage>
+<contentimage slug="mr-jars-version-src" options="bg"></contentimage>
 
 And here's how to compile and package them into an MR-JAR:
 
@@ -85,7 +83,7 @@ Build tools and IDEs don't really have good support for multi-release JARs, yet,
 So how does a multi-release JAR work?
 It's actually pretty straightforward: It stores version-unspecific class files in its root (as usual) and version-specific files in `META-INF/versions/${version}`.
 
-<contentimage slug="mr-jars-version-jar"></contentimage>
+<contentimage slug="mr-jars-version-jar" options="bg"></contentimage>
 
 JVMs of version 8 and earlier don't know anything about `META-INF/versions` and simply load the classes from the package structure in the JAR's root.
 Consequentially, it is not possible to distinguish between different versions before 9.
@@ -95,8 +93,6 @@ Consequentially, it is not possible to distinguish between different versions be
 Newer JVMs, however, first look into `META-INF/versions` and only if they don't find a class there, into the JAR's root.
 They do that "searching backwards" from their own version, meaning a Java 10 JVM looks for code in `META-INF/versions/10`, then `META-INF/versions/9`, then the root directory.
 These JVMs thus shadow version-unspecific class files with the newest version-specific ones they support.
-
-<contentimage slug="multi-release-jars"></contentimage>
 
 ## Usage Recommendations
 
@@ -166,8 +162,8 @@ APIs, on the other hand, are the sweet spot.
 
 <pullquote>APIs are the sweet spot for multi-release JARs</pullquote>
 
--   [detecting the JVM version](https://blog.codefx.org/java/java-9-tutorial/#Version-API) with `Runtime.Version` instead of parsing system properties
--   analyzing the call stack with [the stack-walking API](https://blog.codefx.org/java/java-9-tutorial/#Stack-Walking) instead of creating a `Throwable`
+-   [detecting the JVM version](java-9-tutorial#version-api) with `Runtime.Version` instead of parsing system properties
+-   analyzing the call stack with [the stack-walking API](java-9-tutorial#stack-walking) instead of creating a `Throwable`
 -   replacing reflection with [variable handles](http://www.baeldung.com/java-variable-handles)
 
 If you want to make use of a newer API on a newer Java release, all you need to do is encapsulate your direct calls to it in a dedicated wrapper class and then implement two variants of it - one using the old API, another using the new.

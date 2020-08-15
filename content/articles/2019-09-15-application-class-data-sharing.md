@@ -6,6 +6,7 @@ slug: java-application-class-data-sharing
 description: "On Java 10+, you can use application class-data sharing to reduce launch times, response time outliers, and memory footprint. By archiving class data with -Xshare:dump and loading it with -Xshare:on, the JVM's class loading workload can be reduced considerably."
 searchKeywords: "application class-data sharing"
 featuredImage: app-cds
+repo: java-x-demo
 ---
 
 Java's recent releases brought us a steady flow of new features and it's easy to miss one.
@@ -13,16 +14,11 @@ Here's a gem that's worth exploring: application class-data sharing (AppCDS).
 It allows you to reduce launch times, response time outliers, and, if you run several JVMs on the same machine, memory footprint.
 Here's how!
 
-### Overview
-
-The [*Java X* demo project](https://github.com/CodeFX-org/demo-java-x) contains a script `app-cds.sh` that shows off application class-data sharing.
 AppCDS is an extension of the [commercial class-data sharing (CDS) feature](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/class-data-sharing.html) that Oracle's JVM contains since Java 8.
-If you're interested in a little more background, check out the JEPs [310](http://openjdk.java.net/jeps/310), [341](http://openjdk.java.net/jeps/341), and [350](http://openjdk.java.net/jeps/350), which generalized CDS to AppCDS.
-
 Note that the feature evolved over several Java releases (10, 12, and 13).
 This post targets the Java 13 variant, but I'll make sure to point out parts that aren't available on everybody's favorite LTS (that would be Java 11).
+If you're interested in a little more background, check out the JEPs [310](http://openjdk.java.net/jeps/310), [341](http://openjdk.java.net/jeps/341), and [350](http://openjdk.java.net/jeps/350), which generalized CDS to AppCDS.
 
-[toc exclude=overview]
 
 ## Application Class-Data Sharing In A Nutshell
 
@@ -142,8 +138,6 @@ Note, though, that this is the maximum performance gain you are going to get for
 The more classes the application comes with, the lower becomes the share of JDK classes and hence the relative effect of loading them faster.
 To scale this effect to large applications, you need to include their classes in the archive, so let's do that next.
 
-<contentimage slug="app-cds"></contentimage>
-
 ## Working With An Application Class-Data Archive
 
 To actually share data for application classes as opposed to just JDK classes, we obviously need an archive that includes application code.
@@ -202,7 +196,7 @@ We will see in a minute why the path's details are of the utmost importance and 
 Depending on the size of the class list, this step might take a while.
 When it's done, your archive, in this case `app-cds.jsa`, is ready to be used.
 
-### Creating An Archive Dynamically When The JVM Exits {#creating-an-archive-when-application-exits}
+### Creating An Archive Dynamically When The JVM Exits
 
 On Java 13 and later, the previous two steps can be combined and handed over to the JVM during a normal program run - this is called *dynamic* application class-data sharing.
 By adding the command line option `-XX:ArchiveClassesAtExit`, the JVM will record all loaded application classes and place them into the specified archive:
@@ -296,8 +290,8 @@ The JVM loads some of the JDK classes with the bootstrap class loader and the re
 When IntelliJ executes your project, it tells the JVM to load some code with the bootstrap class loader by appending to that class path (second part of the message).
 Now, that means that the portion of the archive that contains classes loaded by the system class loader is potentially invalidated and so the JVM partially deactivates sharing (first part of the message).
 
-We've been talking an awful lot about the class path - what's with [the module path](https://blog.codefx.org/java/java-module-system-tutorial/#Module-Path)?
-Can you put code from [JPMS modules](https://blog.codefx.org/tag/jpms) into the archive?
+We've been talking an awful lot about the class path - what's with [the module path](java-module-system-tutorial#module-path)?
+Can you put code from [JPMS modules](tag:j_ms) into the archive?
 Unfortunately, not - from JEP 310:
 
 > In this release, CDS cannot archive classes from user-defined modules (such as those specified in `--module-path`).

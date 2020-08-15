@@ -9,7 +9,7 @@ searchKeywords: "valhalla"
 featuredImage: adventures-on-the-road-to-project-valhalla
 ---
 
-With all this talk about [Java 9](http://blog.takipi.com/5-features-in-java-9-that-will-change-how-you-develop-software-and-2-that-wont/) and [Project Jigsaw](http://blog.codefx.org/tag/project-jigsaw/) we should not loose sight of another big change coming to Java.
+With all this talk about [Java 9](http://blog.takipi.com/5-features-in-java-9-that-will-change-how-you-develop-software-and-2-that-wont/) and [Project Jigsaw](tag:project-jigsaw) we should not loose sight of another big change coming to Java.
 Hopefully in version 10 or 11 [Project Valhalla](http://openjdk.java.net/projects/valhalla/) will come to fruition and introduce value types and specialization.
 
 So what is this about, how far along is the project and what challenges does it face?
@@ -17,18 +17,13 @@ A couple of days ago Brian Goetz, Java Language Architect at Oracle and project 
 
 Let's have a look.
 
-### Overview
-
-This post is a going to present three out of four parts of Goetz's talk ["Adventures On The Road to Valhalla"](https://www.youtube.com/watch?v=uNgAFSUXuwc).
-
+This post presents three out of four parts of Goetz's talk ["Adventures On The Road to Valhalla"](https://www.youtube.com/watch?v=uNgAFSUXuwc).
 He begins with a prologue, which I padded with a couple of additional explanations for those who do not yet know about Project Valhalla.
 Goetz continues to present the two prototypes, of which the first was made publicly available last year and the second only two weeks ago.
 I will not cover his last part about future experiments as the post is already long enough.
 If you find this topic interesting, you should definitely watch the whole talk!
 
 All quotes throughout the text are either taken from the slides or verbatim.
-
-[toc exclude=Overview heading_levels="2,3,4"]
 
 ## The Talk
 
@@ -171,7 +166,7 @@ But if we assume `ArrayList<?>` were a supertype to `ArrayList<int>`, we'd end u
 The reason is that `ArrayList<T>` extends `AbstractList<T>` so we'd also want `ArrayList<int>` to extend `AbstractList<int>`.
 Now `ArrayList<int>` would extend both `ArrayList<?>` and `AbstractList<int>` (which have no inheritance relationship).
 
-<contentimage slug="adventures-on-the-road-to-project-valhalla-multiple-inheritance"></contentimage>
+<contentimage slug="adventures-on-the-road-to-project-valhalla-multiple-inheritance" options="bg"></contentimage>
 
 (Note the difference to the current generics with erasure.
 In the VM, `ArrayList<Integer>` and `ArrayList<?>` are the same class `ArrayList`, which is free to extend `AbstractList`.)
@@ -200,7 +195,7 @@ The multiple inheritance of specialized classes will be solved by representing t
 To represent `ArrayList<any>` the compiler will create an interface `ArrayList$any`.
 It will be implemented by all classes generated from `ArrayList` (e.g. `ArrayList<int>` and the erased `ArrayList`) and will extend all the synthetic interfaces that correspond to the superclasses, e.g. `AbstractList$any` for `AbstractList<any>`.
 
-<contentimage slug="adventures-on-the-road-to-project-valhalla-any-interface"></contentimage>
+<contentimage slug="adventures-on-the-road-to-project-valhalla-any-interface" options="bg"></contentimage>
 
 The interface will contain declarations for all of the class's methods and accessors for its fields.
 Because there is still no common supertype to objects and primitives, their generic parameter and return types would have to be boxed.

@@ -7,18 +7,13 @@ description: "With JUnit 5's dynamic tests, we can create tests at run time, for
 intro: "With dynamic tests, JUnit 5 allows us to create tests at run time. With this we can parameterize tests. generate hierarchical test plans, and even define tests with lambdas!"
 searchKeywords: "dynamic tests"
 featuredImage: junit-5-dynamic-tests
+repo: demo-junit-5
 ---
 
 With JUnit 5's dynamic tests it is possible to define fully fledged test cases at run time.
 This way, tests can be created from parameters, external data sources, or simple lambda expressions.
 They are particularly suitable for hierarchical data.
 This fixes a long-standing weakness of JUnit 4, where tests had to be defined at compile time.
-
-### Overview
-
-[codefx_junit5\_series]
-
-[toc exclude=Overview]
 
 ## Static Tests In JUnit 4
 
@@ -77,11 +72,9 @@ Alas, individual lambdas can not be statically identified, either, so the same l
 
 But I wouldn't be writing all of this if JUnit 5 did not propose a solution: Dynamic tests to the rescue!
 
-<contentimage slug="junit-5-dynamic-tests"></contentimage>
-
 ## Dynamic Tests
 
-Jupiter, [JUnit 5's primary test API](https://blog.codefx.org/design/architecture/junit-5-architecture/#Splitting-JUnit-5), offers a few classes and an annotation that together address our problem.
+Jupiter, [JUnit 5's primary test API](junit-5-architecture-jupiter#splitting-junit-5), offers a few classes and an annotation that together address our problem.
 
 ### DynamicTest, DynamicContainer, and @TestFactory
 
@@ -137,7 +130,7 @@ It is easy to guess how this works:
 We are hence able to dynamically create tests at run time.
 And the cool thing is, tools won't know the difference and report on each dynamic test individually.
 
-<contentimage slug="junit-5-dynamic-point-tests-output"></contentimage>
+<contentimage slug="junit-5-dynamic-point-tests-output" options="narrow"></contentimage>
 
 ### Lifecycle
 
@@ -238,15 +231,13 @@ private static Stream<DynamicNode> generateTestsFor(
 
 With code like that I got the following output:
 
-<contentimage slug="junit-5-hierarchical-test-output"></contentimage>
+<contentimage slug="junit-5-hierarchical-test-output" options="narrow"></contentimage>
 
 The cool thing is, if a node's correct behavior depends on its children's correct behavior, you can follow the path of failed tests to the root cause.
 In this case, the wrong final result ("Addition should evaluate to 46") was apparently caused by the addition of 42 and 4 ("Addition of operands should evaluate to 46"), whereas everything up to then went fine.
 If the addition of 2 and 5 would have created the wrong result, a lot more tests would be yellow.
 
 Nice, eh?
-
-[codefx_junit\_5\_product]
 
 ## Lambda Tests
 
@@ -314,7 +305,7 @@ We're done tinkering.
 To get further, we have to start hacking.
 Ever heard of [double brace initialization](http://c2.com/cgi/wiki?DoubleBraceInitialization)?
 This is a somewhat strange feature that uses an initializer block to execute code during construction.
-(I used to think that this creates an anonymous subclass, but that's not the case in this scenario as [Duncan](http://blog.codefx.org/libraries/junit-5-dynamic-tests/#comment-2817548442) and, in more detail, [Reinhard](https://reinhard.codes/2016/07/30/double-brace-initialisation-and-java-initialisation-blocks/) pointed out.) With it, we can go further:
+(I used to think that this creates an anonymous subclass, but that's not the case in this scenario as [Duncan](junit-5-dynamic-tests)<!-- comment-2817548442 --> and, in more detail, [Reinhard](https://reinhard.codes/2016/07/30/double-brace-initialisation-and-java-initialisation-blocks/) pointed out.) With it, we can go further:
 
 ```java
 class PointTest extends LambdaTest {{

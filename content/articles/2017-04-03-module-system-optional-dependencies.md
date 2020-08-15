@@ -1,34 +1,31 @@
 ---
-title: "Optional Dependencies with 'requires static'"
+title: "Optional Dependencies with `requires static`"
 tags: [java-9, j_ms]
 date: 2017-04-03
 slug: java-modules-optional-dependencies
-description: "The Java Platform Module System (JPMS) allows optional dependencies with 'requires static'. They are accessible at compile but can be absent at run time."
-intro: "The module system allows optional dependencies with the 'requires static' clause. Module required this way are accessible at compile time but can be absent at run time."
+description: "The Java Platform Module System allows optional dependencies with `requires static`. They are accessible at compile but can be absent at run time."
+intro: "The module system allows optional dependencies with the `requires static` clause. Module required this way are accessible at compile time but can be absent at run time."
 searchKeywords: "optional dependencies"
 featuredImage: jpms-optional-dependency
+# TODO repo
 ---
 
-The [Java Platform Module System](https://blog.codefx.org/tag/jpms/) (JPMS) has a strong opinion on dependencies: By default, they need to be required (to be accessible) and then they need to be present both at compile and at run time.
+The [Java Platform Module System](tag:j_ms) has a strong opinion on dependencies: By default, they need to be required (to be accessible) and then they need to be present both at compile and at run time.
 This does not work with optional dependencies, though, where code is written against artifacts that are not necessarily present at run time.
 Fortunately, the JPMS has a `requires static` clause that can be used in these exact situations.
 
 I will show you a couple of examples in which the default behavior's strictness leads to problems and then introduce the module system's solution to optional dependencies: `requires static`.
 Coding against them is not trivial, though, so we will have a close look at that as well.
 
-### Overview
-
 If you don't know much about the module system yet, [you should read this tutorial](java-module-system-tutorial), so you've for the basics covered.
 Some examples build on [the `optional-dependencies` branch](https://github.com/CodeFX-org/demo-jpms-monitor/tree/feature-optional-dependencies) of [a small demo application](https://github.com/CodeFX-org/demo-jpms-monitor), called the *ServiceMonitor*.
 
-[toc exclude=Overview]
-
-## The Conundrum Of Unrequired Dependencies {#theconundrumofunrequireddependencies}
+## The Conundrum Of Unrequired Dependencies
 
 To nail down where exactly the strictness of regular `requires` clauses leads to problems, I want to start with two examples.
 While similar in some aspects there are differences that become important later when we discuss how we code against potentially missing dependencies.
 
-### The Utility Library {#theutilitylibrary}
+### The Utility Library
 
 Let's start with an imaginary library we're maintaining, *uber.lib*, that integrates with a handful of other libraries.
 Its API offers functionality that builds on them and thus exposes their types.
@@ -50,7 +47,7 @@ If *uber.lib* integrates with a handful of libraries, it would make clients depe
 
 That's not a nice move from us.
 
-### The Fancy Statistics Library {#thefancystatisticslibrary}
+### The Fancy Statistics Library
 
 The second example comes from [the demo application](https://github.com/CodeFX-org/demo-jpms-monitor), which contains a module *monitor.statistics*.
 Let's assume there was some advanced statistics library containing a module *stats.fancy* that *monitor.statistics* wants to use but which could not be present on the module path for each deployment of the application.
@@ -59,12 +56,12 @@ Let's assume there was some advanced statistics library containing a module *sta
 We would like to write code in *monitor.statistics* that uses types from the fancy module but for that to work we need to depend on it with a `requires` clause.
 If we do that, though, the module system would not let the application launch if *stats.fancy* is not present.
 
-<contentimage slug="jpms-optional-dependency-conundrum"></contentimage>
+<contentimage slug="jpms-optional-dependency-conundrum" options="bg"></contentimage>
 
 Deadlock.
 Again.
 
-## Optional Dependencies With 'requires static' {#optionaldependencieswithrequiresstatic}
+## Optional Dependencies With `requires static`
 
 When a module needs to be compiled against types from another module but does not want to depend on it at run time, it can use a `requires static` clause.
 If `foo requires static bar`, the module system behaves different at compile and run time:
@@ -86,7 +83,7 @@ module monitor.statistics {
 
 If *stats.fancy* is missing during *compilation*, we get an error when the module declaration is compiled:
 
-``` {.lang:java .highlight:0 .decode:true}
+```java
 monitor.statistics/src/main/java/module-info.java:3:
 	error: module not found: stats.fancy
 		requires static stats.fancy;
@@ -115,9 +112,7 @@ Now that we know how to declare optional dependencies, two questions remain to b
 
 We will answer both questions next.
 
-[jms_in\_action]
-
-## Resolution Of Optional Dependencies {#resolutionofoptionaldependencies}
+## Resolution Of Optional Dependencies
 
 [Module resolution](http://openjdk.java.net/projects/jigsaw/spec/sotms/#resolution) is the process that, given an initial module and a universe of observable modules, builds a module graph by resolving `requires` clauses.
 When a module is being resolved, all modules it requires must be found in the universe of observable modules.
@@ -138,13 +133,12 @@ Why mostly?
 Well, one thing the module system does is if an optional dependency makes it into a graph, a readability edge is added.
 This ensures that if the optional module is present, its types can be accessed straight away.
 
-<contentimage slug="jpms-optional-dependency"></contentimage>
 
-## Coding Against Optional Dependencies {#codingagainstoptionaldependencies}
+## Coding Against Optional Dependencies
 
 Optional dependencies require a little more thought when writing code against them because this is what happens when *monitor.statistics* uses types in *stats.fancy* but the module isn't present at run time:
 
-``` {.lang:java .highlight:0 .decode:true}
+```java
 Exception in thread "main" java.lang.NoClassDefFoundError:
 	stats/fancy/FancyStats
 		at monitor.statistics/monitor.statistics.Statistician
@@ -161,13 +155,13 @@ We usually don't want our code to do that.
 Generally speaking, when the code that is currently being executed references a type, the Java Virtual Machine checks whether it is already loaded.
 If not, it tells the class loader to do that and if that fails, the result is a `NoClassDefFoundError`, which usually crashes the application or at least fails out of the chunk of logic that was being executed.
 
-This is something [JAR hell was famous for](blog.codefx.org/java/jar-hell/#Unexpressed-Dependencies) and that the module system [wants to overcome](blog.codefx.org/java/dev/motivation-goals-project-jigsaw/#Reliable-Configuration) by checking declared dependencies when launching an application.
+This is something [JAR hell was famous for](jar-hell#unexpressed-dependencies) and that the module system [wants to overcome](motivation-goals-project-jigsaw#reliable-configuration) by checking declared dependencies when launching an application.
 But with `requires static` we opt out of that check, which means we can end up with a `NoClassDefFoundError` after all.
 What can we do against that?
 
 <pullquote>With optional dependencies we opt out of the checks that make the module system safe.</pullquote>
 
-### Established Dependency {#establisheddependency}
+### Established Dependency
 
 Before looking into solutions, though, we need to see whether we really have a problem.
 In the case of *uber.lib* we expect to only use types from an optional dependency if the code calling into the library already uses them, meaning class loading already succeeded.
@@ -175,19 +169,19 @@ In the case of *uber.lib* we expect to only use types from an optional dependenc
 In other words, when *uber.lib* gets called all required dependencies must be present or the call would not have been possible.
 So we don't have a problem after all and don't need to do anything.
 
-<contentimage slug="jpms-optional-dependency-coding-established"></contentimage>
+<contentimage slug="jpms-optional-dependency-coding-established" options="bg"></contentimage>
 
-### Internal Dependency {#internaldependency}
+### Internal Dependency
 
 The general case is different, though.
 It might very well be the module with the optional dependency that first tries to load classes from it, so the risk of a `NoClassDefFoundError` is very real.
 
-<contentimage slug="jpms-optional-dependency-coding-internal"></contentimage>
+<contentimage slug="jpms-optional-dependency-coding-internal" options="bg"></contentimage>
 
 One solution for this is to make sure that all possible calls into the module with the optional dependency have to go through a checkpoint before accessing the dependency.
 That checkpoint has to evaluate whether the dependency is present and send all code that arrives at it down a different execution path if it isn't.
 
-<contentimage slug="jpms-optional-dependency-coding-checked"></contentimage>
+<contentimage slug="jpms-optional-dependency-coding-checked" options="bg"></contentimage>
 
 The module system offers a way to check whether a module is present.
 I explained in [my newsletter](blog.codefx.org/newsletter/) how to get there and why I use [the new stack-walking API](https://www.sitepoint.com/deep-dive-into-java-9s-stack-walking-api/), so here you'll just have to trust me when I say that this is the way to go:

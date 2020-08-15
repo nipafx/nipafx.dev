@@ -1,24 +1,20 @@
 ---
 title: "Concepts of Serialization"
-tags: [serialization]
+tags: [java-basics, serialization]
 date: 2014-10-26
 slug: java-concepts-serialization
 description: "A close look at serialization and a presentation of some key concepts of Java's serialization system."
 searchKeywords: "Serialization"
-featuredImage: bit-tunnel
+featuredImage: serialization-concepts
 ---
 
-With all this talk about [why Optional isn't serializable](http://blog.codefx.org/jdk/dev/why-isnt-optional-serializable/) and what to do about it (coming up soon), let's have a closer look at serialization.
-
-### Overview
+With all this talk about [why Optional isn't serializable](why-isnt-java-optional-serializable) and what to do about it (coming up soon), let's have a closer look at serialization.
 
 This post presents some key concepts of serialization.
 It tries to do so succinctly without going into great detail, which includes keeping advice to a minimum.
 It has no narrative and is more akin to a wiki article.
 The main source is Joshua Bloch's excellent book [*Effective Java*](http://www.amazon.com/Effective-Java-Edition-Joshua-Bloch/dp/0321356683), which has several items covering serialization (1st edition: 54-57; 2nd edition: [74-78](http://books.google.de/books?id=ka2VUBqHiWkC&pg=PA297&source=gbs_toc_r&cad=3#v=onepage&q&f=false)).
 Way more information can be found in the [official serialization specification](http://docs.oracle.com/javase/8/docs/platform/serialization/spec/serialTOC.html)
-
-[toc exclude=Overview]
 
 ## Definition
 
@@ -71,10 +67,6 @@ Implementing such a check for deserialization is an extra effort which easily le
 If forgotten or done carelessly, the class is open for bugs or security holes.
 
 ## Serialized Form
-
-<contentimage slug="bit-tunnel"></contentimage>
-
-[Published](https://www.flickr.com/photos/infocux/8450190120) by [infocux Technologies](https://www.flickr.com/photos/infocux/) under [CC-BY-NC 2.0](https://creativecommons.org/licenses/by-nc/2.0/).
 
 The structure of a serializable class's byte stream encoding is called its [*serialized form*](http://docs.oracle.com/javase/8/docs/platform/serialization/spec/protocol.html).
 It is mainly defined by the names and types of the class's fields.
@@ -190,7 +182,7 @@ This proxy is written to and read from the byte stream instead of the original i
 This is achieved by implementing the methods `writeReplace` and `readResolve`.
 
 In most cases this is by far the best approach to serialization.
-It deserves [its own post](java-serialization-proxy-pattern) and it will get it soon ([stay](http://blog.codefx.org/feed/) [tuned](http://blog.codefx.org/newsletter/)).
+It deserves [its own post](java-serialization-proxy-pattern) and it will get it soon ([stay](feed.xml) [tuned](http://blog.codefx.org/newsletter/)).
 
 ## Misc
 

@@ -1,24 +1,19 @@
 ---
 title: "Code Reviews At Disy - Observations"
+# subtitle
 tags: [code-review, techniques]
 date: 2016-10-26
 slug: code-reviews-disy-part-3
 canonicalUrl: http://blog.disy.net/code-reviews-iii/
 description: "After reviewing almost all code we wrote for 18 months, completing some 1'500 reviews, we want to share some recommendations."
 intro: "After reviewing almost all code we wrote for 18 months, completing some 1'500 reviews, we want to share some recommendations and look at things we'd like to change."
-searchKeywords: ""
 featuredImage: disy-code-reviews-iii
 ---
-
-I wrote [this post](http://blog.disy.net/code-reviews-iii/) when [still working at Disy](goodbye-disy-hello-sitepoint).
-If you are interested in Java, GIS, or databases, you should [check out their blog](http://blog.disy.net/)!
 
 Now that you know [how we introduced code reviews](code-reviews-disy-part-1) and [how we do them](code-reviews-disy-part-2) we want to make some recommendations.
 These are based on our experience of performing about one and a half thousand reviews in 18 months.
 
 We’ll finish this series off by going meta and review our reviews.
-
-[toc]
 
 ## Recommendations
 
@@ -49,7 +44,7 @@ It is increasingly hard to motivate yourself to come back to an old review, work
 
 A good way to prevent complex, outdrawn reviews is to separate refactorings and new features.
 
-Maybe you have heard of [Martin Fowler’s *Two Hats*](http://blog.codefx.org/techniques/workflows-refactoring/#The-Two-Hats): You wear the one when you refactor code and the other when you add a new feature.
+Maybe you have heard of [Martin Fowler’s *Two Hats*](workflows-refactoring#the-two-hats): You wear the one when you refactor code and the other when you add a new feature.
 You should usually not be doing both at the same time.
 
 This is absolutely true for code reviews as well!
@@ -64,14 +59,10 @@ In the beginning we spent some time creating an extensive check list of all the 
 We consulted different sources, collected all recommendations, and created our own curated list.
 It has about a hundred items covering many different aspects:
 
--   General (Does the code solve the problem?
-No more ToDos?)
--   Technical (Proper exception handling?
-Proper null handling?)
--   Quality (Do names reveal intentions?
-No magic numbers?)
--   Tests (Is the code testable?
-Are tests readable, too?)
+-   General (Does the code solve the problem? No more ToDos?)
+-   Technical (Proper exception handling? Proper null handling?)
+-   Quality (Do names reveal intentions? No magic numbers?)
+-   Tests (Is the code testable? Are tests readable, too?)
 
 This seemed super-important but let’s [face the truth](http://www.commitstrip.com/en/2016/07/06/facing-the-truth/): Nobody ever looks at it.
 We go through it once or maybe twice and then it justs sits there and rots.
@@ -190,15 +181,13 @@ We can address him when we’re unhappy with how a conflict was resolved and thu
 
 We’re happy to say that we never needed him so far.
 
-<contentimage slug="disy-code-reviews-iii"></contentimage>
-
 ## Meta
 
 We’ve been reviewing almost all code that gets written for 18 months now and it’s time to take stock.
 
 ### What We Like
 
-We had [a prioritized list of goals](http://blog.codefx.org/techniques/code-reviews-disy-part-1/#Goals):
+We had [a prioritized list of goals](code-reviews-disy-part-1#goals):
 
 1. Distribution of knowledge
 2. Improving code quality

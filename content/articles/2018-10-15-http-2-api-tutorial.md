@@ -6,19 +6,14 @@ slug: java-http-2-api-tutorial
 description: "Tutorial for Java 11's new HTTP/2 API with HttpClient, HttpRequest, and HttpResponse at its center. Shows synchronous and asynchronous request handling."
 intro: "Java 11 ships with a new, fluent HTTP/2 API. This tutorial explains the basic building blocks and how to send requests synchronously and asynchronously."
 searchKeywords: "HTTP/2"
+featuredImage: http2-basics
+repo: java-x-demo
 ---
 
-Since [Java 11](https://blog.codefx.org/tag/java-11/), the JDK contains a new HTTP API in `java.net.http` with `HttpClient`, `HttpRequest`, and `HttpResponse` as its principal types.
+Since [Java 11](tag:java-11), the JDK contains a new HTTP API in `java.net.http` with `HttpClient`, `HttpRequest`, and `HttpResponse` as its principal types.
 It's a fluent, easy-to-use API that fully supports [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2), allows you to handle responses asynchronously, and can even send and receive bodies in a reactive manner.
 In this post, I introduce you to the new API and show you how to send synchronous and asynchronous requests.
-Reactive requests and responses are reserved for [the next post](java-reactive-http-2-requests-responses) and a third one may cover web sockets.
-
-### Overview
-
-The code snippets shown here are a simplified version of what you can find [in my *Java X* demo repository](https://github.com/CodeFX-org/demo-java-x).
-Go check it out, the code's fun to play with!
-
-[toc exclude=Overview]
+Reactive requests and responses are reserved for [the next post](java-reactive-http-2-requests-responses)	.
 
 ## The Building Blocks
 
@@ -61,7 +56,7 @@ To create an [`HttpRequest`](https://docs.oracle.com/en/java/javase/11/docs/api/
 ```java
 HttpRequest request = HttpRequest.newBuilder()
 	.GET()
-	.uri(URI.create("http://codefx.org"))
+	.uri(URI.create("https://nipafx.dev"))
 	.header("Accept-Language", "en-US,en;q=0.5")
 	.build();
 ```
@@ -76,7 +71,7 @@ If you have many header entries and don't want to repeat `header` a whole lot, g
 ```java
 HttpRequest request = HttpRequest.newBuilder()
 	.GET()
-	.uri(URI.create("http://codefx.org"))
+	.uri(URI.create("https://nipafx.dev"))
 	.headers(
 		"Accept-Language", "en-US,en;q=0.5",
 		"Accept-Encoding", "gzip, deflate, br")
@@ -92,7 +87,7 @@ BodyPublisher requestBody = BodyPublishers
 	.ofString("{ request body }");
 HttpRequest request = HttpRequest.newBuilder()
 	.POST(requestBody)
-	.uri(URI.create("http://codefx.org"))
+	.uri(URI.create("https://nipafx.dev"))
 	.build();
 ```
 
@@ -126,8 +121,6 @@ String respnseBody = response.body();
 ```
 
 Besides the body, the response also contains the status code, headers, SSL session, a reference to the request, as well as intermediate responses that handled redirection or authentication.
-
-<contentimage slug="http2-basics"></contentimage>
 
 ## Synchronous HTTP Request Handling
 
@@ -187,7 +180,7 @@ That's all fine and dandy, but where's the reactive part?!
 The naive implementation above blocks on each of the ten requests, wasting precious time and resources!
 There are three places where the code can be changed to become non-blocking:
 
-<pullquote>Each call to HttpClient::send blocks, wasting precious time and resources</pullquote>
+<pullquote>Each call to `HttpClient::send` blocks, wasting precious time and resources</pullquote>
 
 -   send request asynchronously
 -   provide request body as reactive stream
@@ -199,7 +192,7 @@ I'm gonna explain the first one here, and leave the other two for later.
 
 The most straightforward way to make the calls non-blocking is to send them asynchronously and `HttpClient` has a method just for that: `sendAsync` sends the request and immediately returns a `CompletableFuture<HttpResponse<T>>`.
 
-<pullquote>HttpClient::sendAsync immediately returns a CompletableFuture for the response</pullquote>
+<pullquote>`HttpClient::sendAsync` immediately returns a `CompletableFuture` for the response</pullquote>
 
 By default, the request is handled by an executor service deep in the JVM's bowels, but if you call `HttpClient.Builder::executor` while building the client, you can define a custom `Executor` for these calls.
 Whichever executor takes care of the request/response, you can use your thread to continue with more important stuff.

@@ -3,9 +3,7 @@ title: "CodeFX Leveled Up"
 tags: [meta]
 date: 2016-05-14
 slug: codefx-levels-up
-description: ""
-intro: "A lot of things are happening right now: I'm writing a book, I'll speak at conferences, you can hire me, and to top it off, I gave this blog a new look."
-searchKeywords: ""
+description: "A lot of things are happening right now: I'm writing a book, I'll speak at conferences, you can hire me, and to top it off, I gave this blog a new look."
 featuredImage: level-up
 ---
 
@@ -18,8 +16,6 @@ CodeFX levels up, so to speak.
 
 That increased the need to put some lipstick on this ~~pig~~ blog, which triggered a couple of other changes.
 Curious?
-
-<contentimage slug="level-up"></contentimage>
 
 ## New Look
 
@@ -70,11 +66,9 @@ Check it out and [follow me over there](http://www.sitepoint.com/author/nicolaip
 ### The Java Module System In Action
 
 Saving the best for last.
-What do you think about this?
+What do you think about [this](https://www.manning.com/books/the-java-module-system?a_aid=nipa&a_bid=869915cb)?
 
-[jms_in\_action]
-
-Yes, I'm serious ([super cereal](https://www.youtube.com/watch?v=h05YfP_8UsU) in fact): I'm going to write a book about the module system [Project Jigsaw](http://blog.codefx.org/tag/project-jigsaw/) brings to [Java 9](http://blog.codefx.org/tag/java-9).
+Yes, I'm serious ([super cereal](https://www.youtube.com/watch?v=h05YfP_8UsU) in fact): I'm going to write a book about the module system [Project Jigsaw](tag:project-jigsaw) brings to [Java 9](tag:java-9).
 Wow!
 To be honest: This is almost as scary as it is awesome - but the good kind.
 
@@ -93,85 +87,10 @@ Because of that I actually expect a slight increase of posts.
 
 I also started bombarding the Java world's conference organizers with talk proposals.
 The curious thing is: Some of them even got accepted!
-Over the next months I will be talking about the [Java Module System](http://blog.codefx.org/tag/project-jigsaw/), [JUnit 5](http://blog.codefx.org/tag/junit-5/) and that everybody should [comment their fucking code](http://blog.codefx.org/tag/clean-comments/) (on stage, where nobody can interrupt me, HarHar!).
+Over the next months I will be talking about the [Java Module System](tag:project-jigsaw), [JUnit 5](tag:junit-5) and that everybody should [comment their fucking code](tag:clean-comments) (on stage, where nobody can interrupt me, HarHar!).
 
 By the way, this would be a great opportunity to meet you in person if you're there!
 I will keep an up-to-date list of [upcoming talks](http://blog.codefx.org/upcoming-talks/), so check it out, ping me anytime you want or flag me down if you see me.
-These are the next opportunities:
-
-### JEEConf
-
-[![](http://jeeconf.com/wp-content/themes/jeeconf/images/jee-logo-big.png){.talk-organizer-logo}](http://jeeconf.com/)
-
-#### JUnit 5 {#junit-5 .talk-title}
-
-Next Generation Testing on the JVM
-
-When?
-:   Friday, 20th of May, 12:00
-
-Where?
-:   Kiew, Parkovyi Convention Center, Track E
-
-What Else?
-:   [Program Entry](http://jeeconf.com/program/junit-5-next-generation-testing-on-the-jvm/)
-
-#### The Java Module System In Action {#the-java-module-system-in-action-1 .talk-title}
-
-When?
-:   Friday, 20th of May, 15:30
-
-Where?
-:   Kiew, Parkovyi Convention Center, Track A
-
-What Else?
-:   [Program Entry](http://jeeconf.com/program/jigsaw-walkthrough-modularize-your-java-application/)
-
-### Devoxx Poland
-
-[![](http://blog.codefx.org/wp-content/uploads/devoxx-pl-speaker.png){.talk-organizer-logo}](http://devoxx.pl/)
-
-#### JUnit 5 {#junit-5-1 .talk-title}
-
-Next Generation Testing on the JVM
-
-When?
-:   Thursday, 23th of June, 09:00
-
-Where?
-:   Krakow, ICE Congress Centre, Room 4
-
-What Else?
-:   [Program Entry](http://cfp.devoxx.pl/2016/talk/OOT-4758)
-
-#### Comment Your &\*☠\# Code!
-{#comment-your-code .talk-title}
-
-When?
-:   Friday, 24th of June, 10:10
-
-Where?
-:   Krakow, ICE Congress Centre, Room 3
-
-What Else?
-:   [Program Entry](http://cfp.devoxx.pl/2016/talk/YNB-4234)
-
-### Objektforum Karlsruhe
-
-[![](http://blog.codefx.org/wp-content/uploads/objektforum-ka-logo.png){.talk-organizer-logo}](https://www.andrena.de/objektforum)
-
-#### The Java Module System {#the-java-module-system .talk-title}
-
-Vorbereitungen auf Project Jigsaw
-
-When?
-:   Monday, 4th of July, 18:30
-
-Where?
-:   Karlsruhe, Technologiepark Casino, Albert-Nestler-Str.10
-
-What Else?
-:   [Announcement](https://www.andrena.de/event/objektforum-karlsruhe-juli2016); the talk will be in German
 
 ### Future Past
 

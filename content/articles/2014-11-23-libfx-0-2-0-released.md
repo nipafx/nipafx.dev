@@ -1,22 +1,20 @@
 ---
 title: "LibFX 0.2.0 Released"
-tags: [libfx]
+tags: [javafx, libfx]
 date: 2014-11-23
 slug: libfx-0-2-0
 description: "Release post for LibFX 0.2.0 including and pointers to GitHub, Feature descriptions, Maven coordinates and the Javadoc."
 searchKeywords: "libfx 0.2.0"
-featuredImage: LibFX v0.2.0
+featuredImage: libfx-library
 ---
-
-<contentimage slug="LibFX-v0"></contentimage>
 
 Yesterdays I released [**LibFX 0.2.0**](https://github.com/CodeFX-org/LibFX/releases/tag/v0.2.0)!
 It has nice new features I've been needing for other projects:
 
--   [ControlPropertyListener](https://github.com/CodeFX-org/LibFX/wiki/ControlPropertyListener): creating listeners for the property map of JavaFX' controls
--   [ListenerHandle](https://github.com/CodeFX-org/LibFX/wiki/ListenerHandle): encapsulating an observable and a listener for easier add/remove of the listener
--   [SerializableOptional](https://github.com/CodeFX-org/LibFX/wiki/SerializableOptional): serializable wrapper for `Optional`
--   [WebViewHyperlinkListener](https://github.com/CodeFX-org/LibFX/wiki/WebViewHyperlinkListener): add hyperlink listeners to JavaFX' `WebView`
+-   [`ControlPropertyListener`](https://github.com/CodeFX-org/LibFX/wiki/ControlPropertyListener): creating listeners for the property map of JavaFX' controls
+-   [`ListenerHandle`](https://github.com/CodeFX-org/LibFX/wiki/ListenerHandle): encapsulating an observable and a listener for easier add/remove of the listener
+-   [`SerializableOptional`](https://github.com/CodeFX-org/LibFX/wiki/SerializableOptional): serializable wrapper for `Optional`
+-   [`WebViewHyperlinkListener`](https://github.com/CodeFX-org/LibFX/wiki/WebViewHyperlinkListener): add hyperlink listeners to JavaFX' `WebView`
 
 And don't forget about [Nestings](https://github.com/CodeFX-org/LibFX/wiki/Nestings): using all the power of JavaFX' properties for nested object aggregations.
 
@@ -33,7 +31,9 @@ Finally, there's extensive Javadoc under [libfx.codefx.org/javadoc/](http://libf
 
 You can get **LibFX 0.2.0** here:
 
-```html
+<contentimage slug="LibFX-v0.2.0" options="sidebar"></contentimage>
+
+```xml
 <dependency>
 	<groupId>org.codefx.libfx</groupId>
 	<artifactId>LibFX</artifactId>

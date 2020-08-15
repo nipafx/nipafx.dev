@@ -14,14 +14,6 @@ I went looking for tests I could run against them and was delighted to find out 
 
 Let's have a quick look at it.
 
-### Overview
-
-This post will first show how to set up the project before looking at how to get started with the actual tests.
-
-I created no dedicated examples but you can see [how I used this in LibFX](https://github.com/CodeFX-org/LibFX/blob/680e87321ab3a7f09920b275e63b673afc3dc98e/src/test/java/org/codefx/libfx/collection/transform/TransformingSetTest.java?ts=4).
-
-[toc exclude=Overview]
-
 ## Setup
 
 For this to work we need JUnit, the Guava-Testlib and a little boilerplate code.
@@ -31,7 +23,7 @@ For this to work we need JUnit, the Guava-Testlib and a little boilerplate code.
 In case you're not already using JUnit in your project, get it [here](http://search.maven.org/#artifactdetails%7Cjunit%7Cjunit%7C4.12%7Cjar).
 If you use Maven or Gradle:
 
-```html
+```xml
 <dependency>
 	<groupId>junit</groupId>
 	<artifactId>junit</artifactId>
@@ -40,7 +32,7 @@ If you use Maven or Gradle:
 </dependency>
 ```
 
-```java
+```groovy
 testCompile 'junit:junit:4.12'
 ```
 
@@ -51,7 +43,7 @@ You can download it from [the central repository](https://search.maven.org/#arti
 
 For your convenience:
 
-```html
+```xml
 <dependency>
 	<groupId>com.google.guava</groupId>
 	<artifactId>guava-testlib</artifactId>
@@ -60,11 +52,9 @@ For your convenience:
 </dependency>
 ```
 
-```java
+```groovy
 testCompile 'com.google.guava:guava-testlib:18.0'
 ```
-
-<contentimage slug="test-collection-implementations-with-guava"></contentimage>
 
 ### Write Some Boilerplate
 
@@ -162,28 +152,28 @@ A first glance yields these possibilities:
 
 Java's collections:
 
--   Collection
--   Iterator
--   List
--   Map
--   NavigableMap
--   NavigableSet
--   Queue
--   Set
--   SortedMap
--   SortedSet
+* `Collection`
+* `Iterator`
+* `List`
+* `Map`
+* `NavigableMap`
+* `NavigableSet`
+* `Queue`
+* `Set`
+* `SortedMap`
+* `SortedSet`
 
 Guava's collections:
 
--   BiMap
--   ListMultimap
--   Multimap
--   Multiset
--   SetMultimap
--   SortedMultiset
--   SortedSetMultimap
+* `BiMap`
+* `ListMultimap`
+* `Multimap`
+* `Multiset`
+* `SetMultimap`
+* `SortedMultiset`
+* `SortedSetMultimap`
 
-A type search for *\*TestSuiteBuilder* (note the wildcard) yields some other builders.
+A type search for _\*TestSuiteBuilder_ (note the wildcard) yields some other builders.
 I did not investigate them but it is possible that those can be used to create tests for other cases.
 
 In order to use these, simply implement the according `Test...Generator` and hand it to the respective `...TestSuiteBuilder`.

@@ -1,11 +1,12 @@
 ---
-title: "The Decorator Pattern With Java 8"
+title: "The Decorator Pattern With Default Methods"
 tags: [clean-code, patterns, default-methods, java-8]
 date: 2014-09-30
 slug: decorator-pattern-default-methods
 description: "Use Java 8's default methods to make the decorator pattern even more beautiful, which results in more concise and readable code."
 searchKeywords: "decorator pattern default methods"
-featuredImage: The Decorator Pattern with Java8 The Decorator Pattern (simplified)
+featuredImage: decorator-pattern-default-methods
+repo: demo-decorator-java-8
 ---
 
 In [a recent post](decorator-pattern-saved-my-day) I described how the decorator pattern saved my day.
@@ -25,27 +26,24 @@ listener = DecoratingHyperlinkListener.from(listener)
 
 I'll spend the rest of the post explaining how to get there.
 
-I created a small [sample project over at GitHub](https://github.com/CodeFX-org/demo-decorator-java-8), which I will repeatedly reference from here.
-I can only recommend checking it out as it provides more details.
-It is [public domain](http://en.wikipedia.org/wiki/Public_domain), so the code can be used without any limitation.
-
 To continue on my last post it uses Swing's `HyperlinkListener` as a basis for decoration.
 This has the added advantage of keeping it simple as that interface is not generic and has only one method with only one argument (nice for lambda expressions!).
 
-### Overview
+<admonition type="caveat">
 
-Like the other post, this one also doesn't try to teach the pattern itself.
-(I found another [nice explanation](http://javapapers.com/design-patterns/decorator-pattern/), though.) Instead, it recommends a way to implement it in Java 8 such that it becomes very convenient to use.
+Like the earlier post, this one also doesn't try to teach the pattern itself.
+(I found another [nice explanation](http://javapapers.com/design-patterns/decorator-pattern/), though.)
+Instead, it recommends a way to implement it in Java 8 such that it becomes very convenient to use.
 As such, the post heavily relies on Java 8 features, especially [default methods](http://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html) and [lambda expressions](http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html).
+
+</admonition>
 
 The diagrams are just sketches and leave out a lot of details.
 More complete ones are [easy to find](https://encrypted.google.com/search?tbm=isch&q=decorator%20pattern&tbs=imgo:1).
 
-[toc exclude=Overview heading_levels="2,3,4"]
-
 ## Vanilla
 
-[![The Decorator Pattern (simplified)](/wp-content/uploads/2014/09/Decorator-Pattern.png){.aligncenter .size-full .wp-image-235}](/wp-content/uploads/2014/09/Decorator-Pattern.png "The Decorator Pattern (simplified)")
+<contentimage slug="decorator-pattern-diagram-vanilla" options="bg"></contentimage>
 
 In the usual realization of the pattern there is an interface (called `Component` above), which will be implemented in the regular way by "normal" classes as well as all the decorators.
 
@@ -72,7 +70,7 @@ My proposal changes the way decorators are created.
 
 ## With Java 8
 
-[![The Decorator Pattern with Java8 (simplified)](http://blog.codefx.org/wp-content/uploads/2014/09/Decorator-Pattern-Java8.png){.alignright .size-full .wp-image-322 width="1100" height="251"}](http://blog.codefx.org/wp-content/uploads/2014/09/Decorator-Pattern-Java8.png)
+<contentimage slug="decorator-pattern-diagram-default-methods" options="bg"></contentimage>
 
 To use all the power of Java 8 I recommend to add a special interface for all decorators, the `DecoratingComponent`.
 The abstract superclass for decorators implements that interface but, as before, only holds a reference to `Component`.
@@ -273,8 +271,6 @@ listener = DecoratingHyperlinkListener
 	// call the generic decorator function with a constructor reference
 	.decorate(OnEnterLogUrl::new);
 ```
-
-[java_8]
 
 ## Reflection
 

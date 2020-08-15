@@ -77,6 +77,18 @@
 			"url": "https://www.youtube.com/watch?v=jVWIfw9eIcY&t=9m15s",
 			"title": "Blip during the keynote of Code One 2019",
 			"thumbnail": "keynote-blip-code-one-2019"
+		},
+		{
+			"slug": "javaone-2015-jigsaw",
+			"url": "https://www.youtube.com/watch?v=8RhwmJlZQgs",
+			"title": "JavaOne 2015 - Monday, Continental Ballroom 5",
+			"thumbnail": "javaone-2015"
+		},
+		{
+			"slug": "onuka-vidlik",
+			"url": "https://www.youtube.com/watch?v=yRHwWGO_A48",
+			"title": "ONUKA - Vidlik",
+			"thumbnail": "onuka-vidlik"
 		}
 	]
 }

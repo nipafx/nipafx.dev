@@ -19,10 +19,6 @@ You would hope that it doesn't matter much where tests are run, but, then again,
 And let's not even get started on configuring any of this - it's almost exclusively decided behind closed doors.
 You see, there's room for improvement.
 
-[toc heading_levels="2,3"]
-
-By the way, if you think I missed something (chances are, I did), please let me know in the comments or [on Twitter](https://twitter.com/nipafx).
-
 ## Categories And Their Shortcomings
 
 The module system poses widely different challenges for different projects, but, painting with a broad brush, two categories emerge:
@@ -63,7 +59,7 @@ Then there are project whose feature sets are irreconcilable with certain requir
 Level 0 contains the projects that fail to be fully functional on or with Java 9+.
 This is mostly a definition by exclusion - everything that doesn't make it to level 1 ends up here.
 
-**Examples**: Every IDE from 2017 is on this level and Log4J 1.2 ([unsupported since 2015](https://blogs.apache.org/foundation/entry/apache_logging_services_project_announces), by the way) fails on Java 9+ when parsing [the changed version string](https://blog.codefx.org/java/java-9-migration-guide/#New-Version-Strings).
+**Examples**: Every IDE from 2017 is on this level and Log4J 1.2 ([unsupported since 2015](https://blogs.apache.org/foundation/entry/apache_logging_services_project_announces), by the way) fails on Java 9+ when parsing [the changed version string](java-9-migration-guide#new-version-strings).
 
 ### Level 1 (Denial): Don't break!
 
@@ -135,7 +131,7 @@ For this level, the exact strategy doesn't matter, though.
 **Examples**: Most of Maven's plugins, particularly Compiler, Surefire, Failsafe, and JAR are on this level.
 If a module declaration/descriptor is present, they do their usual thing but employ the module system, for example by placing code and dependencies on the module path.
 Some don't go much beyond minimal support, though.
-The JAR plugin, for example, supports [setting the main class](https://blog.codefx.org/java/java-module-system-tutorial/#Compiling-Packaging-Running) only since 3.1.2, released in May 2019 - until then it simply ignored that capability.
+The JAR plugin, for example, supports [setting the main class](java-module-system-tutorial#compiling-packaging-running) only since 3.1.2, released in May 2019 - until then it simply ignored that capability.
 
 ### Level 3 (Bargaining): Interoperability By Refined And Configurable Support
 
@@ -158,7 +154,7 @@ On this level, libraries and frameworks ship explicit modules, meaning they come
 As required by levels 1 and 2, they must still work on the class path and are not allowed to require command line flags to function.
 
 If a project requires their users to modify *their* module declarations to work with the project, this needs to be well-documented.
-The most obvious example are tools that use reflection and require their modules [to open packages to them](https://blog.codefx.org/java/java-module-system-tutorial/#Open-Packages-And-Modules) (see below for more an that).
+The most obvious example are tools that use reflection and require their modules [to open packages to them](java-module-system-tutorial#open-packages-and-modules) (see below for more an that).
 Ideally, there's a single document that gathers all JPMS-related information in one place.
 
 **Examples**: [Log4J 2](https://logging.apache.org/log4j/2.x/) ships its API as a modular JAR [since 2.10.0](http://mail-archives.apache.org/mod_mbox/www-announce/201711.mbox/%3Cdf950e3c-7ae2-6026-25c5-bfba671cfbbd%40apache.org%3E) and all of [JUnit 5](https://junit.org/junit5/)'s JARs are modular [since version 5.5.0](https://junit.org/junit5/docs/current/release-notes/index.html#release-notes-5.5.0).
@@ -226,15 +222,13 @@ Particularly the last option is really interesting, though, because it allows to
 
 **Example**: Starting with version 3, Surefire has a flag to move test execution to the class path even if a module declaration is present (the only documentation I could find is [SUREFIRE-1531](https://issues.apache.org/jira/browse/SUREFIRE-1531)).
 
-[jms_in\_action title="Learn the basics underlying this model:"]
-
 ## Versions Are Hard
 
 While the model is solid for each individual pair of JDK version and project version, it gets more complicated when you factor in the evolution of Java and its ecosystem.
 The project version is straightforward to handle: Each release needs to be assessed individually and when talking about a project in general, say Eclipse or Log4J, its assessment is that of the most recent version.
 
 The Java version is more complicated.
-A project may work fine on Java 11, but fail to do so on Java 12, for example due to [removed APIs](https://blog.codefx.org/java/java-12-guide/#Removed-And-Deprecated).
+A project may work fine on Java 11, but fail to do so on Java 12, for example due to [removed APIs](java-12-guide#removed-and-deprecated).
 Technically, that means it doesn't fulfill level 1's requirements and is back to 0.
 But that's counter-intuitive because if the problem has nothing to do with the module system, it should not impact the project's maturity rating.
 

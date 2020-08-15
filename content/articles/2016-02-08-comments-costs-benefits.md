@@ -3,27 +3,18 @@ title: "Costs And Benefits Of Comments"
 tags: [clean-comments, documentation]
 date: 2016-02-08
 slug: comments-costs-benefits
-description: ""
-intro: "As with most things in software development the ultimate currency for comments is time. This is an analysis of the costs and benefits of comments."
+description: "As with most things in software development the ultimate currency for comments is time. This is an analysis of the costs and benefits of comments."
 searchKeywords: "comments costs benefits"
 featuredImage: costs-benefits-comments
 ---
+
+<!-- START WITH THIS POST -->
 
 As with most things in software development the ultimate currency for comments is time.
 How much do we have to invest and how much do they save us?
 Or in other words:
 
 **What are the costs and benefits of comments?**
-
-### Overview
-
-This post is another part in the ongoing series about comments:
-
-[codefx_series\_comments\_list]
-
-No need to read them all but it helps to know the [taxonomy of comments](taxonomy-comments) as the different categories will play an important role in this post.
-
-[toc exclude=Overview]
 
 ## Costs
 
@@ -39,7 +30,7 @@ The correlation is capped, though, if the code provides a well-designed abstract
 
 <pullquote>The cost correlates with the code's complexity and the comment's quality.</pullquote>
 
-https://twitter.com/mbostock/status/681561150127878144
+<!-- https://twitter.com/mbostock/status/681561150127878144pw -->
 
 In my experience, compared to other costs for comments but also for designing and writing the commented code and its tests, the time required to initially compose a comment is almost negligible.
 Right after spending some time on designing, testing, implementing, and refactoring a piece of code it usually takes me only a minute or so to add a comprehensive comment.
@@ -63,9 +54,9 @@ So any commenting schema must address maintenance as this is what everything hin
 <pullquote>Any commenting schema must address maintenance!</pullquote>
 
 Not all kinds of comments require the same diligence, though.
-[Narrations](http://blog.codefx.org/techniques/documentation/taxonomy-comments#narrations) and [contract comments](http://blog.codefx.org/techniques/documentation/taxonomy-comments#contracts) must be very up-to-date.
+[Narrations](taxonomy-comments#narrations) and [contract comments](taxonomy-comments#contracts) must be very up-to-date.
 If you fail at maintaining them (regardless of their frequency and initial quality), you are better off just deleting them and be done with it.
-Comments providing [technical context](http://blog.codefx.org/techniques/documentation/taxonomy-comments#technical-context) require less diligence and [historical comments](http://blog.codefx.org/techniques/documentation/taxonomy-comments#historical-context) even less since it's usually "keep it or delete it".
+Comments providing [technical context](taxonomy-comments#technical-context) require less diligence and [historical comments](taxonomy-comments#historical-context) even less since it's usually "keep it or delete it".
 
 ### Confusion
 
@@ -129,7 +120,7 @@ Documenting a large code unit's (e.g. a package's) central abstraction and the s
 
 Any work that is required to comprehend an abstraction gradually diminishes its value.
 It is incurred every time a developer has to put in effort to understand how the unit is supposed to be used.
-This process can of course not be entirely prevented but good [contract comments](http://blog.codefx.org/techniques/documentation/taxonomy-comments#contracts) are a potent mechanism in reducing the required time, thus considerably improving the benefit of an abstraction.
+This process can of course not be entirely prevented but good [contract comments](taxonomy-comments#contracts) are a potent mechanism in reducing the required time, thus considerably improving the benefit of an abstraction.
 
 Contract comments allow the developer to stay in the context in which she encountered the unit.
 Besides expressive naming, no other mechanism has that feature!
@@ -153,7 +144,7 @@ As before: Clean code and tests are great but expecting them to consistently gui
 
 ### Documenting Intent
 
-[Technical](http://blog.codefx.org/techniques/documentation/taxonomy-comments#technical-context) and [historical context](http://blog.codefx.org/techniques/documentation/taxonomy-comments#historical-context) is invaluable when non-trivial code has to be understood, assessed, or changed.
+[Technical](taxonomy-comments#technical-context) and [historical context](taxonomy-comments#historical-context) is invaluable when non-trivial code has to be understood, assessed, or changed.
 
 Context can be provided by external documents, issue trackers, code review tools, or version control but each contains only partial information.
 Consolidating them can be error-prone and may require considerable effort as several wiki articles, ticket descriptions, comment threads, code reviews, or commits may be relevant for a unit of code.
@@ -163,11 +154,9 @@ The major advantage of comments is that they are readily available in the source
 While they can not even come close to covering all the information mentioned above, they can be the second step on the journey to understanding (after the code itself of course).
 Context comments will reduce the amount of detective work and thus provide a benefit each time a developer tries to understand that unit of code.
 
-<contentimage slug="costs-benefits-comments"></contentimage>
-
 ## Conclusions
 
-Let's start with a conclusion that confirms what we already know: [Narrations](http://blog.codefx.org/techniques/documentation/taxonomy-comments#narrations) suck!
+Let's start with a conclusion that confirms what we already know: [Narrations](taxonomy-comments#narrations) suck!
 
 <pullquote>Narrations suck!</pullquote>
 
@@ -175,7 +164,7 @@ They're easy to write but maintenance is expensive, the risk of confusion is hig
 The only benefit is explaining to developers what the code does, which is exactly what clean code does at least as well in the vast majority of cases.
 So they come with high costs and almost no benefits.
 
-Judging [contract comments](http://blog.codefx.org/techniques/documentation/taxonomy-comments#contracts) is more nuanced.
+Judging [contract comments](taxonomy-comments#contracts) is more nuanced.
 If worded properly and used on clean abstractions, they can have substantial benefits by preventing developers from creating a new mental context for the code they are investigating (which clean code generally requires).
 But maintenance cost and the potential for confusion weighs heavily if the code is changed frequently.
 
@@ -189,12 +178,10 @@ But even code that has no potential for reuse will be changed and contracts can 
 In this case a high level description of the abstraction (like a paragraph explaining a class' or package's central abstraction) goes a long way.
 It still requires diligence during changes but the required effort is minimal.
 
-Context comments, [technical](http://blog.codefx.org/techniques/documentation/taxonomy-comments#technical-context) and [historical](http://blog.codefx.org/techniques/documentation/taxonomy-comments#historical-context), a are a clear winner.
+Context comments, [technical](taxonomy-comments#technical-context) and [historical](taxonomy-comments#historical-context), a are a clear winner.
 If worded or formatted in a way that stresses their transient nature, they have almost no costs (maintenance or confusion) but can serve as valuable [bread crumbs](https://en.wikipedia.org/wiki/Hansel_and_Gretel) during bug hunts and refactorings.
 
 <pullquote>Context comments are a clear winner.</pullquote>
-
-[comments_book]
 
 ## Reflection
 

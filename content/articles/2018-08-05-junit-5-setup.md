@@ -6,16 +6,11 @@ slug: junit-5-setup
 description: "How to set up JUnit 5 so tests run in IntelliJ, Eclipse, Maven, Gradle or, if all else fails, via JUnit 4 or on the command line."
 searchKeywords: "setup"
 featuredImage: junit-5-setup
+repo: demo-junit-5
 ---
 
 JUnit 5 tool support has come a long way since its early days in 2017, so setting JUnit 5 up in your favorite IDE or build tool should be fairly straight-forward.
 Here's how to do it in IntelliJ, Eclipse, Maven, Gradle, or, if everything else fails, on the command line.
-
-### Overview
-
-[codefx_junit5\_series]
-
-[toc exclude=Overview]
 
 ## Writing Tests
 
@@ -46,11 +41,9 @@ See ma, no `public`!
 Cool, right?
 I won't go into it here, though - check out the [post on basics](junit-5-basics) for more details.
 
-[codefx_junit\_5\_product]
-
 ## Running Tests
 
-A new aspect of JUnit 5, and I'll go into more details when we discuss [its architecture](https://blog.codefx.org/design/architecture/junit-5-architecture/), are *engines*.
+A new aspect of JUnit 5, and I'll go into more details when we discuss [its architecture](junit-5-architecture-jupiter), are *engines*.
 An engine is in charge of executing all tests with a specific API.
 For the Jupiter API, which we just added and used, that would be the Jupiter engine:
 
@@ -90,7 +83,7 @@ For more details on the Gradle integration, check [its documentation](https://do
 Maven's surefire provider has [native support for JUnit 5](https://maven.apache.org/surefire/maven-surefire-plugin/examples/junit-platform.html) since version 2.22.0.
 It picks up the test engine from your regular dependencies:
 
-```html
+```xml
 <dependency>
 	<groupId>org.junit.jupiter</groupId>
 	<artifactId>junit-jupiter-engine</artifactId>
@@ -175,12 +168,10 @@ java -jar junit-platform-console-standalone
 	--scan-class-path
 ```
 
-<contentimage slug="junit-5-setup"></contentimage>
-
 ## Compatibility
 
 As you might have noticed, JUnit 5 occupies new namespaces: `org.junit.jupiter`, `org.junit.platform`, and `org.junit.vintage` (which we didn't see yet).
-I explain their meaning [in a post dedicated to JUnit's architecture](http://blog.codefx.org/design/architecture/junit-5-architecture/) - for now this only means that there will be no conflicts when different JUnit versions are used in the same project.
+I explain their meaning [in a post dedicated to JUnit's architecture](junit-5-architecture-jupiter) - for now this only means that there will be no conflicts when different JUnit versions are used in the same project.
 
 Indeed, a project can contain and run tests from different versions without problems, which allows a slow migration to JUnit 5.
 We will revisit this topic when we're exploring migration paths (stay tuned).

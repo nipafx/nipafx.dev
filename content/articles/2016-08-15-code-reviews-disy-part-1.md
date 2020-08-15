@@ -1,16 +1,13 @@
 ---
 title: "Code Reviews At Disy - Where We Were And What We Wanted"
+# subtitle
 tags: [code-review, techniques]
 date: 2016-08-15
 slug: code-reviews-disy-part-1
 canonicalUrl: http://blog.disy.net/code-reviews/
 description: "At Disy we review almost all the code we write. Here, we want to share why that was not always the case and how we started with code reviews."
-searchKeywords: ""
 featuredImage: disy-code-reviews-i
 ---
-
-I wrote [this post](http://blog.disy.net/code-reviews/) when [still working at Disy](goodbye-disy-hello-sitepoint).
-If you are interested in Java, GIS, or databases, you should [check out their blog](http://blog.disy.net/)!
 
 At Disy we review almost all the code we write.
 Here, we want to share why that was not always the case and how we started with code reviews.
@@ -21,14 +18,10 @@ I’ll then talk about why and how we introduced code reviews, and the goals, as
 
 The next post in this series will go into details and explain how we do it on a daily basis.
 
-[toc]
-
 ## One Team
 
 Disy has a couple of products and we’re doing project work as well.
-But by far the biggest and most important code base we’re working on is
-
-[Cadenza](http://www.disy.net/en/products/cadenza.html).
+But by far the biggest and most important code base we’re working on is [Cadenza](http://www.disy.net/en/products/cadenza.html).
 
 While well modularized, many features or fixes cut across various aspects.
 Implementing a feature that, for example, allows the creator of a map to specify the color with which selected geometries are highlighted requires changes to Swing, Web, and mobile map components as well as the configuration UI, backend, and persistence.
@@ -43,8 +36,6 @@ Our numbers grew in the following year and the new hires (me among them) made th
 
 (This puts strain on many practices, particularly agile ones, but we’re disciplined and fare well so far.
 Details are interesting but beyond the scope of this article.)
-
-<contentimage slug="disy-code-reviews-i"></contentimage>
 
 ## Introducing Code Reviews
 

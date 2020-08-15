@@ -11,23 +11,20 @@ featuredImage: transforming-collections
 
 Did you ever want to substitute the `equals` and `hashCode` methods a `HashSet` or `HashMap` uses?
 Or have a `List` of some element type masquerade as a `List` of a related type?
-
 Transforming collections make that possible and this post will show how.
-
-### Overview
 
 Transforming collections are a feature of **[LibFX](http://libfx.codefx.org) 0.3.0**, which will be released any day now.
 This post will present the general idea, cover technical details and finish with some use cases where they might come in handy.
 
-UPDATE
-:   In the meantime, [version 0.3.0 was released](libfx-0-3-0).
+<admonition type="update">
+
+In the meantime, [version 0.3.0 was released](libfx-0-3-0).
 While this post might get out of date at some point, [the wiki page for transforming collections](https://github.com/CodeFX-org/LibFX/wiki/TransformingCollections) will be updated.
 If you're a visitor from the future, make sure to check it out.
-
 The ongoing example is a slightly adapted variant of [the feature demo contained in **LibFX**](https://github.com/CodeFX-org/LibFX/blob/master/src/demo/java/org/codefx/libfx/collection/transform/TransformingSetDemo.java).
 Keep in mind that it is only an example to demonstrate the concept.
 
-[toc exclude=Overview|Example]
+</admonition>
 
 ## Transforming Collections
 
@@ -70,10 +67,6 @@ transformingSet.remove(1);
 ```
 
 See how pleasant transformations can be?
-
-<contentimage slug="transforming-collections"></contentimage>
-
-[Published](https://www.flickr.com/photos/rooners/5193607922/) by [Rooners Toy Photography](https://www.flickr.com/photos/rooners/) under [CC-BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/).
 
 ## Details
 

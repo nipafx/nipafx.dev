@@ -1,5 +1,5 @@
 ---
-title: "Unlocking Traits With 'var' In Java 10"
+title: "Unlocking Traits With `var`"
 tags: [default-methods, java-10, lambda, var]
 date: 2018-06-25
 slug: java-var-traits
@@ -7,20 +7,12 @@ description: "In Java 10, 'var' makes it is possible to ad-hoc combine traits in
 intro: "With 'var' it is possible to ad-hoc combine traits into an instance that matches your exact requirements. This allows for pretty cool experimentation, but unfortunately has some serious downsides."
 searchKeywords: "traits"
 featuredImage: var-traits
+repo: java-x-demo
 ---
 
 [Local-variable type inference, or more succinctly `var`](java-10-var-type-inference), turns out to be surprisingly versatile.
 It unlocks [intersection types](java-var-intersection-types), allows using [ad-hoc fields and methods of anonymous types](java-var-anonymous-classes-tricks), and, as we will see now, enables working with traits.
 In the end, [I don't think it's worth the hassle](#The-Dark-Side), but your mileage may vary - maybe it helps you out of a bind one day.
-
-### Overview
-
-To see the code snippets in action, check [my Java 10 demo project](https://github.com/CodeFX-org/demo-java-10).
-
-[toc exclude=overview]
-
-\[codefx\_youtube thumbnail="//blog.codefx.org/wp-content/uploads/thumbnail-Java-10-var-small.jpg" text="Need to catch up on the 'var' basics?
-There's [a thorough introduction](https://www.youtube.com/watch?v=Le1DbpRZdRQ&list=PL_-IO8LOLuNp2stY1qBUtXlfMdJW7wvfT) on my YouTube channel."\]
 
 ## What's A Trait?
 
@@ -59,7 +51,7 @@ System.out.printf(
 ```
 
 Looks nice, doesn't it?
-If only the syntax wouldn't be totally made up... But, as we will see in a minute, we can take a few steps into that direction with some trickery involving [lambdas](https://blog.codefx.org/tag/lambda/), [default methods](https://blog.codefx.org/tag/default-methods/), [and `var`](https://blog.codefx.org/tag/var/).
+If only the syntax wouldn't be totally made up... But, as we will see in a minute, we can take a few steps into that direction with some trickery involving [lambdas](tag:lambda), [default methods](tag:default-methods), [and `var`](tag:var).
 Before we come to that, though, I want to address a question you might have at this point.
 
 ## Wait, I Thought These Were Intersection Types!?
@@ -100,7 +92,7 @@ The basic recipe to creating traits has three ingredients:
 
 <pullquote>What the hell is going on here?</pullquote>
 
--   prepare an interface that can be created with a [lambda expression](https://blog.codefx.org/tag/lambda/)
+-   prepare an interface that can be created with a [lambda expression](tag:lambda)
 -   cast that lambda to the intersection of the required types
 -   assign the entire kerfuffle to a `var`-ed variable, so the type information don't get trimmed to a single type
 
@@ -148,8 +140,6 @@ var corp = (MegacorpDelegate) () -> megacorp;
 ```
 
 Creating such a delegating interface gives you the skeleton that you can now flesh out with the actual traits by writing interfaces that extend the original interface and add new methods.
-
-<contentimage slug="var-traits"></contentimage>
 
 ## Creating Traits
 
@@ -212,13 +202,13 @@ Ok, we've finally settled how to simulate traits in Java by using lambda express
 This is a nice thought experiment and might even serve you as a stopgap one day, but it has severe disadvantages, which is why I don't recommend to use it except in critical emergencies.
 
 The first thing you might have noticed throughout this post is that simulating traits requires the combination of a decent number of non-trivial Java features, which always makes code less readable and thus less maintainable.
-Speaking of maintainability, variables of an intersection type only flourish *within* a method - as soon as they need to be passed *to or from* a method they [require some generic trickery to be represented](https://blog.codefx.org/java/intersection-types-var/#Declaring-Intersection-Types-With-Generics).
+Speaking of maintainability, variables of an intersection type only flourish *within* a method - as soon as they need to be passed *to or from* a method they [require some generic trickery to be represented](java-var-intersection-types#declaring-intersection-types-with-generics).
 This makes refactoring such code considerably more complicated.
 
 There's also some setup involved in creating the delegating interface and, even though that is unlikely to play a relevant role, the memory indirection it incurs reduces performance.
 Beyond that, traits need to be interfaces without abstract methods, which limits the functionality you can implement.
 
-The final death knell is something else, though: Default methods [can not implement `Object` methods](https://blog.codefx.org/java/everything-about-default-methods/#Overriding-Methods-on-8216Object8217), which has the consequence that the combined instances can never forward a call to `equals` or `hashCode` to the underlying delegate.
+The final death knell is something else, though: Default methods [can not implement `Object` methods](java-default-methods-guide#overriding-methods-on-object), which has the consequence that the combined instances can never forward a call to `equals` or `hashCode` to the underlying delegate.
 This is bound to break code that puts such instances in collections and will result in strange and hard-to-debug misbehavior.
 
 So as much fun as playing with traits is, I strongly recommend never to simulate them this way.

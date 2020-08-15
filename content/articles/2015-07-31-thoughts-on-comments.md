@@ -5,35 +5,27 @@ date: 2015-07-31
 slug: thoughts-on-comments
 description: "My rant to comment your fucking code sparked some interesting conversations. Here we discuss some of your and my thoughts on the topic of comments."
 searchKeywords: "comments"
-featuredImage: thoughts-on-clean-comments
+featuredImage: thoughts-on-comments
 ---
 
 Wow, telling people to [comment their fucking code](comment-your-fucking-code) really hit a nerve.
-The reactions covered the whole spectrum from "[just read Clean Code, dude](https://www.reddit.com/r/java/comments/3dhf9d/comment_your_fucking_code/ct5kk0x)" to "[maybe some comments but just a little](http://blog.codefx.org/techniques/documentation/comment-your-fucking-code/#comment-2140304517)" to "[OMG yes](http://blog.codefx.org/techniques/documentation/comment-your-fucking-code/#comment-2137448557)".
+The reactions covered the whole spectrum from "[just read Clean Code, dude](https://www.reddit.com/r/java/comments/3dhf9d/comment_your_fucking_code/ct5kk0x)" to "[maybe some comments but just a little](comment-your-fucking-code)<!-- comment-2140304517 -->" to "[OMG yes](comment-your-fucking-code)<!-- comment-2137448557 -->".
 
 Now that I cooled down, I'll tackle the topic again with less furor.
 I planned to write about my perspective on high quality comments but last week's discussions surfaced so many interesting view points and facts, that I wanted to cover those first.
 
-### Overview
-
 What follows are some of your and my thoughts on comments.
 But this post can't cover all there is to say about the topic.
-So there are more:
-
-[codefx_series\_comments\_list]
-
-And please feel free to point out other factors you think are important!
-
-[toc exclude=Overview]
+So there are more (check the _series_ entry in the nav box.)
 
 ## Comments Versus ...
 
 ### ... Documentation
 
 > Bitch please!
-You don't know the fucking difference between comments and documentation and you rant about this!!
+> You don't know the fucking difference between comments and documentation and you rant about this!!
 >
-> [Moons](http://blog.codefx.org/techniques/documentation/comment-your-fucking-code/#comment-2139800467)
+> [Moons](comment-your-fucking-code)<!-- comment-2139800467 -->
 
 It turned out that we lack a shared understanding of whether API docs, like Javadoc or .NET’s XML documentation, are also comments.
 In the past week this sabotaged several interesting conversations and by now I must assume that it is a source of major misunderstandings in any discussion on the topic.
@@ -51,8 +43,7 @@ But regardless of my interpretation of the terms it became obvious to me that an
 
 ### ... Clean Code
 
-> I will take code where the developers just don't use variables all named "ufw", "q", "q1", "ql", "qi", etc vs.
-over even full Javadoc (at the expense of other factors), any day.
+> I will take code where the developers just don't use variables all named "ufw", "q", "q1", "ql", "qi", etc vs. over even full Javadoc (at the expense of other factors), any day.
 >
 > [Various\_Pickles](https://www.reddit.com/r/java/comments/3dhf9d/comment_your_fucking_code/ct61jr4)
 
@@ -72,8 +63,8 @@ Clean code and good comments are complements in understanding a system.
 So why not spend time making the code as clean as possible *and then* add comments where they will help the future reader?
 
 > There is this prevalent notion in the software world that good code doesn’t need comments, that it stands on its own.
-Or that comments are a code smell.
-[...]
+> Or that comments are a code smell.
+> [...]
 >
 > Proponents of this myth point out that it’s easy for comments to get out of sync with the code and decide that because this approach is not perfect, it should be avoided altogether.
 >
@@ -90,8 +81,7 @@ I am actually not sure yet but after talking about APIs I will make a very preli
 
 > As useful as javadocs are for public APIs, they are anathema to code that is not intended for public consumption.
 >
-> Robert C.
-Martin - Clean Code
+> Robert C. Martin - Clean Code
 
 I consider the qualifier *public* ambiguous at best and misleading at worst.
 We should look for other characteristics to identify APIs worthy of documentation.
@@ -136,30 +126,26 @@ Invest time to make the comments meaningful.
 Of course all of this goes of course on top of clean code, proper tests, ... Now, rip it apart!
 :)
 
-<contentimage slug="thoughts-on-comments"></contentimage>
-
-[Published](https://www.flickr.com/photos/fsadykov/19465934622/) by [Farhad Sadykov](https://www.flickr.com/photos/fsadykov/) under [CC-BY 2.0](https://creativecommons.org/licenses/by/2.0/).
-
 ## Social Dynamics
 
 > Typically, developers work in teams.
-Teams are made up of humans.
-Humans are susceptible to stress.
-Humans are pressured by deadlines.
-Office politics.
-Personal issues.
-People fuck up \*all the time\*, and that’s ok.
-Comments can be very useful, but if you rely on them, they \*will\* go stale.
-Code review can alleviate this, but errors will still slip through.
+> Teams are made up of humans.
+> Humans are susceptible to stress.
+> Humans are pressured by deadlines.
+> Office politics.
+> Personal issues.
+> People fuck up \*all the time\*, and that’s ok.
+> Comments can be very useful, but if you rely on them, they \*will\* go stale.
+> Code review can alleviate this, but errors will still slip through.
 >
 > And some people just don’t care.
-I can almost feel your obvious response coming: “Those people should be swiftly fired!”
+> I can almost feel your obvious response coming: “Those people should be swiftly fired!”
 >
 > Right.
-Once again, let’s not forget office politics.
-It’s not uncommon for a development team to include the boss’s inbred nephew.
+> Once again, let’s not forget office politics.
+> It’s not uncommon for a development team to include the boss’s inbred nephew.
 >
-> [Jezen Thomas](http://blog.codefx.org/techniques/documentation/comment-your-fucking-code/#comment-2137987814)
+> [Jezen Thomas](comment-your-fucking-code)<!-- comment-2137987814 -->
 
 Considering social dynamics is critical!
 A team has to decide for itself which commenting schema fits its needs and then work together to achieve that.
@@ -168,9 +154,9 @@ Development techniques like pair programming or code reviews will go a long way 
 ### Catch-22 Of Comment Quality
 
 > You have to teach developers what a "good" comment is before they will see the value in writing comments.
-"//Loop through array and filter out anything bad" vs "//Removing syntactically incorrect records per " etc...
+> "//Loop through array and filter out anything bad" vs "//Removing syntactically incorrect records per " etc...
 >
-> [Mike](http://blog.codefx.org/techniques/documentation/comment-your-fucking-code/#comment-2137710954)
+> [Mike](comment-your-fucking-code)<!-- comment-2137710954 -->
 
 Yes, continuously reading poorly formulated or ill-conceived comments doesn't motivate to write or maintain high quality ones.
 To convince people to adapt new techniques one has to demonstrate the benefits.
@@ -192,10 +178,10 @@ Besides, writing is a skill in which a sufficient level is achieved easier than 
 As an extra, improving it benefits our life in general, something which can not be said for most of the things we learn to be good developers.
 
 > The difference between a tolerable programmer and a great programmer is not how many programming languages they know, and it's not whether they prefer Python or Java.
-It's whether they can communicate their ideas.
-By persuading other people, they get leverage.
-By writing clear comments and technical specs, they let other programmers understand their code, which means other programmers can use and work with their code instead of rewriting it.
-Absent this, their code is worthless.
+> It's whether they can communicate their ideas.
+> By persuading other people, they get leverage.
+> By writing clear comments and technical specs, they let other programmers understand their code, which means other programmers can use and work with their code instead of rewriting it.
+> Absent this, their code is worthless.
 >
 > [Joel Spolsky - Advice for Computer Science College Students](http://www.joelonsoftware.com/articles/CollegeAdvice.html)
 
@@ -210,14 +196,14 @@ We also had [a discussion about a piece of code from Guava](https://www.reddit.c
 And there was great technical advice by [Sean Reilly](https://twitter.com/seanjreilly):
 
 > You can, and should, unit test for immutability.
-The excellent library [MutabilityDetector](https://github.com/MutabilityDetector/MutabilityDetector) does a great job with this.
-[...]
+> The excellent library [MutabilityDetector](https://github.com/MutabilityDetector/MutabilityDetector) does a great job with this.
+> [...]
 >
 > Similarly, the great [Venkat Subramaniam](https://twitter.com/venkat_s) has been speaking for years about how to test for thread safety.
-Techniques such as “inject your locks” go a long way.
-[...]
+> Techniques such as “inject your locks” go a long way.
+> [...]
 >
-> [Sean Reilly](http://blog.codefx.org/techniques/documentation/comment-your-fucking-code/#comment-2141715007)
+> [Sean Reilly](comment-your-fucking-code)<!-- comment-2141715007 -->
 
 I can't wait to try out [Mutability Detector](https://github.com/MutabilityDetector/MutabilityDetector)!
 Make sure to read the rest of the comment as well.
@@ -228,7 +214,7 @@ We discussed some of your comments on my rant and I put a couple of things in pe
 But a lot of other thought arose from the discussions and there will be more posts about comments in the near future.
 
 > Don't document and make your code unreadable and complicated.
-That way you can't be fired.
-/s
+> That way you can't be fired.
+> /s
 >
 > [Adamas\_Mustache](https://www.reddit.com/r/java/comments/3dhf9d/comment_your_fucking_code/ct5dxtf)

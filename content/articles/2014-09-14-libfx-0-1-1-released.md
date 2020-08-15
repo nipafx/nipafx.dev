@@ -1,11 +1,11 @@
 ---
 title: "LibFX 0.1.1 Released"
-tags: [libfx]
+tags: [javafx, libfx]
 date: 2014-09-14
 slug: libfx-0-1-1
-description: "Release post for LibFX 0.1.1 including a description of the feature 'Nestings' and pointers to GitHub, Maven and the Javadoc."
+description: "Release post for LibFX 0.1.1 including a description of `Nestings` and pointers to GitHub, Maven and the Javadoc."
 searchKeywords: "libfx 0.1.1"
-featuredImage: LibFX v0.1.1
+featuredImage: libfx-library
 ---
 
 Just today I released [LibFX 0.1.1](https://github.com/CodeFX-org/LibFX/releases/tag/v0.1.1)!
@@ -19,11 +19,11 @@ So I am here to proudly present it!
 
 ## LibFX 0.1.1
 
-[![LibFX 0.1.1](http://blog.codefx.org/wp-content/uploads/2014/09/LibFX-v0.1.1.png){.alignright .size-full .wp-image-139 width="134" height="102"}](https://github.com/CodeFX-org/LibFX/releases/tag/v0.1.1)
-
 So what can **LibFX** do for you?
 Currently it has only one feature, namely *Nestings*.
 It is [described in detail in the project's wiki](https://github.com/CodeFX-org/LibFX/wiki/Nestings) but I will give a quick introduction here.
+
+<contentimage slug="LibFX-v0.1.1" options="sidebar"></contentimage>
 
 ### Nestings
 
@@ -54,7 +54,6 @@ In this case, you could bidirectionally bind the editor's value property to it a
 
 But as important and surely as work-intensive as the feature was the infrastructure.
 I finally got (almost) all the tools up and running.
-([By the way, something I am planning to share soon.](/open-source-project-tutorial/))
 
 ### About LibFX
 
@@ -67,7 +66,7 @@ It links to all tools, services and resources involved in creating the library, 
 
 LibFX 0.1.1 is available in Maven Central and these are the coordinates:
 
-```html
+```xml
 <groupId>org.codefx.libfx</groupId>
 <artifactId>LibFX</artifactId>
 <version>0.1.1</version>

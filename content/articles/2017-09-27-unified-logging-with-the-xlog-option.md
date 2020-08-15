@@ -7,6 +7,7 @@ description: "Java 9 introduces unified logging, a central mechanism configurabl
 intro: "Java 9 introduces unified logging, a central mechanism configurable with -Xlog to observe class loading, threading, the garbage collector, the module system, etc."
 searchKeywords: "xlog"
 featuredImage: unified-logging
+inlineCodeLanguage: shell
 ---
 
 Java 9 comes with a unified logging architecture ([JEP 158](http://openjdk.java.net/jeps/158)) that pipes a lot of messages that the JVM generates through the same mechanism, which can be configured with the `-Xlog` option.
@@ -14,10 +15,7 @@ This gives uniform access to log messages from different subsystems such as clas
 
 The `-Xlog` option can be a bit intimidating, so in this post we will master it step by step, learning how to use it to select which messages and information to show.
 
-[toc]
-
 ## What Is Unified Logging?
-{#whatisunifiedlogging}
 
 The JVM-internal, unified logging infrastructure is very similar to known logging frameworks like Log4j or Logback that you might have used for your application.
 It generates textual messages, attaches some meta information like tags (describing the originating subsystem), a log level (describing the importance of the message), and time stamps before printing them somewhere.
@@ -37,7 +35,7 @@ We'll look at each of them in turn, but before doing that, we can have a look at
 Simply execute `java -Xlog` (maybe append `-version` to get rid of the helpful but long display of command line options) and have a look at the output - of which there is *a lot*.
 One of the first messages tells us that the HotSpot virtual machine begins its work:
 
-``` {.lang:shell .decode:true highlight="false"}
+```shell
 $ java -Xlog -version
 
 # truncated a few messages
@@ -48,15 +46,15 @@ $ java -Xlog -version
 It shows how long the JVM has been running (2 ms), the message's log level (`info`), its tags (only `os`), and the actual message.
 Let's see how to influence these details.
 
-<contentimage slug="unified-logging-diagram"></contentimage>
+<contentimage slug="unified-logging-diagram" options="bg"></contentimage>
 
-## Defining Which Messages Should Be Shown {#definingwhichmessagesshouldbeshown}
+## Defining Which Messages Should Be Shown
 
 The log level and tags can be used to define what exactly the logs should show by defining pairs `<tag-set>=<level>`, which are called *selectors*.
 All tags can be selected with `all` and the level is optional and defaults to `info`.
 Here's how to use it:
 
-``` {.lang:shell .decode:true highlight="false"}
+```shell
 $ java -Xlog:all=warning -version
 
 # no log messages; great, warning free!
@@ -64,7 +62,7 @@ $ java -Xlog:all=warning -version
 
 Let's try something else:
 
-``` {.lang:shell .decode:true highlight="false"}
+```shell
 $ java -Xlog:logging=debug -version
 
 > [0.034s][info][logging] Log configuration fully initialized.
@@ -92,7 +90,7 @@ Still, a message has to contain exactly those to be selected.
 Hence, using `gc` (for garbage collection) versus `gc+heap`, for example, should select different messages.
 This is indeed the case:
 
-``` {.lang:shell .decode:true highlight="false"}
+```shell
 $ java -Xlog:gc -version
 
 > [0.009s][info][gc] Using G1
@@ -104,7 +102,7 @@ $ java -Xlog:gc+heap -version
 
 Several selectors can be defined - they just have to be separated with commas:
 
-``` {.lang:shell .decode:true highlight="false"}
+```shell
 $ java -Xlog:gc,gc+heap -version
 
 > [0.007s][info][gc,heap] Heap region size: 1M
@@ -114,7 +112,7 @@ $ java -Xlog:gc,gc+heap -version
 Using this strategy it is very cumbersome to get all messages that contain a certain flag.
 Luckily, there is an easier way to do that, namely the wildcard `*`, which can be used with a single tag to define a selector:
 
-``` {.lang:shell .decode:true highlight="false"}
+```shell
 $ java -Xlog:gc*=debug -version
 
 > [0.006s][info][gc,heap] Heap region size: 1M
@@ -131,7 +129,7 @@ Using selectors, there are three easy steps to get to know a subsystem of the JV
 -   Use them with `-Xlog:tag_1*,tag_2*,tag_n*` to display all `info` messages that were tagged with any of them.
 -   Selectively switch to lower log levels with `-Xlog:tag_1*=debug`.
 
-## Defining Where Messages Should Go {#definingwheremessagesshouldgo}
+## Defining Where Messages Should Go
 
 Compared to the non-trivial selectors, the output configuration is really simple.
 It comes after the selectors (separated by a colon) and has three possible locations:
@@ -145,86 +143,53 @@ Putting in `file=` is optional.
 
 Here's how to put all `debug` messages in the file `application.log`:
 
-``` {.lang:shell .decode:true highlight="false"}
+```shell
 $ java -Xlog:all=debug:file=application.log -version
 ```
 
 More output options are available that allow log file rotation based on file size and number of files to rotate.
-While it is not possible to define more than one output option in a single `-Xlog` option, you can repeat the entire option with varied output options (thanks [Bruce](https://blog.codefx.org/java/unified-logging-with-the-xlog-option/#comment-4496458659), for pointing this out):
+While it is not possible to define more than one output option in a single `-Xlog` option, you can repeat the entire option with varied output options (thanks [Bruce](java-unified-logging-xlog)<!-- comment-4496458659 -->, for pointing this out):
 
-``` {.lang:shell .decode:true highlight="false"}
+```shell
 $ java -Xlog:all=debug:stdout -Xlog:all=debug:file=application.log -version
 ```
 
 Not exactly convenient, but functional.
 
-## Defining What Messages Should Say {#definingwhatmessagesshouldsay}
+## Defining What Messages Should Say
 
 As I said in the introduction, each message consist of text and meta-information.
 Which of these additional pieces of information will be printed, is configurable by selecting *decorators*, which are listed in the following table.
 This happens after the output location and another colon.
 
-Option
-
-Description
-
-`time`
-
-Current time and date in ISO-8601 format.
-
-`uptime`
-
-Time since the start of the JVM in seconds and milliseconds (e.g., 6.567s).
-
-`timemillis`
-
-The same value as generated by `System.currentTimeMillis()`.
-
-`uptimemillis`
-
-Milliseconds since the JVM started.
-
-`timenanos`
-
-The same value as generated by `System.nanoTime()`.
-
-`uptimenanos`
-
-Nanoseconds since the JVM started.
-
-`pid`
-
-The process identifier.
-
-`tid`
-
-The thread identifier.
-
-`level`
-
-The level associated with the log message.
-
-`tags`
-
-The tag-set associated with the log message.
+| Option | Description |
+|--------|:------------|
+| `time`			| Current time and date in ISO-8601 format. |
+| `uptime`			| Time since the start of the JVM in seconds and milliseconds (e.g., 6.567s). |
+| `timemillis`		| The same value as generated by `System.currentTimeMillis()`. |
+| `uptimemillis`	| Milliseconds since the JVM started. |
+| `timenanos`		| The same value as generated by `System.nanoTime()`. |
+| `uptimenanos`		| Nanoseconds since the JVM started. |
+| `pid`				| The process identifier. |
+| `tid`				| The thread identifier. |
+| `level`			| The level associated with the log message. |
+| `tags`			| The tag-set associated with the log message. |
 
 Let's say we want to print the time stamp, the uptime in milliseconds, and the thread ID for all garbage collection debug messages to the console.
 Here's how to do that:
 
-``` {.lang:shell .decode:true highlight="false"}
+```shell
 $ java -Xlog:gc*=debug:stdout:time,uptimemillis,tid -version
 
 # truncated messages
 > [2017-02-01T13:10:59.689+0100][7ms][18607] Heap region size: 1M
 ```
 
-<contentimage slug="unified-logging"></contentimage>
-
-## Putting The Pieces Together {#puttingthepiecestogether}
+## Putting The Pieces Together
 
 Formally, the `-Xlog` option has this syntax:
 
-``` {.lang:shell .decode:true highlight="false"}
+```shell
 -Xlog:<selectors>:<output>:<decorators>:<output-options>
 ```
 
@@ -238,7 +203,7 @@ This part is also called the *what-expression*, a phrase you will likely encount
 
 For more details, have a look at [the online documentation](https://docs.oracle.com/javase/9/tools/java.htm#JSWOR-GUID-BE93ABDC-999C-4CB5-A88B-1994AAAC74D5) or the output of `java -Xlog:help`:
 
-``` {.lang:shell .decode:true highlight="false"}
+```shell
 -Xlog Usage: -Xlog[:[what][:[output][:[decorators][:output-options]]]]
 		where 'what' is a combination of tags and levels on the form
 			tag1[+tag2...][*][=level][,...]

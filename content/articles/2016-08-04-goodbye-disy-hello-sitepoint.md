@@ -1,10 +1,9 @@
 ---
 title: "Goodbye Disy, Hello SitePoint"
-tags: []
+tags: [meta, personal]
 date: 2016-08-04
 slug: goodbye-disy-hello-sitepoint
 description: "I worked for Disy for about 2 years. Now I said goodbye to become the editor of SitePoint's burgeoning Java channel and have more time for other projects."
-searchKeywords: ""
 featuredImage: goodbye-disy-hello-sitepoint
 ---
 
@@ -33,8 +32,6 @@ No longer working with them everyday was the hardest part of saying goodbye to D
 
 Guys and gals, I will miss you!
 
-<contentimage slug="goodbye-disy-hello-sitepoint"></contentimage>
-
 ## Hello SitePoint
 
 SitePoint is building a Java channel and asked me to become its editor.
@@ -49,9 +46,7 @@ So since Monday I've been doing my new thing: finding authors, curating content,
 -   We're still building valuable content.
 -   Don't bookmark anything yet, another URL might supersede this one.
 
-If you don't want to miss the big unveiling, follow me:
-
-[feather_follow]
+If you don't want to miss the big unveiling, follow me.
 
 ## What Else?
 
@@ -60,15 +55,12 @@ So what are the other projects I was talking about?
 ### Java Module System in Action
 
 Yes, it's still on...
-
-[jms_in\_action]
-
 I woefully neglected working on it but with more free time now, I made it my top priority after SitePoint.
 
 ### CodeFX
 
 I will of course continue to write here.
-I can't wait to bore you with more details about [JUnit 5](http://blog.codefx.org/tag/junit-5/), [Java 9](http://blog.codefx.org/tag/java-9/)/[Project Jigsaw](http://blog.codefx.org/tag/project-jigsaw/), or [Clean Comments](http://blog.codefx.org/tag/clean-comments/).
+I can't wait to bore you with more details about [JUnit 5](tag:junit-5), [Java 9](tag:java-9)/[Project Jigsaw](tag:project-jigsaw), or [Clean Comments](tag:clean-comments).
 Heck, I might even write about something else one day.
 
 That's actually one thing I planned.

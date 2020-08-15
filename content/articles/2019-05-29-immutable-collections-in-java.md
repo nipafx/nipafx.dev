@@ -17,15 +17,13 @@ There's no `ImmutableLst` in the JDK and, as a type, I consider Guava's to be bo
 Why, though?
 Why not just add `Immutable...` to the mix and call it a day?
 
-[toc]
-
 ## What's An Immutable Collection?
 
 In JDK terminology, *immutable* and *unmodifiable* have shifted over the last few years.
 Originally, *unmodifiable* marked an instance that offered no mutability (by throwing `UnsupportedOperationException` on mutating methods) but may be changed in other ways (maybe because it was just a wrapper around a mutable collection).
 This understanding is reflected in the methods `Collections::unmodifiableList`, `unmodifiableSet`, and `unmodifiableMap` and [their JavaDoc](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Collection.html#unmodview).
 
-At first, [the term *immutable* was used](https://docs.oracle.com/javase/9/docs/api/java/util/List.html#immutable) for the collections returned by [Java 9's collection factory methods](https://blog.codefx.org/java/java-9-tutorial/#Collection-Factories).
+At first, [the term *immutable* was used](https://docs.oracle.com/javase/9/docs/api/java/util/List.html#immutable) for the collections returned by [Java 9's collection factory methods](java-9-tutorial#collection-factories).
 The collections themselves could not be changed in any way (well, [reflection](https://www.sitepoint.com/java-reflection-api-tutorial/), but that doesn't count) and so they seem to warrant the attribute immutable.
 Alas, that may easily cause confusion.
 Will a method that prints all elements in an immutable collection always have the same output?
@@ -52,15 +50,12 @@ Anyway, in this post, we're talking about *immutable collections* where...
 That settles that, now let's add immutable collections.
 Or rather, an immutable list - everything that follows applies just the same to all the other collection types.
 
-<contentimage slug="immutable-collections"></contentimage>
-
 ## Just Add Immutable Collections, Already!
-{#just-add-immutable-types-already}
 
 We create an interface `ImmutableList` and make it `List`'s, err..., supertype or subtype?
 Let's go with the former.
 
-<contentimage slug="immutable-collections-mutable-extends-immutable"></contentimage>
+<contentimage slug="immutable-collections-mutable-extends-immutable" options="bg narrow"></contentimage>
 
 Neat, `ImmutableList` has no mutating methods and so it's always safe to use, right?
 Right?!
@@ -85,7 +80,7 @@ This is a recipe for disaster.
 Ok, then `ImmutableList` extends `List`.
 Maybe?
 
-<contentimage slug="immutable-collections-immutable-extends-mutable"></contentimage>
+<contentimage slug="immutable-collections-immutable-extends-mutable" options="bg narrow"></contentimage>
 
 Now, if an API expects an immutable list, it will actually get one, but there are two downsides:
 
@@ -128,7 +123,7 @@ Types inherit features from other types so whichever way you slice it, if one of
 Ok, so `List` and `ImmutableList` can't extend one another.
 But we arrived here by way of `UnmodifiableList`, and indeed both types share their read-only API with it, so they should extend it.
 
-<contentimage slug="immutable-collections-both-extend-unmodifiable"></contentimage>
+<contentimage slug="immutable-collections-both-extend-unmodifiable" options="bg narrow"></contentimage>
 
 Almost.
 

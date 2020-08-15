@@ -1,5 +1,5 @@
 ---
-title: "Unlocking Intersection Types With 'var' In Java 10"
+title: "Unlocking Intersection Types With `var`"
 tags: [generics, java-10, var]
 date: 2018-06-11
 slug: java-var-intersection-types
@@ -7,6 +7,7 @@ description: "Java 10's 'var' makes intersection types in Java more approachable
 intro: "With 'var' it is much easier to work with intersection types in Java 10 and later. You still need non-trivial tricks with generics to declare intersection types, but thanks to 'var' it is now easy to create local variables of such types."
 searchKeywords: "intersection types"
 featuredImage: var-intersection-type-venn
+repo: java-x-demo
 ---
 
 Whether you're already using Java 10 or not, I'm sure you've heard [all about `var`](java-10-var-type-inference), Java's new ~~keyword~~ reserved type name that allows you to declare local variables without having to specify their types.
@@ -35,14 +36,6 @@ After some background on the why, what, and how of intersection types in Java, I
 
 Spoiler: The declaration will end up as `var elements = // ...`.
 
-### Overview
-
-To see the code snippets in action, check [my Java 10 demo project](https://github.com/CodeFX-org/demo-java-10).
-
-[toc exclude=Overview]
-
-\[codefx\_youtube thumbnail="//blog.codefx.org/wp-content/uploads/thumbnail-Java-10-var-small.jpg" text="Need to catch up on the 'var' basics?
-There's [a thorough introduction](https://www.youtube.com/watch?v=Le1DbpRZdRQ&list=PL_-IO8LOLuNp2stY1qBUtXlfMdJW7wvfT) on my YouTube channel."\]
 
 ## What Are Intersection Types?
 
@@ -68,8 +61,6 @@ static <E> Optional<E> firstMatch(
 
 You want to iterate over `elements`, so it needs to be an `Iterator`, but you also want the safety of a `try`-with-resources block, so it needs to be `Closeable` as well.
 If you think of the type `Iterator` as a circle that contains all variables of that type and likewise for `Closeable`, `elements` needs to be in the intersection of these circles - it needs to be of an *intersection type* of `Iterator` and `Closeable`.
-
-<contentimage slug="var-intersection-type-venn"></contentimage>
 
 ## Just Create A New Interface
 

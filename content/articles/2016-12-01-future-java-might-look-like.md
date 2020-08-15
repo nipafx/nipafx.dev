@@ -4,13 +4,9 @@ tags: [java-next, project-valhalla, generics, value-types]
 date: 2016-12-01
 slug: what-future-java-might-look-like
 canonicalUrl: https://www.sitepoint.com/what-java-might-one-day-look-like/
-description: ""
-intro: "Java's future is full of cool advances: data classes, value types, generics over primitives, pattern matching, etc. Let's peek into Java's future!"
-searchKeywords: ""
+description: "Java's future is full of cool advances: data classes, value types, generics over primitives, pattern matching, etc. Let's peek into Java's future!"
 featuredImage: what-future-java-might-look-like
 ---
-
-[canonical_sitepoint url="https://www.sitepoint.com/what-java-might-one-day-look-like/"]
 
 During the second week of November was [Devoxx Belgium](https://devoxx.be/), Europe's biggest Java conference, and as every year the community's who's-who showed up.
 One of them was Brian Goetz, Java Language Architect at Oracle, and he gave what I would consider the conference's most thrilling talk: ["Java Language and Platform Futures: A Sneak Peek"](https://www.youtube.com/watch?v=oGll155-vuQ).
@@ -28,7 +24,7 @@ Well... first of all, this is no tweet and second of all, I wasn't in that audie
 So here we go!
 (Seriously though, take this as what it is: a glimpse into one of many, many possible futures.)
 
-## Crash Course {#crashcourse}
+## Crash Course
 
 Before we go through the ideas one by one, let's jump right in and have a look at what code might look like that uses all of the envisaged features.
 The following class is a simple linked list that uses two types of nodes:
@@ -92,7 +88,7 @@ Here's what's new:
 
 Let's look at all the ideas that went into this example.
 
-## Data Objects {#dataobjects}
+## Data Objects
 
 When was the last time you created a domain object that was essentially a dumb data holder, maybe with one or two non-trivial methods, that still required a hundred lines for constructors, static factory methods, accessors, [`equals`](https://www.sitepoint.com/implement-javas-equals-method-correctly/), [`hashCode`](https://www.sitepoint.com/how-to-implement-javas-hashcode-correctly/), and `toString`.
 (Right now, you say?
@@ -111,7 +107,7 @@ Getting rid of all that code would be a great boost for maintainability!
 
 Looking at the linked list example we can see that `InnerNode` and `EndNode` depend on this feature.
 
-## Value Types {#valuetypes}
+## Value Types
 
 When Java was created an arithmetic operation and a load from main memory took about the same number of cycles (speaking in magnitudes here).
 This changed considerably over the last 20 and more years to the point where memory access is about three magnitudes slower.
@@ -170,7 +166,7 @@ But there's one possible value type in there: `Optional`.
 In Java 8 it is already marked as a [value-based class](java-value-based-classes), something that might one day become a value type or a wrapper thereof.
 This makes it flat and eliminates the memory indirection and possible cache miss it currently imposes.
 
-## Specialized Generics {#specializedgenerics}
+## Specialized Generics
 
 With everybody and their dog creating primitive-like value types it becomes necessary to look at how they interact with parametric polymorphism.
 As you know, generics do not work for primitives - there can't be an `ArrayList<int>`.
@@ -187,9 +183,7 @@ Code that wants to generify not only over reference types but also over value ty
 You can see that `LinkedList`, `Node`, and its implementations do exactly that.
 This means that in a `LinkedList<int>` the nodes would actually have `int` fields as opposed to the `Object` fields holding boxed `Integer`s as would be the case with a `LinkedList<Integer>` nowadays.
 
-<contentimage slug="what-future-java-might-look-like"></contentimage>
-
-## More Type Inference {#moretypeinference}
+## More Type Inference
 
 Java has done type inference since Java 5 (for type witnesses in generic methods) and the mechanism was extended in Java 7 (diamond operator), 8 (lambda parameter types), and 9 (diamond on anonymous classes).
 In Java X it might very well cover variable declarations.
@@ -224,7 +218,7 @@ Not good and hence forbidden.
 
 So that only local variables' types are inferred is more about protecting the ecosystem from unstable code than protecting developers from unreadable code.
 
-## Pattern Matching {#patternmatching}
+## Pattern Matching
 
 [Java's current `switch` statement](https://www.sitepoint.com/javas-switch-statement/) is pretty weak.
 You can use it for primitives, enums and strings but that's it.

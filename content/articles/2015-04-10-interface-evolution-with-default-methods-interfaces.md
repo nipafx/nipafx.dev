@@ -1,6 +1,6 @@
 ---
 title: "Interface Evolution With Default Methods – Part II: Interfaces"
-tags: [default-methods, generics, java-8, patterns]
+tags: [default-methods, generics, java-8]
 date: 2015-04-10
 slug: java-default-methods-interface-evolution-failure
 description: "Why interface evolution with default methods does not work for whole interfaces - at least not smooth enough to be practical."
@@ -8,7 +8,7 @@ searchKeywords: "interface evolution"
 featuredImage: interface-evolution-with-default-methods-II
 ---
 
-[Default methods](http://blog.codefx.org/jdk/everything-about-default-methods/) were introduced to enable interface evolution.
+[Default methods](java-default-methods-guide) were introduced to enable interface evolution.
 If backwards compatibility is sacrosanct, this is limited to adding new methods to interfaces (which is their exclusive use in the JDK).
 But if clients are expected to update their code, default methods can be used to gradually evolve interfaces without causing compile errors, thus giving clients time to update their code to a new version of the interface.
 
@@ -16,8 +16,7 @@ But if clients are expected to update their code, default methods can be used to
 I foolishly announced that "a future post will look into ways to replace whole interfaces" - also without breaking client code.
 
 Well, you're reading this post now and the unfortunate summary is:
-
-I couldn't make it work.
+**I couldn't make it work.**
 
 Why?
 Generics.
@@ -26,12 +25,6 @@ Why exactly?
 You really want to know?
 Well, read on then, but the rest of the post is really only a description of how I ended up at a roadblock so don't expect too much of it.
 (Great incentive, eh?)
-
-### Overview
-
-I'll start by defining the problem I was trying to solve before describing what I tried and how I failed.
-
-[toc exclude=Overview]
 
 ## The Problem Statement
 
@@ -119,7 +112,7 @@ And as all internal code requires the new interface it must make the step from `
 
 Without generics it might look like this:
 
-``` {.lang:java title="Transforming 'Old' to 'New' in Published Code"}
+```java
 // in version 0
 public Old doSomething(Old o) {
 	// 'callToInternalCode' requires an 'Old'
@@ -164,7 +157,7 @@ So using the published layer of code to adapt from the old to the new interface 
 
 -   Due to the invariance of generics in Java, all assignments of the return value will break:
 
-	``` {.lang:java .decode:true title="Invariance Breaks Assignments"}
+	```java
 	Container<Old> old = // ...
 	// works in version 0; breaks in version 1
 	Container<Old> o = published.doSomething(old);
@@ -176,10 +169,6 @@ This leads to two problems:
 	-   Changes the internal code makes to the new container are not propagated to the container passed by the external code.
 
 Damn...
-
-<contentimage slug="interface-evolution-with-default-methods-II"></contentimage>
-
-[Published](https://www.flickr.com/photos/wsdot/4679360979) by the [Washington State Dept of Transportation](https://www.flickr.com/photos/wsdot/) under [CC-BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/).
 
 From the outset on I felt that generics would be trouble - in retrospect that's actually pretty obvious.
 When types are involved how can generics *not* be a problem.

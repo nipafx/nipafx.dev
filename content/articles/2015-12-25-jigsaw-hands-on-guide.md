@@ -1,22 +1,19 @@
 ---
 title: "Jigsaw Hands-On Guide"
-tags: [java-next, java-9, project-jigsaw]
+tags: [java-next, project-jigsaw]
 date: 2015-12-25
 slug: jigsaw-hands-on-guide
+canonicalUrl: http://www.javaadvent.com/2015/12/project-jigsaw-hands-on-guide.html
+canonicalText: "I originally wrote this post for the Java Advent Calendar, where it was [published on December 10th, 2015](http://www.javaadvent.com/2015/12/project-jigsaw-hands-on-guide.html)."
 description: "A Jigsaw tutorial explaining how to create modules, state dependencies between them, and use the module system as a service locator to decouple modules."
 searchKeywords: "Jigsaw tutorial"
 featuredImage: jigsaw-hands-on-guide-advent
 ---
 
-*I originally wrote this post for the [Java Advent Calendar](http://www.javaadvent.com/), where it was [published on December 10th, 2015](http://www.javaadvent.com/2015/12/project-jigsaw-hands-on-guide.html).
-It was updated in February 2017.
-[codefx_series\_projectjigsaw]*
-## 
-
 Project Jigsaw will bring modularization to the Java platform and according to [the original plan](http://mail.openjdk.java.net/pipermail/jdk9-dev/2015-May/002172.html) it was going to be feature complete on the 10th of December.
 So here we are but where is Jigsaw?
 
-Surely a lot happened in the last six months: The [prototype came out](http://openjdk.java.net/projects/jigsaw/ea), the looming removal of internal APIs [caused quite a ruckus](http://blog.dripstat.com/removal-of-sun-misc-unsafe-a-disaster-in-the-making/), the [mailing list](http://mail.openjdk.java.net/mailman/listinfo/jigsaw-dev) is full of [critical discussions](http://mail.openjdk.java.net/pipermail/jigsaw-dev/2015-December/005511.html) about the project's design decisions, and JavaOne saw [a series of great introductory talks](http://blog.codefx.org/tag/javaone/) by the Jigsaw team.
+Surely a lot happened in the last six months: The [prototype came out](http://openjdk.java.net/projects/jigsaw/ea), the looming removal of internal APIs [caused quite a ruckus](http://blog.dripstat.com/removal-of-sun-misc-unsafe-a-disaster-in-the-making/), the [mailing list](http://mail.openjdk.java.net/mailman/listinfo/jigsaw-dev) is full of [critical discussions](http://mail.openjdk.java.net/pipermail/jigsaw-dev/2015-December/005511.html) about the project's design decisions, and JavaOne saw [a series of great introductory talks](tag:community) by the Jigsaw team.
 And [then Java 9 got delayed for half year](delay-of-java-9-release) due to Jigsaw.
 
 But let's ignore all of that for now and just focus on the code.
@@ -24,8 +21,6 @@ In this post we'll take an existing demo application and modularize it with Java
 If you want to follow along, head over [to GitHub](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar), where all of the code can be found.
 The [setup instructions](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar/tree/master#setup) are important to get the scripts running with Java 9.
 For brevity, I removed the prefix `org.codefx.demo` from all package, module, and folder names in this article.
-
-[toc heading_levels="2,3"]
 
 ## The Application Before Jigsaw
 
@@ -169,8 +164,6 @@ Note how the JAR is created in the directory `mods`.
 Utterly different is the way the application is started.
 The idea is to tell Java where to find the application modules (with `--module-path mods`, this is called the *module path*) and which module we would like to launch (with `--module advent`).
 
-<contentimage slug="jigsaw-hands-on-guide-advent"></contentimage>
-
 ## Splitting Into Modules
 
 Now it's time to really get to know Jigsaw and [split that monolith up](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar/tree/02-splitting-into-modules) into separate modules.
@@ -198,7 +191,7 @@ Looking at their dependencies we see that *surprise* depends on no other module.
 Both *calendar* and *factories* make use of its types so they must depend on it.
 Finally, *main* uses the factories to create the calendar so it depends on both.
 
-<contentimage slug="jigsaw-hands-on-splitting-into-modules"></contentimage>
+<contentimage slug="jigsaw-hands-on-splitting-into-modules" options="bg"></contentimage>
 
 ### Implementation
 
@@ -397,7 +390,7 @@ We use this opportunity to split *factories* into *chocolate* and *quote* and en
 -   *quote* - the `QuoteFactory` as a service
 -   *main* - the application; no longer requires individual factories
 
-<contentimage slug="jigsaw-hands-on-services"></contentimage>
+<contentimage slug="jigsaw-hands-on-services" options="bg"></contentimage>
 
 ### Implementation
 
@@ -480,8 +473,6 @@ Compilation and execution are like before.
 And we can indeed change the surprises the calendar will eventually contain by simply removing one of the factory modules from the module path.
 Neat!
 
-[jms_in\_action]
-
 ## Summary
 
 So that's it.
@@ -493,4 +484,4 @@ But there is lots more to talk about!
 Jigsaw brings [a couple of incompatibilities](how-java-9-and-project-jigsaw-may-break-your-code) but also the means to solve many of them.
 And we haven't talked about [how reflection interacts with the module system](java-modules-reflection-vs-encapsulation) and how to migrate external dependencies.
 
-If these topics interest you, watch [this tag](http://blog.codefx.org/tag/project-jigsaw/) as I will surely write about them over the coming months.
+If these topics interest you, watch [this tag](tag:project-jigsaw) as I will surely write about them over the coming months.

@@ -6,7 +6,7 @@ slug: taxonomy-comments
 description: "A taxonomy of source code comments that enables further discussion about clean code and comments."
 intro: "To discuss the up- and downsides of comments we need to know what exactly we are talking about. Categorizing and characterizing different kinds of comments is an important preparatory step."
 searchKeywords: "taxonomy comments"
-featuredImage: taxonomy-of-comments-contract
+featuredImage: taxonomy-of-comments
 ---
 
 Comments can be used to convey what code does, what it should to, what it does not do, why it exists, when and how it should and shouldn't be used, and more.
@@ -15,21 +15,12 @@ Let's categorize them!
 
 Isn't this boring?
 Well, maybe, although [Carl](https://en.wikipedia.org/wiki/Carl_Linnaeus) didn't think so.
-And I see it as an important next step in our discussion about comments:
-
-[codefx_series\_comments\_list]
-
-### Overview
-
-The different kinds of comments will be compared along the lines of their content, maintenance implications, locations and alternatives.
-
-The icons are from the [News and Magazine icon set](https://www.iconfinder.com/iconsets/news-and-magazine), created by [HevnGrafix](http://hevngrafix.com/).
-
-[toc exclude=Overview heading_levels="2,3"]
+And I see it as an important next step in our discussion about comments.
+I will compare the different kinds of comments along the lines of their content, maintenance implications, locations and alternatives.
 
 ## Categories
 
-### Narrations [![taxonomy-of-comments-narration](//blog.codefx.org/wp-content/uploads/taxonomy-of-comments-narration-150x150.png){.size-thumbnail .wp-image-2071 width="30"}](http://blog.codefx.org/techniques/documentation/taxonomy-comments#narrations) {#narrations}
+### Narrations
 
 There are comments which narrate ***what*** the code does.
 Things like "loop through the list of customers" or "increase total by the new product's price".
@@ -55,7 +46,7 @@ explain the code much better and also make it more maintainable.
 It is widely agreed that these comments should be avoided.
 Only in rare cases, if arcane but unavoidable language mechanisms are used, might they be necessary.
 
-### Contracts [![taxonomy-of-comments-contract](//blog.codefx.org/wp-content/uploads/taxonomy-of-comments-contract-150x150.png){.size-thumbnail .wp-image-2071 width="30"}](http://blog.codefx.org/techniques/documentation/taxonomy-comments#contracts) {#contracts}
+### Contracts
 
 Then there are contract-defining comments.
 They describe the central abstraction of a unit of code, how it interacts with its dependencies, and which pre- and postconditions hold.
@@ -94,7 +85,7 @@ Much of the newly gained knowledge might soon be forgotten if the analyzed code 
 I consider the comparison of clean code and tests on one, and contract comments on the other side the most crucial aspect in this discussion.
 I will not further it here but repeat what I said before: Why not invest in both?
 
-### Technical Context [![taxonomy-of-comments-technical](//blog.codefx.org/wp-content/uploads/taxonomy-of-comments-technical-150x150.png){.size-thumbnail .wp-image-2071 width="30"}](http://blog.codefx.org/techniques/documentation/taxonomy-comments#technical-context) {#technical-context}
+### Technical Context
 
 Comments can provide technical context and clarify ***what*** a unit code is there ***for***.
 They can explain when it can be used and when it can not, which problem one might solve with it, and even give examples for how to do that.
@@ -133,7 +124,7 @@ Additionally this might mix intended and problematic use cases without further d
 Demos are a great way to describe what a piece of code is there for.
 They are rare, though, and must be maintained as well.
 
-### Historical Context [![taxonomy-of-comments-historical](//blog.codefx.org/wp-content/uploads/taxonomy-of-comments-historical-150x150.png){.size-thumbnail .wp-image-2071 width="30"}](http://blog.codefx.org/techniques/documentation/taxonomy-comments#historical-context) {#historical-context}
+### Historical Context
 
 Code is often written according to some specification or situation that demands a non-obvious design.
 Maybe a cleaner approach could've been taken were it not for some very specific detail that could otherwise not be incorporated.
@@ -167,113 +158,79 @@ Another source for historical context are the issues the commits are associated 
 They can contain lots of valuable information that are hard to present in comments or commit messages, like diagrams, discussions with clients, links to other sources like Wikis, and more.
 But issues are even further removed from the code and often cover more high-level ground.
 
-<contentimage slug="taxonomy-of-comments"></contentimage>
-
 ## Reflection
 
 We divided comments into these four categories:
 
-Content
-
-Maintenance
-
-Location
-
-Alternatives
-
-Goal
-
-Cost
-
-Form
-
-Locality
-
-Narrations
-
-what
-
-(descriptive)
-
-match
-
-impl.
-
-very high
-
-inline
-
-very
-
-important
-
-clean code
-
-Contracts
-
-what
-
-(declarative)
-
-match
-
-behavior
-
-high
-
-doc.
-
-comments
-
-important
-
-clean code,
-
-tests
-
-Technical
-
-Context
-
-what for
-
-be
-
-helpful
-
-medium
-
-block
-
-comments
-
-preferable
-
-clean code,
-
-tests, demos
-
-Historical
-
-Context
-
-why
-
-delete if
-
-outdated
-
-very low
-
-point out
-
-transience
-
-preferable
-
-commit msg,
-
-issues
+<table class="center" style="font-size:80%;">
+  <tr>
+    <th></th>
+    <th>Content</th>
+    <th colspan="2">Maintenance</th>
+    <th colspan="2">Location</th>
+    <th>Alternatives</th>
+  </tr>
+  <tr>
+    <th></th>
+    <th></th>
+    <th>Goal</th>
+    <th>Cost</th>
+    <th>Form</th>
+    <th>Locality</th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Narrations</th>
+    <td>what
+(descriptive)</td>
+    <td>match
+impl.</td>
+    <td>very high</td>
+    <td>inline</td>
+    <td>very
+important</td>
+    <td>clean code</td>
+  </tr>
+  <tr>
+    <th>Contracts</th>
+    <td>what
+(declarative)</td>
+    <td>match
+behavior</td>
+    <td>high</td>
+    <td>doc.
+comments</td>
+    <td>important</td>
+    <td>clean code,
+tests</td>
+  </tr>
+  <tr>
+    <th>Technical
+Context</th>
+    <td>what for</td>
+    <td>be
+helpful</td>
+    <td>medium</td>
+    <td>block
+comments</td>
+    <td>preferable</td>
+    <td>clean code,
+tests, demos</td>
+  </tr>
+  <tr>
+    <th>Historical
+Context</th>
+    <td>why</td>
+    <td>delete if
+outdated</td>
+    <td>very low</td>
+    <td>point out
+transience</td>
+    <td>preferable</td>
+    <td>commit msg,
+issues</td>
+  </tr>
+</table>
 
 I hope this taxonomy helps teams to decide whether and how they want to use comments.
 We can see that different kinds have different properties and should hence be discussed separately.

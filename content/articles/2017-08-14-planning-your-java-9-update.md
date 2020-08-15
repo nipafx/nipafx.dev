@@ -13,9 +13,7 @@ You've read [the module system tutorial](java-module-system-tutorial) and [the J
 Great!
 Here are some tips on how to get a sense of what's awaiting you.
 
-[toc]
-
-## Looking For Trouble {#lookingfortrouble}
+## Looking For Trouble
 
 There are two obvious steps to take to gather the first data points for how challenging your update will be:
 
@@ -26,14 +24,14 @@ Consider using `--illegal-access=debug` or `deny` to get more information on ill
 Carefully analyze the output, take note of new warnings and errors and try to link them to what you know about [migration challenges](java-9-migration-guide).
 Also look out for warnings or errors due to removed command line options.
 
-It is a good idea to apply some quick fixes like [adding exports](https://blog.codefx.org/java/java-9-migration-guide/#Illegal-Access-To-Internal-APIs) or [Java EE modules](https://blog.codefx.org/java/java-9-migration-guide/#Dependencies-On-Java-EE-Modules).
+It is a good idea to apply some quick fixes like [adding exports](java-9-migration-guide#illegal-access-to-internal-apis) or [Java EE modules](java-9-migration-guide#dependencies-on-java-ee-modules).
 This allows you to see the tougher problems that may be hiding behind benign ones.
 In this phase, no fix is too dirty or too hacky - anything that gets the build to throw a new error is a victory.
 If you get too many compile errors, you could compile with Java 8 and just run the tests on Java 9.
 
 Then [run JDeps](jdeps-tutorial-analyze-java-project-dependencies) on your project *and your dependencies*.
-Analyze dependencies on [JDK-internal APIs](https://blog.codefx.org/java/java-9-migration-guide/#Illegal-Access-To-Internal-APIs) and take not of any [Java EE modules](https://blog.codefx.org/java/java-9-migration-guide/#Dependencies-On-Java-EE-Modules).
-Also look for [split packages between platform modules and application JARs](https://blog.codefx.org/java/java-9-migration-guide/#Split-Packages).
+Analyze dependencies on [JDK-internal APIs](java-9-migration-guide#illegal-access-to-internal-apis) and take not of any [Java EE modules](java-9-migration-guide#dependencies-on-java-ee-modules).
+Also look for [split packages between platform modules and application JARs](java-9-migration-guide#split-packages).
 A good way to get started are the following two JDeps calls, where all your project's dependencies are in the `libs` folder:
 
 ```shell
@@ -41,13 +39,10 @@ jdeps --jdk-internals -R --class-path 'libs/*' project.jar
 jdeps -s -R --class-path 'libs/*' project.jar
 ```
 
-Finally, search your code base for calls to `AccessibleObject::setAccessible`, [casts to `URLClassLoader`](https://blog.codefx.org/java/java-9-migration-guide/#Casting-To-URL-Class-Loader), [parsing of `java.version` system properties](https://blog.codefx.org/java/java-9-migration-guide/#New-Version-Strings), or [handcrafting resource URLs](https://blog.codefx.org/java/java-9-migration-guide/#Rummaging-Around-In-Run-Time-Images).
+Finally, search your code base for calls to `AccessibleObject::setAccessible`, [casts to `URLClassLoader`](java-9-migration-guide#casting-to-urlclassloader), [parsing of `java.version` system properties](java-9-migration-guide#new-version-strings), or [handcrafting resource URLs](java-9-migration-guide#rummaging-around-in-runtime-images).
 Put everything you found on one big list - now it's time to analyze it.
 
-<contentimage slug="java-9-migration-planning"></contentimage>
-
 ## How Bad Is It?
-{#howbadisit}
 
 The problems you've found should fall into the two categories "I've seen it in before" and "What the fuck is going on?".
 For the former, split it up further into "Has at least a temporary fix" and "Is a hard problem." Particularly hard problems are removed APIs and package splits between platform modules and JARs that do not implement an endorsed standard or a standalone technology.
@@ -71,9 +66,7 @@ When you're all done you should have a list of issues in these three categories:
 
 For problems in the last two categories, you should know how dangerous they are for your project and how easy you could get by without fixing them right now.
 
-[jms_in\_action title="Learn more about updating to Java 9 in my book:"]
-
-## On Estimating Numbers {#onestimatingnumbers}
+## On Estimating Numbers
 
 Chances are, somebody wants you to make an estimate that involves some hard numbers - maybe in hours, maybe in cash.
 That's tough in general, but here it is particularly problematic.
@@ -86,7 +79,7 @@ Finally, just like a good boss battle, the critical problem, the one that costs 
 
 I'm not saying these scenarios are *likely* just that they're *possible*, so be careful with guessing how long it might take you to migrate to Java 9.
 
-## Jumping Into Action {#jumpingintoaction}
+## Jumping Into Action
 
 The next step is to actually start working on the issues you collected.
 I recommend to not do that in isolation, but to set your build tool and continuous integration up to build your project with Java 9 and then start solving them one by one.

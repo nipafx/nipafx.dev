@@ -1,44 +1,27 @@
 ---
-title: "Serialize Optional"
+title: "Serialize `Optional`"
 tags: [java-8, optional, serialization]
 date: 2014-11-02
 slug: serialize-java-optional
+intro: "A summary of why you can't serialize `Optional` and what can be done to deal with that limitation if necessary."
 description: "A summary of why you can't serialize Optional and what can be done to deal with that limitation if necessary."
 searchKeywords: "serialize optional"
-featuredImage: question-mark-written
+featuredImage: serialize-optional
+repo: demo-serialize-optional
 ---
 
-In [a recent post](http://blog.codefx.org/jdk/dev/why-isnt-optional-serializable/) I explained why we can't serialize Optional.
+In [a recent post](why-isnt-java-optional-serializable) I explained why we can't serialize Optional.
 But what if, after all that, we still really, really want to?
 Let's see how to come as close as possible.
 
-### Update
-
-This is part of a series of posts about Optional:
-
--   [Intention Revealing Code With Java 8’s New Type Optional](intention-revealing-code-java-8-optional): Use Optional everywhere instead of null (which should be rare in the first place).
--   [The Design Of Optional](http://blog.codefx.org/jdk/dev/design-optional/): How the expert group came to the decision to include Optional in Java 8.
--   [Why Isn’t Optional Serializable?](http://blog.codefx.org/jdk/dev/why-isnt-optional-serializable/): Well, why isn't it?
--   [Serialize Optional](http://blog.codefx.org/jdk/serialize-optional/): What to do if you really want to serialize it anyways.
-
-### Overview
-
-This post first takes a look at possible scenarios in which we want to serialize Optional and then presents a serializable wrapper for it.
-Finally, bringing both together, it shows solutions for the different scenarios.
-The post relies on the [concepts of serialization](http://blog.codefx.org/jdk/concepts-serialization/) and especially the [serialization proxy pattern](java-serialization-proxy-pattern), which I described recently.
-
-I created a [demo project at GitHub](https://github.com/CodeFX-org/demo-serialize-optional) which contains the complete code of the involved classes and a demonstration on how to use them.
-Check it out for more details.
-The next release of [LibFX](http://blog.codefx.org/cat/libfx/) will also contain the serializable wrapper from that project.
-
-[toc exclude=Overview|Disclaimer|Update]
+We'll first take a look at possible scenarios in which we want to serialize Optional and then present a serializable wrapper for it.
+(By the way, the next release of [LibFX](tag:libfx) will contain that wrapper.)
+Finally, bringing both together, we'll see solutions for the different scenarios.
 
 ## When To Serialize Optional
 
-Do restate the facts: Optional does not implement Serializable.
+Do restate the facts: `Optional` does not implement `Serializable`.
 And it is final, which prevents us from creating a serializable subclass.
-
-<contentimage slug="question-mark-written"></contentimage>
 
 There are at least two scenarios which require to serialize an Optional:
 
@@ -56,7 +39,7 @@ Several approaches exist.
 It would be possible to simply create a class which duplicates all the functionality of Optional but is serializable.
 It can then be used as a full replacement.
 This will likely lead to this class permeating the code base instead of the official one.
-In the face of future changes to the language, [which might optimize performance if Optional follows a defined and rigid structure](http://blog.codefx.org/jdk/dev/why-isnt-optional-serializable/#Value-Types), and for various other reasons I don't think this is a good idea.
+In the face of future changes to the language, [which might optimize performance if Optional follows a defined and rigid structure](why-isnt-java-optional-serializable#value-types), and for various other reasons I don't think this is a good idea.
 
 Instead a simple class could be created which just allows to wrap and unwrap an Optional.
 It would be serializable by writing/reading the object contained in that Optional.
@@ -75,7 +58,7 @@ For the exchange regarding that see [Remi's initial statement](http://mail.openj
 
 If a class wants to serialize a field of type Optional, it has to customize its serialization mechanism.
 This is actually a good idea for any serializable - see [chapter 11 in Java Bloch's excellent *Effective Java* (2nd Edition)](http://books.google.de/books?id=ka2VUBqHiWkC&pg=PA289&source=gbs_toc_r&cad=3#v=onepage&q&f=false).
-It can either define a [custom serialized form](http://blog.codefx.org/jdk/concepts-serialization/#Custom-Serialized-Form) or implement the [serialization proxy pattern](java-serialization-proxy-pattern).
+It can either define a [custom serialized form](java-concepts-serialization#custom-serialized-form) or implement the [serialization proxy pattern](java-serialization-proxy-pattern).
 
 As it is the recommended approach in most cases, I will only cover the proxy pattern.
 
@@ -83,7 +66,7 @@ As it is the recommended approach in most cases, I will only cover the proxy pat
 
 In most cases there is no need to have a nullable/optional field in a class.
 A better design can often be created and should be actively looked for!
-([Apparently Optional isn't serializable in order to convey that fact.](http://blog.codefx.org/jdk/dev/why-isnt-optional-serializable/#Return-Type))
+([Apparently Optional isn't serializable in order to convey that fact.](why-isnt-java-optional-serializable#return-type))
 
 If the class must have an optional field, it should be carefully decided whether it is part of the class's logical representation.
 The fact that it is nullable/optional makes it likely that it is transient and can be recreated after deserialization.

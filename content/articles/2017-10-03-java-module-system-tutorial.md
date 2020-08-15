@@ -7,6 +7,7 @@ description: "Tutorial of Java 9 module system basics: declare modules with modu
 intro: "Learn all the module system basics in this tutorial: how to declare modules with module-info.java, compile, package, and launch them and what role the module path and readability graph play."
 searchKeywords: "module system"
 featuredImage: jpms-tutorial-pieces
+inlineCodeLanguage: shell
 ---
 
 The Java Platform Module System (JPMS) brings modularization to Java and the JVM and it changes how we program in the large.
@@ -18,9 +19,7 @@ I use two projects in this tutorial and both can be found on GitHub: The first i
 Check them out if you want to take a closer look.
 All commands like `javac`, `jar`, and `java` refer to the Java 9 variants.
 
-[toc heading_levels="2,3"]
-
-## Hello, Modular World {#hellomodularworld}
+## Hello, Modular World
 
 Let's start with the simplest possible application, one that prints *Hello, modular World!* Here's the class:
 
@@ -52,7 +51,7 @@ module org.codefx.demo.jpms_hello_world {
 
 With the common `src/main/java` directory structure, the program's directory layout looks as follows:
 
-<contentimage slug="jpms-tutorial-directory-hw"></contentimage>
+<contentimage slug="jpms-tutorial-directory-hw" options="narrow"></contentimage>
 
 These are the commands to compile, package and launch it:
 
@@ -139,21 +138,21 @@ module org.codefx.demo.jpms {
 }
 ```
 
-#### Dependencies And Readability {#dependencies-readability}
+#### Dependencies And Readability
 
 Another thing we missed in JARs was the ability to declare dependencies, but with the module system, these times are over: Dependencies have to be made explicit - all of them, on JDK modules as well as on third-party libraries or frameworks.
 
-<pullquote>All dependencies have to be made explicit with `requires` directives</pullquote>
+<pullquote>All dependencies have to be made explicit with `java§requires` directives</pullquote>
 
-Dependencies are declared with `requires` directives, which consist of the keyword itself followed by a module name.
-When scanning modules, the JPMS builds a *readability graph*, where modules are nodes and `requires` directives get turned into so-called *readability edges* - if module *org.codefx.demo.jpms* requires module *java.base*, then at runtime *org.codefx.demo.jpms* reads *java.base*.
+Dependencies are declared with `java§requires` directives, which consist of the keyword itself followed by a module name.
+When scanning modules, the JPMS builds a *readability graph*, where modules are nodes and `java§requires` directives get turned into so-called *readability edges* - if module *org.codefx.demo.jpms* requires module *java.base*, then at runtime *org.codefx.demo.jpms* reads *java.base*.
 
 The module system will throw an error if it cannot find a required module with the right name, which means compiling as well as launching an application will fail if modules are missing.
 This achieves *reliable configuration* one of [the goals of the module system](motivation-goals-project-jigsaw), but can be prohibitively strict - check my post on [optional dependencies](java-modules-optional-dependencies) to see a more lenient alternative.
 
 All types the *Hello World* example needs can be found in the JDK module *java.base*, the so-called *base module*.
-Because it contains essential types like `Object`, all Java code needs it and so it doesn't have to be required explicitly.
-Still, I do it in this case to show you a `requires` directive:
+Because it contains essential types like `java§Object`, all Java code needs it and so it doesn't have to be required explicitly.
+Still, I do it in this case to show you a `java§requires` directive:
 
 ```java
 module org.codefx.demo.jpms {
@@ -161,19 +160,19 @@ module org.codefx.demo.jpms {
 }
 ```
 
-#### Exports And Accessibility {#exports-accessibility}
+#### Exports And Accessibility
 
 A module lists the packages it exports.
-For code in one module (say *org.codefx.demo.jpms*) to access types in another (say `String` in *java.base*), the following *accessibility* rules must be fulfilled:
+For code in one module (say *org.codefx.demo.jpms*) to access types in another (say `java§String` in *java.base*), the following *accessibility* rules must be fulfilled:
 
-<pullquote>A module's API is defined by its `exports` directives</pullquote>
+<pullquote>A module's API is defined by its `java§exports` directives</pullquote>
 
--   the accessed type (`String`) must be public
--   the package containing the type (`java.lang`) must be exported by its module (*java.base*)
+-   the accessed type (`java§String`) must be public
+-   the package containing the type (`java§java.lang`) must be exported by its module (*java.base*)
 -   the accessing module (*org.codefx.demo.jpms*) must read the accessed one (*java.base*), which is typically achieved by requiring it
 
 If any of these rules are violated at compile or run time, the module systems throws an error.
-This means that `public` is no longer really public.
+This means that `java§public` is no longer really public.
 A public type in a non-exported package is as inaccessible to the outside world as a non-public type in an exported package.
 Also note that reflection lost its superpowers.
 It is bound by the exact same accessibility rules unless [command line flags](five-command-line-options-hack-java-module-system) are used.
@@ -190,7 +189,7 @@ module org.codefx.demo.jpms_hello_world {
 }
 ```
 
-### Module Path {#modulepath}
+### Module Path
 
 We now know how we can define modules and their essential properties.
 What's still a little unclear is how exactly we tell the compiler and runtime about them.
@@ -204,7 +203,7 @@ Both `javac` and `java` as well as other module-related commands can process it 
 All artifacts on the module path are turned into modules.
 This is even true for plain JARs, which get turned into [automatic modules](http://openjdk.java.net/projects/jigsaw/spec/sotms/#automatic-modules).
 
-### Compiling, Packaging, Running {#compilingpackagingrunning}
+### Compiling, Packaging, Running
 
 Compiling works much like without the module system:
 
@@ -244,9 +243,7 @@ And that's it!
 We've created a very simple, but nonetheless modular Hello-World application and successfully build and launched it.
 Now it's time to turn to a slightly less trivial example to see mechanisms like dependencies and exports in action.
 
-[jms_in\_action title="Go deeper:"]
-
-## The *ServiceMonitor* {#theapplicationbeforethemodulesystem}
+## The `ServiceMonitor`
 
 Let's imagine a network of services that cooperate to delight our users; maybe a social network or a video platform.
 We want to monitor those services to determine how healthy the system is and spot problems when they occur (instead of when customers report them).
@@ -254,24 +251,24 @@ This is where the example application, the *ServiceMonitor* comes in: It monitor
 
 As luck would have it, the services already collect the data we want, so all the *ServiceMonitor* needs to do is query them periodically.
 Unfortunately not all services expose the same REST API - two generations are in use, Alpha and Beta.
-That's why `ServiceObserver` is an interface with two implementations.
+That's why `java§ServiceObserver` is an interface with two implementations.
 
-Once we have the diagnostic data, in the form of a `DiagnosticDataPoint`, they can be fed to a `Statistician`, which aggregates them to `Statistics`.
-These, in turn, are stored in a `StatisticsRepository` as well as made available via REST by `MonitorServer`.
-The `Monitor` class ties everything together.
+Once we have the diagnostic data, in the form of a `java§DiagnosticDataPoint`, they can be fed to a `java§Statistician`, which aggregates them to `java§Statistics`.
+These, in turn, are stored in a `java§StatisticsRepository` as well as made available via REST by `java§MonitorServer`.
+The `java§Monitor` class ties everything together.
 
 All in all, we end up with these types:
 
--   `DiagnosticDataPoint`: service data for a time interval
--   `ServiceObserver`: interface for service observation that returns `DiagnosticDataPoint`
--   `AlphaServiceObserver` and `BetaServiceObserver`: each observes a variant of services
--   `Statistician`: computes `Statistics` from `DiagnosticDataPoint`
--   `Statistics`: holds the computed statistics
--   `StatisticsRepository`: stores and retrieve `Statistics`
--   `MonitorServer`: answers REST calls for the statistics
--   `Monitor`: ties everything together
+-   `java§DiagnosticDataPoint`: service data for a time interval
+-   `java§ServiceObserver`: interface for service observation that returns `java§DiagnosticDataPoint`
+-   `java§AlphaServiceObserver` and `java§BetaServiceObserver`: each observes a variant of services
+-   `java§Statistician`: computes `java§Statistics` from `java§DiagnosticDataPoint`
+-   `java§Statistics`: holds the computed statistics
+-   `java§StatisticsRepository`: stores and retrieve `java§Statistics`
+-   `java§MonitorServer`: answers REST calls for the statistics
+-   `java§Monitor`: ties everything together
 
-<contentimage slug="jpms-tutorial-monitor-classes"></contentimage>
+<contentimage slug="jpms-tutorial-monitor-classes" options="bg"></contentimage>
 
 The application depends on the [Spark micro web framework](http://sparkjava.com/) and we reference it by the module name *spark.core*.
 It can be found in the `libs` directory together with its transitive dependencies.
@@ -310,7 +307,7 @@ Note that unlike earlier, we already have to use the module path during compilat
 
 And with that we've created a single-module *ServiceMonitor*!
 
-## Splitting Into Modules {#splittingintomodules}
+## Splitting Into Modules
 
 Now that we got one module going, it's time to really start using the module system and split the *ServiceMonitor* up.
 For an application of this size it is of course ludicrous to turn it into several modules, but it's a demo, so here we go.
@@ -318,33 +315,33 @@ For an application of this size it is of course ludicrous to turn it into severa
 The most common way to modularize applications is a separation by concerns.
 *ServiceMonitor* has the following, with the related types in parenthesis:
 
--   collecting data from services (`ServiceObserver`, `DiagnosticDataPoint`)
--   aggregating data into statistics (`Statistician`, `Statistics`)
--   persisting statistics (`StatisticsRepository`)
--   exposing statistics via a REST API (`MonitorServer`)
+-   collecting data from services (`java§ServiceObserver`, `java§DiagnosticDataPoint`)
+-   aggregating data into statistics (`java§Statistician`, `java§Statistics`)
+-   persisting statistics (`java§StatisticsRepository`)
+-   exposing statistics via a REST API (`java§MonitorServer`)
 
 But not only the domain logic generates requirements.
 There are also technical ones:
 
 -   data collection must be hidden behind an API
--   Alpha and Beta services each require a separate implementation of that API (`AlphaServiceObserver` and `BetaServiceObserver`)
--   orchestration of all concerns (`Monitor`)
+-   Alpha and Beta services each require a separate implementation of that API (`java§AlphaServiceObserver` and `java§BetaServiceObserver`)
+-   orchestration of all concerns (`java§Monitor`)
 
 This results in the following modules with the mentioned publicly visible types:
 
--   *monitor.observer* (`ServiceObserver`, `DiagnosticDataPoint`)
--   *monitor.observer.alpha* (`AlphaServiceObserver`)
--   *monitor.observer.beta* (`BetaServiceObserver`)
--   *monitor.statistics* (`Statistician`, `Statistics`)
--   *monitor.persistence* (`StatisticsRepository`)
--   *monitor.rest* (`MonitorServer`)
--   *monitor* (`Monitor`)
+-   *monitor.observer* (`java§ServiceObserver`, `java§DiagnosticDataPoint`)
+-   *monitor.observer.alpha* (`java§AlphaServiceObserver`)
+-   *monitor.observer.beta* (`java§BetaServiceObserver`)
+-   *monitor.statistics* (`java§Statistician`, `java§Statistics`)
+-   *monitor.persistence* (`java§StatisticsRepository`)
+-   *monitor.rest* (`java§MonitorServer`)
+-   *monitor* (`java§Monitor`)
 
 Superimposing these modules over the class diagram, it is easy to see the module dependencies emerge:
 
-<contentimage slug="jpms-tutorial-monitor-modules"></contentimage>
+<contentimage slug="jpms-tutorial-monitor-modules" options="bg"></contentimage>
 
-### Reorganizing Source Code {#reorganizingsourcecode}
+### Reorganizing Source Code
 
 A real-life project consists of myriad files of many different types.
 Obviously, source files are the most important ones but nonetheless only one kind of many - others are test sources, resources, build scripts or project descriptions, documentation, source control information, and many others.
@@ -412,14 +409,14 @@ ServiceMonitor
  + monitor.statistics
 ```
 
-I will organize the *ServiceMonitor* almost like that, with the only difference that I will create the bytecode in a directory `classes` and JARS in a directory `mods`, which are both right below `ServiceMonitor`, because that makes the scripts shorter and more readable.
+I will organize the *ServiceMonitor* almost like that, with the only difference that I will create the bytecode in a directory `classes` and JARS in a directory `mods`, which are both right below `java§ServiceMonitor`, because that makes the scripts shorter and more readable.
 
 Let's now see what those declarations infos have to contain and how we can compile and run the application.
 
-### Declaring Modules {#declaringmodules}
+### Declaring Modules
 
 We've already covered how modules are declared using `module-info.java`, so there's no need to go into details.
-Once you've figured out how modules need to depend on one another (your build tool should know that; otherwise [ask JDeps](jdeps-tutorial-analyze-java-project-dependencies)), you can put in `requires` directives and the necessary `exports` emerge naturally from imports across module boundaries.
+Once you've figured out how modules need to depend on one another (your build tool should know that; otherwise [ask JDeps](jdeps-tutorial-analyze-java-project-dependencies)), you can put in `java§requires` directives and the necessary `java§exports` emerge naturally from imports across module boundaries.
 
 ```java
 module monitor.observer {
@@ -462,12 +459,12 @@ module monitor {
 }
 ```
 
-By the way, you can use [JDeps to create an initial set of module declarations](https://blog.codefx.org/tools/jdeps-tutorial-analyze-java-project-dependencies/#JDeps-And-Modules).
+By the way, you can use [JDeps to create an initial set of module declarations](jdeps-tutorial-analyze-java-project-dependencies#jdeps-and-modules).
 Whether created automatically or manually, in a real-life project you should verify whether your dependencies and APIs are as you want them to be.
 It is likely that over time, some quick fixes introduced relationships that you'd rather get rid of.
 Do that now or create some backlog issues.
 
-### Compiling, Packaging, And Running {#compilingpackagingandrunning}
+### Compiling, Packaging, And Running
 
 Very similar to before when it was only a single module, but more often:
 
@@ -505,13 +502,11 @@ $ jar --create
 Congratulations, you've got the basics covered!
 You now know how to organize, declare, compile, package, and launch modules and understand what role the module path, the readability graph, and modular JARs play.
 
-<contentimage slug="jpms-tutorial-pieces"></contentimage>
-
-## On The Horizon {#goingdeeper}
+## On The Horizon
 
 If you weren't so damn curious this post could be over now, but instead I'm going to show you a few of the more advanced features, so you know what to read about next.
 
-### Implied Readability {#impliedreadability}
+### Implied Readability
 
 The *ServiceMonitor* module *monitor.observer.alpha* describes itself as follows:
 
@@ -531,7 +526,7 @@ module monitor.observer.alpha {
 }
 ```
 
-Spot the `transitive` in there?
+Spot the `java§transitive` in there?
 It makes sure that any module reading *monitor.observer.alpha* also reads *monitor.observer*.
 Why would you do that?
 Here's a method from *alpha*'s public API:
@@ -542,12 +537,12 @@ public static Optional<ServiceObserver> createIfAlphaService(String service) {
 }
 ```
 
-It returns an `Optional<ServiceObserver>`, but `ServiceObserver` comes from the *monitor.observer* module - that means every module that wants to call *alpha*'s `createIfAlphaService` needs to read *monitor.observer* as well or such code won't compile.
+It returns an `java§Optional<ServiceObserver>`, but `java§ServiceObserver` comes from the *monitor.observer* module - that means every module that wants to call *alpha*'s `java§createIfAlphaService` needs to read *monitor.observer* as well or such code won't compile.
 That's pretty inconvenient, so modules like *alpha* that use another module's type in their own public API should generally require that module with the `transitive` modifier.
 
 [There are more uses for implied readability.](java-modules-implied-readability)
 
-### Optional Dependencies {#optionaldependencies}
+### Optional Dependencies
 
 This is quite straight-forward: If you want to compile against a module's types, but don't want to force its presence at runtime you can mark your dependency as being optional with the `static` modifier:
 
@@ -566,7 +561,7 @@ In this case *monitor* seems to be ok with the *alpha* and *beta* observer imple
 
 [There are a few things to consider when coding against optional dependencies.](java-modules-optional-dependencies)
 
-### Qualified Exports {#qualifiedexports}
+### Qualified Exports
 
 Regular exports have you make the decision whether a package's public types are accessible only within the same module or to all modules.
 Sometimes you need something in between, though.
@@ -579,9 +574,9 @@ module monitor.util {
 }
 ```
 
-This way only *monitor* and *monitor.statistics* can access the `monitor.util` package.
+This way only *monitor* and *monitor.statistics* can access the `java§monitor.util` package.
 
-### Open Packages And Modules {#openpackagesandmodules}
+### Open Packages And Modules
 
 I said earlier that reflection's superpowers were revoked - it now has to play by the same rules as regular access.
 Reflection still has a special place in Java's ecosystem, though, as it enables frameworks like Hibernate, Spring and so many others.
@@ -604,7 +599,7 @@ Open packages can be qualified just like exports and open modules simply open al
 
 ### Services
 
-Instead of having the main module *monitor* depend on *monitor.observer.alpha* and *monitor.observer.beta*, so it can create instances of `AlphaServiceObserver` and `BetaServiceObserver`, it could let the module system make that connection:
+Instead of having the main module *monitor* depend on *monitor.observer.alpha* and *monitor.observer.beta*, so it can create instances of `java§AlphaServiceObserver` and `java§BetaServiceObserver`, it could let the module system make that connection:
 
 ```java
 module monitor {
@@ -640,7 +635,7 @@ List<ServiceObserverFactory> observerFactories = ServiceLoader
 	.collect(toList());
 ```
 
-It uses [the `ServiceLoader` API](http://download.java.net/java/jdk9/docs/api/java/util/ServiceLoader.html), which exists since Java 6, to inform the module system that it needs all implementations of `ServiceObserverFactory`.
+It uses [the `java§ServiceLoader` API](http://download.java.net/java/jdk9/docs/api/java/util/ServiceLoader.html), which exists since Java 6, to inform the module system that it needs all implementations of `java§ServiceObserverFactory`.
 The JPMS will then track down all modules in the readability graph that provide that service, create an instance of each and return them.
 
 There are two particularly interesting consequences:
@@ -657,8 +652,8 @@ Quick recap:
 
 -   a module is a run-time concept created from a modular JAR
 -   a modular JAR is like any old plain JAR, except that it contains a module descriptor `module-info.class`, which is compiled from a module declaration `module-info.java`
--   the module declaration gives a module its name, defines its dependencies (with `requires`, `requires static`, and `requires transitive`) and API (with `exports` and `exports to`), enables reflective access (with `open` and `opens to`) and declares use or provision of services
+-   the module declaration gives a module its name, defines its dependencies (with `java§requires`, `java§requires static`, and `java§requires transitive`) and API (with `java§exports` and `java§exports to`), enables reflective access (with `java§open` and `java§opens to`) and declares use or provision of services
 -   modules are placed on the module path where the JPMS finds them during module resolution, which is the phase that processes descriptors and results in a readability graph
 
-If you want to learn more about the module system, read the posts I linked above, check [the JPMS tag](https://blog.codefx.org/tag/jpms/), or get [my book *The Java Module System* (Manning)](https://www.manning.com/books/the-java-module-system?a_aid=nipa&a_bid=869915cb).
+If you want to learn more about the module system, read the posts I linked above, check [the JPMS tag](tag:j_ms), or get [my book *The Java Module System* (Manning)](https://www.manning.com/books/the-java-module-system?a_aid=nipa&a_bid=869915cb).
 Also, be aware that migrating to Java 9 can be challenging - check my [migration guide](java-9-migration-guide) for details.

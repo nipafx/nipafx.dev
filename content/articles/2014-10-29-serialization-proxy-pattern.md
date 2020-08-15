@@ -6,24 +6,19 @@ slug: java-serialization-proxy-pattern
 description: "A presentation of the Serialization Proxy Pattern as defined in Effective Java. It defines the pattern, describes its implementation and gives examples."
 searchKeywords: "Serialization Proxy Pattern"
 featuredImage: serialization-proxy-pattern
+repo: demo-serialization-proxy-pattern
 ---
 
-In my [last post](http://blog.codefx.org/jdk/concepts-serialization/), I talked about serialization in general.
+In my [last post](java-concepts-serialization), I talked about serialization in general.
 This one is much more focused and presents a single detail: the *Serialization Proxy Pattern*.
-It is a good, often the best, way to deal with many of the issues with serialization.
-If there was only one thing a developer would want to know about the topic, I'd tell him this.
-
-### Overview
-
-The post focuses on presenting a detailed definition of the pattern before giving two short examples and finally covering the pros and cons.
+It is a good and often the best way to deal with many of the issues with serialization.
+If there was only one thing a developer would want to know about the topic, I'd tell them this.
 
 As far as I know, the pattern was first defined in Joshua Bloch's excellent book [Effective Java](http://www.amazon.com/Effective-Java-Edition-Joshua-Bloch/dp/0321356683) (1st edition: item 57; 2nd edition: [item 78](http://books.google.de/books?id=ka2VUBqHiWkC&pg=PA297&source=gbs_toc_r&cad=3#v=onepage&q&f=false)).
-This post mostly restates what is said there.
+This post mostly restates what is said there and focuses on presenting a detailed definition of the pattern before giving two short examples and finally covering the pros and cons.
 
 The code samples used throughout this post come from a [demo project](https://github.com/CodeFX-org/demo-serialization-proxy-pattern) I created on GitHub.
 Check it out for more details!
-
-[toc exclude=Overview]
 
 ## Serialization Proxy Pattern
 
@@ -36,9 +31,9 @@ As the name suggests the pattern's key is the *serialization proxy*.
 It is written to the byte stream instead of the original instance.
 After it is deserialized it will create an instance of the original class which takes its place in the object graph.
 
-<contentimage slug="serialization-proxy-pattern"></contentimage>
+<contentimage slug="serialization-proxy" options="bg"></contentimage>
 
-The goal is to design the proxy such that it is the best possible [logical representation](http://blog.codefx.org/jdk/concepts-serialization/#Logical) of the original class.
+The goal is to design the proxy such that it is the best possible [logical representation](java-concepts-serialization#logical) of the original class.
 
 ### Implementation
 
@@ -78,7 +73,7 @@ Creating an instance of the original class will be done via its regular API (e.g
 ##### Artificial Byte Stream
 
 Due to `writeReplace` regular byte streams will only contain encodings of the proxy.
-But the same is not true for [artificial streams](http://blog.codefx.org/jdk/concepts-serialization/#Artificial-Byte-Stream)!
+But the same is not true for [artificial streams](java-concepts-serialization#artificial-byte-stream)!
 They can contain encodings of original instances and as deserializing those is not covered by the pattern, it does not provide any safeguards for that case.
 
 Deserializing such instances is in fact unwanted and has to be prevented.
@@ -192,7 +187,7 @@ These are the advantages...
 
 #### Lessened Extralinguistic Character
 
-The central advantage of the pattern is that it reduces the [extralinguistic character](http://blog.codefx.org/jdk/concepts-serialization/#Extralinguistic-Character) of serialization.
+The central advantage of the pattern is that it reduces the [extralinguistic character](java-concepts-serialization#extralinguistic-character) of serialization.
 This is mainly achieved by using a class's public API to create instances (see `SerializationProxy.readResolve` above).
 Hence *every* creation of an instance goes through the constructor(s) and all code which is necessary to properly initialize an instance is always executed.
 
@@ -200,7 +195,7 @@ This also implies that such code does not have to be explicitly called during de
 
 #### No Limitation on Final Fields
 
-Since the deserialized instance is initialized in its constructor, this approach does not limit which fields can be final (which is usually the case with a [custom serialized form](http://blog.codefx.org/jdk/concepts-serialization/#Custom-Serialized-Form)).
+Since the deserialized instance is initialized in its constructor, this approach does not limit which fields can be final (which is usually the case with a [custom serialized form](java-concepts-serialization#custom-serialized-form)).
 
 #### Flexible Instantiation
 

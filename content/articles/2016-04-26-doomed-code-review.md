@@ -3,15 +3,13 @@ title: "A Doomed Code Review"
 tags: [code-review, techniques]
 date: 2016-04-26
 slug: doomed-code-review
+canonicalUrl: http://blog.disy.net/doomed-code-review
+canonicalText: "I wrote this post for [Disy's Tech Blog](http://blog.disy.net/). [Check out the original here](http://blog.disy.net/doomed-code-review) (with less swear words). There is also some interesting stuff about databases and geographical information system, so if you are interested in these topics, you might want to take a look."
 description: "Code reviews should be brief, short, and focused. This is the story of how I fucked up on all those accounts and we still made it work."
 intro: "There are a couple of things you should do to make code reviews successful. Chief among them, keep them brief, short, and focused. This is the story of how I fucked up on all these accounts and we still made it work."
 searchKeywords: "code review"
 featuredImage: doomed-code-review
 ---
-
-I wrote this post for [Disy's Tech Blog](http://blog.disy.net/).
-[Check out the original here](http://blog.disy.net/doomed-code-review) (with less swear words).
-There is also some interesting stuff about databases and geographical information system, so if you are interested in these topics, you might want to take a look (much content is in German, though).
 
 There are a couple of things you should do to [make code reviews successful](https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/).
 Chief among them:
@@ -73,8 +71,6 @@ Combing through the commits took me about two hours and resulted in nine reviews
 Each review contained an explanatory paragraph that put it in relation to the other reviews.
 
 As an added benefit, and as is common, the detailed preparation led to some fine tuning of the underlying code and its [comments](comment-your-fucking-code).
-
-<contentimage slug="doomed-code-review"></contentimage>
 
 ## Into The Light
 

@@ -4,6 +4,7 @@ tags: [performance, tools]
 date: 2015-10-05
 slug: apache-jmeter-tutorial
 canonicalUrl: http://blog.disy.net/jmeter-tutorial/
+canonicalText: "This is a crossposting of [my article on Disy's Tech-Blog](http://blog.disy.net/jmeter-tutorial/) - thanks for letting me write it on company time, folks! Also thanks to my colleagues [Boris Terzic](http://boristerzic.com) and Karsten Schnitter for pointing out problematic and missing bits. Still, all errors are of course mine."
 description: "Want to load test your web app? Then you should know about Apache JMeter! This JMeter tutorial explains the basics and how to create & execute a test plan."
 intro: "Want to load test your web app? Then you should know about Apache JMeter! This tutorial helps you to get to know JMeter, create a test plan and execute it."
 searchKeywords: "JMeter Tutorial"
@@ -14,12 +15,6 @@ Want to load test your web app?
 Then you should know about [Apache JMeter](http://jmeter.apache.org)!
 
 This JMeter tutorial explains the basic concepts as well as how to create a test plan and how to execute it to benchmark your application.
-
-*This is a crossposting of [my article on Disy's Tech-Blog](http://blog.disy.net/jmeter-tutorial/) - thanks for letting me write it on company time, guys!
-Also thanks to my colleagues [Boris Terzic](http://boristerzic.com) and Karsten Schnitter for pointing out problematic and missing bits.
-Still, all errors are of course mine.*
-
-[toc]
 
 ## Getting To Know JMeter
 
@@ -36,7 +31,7 @@ Each individual exchange (i.e.
 request, response, response time, ...) is recorded and called a **sample**.
 -   [**Logic controllers**](http://jmeter.apache.org/usermanual/test_plan.html#logic_controller) determine *how* samplers are executed, they provide common control structures like branching and looping.
 
-<contentimage slug="jmeter-tutorial-basic-elements"></contentimage>
+<contentimage slug="jmeter-tutorial-basic-elements" options="narrow"></contentimage>
 
 A very basic JMeter test plan
 
@@ -59,7 +54,7 @@ Plans can be executed with or without regarding timers.
 
 Finally, use [**listeners**](http://jmeter.apache.org/usermanual/test_plan.html#listeners) to collect and visualize samples.
 
-<contentimage slug="jmeter-tutorial-advanced-elements"></contentimage>
+<contentimage slug="jmeter-tutorial-advanced-elements" options="narrow"></contentimage>
 
 A more advanced JMeter test plan
 
@@ -143,7 +138,7 @@ First, alter your recorded login requests to use variables like `${username}` an
 Then add a [CSV Data Set Config](http://jmeter.apache.org/usermanual/component_reference.html#CSV_Data_Set_Config) to the node containing the login requests.
 On the config set *Variable Names* according to the files structure, e.g. `username,password`.
 
-<contentimage slug="jmeter-tutorial-login-with-csv"></contentimage>
+<contentimage slug="jmeter-tutorial-login-with-csv" options="narrow"></contentimage>
 
 Login with varying credentials
 
@@ -163,7 +158,7 @@ BeanShell scripts have access to several parameters.
 Variables are stored in `Map<String, String> vars` and a log4j-Logger named `log` is also available.
 Output can be checked by activating the log via *Options* \~&gt; *Log Viewer* or the yellow triangle in the top right corner.
 
-<contentimage slug="jmeter-tutorial-extracting-variables-from-response"></contentimage>
+<contentimage slug="jmeter-tutorial-extracting-variables-from-response" options="narrow"></contentimage>
 
 Using post-processors to extract variables from a response
 
@@ -204,10 +199,6 @@ This should execute all the requests you excluded during recording.
 It might seem unnecessary to first exclude the requests and then configure JMeter to execute them automatically.
 The difference is that this way JMeter will employ a cache to avoid unnecessary requests and use a pool to execute the required ones in parallel instead of in succession.
 This models how browsers behave and leads to more realistic measurements.
-
-<contentimage slug="jmeter-tutorial"></contentimage>
-
-[Published](https://www.flickr.com/photos/warrenlynn/3426240727) by [wplynn](https://www.flickr.com/photos/warrenlynn/) under [CC-BY-ND 2.0](https://creativecommons.org/licenses/by-nd/2.0/)
 
 ## Benchmarking
 

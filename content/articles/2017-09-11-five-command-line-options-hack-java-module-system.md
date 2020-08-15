@@ -7,35 +7,34 @@ description: "Get your code running on the Java 9 Module System with the command
 intro: "Get your code running on the Java 9 Module System with the command line options  --add-exports, --add-opens, --add-modules, --add-reads, and --patch-module."
 searchKeywords: "command line options"
 featuredImage: java-9-command-line-options
+inlineCodeLanguage: shell
 ---
 
-The [Java Platform Module System](https://blog.codefx.org/tag/jpms/) (JPMS) not only comes with [an entire set of new rules to abide by](java-module-system-tutorial), it also introduces a host of command line options to break them.
+The [Java Platform Module System](tag:j_ms) (JPMS) not only comes with [an entire set of new rules to abide by](java-module-system-tutorial), it also introduces a host of command line options to break them.
 Whether you need to access internal APIs, add unforeseen modules, or extend modules with classes of your own, they have you covered.
 In this post I want to go over the five most important command line options that you will need to get your project to compile, test, and run in the face of [various migration challenges](java-9-migration-guide).
 
 Beyond presenting a few specific options, I close with some general thoughts on command line options and particularly [their pitfalls](#thepitfallsofcommandlineoptions).
 
-[toc]
-
 By the way, I use `$var` as placeholders that you have to replace with the module, package, or JAR names that fix your problem.
 
-## Five Critical Command Line Options {#fivecriticalcommandlineoptions}
+## Five Critical Command Line Options
 
 This post covers `--add-exports`, `--add-opens`, `--add-modules`, `--add-reads`, and `--patch-module`.
 Let's get it on!
 
-### Accessing Internal APIs With `--add-exports` {#accessinginternalapiswithaddexports}
+### Accessing Internal APIs With `--add-exports`
 
 The command line option `--add-exports $module/$package=$readingmodule` exports `$package` of *\$module* to *\$readingmodule*.
 Code in *\$readingmodule* can hence access all public types in `$package` but other modules can not.
 (The option is available for the `java` and `javac` commands.)
 
 When setting *\$readingmodule* to `ALL-UNNAMED`, all code from the class path can access that package.
-When [accessing internal APIs during a migrating to Java 9](https://blog.codefx.org/java/java-9-migration-guide/#Illegal-Access-To-Internal-APIs), you will always use that placeholder - only once your own code runs in modules does it really make sense to limit exports to specific modules.
+When [accessing internal APIs during a migrating to Java 9](java-9-migration-guide#illegal-access-to-internal-apis), you will always use that placeholder - only once your own code runs in modules does it really make sense to limit exports to specific modules.
 
 As an example, assume you have a class that uses `com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel` - during compilation you would get the following error:
 
-``` {.lang:bash .decode:true highlight="false"}
+```shell
 error: package com.sun.java.swing.plaf.nimbus is not visible
 import com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel;
 					          ^
@@ -53,7 +52,7 @@ Then we'd likely be making a mistake because there's a standardized alternative 
 All we have to do to successfully compile against `com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel` is to add `--add-exports java.desktop/com.sun.java.swing.plaf.nimbus=ALL-UNNAMED` to the compiler command.
 If we do that manually, it would like as follows:
 
-``` {.lang:bash .decode:true highlight="false"}
+```shell
 javac
 	--add-exports java.desktop/com.sun.java.swing.plaf.nimbus=ALL-UNNAMED
 	--class-path $dependencies
@@ -68,16 +67,16 @@ So we still have to figure out how to make it work at run time.
 
 <pullquote>Adding exports on the command line only changes the one compilation</pullquote>
 
-### Reflectively Accessing Internal APIs With `--add-opens` {#reflectivelyaccessinginternalapiswithaddopens}
+### Reflectively Accessing Internal APIs With `--add-opens`
 
 The `java` option `--add-opens $module/$package=$reflectingmodule` can be used to open `$package` of *\$module* for deep reflection to *\$reflectingmodule*.
 Code in *\$reflectingmodule* can hence reflectively access all types and members in `$package` but other modules can not.
 
-When setting *\$reflectingmodule* to `ALL-UNNAMED`, all code from the class path can reflectively access that package.When [accessing internal APIs during a migrating to Java 9](https://blog.codefx.org/java/java-9-migration-guide/#Illegal-Access-To-Internal-APIs), you will always use that placeholder - only once your own code runs in modules does it really make sense to limit exports to specific modules.
+When setting *\$reflectingmodule* to `ALL-UNNAMED`, all code from the class path can reflectively access that package.When [accessing internal APIs during a migrating to Java 9](java-9-migration-guide#illegal-access-to-internal-apis), you will always use that placeholder - only once your own code runs in modules does it really make sense to limit exports to specific modules.
 
 A common case are dependency injection libraries like Guice that use the class loader's internal API, which results in errors like the following:
 
-``` {.lang:bash .decode:true highlight="false"}
+```shell
 Caused by: java.lang.reflect.InaccessibleObjectException:
 Unable to make ClassLoader.defineClass accessible:
 module java.base does not "opens java.lang" to unnamed module
@@ -86,19 +85,19 @@ module java.base does not "opens java.lang" to unnamed module
 Note how the error message points out the specific problem, including the module that contains the class.
 To make this work we simply need to open the package containing the class:
 
-``` {.lang:bash .decode:true highlight="false"}
+```shell
 java
 	--add-opens java.base/java.lang=ALL-UNNAMED
 	--class-path $dependencies
 	-jar $appjar
 ```
 
-### Adding Classes To Modules With `--patch-module` {#addingclassestomoduleswithpatchmodule}
+### Adding Classes To Modules With `--patch-module`
 
 The compiler and runtime option `--patch-module $module=$artifact` merges all classes from `$artifact` into *\$module*.
 There are a few things to look out for, but let's see an example before we get to them.
 
-When [discussing split packages during migration](https://blog.codefx.org/java/java-9-migration-guide/#Split-Packages), we looked at the example of a project that uses the annotations `@Generated` (from the *java.xml.ws.annotation* module) and `@Nonnull` (from a JSR 305 implementation).
+When [discussing split packages during migration](java-9-migration-guide#split-packages), we looked at the example of a project that uses the annotations `@Generated` (from the *java.xml.ws.annotation* module) and `@Nonnull` (from a JSR 305 implementation).
 We discovered three things:
 
 -   both annotations are in the `javax.annotation` package, thus creating a split
@@ -107,7 +106,7 @@ We discovered three things:
 
 We can use `--patch-module` to mend the split:
 
-``` {.lang:bash .decode:true highlight="false"}
+```shell
 java
 	--add-modules java.xml.ws.annotation
 	--patch-module java.xml.ws.annotation=jsr305-3.0.2.jar
@@ -129,18 +128,18 @@ Then, classes added to a module with `--patch-module` are subject to normal acce
 This might require manipulating the module graph with command line options like `--add-reads` and `--add-exports`.
 Since named modules can not access code from the class path, it might also be necessary to create some automatic modules.
 
-### Extending The Module Graph With `--add-modules` {#extendingthemodulegraphwithaddmodules}
+### Extending The Module Graph With `--add-modules`
 
 The option `--add-modules $modules`, which is available on `javac` and `java`, allows explicitly defining a comma-separated list of root modules beyond the initial module.
 (Root modules form the initial set of modules from which [the module graph is built by resolving their dependencies](http://openjdk.java.net/projects/jigsaw/spec/sotms/#resolution).) This allows you to add modules (and their dependencies) to the module graph that would otherwise not show up because the initial module does not depend on them (directly or indirectly).
 
-A particularly important use case for `--add-modules` are Java EE modules, which are [not resolved by default](https://blog.codefx.org/java/java-9-migration-guide/#Dependencies-On-Java-EE-Modules) when running an application from the class path.
+A particularly important use case for `--add-modules` are Java EE modules, which are [not resolved by default](java-9-migration-guide#dependencies-on-java-ee-modules) when running an application from the class path.
 As an example, let's pick a class that uses `JAXBException` from the Java EE module *java.xml.bind*.
 Here's how to make that module available for compilation with `--add-modules`:
 
 <pullquote>An important use case for `--add-modules` are Java EE modules</pullquote>
 
-``` {.lang:bash .decode:true highlight="false"}
+```shell
 javac
 	--class-path $dependencies
 	--add-modules java.xml.bind
@@ -150,7 +149,7 @@ javac
 
 When the code is compiled and packaged, you need to add the module again for execution:
 
-``` {.lang:bash .decode:true highlight="false"}
+```shell
 java
 	--class-path $dependencies
 	--add-modules java.xml.bind
@@ -165,16 +164,16 @@ The last one can be quite useful, though: With it, all modules on the module pat
 
 When adding modules it might be necessary to let other modules read them, so let's do that next.
 
-### Extending The Module Graph With `--add-reads` {#extendingthemodulegraphwithaddreads}
+### Extending The Module Graph With `--add-reads`
 
 The compiler and runtime option `--add-reads $module=$targets` adds readability edges from *\$module* to all modules in the comma-separated list *\$targets*.
-This allows *\$module* to access all public types in packages exported by those modules even though *\$module* has no `requires` clauses mentioning them.
+This allows *\$module* to access all public types in packages exported by those modules even though *\$module* has no `java§requires` clauses mentioning them.
 If *\$targets* is set to `ALL-UNNAMED`, *\$module* can even read the unnamed module.
 
 As an example let's turn to [the *ServiceMonitor* application](https://github.com/CodeFX-org/demo-jpms-monitor), which has a *monitor.statistics* module that could sometimes make use of a *monitor.statistics.fancy* module.
 Without resorting to [optional dependencies](java-modules-optional-dependencies) (which would likely be the proper solution for this specific case), we can use `--add-modules` to add the fancy module and then `add-reads` to allow *monitor.statistics* to read it:
 
-``` {.lang:bash .decode:true highlight="false"}
+```shell
 java
 	--module-path mods
 	--add-modules monitor.statistics.fancy
@@ -182,14 +181,12 @@ java
 	--module monitor
 ```
 
-[jms_in\_action title="Learn more JPMS command line options in my book:"]
-
-## Thoughts On Command Line Options {#thoughtsoncommandlineoptions}
+## Thoughts On Command Line Options
 
 With Java 9, you might end up applying more command line options than ever before - it sure has been like that for me.
 While doing so I had a few insights that might make your life easier.
 
-### Argument Files {#argumentfiles}
+### Argument Files
 
 Command line options do not actually have to be applied to the command.
 An alternative are so-called [*argument files* (or *@-files*)](https://docs.oracle.com/javase/9/tools/java.htm#GUID-3B1CE181-CD30-4178-9602-230B800D4FAE__GUID-36C0C35E-403B-4A05-9C54-0CBE7D237C1C), which are plain text files that can be referenced on the command line with `@<file-name>`.
@@ -197,7 +194,7 @@ Compiler and runtime will then act as if the file content had been added to the 
 
 The example on `--patch-module` showed how to run code that uses annotations from Java EE and JSR 305:
 
-``` {.lang:bash .decode:true highlight="false"}
+```shell
 java
 	--add-modules java.xml.ws.annotation
 	--patch-module java.xml.ws.annotation=jsr305-3.0.2.jar
@@ -208,7 +205,7 @@ java
 Here, `--add-modules` and `--patch-module` are added to make the compilation work on Java 9.
 We could put these two lines in a file called `java-9-args` and then launch as follows:
 
-``` {.lang:bash .decode:true highlight="false"}
+```shell
 java @java-9-args
 	--class-path $dependencies
 	-jar $appjar
@@ -219,15 +216,15 @@ What's new in Java 9 is that the JVM also recognizes argument files, so they can
 Unfortunately, [argument files don't work with Maven](https://stackoverflow.com/q/43361227/2525313) because the compiler plugin already creates a file for all of its own options and Java does not supported nested argument files.
 Sad.
 
-### Relying On Weak Encapsulation {#relyingonweakencapsulation}
+### Relying On Weak Encapsulation
 
-The Java 9 runtime [allows illegal access by default to code on the class path](https://blog.codefx.org/java/java-9-migration-guide/#Illegal-Access-To-Internal-APIs) with nothing more than a warning.
+The Java 9 runtime [allows illegal access by default to code on the class path](java-9-migration-guide#illegal-access-to-internal-apis) with nothing more than a warning.
 That's great to run unprepared applications on Java 9, but I advise against relying on that during a proper build because it allows new illegal accesses to slip by unnoticed.
 Instead, I collect all the `--add-exports` and `--add-opens` I need and then activate strong encapsulation at run time with `--illegal-access=deny`.
 
 <pullquote>Don't rely on weak encapsulation</pullquote>
 
-### The Pitfalls Of Command Line Options {#thepitfallsofcommandlineoptions}
+### The Pitfalls Of Command Line Options
 
 Using command line options has a few pitfalls:
 
@@ -247,8 +244,6 @@ Not easy, though, or there would be no incentive to solve the underlying problem
 So do your best to only rely on public and supported APIs, not to split packages, and to generally avoid picking fights with the module system.
 And, very importantly, reward libraries and frameworks that do the same!
 But the road to hell is paved with good intentions, so if everything else fails, use every command line option at your disposal.
-
-<contentimage slug="java-9-command-line-options"></contentimage>
 
 ## Reflection
 

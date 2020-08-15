@@ -6,28 +6,23 @@ slug: junit-5-parameterized-tests
 description: "Thorough introduction to parameterized tests in JUnit 5 with @ParameterizedTest, argument sources (eg @MethodSource, @CsvSource), and argument converters."
 intro: "Thorough introduction to parameterized tests in JUnit 5: How to create them, how to name them, where to get the arguments from, how to convert then, and how to customize that."
 searchKeywords: "parameterized tests"
-featuredImage: junit-5-params-two-values
+featuredImage: junit-5-params
+repo: demo-junit-5
 ---
 
-JUnit 5 is pretty impressive, particularly when you look under the covers, at the [extension model](junit-5-extension-model) and the [architecture](https://blog.codefx.org/design/architecture/junit-5-architecture/).
-But on the surface, where tests are written, the development is more [evolutionary than revolutionary](//blog.codefx.org/libraries/junit-5-basics/) - are there no killer features over JUnit 4?
+JUnit 5 is pretty impressive, particularly when you look under the covers, at the [extension model](junit-5-extension-model) and the [architecture](junit-5-architecture).
+But on the surface, where tests are written, the development is more [evolutionary than revolutionary](junit-5-basics) - are there no killer features over JUnit 4?
 Oh, there are, and today we're gonna investigate the deadliest: parameterized tests.
 
 JUnit 5 has native support for parameterizing test methods as well as an extension point that allows third-party variants of the same theme.
 In this post we'll look at how to write parameterized tests - creating an extension will be left for the future.
-
-### Overview
-
-[codefx_junit5\_series]
 
 Throughout this post I will use the terms *parameter* and *argument* quite a lot and in a way that do not mean the same thing.
 As [per Wikipedia](https://en.wikipedia.org/wiki/Parameter_(computer_programming)#Parameters_and_arguments):
 
 > The term *parameter* is often used to refer to the variable as found in the function definition, while *argument* refers to the actual input passed.
 
-[toc exclude=Overview]
-
-## Hello, Parameterized World {#helloparameterizedworld}
+## Hello, Parameterized World
 
 Getting started with parameterized tests is pretty easy, but before the fun can begin you have to add the following dependency to your project:
 
@@ -68,20 +63,18 @@ void withValueSource(String word) {
 Indeed, now the test gets executed twice: once `word` is `"Hello"`, once it is `"JUnit"`.
 In IntelliJ that looks as follows:
 
-<contentimage slug="junit-5-params-two-values"></contentimage>
+<contentimage slug="junit-5-params-two-values" options="narrow"></contentimage>
 
 And that is already all you need to start experimenting with parameterized tests!
 
 For real-life use you should know a few more things, though, about the ins and outs of `@ParamterizedTest` (for example, how to name them), the other argument sources (including how to create your own), and about something called argument converters.
 We'll look into all of that now.
 
-[codefx_junit\_5\_product]
-
-## Ins And Outs of Parameterized Tests {#insandoutsofparameterizedtests}
+## Ins And Outs of Parameterized Tests
 
 Creating tests with `@ParameterizedTests` is straight-forward but there are a few details that are good to know to get the most out of the feature.
 
-### Test Name {#testname}
+### Test Name
 
 As you can tell by the IntelliJ screenshot above, the parameterized test method appears as a test container with a child node for each invocation.
 Those nodes' names default to `"[{index}] {arguments}"` but a different one can be set with `@ParameterizedTest`:
@@ -100,7 +93,7 @@ The following placeholders are available:
 -   `{i}`: gets replaced by the argument the `i`-th parameter has in the current invocation
 
 We'll be coming to alternative sources in a minute, so ignore the details of `@CsvSource` for now.
-Just have a look at the great test names that can be built this way, particularly [together with `@DisplayName`](https://blog.codefx.org/libraries/junit-5-basics/#Naming-Tests):
+Just have a look at the great test names that can be built this way, particularly [together with `@DisplayName`](junit-5-basics#naming-tests):
 
 ```java
 @DisplayName("Roman numeral")
@@ -109,15 +102,15 @@ Just have a look at the great test names that can be built this way, particularl
 void withNiceName(String word, int number) { }
 ```
 
-<contentimage slug="junit-5-params-fancy-name"></contentimage>
+<contentimage slug="junit-5-params-fancy-name" options="narrow"></contentimage>
 
-### Lifecycle Integration {#lifecycleintegration}
+### Lifecycle Integration
 
-Parameterized tests are fully integrated into [the test lifecycle](https://blog.codefx.org/libraries/junit-5-basics/#Test-Lifecycle): Methods annotated with `@BeforeEach` and `@AfterEach` are called for each invocation, other extensions like those that resolve more parameters (see [below](#nonparameterizedparameters)) work as usual, and parameterized tests can be freely mixed with other kinds, be they [regular](https://blog.codefx.org/libraries/junit-5-basics/#Test), [dynamic](junit-5-dynamic-tests), [nested](https://blog.codefx.org/libraries/junit-5-basics/#Nesting-Tests), or whatever else will come up in the future.
+Parameterized tests are fully integrated into [the test lifecycle](junit-5-basics#test-lifecycle): Methods annotated with `@BeforeEach` and `@AfterEach` are called for each invocation, other extensions like those that resolve more parameters (see [below](#nonparameterizedparameters)) work as usual, and parameterized tests can be freely mixed with other kinds, be they [regular](junit-5-basics#test), [dynamic](junit-5-dynamic-tests), [nested](junit-5-basics#nesting-tests), or whatever else will come up in the future.
 
 <pullquote>Parameterized tests are fully integrated into the test lifecycle</pullquote>
 
-### Non-Parameterized Parameters {#nonparameterizedparameters}
+### Non-Parameterized Parameters
 
 Regardless of parameterized tests, JUnit Jupiter already allows [injecting parameters into test methods](http://junit.org/junit5/docs/current/user-guide/#writing-tests-dependency-injection).
 This works in conjunction with parameterized tests as long as the parameters that vary per invocation come first:
@@ -133,9 +126,9 @@ void withOtherParams(String word, TestInfo info, TestReporter reporter) {
 Just as before, this method gets called twice and both times parameter resolvers have to provide instances of `TestInfo` and `TestReporter`.
 In this case those providers are built into Jupiter but custom providers, e.g. for mocks, would work just as well.
 
-### Meta Annotations {#metaannotations}
+### Meta Annotations
 
-Last but not least, `@ParameterizedTest` (as well as all the sources) can be used as meta-annotations to [create custom extensions and annotations](//blog.codefx.org/design/architecture/junit-5-extension-model/):
+Last but not least, `@ParameterizedTest` (as well as all the sources) can be used as meta-annotations to [create custom extensions and annotations](junit-5-extension-model):
 
 ```java
 @Retention(RetentionPolicy.RUNTIME)
@@ -147,7 +140,7 @@ public @interface Params { }
 void testMetaAnnotation(String s) { }
 ```
 
-## Argument Sources {#argumentsources}
+## Argument Sources
 
 Three ingredients make a parameterized test:
 
@@ -166,7 +159,7 @@ The core concepts to understand are:
 -   each source must provide arguments for all test method parameters (so there can't be one source for the first and another for the second parameter)
 -   the test is executed once for each group of arguments
 
-### Value Source {#valuesource}
+### Value Source
 
 You have already seen `@ValueSource` in action.
 It is pretty simple to use and type safe for a few basic types.
@@ -192,7 +185,7 @@ There are two main drawbacks:
 
 So for most non-trivial use cases you will have to use one of the other sources.
 
-### Enum Source {#enumsource}
+### Enum Source
 
 This is a pretty specific source that you can use to run a test once for each value of an enum or a subset thereof:
 
@@ -217,7 +210,7 @@ Straight forward, right?
 But note that `@EnumSource` only creates arguments for one parameter and so it can only be used on single-parameter methods.
 By the way, if you need more detailed control over which enum values are provided, take a look at [`@EnumSource`'s `mode` attribute](https://junit.org/junit5/docs/current/api/org/junit/jupiter/params/provider/EnumSource.html#mode()).
 
-### Method Source {#methodsource}
+### Method Source
 
 `@ValueSource` and `@EnumSource` are pretty simple and somewhat limited - on the opposite end of the generality spectrum sits `@MethodSource`.
 It simply names the methods that will be called to provide streams of arguments.
@@ -259,7 +252,7 @@ So as you can see, `@MethodSource` is a very generic source of arguments.
 But it incurs the overhead of declaring a method and putting together the arguments, which is a little much for simpler cases.
 These can best be served with the two CSV sources.
 
-### CSV Sources {#csvsources}
+### CSV Sources
 
 Now it gets really interesting.
 Wouldn't it be nice to be able to define a handful of argument sets for a few parameters right then and there without having to go through declaring a method?
@@ -289,7 +282,7 @@ void withCsvSource(String word, int length) { }
 Note that `resources` can accept more than one file name and processes them one after another.
 The [other attributes of `@CsvFileSource`](https://junit.org/junit5/docs/current/api/org/junit/jupiter/params/provider/CsvFileSource.html) allow to specify the file's encoding, line separator, and delimiter.
 
-### Custom Argument Sources {#customargumentsources}
+### Custom Argument Sources
 
 If the sources built into JUnit do not fulfill all of your use cases, you are free to create your own.
 I won't go into many details - suffice it to say, you have to implement this interface...
@@ -303,14 +296,12 @@ public interface ArgumentsProvider {
 }
 ```
 
-... with a class that has a parameterless constructor (if it's a nested class, remember to make it static) and then use it with `@ArgumentsSource(MySource.class)` or a [custom annotation](https://blog.codefx.org/design/architecture/junit-5-extension-model/#Custom-Annotations).
-You can use the [extension context](https://blog.codefx.org/design/architecture/junit-5-extension-model/#Extension-Context) to access various information, for example the method the source is called on so you know how many parameters it has.
+... with a class that has a parameterless constructor (if it's a nested class, remember to make it static) and then use it with `@ArgumentsSource(MySource.class)` or a [custom annotation](junit-5-extension-model#custom-annotations).
+You can use the [extension context](junit-5-extension-model#extension-context) to access various information, for example the method the source is called on so you know how many parameters it has.
 
 Now, off to converting those arguments!
 
-<contentimage slug="junit-5-params"></contentimage>
-
-## Argument Converters {#argumentconverters}
+## Argument Converters
 
 With the exception of method sources, argument sources have a pretty limited repertoire of types to offer: just strings, enums, and a few primitives.
 This does of course not suffice to write encompassing tests, so a road into a richer type landscape is needed.
@@ -327,7 +318,7 @@ Let's see how to get there...
 First, a general observation: No matter what types the provided argument and the target parameter have, a converter is *always* asked to convert from one to the other.
 Only the previous example declared a converter, though, so what happened in all the other cases?
 
-### Default Converter {#defaultconverter}
+### Default Converter
 
 Jupiter provides a default converter that is used if no other was registered.
 If argument and parameter types match, conversion is a no-op but if the argument is a `String` it can be converted to a number of target types - here are most of them:
@@ -364,7 +355,7 @@ void testDefaultConverters(
 It is likely that the list of supported types grows over time but it is obvious that it can not include those specific to your code base.
 This is where factories and custom converters enter the picture.
 
-### Object Factories {#objectfactories}
+### Object Factories
 
 Many of the conversions above have something in common: They take the given `String` and pass it to a static factory method on the target type, for example to this method on `Instant`:
 
@@ -389,7 +380,7 @@ void convertPoint(Point point) { }
 What if you're stuck with a class that doesn't have a factory, though, or whose factory does not suit your needs?
 Then you're gonna have to write a converter.
 
-### Custom Converters {#customconverters}
+### Custom Converters
 
 Custom converters allow you to convert the arguments a source emits (often strings) to instances of the arbitrary types that you want to use in your tests.
 Creating them is a breeze - all you need to do is implement the `ArgumentConverter` interface:
@@ -440,7 +431,7 @@ Now you can register the converter with `@ConvertWith`:
 void convertPoint(@ConvertWith(PointConverter.class) Point point) { }
 ```
 
-Or you can [create a custom annotation](https://blog.codefx.org/design/architecture/junit-5-extension-model/#Custom-Annotations) to make it look less technical:
+Or you can [create a custom annotation](junit-5-extension-model#custom-annotations) to make it look less technical:
 
 ```java
 @Target({ ElementType.ANNOTATION_TYPE, ElementType.PARAMETER })

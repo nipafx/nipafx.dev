@@ -3,9 +3,9 @@ title: "Interview About Comments On DZone"
 tags: [clean-comments, documentation]
 date: 2015-08-14
 slug: interview-about-comments-on-dzone
-description: ""
-intro: "Matt Werner from DZone interviewed me about my stance on comments."
+description: "Matt Werner from DZone interviewed me about my stance on comments."
 searchKeywords: ""
+featuredImage: comment-your-fucking-code
 ---
 
 Forgetful me.

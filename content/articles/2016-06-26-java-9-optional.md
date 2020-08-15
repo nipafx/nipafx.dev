@@ -1,10 +1,10 @@
 ---
-title: "Java 9 Additions To Optional"
+title: "Java 9 Additions To `Optional`"
 tags: [java-9, optional]
 date: 2016-06-26
 slug: java-9-optional
-description: "Java 9 is coming! One of the changes are new methods on Optional: 'stream()', 'or()', and 'ifPresentOrElse()', which considerably improve Optional's API."
-intro: "More about Java 9 - this time: Optional. We'll see how the new methods 'stream()', 'or()', and 'ifPresentOrElse()' considerably improve its API."
+description: "Java 9 is coming! One of the changes are new methods on Optional: `stream()`, `or()`, and `ifPresentOrElse()`, which considerably improve Optional's API."
+intro: "More about Java 9 - this time: `Optional`. We'll see how the new methods `stream()`, `or()`, and `ifPresentOrElse()` considerably improve its API."
 searchKeywords: "java 9 optional"
 featuredImage: java-9-optional
 ---
@@ -15,7 +15,7 @@ Let's look at ...
 
 ## Optional
 
-### Optional::stream {#stream}
+### `Optional::stream`
 
 This one requires no explanation:
 
@@ -102,9 +102,7 @@ public Stream<Order> findOrdersForCustomer(String customerId) {
 
 I think I didn't have a use case for that yet but it's good to keep in mind.
 
-<contentimage slug="java-9-optional"></contentimage>
-
-### Optional::or {#or}
+### `Optional::or`
 
 Another addition that lets me to think *finally*!
 How often have you had an `Optional` and wanted to express "use this one; unless it is empty, in which case I want to use this other one"?
@@ -150,7 +148,7 @@ How did we even live without it?
 Barely, I can tell you.
 Just barely.
 
-### Optional::ifPresentOrElse
+### `Optional::ifPresentOrElse`
 
 This last one, I am less happy with:
 
@@ -214,12 +212,12 @@ The question that remains is the following: Is adding a return type to a method 
 Not obviously but I'm currently too lazy to investigate.
 Do you know?
 
-## Optional\[Double|Int|Long\]
+## `Optional`[`Double`|`Int`|`Long`]
 
 For some reason only `stream` and `ifPresentOrElse` made it to the primitive specializations.
 And they still don't have `map`.
 What's going on there?
-(Thanks to the Pedant for [making me](http://blog.codefx.org/java/dev/java-9-optional/#comment-2838631744) put this in here.)
+(Thanks to the Pedant for [making me](java-9-optional)<!-- comment-2838631744 --> put this in here.)
 
 ## Reflection
 

@@ -12,12 +12,6 @@ So, default methods... yesterday's news, right?
 Yes but after a year of use, a lot of facts accumulated and I wanted to gather them in one place for those developers who are just starting to use them.
 And maybe even the experienced ones can find a detail or two they didn't know about yet.
 
-I will extend this post in the future if [new shit comes to light](https://www.youtube.com/watch?v=gbIv7W7rhx4).
-So I am asking my readers (yes, both of you!) to provide me with each little fact regarding default methods which you can't find here.
-If you've got something, please [tweet](https://twitter.com/nipafx), [mail](mailto:nipa@codefx.org) or leave a comment.
-
-### Overview
-
 I guess I failed in giving this post a meaningful narrative.
 The reason is that, in its heart, it's a wiki article.
 It covers different concepts and details of default methods and while these are naturally related, they do not lend themselves to a continuous narration.
@@ -25,10 +19,6 @@ It covers different concepts and details of default methods and while these are 
 But this has an upside, too!
 You can easily skip and jump around the post without degrading your reading experience much.
 Check the table of contents for a complete overview over what's covered and go where your curiosity leads you.
-
-To find some use-cases for default methods, have a look at [other articles about the topic](http://blog.codefx.org/tag/default-methods/).
-
-[toc exclude=Overview heading_levels="2,3,4"]
 
 ## Default Methods
 
@@ -83,7 +73,7 @@ If, for example, our `StringComparator` were to implement `ObjectComparator<T> e
 When implementing two interfaces where one extends the other `Comparator.super` causes a different compile error.
 Together this means that it is not possible to explicitly call overridden or [reabstracted](#re-abstracting-methods) default methods.
 
-(Thanks to [charlie](https://blog.codefx.org/java/everything-about-default-methods/#comment-2444568189) for pointing me into the right direction.)
+(Thanks to [charlie](java-default-methods-guide)<!-- comment-2444568189 --> for pointing me into the right direction.)
 
 ### Resolution Strategy
 
@@ -92,15 +82,15 @@ What happens if a method is called for which a default implementation exists?
 (Note that a method is identified by its [signature](http://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html#jls-8.4.2 "§8.4.2.
 Method Signature - Java Language Specification"), which consists of the name and the parameter types.)
 
-> **Rule \#1**: 
+> **Rule \#1**:
 > :   Classes win over interfaces.
 If a class in the superclass chain has a declaration for the method (concrete or abstract), you're done, and defaults are irrelevant.
 >
-> **Rule \#2**: 
+> **Rule \#2**:
 > :   More specific interfaces win over less specific ones (where specificity means "subtyping").
 A default from `List` wins over a default from `Collection`, regardless of where or how or how many times `List` and `Collection` enter the inheritance graph.
 >
-> **Rule \#3**: 
+> **Rule \#3**:
 > :   There's no Rule \#3.
 If there is not a unique winner according to the above rules, concrete classes must disambiguate manually.
 >
@@ -175,8 +165,6 @@ You can use `static` though, which will reduce the need for [plural-form utility
 
 Now that we know all about how to use default methods let's put that knowledge into context.
 
-<contentimage slug="concepts-default-methods"></contentimage>
-
 ### Interface Evolution
 
 The expert group which introduced default methods can often be found stating that their goal was to allow "interface evolution":
@@ -223,47 +211,42 @@ My guess is that it only makes sense to move the most general of those methods t
 
 In his argument for new [Javadoc tags](#Documentation), Brian Goetz weakly classifies the default methods which were introduced into the JDK so far (formatting mine):
 
-> **1.
-Optional methods**: 
+> **1. Optional methods**:
 >
-> :   This is when the default implementation is barely conformant, such as the following from Iterator:
+> This is when the default implementation is barely conformant, such as the following from Iterator:
 >
->     ``` {.lang:java .decode:true title="'Iterator.remove()'"}
->     default void remove() {
->         throw new UnsupportedOperationException("remove");
->     }
->     ```
+> ```java
+> default void remove() {
+>     throw new UnsupportedOperationException("remove");
+> }
+> ```
 >
->     It adheres to its contract, because the contract is explicitly weak, but any class that cares about removal will definitely want to override it.
+> It adheres to its contract, because the contract is explicitly weak, but any class that cares about removal will definitely want to override it.
 >
-> **2.
-Methods with *reasonable* defaults but which might well be overridden by implementations that care enough**: 
+> **2. Methods with *reasonable* defaults but which might well be overridden by implementations that care enough**:
 >
-> :   For example, again from Iterator:
+> For example, again from Iterator:
 >
->     ``` {.lang:java .decode:true title="'Iterator.forEach(Consumer)'"}
->     default void forEach(Consumer<?
-super E> consumer) {
->         while (hasNext())
->             consumer.accept(next());
->     }
->     ```
+> ```java
+> default void forEach(Consumer<? super E> consumer) {
+>     while (hasNext())
+>         consumer.accept(next());
+> }
+> ```
 >
->     This implementation is perfectly fine for most implementations, but some classes (e.g., `ArrayList`) might have the chance to do better, if their maintainers are sufficiently motivated to do so.
-The new methods on `Map` (e.g., `putIfAbsent`) are also in this bucket.
+> This implementation is perfectly fine for most implementations, but some classes (e.g., `ArrayList`) might have the chance to do better, if their maintainers are sufficiently motivated to do so.
+> The new methods on `Map` (e.g., `putIfAbsent`) are also in this bucket.
 >
-> **3.
-Methods where its pretty unlikely anyone will ever override them**: 
+> **3. Methods where its pretty unlikely anyone will ever override them**:
 >
-> :   Such as this method from Predicate:
+> Such as this method from Predicate:
 >
->     ``` {.lang:java .decode:true title="'Predicate.and(Predicate)'"}
->     default Predicate<T> and(Predicate<?
-super T> p) {
->         Objects.requireNonNull(p);
->         return (T t) -> test(t) && p.test(t);
->     }
->     ```
+> ```java
+> default Predicate<T> and(Predicate<? super T> p) {
+>     Objects.requireNonNull(p);
+>     return (T t) -> test(t) && p.test(t);
+> }
+> ```
 >
 > [Brian Goetz - Jan 31 2013](http://mail.openjdk.java.net/pipermail/lambda-libs-spec-experts/2013-January/001211.html)
 
@@ -275,9 +258,7 @@ Quite the opposite, I consider it a great help in communicating about them and a
 
 Note that default methods were the primary reason to introduce the new (unofficial) Javadoc tags **@apiNote**, **@implSpec** and **@implNote**.
 The JDK makes frequent use of them, so it is important to understand their meaning.
-A good way to learn about them is to read [my last post](http://blog.codefx.org/jdk/new-javadoc-tags/) (smooth, right?), which covers them in all detail.
-
-[java_8]
+A good way to learn about them is to read [my last post](javadoc-tags-apiNote-implSpec-implNote) (smooth, right?), which covers them in all detail.
 
 ## Inheritance and Class-Building
 
@@ -372,11 +353,11 @@ partial) implementations of interfaces but should not exist without a matching i
 So when abstract classes are effectively reduced to be low-visibility, skeletal implementations of interfaces, can default methods take this away as well?
 Decidedly: *No!* Implementing interfaces almost always requires some or all of those class-building tools which default methods lack.
 And if some interface doesn't, it is clearly a special case, which should not lead you astray.
-(See [this earlier post](http://blog.codefx.org/jdk/instances-non-capturing-lambdas/) about what can happen when an interface is implemented with default methods.)
+(See [this earlier post](java-non-capturing-lambdas) about what can happen when an interface is implemented with default methods.)
 
 ## More Links
 
-I wrote some [other posts about default methods](http://blog.codefx.org/tag/default-methods/) but I want to explicitly recommend one which presents precise steps on how to use default methods for their intended goal:
+I wrote some [other posts about default methods](tag:default-methods) but I want to explicitly recommend one which presents precise steps on how to use default methods for their intended goal:
 
 -   [Interface Evolution With Default Methods](java-default-methods-interface-evolution)
 
@@ -385,10 +366,7 @@ And the internet is of course full of articles about the topic:
 -   final version of [State of the Lambda](http://cr.openjdk.java.net/~briangoetz/lambda/lambda-state-final.html) (chapter 10 covers default methods)
 -   [official tutorial](http://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html)
 -   [official tutorial on how to evolve interfaces](http://docs.oracle.com/javase/tutorial/java/IandI/nogrow.html)
--   [tutorial on JavaCodeGeeks](http://examples.javacodegeeks.com/java-basics/java-8-default-methods-tutorial/)
--   [tutorial on DZone](http://java.dzone.com/articles/interface-default-methods-java)
--   [StackOverflow question (and answer by Brian Goetz) about default methods as traits](http://stackoverflow.com/q/28681737/2525313 "Java 8 default methods as traits : safe?
-- StackOverflow")
+-   [StackOverflow question (and answer by Brian Goetz) about default methods as traits](http://stackoverflow.com/q/28681737/2525313)
 
 ## Reflection
 

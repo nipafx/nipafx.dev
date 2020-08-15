@@ -13,17 +13,8 @@ A couple of weeks ago I wrote about [how Project Jigsaw may break existing code]
 So what do we get in return?
 Let's look at the pain points the project addresses and its goals for how to solve them in Java 9.
 
-### Series
-
-[codefx_series\_projectjigsaw]
-
-### Overview
-
-We will first cover the pain points which motivated the creation of Project Jigsaw before looking at the project's goals.
-
+We first cover the pain points which motivated the creation of Project Jigsaw before looking at the project's goals.
 The main sources are [JSR 376](https://www.jcp.org/en/jsr/detail?id=376) and the talk [Java 9, And Beyond](http://www.infoq.com/presentations/java-9-10), given by Mark Reinhold (chief architect of the Java Platform Group at Oracle) at EclipseCon 2015.
-
-[toc exclude=Overview|Series]
 
 ## Pain Points
 
@@ -45,7 +36,7 @@ It is also not generally possible to fulfill dependencies on different versions 
 ### Weak Encapsulation Across Packages
 
 Java's visibility modifiers are great to implement encapsulation between classes in the same package.
-But across package boundaries there is only one visibility: *public*.
+But across package boundaries there is only one visibility: `public`.
 
 Since a class loader folds all loaded packages into one big ball of mud, all public classes are visible to all other classes.
 There is hence no way to create functionality which is visible throughout a whole JAR but not outside of it.
@@ -82,10 +73,6 @@ Java 8 brought [compact profiles](https://docs.oracle.com/javase/8/docs/technote
 They alleviate the problem but do not solve it.
 Compact profiles are fixed and hence unable to cover all current and future needs for partial JREs.
 
-<contentimage slug="project-jigsaw-2-goals"></contentimage>
-
-[Published](https://www.flickr.com/photos/cuppini/15243688300/) by [Riccardo Cuppini](https://www.flickr.com/photos/cuppini/) under [CC-BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/).
-
 ## Goals Of Project Jigsaw
 
 Project Jigsaw aims to solve the problems discussed above by introducing a language level mechanism to modularize large systems.
@@ -107,7 +94,7 @@ One of the key goals of Project Jigsaw is to enable modules to only export speci
 All other packages are private to the module.
 
 > A class that is private to a module should be private in exactly the same way that a private field is private to a class.
-In other words, module boundaries should determine not just the visibility of classes and interfaces but also their accessibility.
+> In other words, module boundaries should determine not just the visibility of classes and interfaces but also their accessibility.
 >
 > [Mark Reinhold - Project Jigsaw: Bringing the big picture into focus](http://mreinhold.org/blog/jigsaw-focus)
 
@@ -157,12 +144,7 @@ Last not least, this will allow users to create a Java runtime specific for thei
 
 The next post in this series will discuss the features Project Jigsaw will bring to Java 9.
 Stay tuned!
-
-[feather_share]
-
 If you like what I'm writing about, why don't you follow me?
-
-[feather_follow]
 
 Got any questions or comments about this post or Project Jigsaw in general?
 Feel free to leave a comment or ping me wherever you find me.

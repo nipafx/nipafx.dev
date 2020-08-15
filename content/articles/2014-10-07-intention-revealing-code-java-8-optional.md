@@ -1,11 +1,12 @@
 ---
-title: "Intention Revealing Code With Optional"
-tags: [clean-code, java-8, optional, techniques]
+title: "Intention Revealing Code With `Optional`"
+tags: [clean-code, java-8, optional]
 date: 2014-10-07
 slug: intention-revealing-code-java-8-optional
+intro: "Write intention revealing code with Java 8's new type `Optional` and prevent most NPEs. This is not optional!"
 description: "Write intention revealing code with Java 8's new type Optional and prevent most NPEs. This is not optional!"
 searchKeywords: "Optional"
-featuredImage: Simply Explained NPE
+featuredImage: intention-revealing-optional
 ---
 
 Java 8 introduced a type `Optional<T>`, which can be used to handle potentially missing values.
@@ -17,27 +18,7 @@ In my opinion, they are missing the crucial point:
 **Optional provides a way to get rid of null!** (Well, almost.)
 
 And even though [there are some caveats](http://blog.jooq.org/2014/03/28/java-8-friday-optional-will-remain-an-option-in-java/), I say the benefits are worth dealing with them.
-
-### Update
-
-This became a series of posts about Optional:
-
--   [Intention Revealing Code With Java 8’s New Type Optional](intention-revealing-code-java-8-optional): Use Optional everywhere instead of null (which should be rare in the first place).
--   [The Design Of Optional](http://blog.codefx.org/jdk/dev/design-optional/): How the expert group came to the decision to include Optional in Java 8.
--   [Why Isn’t Optional Serializable?](http://blog.codefx.org/jdk/dev/why-isnt-optional-serializable/): Well, why isn't it?
--   [Serialize Optional](http://blog.codefx.org/jdk/serialize-optional/): What to do if you really want to serialize it anyways.
-
-### Overview
-
-So this post is going to talk about how Optional can prevent NullPointerExceptions by making code reveal its intentions more clearly.
-My original plan was to not even explain what the type is and how to use it because - as ususal - plenty of people have done this already.
-But it is so damn easy that I decided to spent 5 minutes explaining it before moving on to the juicy part.
-
-This post does not discuss in which situations there might be better solutions than using Optional.
-It just claims that Optional beats null.
-It does also not address some (justified) criticism of Optional but I promise to do that later.
-
-[toc exclude=Overview|Update]
+So this post does not discuss in which situations there might be better solutions than using `Optional` - it just claims that `Optional` beats `null`.
 
 ## Introduction to Optional
 
@@ -45,7 +26,7 @@ It does also not address some (justified) criticism of Optional but I promise to
 As the [Javadoc](http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html) puts it:
 
 > A container object which may or may not contain a non-null value.
-If a value is present, `isPresent()` will return true and `get()` will return the value.
+> If a value is present, `isPresent()` will return true and `get()` will return the value.
 >
 > Additional methods that depend on the presence or absence of a contained value are provided, such as `orElse()` (return a default value if value not present) and `ifPresent()` (execute a block of code if the value is present).
 
@@ -95,19 +76,13 @@ The magic of Optional lies neither in its static factory methods, its mundane ac
 Plain and simple.
 Before I elaborate on this let's spend some time discussing null.
 
+<contentimage slug="simply-explained-npe" options="narrow"></contentimage>
+
 ### Null
 
 Let's start from the end and say you have a NullPointerException.
 And not the easy kind which you fix in a second.
 No, it's the evil kind which makes you step through the code line by line, trying to answer these questions:
-
-<div style="float: right;">
-
-<contentimage slug="Simply-Explained-NPE"></contentimage>
-
-Published by [Geek & Poke](http://geek-and-poke.com/geekandpoke/2010/11/12/simply-explained-npe.html) under [CC-BY 3.0](http://creativecommons.org/licenses/by/3.0/deed.en_US).
-
-</div>
 
 -   Where does the null reference come from?
 -   Should it actually reference an instance?
@@ -190,8 +165,6 @@ If it's not optional, it must be there.
 A corollary of that is that you can more readily sprinkle tests against null.
 Whether you use [assertions](http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html) or [`Objects.requireNonNull`](http://docs.oracle.com/javase/8/docs/api/java/util/Objects.html#requireNonNull-T-java.lang.String-), you never have to ask yourself, whether this or that argument might actually be allowed to be null.
 Because it's not!
-
-[java_8]
 
 ## Reflection
 

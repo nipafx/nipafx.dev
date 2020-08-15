@@ -5,34 +5,25 @@ date: 2015-06-30
 slug: features-project-jigsaw
 description: "A detailed presentation of the features Project Jigsaw brings to Java 9: modularization, encapsulation, configuration, performance, and more."
 searchKeywords: "features project jigsaw"
-featuredImage: project-jigsaw-3b-jdk-modularization
+featuredImage: project-jigsaw-3a-features
 ---
 
-So, Project Jigsaw... We already know [quite a bit about it](http://blog.codefx.org/tag/project-jigsaw/) but have not yet seen the details of how it plans to deliver on its promises.
+So, Project Jigsaw... We already know [quite a bit about it](tag:project-jigsaw) but have not yet seen the details of how it plans to deliver on its promises.
 This post will do precisely that and present the project's core concepts and features.
 
-### Series
-
-[codefx_series\_projectjigsaw]
-
-### Overview
-
-The first part will cover the core concepts of Project Jigsaw, namely the modules.
-We will then see which features they will have and how they are planned to interact with existing code and tools.
-
+The first part of this post covers the core concepts of Project Jigsaw, namely the modules.
+We then see which features they will have and how they are planned to interact with existing code and tools.
 Main sources for this article are the [requirements of Project Jigsaw](http://openjdk.java.net/projects/jigsaw/goals-reqs/03) and [of JSR 376](http://openjdk.java.net/projects/jigsaw/spec/reqs/02).
 While these documents are based on a thorough exploratory phase and are hence very mature, they are still subject to change.
 Nothing of what follows is set in stone.
-
-[toc exclude=Overview|Series]
 
 ## The Core Concept
 
 With Project Jigsaw the Java language will be extended to have a concept of modules.
 
 > \[Modules\] are named, self-describing program components consisting of code and data.
-A module must be able to contain Java classes and interfaces, as organized into packages, and also native code, in the form of dynamically-loadable libraries.
-A module’s data must be able to contain static resource files and user-editable configuration files.
+> A module must be able to contain Java classes and interfaces, as organized into packages, and also native code, in the form of dynamically-loadable libraries.
+> A module’s data must be able to contain static resource files and user-editable configuration files.
 >
 > [Java Platform Module System: Requirements (DRAFT 2)](http://openjdk.java.net/projects/jigsaw/spec/reqs/02#modules)
 
@@ -47,7 +38,7 @@ Whether its actual architecture and implementation allows that is another story 
 The plan is that modules will become a regular tool in a developer's box to organize her code.
 
 > Developers already think about standard kinds of program components such as classes and interfaces in terms of the language.
-Modules should be just another kind of program component, and like classes and interfaces they should have meaning in all phases of a program’s development.
+> Modules should be just another kind of program component, and like classes and interfaces they should have meaning in all phases of a program’s development.
 >
 > [Mark Reinholds - Project Jigsaw: Bringing the big picture into focus](http://mreinhold.org/blog/jigsaw-focus)
 
@@ -57,7 +48,7 @@ They will be available to Java users like us (in that case sometimes called *dev
 
 In fact, this is the current plan for how the JDK will be modularized:
 
-[![JDK Modularization](http://blog.codefx.org/wp-content/uploads/project-jigsaw-3b-jdk-modularization.png){.aligncenter .size-full .wp-image-1645 width="600" height="205"}](https://bugs.openjdk.java.net/secure/attachment/21573/jdk-tr.png)
+<contentimage slug="project-jigsaw-3b-jdk-modularization"></contentimage>
 
 ## Features
 
@@ -69,7 +60,7 @@ If you're interested to learn more, you can start by following the bracketed lin
 
 ### Dependency Management
 
-In order to [solve JAR/classpath hell](http://blog.codefx.org/java/dev/motivation-goals-project-jigsaw/#JARClasspath-Hell) one of the core features Project Jigsaw implements is dependency management.
+In order to [solve JAR/classpath hell](motivation-goals-project-jigsaw#jarclasspath-hell) one of the core features Project Jigsaw implements is dependency management.
 
 #### Declaration And Resolution
 
@@ -115,7 +106,7 @@ In fact, the compact profiles from Java 8 will be exactly that.
 
 Different modules will be able to contain packages with the same name, they will even be allowed to export them \[[export](http://openjdk.java.net/projects/jigsaw/spec/reqs/02#exports), [non-interference](http://openjdk.java.net/projects/jigsaw/spec/reqs/02#non-interference)\].
 
-Oracle will use this opportunity [to make all internal APIs unavailable](http://blog.codefx.org/java/dev/how-java-9-and-project-jigsaw-may-break-your-code/#Internal-APIs-Become-Unavailable).
+Oracle will use this opportunity [to make all internal APIs unavailable](how-java-9-and-project-jigsaw-may-break-your-code#internal-apis-become-unavailable).
 This will be the biggest impediment for adoption of Java 9 but is definitely setting the right course.
 First and foremost, it will greatly improve security as critical code is now hidden from attackers.
 It will also make the JDK considerably more maintainable, which will pay off in the long run.
@@ -131,7 +122,7 @@ At build-time, a new tool (presumably called *JLink*) will allow the creation of
 At launch time, an image can be made to appear as if it only contains a subset of its modules \[[launch-time configuration](http://openjdk.java.net/projects/jigsaw/goals-reqs/03#launch-time-configuration)\].
 
 It will also be possible to replace modules which implement an [endorsed standard](http://docs.oracle.com/javase/8/docs/technotes/guides/standards/#endorsed-standards-apis) or a [standalone technology](http://docs.oracle.com/javase/8/docs/technotes/guides/standards/#standalone-technologies) with a newer version in each of the phases \[[upgradeable modules](http://openjdk.java.net/projects/jigsaw/goals-reqs/03#upgradeable-modules)\].
-This will replace the deprecated [endorsed standards override mechanism](http://blog.codefx.org/java/dev/how-java-9-and-project-jigsaw-may-break-your-code/#Removal-Of-The-Endorsed-Standards-Override-Mechanism) and the [extension mechanism](http://blog.codefx.org/java/dev/how-java-9-and-project-jigsaw-may-break-your-code/#Removal-Of-The-Extension-Mechanism).
+This will replace the deprecated [endorsed standards override mechanism](how-java-9-and-project-jigsaw-may-break-your-code#removal-of-the-endorsed-standards-override-mechanism) and the [extension mechanism](how-java-9-and-project-jigsaw-may-break-your-code#removal-of-the-extension-mechanism).
 
 All aspects of the module system (like dependency management, encapsulation and so forth) will work in the same manner in all phases unless this is not possible for specific reasons \[[fidelity](http://openjdk.java.net/projects/jigsaw/spec/reqs/02#fidelity-across-all-phases)\].
 
@@ -158,10 +149,6 @@ This is usually done during a program's start and can slow it down considerably.
 
 Modules will have an API allowing callers to identify all classes with a given annotation.
 One envisioned approach is to create an index of such classes that will be created when the module is compiled \[[annotation-detection](http://openjdk.java.net/projects/jigsaw/spec/reqs/02#efficient-annotation-detection)\].
-
-<contentimage slug="project-jigsaw-3a-features"></contentimage>
-
-[Published](https://www.flickr.com/photos/droetker0912/5542920908) by [droetker0912](https://www.flickr.com/photos/droetker0912/) under [CC-BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/).
 
 ### Integration With Existing Concepts And Tools
 

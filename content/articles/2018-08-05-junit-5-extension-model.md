@@ -1,23 +1,18 @@
 ---
 title: "JUnit 5 Extension Model: How To Create Your Own Extensions"
-tags: [architecture, junit-5, testing]
+tags: [architecture, junit-5, libraries, testing]
 date: 2018-08-05
 slug: junit-5-extension-model
 description: "The JUnit 5 extension model enables detailed, flexible, and powerful additions to JUnit 5's core features. For that it provides specific extension points."
 intro: "The JUnit 5 extension model enables detailed, flexible, and powerful additions to JUnit 5's core features. For that it provides specific extension points and easy composition of annotations."
 searchKeywords: "JUnit 5 extension"
 featuredImage: junit-5-extension-model
+repo: demo-junit-5
 ---
 
-We already know [quite](junit-5-setup) [a](junit-5-basics) [lot](junit-5-parameterized-tests) about [JUnit 5](https://blog.codefx.org/tag/junit-5/), the next version of Java's most ubiquitous testing framework.
-Let's now examine [Jupiter's](http://blog.codefx.org/design/architecture/junit-5-architecture/#Splitting-JUnit-5) extension model, which allows third parties to extend JUnit with their own additions.
+We already know [quite](junit-5-setup) [a](junit-5-basics) [lot](junit-5-parameterized-tests) about [JUnit 5](tag:junit-5), the next version of Java's most ubiquitous testing framework.
+Let's now examine [Jupiter's](junit-5-architecture-jupiter#splitting-junit-5) extension model, which allows third parties to extend JUnit with their own additions.
 That's not only pretty cool for libraries and frameworks, but also very useful for application developers because they can adapt JUnit 5 to their projects' specific traits.
-
-### Overview
-
-[codefx_junit5\_series]
-
-[toc exclude=Overview]
 
 ## JUnit 4 Extension Model
 
@@ -77,13 +72,11 @@ Additionally, composing different extensions can be problematic and will often n
 
 <pullquote>JUnit has two competing extension mechanisms, each with its own limitations.</pullquote>
 
-<contentimage slug="junit-5-extension-model"></contentimage>
-
 ## JUnit 5 Extension Model
 
 JUnit 5 has a couple of [core principles](https://github.com/junit-team/junit5/wiki/Core-Principles) and one of them is to "prefer extension points over features".
 This translated quite literally into an integral mechanism of the new version: extension points.
-They are not the only but the most important mechanism to extend [JUnit Jupiter](http://blog.codefx.org/design/architecture/junit-5-architecture/#Splitting-JUnit-5).
+They are not the only but the most important mechanism to extend [JUnit Jupiter](junit-5-architecture-jupiter#splitting-junit-5).
 
 <pullquote>Prefer extension points over features</pullquote>
 
@@ -229,8 +222,6 @@ interface Store {
 The methods `get` and `remove` take a type token to prevent clients from littering their code with casts.
 There is no magic there, the store simply does the casts internally, so if the token and the value's type don't line up, you still get a `ClassCastException`.
 Overloads without type tokens exist as well as the `getOrComputeIfAbsent` shortcut.
-
-[codefx_junit\_5\_product]
 
 ### Registering Extensions
 
@@ -483,4 +474,4 @@ JUnit Jupiter overcomes their limitations with the more general concept of exten
 We have explored the context information available to an extension and how it must use the store to be stateless.
 Then we discussed the three mechanisms to register an extension (declaratively with annotations, programmatically with fields, automatically with the service loader) and how to create custom annotations for seamless integration into Jupiter's API.
 
-With the theory down we can see how to use the extension model's other extension points to [build custom conditions](http://blog.codefx.org/libraries/junit-5-conditions/), inject parameters, and generally do all kinds of interesting things.
+With the theory down we can see how to use the extension model's other extension points to [build custom conditions](junit-5-disabled-conditions), inject parameters, and generally do all kinds of interesting things.

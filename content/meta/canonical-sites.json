@@ -3,6 +3,14 @@
 		{
 			"url": "disy\\.net",
 			"text": "I originally wrote this article for Disy's tech blog. Check it out: [$TITLE]($URL)."
+		},
+		{
+			"url": "sitepoint\\.com",
+			"text": "I originally wrote this article for Sitepoint's Java channel. Check it out: [$TITLE]($URL)."
+		},
+		{
+			"url": "medium\\.com/sitepoint",
+			"text": "I originally wrote this for Sitepoint's Java newsletter. Check it out: [$TITLE]($URL)."
 		}
 	]
 }

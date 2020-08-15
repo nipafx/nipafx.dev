@@ -3,17 +3,13 @@ title: "Java 9 Resources - Talks, Articles, Repos, Blogs, Books And Courses"
 tags: [java-9]
 date: 2017-05-02
 slug: java-9-resources-talks-articles-blogs-books-courses
-description: ""
-searchKeywords: ""
+canonicalUrl: https://www.sitepoint.com/java-9-resources
+description: "Java 9 draws and the number of posts and talks about it skyrocketed in the recent months. Here's a list of recommended talks and articles but also further resources where new, high-quality content will pop up."
 featuredImage: java-9-resources
 ---
 
-[canonical_sitepoint url="https://www.sitepoint.com/java-9-resources"]
-
 You can tell that Java 9 draws near because the number of posts and talks about it skyrocketed in the recent months.
 I want to recommend existing talks and articles where you can learn about Java 9 but also further resources, where new, high-quality content will pop up.
-
-[toc]
 
 ## Talks
 
@@ -53,34 +49,34 @@ Of course people started writing code and there are a few interesting repositori
 -   [CodeFX/jigsaw-advent-calendar](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar): A simple demo application demonstrating JPMS features
 -   [CodeFX/jpms-monitor](https://github.com/CodeFX-org/demo-jpms-monitor): The JPMS demo application I use in my book
 
-<contentimage slug="java-9-resources"></contentimage>
-
 ## Articles
 
 There are countless articles about Java 9, so there is simply no way to do everyone justice.
-Here's my try of listing the more important ones:
+Here's my try of listing the more important ones.
+
+Overviews:
 
 -   [The Ultimate Guide](https://www.sitepoint.com/ultimate-guide-to-java-9/)
 -   [Programming with Modularity and Project Jigsaw](https://www.infoq.com/articles/Latest-Project-Jigsaw-Usage-Tutorial)
 
-<!-- -->
+New features:
 
--   [Additions To Stream API](//blog.codefx.org/java/dev/java-9-stream/), [New Stream Collectors](http://www.baeldung.com/java9-stream-collectors)
+-   [Additions To Stream API](java-9-stream/), [New Stream Collectors](http://www.baeldung.com/java9-stream-collectors)
 -   [Process API: The Shape of Things to Come](http://iteratrlearning.com/java/2017/03/12/java9-process-api.html)
 -   [Java Time (JSR-310) enhancements](http://blog.joda.org/2017/02/java-time-jsr-310-enhancements-java-9.html)
 -   [Concurrency Updates](https://www.voxxed.com/blog/2016/10/java-9-series-concurrency-updates/)
--   [Additions To Optional](//blog.codefx.org/java/dev/java-9-optional/)
+-   [Additions To Optional](java-9-optional/)
 -   [Deep Dive into Stack-Walking API](https://www.sitepoint.com/deep-dive-into-java-9s-stack-walking-api/)
 -   [Convenience Factory Methods for Collections](http://www.baeldung.com/java-9-collections-factory-methods)
 
-<!-- -->
+Under the hood:
 
 -   [Applying `@Deprecated` Enhancements](http://marxsoftware.blogspot.de/2016/08/applying-jdk-9-deprecated-enhancements.html)
 -   [Using `sun.misc.Unsafe`](http://gregluck.com/blog/archives/2017/03/using-sun-misc-unsafe-in-java-9/)
 -   [Variable Handles](https://www.voxxed.com/blog/2016/11/java-9-series-variable-handles/)
 -   [Reflection vs Encapsulation – Stand Off in the Java Module System](https://www.sitepoint.com/reflection-vs-encapsulation-in-the-java-module-system/)
 
-<!-- -->
+JVM features:
 
 -   [Generating Multi-Release JARs with Maven](http://word-bits.flurg.com/multrelease-jars/), [Building Multi-Release JARs with Maven](http://in.relation.to/2017/02/13/building-multi-release-jars-with-maven/)
 -   [Adjust Memory Limits if Running with Docker](https://www.infoq.com/news/2017/02/java-memory-limit-container)
@@ -96,22 +92,21 @@ Spoiler: It doesn't look good.
 
 There are a few blogs and sites that regularly publish about Java 9.
 Most of them have the decency to tag those posts, so you don't have to go searching.
+
 Company blogs/sites:
 
 -   [Oracle](https://blogs.oracle.com/java/) (no Java 9 tag)
 -   [SitePoint](http://sitepoint.com/tag/java-9/) (surprise!)
 -   [Voxxed](https://www.voxxed.com/blog/tag/java-9/) (including a [nice series](https://www.voxxed.com/blog/tag/java-9-series/))
 
-<!-- -->
+Personal blogs:
 
 -   [Baeldung](http://www.baeldung.com/tag/java-9/) (Eugen Baeldung)
 -   [Iteratr Learning](http://iteratrlearning.com/articles) (no Java 9 tag; Raoul-Gabriel Urma and Richard Warbuton)
--   [CodeFX](//blog.codefx.org/tag/java-9/) (mine)
+-   [CodeFX](tag:java-9) (mine)
 -   [Joda](http://blog.joda.org/search/label/java9) (Stephen Colebourne)
 
-[jms_in\_action]
-
-## Books and Courses {#booksandcourses}
+## Books and Courses
 
 If you want to go really deep and prepare yourself for actually using the new stuff, you might want to go for a book or online course.
 These are the ones I know of:

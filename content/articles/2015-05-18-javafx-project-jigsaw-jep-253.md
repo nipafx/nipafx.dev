@@ -5,6 +5,7 @@ date: 2015-05-18
 slug: javafx-project-jigsaw-jep-253
 description: "JEP253 aims to prepare JavaFX for Project Jigsaw by defining public APIs for functionality that will become inaccessible due to modularization."
 searchKeywords: "JavaFX Project Jigsaw"
+featuredImage: jep253-jigsaw
 ---
 
 So [Java 9 may break your code](how-java-9-and-project-jigsaw-may-break-your-code)...
@@ -20,16 +21,12 @@ Its goal:
 
 Let's have a look at how JavaFX, Project Jigsaw and JEP 253 interact.
 
-### Overview
-
 To better understand the role internal APIs play in JavaFX, it is helpful to know its control architecture, so we will start with that.
 We will then look at why internal APIs are frequently used when working with JavaFX.
 This will help put the new JEP in context.
 
 Because I am familiar with it I will often refer to [ControlsFX](http://controlsfx.org/) as an example.
 I assume that similar libraries (e.g. [JFXtras](http://jfxtras.org/)) as well as other projects which customize JavaFX are in the same situation.
-
-[toc exclude=Overview]
 
 ## JavaFX Control Architecture
 
@@ -56,10 +53,6 @@ So here we have MVC's controller.
 It is also noteworthy how controls resolve user input.
 In order to link an action to an input (e.g. "open new tab in background" for "CTRL + mouse click"), they create a list of `KeyBinding`s.
 Input events are then compared to all created bindings and the correct action is called.
-
-<contentimage slug="jep253-jigsaw"></contentimage>
-
-[Published](http://jfx.wikia.com/wiki/JavaFX_Logo_-_Centigrade) by [Flosweb](http://jfx.wikia.com/wiki/User:Flosweb) under [CC-BY-SA](https://creativecommons.org/licenses/by-sa/3.0/) - jigsaw effect added by me.
 
 ## Internal APIs in JavaFX
 
@@ -96,8 +89,8 @@ All official controls come with this feature and some of those provided by other
 To ensure uniform, high quality conversion JavaFX provides an API for this.
 Unfortunately it lives in `com.sun.javafx.css.converters`.~~
 
-Update (11th of June 2015)
-:   *[As pointed out](http://blog.codefx.org/java/dev/javafx-project-jigsaw-jep-253/#comment-2038193283) by [Michael](https://disqus.com/by/michaelennen/), it is not necessary to create the converters directly.
+**Update (11th of June 2015)**:
+*[As pointed out](javafx-project-jigsaw-jep-253)<!-- comment-2038193283 --> by [Michael](https://disqus.com/by/michaelennen/), it is not necessary to create the converters directly.
 Instead the static factory methods on the published [`StyleConverter`](https://docs.oracle.com/javase/8/javafx/api/javafx/css/StyleConverter.html) should be used.
 This makes the above paragraph moot.*
 
@@ -112,7 +105,7 @@ Often the only work around is to hack into a control's inner workings and thus u
 Such workarounds will fail in Java 9.
 Since it seems unlikely that they become unnecessary because all bugs are fixed, concerns like the following are understandable:
 
-> Of course, in theory, if all of \[those bugs\] get fixed in \[Java\] 9 I am fine, but if there is a period of time where half of them are fixed in 9 and the other half can only be worked around on 8, what do I do with my product?
+> Of course, in theory, if all of [those bugs] get fixed in [Java] 9 I am fine, but if there is a period of time where half of them are fixed in 9 and the other half can only be worked around on 8, what do I do with my product?
 >
 > [Robert Krüger - April 9 2015](http://mail.openjdk.java.net/pipermail/openjfx-dev/2015-April/017046.html)
 
@@ -142,17 +135,17 @@ Two success metrics are defined:
 
 The JEP is split into three projects:
 
-Project One: Make UI control skins into public APIs
-:   Skins of existing controls will be moved from `com.sun.javafx.scene.control.skin` to `javafx.scene.control.skin`.
+**Project One: Make UI control skins into public APIs**:
+Skins of existing controls will be moved from `com.sun.javafx.scene.control.skin` to `javafx.scene.control.skin`.
 This will make them published API.
 (Note that this does not include the behavior classes.)
 
-Project Two: Improve support for input mapping
-:   Behavior will be definable by input mapping.
+**Project Two: Improve support for input mapping**:
+Behavior will be definable by input mapping.
 This allows to alter a control's behavior at runtime without requiring to extend any specific (and unpublished) classes.
 
-Project Three: Review and make public relevant CSS APIs
-:   CSS API which is currently available in `com.sun.*` packages will be reviewed and published.
+**Project Three: Review and make public relevant CSS APIs**:
+CSS API which is currently available in `com.sun.*` packages will be reviewed and published.
 
 The proposal goes into more detail and describes the current state of each project as well as some risks and assumptions.
 

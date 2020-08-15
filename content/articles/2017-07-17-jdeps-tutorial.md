@@ -1,24 +1,23 @@
 ---
 title: "A JDeps Tutorial - Analyze Your Project's Dependencies"
-tags: [j_ms, jdeps, tools]
+tags: [java-basics, j_ms, jdeps, tools]
 date: 2017-07-17
 slug: jdeps-tutorial-analyze-java-project-dependencies
 description: "JDeps is a dependency analysis tool for Java bytecode (class files and JARs). Learn how to use filters, aggregate results, and create diagrams."
 intro: "JDeps is a dependency analysis tool for Java bytecode, i.e. class files and JARs. This primer teaches you how to use filters, aggregate results, and create diagrams."
 searchKeywords: "jdeps"
-featuredImage: jdeps-scaffoldhunter-jars
+featuredImage: jdeps-tutorial
+inlineCodeLanguage: shell
 ---
 
 [JDeps](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jdeps.html) is the *Java Dependency Analysis Tool*, a command line tool that processes Java bytecode, meaning `.class` files or the JARs that contain them, and analyzes the statically declared dependencies between classes.
 The results can be filtered in various ways and can be aggregated to package or JAR level.
-JDeps can also tell you which JDK-internal APIs your project is using and is fully aware of [the module system](https://blog.codefx.org/tag/jpms/).
+JDeps can also tell you which JDK-internal APIs your project is using and is fully aware of [the module system](tag:j_ms).
 All in all it is a very useful tool to examine various forms of dependency graphs.
 
 In this tutorial, I'll introduce you to how JDeps works - follow-up posts will show you some great use cases for it.
 
-### Overview
-
-[toc exclude=Overview]
+## Code Along
 
 For this tutorial, I encourage you to follow along, preferably with one of *your* projects.
 It will be easiest if you have a JAR of your project and next to it a folder with all its transitive dependencies.
@@ -76,8 +75,6 @@ Note that some dependencies are marked as `not found`, which makes sense as I di
 Now it's time to configure JDeps with the various options.
 You can list them with `jdeps -h`.
 
-<contentimage slug="jdeps-network"></contentimage>
-
 ## Including Dependencies
 
 An important aspect of JDeps is that it allows you to analyze your dependencies as if they were part of your code.
@@ -132,37 +129,13 @@ There are various ways to configure JDeps' output.
 Maybe the best option to use in a first analysis of any project is `-summary` or `-s`, which only shows dependencies between JARs and leaves out the package dependencies.
 The following table lists various other ways to get different perspectives on the dependencies:
 
-Option
-
-Description
-
-`--package` or `-p`
-
-Followed by a package name it only considers dependencies *on* that package, which is a great way to see all the places where those `utils` are used.
-
-`--regex` or `-e`
-
-Followed by a regular expression it only considers dependencies *on classes* that match the regex.
-
-(Note that unless `-verbose:class` is used, output still shows packages.)
-
-`-filter` or `-f`
-
-Followed by a regular expression it *excludes* dependencies on classes that match the regex.
-
-(Note that unless `-verbose:class` is used, output still shows packages.)
-
-`-filter:archive`
-
-In many cases dependencies *within* an artifact are not that interesting.
-
-This option ignores them and only shows dependencies *across* artifacts.
-
-`--api-only`
-
-Sometimes, particularly if you’re analyzing a library, you only care about a JARs API.
-
-With this option, only types mentioned in the signatures of public and protected members of public classes are examined.
+| Option | Description |
+|--------|-------------|
+| `--package` or `-p` | Followed by a package name it only considers dependencies *on* that package, which is a great way to see all the places where those `utils` are used. |
+| `--regex` or `-e` | Followed by a regular expression it only considers dependencies *on classes* that match the regex. (Note that unless `-verbose:class` is used, output still shows packages.) |
+| `-filter` or `-f` | Followed by a regular expression it *excludes* dependencies on classes that match the regex. (Note that unless `-verbose:class` is used, output still shows packages.) |
+| `-filter:archive` | In many cases dependencies *within* an artifact are not that interesting. This option ignores them and only shows dependencies *across* artifacts. |
+| `--api-only` | Sometimes, particularly if you’re analyzing a library, you only care about a JARs API. With this option, only types mentioned in the signatures of public and protected members of public classes are examined. |
 
 Output on the command line is a good way to examine details and drill deeper into interesting bits.
 It doesn't make for the most intuitive overview, though - diagrams are much better at that.
@@ -176,7 +149,7 @@ $ jdeps --class-path 'libs/*' -recursive --dot-output dots sh-2.6.3.jar
 $ dot -Tpng -O dots/summary.dot
 ```
 
-<contentimage slug="jdeps-scaffoldhunter-jars-small"></contentimage>
+<contentimage slug="jdeps-scaffoldhunter-jars"></contentimage>
 
 ## Drilling Deeper
 
@@ -191,7 +164,7 @@ There are a few more options that might help you in your specific case - as ment
 
 ## JDeps And Modules
 
-Just like the compiler and the JVM can operate on a higher level of abstraction thanks to [the module system](https://blog.codefx.org/tag/jpms/), so can JDeps.
+Just like the compiler and the JVM can operate on a higher level of abstraction thanks to [the module system](tag:j_ms), so can JDeps.
 The module path can be specified with `--module-path` (note that `-p` is already reserved, so it is not a shorthand of this option) and the initial module with `--module` or `-m`.
 From there, the analyses we made above can be made just the same.
 
@@ -240,12 +213,10 @@ spark.core -> websocket.servlet
 Beyond that, there are some Java 9 and module-specific options.
 With `--require <modules>` you can list all modules that require the named ones.
 You can use `--jdk-internals` to analyze a project's problematic dependencies and `--generate-module-info` or `--generate-open-module` to create first drafts of module descriptors.
-As mentioned in passing, JDeps will also always report all [split packages](https://blog.codefx.org/java/java-9-migration-guide/#Split-Packages) it finds.
+As mentioned in passing, JDeps will also always report all [split packages](java-9-migration-guide#split-packages) it finds.
 
 In a future post, I will show you how to use these flags to help your project's modularization along.
 But even before that, JDeps is an important tool when [migrating to Java 9](java-9-migration-guide).
-
-[jms_in\_action title="Get my book and learn more about how to use JDeps for your Java 9 migration!"]
 
 ## Reflection
 

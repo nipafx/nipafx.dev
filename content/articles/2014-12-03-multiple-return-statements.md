@@ -1,6 +1,6 @@
 ---
 title: "Multiple Return Statements"
-tags: [clean-code, java-basics, techniques]
+tags: [clean-code, java-basics]
 date: 2014-12-03
 slug: java-multiple-return-statements
 description: "An argument for using multiple return statements in a method (as opposed to adhering to the single return myth)."
@@ -10,21 +10,13 @@ featuredImage: multiple-return-statements
 
 I once heard that in the past people strived for methods to have a single exit point.
 I understood this was an outdated approach and never considered it especially noteworthy.
-But lately I've come in contact with some developers who still adhere to that idea (the last time was [here](http://www.yegor256.com/2014/10/26/hacker-vs-programmer-mentality.html#comment-1698685823 "Yegor Bugayenko on Single Vs.
-Multiple Return Statements")) and it got me thinking.
+But lately I've come in contact with some developers who still adhere to that idea (the last time was [here](http://www.yegor256.com/2014/10/26/hacker-vs-programmer-mentality.html#comment-1698685823) and it got me thinking.
 
 So for the first time, I really sat down and compared the two approaches.
 
-### Overview
-
-The first part of the post will repeat the arguments for and against multiple return statements.
-It will also identify the critical role clean code plays in assessing these arguments.
-The second part will categorize the situations which benefit from returning early.
-
-To not always write about "methods with multiple return statements" I'll call the approach to structure methods that way a pattern.
-While this might be a little overboard it surely is more concise.
-
-[toc exclude=Overview]
+The first part of this post repeats the arguments for and against multiple return statements.
+It also identifies the critical role clean code plays in assessing these arguments.
+The second part categorizes the situations which benefit from returning early.
 
 ## The Discussion
 
@@ -85,8 +77,6 @@ I tried to categorize them here but make no claim to have a complete list.
 
 Every situation will come with a code sample.
 Note that these are shortened to bring the point across and can be improved in several ways.
-
-<contentimage slug="multiple-return-statements"></contentimage>
 
 ### Guard Clauses
 

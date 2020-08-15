@@ -16,15 +16,18 @@ My opinion on the matter is that without a type system that allows making every 
 
 Let me explain why.
 
-Note
-:   Even though I know better, in this post I accidentally call the null-safe member selection operator `?.` the *Elvis operator*.
+<admonition type="note">
+
+Even though I know better, in this post I accidentally call the null-safe member selection operator `?.` the *Elvis operator*.
 That's wrong - `?:` as in `streetName ?: "Unknown Street"` is Elvis.
-But, as a saving grace, in [a post about how to roll your own Elvis operator](https://blog.codefx.org/java/roll-your-own-pirate-elvis-operator/#The-Pirate-Elvis-Operator), I call `?.` (one eyed with a pompadour) *Pirate Elvis*.
+But, as a saving grace, in [a post about how to roll your own Elvis operator](java-pirate-elvis-operator#the-pirate-elvis-operator), I call `?.` (one eyed with a pompadour) *Pirate Elvis*.
 With that, it's not quite as wrong anymore that in this post here, I use Elvis for `?.`.
+
+</admonition>
 
 ## The Crux With Null
 
-I already [wrote about this before](http://blog.codefx.org/techniques/intention-revealing-code-java-8-optional/#Why-Even-Use-Optional).
+I already [wrote about this before](intention-revealing-code-java-8-optional#why-even-use-optional).
 The issue with null is *not* that it causes exceptions - that's just a symptom.
 The problem with null is that it says nothing about *why* the value is missing.
 Was something tried and failed (like connecting to the database) but for some reason the execution continued?
@@ -43,8 +46,6 @@ It can be very hard to do that, though, because null can hide in any reference t
 So before answering why null showed up in the place where it caused trouble, it is necessary to track it to its source, which can take quite some time in a sufficiently complex system.
 
 So the underlying problem with null is not the misbehavior it causes but the conflation of various different concerns into a single, particularly sneaky and error-prone concept.
-
-<contentimage slug="elvis-in-java"></contentimage>
 
 ## Elvis Enters The Building
 
@@ -97,7 +98,6 @@ Furthermore, it will forcefully propagate that ugly nullability-property to the 
 This forces you to carry the complexity of possibly null values with you and gives you an incentive to get rid of it sooner rather than later.
 
 ## Why Shouldn't This Work In Java?
-{#why-shouldn-t-this-work-in-java-}
 
 So if I like Elvis so much in Kotlin, why wouldn't I want to see it in Java?
 Because Elvis only works with a type system that distinguishes nullable from non-nullable types!

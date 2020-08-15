@@ -4,27 +4,22 @@ tags: [java-11]
 date: 2018-10-22
 slug: java-reactive-http-2-requests-responses
 description: "With Java 11's new reactive HTTP/2 API, request and response bodies can be handled with reactive streams: you can throttle, stream, and cancel early."
-intro: "With Java 11's new reactive HTTP/2 API, request and response bodies can be handled with reactive streams,  which gives you full control over the bytes going over the wire: you can throttle, stream, and even cancel early."
+intro: "With Java 11's new reactive HTTP/2 API, request and response bodies can be handled with reactive streams, which gives you full control over the bytes going over the wire: you can throttle, stream, and even cancel early."
 searchKeywords: "reactive"
 featuredImage: http2-reactive
+repo: java-x-demo
 ---
 
-With [Java 11's new HTTP API](java-http-2-api-tutorial) you can do more than just HTTP/2 and [asynchronous requests](https://blog.codefx.org/java/http-2-api-tutorial/#Asynchronous-HTTP-Request-Handling) - you can also handle request and response bodies in a reactive manner, which gives you full control over the bytes going over the wire: You can throttle, you can stream (to conserve memory), and you can expose a result as soon as you found it (instead of waiting for the entire body to arrive).
+With [Java 11's new HTTP API](java-http-2-api-tutorial) you can do more than just HTTP/2 and [asynchronous requests](java-http-2-api-tutorial#asynchronous-http-request-handling) - you can also handle request and response bodies in a reactive manner, which gives you full control over the bytes going over the wire: You can throttle, you can stream (to conserve memory), and you can expose a result as soon as you found it (instead of waiting for the entire body to arrive).
 
 In this post we're going to look at streaming request and response bodies and because that requires a working understanding of reactive streams (introduced in Java 9 as *Flow API*), we're going to quickly discuss them as well - if you already know how they work skip ahead to [*Streaming The Request Body*](#streaming-the-request-body).
-A future post may look into the reactive web sockets API.
-
-### Overview
-
-The section [*Streaming The Response Body*](#streaming-the-response-body) builds a solution in several steps, where individual steps may contain bugs that you should not put into your code!
+That section builds a solution in several steps, where individual steps may contain bugs that you should not put into your code!
 For a complete picture, please use [the sources on GitHub](https://github.com/CodeFX-org/demo-java-x).
-
-[toc exclude=Overview]
 
 ## Reactive Stream Crash Course
 
 The HTTP/2 API uses [reactive streams](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/Flow.html) to handle request and response bodies.
-In full force, reactive streams can be used to build pipelines that are similar to [Java 8 streams](https://blog.codefx.org/tag/stream/): Starting from a source, a bunch of operations are defined that process each item the source contains/emits.
+In full force, reactive streams can be used to build pipelines that are similar to [Java 8 streams](tag:stream): Starting from a source, a bunch of operations are defined that process each item the source contains/emits.
 
 There are some important differences, though, most notably how items are moved through the pipeline.
 With Java 8 streams, the source *contains* the items and the terminal operation *pulls* them through the pipeline (think of a collection of tweets that you want to process).
@@ -127,8 +122,6 @@ It's easy to integrate with that logic and, as a more elaborate example, create 
 
 Another great use case for reactive streams is live-processing of the *response* body.
 And that's up next!
-
-<contentimage slug="http2-reactive"></contentimage>
 
 ## Streaming The Response Body
 

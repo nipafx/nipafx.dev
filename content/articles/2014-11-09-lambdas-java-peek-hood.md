@@ -1,6 +1,6 @@
 ---
 title: "Impulse: \"Lambdas In Java: A Peek Under The Hood\""
-tags: [java-next, impulse, java-8]
+tags: [java-next, impulse, java-8, lambda]
 date: 2014-11-09
 slug: lambdas-java-peek-hood
 description: "Discussing the talk \"Lambdas in Java: A peek under the hood\" given by Brian Goetz at the goto; conference 2013 in Aarhus."
@@ -13,12 +13,8 @@ But how do they work?
 What happens behind the scenes and how well do they perform?
 A talk by Brian Goetz, specification lead for the Java specification request which introduced lambda expressions, answers these questions.
 
-### Overview
-
 This post is going to outline the talk ["Lambdas in Java: A peek under the hood"](http://gotocon.com/aarhus-2013/presentation/Lambdas%20in%20Java:%20A%20peek%20under%20the%20hood), which Brian Goetz held in October 2013 at the [goto; conference in Aarhus](http://gotocon.com/aarhus-2013/).
 As usual for this series, some details are left out for brevity, so if you're interested, make sure to check out the video.
-
-[toc exclude=Overview]
 
 ## The Talk
 
@@ -77,19 +73,8 @@ So instead of adding a new type for functions, the expert group decided to forma
 They named the concept of an interface with a single abstract method [*functional interface*](http://docs.oracle.com/javase/specs/jls/se8/html/jls-9.html#jls-9.8).
 
 The compiler would then be able to interpret all interfaces with one method as a function.
-(E.g. `Comparator` as a generic function from a pair of instances of some type
-
-``` {.lang:java .decode:true .crayon-inline}
-T
-```
-
-to
-
-``` {.lang:java .decode:true .crayon-inline}
-int
-```
-
-.) When a lambda expression is used in a place where such an interface is expected, the compiler can transform the lambda expression to an instance of that interface.
+(E.g. `Comparator` as a generic function from a pair of instances of some type`T` to `int`.)
+When a lambda expression is used in a place where such an interface is expected, the compiler can transform the lambda expression to an instance of that interface.
 
 An important bonus of that decision is that old libraries are forward compatible with lambdas!
 Code that was written before Java 8, which might use interfaces with just one method, can now be used with lambdas.

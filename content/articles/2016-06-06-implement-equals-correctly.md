@@ -10,7 +10,6 @@ searchKeywords: "equals"
 featuredImage: implementing-equals-correctly
 ---
 
-[canonical_sitepoint url="https://www.sitepoint.com/implement-javas-equals-method-correctly/"]
 
 A fundamental aspect of any Java class is its definition of equality.
 It is determined by a class’s `equals` method and there are a couple of things to be considered for a correct implementation.
@@ -19,9 +18,7 @@ Let’s check ’em out so we get it right!
 **Note that implementing `equals` always means that `hashCode` has to be implemented as well!
 We’ll cover that in [a separate article](implement-java-hashcode-correctly) so make sure to read it after this one.**
 
-[toc]
-
-## Identity Versus Equality {#identityversusequality}
+## Identity Versus Equality
 
 Have a look at this piece of code:
 
@@ -93,7 +90,7 @@ The variable `contains` is `true` because, while the instances of `"b"` are not 
 
 (This is also the point where `hashCode` comes into play.)
 
-## Thoughts on Equality {#thoughtsonequality}
+## Thoughts on Equality
 
 Any implementation of `equals` must adhere to a specific contract or the class’s equality is ill-defined and all kinds of unexpected things happen.
 We will look at the formal definition in a moment but let’s first discuss some properties of equality.
@@ -118,7 +115,7 @@ Because any relation that has the three properties above can be called an equali
 Yes, *any* way we can make up that compares things and has the three properties above, could be how we determine whether those things are equal.
 Conversely, if we leave anything out, we no longer have a meaningful equality.
 
-## The equals Contract {#theequalscontract}
+## The `equals` Contract
 
 The `equals` contract is little more but a formalization of what we saw above.
 To quote [the source](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-):
@@ -134,9 +131,7 @@ To quote [the source](https://docs.oracle.com/javase/8/docs/api/java/lang/Object
 By now, the first three should be very familiar.
 The other points are more of a technicality: Without consistency data structures behave erratically and being equal to null not only makes no sense but would complicate many implementations.
 
-<contentimage slug="implementing-equals-correctly"></contentimage>
-
-## Implementing equals {#implementingequals}
+## Implementing `equals`
 
 For a class `Person` with string fields `firstName` and `lastName`, this would be a common variant to implement `equals`:
 
@@ -206,7 +201,7 @@ Note that most code, for example all collections, handle our persons as objects 
 So we better make sure we provide an implementation with that signature!
 We can of course create a specialized `equals` implementation and call it from our more general one if we like that better.
 
-### Self Check {#selfcheck}
+### Self Check
 
 Equality is a fundamental property of any class and it might end up being called very often, for example in [tight loops](https://en.wiktionary.org/wiki/tight_loop) querying a collection.
 Thus, its performance matters!
@@ -219,7 +214,7 @@ if (this == o)
 
 It might look like it should implement reflexivity but the checks further down would be very strange if they would not also do that.
 
-### Null Check {#nullcheck}
+### Null Check
 
 No instance should be equal to null, so here we go making sure of that.
 At the same time, it guards the code from `NullPointerException`s.
@@ -236,7 +231,7 @@ if (o == null || getClass() != o.getClass())
 	return false;
 ```
 
-### Type Check and Cast {#typecheckandcast}
+### Type Check and Cast
 
 Next thing, we have to make sure that the instance we’re looking at is actually a person.
 This is another tricky detail.
@@ -298,7 +293,7 @@ So we end with two alternatives:
 Which one makes more sense really depends on the situation.
 Personally, I prefer `instanceof` because its problems (can not include new fields in inherited classes) occurs at declaration site not at use site.
 
-### Field Comparison {#fieldcomparison}
+### Field Comparison
 
 Wow, that was a lot of work!
 And all we did was solve some corner cases!
@@ -335,13 +330,13 @@ We have discussed the difference between identity (must be the same reference; c
 Let’s put those pieces back together:
 
 -   Make sure to override `equals(Object)` so our method is always called.
--   Include a self and null check for an [early return](http://blog.codefx.org/techniques/multiple-return-statements/#Guard-Clauses) in simple edge cases.
+-   Include a self and null check for an [early return](java-multiple-return-statements#guard-clauses) in simple edge cases.
 -   Use `getClass` to allow subtypes their own implementation (but no comparison across subtypes) or use `instanceof` and make `equals` final (and subtypes can equal).
 -   Compare the desired fields using `Objects.equals`.
 
 Or let your IDE generate it all for you and edit where needed.
 
-## Final Words {#finalwords}
+## Final Words
 
 We have seen how to properly implement `equals` (and will soon [look at `hashCode`](implement-java-hashcode-correctly)).
 But what if we are using classes that we have no control over?

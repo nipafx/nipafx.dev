@@ -5,9 +5,10 @@ date: 2015-08-04
 slug: project-jigsaw-on-infoq
 description: "My posts about Project Jigsaw got polished and published on InfoQ."
 searchKeywords: ""
+featuredImage: project-jigsaw-on-infoq
 ---
 
-Over the last few weeks I had the opportunity to polish [my posts about Project Jigsaw](http://blog.codefx.org/tag/project-jigsaw/) for InfoQ.
+Over the last few weeks I had the opportunity to polish [my posts about Project Jigsaw](tag:project-jigsaw) for InfoQ.
 The result was published today:
 
 **[Project Jigsaw is Really Coming in Java 9](http://www.infoq.com/articles/Project-Jigsaw-Coming-in-Java-9)**
@@ -25,6 +26,4 @@ Working on the article took a lot of time.
 
 This be possible as soon as the current work on [JSR 376](https://www.jcp.org/en/jsr/detail?id=376) is merged into the OpenJDK repositories, which can happen [any day now](http://mail.openjdk.java.net/pipermail/jigsaw-dev/2015-July/004393.html).
 
-Stay tuned:
-
-[feather_follow]
+Stay tuned.

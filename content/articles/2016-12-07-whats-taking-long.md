@@ -3,15 +3,12 @@ title: "SPJCN II: What's Taking So Long?"
 tags: [java-9, project-jigsaw]
 date: 2016-12-07
 slug: spjcn-whats-taking-long
-description: ""
-intro: "In the second issue of SitePoint’s Java Channel Newsletter I wonder why Java 9 takes so long."
-searchKeywords: ""
+canonicalText: "I originally wrote this for Sitepoint's Java newsletter, but this issue never got published online."
+description: "In the second issue of SitePoint’s Java Channel Newsletter (from September 23rd 2016) I wonder why Java 9 takes so long."
 featuredImage: whats-taking-so-long
 ---
 
-[canonical_sitepoint\_newsletter no="II" date="September 23rd 2016"]
-
-As you might have heard, [Java 9 got delayed](http://mail.openjdk.java.net/pipermail/jdk9-dev/2016-September/004887.html) - [again](blog.codefx.org/java/dev/delay-of-java-9-release).
+As you might have heard, [Java 9 got delayed](http://mail.openjdk.java.net/pipermail/jdk9-dev/2016-September/004887.html) - [again](delay-of-java-9-release).
 The current schedule plans general availability for July 2017.
 
 But why?
@@ -64,16 +61,12 @@ Hence the additional delay.
 (If you ask me, I'm not sure whether we will actually download JDK 9.0 in July 2017 or whether it has to be delayed even longer.)
 
 ### Want More?
-{#want-more-}
 
 This rabbit hole is deep, though, and a newsletter is not the best medium to explore it.
 What about this: I'll write more about it if you're interested.
 [Retweet this](https://twitter.com/nipafx/status/779069666199298048) to show your enthusiasm!
 
-<contentimage slug="whats-taking-so-long"></contentimage>
-
 ## What Else Is Going On?
-{#what-else-is-going-on-}
 
 Again, there is an obvious one-word answer: JavaOne.
 The next newsletter will cover it in-depth but you should check [the YouTube channel](https://www.youtube.com/channel/UCdDhYMT2USoLdh4SZIsu_1g/videos) if you can't wait that long.

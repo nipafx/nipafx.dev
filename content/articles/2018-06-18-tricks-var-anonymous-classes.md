@@ -1,5 +1,5 @@
 ---
-title: "Tricks with 'var' and anonymous classes (that you should never use at work)"
+title: "Tricks with `var` and anonymous classes (that you should never use at work)"
 tags: [anonymous-classes, java-10, var]
 date: 2018-06-18
 slug: java-var-anonymous-classes-tricks
@@ -7,6 +7,7 @@ description: "Local-variable type inference with `var` makes it easier to work w
 intro: "Local-variable type inference with `var` makes it easier to work with anonymous classes, for example to create ad-hoc fields and methods. But does that mean you should use them more often? I think not."
 searchKeywords: "anonymous classes"
 featuredImage: var-anonymous-classes
+repo: java-x-demo
 ---
 
 [Using `var` to infer types of local variables](java-10-var-type-inference) is a great tool for writing readable code.
@@ -16,15 +17,6 @@ It has a dark underbelly, though, and while experimenting with it I found a few 
 These tricks hinge on the fact that compiler and JVM know a richer type system than can be expressed with Java's syntax.
 With `var`, though, a type does not need to be written out and can instead be determined by the more powerful compiler.
 This is particularly helpful when working with anonymous classes, which can not be expressed in source code.
-
-### Overview
-
-To see the code snippets in action, check [my Java 10 demo project](https://github.com/CodeFX-org/demo-java-10).
-
-[toc exclude=overview]
-
-\[codefx\_youtube thumbnail="//blog.codefx.org/wp-content/uploads/thumbnail-Java-10-var-small.jpg" text="Need to catch up on the 'var' basics?
-There's [a thorough introduction](https://www.youtube.com/watch?v=Le1DbpRZdRQ&list=PL_-IO8LOLuNp2stY1qBUtXlfMdJW7wvfT) on my YouTube channel."\]
 
 ## Ad-hoc Fields
 
@@ -133,11 +125,9 @@ That may very well deter developers from actually executing the refactoring and 
 
 <pullquote>Using var with anonymous classes makes code harder to read, understand, and refactor</pullquote>
 
-If you're looking for alternatives, I sometimes use `Map.Entry` for pairs, which [Java 9](http://blog.codefx.org/tag/java-9/) made much more usable with [the static method `Map::entry`](https://docs.oracle.com/javase/10/docs/api/java/util/Map.html#entry(K,V)).
+If you're looking for alternatives, I sometimes use `Map.Entry` for pairs, which [Java 9](tag:java-9) made much more usable with [the static method `Map::entry`](https://docs.oracle.com/javase/10/docs/api/java/util/Map.html#entry(K,V)).
 Beyond that you could be looking for a library that comes with tuples, something you usually find in functional libraries like [Vavr](http://www.vavr.io/).
 If you're patient, you can wait for Project Amber's [data classes](http://cr.openjdk.java.net/~briangoetz/amber/datum.html), which will make local classes a one-liner.
-
-<contentimage slug="var-anonymous-classes"></contentimage>
 
 ## Ad-hoc Methods
 

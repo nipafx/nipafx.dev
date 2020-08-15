@@ -1,49 +1,44 @@
 ---
-title: "JUnit 5 Conditions: @Enabled, @Disabled, And Customized"
+title: "JUnit 5 Conditions: `@Enabled`, `@Disabled`, Customized"
 tags: [junit-5, libraries, testing]
 date: 2018-08-05
 slug: junit-5-disabled-conditions
-description: "A detailed look at JUnit 5's @Disabled, @DisabledOnOs, @DisabledOnJre, etc., and how to create custom conditions to flexibly disable test methods."
-intro: "A detailed look at @Disabled, its conditional counterparts, and how to  create custom conditions that allow us to flexibly disable test methods."
+description: "A detailed look at JUnit 5's `@Disabled`, `@DisabledOnOs`, `@DisabledOnJre`, etc. and how to create custom conditions to flexibly disable test methods."
+intro: "A detailed look at `@Disabled`, its conditional counterparts, and how to  create custom conditions that allow us to flexibly disable test methods."
 searchKeywords: "conditions"
 featuredImage: junit-5-conditions
+repo: demo-junit-5
 ---
 
-It is time to combine two topics that we've been exploring in the past: [conditions like `@DisabledOnOs` and `@DisabledOnJre`](https://blog.codefx.org/libraries/junit-5-basics/#Disabling-Tests) on the one hand and [extending JUnit 5 with custom behavior](junit-5-extension-model) on the other hand.
+It is time to combine two topics that we've been exploring in the past: [conditions like `@DisabledOnOs` and `@DisabledOnJre`](junit-5-basics#disabling-tests) on the one hand and [extending JUnit 5 with custom behavior](junit-5-extension-model) on the other hand.
 In that last post I left you with the promise to look at conditions, which allow us to define flexible criteria for (de)activating tests, just like the built-in `@Disabled...`/`@Enabled...` annotations.
 
-I'll start by giving you a run-down of [Jupiter's](http://blog.codefx.org/design/architecture/junit-5-architecture/#Splitting-JUnit-5) conditions before having a quick look at their implementation to prepare you for the last part: creating custom conditions.
+I'll start by giving you a run-down of [Jupiter's](junit-5-architecture-jupiter#splitting-junit-5) conditions before having a quick look at their implementation to prepare you for the last part: creating custom conditions.
 Conditions are a great way to get started with extensions because they are so easy to write and make a test suite so much more readable than checking the same condition in the test methods.
-
-### Overview
-
-[codefx_junit5\_series]
-
-[toc exclude=Overview]
 
 ## Conditions In JUnit 5
 
 Besides `@Disabled`, which unconditionally disables either a single test method or an entire test class, depending on where it is applied, Jupiter comes with four conditions.
 They evaluate the operating system, the Java version, a system property, or an environment variable:
 
-`@DisabledOnOs` / `@EnabledOnOs`
-:   Given either a single or multiple values of [the `OS` enum](https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/condition/OS.html), tests can be disabled on selected operating systems.
+`@DisabledOnOs` / `@EnabledOnOs`:
+Given either a single or multiple values of [the `OS` enum](https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/condition/OS.html), tests can be disabled on selected operating systems.
 
-`@DisabledOnJre` / `@EnabledOnJre`
-:   Given either a single or multiple values of [the `JRE` enum](https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/condition/JRE.html), tests can be disabled when the suite runs on selected Java versions.
+`@DisabledOnJre` / `@EnabledOnJre`:
+Given either a single or multiple values of [the `JRE` enum](https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/condition/JRE.html), tests can be disabled when the suite runs on selected Java versions.
 
-`@DisabledIfSystemProperty` / `@EnabledIfSystemProperty`
-:   These conditions have two attributes, `named` and `matches`.
+`@DisabledIfSystemProperty` / `@EnabledIfSystemProperty`:
+These conditions have two attributes, `named` and `matches`.
 The first names a specific system property (surprise!) and the second is a regular expression that is matched against the property's value.
 If it matches, the test ist disabled or not (depending on which annotation you use).
 
-`@DisabledIfEnvironmentVariable` / `@EnabledIfEnvironmentVariable`
-:   Work exactly like `@DisabledIfSystemProperty` and `@EnabledIfSystemProperty`, but check environment variables, not system properties.
+`@DisabledIfEnvironmentVariable` / `@EnabledIfEnvironmentVariable`:
+Work exactly like `@DisabledIfSystemProperty` and `@EnabledIfSystemProperty`, but check environment variables, not system properties.
 
 These conditions always come in two variants, `@Disabled...` and `@Enabled...`, but it is important to understand that *enabled on X* really just means *disabled on everything but X*.
 That becomes relevant when you use several conditions *of different kinds*: As soon as one of them disables a test, the test does not run, no matter what other `@Enabled...` conditions might have to say about that:
 
-<pullquote>@Enabled...(X) doesn't "enable on X", rather it "disables on everything but X"</pullquote>
+<pullquote>`@Enabled...(X)` doesn't "enable on X", rather it "disables on everything but X"</pullquote>
 
 ```java
 @Test
@@ -71,11 +66,11 @@ The given value is interpreted as a [glob pattern](https://en.wikipedia.org/wiki
 If they match, the condition will be ignored and the test hence be activated.
 With `*` you can deactivate all conditions and hence run all tests.
 
-One way to pass this parameter is as a system property with `-Djunit.jupiter.conditions.deactivate=*`.
+One way to pass this parameter is as a system property with `shell§-Djunit.jupiter.conditions.deactivate=*`.
 
 ## Extension Points For Conditions
 
-Remember what we said about [extension points](http://blog.codefx.org/design/architecture/junit-5-extension-model/#Extension-Points)?
+Remember what we said about [extension points](junit-5-extension-model#extension-points)?
 No?
 In short: There's a bunch of them and each relates to a specific interface.
 Implementations of these interfaces can be handed to JUnit (for example, with with the `@ExtendWith` annotation) and it calls them at the appropriate time.
@@ -100,9 +95,7 @@ public interface ExecutionCondition extends Extension {
 And that's already pretty much it.
 Any condition has to implement that interfaces and execute the required checks in its `evaluate` implementation.
 
-[codefx_junit\_5\_product]
-
-## @Disabled
+## `@Disabled`
 
 The easiest condition is one that is not even evaluated: We simply always disable the test if the annotation is present.
 That's how `@Disabled` works:
@@ -156,7 +149,7 @@ If it wouldn't exist already, our implementation of `@Disabled` would be almost 
 
 Now let's look at something slightly less trivial.
 
-## @DisabledOnOs And Other Conditions
+## `@DisabledOnOs` And Other Conditions
 
 The only difference between `@Disabled` and `@DisabledOnOs` (et al.) is that the latter check something else besides the presence of an annotation to determine whether a test is disabled:
 
@@ -179,7 +172,7 @@ public ConditionEvaluationResult evaluateExecutionCondition(
 }
 ```
 
-## A Custom Condition: @EnabledIfReachable
+## A Custom Condition: `@EnabledIfReachable`
 
 For our own condition, lets check whether a URL is reachable within a specified time frame.
 Once again, we start with the annotation:
@@ -197,7 +190,7 @@ public @interface EnabledIfReachable {
 }
 ```
 
-We want to allow enabling individual tests as well as an entire class and, being good JUnit 5 citizens, we prepare our annotation for [composability via meta-annotations](https://blog.codefx.org/design/architecture/junit-5-extension-model/#Custom-Annotations), so we use the targets `METHOD`, `TYPE`, and `ANNOTATION_TYPE`.
+We want to allow enabling individual tests as well as an entire class and, being good JUnit 5 citizens, we prepare our annotation for [composability via meta-annotations](junit-5-extension-model#custom-annotations), so we use the targets `METHOD`, `TYPE`, and `ANNOTATION_TYPE`.
 Because we're not part of Jupiter core, we actually have to extend our annotation with the condition implementation.
 As attributes we define the URL and the timeout in milliseconds.
 
@@ -274,6 +267,6 @@ Now you know how to implement conditions in JUnit Jupiter:
 
 This way, your custom condition is just as usable as the built-in `@DisabledOnOs`, `@DisabledOnJre`, `@DisabledIfSystemProperty`, `@DisabledIfEnvironmentVariable`, and their `@Enabled...` counterparts.
 
-To deactivate conditions and run all tests, pass the following system property: `-Djunit.jupiter.conditions.deactivate=*`.
+To deactivate conditions and run all tests, pass the following system property: `shell§-Djunit.jupiter.conditions.deactivate=*`.
 
 For more fun with ~~[flags](https://www.youtube.com/watch?v=_e8PGPrPlwA)~~ conditions and other extension points, check the next posts in this series!

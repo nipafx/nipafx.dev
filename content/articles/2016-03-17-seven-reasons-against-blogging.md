@@ -21,8 +21,6 @@ To make this more concrete I'll be throwing around some numbers.
 Those are solely based on my experience and I have no clue whether they're representative.
 Your mileage may vary.
 
-[toc]
-
 ## Blogging Takes Time
 
 Obvious, right?
@@ -49,7 +47,7 @@ I just said that my speed depends on how well I know the topic.
 But that assumes that I at least *do* know the topic.
 
 I'm frequently writing about things about which I knew just about nothing the week before.
-Studying the multitude of sources for [Jigsaw](http://blog.codefx.org/tag/project-jigsaw/) or trying out the [JUnit prototype](junit-lambda-prototype) is not part of writing.
+Studying the multitude of sources for [Jigsaw](tag:project-jigsaw) or trying out the [JUnit prototype](junit-lambda-prototype) is not part of writing.
 It's research and it comes on top.
 
 Whether this is necessary or should be counted is debatable.
@@ -108,7 +106,9 @@ Back home after grocery shopping you dealt with some ugly paperwork (insurance, 
 Now it's 9 pm, you've been on fire for about 15 hours and just want to relax on the couch.
 I mean, you earned it, right?
 
-<contentimage slug="reasons-against-blogging"></contentimage>
+Wrong!
+
+<!-- reasons-against-blogging-wrong.gif -->
 
 Instead you're hauling your ass in front of yet another screen (because you didn't have enough of that, already) and start reading, coding, writing.
 And don't forget to be focused, creative, and witty!
@@ -147,8 +147,6 @@ About half of those interactions may invite a response from you.
 So if you have about 200 visitors per day, you end up communicating with your readers less than once a week.
 How's that for a tight community feeling?
 
-<contentimage slug="reasons-against-blogging"></contentimage>
-
 ## Exposing Yourself
 
 This is more serious.
@@ -185,15 +183,3 @@ All I'm saying is: Blogging is great but it has serious downsides as well.
 If you consider doing it, be aware of them, make a conscious decision, and track how it turns out for you.
 Be sure to love the process, not just the results!
 Don't just drink the cool-aid and waste your precious time needlessly depressing yourself in front of an empty editor and a blinking cursor.
-
-## Share & Follow
-
-If you liked this post, why won't you be my one-in-a-thousand and follow me...
-
-[feather_follow]
-
-... or share it.
-
-[feather_share]
-
-;)

@@ -5,39 +5,22 @@ date: 2015-04-27
 slug: how-java-9-and-project-jigsaw-may-break-your-code
 description: "With Java 9 comes Project Jigsaw - a modularization of the JDK - which will break existing code. An overview over the planned changes lets you see whether yours is affected."
 searchKeywords: "Project Jigsaw"
-featuredImage: project-jigsaw-I
+featuredImage: java-9-jigsaw-breaks-code
 ---
 
 Java 9 looms on the horizon and it will come with a completed [Project Jigsaw](http://openjdk.java.net/projects/jigsaw/).
-I didn't pay much attention to it until I learned from [a recent discussion on the OpenJFX mailing list](http://mail.openjdk.java.net/pipermail/openjfx-dev/2015-April/017017.html "Private APIs not usable in Java 9?
-- OpenJFX mailing list") that it may break existing code.
+I didn't pay much attention to it until I learned from [a recent discussion on the OpenJFX mailing list](http://mail.openjdk.java.net/pipermail/openjfx-dev/2015-April/017017.html) that it may break existing code.
 This is very unusual for Java so it piqued my interest.
 
 I went reading the project's [JEP](http://en.wikipedia.org/wiki/JDK_Enhancement_Proposal)s and some related articles and came to the conclusion that, yes, this will break existing code.
 It depends on your project whether you will be affected but you might be and it might hurt.
 
-<div class="important">
+<admonition type="note">
 
-Since I wrote this post [Project Jigsaw](https://blog.codefx.org/tag/project-jigsaw/) resulted in the [Java Platform Module System](https://blog.codefx.org/tag/jpms/) and a lot of details changed.
-I explain all of them in my [Java 9 migration guide](java-9-migration-guide), so you should read that one.
+Since I wrote this post [Project Jigsaw](tag:project-jigsaw) resulted in the [Java Platform Module System](tag:j_ms) and a lot of details changed.
+I explain all of them in my [Java 9 migration guide](java-9-migration-guide), so you should read that one instead.
 
-</div>
-
-### Series
-
-[codefx_series\_projectjigsaw]
-
-### Overview
-
-After a cursory introduction to what Project Jigsaw is about, I will describe the potentially breaking changes.
-
-I compiled that list of changes from the available documents.
-There is of course no guarantee that I caught everything and since I am unfamiliar with some of the concepts, I might have gotten some facts wrong.
-Caveat emptor.
-
-If you find a mistake or think something could be made clearer or more precise, leave a comment and I will be happy to include your input.
-
-[toc exclude=Overview|Series]
+</admonition>
 
 ## Project Jigsaw
 
@@ -51,7 +34,7 @@ I might write a more detailed description of Project Jigsaw at some point, but f
 > -   Make it easier for developers to construct and maintain libraries and large applications, for both the Java SE and EE Platforms.
 >
 > To achieve these goals we propose to design and implement a standard module system for the Java SE Platform and to apply that system to the Platform itself, and to the JDK.
-The module system should be powerful enough to modularize the JDK and other large legacy code bases, yet still be approachable by all developers.
+> The module system should be powerful enough to modularize the JDK and other large legacy code bases, yet still be approachable by all developers.
 >
 > [Jigsaw Project Site - Feb 11 2015](http://openjdk.java.net/projects/jigsaw/)
 
@@ -59,8 +42,6 @@ If you want to know more about the project, check out [its site](http://openjdk.
 
 The main thing to take away here is the module system.
 From version 9 on Java code can be (and the JRE/JDK will be) organized in modules *instead of* JAR files.
-
-<contentimage slug="project-jigsaw-I"></contentimage>
 
 ## Breaking Code
 
@@ -79,11 +60,11 @@ For more details, make sure to check the project's site, especially [JEP 220](ht
 
 ### Internal APIs Become Unavailable
 
-<div class="important">
+<admonition type="note">
 
-For the current take on internal APIs, go [here](https://blog.codefx.org/java/java-9-migration-guide/#Illegal-Access-To-Internal-APIs).
+For the current take on internal APIs, [go here](java-9-migration-guide#illegal-access-to-internal-apis).
 
-</div>
+</admonition>
 
 With JAR files any public class is visible anywhere in the JVM.
 This severely limits the ability of JDK-implementations to keep internal APIs private.
@@ -108,20 +89,25 @@ So what are internal APIs?
 Definitely everything that lives in a `sun.*`-package.
 I could not confirm whether everything in `com.sun.*` is private as well - surely some parts are but maybe not all of them?
 
-Update (5th of May, 2015)
+<admonition type="update" hint="5th of May, 2015">
 
-:   *This got cleared up in [a comment by Stuart Marks](http://blog.codefx.org/java/dev/how-java-9-and-project-jigsaw-may-break-your-code/#comment-1994660530) as follows:*
+This got cleared up in [a comment by Stuart Marks](how-java-9-and-project-jigsaw-may-break-your-code)<!-- comment-1994660530 --> as follows:
 
-	> Unfortunately, com.sun is a mixture of internal and publicly supported ("exported") APIs.
-An annotation @jdk.Exported distinguishes the latter from internal APIs.
-Note also that com.sun.\* packages are only part of the Oracle (formerly Sun) JDK, and they are not part of Java SE.
+> Unfortunately, com.sun is a mixture of internal and publicly supported ("exported") APIs.
+> An annotation @jdk.Exported distinguishes the latter from internal APIs.
+> Note also that com.sun.\* packages are only part of the Oracle (formerly Sun) JDK, and they are not part of Java SE.
+>
+> So if starts with `com.sun.*`, it won't exist on any non-Oracle JDK.
+> And if it belongs to one of those packages and is not annotated with `@jdk.Exported`, it will be inaccessible from Java 9 on.
 
-	So if starts with `com.sun.*`, it won't exist on any non-Oracle JDK.
-And if it belongs to one of those packages and is not annotated with `@jdk.Exported`, it will be inaccessible from Java 9 on.
+</admonition>
 
-Update (early 2017)
-:   *Due to the fact that much mission critical code depends on internal APIs for which no alternative exist, a specific module, namely [*jdk.unsupported*](http://cr.openjdk.java.net/~mr/jigsaw/ea/module-summary.html#jdk.unsupported), was created that exports the packages `sun.misc` (yes that means the infamous `sun.misc.Unsafe` is still available), `sun.reflect`, and `com.sun.nio.file`.
-The module will be available while the JDK team works on supported APIs to replace it, and once that happens it will eventually be removed.*
+<admonition type="update" hint="early 2017">
+
+Due to the fact that much mission critical code depends on internal APIs for which no alternative exist, a specific module, namely [*jdk.unsupported*](http://cr.openjdk.java.net/~mr/jigsaw/ea/module-summary.html#jdk.unsupported), was created that exports the packages `sun.misc` (yes that means the infamous `sun.misc.Unsafe` is still available), `sun.reflect`, and `com.sun.nio.file`.
+The module will be available while the JDK team works on supported APIs to replace it, and once that happens it will eventually be removed.
+
+</admonition>
 
 Two examples, which might prove especially problematic, are `sun.misc.Unsafe` and everything in `com.sun.javafx.*`.
 Apparently the former is used in quite a number of projects for mission and performance critical code.
@@ -151,11 +137,11 @@ See [the release post](jdeps-maven-plugin-0-1) for details.*
 
 ### Merge Of JDK And JRE
 
-<div class="important">
+<admonition type="note">
 
-For the current take on runtime image directory layout, internal JARs, and resource URLs, go [here](https://blog.codefx.org/java/java-9-migration-guide/#Rummaging-Around-In-Run-Time-Images).
+For the current take on runtime image directory layout, internal JARs, and resource URLs, go [here](java-9-migration-guide#rummaging-around-in-runtime-images).
 
-</div>
+</admonition>
 
 The main goal of Project Jigsaw is the modularization of the Java Platform to allow the flexible creation of runtime images.
 As such the JDK and JRE loose their distinct character and become just two possible points in a spectrum of module combinations.
@@ -208,13 +194,11 @@ Some features which are useful on their own will be retained.
 If you've never heard about this, you're probably not using it.
 Otherwise you might want to check JEP 220 for details.
 
-[jms_in\_action]
-
-<div class="important">
+<admonition type="note">
 
 There are a few more things, that can go wrong - check my [Java 9 migration guide](java-9-migration-guide).
 
-</div>
+</admonition>
 
 ## Preparations For Java 9
 
@@ -238,8 +222,6 @@ Following their deprecation in Java 8, the endorsed standards override mechanism
 
 If you want to help your friends and followers to prepare for Java 9, make sure to share this post.
 
-[feather_share]
-
 So far we focused on the problematic aspects of Project Jigsaw.
 But that should not divert from the exciting and - I think - very positive nature of the planned changes.
 After reading the documents, I am impressed with the scope and potential of this upcoming Java release.
@@ -247,5 +229,3 @@ While it is likely not as groundbreaking for individual developers as Java 8, it
 
 As such, I will surely write about Project Jigsaw again - and then with a focus on the good sides.
 Stay tuned if you want to read about it.
-
-[feather_follow]

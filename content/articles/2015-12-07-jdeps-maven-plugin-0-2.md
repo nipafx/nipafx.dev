@@ -6,24 +6,18 @@ slug: jdeps-maven-plugin-0-2
 description: "With v0.2 the JDeps Maven Plugin allows the creation of flexible exceptions from build-breaking for a self-paced preparation for Java 9 and Project Jigsaw."
 intro: "With the second release the JDeps Maven Plugin allows the creation of flexible exemptions from build-breaking. This enables a self-paced migration away from dependencies of JDK-internal APIs that will be unavailable in Java 9."
 searchKeywords: "JDeps Maven Plugin"
-featuredImage: JDeps-Maven-Plugin v0.2
+featuredImage: jdeps-mvn-motor
+repo: jdeps-maven-plugin
 ---
-
-<contentimage slug="JDeps-Maven-Plugin-v0"></contentimage>
 
 It only took me six months after [the initial release](jdeps-maven-plugin-0-1) but last week I finally published [version 0.2](https://github.com/CodeFX-org/JDeps-Maven-Plugin/releases/tag/v0.2) of my *JDeps Maven Plugin*, now lovingly nicknamed *JDeps Mvn*.
 
 Since Apache released theirs recently this begs the question "Why even bother?" Well, because mine actually understands [*jdeps*](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jdeps.html) and can do some stuff the official can't.
 This makes it much more useful for large projects.
 
-### Overview
-
 Before we go on, let me point you to [that old post again](jdeps-maven-plugin-0-1).
 You might want to read it if you need some background on how Java 9 may break your code and how *jdeps* can help.
-
 Many links lead to the [documentation on GitHub](https://github.com/CodeFX-org/JDeps-Maven-Plugin/wiki), of which the [walkthrough](https://github.com/CodeFX-org/JDeps-Maven-Plugin/wiki/Walkthrough) comes highly recommended.
-
-[toc exclude=Overview]
 
 ## What's So Special?
 
@@ -39,6 +33,8 @@ When including *jdpes* in a large project's build, two things are prohibitive:
 
 If no rule matches, the plugin will apply a [default value](https://github.com/CodeFX-org/JDeps-Maven-Plugin/wiki/Configuration#default-severity), which will usually be configured to FAIL.
 This way the rules can be used to create exemptions and have the build break on all unexpected dependencies.
+
+<contentimage slug="JDeps-Maven-Plugin-v0.2" options="sidebar"></contentimage>
 
 ### Introducing Rules
 
@@ -83,7 +79,7 @@ If there are several such matches, pick the one with the most specific right sid
 You can of course go through your code base or the output of a *jdeps* run and write rules to exempt the existing dependencies from breaking your build.
 Or you can have *JDeps Mvn* [do that for you](https://github.com/CodeFX-org/JDeps-Maven-Plugin/wiki/Walkthrough#godlike-clap):
 
-```html
+```xml
 <configuration>
 	<defaultSeverity>WARN</defaultSeverity>
 	<outputRulesForViolations>true</outputRulesForViolations>
@@ -95,7 +91,7 @@ Or you can have *JDeps Mvn* [do that for you](https://github.com/CodeFX-org/JDep
 With this configuration *JDeps Mvn* will write a rule for each dependency it finds.
 So if `Mango` uses `BASE64Decoder` and `BASE64Encoder` and `Banana` uses `Unsafe`, the result will be:
 
-```html
+```xml
 <arrowDependencyRules>
 	<arrowRules>
 		org.food.fruits.Mango -> sun.misc.BASE64Decoder: WARN
@@ -113,7 +109,7 @@ You can now edit this block as you like and then move it into your pom.
 Changing the default severity to FAIL will then make sure the build breaks except for the defined exemptions.
 Your config might then look like this:
 
-```html
+```xml
 <configuration>
 	<defaultSeverity>FAIL</defaultSeverity>
 	<arrowDependencyRules>
@@ -131,5 +127,3 @@ Your config might then look like this:
 Nothing much feature-wise.
 As I said, there is [proper documentation](https://github.com/CodeFX-org/JDeps-Maven-Plugin/wiki), so if you start using *JDeps Mvn* in anger, make sure to check it out.
 If you do, I'd be happy to hear your feedback!
-
-[jms_in\_action]

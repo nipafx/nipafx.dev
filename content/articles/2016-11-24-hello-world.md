@@ -3,13 +3,10 @@ title: "SPJCN I: Hello World"
 tags: [community]
 date: 2016-11-24
 slug: spjcn-hello-world
-description: ""
-intro: "In the first issue of SitePoint's Java Channel Newsletter I babble about community and conferences."
-searchKeywords: ""
+canonicalText: "I originally wrote this for Sitepoint's Java newsletter, but this issue never got published online."
+description: "In the first issue of SitePoint's Java Channel Newsletter (September 9th 2016) I babble about community and conferences."
 featuredImage: spjcn-i-new-york
 ---
-
-[canonical_sitepoint\_newsletter no="I" date="September 9th 2016"]
 
 Hello World, and welcome to our Java newsletter - not just any but the very first!
 Definitely a reason to celebrate so I'm having a beer.
@@ -29,7 +26,6 @@ If you want to know more (and why wouldn't you?), you can find me at [codefx.org
 To get in touch use [mail](mailto:nicolai.parlog@sitepoint.com), [Twitter](https://twitter.com/nipafx), or, if you absolutely have to, [Google+](https://google.com/+NicolaiParlog).
 
 ## So What Is This About?
-{#so-what-is-this-about-}
 
 There are 9 million people out there using Java \[citation needed\].
 Frankly, thinking about that blows my mind.
@@ -54,8 +50,6 @@ What do you think - do we have a deal?
 
 Ok, let's go then!
 I've been blabbering about community a lot so why not continue down that road?
-
-<contentimage slug="spjcn-i-new-york"></contentimage>
 
 ## Conference Season
 

@@ -5,7 +5,8 @@ date: 2015-11-23
 slug: junit-lambda-prototype
 description: "JUnit Lambda will eventually bring us JUnit 5. This is a discussion of the recent prototype, its features, core principles and compatibility considerations."
 searchKeywords: "junit lambda"
-featuredImage: JUnitLambda
+featuredImage: junit-lambda
+repo: lab-junit-lambda
 ---
 
 Did you hear about [*JUnit Lambda*](http://junit.org/junit-lambda.html)?
@@ -17,25 +18,12 @@ This is the next version of our beloved JUnit, by far the [most used Java librar
 I experimented with the brand new prototype and present my findings here.
 The project is currently gathering feedback so this is our chance to weigh in.
 
-Note From The Future:
-:   *I started a series of posts covering the JUnit 5 alpha version.
-[Check it out!](junit-5-setup)*
+<admonition type="note">
 
-### Overview
+As expected, things changed considerably between prototype and released version, and this article **does not apply** to JUnit 5 - it only still exists for historical reasons.
+I ended up writing a lot about the released JUnit 5 version, though - from setup to basics to architecture and extensions - so [check it out](tag:junit-5)!
 
-After a quick dive into the project's background, I will present the documented features.
-Each will end with a couple of lines of my personal opinion on the topic.
-Feel free to agree or disagree loudly.
-
-I created a [small demo project](https://github.com/CodeFX-org/lab-junitlambda) from which most of the code samples come.
-There is a demo class for each of the presented features and the headers link to those.
-
-Note that the prototype is under heavy development so it is very much a moving target.
-Because of that all links to my demo code as well as to the project's code are fixed to their current version.
-Between the time of me writing and you reading this, things might have changed considerably and those versions could be pretty outdated.
-Caveat lector.
-
-[toc exclude=Overview]
+</admonition>
 
 ## Background
 
@@ -58,7 +46,7 @@ Keep that in mind when forming your opinion.
 
 ## Features
 
-### [Setup, Test, Teardown](https://github.com/CodeFX-org/lab-junitlambda/blob/627028b5d4461d33c4903e05d7969979a248a628/src/test/java/org/codefx/lab/junitlambda/_0_BasicFeatures.java)
+### Setup, Test, Teardown
 
 The most important piece of JUnit's API is the `@Test` annotation and nothing changes here: Only the methods annotated with it will be considered as tests.
 
@@ -88,7 +76,7 @@ My test method names follow the pattern *unitOfWork\_stateUnderTest\_expectedBeh
 My uneducated guess is that most developers who care about their test method names think similarly and those who don't won't use it anyways.
 So from my point of view, this does not add much value.
 
-### [Assertions](https://github.com/CodeFX-org/lab-junitlambda/blob/7c28681eadac5d526ce9a5415bc4adfbf612449c/src/test/java/org/codefx/lab/junitlambda/_1_Assertions.java)
+### Assertions
 
 If `@Before...`, `@After...`, and `@Test` are a test suite's skeleton, assertions are its heart.
 The prototype undertakes a careful evolution here.
@@ -146,7 +134,7 @@ When it comes to assertions in general, I always valued JUnit's extensibility.
 This allowed me to ignore the built-in assertions and the steganographic masterpiece that is Hamcrest in favor of [AssertJ](http://joel-costigliola.github.io/assertj/).
 Hence I don't have any real opinions on this, except that the changes seem to improve things slightly.
 
-### [Visibility](https://github.com/CodeFX-org/lab-junitlambda/blob/627028b5d4461d33c4903e05d7969979a248a628/src/test/java/org/codefx/lab/junitlambda/_3_Visibility.java%22)
+### Visibility
 
 You might already have spotted it: Test classes and methods do not have to be public anymore.
 I think that's great news!
@@ -155,7 +143,7 @@ One useless keyword less.
 While package visibility suffices to be run, private methods will still be ignored.
 This is a very sensible decision, in line with how visibility is commonly understood end employed.
 
-### [Lifecycles](https://github.com/CodeFX-org/lab-junitlambda/blob/627028b5d4461d33c4903e05d7969979a248a628/src/test/java/org/codefx/lab/junitlambda/_2_PerClassLifecycle.java)
+### Lifecycles
 
 JUnit 4 always creates a new instance of the test class for every single test method.
 This minimizes the chances of individual tests subtly interacting with and unwantedly depending on each other.
@@ -203,7 +191,7 @@ But having such devs do whatever they want without checks and balances like pair
 What do you think?
 Ship it or scrap it?
 
-### [Inner Classes](https://github.com/CodeFX-org/lab-junitlambda/blob/abea2973f84128d188007826c95b06bc807cfc74/src/test/java/org/codefx/lab/junitlambda/_4_InnerClasses.java)
+### Inner Classes
 
 Some people use inner classes in their test suites.
 I do it to [inherit interface tests](https://github.com/CodeFX-org/LibFX/blob/3ec42447a99cbac33642cef35d0e522f7b595435/src/test/java/org/codefx/libfx/collection/tree/stream/StackTreePathTest.java), others to [keep their test classes small](http://www.petrikainulainen.net/programming/testing/writing-clean-tests-small-is-beautiful/).
@@ -255,7 +243,7 @@ An [example form the prototype's codebase](https://github.com/junit-team/junit-l
 In the current version, it is also required to trigger the execution of tests in non-static inner classes but [that seems to be coincidental](https://twitter.com/sam_brannen/status/668043376214847488).
 And while the documentation discourages the use on static classes, I guess because it interacts badly with a per-class lifecycle, this does not lead to an exception.
 
-### [Assumptions](https://github.com/CodeFX-org/lab-junitlambda/blob/627028b5d4461d33c4903e05d7969979a248a628/src/test/java/org/codefx/lab/junitlambda/_5_Assumptions.java)
+### Assumptions
 
 [Assumptions](http://junit.org/apidocs/org/junit/Assume.html) got a nice addition utilizing the power of lambda expressions:
 
@@ -275,7 +263,7 @@ I think I never once used assumptions, so what can I say?
 Looks nice.
 :)
 
-### [Custom Annotations](https://github.com/CodeFX-org/lab-junitlambda/blob/627028b5d4461d33c4903e05d7969979a248a628/src/test/java/org/codefx/lab/junitlambda/_6_CustomAnnotations.java)
+### Custom Annotations
 
 When *JUnit Lambda* checks a class or method (or anything else really) for annotations, it also looks at the annotations' annotations and so forth.
 It will then treat any annotation it finds during that search as if it were directly on the examined class or method.
@@ -312,7 +300,7 @@ void runsWithCustomAnnotation() {
 This is really neat!
 A simple feature with great implications.
 
-### [Conditions](https://github.com/CodeFX-org/lab-junitlambda/blob/627028b5d4461d33c4903e05d7969979a248a628/src/test/java/org/codefx/lab/junitlambda/_7_Conditionals.java)
+### Conditions
 
 Now it gets really interesting!
 *JUnit Lambda* introduces the concept of *conditions*, which allows the creation of custom annotations that decide whether a test should be skipped or not.
@@ -380,7 +368,7 @@ void neverRunsOnFridayAfternoon() {
 Very nice.
 Great feature!
 
-### [Injection](https://github.com/CodeFX-org/lab-junitlambda/blob/627028b5d4461d33c4903e05d7969979a248a628/src/test/java/org/codefx/lab/junitlambda/_8_Injection.java)
+### Injection
 
 Last but not least, there is great support for injecting instances into tests.
 
@@ -417,7 +405,7 @@ public class ServerParameterResolver implements MethodParameterResolver {
 	@Override
 	public Object resolve(Parameter parameter, TestExecutionContext context)
 			throws ParameterResolutionException {
-		return new Server("http://codefx.org");
+		return new Server("https://nipafx.dev");
 	}
 }
 ```
@@ -485,8 +473,6 @@ But I wonder whether `supports` should also receive a `TestExecutionContext` for
 ## Misc
 
 ### Extensibility
-
-<contentimage slug="JUnitLambda"></contentimage>
 
 The project lists a couple of [core principles](https://github.com/junit-team/junit-lambda/wiki/Core-Principles), one of them is to "prefer extension points over features".
 This is a great principle to have and I think especially the last features we discussed follow this very well.

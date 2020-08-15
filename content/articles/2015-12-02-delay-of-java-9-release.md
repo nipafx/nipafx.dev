@@ -31,10 +31,6 @@ Instead reckless improvements are still possible, at least until rampdown phases
 
 The proposals are up for debate until December 8th but I'd be very surprised to not see them become the new schedule.
 
-<contentimage slug="delay-of-Java-9-release-proposed"></contentimage>
-
-[Published](https://www.flickr.com/photos/leejordan/2347982593/) by [Lee Jordan](https://www.flickr.com/photos/leejordan/) under [CC-BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
-
 ## Reason
 
 The reasons for this delay clearly are JSR 376 and Jigsaw:

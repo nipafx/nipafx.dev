@@ -9,7 +9,7 @@ searchKeywords: "Maven Java 9"
 featuredImage: maven-java-9
 ---
 
-You're ready to build your Maven-based project with [Java 9](https://blog.codefx.org/tag/java-9/) or later?
+You're ready to build your Maven-based project with [Java 9](tag:java-9) or later?
 Then you've come to the right place!
 Here are six things that you need to know to make the two play nice together.
 I'll show you which versions to pick, how to run Maven on a new Java version even though it is not your default JDK, how to apply command line options to your build process, and how to keep your build running on Java 8 *and* and the newer versions.
@@ -18,9 +18,7 @@ This post is glued together from different parts of my weekly newsletter, where 
 Check out [past newsletters on Medium](http://medium.com/codefx-weekly) and [subscribe to get it while it's hot](http://blog.codefx.org/newsletter/).
 This post was originally written for Java 9, but it applies just the same to building with any younger version, Java 11 for example.
 
-[toc heading_levels="2,3"]
-
-## Maven Version {#mavenversion}
+## Maven Version
 
 First things first, you have to pick the right versions.
 Maven adopted Java 9 without much ado, so you might not have to make many updates.
@@ -31,7 +29,7 @@ Here are the minimum requirements:
 
 With that settled, I'll leave out all `<version>` tags for the configurations I show.
 
-## Running Maven On Java 9 {#runningmavenonjava9}
+## Running Maven On Java 9
 
 Next you'll want to configure Maven so that it actually uses Java 9.
 (You can skip this step if JDK 9 is your default and `mvn -v` shows that Maven runs on it.) I found three different ways to build projects on Java 9:
@@ -47,7 +45,7 @@ If you want to try this out yourself, have a look at [my Maven-on-Java-9 demo pr
 
 In the `maven-compiler-plugin`, the executable that is used for compilation [can be explicitly named](https://maven.apache.org/plugins/maven-compiler-plugin/compile-mojo.html#executable):
 
-```html
+```xml
 <build>
 	<plugins>
 		<!-- target Java 9 -->
@@ -86,7 +84,7 @@ mvn
 Second, to configure the compiler for all machines, you can use a self-defined user property and ask developers to define it in their `settings.xml`.
 See [the Maven docs](https://maven.apache.org/plugins/maven-compiler-plugin/examples/compile-using-different-jdk.html) for more on that.
 
-#### Pros and Cons {#prosandcons}
+#### Pros and Cons
 
 To compile with Java 9, for example to quickly check whether your project compiles without errors, the command line flag is a low ceremony approach as it requires no other changes (assuming you do not already specify the executable in `<configration>`).
 
@@ -100,7 +98,7 @@ Every plugin that is aware of this feature will ask the toolchain whenever it ne
 
 This is what the POM looks like:
 
-```html
+```xml
 <plugin>
 	<artifactId>maven-toolchains-plugin</artifactId>
 	<configuration>
@@ -123,7 +121,7 @@ This is what the POM looks like:
 
 Next, put this into `~/.m2/toolchains.xml`:
 
-```html
+```xml
 <toolchains>
 	<!-- JDK toolchains -->
 	<toolchain>
@@ -149,7 +147,7 @@ Next, put this into `~/.m2/toolchains.xml`:
 </toolchains>
 ```
 
-#### Pros and Cons {#prosandcons-1}
+#### Pros and Cons
 
 This is arguably the cleanest approach because it is project-specific and makes obvious where the Java 9 compiler is supposed to come from.
 It requires mucking with the POM and repeating a configuration on each developer machine, though, which in large legacy projects might not be your first choice.
@@ -161,7 +159,7 @@ If that's Java 8, you might run into problems.
 
 If your entire build has to run on Java 9, but you're not ready to make that your default JVM, have a look at `mavenrc`.
 
-### The mavenrc File {#themavenrcfile}
+### The mavenrc File
 
 Maven can apparently be configured with the [mostly undocumented](https://issues.apache.org/jira/browse/MNGSITE-246) files `~/.mavenrc` (for current user) and `/etc/mavenrc` (for all users).
 In there, environment variables and command line options for the Java command can be configured.
@@ -175,7 +173,7 @@ JAVA_HOME="/path/to/your/jdk-9"
 
 Use `mvn -v` to verify that Maven runs on Java 9.
 
-#### Pros and Cons {#prosandcons-2}
+#### Pros and Cons
 
 To compile with Java 9, for example to check whether your project builds without errors, this is a low ceremony approach as it requires no other changes.
 It is also fairly easy to switch between building on Java 8 and 9 (have a look [at this tip](#switchingmavenjvmbetweenjava8andjava9) to make it even easier).
@@ -185,12 +183,10 @@ Note that this puts the POM into an awkward state where it is supposed to use JD
 
 Another disadvantage is that the setup must be repeated for every developer on the project.
 
-[codefx_jms\_product title="Take the next step and build modules:"]
-
-## Applying Java 9 Flags To Maven Process {#applyingjava9flagstomavenprocess}
+## Applying Java 9 Flags To Maven Process
 
 If you're running your entire build process on Java 9, either by making it the default JDK or by using the `mavenrc` approach discussed above, you might run into [compatibility problems](java-9-migration-guide).
-Some Maven plugins use [internal APIs](https://blog.codefx.org/java/java-9-migration-guide/#Illegal-Access-To-Internal-APIs) or [depend on Java EE modules](https://blog.codefx.org/java/java-9-migration-guide/#Dependencies-On-Java-EE-Modules), so the JVM running them needs to be [launched with some command line flags](five-command-line-options-hack-java-module-system) like `--add-opens` or `--add-modules`.
+Some Maven plugins use [internal APIs](java-9-migration-guide#illegal-access-to-internal-apis) or [depend on Java EE modules](java-9-migration-guide#dependencies-on-java-ee-modules), so the JVM running them needs to be [launched with some command line flags](five-command-line-options-hack-java-module-system) like `--add-opens` or `--add-modules`.
 
 That's no problem if they can be forked into their own process and configured on the POM, but that is rarely implemented.
 In those cases they run in the Maven process, meaning Maven must be launched with the appropriate flags.
@@ -207,7 +203,7 @@ Here's a simple example:
 Unfortunately, the project can then no longer be built with Java 8 because when Maven applies the flags it finds in that file when launching the JVM, version 8 barfs due to unknown command line options.
 Read on to find out how to fix that.
 
-## Switching Maven's JVM Between Java 8 And 9 {#switchingmavenjvmbetweenjava8andjava9}
+## Switching Maven's JVM Between Java 8 And 9
 
 If you indeed defined `JAVA_HOME` in `mavenrc` or needed to create a `.mvn/jvm.config` file, you have to edit these files every time you switch between building on Java 8 and Java 9.
 The former, so you build with the correct Java version and the latter because otherwise Java 8 complains about the unknown command line options (I tried putting `-XX:+IgnoreUnrecognizedVMOptions` in there but had no success).That gets annoying quite quickly, so I wrote a little bash script.
@@ -257,9 +253,7 @@ Et voilà, Java 9 build from master/trunk.
 Beyond the Maven process you will most likely also need to configure the build by providing Java 8/9 specific settings.
 That's next.
 
-<contentimage slug="maven-java-9"></contentimage>
-
-## Configuring The Build For Java 8 And Java 9 {#configuringbuildforjava8andjava9}
+## Configuring The Build For Java 8 And Java 9
 
 Most Java-version-specific changes will have to be applied in the POM.
 The most obvious example are command line flags that make internal APIs and Java EE modules available during compilation or for testing, but many other details might change between Java versions as well, dependencies for example.
@@ -267,7 +261,7 @@ The most obvious example are command line flags that make internal APIs and Java
 For those cases you should use [Maven profiles](http://maven.apache.org/guides/introduction/introduction-to-profiles.html).
 I recommend to keep the Java 8 configuration in the POM's non-profile part and at first only create a Java 9 profile that is automatically activated if the build runs on Java 9:
 
-```html
+```xml
 <profiles>
 	<profile>
 		<id>java-9</id>
@@ -282,17 +276,17 @@ I recommend to keep the Java 8 configuration in the POM's non-profile part and a
 Note that while a profile from a parent POM is *activated* on module builds and thus applies its settings, it is not actually *inherited*.
 That means you have to repeat the `<activation>` block all over your different POMs when you create specific configurations in your modules (Maven modules that is, not [the Java kind](java-module-system-tutorial)).
 
-### Possible Default Settings {#possibledefaultsettings}
+### Possible Default Settings
 
 Of you're creating a profile, particularly in a parent POM, you should think about whether there is any default behavior that you want to enforce on Java 9.
 Two things that come to mind:
 
 -   if many modules depend on the same set of Java EE modules, consider adding them in the parent POM
--   if you like [strong encapsulation](https://blog.codefx.org/java/java-module-system-tutorial/#exports-accessibility) to know which of your modules and dependencies are naughty, [add the flag `--illegal-access=deny`](https://blog.codefx.org/java/five-command-line-options-to-hack-the-java-9-module-system/#relyingonweakencapsulation) to Surefire and Failsafe.
+-   if you like [strong encapsulation](java-module-system-tutorial#exports-and-accessibility) to know which of your modules and dependencies are naughty, [add the flag `--illegal-access=deny`](five-command-line-options-hack-java-module-system#relying-on-weak-encapsulation) to Surefire and Failsafe.
 
 If you do both (for example with the JAXB API), your profile might look as follows:
 
-```html
+```xml
 <profiles>
 	<profile>
 		<id>java-9</id>
@@ -350,7 +344,7 @@ In rare cases you might have to use different dependencies for Java 8 and 9.
 I'd work hard to avoid that because it makes coding and testing that much more complex, but if you can't, then here's the way to go.
 Create a Java 8 profile akin to the one above:
 
-```html
+```xml
 <profiles>
 	<profile>
 		<id>java-8</id>
@@ -366,11 +360,11 @@ Create a Java 8 profile akin to the one above:
 
 Then add dependencies that you only need on Java 8 in that block and those for Java 9 in a `<dependency>` block in the Java 9 profile.
 
-## Arguments For The Maven Compiler Plugin {#argumentsforthemavencompilerplugin}
+## Arguments For The Maven Compiler Plugin
 
 If you're trying to use some of [the new command line options](five-command-line-options-hack-java-module-system) on the compiler, be aware that the following doesn't work:
 
-```html
+```xml
 <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
 	<artifactId>maven-compiler-plugin</artifactId>
@@ -398,7 +392,7 @@ Apparently [it's common knowledge](https://twitter.com/rfscholte/status/84996955
 Obvious, right?
 🤔 Fortunately, the new command line arguments allow using an equal sign `=` instead of a space, so do the following instead:
 
-```html
+```xml
 <compilerArgs>
 	<arg>--add-modules=java.xml.bind</arg>
 </compilerArgs>
@@ -425,10 +419,5 @@ If there's anything I got wrong or you think should be added to the list, let me
 
 And that's that!
 In the future I might write a post about using Maven to build modules, but I want to get more real-life experience with that before writing about it.
-Stay tuned:
-
-[feather_follow]
-
-Last but not least, if you liked the post, share it with your followers:
-
-[feather_share]
+Stay tuned.
+Last but not least, if you liked the post, share it with your followers.

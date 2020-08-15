@@ -10,17 +10,13 @@ searchKeywords: "hashCode"
 featuredImage: implementing-hashcode-correctly
 ---
 
-[canonical_sitepoint url="https://www.sitepoint.com/how-to-implement-javas-hashcode-correctly/"]
-
 So you’ve decided that identity isn’t enough for you and [wrote a nice `equals` implementation](implement-java-equals-correctly)?
 Great!
 But now you *have to* implement `hashCode` as well.
 
 Let’s see why and how to do it correctly.
 
-[toc]
-
-## Equality and Hash Code {#equalityandhashcode}
+## Equality and Hash Code
 
 While equality makes sense from a general perspective, hash codes are much more technical.
 If we were being a little hard on them, we could say that they are just an implementation detail to improve performance.
@@ -53,31 +49,29 @@ This way, very few, ideally no `equals` comparisons are required to implement `c
 
 As `equals`, `hashCode` is defined on `Object`.
 
-## Thoughts on Hashing {#thoughtsonhashing}
+## Thoughts on Hashing
 
 If `hashCode` is used as a shortcut to determine equality, then there is really only one thing we should care about: Equal objects should have the same hash code.
 
 This is also why, if we override `equals`, we must create a matching `hashCode` implementation!
 Otherwise things that are equal according to our implementation would likely not have the same hash code because they use `Object`‘s implementation.
 
-## The hashCode Contract {#thehashcodecontract}
+## The `hashCode` Contract
 
 Quoting [the source](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--):
 
 > The general contract of `hashCode` is:
 >
 > -   Whenever it is invoked on the same object more than once during an execution of a Java application, the `hashCode` method must consistently return the same integer, provided no information used in equals comparisons on the object is modified.
-This integer need not remain consistent from one execution of an application to another execution of the same application.
+> This integer need not remain consistent from one execution of an application to another execution of the same application.
 > -   If two objects are equal according to the `equals(Object)` method, then calling the `hashCode` method on each of the two objects must produce the same integer result.
 > -   It is not required that if two objects are unequal according to the `equals(Object)` method, then calling the `hashCode` method on each of the two objects must produce distinct integer results.
-However, the programmer should be aware that producing distinct integer results for unequal objects may improve the performance of hash tables.
+> However, the programmer should be aware that producing distinct integer results for unequal objects may improve the performance of hash tables.
 
 The first bullet mirrors the consistency property of `equals` and the second is the requirement we came up with above.
 The third states an important detail that we will discuss in a moment.
 
-<contentimage slug="implementing-hashcode-correctly"></contentimage>
-
-## Implementing hashCode {#implementinghashcode}
+## Implementing `hashCode`
 
 A very easy implementation of `Person.hashCode` is the following:
 
@@ -91,7 +85,7 @@ public int hashCode() {
 The person’s hash code is computed by computing the hash codes for the relevant fields and combining them.
 Both is left to `Objects`‘ utility function `hash`.
 
-### Selecting Fields {#selectingfields}
+### Selecting Fields
 
 But which fields are relevant?
 The requirements help answer this: If equal objects must have the same hash code, then hash code computation should not include any field that is not used for equality checks.
@@ -161,7 +155,7 @@ So, interestingly enough, using too many *or* too few fields can result in bad p
 
 The other part to preventing collisions is the algorithm that is used to actually compute the hash.
 
-### Computing The Hash {#computingthehash}
+### Computing The Hash
 
 The easiest way to compute a field’s hash code is to just call `hashCode` on it.
 Combining them could be done manually.

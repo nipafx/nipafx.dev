@@ -1,12 +1,13 @@
 ---
 title: "Code-First Java 9 Tutorial"
-tags: [java-9]
+tags: [java-9, migration, stream, optional, collections, j_ms]
 date: 2018-02-05
 slug: java-9-tutorial
 description: "Showing code for the most important Java 9 features: private interface methods, stream and optional APIs, collection factories, reactive streams, stack walking, multi-release JARs, redirected platform logging, unified logging, the module system, and more. If you're new to Java 9, start here."
 intro: "So, Java 9 came out last year... What now? Where to get started? If that's what you're asking yourself, then you've come to the right place! This Java 9 tutorial is a condensation of all you need to know to find your way around the new release, to get you ready to explore it in more depth."
 searchKeywords: "java 9"
-featuredImage: java-9-tutorial
+featuredImage: java-9
+repo: java-x-demo
 ---
 
 So, Java 9 came out last year... What now?
@@ -15,12 +16,8 @@ If that's what you're asking yourself, then you've come to the right place!
 This Java 9 tutorial is a condensation of all you need to know to find your way around the new release, to get you ready to explore it in more depth.
 Most topics begin with a block of code, so you can see right away how it works.
 
-We start with [setup](#Getting-Started-With-Java-9) (including [tool support](#Tool-Support) and [migration challenges](#Migration-Challenges)) before coming to Java 9's upsides: [language changes](#Language-Changes) (e.g. [private interface methods](#Private-Interface-Methods)), [new and improved APIs (e.g.](#New-And-Improved-APIs)[collection factory methods](#Collection-Factories) and improvements to [streams](#Stream-API) and [optionals](#Optional-API)), [changes to the JVM](#JVM-Changes) (e.g. [multi-release JARs](#Multi-Release-JARs)), and finally the new release's flagship feature, [the module system](#Module-System).
+We start with [setup](#getting-started-with-java-9) (including [tool support](#tool-support) and [migration challenges](#migration-challenges)) before coming to Java 9's upsides: [language changes](#language-changes) (e.g. [private interface methods](#private-interface-methods)), [new and improved APIs (e.g.](#new-and-improved-apis)[collection factory methods](#collection-factories) and improvements to [streams](#stream-api) and [optionals](#optional-api)), [changes to the JVM](#jvm-changes) (e.g. [multi-release JARs](#multi-release-jars)), and finally the new release's flagship feature, [the module system](#module-system).
 There will be plenty of links for you to explore these topics further.
-
-You can find the examples shown here, and more, in [this GitHub project](https://github.com/CodeFX-org/demo-java-9).
-
-[toc]
 
 ## Getting Started With Java 9
 
@@ -57,8 +54,6 @@ Here are the seven most common challenges you might encounter:
 -   new version strings
 
 ⇝ Read my [post on migration challenges](java-9-migration-guide) to learn how to overcome them.
-
-<contentimage slug="java-9-tutorial"></contentimage>
 
 ## Language Changes
 
@@ -158,8 +153,6 @@ public class DeprecatedImportsAndSafeVarargs<T> {
 
 On Java 8, the `import` directive would cause a warning because `java.io.LineNumberInputStream` is deprecated and the `@SafeVarargs` annotations would cause a compile error because it was not applicable to non-final methods.
 From Java 9 on, imports no longer cause deprecation warnings and `@SafeVarargs` can be applied to private methods (final or not).
-
-[codefx_youtube url="https://www.youtube.com/watch?v=sjIdWNHrMs4" thumbnail="//blog.codefx.org/wp-content/uploads/welcome-java-9-thumbnail-small.jpg" topic="Java 9"]
 
 ## New And Improved APIs
 
@@ -518,15 +511,7 @@ For a thorough introduction to the module system:
 -   ⇝ read the [Code First Java 9 Module System Tutorial](java-module-system-tutorial)
 -   ⇝ get my book [The Java Module System](https://www.manning.com/books/the-java-module-system?a_aid=nipa&a_bid=869915cb) (Manning)
 
-[codefx_jms\_product title="Go even deeper - get my book:"]
-
 ## Reflection
 
 And that's it.
-Phew... share:
-
-[feather_share]
-
-Subscribe:
-
-[feather_follow]
+Phew...

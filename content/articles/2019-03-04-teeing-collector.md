@@ -6,6 +6,7 @@ slug: java-12-teeing-collector
 description: "The teeing collector, available since Java 12 as Collectors::teeing, forwards its input to two other collectors before merging their results with a function."
 searchKeywords: "teeing"
 featuredImage: teeing-collector
+repo: java-x-demo
 ---
 
 Java 12 comes out in two weeks and, [with `switch` expressions](java-13-switch-expressions), takes the first step towards pattern matching.
@@ -23,12 +24,6 @@ Range<Integer> range = numbers.stream()
 ```
 
 Easy enough, but read on if you want to learn more.
-
-### Overview
-
-The code snippets in this post come from [my *Java X Demo* on GitHub](https://github.com/CodeFX-org/demo-java-x).
-
-[toc exclude=Overview]
 
 ## Motivation
 
@@ -86,8 +81,6 @@ My point is that handling two pieces of information at the same time (in this ca
 Formally put, the solution's incidental complexity overshadows the problem's inherent complexity.
 
 With Java 12 we get a tool that makes the latter problem, collecting two pieces of information at the end of a stream, more comfortable.
-
-<contentimage slug="teeing-collector"></contentimage>
 
 ## Teeing Collector
 

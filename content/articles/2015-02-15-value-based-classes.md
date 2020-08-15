@@ -13,12 +13,8 @@ This includes a link to a short explanation and some limitations about what not 
 This is easily overlooked and if you do that, it will likely break your code in subtle ways in future Java releases.
 To prevent that I wanted to cover value-based classes in their own post - even though I already mentioned the most important bits in other articles.
 
-### Overview
-
-This post will first look at why value-based classes exist and why their use is limited before detailing those limitations (if you're impatient, jump [here](#Limitations)).
-It will close with a note on FindBugs, which will soon be able to help you out.
-
-[toc exclude=Overview]
+This post first looks at why value-based classes exist and why their use is limited before detailing those limitations (if you're impatient, jump [here](#limitations)).
+It closes with a note on FindBugs, which will soon be able to help you out.
 
 ## Background
 
@@ -27,7 +23,7 @@ Let's have a quick look at why value-based classes were introduced and which exi
 ### Why Do They Exist?
 
 A future version of Java will most likely contain value types.
-I will write about them in the coming weeks ([so](https://twitter.com/nipafx) [stay](http://blog.codefx.org/feed/) [tuned](http://blog.codefx.org/newsletter/)) and will present them in some detail.
+I will write about them in the coming weeks ([so](https://twitter.com/nipafx) [stay](feed.xml) [tuned](http://blog.codefx.org/newsletter/)) and will present them in some detail.
 And while they definitely have benefits, these are not covered in the present post, which might make the limitations seem pointless.
 Believe me, they aren't!
 Or don't believe me and [see for yourself](http://cr.openjdk.java.net/~jrose/values/values.html).
@@ -35,35 +31,33 @@ Or don't believe me and [see for yourself](http://cr.openjdk.java.net/~jrose/val
 For now let's see what little I already wrote about value types:
 
 > The gross simplification of that idea is that the user can define a new kind of type, different from classes and interfaces.
-Their central characteristic is that they will not be handled by reference (like classes) but by value (like primitives).
-Or, as Brian Goetz puts it in his introductory article [State of the Values](http://cr.openjdk.java.net/~jrose/values/values-0.html):
+> Their central characteristic is that they will not be handled by reference (like classes) but by value (like primitives).
+> Or, as Brian Goetz puts it in his introductory article [State of the Values](http://cr.openjdk.java.net/~jrose/values/values-0.html):
 >
 > > Codes like a class, works like an int!
 
 It is important to add that value types will be immutable - as primitive types are today.
 
 > In Java 8 value types are preceded by *value-based classes*.
-Their precise relation in the future is unclear but it could be similar to that of boxed and unboxed primitives (e.g. `Integer` and `int`).
+> Their precise relation in the future is unclear but it could be similar to that of boxed and unboxed primitives (e.g. `Integer` and `int`).
 
-The relationship of existing types with future value types became apparent when [`Optional` was designed](http://blog.codefx.org/jdk/dev/design-optional/#Value-Type).
+The relationship of existing types with future value types became apparent when [`Optional` was designed](design-java-optional#value-type).
 This was also when the limitations of value-based classes were specified and documented.
 
 ### What Value-Based Classes Exist?
 
 These are all the classes I found in the JDK to be marked as value-based:
 
-java.util
-:   [Optional](http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html), [OptionalDouble](https://docs.oracle.com/javase/8/docs/api/java/util/OptionalDouble.html), [OptionalLong](https://docs.oracle.com/javase/8/docs/api/java/util/OptionalLong.html), [OptionalInt](https://docs.oracle.com/javase/8/docs/api/java/util/OptionalInt.html)
+`java.util`:
+[Optional](http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html), [OptionalDouble](https://docs.oracle.com/javase/8/docs/api/java/util/OptionalDouble.html), [OptionalLong](https://docs.oracle.com/javase/8/docs/api/java/util/OptionalLong.html), [OptionalInt](https://docs.oracle.com/javase/8/docs/api/java/util/OptionalInt.html)
 
-java.time
-:   [Duration](http://docs.oracle.com/javase/8/docs/api/java/time/Duration.html), [Instant](http://docs.oracle.com/javase/8/docs/api/java/time/Instant.html), [LocalDate](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html), [LocalDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html), [LocalTime](http://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html), [MonthDay](http://docs.oracle.com/javase/8/docs/api/java/time/MonthDay.html), [OffsetDateTime](https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html), [OffsetTime](http://docs.oracle.com/javase/8/docs/api/java/time/OffsetTime.html), [Period](http://docs.oracle.com/javase/8/docs/api/java/time/Period.html), [Year](https://docs.oracle.com/javase/8/docs/api/java/time/Year.html), [YearMonth](http://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html), [ZonedDateTime](https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html), [ZoneId](https://docs.oracle.com/javase/8/docs/api/java/time/ZoneId.html), [ZoneOffset](https://docs.oracle.com/javase/8/docs/api/java/time/ZoneOffset.html)
+`java.time`:
+[Duration](http://docs.oracle.com/javase/8/docs/api/java/time/Duration.html), [Instant](http://docs.oracle.com/javase/8/docs/api/java/time/Instant.html), [LocalDate](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html), [LocalDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html), [LocalTime](http://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html), [MonthDay](http://docs.oracle.com/javase/8/docs/api/java/time/MonthDay.html), [OffsetDateTime](https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html), [OffsetTime](http://docs.oracle.com/javase/8/docs/api/java/time/OffsetTime.html), [Period](http://docs.oracle.com/javase/8/docs/api/java/time/Period.html), [Year](https://docs.oracle.com/javase/8/docs/api/java/time/Year.html), [YearMonth](http://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html), [ZonedDateTime](https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html), [ZoneId](https://docs.oracle.com/javase/8/docs/api/java/time/ZoneId.html), [ZoneOffset](https://docs.oracle.com/javase/8/docs/api/java/time/ZoneOffset.html)
 
-java.time.chrono
-:   [HijrahDate](https://docs.oracle.com/javase/8/docs/api/java/time/chrono/HijrahDate.html), [JapaneseDate](http://docs.oracle.com/javase/8/docs/api/java/time/chrono/JapaneseDate.html), [MinguaDate](https://docs.oracle.com/javase/8/docs/api/java/time/chrono/MinguoDate.html), [ThaiBuddhistDate](https://docs.oracle.com/javase/8/docs/api/java/time/chrono/ThaiBuddhistDate.html)
+`java.time.chrono`:
+[HijrahDate](https://docs.oracle.com/javase/8/docs/api/java/time/chrono/HijrahDate.html), [JapaneseDate](http://docs.oracle.com/javase/8/docs/api/java/time/chrono/JapaneseDate.html), [MinguaDate](https://docs.oracle.com/javase/8/docs/api/java/time/chrono/MinguoDate.html), [ThaiBuddhistDate](https://docs.oracle.com/javase/8/docs/api/java/time/chrono/ThaiBuddhistDate.html)
 
 I can not guarantee that this list is complete as I found no official source listing them all.
-
-<contentimage slug="value-based"></contentimage>
 
 In addition there are non-JDK classes which should be considered value-based but do not say so.
 An example is [Guava's `Optional`](http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Optional.html).
@@ -73,7 +67,7 @@ It is interesting to note that the existing boxing classes like `Integer`, `Doub
 While it sounds desirable to do so - after all they are the prototypes for this kind of classes - this would break backwards compatibility because it would retroactively invalidate all uses which contravene the new limitations.
 
 > `Optional` is new, and the disclaimers arrived on day 1.
-`Integer`, on the other hand, is probably hopelessly polluted, and I am sure that it would break gobs of important code if `Integer` ceased to be lockable (despite what we may think of such a practice.)
+> `Integer`, on the other hand, is probably hopelessly polluted, and I am sure that it would break gobs of important code if `Integer` ceased to be lockable (despite what we may think of such a practice.)
 >
 > [Brian Goetz - Jan 6 2015 (formatting mine)](http://mail.openjdk.java.net/pipermail/valhalla-dev/2015-January/000566.html)
 
@@ -88,10 +82,9 @@ It is by no means clear whether these limitations suffice to establish a relatio
 That being said, let's continue with the quote from above:
 
 > In Java 8 value types are preceded by *value-based classes*.
-Their precise relation in the future is unclear but it could be similar to that of boxed and unboxed primitives (e.g. `Integer` and `int`).
-Additionally, the compiler will likely be free to silently switch between the two to improve performance.
-Exactly that switching back and forth, i.e.
-removing and later recreating a reference, also forbids identity-based mechanisms to be applied to value-based classes.
+> Their precise relation in the future is unclear but it could be similar to that of boxed and unboxed primitives (e.g. `Integer` and `int`).
+> Additionally, the compiler will likely be free to silently switch between the two to improve performance.
+> Exactly that switching back and forth, i.e. removing and later recreating a reference, also forbids identity-based mechanisms to be applied to value-based classes.
 
 Implemented like this the JVM is freed from tracking the identity of value-based instances, which can lead to substantial performance improvements and other benefits.
 
@@ -233,8 +226,6 @@ With instances of value-based classes being free to be removed and recreated con
 	-   key in an `IdentityHashMap`
 
 Comments highlighting other violations or improving upon the explanations are greatly appreciated!
-
-[java_8]
 
 ## FindBugs
 

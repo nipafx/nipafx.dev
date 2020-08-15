@@ -1,41 +1,19 @@
 ---
-title: "Why Isn't Optional Serializable?"
+title: "Why Isn't `Optional` Serializable?"
 tags: [java-next, java-8, optional, serialization, value-types]
 date: 2014-10-22
 slug: why-isnt-java-optional-serializable
+intro: "Discussing the reasons for not making Java 8's new type `Optional` serializable."
 description: "Discussing the reasons for not making Java 8's new type Optional serializable."
 searchKeywords: "Optional Serializable"
-featuredImage: question-mark-puzzle
+featuredImage: optional-serializable
 ---
 
 Java 8's new type Optional was met with different reactions and one point of criticism is that it isn't serializable.
 Let's have a look at the reasons for that.
 A future post will then show how to overcome that fact if it is really necessary.
 
-### Update
-
-This is part of a series of posts about Optional:
-
--   [Intention Revealing Code With Java 8’s New Type Optional](intention-revealing-code-java-8-optional): Use Optional everywhere instead of null (which should be rare in the first place).
--   [The Design Of Optional](http://blog.codefx.org/jdk/dev/design-optional/): How the expert group came to the decision to include Optional in Java 8.
--   [Why Isn’t Optional Serializable?](http://blog.codefx.org/jdk/dev/why-isnt-optional-serializable/): Well, why isn't it?
--   [Serialize Optional](http://blog.codefx.org/jdk/serialize-optional/): What to do if you really want to serialize it anyways.
-
-### Overview
-
-The post will examine the reasons for not making Optional serializable.
-
-[toc exclude=Overview|Update]
-
-## Shouldn't Optional Be Serializable?
-
-<div style="float: right;">
-
-<contentimage slug="question-mark-puzzle"></contentimage>
-
-Published by [Horla Varlan](https://www.flickr.com/photos/horiavarlan/4273168957/in/photolist-7x9bYE-7vB7fR-7vEVHQ) under [CC-BY 2.0](https://creativecommons.org/licenses/by/2.0/).
-
-</div>
+## Shouldn't `Optional` Be Serializable?
 
 This [question](http://mail.openjdk.java.net/pipermail/jdk8-dev/2013-September/003186.html) was asked back in September 2013 on the [jdk8-dev mailing list](http://mail.openjdk.java.net/pipermail/jdk8-dev/).
 In July 2014 [a similar question was posted on StackOverflow](http://stackoverflow.com/q/24547673).
@@ -49,7 +27,7 @@ So why isn't Optional serializable?
 
 ## Return Type
 
-As I described in [my summary of the process which introduced Optional into Java](http://blog.codefx.org/jdk-dev/design-optional/), it was designed as a return type for methods.
+As I described in [my summary of the process which introduced Optional into Java](design-java-optional), it was designed as a return type for methods.
 The caller of such a method is expected to immediately check the returned instance.
 If the value is present, it should be retrieved; if it is not, a default value should be used or an exception should be thrown.
 
@@ -75,14 +53,14 @@ An indeed, their replies follow this argumentation:
 > \[...\]
 >
 > Concern that Optional would be misused in other use cases threatened to derail it's inclusion in Java entirely!
-Optional is being added for the value it offers in "fluent" sequences of statements.
-In this context use of Optional as a visible type or for serialization isn't relevant.
+> Optional is being added for the value it offers in "fluent" sequences of statements.
+> In this context use of Optional as a visible type or for serialization isn't relevant.
 >
 > [Mike Diugou](http://mail.openjdk.java.net/pipermail/jdk8-dev/2013-September/003273.html)
 
 > The JSR-335 EG felt fairly strongly that Optional should not be on any more than needed to support the optional-return idiom only.
-(Someone suggested maybe even renaming it to OptionalReturn to beat users over the head with this design orientation; perhaps we should have taken that suggestion.) I get that lots of people want Optional to be something else.
-But, its not simply the case that the EG "forgot" to make it serializable; they explicitly chose not to.
+> (Someone suggested maybe even renaming it to OptionalReturn to beat users over the head with this design orientation; perhaps we should have taken that suggestion.) I get that lots of people want Optional to be something else.
+> But, its not simply the case that the EG "forgot" to make it serializable; they explicitly chose not to.
 >
 > [Brian Goetz](http://mail.openjdk.java.net/pipermail/jdk8-dev/2013-September/003274.html)
 
@@ -100,8 +78,8 @@ Still, they were added to Optional without much ado.
 It also stands to reason that not supporting serialization does not help very much in preventing misuse (as seen by the EG):
 
 > \[...\] Keeping Optional non-serializable doesn't do much to prevent that from happening.
-In the vast majority of cases, Optional will be used in a non-serialized context.
-So, as preventative measures go, this isn't a very effective one.
+> In the vast majority of cases, Optional will be used in a non-serialized context.
+> So, as preventative measures go, this isn't a very effective one.
 >
 > [Joseph Unruh](http://mail.openjdk.java.net/pipermail/jdk8-dev/2013-September/003206.html)
 
@@ -113,9 +91,9 @@ Something you would expect if it were decided for preventive purposes.
 There exists a general argument against serialization from the JDK-developers' point of view:
 
 > Making something in the JDK serializable makes a dramatic increase in our maintenance costs, because it means that the representation is frozen for all time.
-This constrains our ability to evolve implementations in the future, and the number of cases where we are unable to easily fix a bug or provide an enhancement, which would otherwise be simple, is enormous.
-So, while it may look like a simple matter of "implements Serializable" to you, it is more than that.
-The amount of effort consumed by working around an earlier choice to make something serializable is staggering.
+> This constrains our ability to evolve implementations in the future, and the number of cases where we are unable to easily fix a bug or provide an enhancement, which would otherwise be simple, is enormous.
+> So, while it may look like a simple matter of "implements Serializable" to you, it is more than that.
+> The amount of effort consumed by working around an earlier choice to make something serializable is staggering.
 >
 > [Brian Goetz](http://mail.openjdk.java.net/pipermail/jdk8-dev/2013-September/003276.html)
 
@@ -130,11 +108,11 @@ But, to pick an example, it looks like most of the classes from the [new date/ti
 ## Value Types
 
 The next big change to the language casts its shadow (and it can already be seen in Java 8): *value types*.
-To repeat [what little I already wrote about them](http://blog.codefx.org/jdk/dev/design-optional/#Value-Type):
+To repeat [what little I already wrote about them](design-java-optional#value-type):
 
 > The gross simplification of that idea is that the user can define a new kind of type, different from classes and interfaces.
-Their central characteristic is that they will not be handled by reference (like classes) but by value (like primitives).
-Or, as Brian Goetz puts it in his introductory article [State of the Values](http://cr.openjdk.java.net/~jrose/values/values-0.html):
+> Their central characteristic is that they will not be handled by reference (like classes) but by value (like primitives).
+> Or, as Brian Goetz puts it in his introductory article [State of the Values](http://cr.openjdk.java.net/~jrose/values/values-0.html):
 >
 > > Codes like a class, works like an int!
 
@@ -171,12 +149,12 @@ Something which is clearly necessary as not being able to do so would be equival
 So this might be the final nail that made Optional unserializable.
 And even though I like to think that it is The Real Reason^TM^ for that decision, this theory has some holes:
 
--   Why are some other value-based classes, like [LocalDate](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html) and [LocalTime](http://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html), serializable?
-(That's actually a good question regardless of Optional.
-I'll follow up on that.)
--   The timing is not perfect.
-The above discussion on the mailing list (where the EG was adamant in not making it serializable) happened in September 2013, the discussion about Optional's special status in the face of future language changes [started in October 2013](http://mail.openjdk.java.net/pipermail/lambda-libs-spec-experts/2013-October/002329.html).
--   Why wouldn't the EG come out and say it?
+* Why are some other value-based classes, like [LocalDate](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html) and [LocalTime](http://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html), serializable?
+  (That's actually a good question regardless of Optional.
+  I'll follow up on that.)
+* The timing is not perfect.
+  The above discussion on the mailing list (where the EG was adamant in not making it serializable) happened in September 2013, the discussion about Optional's special status in the face of future language changes [started in October 2013](http://mail.openjdk.java.net/pipermail/lambda-libs-spec-experts/2013-October/002329.html).
+* Why wouldn't the EG come out and say it?
 
 I guess it's up to you to decide whether those holes sink the theory.
 
@@ -186,4 +164,4 @@ We saw that there are different reasons to not make Optional serializable: The d
 
 It is hard to say whether any single one is already a show stopper but together they way heavily against serialization.
 But for those undeterred, I will explore how to serialize Optional in another post in the next couple of days.
-To stay up to date, subscribe via [RSS](http://blog.codefx.org/feed/) or [Newsletter](http://blog.codefx.org/newsletter/)!
+To stay up to date, subscribe via [RSS](feed.xml) or [Newsletter](http://blog.codefx.org/newsletter/)!

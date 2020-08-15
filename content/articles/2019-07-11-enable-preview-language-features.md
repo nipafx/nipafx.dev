@@ -3,13 +3,13 @@ title: "Evolving Java With ––enable–preview aka Preview Language Features"
 tags: [java-next]
 date: 2019-07-11
 slug: enable-preview-language-features
-description: "Use --enable-preview (plus --source or --release during compilation) to experiment with Java's preview features like switch expressions and text blocks"
-intro: "How to use --enable-preview (plus --source or --release during compilation) to experiment with Java's preview features like switch expressions and text blocks"
+description: "Use `--enable-preview` (plus `--source` or `--release` during compilation) to experiment with Java's preview features like switch expressions and text blocks"
+intro: "How to use `--enable-preview` (plus `--source` or `--release` during compilation) to experiment with Java's preview features like switch expressions and text blocks"
 searchKeywords: "enable-preview"
 featuredImage: preview-features
 ---
 
-Since [Java 9](http://blog.codefx.org/tag/java-9/), a new major Java version is released every six months.
+Since [Java 9](tag:java-9), a new major Java version is released every six months.
 This has a profound impact on the entire ecosystem, not least of which is the faster turnaround time for new language features and APIs.
 With just six months between major versions, the JDK team can release a feature, collect feedback, refine, and eventually finalize it.
 
@@ -24,15 +24,13 @@ This post looks at using `--enable-preview` to unlock preview language features,
 The same mostly applies to preview JVM features.
 I will cover incubator modules in a future post.
 
-[toc heading_levels="2"]
-
-## Unlocking Preview Features with ––enable–preview {#unlocking-preview-features-with---enable-preview}
+## Unlocking Preview Features with `––enable–preview`
 
 Each (programming) language has a syntax that defines which expressions are legal - like is this sentence not (yes, that was on purpose) - and Java's syntax evolves constantly.
-Since 2017 we've got [private interface methods](https://blog.codefx.org/java/java-9-tutorial/#Private-Interface-Methods), [`var`](java-10-var-type-inference), [switch expressions](java-13-switch-expressions), [text blocks](java-13-text-blocks), and a few smaller changes.
+Since 2017 we've got [private interface methods](java-9-tutorial#private-interface-methods), [`var`](java-10-var-type-inference), [switch expressions](java-13-switch-expressions), [text blocks](java-13-text-blocks), and a few smaller changes.
 Up to and including Java 10 these features were set in stone as soon as they first appeared in a public release, but Java 11 changed that.
 
-Since [Java 11](https://blog.codefx.org/tag/java-11/), major releases can contain syntax changes that are hidden behind the command-line flag `--enable-preview` - so-called *preview language features*.
+Since [Java 11](tag:java-11), major releases can contain syntax changes that are hidden behind the command-line flag `--enable-preview` - so-called *preview language features*.
 [Java 12](java-12-guide)'s switch expressions were the first such feature and when [experimenting with it](https://github.com/CodeFX-org/demo-java-x#language-changes) you need to add two command line flags during compilation and one when launching:
 
 ```shell
@@ -133,8 +131,6 @@ Alternatively just use a preview feature, observe the error, and let Eclipse's q
 Since I don't use Eclipse, I only kicked the tires.
 I didn't spend enough time with it to be annoyed by pesky details, but I'm not aware of any problems.
 
-<contentimage slug="preview-features"></contentimage>
-
 ## But... Why?!
 
 Why even go through the trouble, though?
@@ -203,7 +199,7 @@ $ javac --enable-preview # other flags
 This forces you to make explicit the version you're drawing preview features from.
 And as we'll see in a bit, this always has to be the compiler's own version.
 
-### Forced To ––enable–preview At Run Time {#forced-to---enable-preview-at-run-time}
+### Forced To `––enable–preview` At Run Time
 
 There are some features that have no run-time component (`var` comes to mind) but even then you have to add `--enable-preview` to `java`.
 Otherwise you will see a message like this:

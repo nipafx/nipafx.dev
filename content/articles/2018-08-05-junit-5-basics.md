@@ -1,24 +1,20 @@
 ---
-title: "JUnit 5 Basics: @Test, Lifecycle, Assertions, Assumptions, And More"
+title: "JUnit 5 Basics: `@Test`, Lifecycle, Assertions, Assumptions, And More"
 tags: [java-basics, junit-5, libraries, testing]
 date: 2018-08-05
 slug: junit-5-basics
-description: "The Basics of JUnit 5: How to use @Test, @BeforeAll, @BeforeEach, @AfterEach, @AfterAll, assertions, and assumptions. How to disable, name, and tag tests."
-intro: "Get to know the basics of JUnit 5: @Test, lifecycle methods, assertions, and assumptions; how to disable, name, and tag tests; as well as previews on nesting, parameterization, and test interfaces. Let's write some tests!"
+description: "The Basics of JUnit 5: How to use `@Test`, `@BeforeAll`, `@BeforeEach`, `@AfterEach`, `@AfterAll`, assertions, and assumptions. How to disable, name, and tag tests."
+intro: "Get to know the basics of JUnit 5: `@Test`, lifecycle methods, assertions, and assumptions; how to disable, name, and tag tests; as well as previews on nesting, parameterization, and test interfaces. Let's write some tests!"
 searchKeywords: "JUnit 5"
+featuredImage: junit-5-basics
+repo: demo-junit-5
 ---
 
 After [setting JUnit 5 up](junit-5-setup), we can write some basic tests, getting to know the test lifecycle, assertions, and assumptions as well as some more advanced features like test interfaces, disabled, tagged, nested, and parameterized tests.
 
-### Overview
-
-[codefx_junit5\_series]
-
-[toc exclude=Overview]
-
 ## Philosophy
 
-The [new architecture](http://blog.codefx.org/design/architecture/junit-5-architecture/), which is not terribly important at this moment, is aimed at extensibility.
+The [new architecture](junit-5-architecture-jupiter), which is not terribly important at this moment, is aimed at extensibility.
 It is possible that some day very alien (at least to us run-of-the-mill Java devs) testing techniques will be possible with JUnit 5.
 
 But for now the basics are very similar to version 4.
@@ -240,7 +236,7 @@ assertLinesMatch(
 	asList("first", "I", "II", "III", "IV", "V", "last"));
 ```
 
-This feature was first developed internally to test [the console launcher](https://blog.codefx.org/libraries/junit-5-setup/#Command-Line-For-The-Win) and verify whether it creates the correct output.
+This feature was first developed internally to test [the console launcher](junit-5-setup#command-line-for-the-win) and verify whether it creates the correct output.
 
 Then we have `assertThrows`, which fails the test if the given method does not throw the specified exception.
 It also returns the exception instance so it can be used for further verification, for example to check whether the message contains certain information.
@@ -318,8 +314,6 @@ void exitIfNullEqualsString() {
 Assumptions can either be used to abort tests whose preconditions are not met or to execute (parts of) a test only if a condition holds.
 The main difference is that aborted tests (the first two) are reported as disabled, whereas a test that was empty because a condition did not hold (the last one) is plain green.
 
-[codefx_junit\_5\_product]
-
 ## Universal Mechanisms
 
 There are a few cross cutting features that you can apply everywhere in JUnit 5.
@@ -348,7 +342,7 @@ void someTest() { /*...*/ }
 ```
 
 This should get you started.
-If you're looking for more details head over to [my post on enabling/disabling tests with included and custom conditions](http://blog.codefx.org/libraries/junit-5-conditions/).
+If you're looking for more details head over to [my post on enabling/disabling tests with included and custom conditions](junit-5-disabled-conditions).
 
 ### Naming Tests
 
@@ -367,7 +361,7 @@ class NamingTest {
 
 This creates very readable output (for example, in your IDE), but I have to admit that I rarely use it - way too often it's just the method name with spaces instead of camel case or underscores and that doesn't add enough value for me.
 
-<contentimage slug="junit-5-basics-named-test"></contentimage>
+<contentimage slug="junit-5-basics-named-test" options="narrow"></contentimage>
 
 ### Tagging Tests
 
@@ -400,7 +394,7 @@ So let's look at a few more interesting features!
 
 ### Test Interfaces
 
-All we've seen so far, and much of [what's about to come](https://blog.codefx.org/tag/junit-5/) can not only happen in classes, but also in interfaces:
+All we've seen so far, and much of [what's about to come](tag:junit-5) can not only happen in classes, but also in interfaces:
 
 ```java
 public interface Interface {
@@ -490,7 +484,7 @@ If your heart is not made of stone, you should give it a read right now.
 That's it, you made it!
 We've discussed the basics of how to use JUnit 5 and now you know all you need to write plain tests: How to annotate test methods (with `@Test`) and the lifecycle methods (with `@[Before|After][All|Each]`) and how assertions and assumptions work (much like before).
 
-Beyond that we rushed through [conditionally disabling](http://blog.codefx.org/libraries/junit-5-conditions/), naming, nesting, and [parameterizing](junit-5-parameterized-tests) tests.
+Beyond that we rushed through [conditionally disabling](junit-5-disabled-conditions), naming, nesting, and [parameterizing](junit-5-parameterized-tests) tests.
 But wait, there's more!
-We didn't yet talk about parameter injection, the [extension mechanism](junit-5-extension-model), or the [project's architecture](http://blog.codefx.org/design/architecture/junit-5-architecture/).
-(Each link takes you to an article in [this JUnit 5 series](https://blog.codefx.org/tag/junit-5/) that discusses one feature in all detail.)
+We didn't yet talk about parameter injection, the [extension mechanism](junit-5-extension-model), or the [project's architecture](junit-5-architecture-jupiter).
+(Each link takes you to an article in [this JUnit 5 series](tag:junit-5) that discusses one feature in all detail.)

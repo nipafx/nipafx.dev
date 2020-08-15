@@ -16,12 +16,8 @@ Which is why I like to get rid of them!
 This realization slowly materialized itself over the last months and yesterday my subconscious barfed up an idea of how to achieve that.
 I'll present it here and follow up with a post in a couple of weeks after trying it out.
 
-### Overview
-
 To make sure everybody knows what we're talking about I'll start with a quick recap on anonymous classes.
 I will then explain why I'd like to get rid of them before identifying their last stronghold and how to conquer it.
-
-[toc exclude=Overview]
 
 ## Quick Recap Of Anonymous Classes
 
@@ -45,8 +41,6 @@ It always confuses me to read methods which at some point create a 10+ line impl
 
 But for short implementations (as in the example above) anonymous classes were the best choice.
 
-<contentimage slug="anonymous-classes"></contentimage>
-
 ## So What's Wrong With Them?
 
 Nothing's really *wrong* with them.
@@ -59,7 +53,7 @@ Just compare this to the example above:
 Runnable run = () -> runThisThing(someArgument);
 ```
 
-Over the last months I slowly realized that I just don't wanna see them anymore and yesterday a nice little idea of how to get rid of the (up to know) necessary remaining occurrences popped into my head.
+Over the last months I slowly realized that I just don't wanna see them anymore and yesterday a nice little idea of how to get rid of the (up to now) necessary remaining occurrences popped into my head.
 
 ## Getting Rid Of Anonymous Classes
 
@@ -76,7 +70,7 @@ And it is also the tool to get rid of their last stronghold: implementations of 
 So here's my idea:
 
 > When coming across an interface or an abstract class which lends itself to be implemented ad-hoc, we create a **functional implementation**.
-This is a non-abstract class which delegates all method calls to functional interfaces which were specified during construction.
+> This is a non-abstract class that delegates all method calls to functional interfaces which were specified during construction.
 
 ### Example
 
@@ -168,8 +162,6 @@ Action action = new FunctionalAction(this::performedAction);
 
 Much better, right?
 
-[java_8]
-
 ## Follow Up
 
 I will try this out for some weeks and report back how it worked.
@@ -178,14 +170,10 @@ I already see some problems (arity of functional interfaces provided by the JDK 
 But I think it is worth discussing this approach.
 If you think so, too, why don't you share it?
 
-[feather_share]
-
 Will you try it as well?
 Thought of more problems or an improvement?
 Maybe you just think it's stupid?
 In any case, leave a comment, write a post, or ping me wherever you find me.
-
-[feather_follow]
 
 ## Reflection
 

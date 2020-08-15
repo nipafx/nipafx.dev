@@ -1,26 +1,21 @@
 ---
-title: "New Javadoc Tags @apiNote, @implSpec and @implNote"
+title: "New Javadoc Tags `@apiNote`, `@implSpec`, and `@implNote`"
 tags: [java-8, tools]
 date: 2015-01-07
 slug: javadoc-tags-apiNote-implSpec-implNote
-description: "There are new Javadoc tags used in Java 8: @apiNote, @implSpec and @implNote. Take a look at their history, meaning and use on command line and with Maven."
+intro: "There are new Javadoc tags used in Java 8: `@apiNote`, `@implSpec`, and `@implNote`. Take a look at their history, meaning and use on command line and with Maven."
+description: "There are new Javadoc tags used in Java 8: @apiNote, @implSpec, and @implNote. Take a look at their history, meaning and use on command line and with Maven."
 searchKeywords: "javadoc tags"
 featuredImage: javadoc-8-tag
+repo: demo-javadoc-8-tags
 ---
 
-If you're already using Java 8, you might have seen some new Javadoc tags: **@apiNote**, **@implSpec** and **@implNote**.
+If you're already using Java 8, you might have seen some new Javadoc tags: `@apiNote`, `@implSpec`, and `@implNote`.
 What's up with them?
 And what do you have to do if you want to use them?
 
-### Overview
-
-This post will have a quick view at the tags' origin and current status.
-It will then explain their meaning and detail how they can be used with IDEs, the Javadoc tool and via Maven's Javadoc plugin.
-
-I created a [demo project on GitHub](https://github.com/CodeFX-org/demo-javadoc-8-tags) to show some examples and the necessary additions to Maven's [pom.xml](https://github.com/CodeFX-org/demo-javadoc-8-tags/blob/master/pom.xml?ts=4).
-To make things easier for the Maven-averse, it already contains [the generated javadoc](https://github.com/CodeFX-org/demo-javadoc-8-tags/tree/master/target/site/apidocs).
-
-[toc exclude=Overview heading_levels="2,3,4"]
+This post has a quick view at the tags' origin and current status.
+It then explains their meaning and detail how they can be used with IDEs, the Javadoc tool and via Maven's Javadoc plugin.
 
 ## Context
 
@@ -44,9 +39,7 @@ So while it is surely beneficial to understand their meaning, teams should caref
 Personally, I think so as I deem the considerable investment already made in the JDK as too high to be reversed.
 It would also be easy to remove or search/replace their occurrences in a code base if that became necessary.
 
-## **@apiNote**, **@implSpec** and **@implNote**
-
-<contentimage slug="javadoc-8-tag"></contentimage>
+## `@apiNote`, `@implSpec`, and `@implNote`
 
 Let's cut to the heart of things.
 What is the meaning of these new tags?
@@ -63,34 +56,30 @@ Historically we've framed them as either being "specification" (e.g., necessary 
 >
 > (We sometimes use the terms normative/informative to describe the difference between specification/notes.) Here are some descriptions of what belongs in each box.
 >
-> **1.
-API specification.**
+> **1. API specification.**
 >
 > This is the one we know and love; a description that applies equally to all valid implementations of the method, including preconditions, postconditions, etc.
 >
-> **2.
-API notes.**
+> **2. API notes.**
 >
 > Commentary, rationale, or examples pertaining to the API.
 >
-> **3.
-Implementation specification.**
+> **3. Implementation specification.**
 >
 > This is where we say what it means to be a valid default implementation (or an overrideable implementation in a class), such as "throws UOE." Similarly this is where we'd describe what the default for `putIfAbsent` does.
-It is from this box that the would-be-implementer gets enough information to make a sensible decision as to whether or not to override.
+> It is from this box that the would-be-implementer gets enough information to make a sensible decision as to whether or not to override.
 >
-> **4.
-Implementation notes.**
+> **4. Implementation notes.**
 >
 > Informative notes about the implementation, such as performance characteristics that are specific to the implementation in this class in this JDK in this version, and might change.
-These things are allowed to vary across platforms, vendors and versions.
+> These things are allowed to vary across platforms, vendors and versions.
 >
-> The proposal: add three new Javadoc tags, **@apiNote**, **@implSpec**, and **@implNote**.
-(The remaining box, API Spec, needs no new tag, since that's how Javadoc is used already.) **@impl{spec,note}** can apply equally well to a concrete method in a class or a default method in an interface.
+> The proposal: add three new Javadoc tags, `@apiNote`, `@implSpec`, and `@implNote`.
+> (The remaining box, API Spec, needs no new tag, since that's how Javadoc is used already.) **@impl{spec,note}** can apply equally well to a concrete method in a class or a default method in an interface.
 
 So the new Javadoc tags are meant to categorize the information given in a comment.
-It distinguishes between the specification of the method's, class's, ... behavior (which is relevant for all users of the API - this is the "regular" comment and would be **@apiSpec** if it existed) and other, more ephemeral or less universally useful documentation.
-More concretely, an API user can not rely on anything written in **@implSpec** or **@implNote**, because these tags are concerned with **this** implementation of the method, saying nothing about overriding implementations.
+It distinguishes between the specification of the method's, class's, ... behavior (which is relevant for all users of the API - this is the "regular" comment and would be `@apiSpec` if it existed) and other, more ephemeral or less universally useful documentation.
+More concretely, an API user can not rely on anything written in `@implSpec` or `@implNote`, because these tags are concerned with **this** implementation of the method, saying nothing about overriding implementations.
 
 This shows that using these tags will mainly benefit API designers.
 But even Joe Developer, working on a large project, can be considered a designer in this context as his code is surely consumed and/or changed by his colleagues at some point in the future.
@@ -144,11 +133,11 @@ The JDK widely uses the new tags.
 Some examples:
 
 -   [`ConcurrentMap`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentMap.html):
-	-   Several **@implSpec**s defining the behavior of the default implementations, e.g. on [`replaceAll`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentMap.html#replaceAll-java.util.function.BiFunction-).
-	-   Interesting **@implNote**s on [`getOrDefault`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentMap.html#getOrDefault-java.lang.Object-V-) and [`forEach`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentMap.html#forEach-java.util.function.BiConsumer-).
-	-   Repeated **@implNote**s on abstract methods which have default implementations in Map documenting that "This implementation intentionally re-abstracts the inappropriate default provided in Map.", e.g. [`replace`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentMap.html#replace-K-V-).
--   [`Objects`](https://docs.oracle.com/javase/8/docs/api/java/util/Objects.html) uses **@apiNote** to explain why the seemingly useless methods [`isNull`](https://docs.oracle.com/javase/8/docs/api/java/util/Objects.html#isNull-java.lang.Object-) and [`nonNull`](https://docs.oracle.com/javase/8/docs/api/java/util/Objects.html#nonNull-java.lang.Object-) were added.
--   The abstract class [`Clock`](https://docs.oracle.com/javase/8/docs/api/java/time/Clock.html) uses **@implSpec** and **@implNote** in its class comment to distinguish what implementations must beware of and how the existing methods are implemented.
+	-   Several `@implSpec`s defining the behavior of the default implementations, e.g. on [`replaceAll`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentMap.html#replaceAll-java.util.function.BiFunction-).
+	-   Interesting `@implNote`s on [`getOrDefault`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentMap.html#getOrDefault-java.lang.Object-V-) and [`forEach`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentMap.html#forEach-java.util.function.BiConsumer-).
+	-   Repeated `@implNote`s on abstract methods which have default implementations in Map documenting that "This implementation intentionally re-abstracts the inappropriate default provided in Map.", e.g. [`replace`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentMap.html#replace-K-V-).
+-   [`Objects`](https://docs.oracle.com/javase/8/docs/api/java/util/Objects.html) uses `@apiNote` to explain why the seemingly useless methods [`isNull`](https://docs.oracle.com/javase/8/docs/api/java/util/Objects.html#isNull-java.lang.Object-) and [`nonNull`](https://docs.oracle.com/javase/8/docs/api/java/util/Objects.html#nonNull-java.lang.Object-) were added.
+-   The abstract class [`Clock`](https://docs.oracle.com/javase/8/docs/api/java/time/Clock.html) uses `@implSpec` and `@implNote` in its class comment to distinguish what implementations must beware of and how the existing methods are implemented.
 
 ### Inheritance
 
@@ -158,8 +147,6 @@ To inherit specific tags, just add the snippet `@tag {@inheritDoc}` to the comme
 
 The implementing classes in the [demo project](https://github.com/CodeFX-org/demo-javadoc-8-tags) examine the different possibilities.
 The README gives an overview.
-
-[java_8]
 
 ## Tool Support
 
@@ -220,7 +207,7 @@ The demo project on GitHub shows [how this looks like in the *pom*](https://gith
 
 ## Reflection
 
-We have seen that the new Javadoc tags **@apiNote**, **@implSpec** and **@implNote** were added to allow the division of documentation into parts with different semantics.
+We have seen that the new Javadoc tags `@apiNote`, `@implSpec`, and `@implNote` were added to allow the division of documentation into parts with different semantics.
 Understanding them is helpful to every Java developer.
 API designers might chose to employ them in their own code but must keep in mind that they are still undocumented and thus subject to change.
 

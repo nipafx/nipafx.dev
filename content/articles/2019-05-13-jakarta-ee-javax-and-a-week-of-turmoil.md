@@ -17,9 +17,7 @@ During a week of turmoil, many people have written about the matter and this pos
 *By the way, I have originally written this as a section in my occasional newsletter.
 [Subscribe](http://blog.codefx.org/newsletter/) if you want to read stuff like this in your inbox.*
 
-[toc]
-
-## Java EE to Jakarta EE {#java-ee-jakarta-ee}
+## Java EE to Jakarta EE
 
 About two years ago, Oracle decided to get rid of Java EE and after some time agreed with the Eclipse Foundation to hand it over to them.
 What does it mean to transfer such a project, though?
@@ -64,8 +62,6 @@ Mike answers many obvious questions in the same blog post and his follow-up from
 -   What happens beyond Jakarta EE 8?
 
 If you only click two links in this post, ... 😜
-
-<contentimage slug="jakarta-ee-turmoil"></contentimage>
 
 ## Public opinion and interesting insights
 

@@ -1,16 +1,12 @@
 ---
 title: "SPJCN IV: Quo Vadis Scala"
-tags: [scala]
+tags: [community, scala]
 date: 2017-01-26
 slug: spjcn-quo-vadis-scala
 canonicalUrl: https://medium.com/sitepoint/quo-vadis-scala-60d86d10019a#.rw1qzhb80
-description: ""
-intro: "In the fourth issue of SitePoint’s Java Channel Newsletter I summarize the discussion of Scala's presumable demise."
-searchKeywords: ""
+description: "In the fourth issue of SitePoint’s Java Channel Newsletter (from October 21st 2016) I summarize the discussion of Scala's presumable demise."
 featuredImage: quo-vadis-scala
 ---
-
-[canonical_sitepoint\_newsletter no="III" date="October 21st 2016" url="https://medium.com/sitepoint/quo-vadis-scala-60d86d10019a\#.futmijzgx"]
 
 Moshe Kranc recently published [The Rise and Fall of Scala](https://dzone.com/articles/the-rise-and-fall-of-scala), an article in which he discusses the (perceived?) decline of Scala and the (imagined?) reasons behind it.
 This caused some ripples and, of course, a little flame war but discussions were mostly civil and worth looking into.
@@ -21,12 +17,10 @@ Well, I read things and talk to people and, hey, this is my editorial, so I can 
 And with Scala being the major "alternative JVM language", Java developers should have a rough idea of what's going on next door.
 
 ## The Rise And Fall Of Scala?
-{#the-rise-and-fall-of-scala-}
 
 So what's all the fuss about and what can we make of it?
 
 ### What Is It About?
-{#what-is-it-about-}
 
 To summarize Moshe's line of thought:
 
@@ -39,8 +33,8 @@ Moshe heard of projects moving away from Scala.
 Here's his summary:
 
 > Scala played a key role as a catalyst in popularizing functional programming, and it exerted a strong influence on the design of functional programming in Java.
-Scala will probably never become the next big programming language.
-But, it will be around for years to come as the language of choice for niche problem domains such as Big Data programming.
+> Scala will probably never become the next big programming language.
+> But, it will be around for years to come as the language of choice for niche problem domains such as Big Data programming.
 
 As you can imagine, this ruffled some feathers and not all responses were cordial.
 Take [this anonymous reply](https://gist.github.com/anonymous/5df1f1f6c6b6ebbb4dc67b2bc4da4eae), which does make some good arguments but wraps them in personal attacks and a pinch of conspiracy theory.
@@ -56,7 +50,6 @@ People also pointed out a number of misunderstandings about functional programmi
 Interestingly enough, though, few disagreed with his final words...
 
 ### What To Make Of It?
-{#what-to-make-of-it-}
 
 First of all I agree that Moshe's line of thought is very weak.
 The numbers don't add up and imply little but I found the notion of Java as a functional programming language (and even the preeminent one at that) particularly ridiculous.
@@ -99,7 +92,6 @@ Collections over vectors and arrays, NIO over IO, streams over loops, lambda-ena
 We better get busy coming up with a good way to settle on and communicate idiomatic approaches if we do not want to get into the same situation.
 
 ### So Where *Is* Scala Going?
-{#so-where-_is_-scala-going-}
 
 To come back to a remark I made above, nobody really disagreed with Moshe's final words.
 Scala is a nice language, it is important to the ecosystem, it has its use cases, and it is here to stay.
@@ -113,10 +105,7 @@ If you like Scala (or any other language for that matter), that's awesome!
 Learn it or stick with it, but most importantly enjoy it!
 Because people are at their best when they do something they enjoy.
 
-<contentimage slug="quo-vadis-scala"></contentimage>
-
 ## What Else Is Going On?
-{#what-else-is-going-on-}
 
 Nothing that I'm willing to make this newsletter even longer for.
 ;)

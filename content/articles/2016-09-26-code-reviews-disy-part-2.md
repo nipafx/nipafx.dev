@@ -1,14 +1,13 @@
 ---
 title: "Code Reviews At Disy - How We Review"
+# subtitle
 tags: [code-review, techniques]
 date: 2016-09-26
 slug: code-reviews-disy-part-2
+canonicalUrl: http://blog.disy.net/code-reviews-ii/
 description: "After setting out to create a peer review culture we came up with a workflow and picked a tool (yes, Crucible) that would help us get there."
-searchKeywords: ""
+featuredImage: disy-code-reviews-ii
 ---
-
-I wrote [this post](http://blog.disy.net/code-reviews-ii/) when [still working at Disy](goodbye-disy-hello-sitepoint).
-If you are interested in Java, GIS, or databases, you should [check out their blog](http://blog.disy.net/)!
 
 This is the second part in a miniseries of posts presenting why and how we do code reviews.
 In [the first part](code-reviews-disy-part-1) we explained why we are one big team with 15 to 20 developers, and how that shaped the goals and assumptions we stated for introducing code reviews.
@@ -21,8 +20,6 @@ We finished with a list of fundamental principles:
 -   Reviews are fun!
 
 Let’s now see what we did to get there.
-
-[toc]
 
 ## Code Buddies
 
@@ -117,8 +114,6 @@ It would be nice if a reviewer could inform the author that he has made his firs
 There is the *Complete* button but we use it as it seems to be intended: To signal that the reviewer is happy with how the code turned out and thinks that the review can be closed.
 
 So we just use [Rocket.Chat](http://rocket.chat/) to ping the author and inform her about the status.
-
-<contentimage slug="disy-code-reviews-ii"></contentimage>
 
 ## Review Workflow
 

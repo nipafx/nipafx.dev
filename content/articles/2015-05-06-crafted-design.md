@@ -19,14 +19,8 @@ But his talk is far more practical and filled with concrete examples.
 
 You should watch it!
 
-### Overview
-
-As usual for [this series of posts](http://blog.codefx.org/tag/impulse/), I won't reproduce the whole talk.
-Here I will focus on the described architecture, leaving out most of the motivation and the thought process that led to that approach as well as interesting connected topics like how to test such a system.
-
+In this post, I focus on the described architecture, leaving out most of the motivation and the thought process that led to that approach as well as interesting connected topics like how to test such a system.
 This gives me the opportunity to fill the hole that I left in [my post about Martin's talk](architecture-lost-years), where I did it the other way around.
-
-[toc exclude=Overview]
 
 ## The Talk
 
@@ -65,10 +59,10 @@ This leads to a code structure which does not at all reflect the application's d
 Mancuso goes on to discuss some more problems coming from overusing MVC as a basic structure for a project.
 
 > What does it do?
-I have no idea.
+> I have no idea.
 >
 > But it's a web app!
-That's the important thing!
+> That's the important thing!
 
 ## The Crafted Design
 
@@ -91,30 +85,30 @@ This makes the model a runnable, self contained solution for the problem the app
 
 ### Responsibilities
 
-<contentimage slug="crafted-design-responsibilities"></contentimage>
+<contentimage slug="crafted-design-responsibilities" options="narrow"></contentimage>
 
 The responsibilities of the different parts of the system are well-defined:
 
-Controllers
-:   Controllers exist outside of the model and may interact with it via different mechanisms (e.g. REST).
+**Controllers**:
+Controllers exist outside of the model and may interact with it via different mechanisms (e.g. REST).
 When they need something to happen, they call a use case (or sometimes more than one).
 
-Use Cases
-:   Use cases describe the actions that the application performs (e.g. "create an author").
+**Use Cases**:
+Use cases describe the actions that the application performs (e.g. "create an author").
 They are exposed to the outside world and are the entry point into the domain model.
 
-Domain Services
-:   A domain service is related to one domain concept (e.g. "authors" or "books"), to which it is the entry point.
+**Domain Services**:
+A domain service is related to one domain concept (e.g. "authors" or "books"), to which it is the entry point.
 To fulfill its task, the service may talk to other services.
 
-Infrastructure Services, Repositories, ...
-:   All other instances are bound to one domain concept and never exposed to the outside world.
+**Infrastructure Services, Repositories, ...**:
+All other instances are bound to one domain concept and never exposed to the outside world.
 The only exception are the domain entities which are used throughout the whole domain.
 	This implies that, e.g., a domain service for authors will never talk to the books repository to fetch some books; it would instead call the "fetch books service".
 
-Infrastructure Implementations
-:   While interfaces of infrastructure services, repositories and the like are part of the domain model, their implementations are often considered to be infrastructure.
-	So while the "Authorize-User-Service" is defined as an infrastructure service in the domain model, it's implementation, e.g. for OAuth, will be found among other infrastructure implementations.
+**Infrastructure Implementations**:
+While interfaces of infrastructure services, repositories and the like are part of the domain model, their implementations are often considered to be infrastructure.
+So while the "Authorize-User-Service" is defined as an infrastructure service in the domain model, it's implementation, e.g. for OAuth, will be found among other infrastructure implementations.
 
 Use cases and services should be built considering [command query responsibility segregation](http://martinfowler.com/bliki/CQRS.html).
 Here, individual instances are either responsible for executing a command or for querying and returning information.
@@ -135,7 +129,7 @@ This helps when working with a complex domain model, which is usually represente
 Problems often come from different queries which have very different needs (e.g. what should be loaded, whether lazy-loading should be used, pagination, ...) but are mapped to the same fixed entity graph.
 The presented approach splits the relationships apart so that no entity references other ones from a different concept.
 
-<contentimage slug="crafted-design-repositories"></contentimage>
+<contentimage slug="crafted-design-repositories" options="narrow"></contentimage>
 
 This is mostly sufficient for writing to the database, where it is very common to only deal with one concept at a time (e.g. "insert comment" or "update rating").
 Such commands can hence be managed by a single use case in coordination with a domain service and the involved entity.
@@ -149,22 +143,19 @@ He calls this a *fast track*.
 
 With this the project's modules/source-folders/packages (depending on what you're doing) can be structured as follows:
 
-Core
-:   Self-contained solution to the problem the application was built for.
+<contentimage slug="crafted-design-packages" options="narrow"></contentimage>
 
-	Infrastructure
-	:   The infrastructure required for the model.
+* **Core**:
+Self-contained solution to the problem the application was built for.
+	* **Infrastructure**:
+	The infrastructure required for the model.
+	* **Model**:
+	The domain model, i.e. all the entities and services.
+	* **Use Cases**:
+	The use cases in individual classes.
 
-	Model
-	:   The domain model, i.e.
-all the entities and services.
-
-	Use Cases
-	:   The use cases in individual classes.
-	:   
-
-Delivery
-:   Contains whatever the project uses to be delivered, e.g. the desktop UI or the web integration.
+* **Delivery**:
+Contains whatever the project uses to be delivered, e.g. the desktop UI or the web integration.
 This part of the project can be structured according to the framework's needs.
 
 [The slides](http://www.slideshare.net/sandromancuso/crafted-design-geecon-2014) contain more screenshots of actual folder structures (from slide 22 on).
@@ -197,7 +188,7 @@ They delegate to services, which reach into the domain to modify or query the en
 So while the instances closer to the input are mainly tasked with controlling the flow, the ones closer to the output are performing the actual work.
 At the same time the former are employing a higher level of abstraction while the latter implement very specific behavior.
 
-<contentimage slug="crafted-design-flow"></contentimage>
+<contentimage slug="crafted-design-flow" options="narrow"></contentimage>
 
 In the diagram on the right this means a control flow from left (input) to right (output).
 The further to the left, the more abstract the concepts and the more flow control is exercised.

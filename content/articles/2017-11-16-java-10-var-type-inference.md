@@ -23,28 +23,18 @@ Nah, I'm sure you're interested to learn more.
 In this post I'll discuss where `var` applies and where it doesn't, how it impacts readability, and what happened to `val`.
 If you want to learn about more advanced applications of `var`, check out my posts on [intersection types](java-var-intersection-types), [traits](java-var-traits), and [anonymous classes](java-var-anonymous-classes-tricks).
 
-### Overview
-
-[codefx_java10\_series]
-
-I also wrote follow-up articles exploring how `var` to emulate [intersection types](java-var-intersection-types) and [traits](java-var-traits) and [some ugly tricks involving anonymous classes](java-var-anonymous-classes-tricks).
-
-[toc exclude=overview]
-
-[codefx_youtube url="https://www.youtube.com/watch?v=Le1DbpRZdRQ&list=PL\_-IO8LOLuNp2stY1qBUtXlfMdJW7wvfT" thumbnail="//blog.codefx.org/wp-content/uploads/thumbnail-Java-10-var-small.jpg" topic="'var' on Java 10"]
-
-## Replacing Type Declarations With var {#replacingtypedeclarationswithvar}
+## Replacing Type Declarations With `var`
 
 As a Java developer we're used to typing types twice, once for the variable declaration and once again for the following constructor:
 
 ```java
-URL codefx = new URL("http://codefx.org");
+URL codefx = new URL("https://nipafx.dev");
 ```
 
 We also often declare types for variables that are used just once and on the next line:
 
 ```java
-URL codefx = new URL("http://codefx.org");
+URL codefx = new URL("https://nipafx.dev");
 URLConnection connection = codefx.openConnection();
 Reader reader = new BufferedReader(
 	new InputStreamReader(connection.getInputStream()));
@@ -58,7 +48,7 @@ And while IDEs can help a lot with writing such code, readability suffers when v
 From Java 10 on, developers have an alternative and can choose to let the compiler infer the type by using `var`:
 
 ```java
-var codefx = new URL("http://codefx.org");
+var codefx = new URL("https://nipafx.dev");
 var connection = codefx.openConnection();
 var reader = new BufferedReader(
 	new InputStreamReader(connection.getInputStream()));
@@ -89,7 +79,7 @@ You might already have some questions:
 
 Let's go through them one by one.
 
-## No, This Is Not JavaScript {#nothisisnotjavascript}
+## No, This Is Not JavaScript
 
 I want to start by stressing that `var` does not change Java's commitment to static typing by one iota.
 The compiler infers all involved types and puts them into the class files as if you typed them yourself.
@@ -99,7 +89,7 @@ The compiler infers all involved types and puts them into the class files as if 
 Case in point, here's the result of IntelliJ's (actually Fernflower's) decompilation of the class file with the URL example:
 
 ```java
-URL codefx = new URL("http://codefx.org");
+URL codefx = new URL("https://nipafx.dev");
 URLConnection connection = codefx.openConnection();
 BufferedReader reader = new BufferedReader(
 	new InputStreamReader(connection.getInputStream()));
@@ -115,9 +105,7 @@ If you're still worried that lacking explicit types makes all code worse, I have
 rhetoricalQuestion.answer(yes -> "see my point?");
 ```
 
-[codefx_java\_10\_product]
-
-## Where To Use var (And Where Not To) {#wheretousevarandwherenotto}
+## Where To Use `var` (And Where Not To)
 
 JEP 286's title, "local-variable type inference", kinda gives away where `var` can be used: for local variables.
 More precisely, for "local variable declarations with initializers", so even the following won't work:
@@ -168,7 +156,7 @@ private var getFoo() {
 }
 ```
 
-### Avoiding "Action At A Distance" Errors {#avoidingactionatadistanceerrors}
+### Avoiding "Action At A Distance" Errors
 
 That `var` can only be used locally is not a technical limitation, but a design decision.
 Sure, it would be nice to have it work like this:
@@ -213,7 +201,6 @@ That error is at quite a distance from the change that caused it and on top of t
 From that perspective the decision to limit type inference to the immediate declaration makes sense.
 
 ### Why Can't Field And Method Types Be Inferred?
-{#whycantfieldandmethodtypesbeinferred}
 
 Fields and methods have a far larger scope than local variables and as such the distance between changes and errors increases considerably.
 In the worst case, changing a method parameter's type can lead to binary incompatibilities and thus runtime errors.
@@ -224,15 +211,12 @@ Sure, an exception could have been made for private fields or methods, but that 
 
 The basic idea is that local variables are implementation details and can not be referenced from "far away" code, which reduces the need to strictly, explicitly, and verbosely define their type.
 
-<contentimage slug="var-example"></contentimage>
-
-## Background On var {#backgroundonvar}
+## Background On var
 
 Let's have a look behind the scenes and find out why `var` was introduced, how its impact on readability was envisioned and why there is no `val` (or `let`) accompanying it.
 If you're interested in even more detail have a look at [the JEP 286 discussions](http://mail.openjdk.java.net/pipermail/platform-jep-discuss/2016-December/000066.html), [the `var` FAQ](http://cr.openjdk.java.net/~briangoetz/jep-286/lvti-faq.html), or [the Project Amber mailing list](http://mail.openjdk.java.net/pipermail/amber-dev/).
 
 ### But why?!
-{#butwhy}
 
 Java's overall tendency to be pretty verbose, particularly compared to younger languages, is one of the biggest pain points for developers and a common critique of the language by novice and experienced Java devs alike.
 [Project Amber](http://openjdk.java.net/projects/amber/), under which `var` was developed, aims "to explore and incubate smaller, productivity-oriented Java language features" and has the goal to generally reduce the ceremony involved in writing and reading Java code.
@@ -262,7 +246,6 @@ Judicious use of `var` can make intermediate results more obvious and more easil
 In short, `var` is about reducing verbosity and ceremony, not about saving characters.
 
 ### And What About Readability?
-{#andwhataboutreadability}
 
 Now let's turn to readability.
 Surely it must get worse when types are missing, right?
@@ -299,7 +282,7 @@ It can considerably improve readability.
 
 As pointed out above, the other improvement to readability can come from having more intermediate variables declared because it comes at a cheaper cost when writing and reading.
 
-### Finding A Style {#findingastyle}
+### Finding A Style
 
 It is of course easy to go overboard with `var` and have code with shitty variable names *and* no visible types.
 It is up to us, the community in the large and each team in the small, to come up with a style that suits our needs and strikes a balance between verbosity and clarity.
@@ -312,7 +295,6 @@ In that line I hope IDEs will not generally warn if a type declaration can be re
 This is not an all-the-way construct like lambdas.
 
 ### Why Is There No val/const/let?
-{#whyistherenoval}
 
 Many languages that have `var` also offer an additional keyword for immutable variables.
 It's often `val` or `const`, sometimes `let`, but Java 10 has neither and we have to use `final var` instead.
