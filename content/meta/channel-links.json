@@ -2,36 +2,43 @@
 	"links": [
 		{
 			"title": "RSS",
+			"fontAwesome": ["fa", "rss"],
 			"url": "https://nipafx.dev/feed.xml",
 			"className": "rss"
 		},
 		{
 			"title": "Twitter",
+			"fontAwesome": ["fab", "twitter"],
 			"url": "https://twitter.com/nipafx/",
 			"className": "twitter"
 		},
 		{
 			"title": "Medium",
+			"fontAwesome": ["fab", "medium-m"],
 			"url": "https://medium.com/codefx-weekly",
 			"className": "medium"
 		},
 		{
 			"title": "YouTube",
+			"fontAwesome": ["fab", "youtube"],
 			"url": "https://youtube.com/codefx",
 			"className": "youtube"
 		},
 		{
 			"title": "Twitch",
+			"fontAwesome": ["fab", "twitch"],
 			"url": "https://twitch.tv/nipafx",
 			"className": "twitch"
 		},
 		{
 			"title": "GitHub",
+			"fontAwesome": ["fab", "github"],
 			"url": "https://github.com/codefx-org",
 			"className": "github"
 		},
 		{
 			"title": "StackOverflow",
+			"fontAwesome": ["fab", "stack-overflow"],
 			"url": "http://stackoverflow.com/users/2525313/nicolai-parlog",
 			"className": "stackoverflow"
 		}

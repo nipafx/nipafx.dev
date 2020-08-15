@@ -1,23 +1,44 @@
-.container {
+/*  TEXT */
+
+.text {
 	color: var(--fg-color-shade-2);
 	font-size: var(--smaller-font-size);
 	text-transform: uppercase;
 }
 
-.container a {
+.text a {
 	text-decoration: none;
 }
 
-.container > *:not(:last-child):after {
+.text a:visited {
+	color: var(--fg-color-shade-2)
+}
+
+.text a:hover {
+	color: var(--alt-color)
+}
+
+.text > *:not(:last-child):after {
 	color: var(--alt-color);
 	white-space: pre;
 	content: " // ";
 }
 
-.container a:visited {
-	color: var(--fg-color-shade-2)
+/* ICONS */
+
+.icons a {
+	text-decoration: none;
 }
 
-.container a:hover {
+.icons a:visited {
+	color: var(--fg-color)
+}
+
+.icons a:hover {
 	color: var(--alt-color)
+}
+
+.icons > *:not(:last-child):after {
+	white-space: pre;
+	content: "   ";
 }
