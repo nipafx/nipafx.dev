@@ -8,6 +8,8 @@ import Link from "./link"
 
 import style from "./image.module.css"
 
+import metaData from "../../images/images.json"
+
 const Image = ({ id, type, className }) => {
 	const image = getImage(id, type)
 	if (!exists(image, id, type)) return null
@@ -58,7 +60,7 @@ const getImage = (id, type) => {
 			? { fixed: img.fixed }
 			: { fluid: img.fluid }
 		: undefined
-	const json = imageData.meta.nodes.find(node => node.slug === id)
+	const json = metaData.find(node => node.slug === id)
 	const credits = findCreditsInData(json)
 	return {
 		image,
@@ -127,24 +129,6 @@ const getImageData = () => {
 						}
 						fluid(maxWidth: 800, srcSetBreakpoints: [300, 800]) {
 							...GatsbyImageSharpFluid
-						}
-					}
-				}
-				meta: allImagesJson {
-					nodes {
-						slug
-						credits {
-							author {
-								name
-								url
-							}
-							source {
-								url
-							}
-							license {
-								name
-								url
-							}
 						}
 					}
 				}
