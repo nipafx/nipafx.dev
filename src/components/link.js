@@ -2,6 +2,7 @@ import React from "react"
 import { Link as Internal } from "gatsby"
 
 import ExternalLink from "./externalLink"
+import { tagletPath } from "../infra/functions"
 
 const Link = ({ to, children, onClick, className }) => {
 	className = className || ""
@@ -12,6 +13,9 @@ const Link = ({ to, children, onClick, className }) => {
 
 	const id = to.startsWith("#")
 	if (id) return <a href={to} className={className}>{children}</a>
+
+	if (to.startsWith("tag:")) to = tagletPath("tag", to.substring(4))
+	if (to.startsWith("channel:")) to = tagletPath("channel", to.substring(8))
 
 	// if internal links don't start with "/", Gatsby emits a warning;
 	// prevent that by prefixing internal links with a "/" if they lack one
