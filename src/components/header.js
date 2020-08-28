@@ -3,6 +3,7 @@ import React from "react"
 import FormattedDate from "./formattedDate"
 import { Tag, Channel } from "./taglet"
 import Image from "./image"
+import Video from "./video"
 
 import MarkdownAsHtml from "../infra/markdownAsHtml"
 import { classNames } from "../infra/functions"
@@ -10,7 +11,7 @@ import { classNames } from "../infra/functions"
 import layout from "../layout/container.module.css"
 import style from "./header.module.css"
 
-const Header = ({ children, featuredImage }) => (
+const Header = ({ children, featuredImage, featuredVideo }) => (
 	<header {...classNames(layout.container, style.header)}>
 		{children[0] && <div {...classNames(layout.header, style.firstLine)}>{children[0]}</div>}
 		{children[1] && <h1 {...classNames(layout.header, style.title)}>{children[1]}</h1>}
@@ -23,6 +24,7 @@ const Header = ({ children, featuredImage }) => (
 				{...classNames(layout.headerImage, style.image)}
 			/>
 		)}
+		{featuredVideo && <Video slug={featuredVideo} />}
 	</header>
 )
 
@@ -45,9 +47,9 @@ export const IndexHeader = () => (
 
 // POST HEADER
 
-export const PostHeader = ({ title, date, channel, tags, intro, featuredImage }) => {
+export const PostHeader = ({ title, date, channel, tags, intro, featuredImage, featuredVideo }) => {
 	return (
-		<Header featuredImage={featuredImage}>
+		<Header featuredImage={featuredImage} featuredVideo={featuredVideo}>
 			<FormattedDate date={date} />
 			<MarkdownAsHtml>{title}</MarkdownAsHtml>
 			{showTags(channel, tags)}

@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import { processTableOfContents } from "../infra/functions"
+
 import SiteLayout from "../layout/site"
 import ArticleLayout from "../layout/article"
 
@@ -16,7 +18,7 @@ export default ({ data }) => {
 		description: data.article.description,
 		intro: data.article.intro ?? data.article.description,
 		featuredImage: data.article.featuredImage,
-		toc: createTableOfContents(data.article),
+		toc: processTableOfContents(data.article.content.tableOfContents),
 		source:
 			data.article.repo || data.article.source
 				? { repo: data.article.repo, text: data.article.source }
@@ -62,16 +64,6 @@ const findSeries = data => {
 	return { description, posts, ongoing }
 }
 
-const createTableOfContents = article =>
-	article.content.tableOfContents
-		.replace(/"/g, `'`)
-		.replace(/<a href='[^#"]*(#[^']*)'>(.*)<\/a>/g, `<a href="$1" title="$2">$2<\/a>`)
-		.replace(/<p>|<\/p>/g, "")
-		// the Remark-generated ToC contains line-breaks, some of which Firefox
-		// displays as a whitespace where there shouldn't be one
-		// (e.g. before <li>s that contain a <ul>)
-		.replace(/\n/g, ``)
-
 export const query = graphql`
 	query($slug: String!) {
 		article: article(slug: { eq: $slug }) {
@@ -85,10 +77,6 @@ export const query = graphql`
 			intro
 			searchKeywords
 			featuredImage
-			content {
-				htmlAst
-				tableOfContents(pathToSlugField: "frontmatter.slug")
-			}
 			repo {
 				url
 				title
@@ -96,6 +84,10 @@ export const query = graphql`
 				restrictive
 			}
 			source
+			content {
+				htmlAst
+				tableOfContents(pathToSlugField: "frontmatter.slug")
+			}
 		}
 		tags: allTag {
 			nodes {

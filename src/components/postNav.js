@@ -15,8 +15,6 @@ import shareLinks from "../../content/meta/share-links.json"
 import style from "./postNav.module.css"
 
 const PostNav = ({ title, slug, description, toc, canonical, series, source }) => {
-	if (!toc && !series && !source) return null
-
 	return (
 		<Nav
 			title={title}

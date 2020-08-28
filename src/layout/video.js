@@ -5,14 +5,12 @@ import { PostHeader } from "../components/header"
 import PostContent from "../components/postContent"
 import PostEnd from "../components/postEnd"
 
-const VideoLayout = ({ title, slug, date, tags, description, intro, htmlAst }) => {
+const VideoLayout = ({ title, slug, videoSlug, date, tags, description, intro, toc, source, htmlAst }) => {
 	return (
 		<main>
 			<section id={PROGRESS_BAR_REFERENCE}>
-				<PostHeader {...{ title, date, channel: "videos", tags, intro }} />
-				{/* TODO: embed video from frontmatter URL instead of showing content */}
-				{/* TODO: show toc and repo */}
-				<PostContent {...{ slug, description, htmlAst }} />
+				<PostHeader {...{ title, date, channel: "videos", tags, intro, featuredVideo: videoSlug }} />
+				<PostContent {...{ title, slug, description, toc, source, htmlAst }} />
 				<PostEnd type="video" />
 			</section>
 		</main>
