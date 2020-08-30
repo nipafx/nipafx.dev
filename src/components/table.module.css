@@ -1,5 +1,4 @@
 .container {
-	margin-left: 1em;
 	overflow-x: scroll;
 
     overflow-y: hidden;
@@ -7,6 +6,7 @@
 }
 
 .table {
+	margin: 0.5em 0;
 	border-collapse: collapse;
 }
 
@@ -17,6 +17,10 @@
 .table th, .table td {
 	padding: 0 0.5em;
 	border-right: 1px solid var(--alt-color);
+}
+
+.table tr > *:first-child {
+	padding-left: 0;
 }
 
 .table td {

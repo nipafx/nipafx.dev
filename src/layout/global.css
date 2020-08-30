@@ -12,6 +12,11 @@ body {
 	--menu-transition: ease-in-out var(--transition-duration);
 
 	--separator-height: calc(var(--regular-font-size) / 4);
+
+	--narrow-margin: 20px;
+	--medium-margin: 40px;
+	--wide-margin: 80px;
+	--narrow-sidebar-width: 40px;
 }
 
 html {
@@ -90,11 +95,15 @@ p {
 
 ul, ol {
 	padding: 0;
-	margin: 1em 0 0 2em;
+	margin: 0.5em 0 0 1.5em;
 }
 
 li {
-	margin: 0 0 1em 0.5em;
+	margin: 0 0 0.5em 0.5em;
+}
+
+li > p:first-child {
+	margin-top: 0;
 }
 
 ol {

@@ -9,7 +9,7 @@
 	min-width: 300px;
 	display: grid;
 	/* NAV/MARGIN NAV NAV~LIST-MARGIN CONTENT MARGIN*/
-	grid-template-columns: 20px 20px 20px 1fr 20px;
+	grid-template-columns: calc(var(--narrow-sidebar-width) / 2) calc(var(--narrow-sidebar-width) / 2) var(--narrow-margin) 1fr var(--narrow-margin);
 }
 
 .container > * {
@@ -39,7 +39,7 @@
 .textContainer {
 	display: grid;
 	/* NAV NAV~TEXT-MARGIN QUOTE/CODE-INDENT TEXT MARGIN */
-	grid-template-columns: 40px 40px 20px 1fr 20px;
+	grid-template-columns: var(--narrow-sidebar-width) var(--medium-margin) var(--narrow-margin) 1fr var(--narrow-margin);
 }
 
 .textContainer > * {
@@ -55,6 +55,13 @@
 .textContainer > .sidebar,
 .textContainer > :global(.gatsby-highlight) {
 	grid-column: 4 / span 1;
+}
+
+/* in text containers, ol/ul are .offCenter, so no need to indent them further */
+.textContainer > ul,
+.textContainer > ol {
+	padding: 0;
+	margin: 0.5em 0 0 -0.5em;
 }
 
 .textContainer > .navbar {
@@ -80,7 +87,7 @@
 		   add symmetrical margins to center text;
 		   add additional right margin for offCenter/sidebar/etc content*/
 		/* NAV NAV~TEXT-MARGIN QUOTE/CODE-INDENT TEXT TEXT-MARGIN MARGIN */
-		grid-template-columns: 40px 1fr 50px 450px 1fr 40px;
+		grid-template-columns: var(--narrow-sidebar-width) minmax(var(--medium-margin), 1fr) minmax(var(--narrow-margin), var(--medium-margin)) 450px 1fr var(--narrow-sidebar-width);
 	}
 
 	.textContainer > .offCenter {
@@ -102,7 +109,7 @@
 	.container {
 		/* lock header text to or it gets too wide to read;
 		/* NAV NAV~LIST-MARGIN HEADER-MARGIN CONTENT HEADER-MARGIN MARGIN*/
-		grid-template-columns: 40px 40px 80px 1fr 80px 40px;
+		grid-template-columns: var(--narrow-sidebar-width) var(--medium-margin) var(--wide-margin) 1fr var(--wide-margin) var(--narrow-sidebar-width);
 	}
 
 	.container > * {

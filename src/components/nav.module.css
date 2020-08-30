@@ -5,7 +5,7 @@
 
 .nav {
 	position: sticky;
-	bottom: 2em;
+	bottom: var(--narrow-margin);
 	align-self: flex-end;
 	width: 100%;
 

@@ -1,5 +1,3 @@
-/* based on global.css, fonts.css, code.css */
-
 .pull {
 	color: var(--alt-color);
 	font-size: var(--larger-font-size);
@@ -16,7 +14,7 @@
 }
 
 .block {
-	margin: 1em 0 1em 1em;
+	margin: 0.5em 0;
 	padding-left: 1em;
 	border-left: 1px solid var(--alt-color);
 }

@@ -36,8 +36,8 @@
 	position: absolute;
 	transform: rotate(-90deg) translateX(100%);
 	transform-origin: 100% 100%;
-	bottom: 1em;
-	right: 1em;
+	bottom: var(--narrow-margin);
+	right: var(--narrow-margin);
 
 	padding: 0.5em 1em;
 	background-color: var(--bg-color);

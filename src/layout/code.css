@@ -46,12 +46,11 @@ code[class*="language-"]::mozselection {
 	}
 }
 pre[class*="language-"] {
-	padding: 1em;
 	margin: 0.5em 0;
+	padding: 0;
 	overflow: auto;
 }
 :not(pre) > code[class*="language-"] {
-	/* padding: .1em .3em; */
 	border-radius: 0.3em;
 	color: var(--code-fg-color);
 	/* allow line breaks between and within inline code snippets on small devices */

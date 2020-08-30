@@ -1,10 +1,10 @@
 .entry {
-	margin: 0 0.5em 0 1.5em;
+	padding: 0 0.5em 0 1.5em;
 }
 
 .toc {
 	/* ToC needs a slightly smaller left margin to properly align it with other entries */
-	margin-left: 1.25em;
+	padding-left: 1.25em;
 }
 
 .entry > *:first-child {
@@ -13,7 +13,7 @@
 }
 
 .seriesList li {
-	margin-bottom: 0.5em;
+	padding-bottom: 0.5em;
 }
 
 .currentPost {
