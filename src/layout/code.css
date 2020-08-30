@@ -38,7 +38,6 @@ code[class*="language-"]::selection,
 pre[class*="language-"]::mozselection,
 code[class*="language-"]::mozselection {
 	text-shadow: none;
-	/* background: var(--bg-color); */
 }
 @media print {
 	pre[class*="language-"],
@@ -50,13 +49,14 @@ pre[class*="language-"] {
 	padding: 1em;
 	margin: 0.5em 0;
 	overflow: auto;
-	/* background: var(--bg-color); */
 }
 :not(pre) > code[class*="language-"] {
 	/* padding: .1em .3em; */
 	border-radius: 0.3em;
 	color: var(--code-fg-color);
-	/* background: var(--bg-color); */
+	/* allow line breaks between and within inline code snippets on small devices */
+	white-space: normal;
+	word-break: break-word;
 }
 /*********************************************************
 * Tokens
@@ -139,5 +139,14 @@ pre[class*="language-"] > code[class*="language-"] {
 	box-shadow: inset 5px 0 0 var(--code-alt-color);
 	pointer-events: none;
 	line-height: inherit;
-	white-space: pre;
+}
+
+/* prevent line breaks on larger screens for more code-like feeling;
+   the min-width is so absurdly large because there are some absurdly
+   large inline snippets (e.g. at the end of java-11-gems) */
+@media all and (min-width: 1600px) {
+	:not(pre) > code[class*="language-"] {
+		white-space: pre;
+		word-break: unset;
+	}
 }

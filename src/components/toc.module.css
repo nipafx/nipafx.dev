@@ -17,6 +17,12 @@
 	padding: 0;
 }
 
+#toc li code {
+	/* prevent otherwise allowed line breaks in code snippets, to force ellipsis */
+	white-space: pre;
+	word-break: normal;
+}
+
 /*
 	It would have been nice to use ::marker instead of :before, but I didn't
 	get it to look properly across browsers. To work with `overflow: hidden`

@@ -20,7 +20,7 @@ const TagletLayout = ({ channel, tag, descriptionHtmlAst, postSlugs }) => {
 			<section id={PROGRESS_BAR_REFERENCE}>
 				{channel ? <ChannelHeader channel={channel} /> : <TagHeader tag={tag} />}
 				<div className={layout.container}>
-					<div {...classNames(layout.mainCenter, style.description)}>
+					<div {...classNames(layout.wide, style.description)}>
 						{descriptionHtmlAst && <RenderHtml htmlAst={descriptionHtmlAst} />}
 						<PostList slugs={postSlugs} />
 					</div>

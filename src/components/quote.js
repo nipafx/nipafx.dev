@@ -1,14 +1,14 @@
 import React from "react"
 
+import { classNames } from "../infra/functions"
+
 import layout from "../layout/container.module.css"
 import style from "./quote.module.css"
 
 export const PullQuote = ({ children }) => (
-	<div className={layout.sidebar}>
-		<blockquote className={style.pull}>{children}</blockquote>
-	</div>
+	<blockquote {...classNames(layout.sidebar, style.pull)}>{children}</blockquote>
 )
 
 export const BlockQuote = ({ children }) => (
-	<blockquote className={style.block}>{children}</blockquote>
+	<blockquote {...classNames(layout.offCenter, style.block)}>{children}</blockquote>
 )

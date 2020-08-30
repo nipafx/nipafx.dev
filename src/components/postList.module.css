@@ -1,6 +1,6 @@
 .container {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	grid-gap: 1em;
 	justify-items: stretch;
 }
@@ -19,12 +19,18 @@
 	display: none;
 }
 
-/* Make the first not-.removed .card larger using this one awesome trick: https://stackoverflow.com/a/8539107/2525313 */
-:global(.highlight-first-post-card) .card:not(.removed) {
-	grid-column: 1 / span 2;
-	height: 480px;
-}
-:global(.highlight-first-post-card) .card:not(.removed) ~ .card:not(.removed) {
-	grid-column: unset;
-	height: 240px;
+@media screen and (min-width: 600px) {
+	.container {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	/* Make the first not-.removed .card larger using this one awesome trick: https://stackoverflow.com/a/8539107/2525313 */
+	:global(.highlight-first-post-card) .card:not(.removed) {
+		grid-column: 1 / span 2;
+		height: 480px;
+	}
+	:global(.highlight-first-post-card) .card:not(.removed) ~ .card:not(.removed) {
+		grid-column: unset;
+		height: 240px;
+	}
 }

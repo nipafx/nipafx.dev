@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => (
 		<IndexHeader />
 		<div id={PROGRESS_BAR_REFERENCE} className={layout.container}>
 			<PostFilter />
-			<div className={layout.mainOffCenter}>
+			<div className={layout.main}>
 				<PostList slugs={data.posts.nodes.map(post => post.slug)} highlightFirst />
 			</div>
 		</div>

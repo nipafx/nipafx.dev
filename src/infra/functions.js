@@ -11,12 +11,11 @@ export function flatten(nodes) {
 }
 
 export function classNames() {
-	return {
-		className: Array.prototype.slice
-			.call(arguments)
-			.filter(cls => cls !== undefined && cls !== null && cls !== "")
-			.join(" "),
-	}
+	const className = Array.prototype.slice
+		.call(arguments)
+		.filter(cls => cls !== undefined && cls !== null && cls !== "")
+		.join(" ")
+	return className ? { className } : null
 }
 
 export function processTableOfContents(toc) {

@@ -10,7 +10,7 @@ import style from "./postContent.module.css"
 
 const PostContent = ({ title, slug, description, toc, canonical, series, source, htmlAst }) => {
 	return (
-		<article {...classNames(layout.container, layout.textContainer, style.content)}>
+		<article {...classNames(layout.textContainer, style.content)}>
 			<PostNav {...{ title, slug, description, toc, canonical, series, source }} />
 			<RenderHtml htmlAst={htmlAst} />
 		</article>

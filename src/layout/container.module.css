@@ -1,63 +1,217 @@
-.container {
-	display: grid;
-	grid-template-columns: 1fr repeat(12, 100px) 1fr;
-}
-
-.container > * {
-	grid-column: 2 / span 12;
-}
-
-.container > .header {
-	grid-column: 4 / span 8;
-}
-
-.container > .headerImage {
-	grid-column: 3 / span 10;
-}
-
-.container > .fullWidth {
-	grid-column: 1 / span 14;
-}
-
-.container > .navbar {
-	grid-column: 2 / span 3;
+.container > .navbar,
+.textContainer > .navbar {
 	/* span all the rows so the nav can be sticky in there;
 	   because the rows are implicit -1 doesn't work, so pick a high number */
 	grid-row: 1 / 1000000;
 }
 
-.container > .main-center {
-	grid-column: 4 / span 8;
+.container {
+	min-width: 300px;
+	display: grid;
+	/* NAV/MARGIN NAV NAV~LIST-MARGIN CONTENT MARGIN*/
+	grid-template-columns: 20px 20px 20px 1fr 20px;
 }
 
-.container > .main-off-center {
-	grid-column: 6 / span 8;
+.container > * {
+	grid-column: 4 / span 1;
 }
 
-.container > .sidebar {
-	grid-column: 12 / span 2;
-	height: 0;
+.container > .header {
+	grid-column: 2 / span 3;
+}
+
+.container > .headerImage {
+	grid-column: 1 / span 5;
+}
+
+.container > .fullWidth {
+	grid-column: 1 / span 5;
 }
 
 .container > .wide {
-	grid-column: 5 / span 9;
+	grid-column: 2 / span 3;
+}
+
+.container > .navbar {
+	grid-column: 1 / span 2;
 }
 
 .textContainer {
-	grid-column: 1 / span 14;
 	display: grid;
-	grid-template-columns: 1fr repeat(12, 100px) 1fr;
+	/* NAV NAV~TEXT-MARGIN QUOTE/CODE-INDENT TEXT MARGIN */
+	grid-template-columns: 40px 40px 20px 1fr 20px;
 }
 
 .textContainer > * {
-	grid-column: 6 / span 5;
+	grid-column: 3 / span 2;
+}
+
+.textContainer > .wide {
+	grid-column: 2 / span 4;
+}
+
+.textContainer > .offWide,
+.textContainer > .offCenter,
+.textContainer > .sidebar,
+.textContainer > :global(.gatsby-highlight) {
+	grid-column: 4 / span 1;
+}
+
+.textContainer > .navbar {
+	grid-column: 1 / span 1;
+}
+
+.textContainer > .sidebar {
+	text-align: right;
 }
 
 .textContainer > :global(.gatsby-highlight) {
-	grid-column: 6 / span 8;
-	text-align: left;
+	/* https://stackoverflow.com/q/28896807/2525313 */
+	min-width: 0;
 }
 
-.textContainer > :global(.gatsby-highlight) > pre {
-	display: inline-block;
+/*
+ * BREAK: 600
+ */
+
+@media all and (min-width: 600px) {
+	.textContainer {
+		/* lock text to 50+450 or it gets too wide to read;
+		   add symmetrical margins to center text;
+		   add additional right margin for offCenter/sidebar/etc content*/
+		/* NAV NAV~TEXT-MARGIN QUOTE/CODE-INDENT TEXT TEXT-MARGIN MARGIN */
+		grid-template-columns: 40px 1fr 50px 450px 1fr 40px;
+	}
+
+	.textContainer > .offCenter {
+		grid-column: 4 / span 1;
+	}
+
+	.textContainer > .offWide,
+	.textContainer > .sidebar,
+	.textContainer > :global(.gatsby-highlight) {
+		grid-column: 4 / span 2;
+	}
+}
+
+/*
+ * BREAK: 800
+ */
+
+@media all and (min-width: 800px) {
+	.container {
+		/* lock header text to or it gets too wide to read;
+		/* NAV NAV~LIST-MARGIN HEADER-MARGIN CONTENT HEADER-MARGIN MARGIN*/
+		grid-template-columns: 40px 40px 80px 1fr 80px 40px;
+	}
+
+	.container > * {
+		grid-column: 3 / span 3;
+	}
+
+	.container > .header {
+		grid-column: 4 / span 1;
+	}
+
+	.container > .headerImage {
+		grid-column: 1 / span 6;
+	}
+
+	.container > .fullWidth {
+		grid-column: 1 / span 6;
+	}
+
+	.container > .wide {
+		grid-column: 2 / span 4;
+	}
+
+	.container > .navbar {
+		grid-column: 1 / span 1;
+	}
+}
+
+/*
+ * BREAK: 1000
+ */
+
+@media all and (min-width: 1000px) {
+	.container {
+		/* move towards 12 column layout;
+		   create fixed-width columns on left so nav is fully usable;
+		   add same amount of fixed-width columns on right for symmetry (e.g. for header) */
+		grid-template-columns: 1fr repeat(3, 100px) repeat(6, 1fr) repeat(3, 100px) 1fr;
+	}
+
+	.container > * {
+		grid-column: 2 / span 12;
+	}
+
+	.container > .header {
+		grid-column: 4 / span 8;
+	}
+
+	.container > .headerImage {
+		grid-column: 3 / span 10;
+	}
+
+	.container > .fullWidth {
+		grid-column: 1 / span 14;
+	}
+
+	.container > .wide {
+		grid-column: 5 / span 9;
+	}
+
+	.container > .main {
+		grid-column: 6 / span 8;
+	}
+
+	.container > .navbar {
+		grid-column: 2 / span 3;
+	}
+
+	.textContainer {
+		/* move towards 12 column layout;
+		   create fixed-width columns on left so nav is fully usable and same size as in .container;
+		   add same amount of fixed-width columns on right for symmetry (e.g. for header);
+		   give content columns more weight (2fr) to make content a bit wider */
+		grid-template-columns: 1fr repeat(3, 100px) repeat(9, 2fr) 1fr;
+	}
+
+	.textContainer > * {
+		grid-column: 6 / span 5;
+	}
+
+	.textContainer > .offCenter {
+		grid-column: 7 / span 4;
+	}
+
+	.textContainer > .offWide,
+	.textContainer > :global(.gatsby-highlight) {
+		grid-column: 7 / span 7;
+	}
+
+	.textContainer > .wide {
+		grid-column: 5 / span 9;
+	}
+
+	.textContainer > .sidebar {
+		grid-column: 12 / span 2;
+		height: 0;
+	}
+
+	.textContainer > .navbar {
+		grid-column: 2 / span 3;
+	}
+}
+
+/*
+ * BREAK: 1400
+ */
+
+@media all and (min-width: 1400px) {
+	.container,
+	.textContainer {
+		grid-template-columns: 1fr repeat(12, 100px) 1fr;
+	}
 }

@@ -6,8 +6,8 @@ import layout from "../layout/container.module.css"
 import style from "./table.module.css"
 
 const Table = ({ children }) => (
-	<div {...classNames(layout.mainOffCenter, style.container)}>
-		<table {...classNames(style.table)}>{children}</table>
+	<div {...classNames(layout.offWide, style.container)}>
+		<table className={style.table}>{children}</table>
 	</div>
 )
 
