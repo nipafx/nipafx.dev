@@ -6,22 +6,24 @@
 
 .container {
 	display: grid;
-	grid-template-columns: auto 1fr;
-	grid-template-rows: auto auto;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto;
 	grid-template-areas:
-		"logo channels"
-		"logo meta";
+		"logo"
+		"channels"
+		"meta";
+	grid-gap: 1em;
 }
 
 .logo {
 	grid-area: logo;
-	justify-self: start;
+	justify-self: center;
 	align-self: center;
 }
 
 .channels {
 	grid-area: channels;
-	justify-self: end;
+	justify-self: center;
 	align-self: center;
 }
 
@@ -32,6 +34,30 @@
 
 .meta {
 	grid-area: meta;
-	justify-self: end;
+	justify-self: center;
 	align-self: center;
+}
+
+@media all and (min-width: 600px) {
+	.container {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+			"logo channels"
+			"logo meta";
+		grid-gap: 0em;
+	}
+
+	.logo {
+		justify-self: start;
+	}
+
+	.channels {
+		justify-self: end;
+	}
+
+	.meta {
+		justify-self: end;
+	}
 }
