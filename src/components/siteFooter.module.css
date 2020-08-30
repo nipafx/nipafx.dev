@@ -25,6 +25,11 @@
 	align-self: center;
 }
 
+.channels a,
+.channels a:visited {
+	color: var(--fg-color);
+}
+
 .meta {
 	grid-area: meta;
 	justify-self: end;

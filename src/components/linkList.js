@@ -9,28 +9,23 @@ import Link from "./link"
 import style from "./linkList.module.css"
 
 const LinkList = ({ showIcons, links, className }) => {
-	const styles = [className]
-	if (showIcons) styles.push(style.icons)
-	else styles.push(style.text)
-	return (
-		<span {...classNames(...styles)}>
-			{links.map(link => selectDisplay(showIcons, link)).map(showLink)}
-		</span>
-	)
+	const styles = [className, style.links]
+	const showOnlyTexts = !links[0].fontAwesome
+	const showTexts = !showIcons
+	if (showOnlyTexts) styles.push(style.onlyTexts)
+	else if (showTexts) styles.push(style.texts)
+	return <div {...classNames(...styles)}>{links.map(showLink)}</div>
 }
 
-const selectDisplay = (showIcons, { title, fontAwesome, url, className }) => {
-	return {
-		element: showIcons && fontAwesome ? <FontAwesomeIcon icon={fontAwesome} /> : title,
-		url,
-		className,
-	}
-}
-
-const showLink = ({ element, url, className }) => (
+const showLink = ({ title, fontAwesome, url, className }) => (
 	<span key={url}>
 		<Link to={url} className={className}>
-			{element}
+			{fontAwesome && (
+				<span className={style.icon}>
+					<FontAwesomeIcon icon={fontAwesome} />
+				</span>
+			)}
+			<span className={style.text}>{title}</span>
 		</Link>
 	</span>
 )

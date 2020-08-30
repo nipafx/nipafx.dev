@@ -102,21 +102,21 @@ const showShare = (title, slug, description) => {
 	return (
 		<div className={style.entry}>
 			<p>Share this post with your community:</p>
-			<p className={style.icons}>
+			<span className={style.icons}>
 				<LinkList
 					showIcons
 					links={shareLinks.links.map(link =>
 						updateShareUrl(link, title, slug, description)
 					)}
 				/>
-			</p>
+			</span>
 			<p>
 				I'm active on various platforms. Watch this space or follow me there to get
 				notified when I publish new content:
 			</p>
-			<p className={style.icons}>
+			<span className={style.icons}>
 				<LinkList showIcons links={channelLinks.links} />
-			</p>
+			</span>
 		</div>
 	)
 }

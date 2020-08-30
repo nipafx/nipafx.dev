@@ -28,6 +28,11 @@
 	justify-self: end;
 }
 
+.channels a,
+.channels a:visited {
+	color: var(--fg-color-shade-2);
+}
+
 .menu {
 	grid-area: menu;
 	justify-self: end;
