@@ -1,5 +1,8 @@
 .container {
 	position: relative;
+	/* Gatsby (background) images have a tendency to be on top of everything else
+	   (e.g. the nav bar on the landing page), so push it back */
+	z-index: -10;
 }
 
  /* TODO: decide whether to use duotone hover effect

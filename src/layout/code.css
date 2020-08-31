@@ -32,6 +32,9 @@ code[class*="language-"] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
+
+	/* otherwise code is on top of the nav bar content */
+	z-index: -1;
 }
 pre[class*="language-"]::selection,
 code[class*="language-"]::selection,
