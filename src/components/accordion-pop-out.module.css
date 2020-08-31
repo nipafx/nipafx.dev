@@ -1,0 +1,86 @@
+.container {
+	overflow: hidden;
+}
+
+.item {
+	/* setting line-height to 0 prevents a weird distance between items */
+	line-height: 0;
+}
+
+.item:not(:last-child) {
+	margin-bottom: calc(var(--narrow-margin) / 2);
+}
+
+.itemCheckbox {
+	position: absolute;
+	opacity: 0;
+	/* move to background, so label captures all events (e.g. hover) */
+	z-index: -1;
+}
+
+.itemLabel {
+	cursor: pointer;
+	/* clicking a menu entry twice to open and close it,
+	   shouldn't select the text */
+	user-select: none;
+
+	color: var(--bg-color);
+	background-color: var(--alt-color);
+	border: 1px solid var(--alt-color);
+	box-sizing: border-box;
+
+	width: var(--narrow-sidebar-width);
+	transition: width 0s var(--transition-duration);
+	padding: var(--narrow-margin) 0;
+
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	line-height: var(--narrow-sidebar-width);
+}
+
+.itemLabel:hover {
+	color: var(--alt-color);
+	background-color: var(--bg-color);
+}
+
+.item .itemCheckbox:checked + .itemLabel {
+	/* add one pixel so the label's right border is pushed out of the box (overflow hidden)
+	   and the corner where the two borders connect is green */
+	width: calc(var(--narrow-sidebar-width) + 1px);
+	transition: none;
+	color: var(--alt-color);
+	background-color: var(--bg-color);
+}
+
+.itemContent {
+	position: absolute;
+	bottom: 0px;
+	/* subtract one pixel so the left border can move underneath the label */
+	left: calc(var(--narrow-sidebar-width) - 1px);
+
+	/* move to background, so itemLabel's rightmost pixel can be on top of content's border */
+	z-index: -1;
+
+	min-height: 100%;
+	max-height: 100vh;
+	width: 0;
+	transition: width var(--menu-transition), border var(--menu-transition);
+	overflow: hidden;
+
+	box-sizing: border-box;
+	line-height: 1.75em;
+	padding: 1em 0;
+	border: 0px solid var(--alt-color);
+	background-color: var(--bg-color);
+}
+
+.itemCheckbox:checked ~ .itemContent {
+	width: calc(100vw - var(--narrow-sidebar-width) - var(--narrow-margin) + 1px);
+	border: 1px solid var(--alt-color);
+}
+
+.itemContent > div {
+	/* set a fixed width for the inner element, so its content does not get reorganized during the width transition */
+	width: calc(100vw - var(--narrow-sidebar-width) - var(--narrow-margin) + 1px);
+}
+

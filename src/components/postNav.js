@@ -18,7 +18,8 @@ const PostNav = ({ title, slug, description, toc, canonical, series, source }) =
 	return (
 		<Nav
 			title={title}
-			headers={["origin", "series", "source code", "table of contents", "share & follow"]}
+			longHeaders={["origin", "series", "source code", "table of contents", "share & follow"]}
+			shortHeaders={["org", "ser", "src", "toc", "s+f"]}
 		>
 			{canonical && showCanonical(canonical, title)}
 			{series && showSeries(series)}

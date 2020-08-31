@@ -1,7 +1,7 @@
 import React, { useEffect, useLayoutEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import { tagletsFromPath } from "../infra/functions"
+import { classNames, tagletsFromPath } from "../infra/functions"
 
 import { Channel, Tag } from "./taglet"
 import Nav from "./nav"
@@ -13,15 +13,17 @@ const PostFilter = () => {
 	const channelListId = "post-filter-channels-426396"
 	const tagListId = "post-filter-tags-247802"
 	useLayoutEffect(() => {
-		const channelList = document.getElementById(channelListId)
-		const tagList = document.getElementById(tagListId)
-		highlightSelectedTaglets(channelList, tagList, tagletsFromPath())
+		// annoyingly, I have to duplicate the channel list (for small and large devices)
+		// and so I can't use HTML IDs and use classes instead
+		const channelLists = document.querySelectorAll(`.${channelListId}`)
+		const tagLists = document.querySelectorAll(`.${tagListId}`)
+		highlightSelectedTaglets(channelLists, tagLists, tagletsFromPath())
 	}, [])
 	useEffect(() => {
-		const channelList = document.getElementById(channelListId)
-		const tagList = document.getElementById(tagListId)
+		const channelLists = document.querySelectorAll(`.${channelListId}`)
+		const tagLists = document.querySelectorAll(`.${tagListId}`)
 		const pathChangeHandler = () =>
-			highlightSelectedTaglets(channelList, tagList, tagletsFromPath())
+			highlightSelectedTaglets(channelLists, tagLists, tagletsFromPath())
 		window.addEventListener("hashchange", pathChangeHandler, false)
 		return () => {
 			window.removeEventListener("hashchange", pathChangeHandler)
@@ -30,8 +32,8 @@ const PostFilter = () => {
 
 	const { channels, tags } = channelsAndTags()
 	return (
-		<Nav title="Filter" headers={["channels", "tags"]} open>
-			<div id={channelListId} className={style.entries}>
+		<Nav title="Filter" longHeaders={["channels", "tags"]} open>
+			<div {...classNames(channelListId, style.entries)}>
 				<Channel key="all" channel="all" plural mode="uplink" />
 				<br />
 				{channels.map(channel => (
@@ -44,7 +46,7 @@ const PostFilter = () => {
 					/>
 				))}
 			</div>
-			<div id={tagListId} className={style.entries}>
+			<div {...classNames(tagListId, style.entries)}>
 				<Tag key="all" tag="all" mode="uplink" />
 				<br />
 				{tags.map(tag => (
@@ -55,20 +57,28 @@ const PostFilter = () => {
 	)
 }
 
-const highlightSelectedTaglets = (channelList, tagList, selectedTaglets) => {
-	for (let channel = channelList.firstChild; channel !== null; channel = channel.nextSibling) {
-		if (channel.dataset && channel.dataset.channel) {
-			const selected = selectedTaglets.isChannelSelected(channel.dataset.channel)
-			channel.classList.toggle(tagletStyle.selected, selected)
+const highlightSelectedTaglets = (channelLists, tagLists, selectedTaglets) => {
+	channelLists.forEach(channelList => {
+		for (
+			let channel = channelList.firstChild;
+			channel !== null;
+			channel = channel.nextSibling
+		) {
+			if (channel.dataset && channel.dataset.channel) {
+				const selected = selectedTaglets.isChannelSelected(channel.dataset.channel)
+				channel.classList.toggle(tagletStyle.selected, selected)
+			}
 		}
-	}
+	})
 
-	for (let tag = tagList.firstChild; tag !== null; tag = tag.nextSibling) {
-		if (tag.dataset && tag.dataset.tag) {
-			const selected = selectedTaglets.isTagSelected(tag.dataset.tag)
-			tag.classList.toggle(tagletStyle.selected, selected)
+	tagLists.forEach(tagList => {
+		for (let tag = tagList.firstChild; tag !== null; tag = tag.nextSibling) {
+			if (tag.dataset && tag.dataset.tag) {
+				const selected = selectedTaglets.isTagSelected(tag.dataset.tag)
+				tag.classList.toggle(tagletStyle.selected, selected)
+			}
 		}
-	}
+	})
 }
 
 const channelsAndTags = () => {

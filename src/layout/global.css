@@ -8,8 +8,8 @@ body {
 	--menu-icon-vertical-open: rotate(315deg);
 	--menu-icon-horizontal-closed: rotate(90deg);
 	--menu-icon-horizontal-open: rotate(270deg);
-	--menu-icon-transition: transform var(--transition-duration);
-	--menu-transition: ease-in-out var(--transition-duration);
+	--menu-icon-transition: var(--transition-duration) transform;
+	--menu-transition: var(--transition-duration) ease-in-out;
 
 	--separator-height: calc(var(--regular-font-size) / 4);
 

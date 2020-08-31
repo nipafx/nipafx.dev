@@ -3,13 +3,14 @@ import React from "react"
 import { classNames } from "../infra/functions"
 
 import Accordion from "./accordion"
+import PopOutAccordion from "./accordion-pop-out"
 
 import MarkdownAsHtml from "../infra/markdownAsHtml"
 
 import layout from "../layout/container.module.css"
 import style from "./nav.module.css"
 
-const Nav = ({ title, headers, open, children }) => {
+const Nav = ({ title, longHeaders, shortHeaders, open, children }) => {
 	return (
 		<div {...classNames(layout.navbar, style.container)}>
 			<section {...classNames(style.nav)}>
@@ -17,12 +18,20 @@ const Nav = ({ title, headers, open, children }) => {
 					<MarkdownAsHtml>{title}</MarkdownAsHtml>
 				</p>
 				<Accordion
-					headerClassName={style.header}
-					headers={headers}
+					className={style.largeNav}
+					headerClassName={style.largeHeader}
+					headers={longHeaders}
 					open={open}
 				>
 					{children}
 				</Accordion>
+				<PopOutAccordion
+					className={style.sideNav}
+					headerClassName={style.sideHeader}
+					headers={shortHeaders ?? longHeaders}
+				>
+					{children}
+				</PopOutAccordion>
 			</section>
 		</div>
 	)

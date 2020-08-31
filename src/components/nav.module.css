@@ -8,25 +8,51 @@
 	bottom: var(--narrow-margin);
 	align-self: flex-end;
 	width: 100%;
-
-	background-color: var(--bg-color);
-	border: 1px solid var(--fg-color);
-
-	font-size: var(--smaller-font-size);
 }
 
 .title {
-	color: var(--bg-color);
-	background-color: var(--fg-color);
-	margin: 0;
+	display: none;
+}
+
+.largeNav {
+	display: none;
+	font-size: var(--smaller-font-size);
+}
+
+.largeHeader {
 	/* avoid `0.5em` because indent should be the same for .title and .entry.title */
 	padding: 0 calc(var(--regular-font-size) / 2);
-	font-size: var(--regular-font-size);
 	font-weight: bold;
 }
 
-.header {
-	/* avoid `0.5em` because indent should be the same for .title and .entry.title */
-	padding: 0 calc(var(--regular-font-size) / 2);
+.sideHeader {
 	font-weight: bold;
+	text-transform: uppercase;
+}
+
+@media all and (min-width: 1000px) {
+	.nav {
+		background-color: var(--bg-color);
+		border: 1px solid var(--fg-color);
+	}
+
+	.title {
+		display: block;
+
+		color: var(--bg-color);
+		background-color: var(--fg-color);
+		margin: 0;
+		/* avoid `0.5em` because indent should be the same for .title and .entry.title */
+		padding: 0 calc(var(--regular-font-size) / 2);
+		font-size: var(--regular-font-size);
+		font-weight: bold;
+	}
+
+	.largeNav {
+		display: unset;
+	}
+
+	.sideNav {
+		display: none;
+	}
 }
