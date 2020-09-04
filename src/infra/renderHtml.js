@@ -13,6 +13,7 @@ import SeriesList from "../components/seriesList"
 import Table from "../components/table"
 
 import layout from "../layout/container.module.css"
+import contentStyle from "../components/postContent.module.css"
 
 const RenderHtml = ({ withAst, htmlAst }) => {
 	const renderAst = new RehypeReact({
@@ -47,7 +48,10 @@ const RenderHtml = ({ withAst, htmlAst }) => {
 }
 
 const renderLink = ({ href, children }) => {
-	return <Link to={href} children={children} />
+	const playLink = children && children[0] === "PLAY"
+	if (playLink) return <Link to={href} className={contentStyle.play} />
+
+	return <Link to={href} children={children}/>
 }
 
 const renderOrderedList = ({ id, className, children }) => {

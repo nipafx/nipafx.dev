@@ -7,3 +7,22 @@
 	/* no bottom margin aligns last line of content with toc */
 	margin-bottom: 0;
 }
+
+.play {
+	color: var(--alt-color);
+	text-decoration: none;
+	margin-left: -24px;
+	margin-right: 6px;
+}
+
+.play:visited {
+	color: var(--alt-color);
+}
+
+.play:hover {
+	color: var(--fg-color);
+}
+
+.play:before {
+	content: '▶️';
+}
