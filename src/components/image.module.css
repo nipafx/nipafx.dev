@@ -39,17 +39,24 @@
 	position: absolute;
 	transform: rotate(-90deg) translateX(100%);
 	transform-origin: 100% 100%;
-	bottom: var(--narrow-margin);
-	right: var(--narrow-margin);
 
-	padding: 0.5em 1em;
 	background-color: var(--bg-color);
-
 	font-size: var(--smaller-font-size);
 	text-transform: uppercase;
 	line-height: 1;
 
 	display: flex;
+}
+
+.topCredit {
+	bottom: var(--narrow-margin);
+	right: var(--narrow-margin);
+	padding: 0.5em 1em;
+}
+
+.sideCredits {
+	bottom: 0.5em;
+	right: -1.5em;
 }
 
 .credits a {

@@ -18,38 +18,59 @@ const Image = ({ id, type, className }) => {
 		<div {...classNames(className, style.container)}>
 			{/* TODO: specify dimensions (see console warning) / add alt text */}
 			<Img {...image.image} />
-			{showCredits(type) && <Credits {...image.credits} />}
+			{showCredits(type) && credits(image.credits, type)}
 		</div>
 	)
 }
 
-const Credits = credits => {
+const credits = (credits, type) => {
 	if (!credits || (!credits.author && !credits.source && !credits.license)) return null
+	const classes = [style.credits].concat(typeClasses(type))
 
 	return (
-		<div className={style.credits}>
+		<div {...classNames(...classes)}>
 			{credits.source && (
 				<span key="source">
-					<Link to={credits.source.url}>source</Link>
+					{credits.source.url ? <Link to={credits.source.url}>source</Link> : source}
 				</span>
 			)}
 			{credits.author && (
 				<span key="author">
-					<Link to={credits.author.url}>artist</Link>
-					{credits.edited && (
-						<span> (edited by me)</span>
+					{credits.author.url ? (
+						<Link to={credits.author.url}>artist</Link>
+					) : (
+						credits.author.name
 					)}
+					{credits.edited && <span> (edited by me)</span>}
 				</span>
 			)}
-			{credits.license && (
-				<span key="license">
-					<Link to={credits.license.url}>
-						{credits.license.name ? credits.license.name : "license"}
-					</Link>
-				</span>
-			)}
+			{credits.license &&
+				(credits.license.url ? (
+					<span key="license">
+						<Link to={credits.license.url}>
+							{credits.license.name ? credits.license.name : "license"}
+						</Link>
+					</span>
+				) : (
+					<span>{credits.license.name}</span>
+				))}
 		</div>
 	)
+}
+
+const typeClasses = type => {
+	switch (type) {
+		case "content":
+		case "sidebar":
+			return [style.sideCredits]
+		case "postTitle":
+			// TODO always use side credits?
+			return [style.topCredit]
+		case "postCard":
+		case "videoThumbnail":
+		default:
+			return []
+	}
 }
 
 const getImage = (id, type) => {
@@ -179,7 +200,7 @@ const isFixedType = type => {
 		case "content":
 		case "sidebar":
 		case "videoThumbnail":
-				return false
+			return false
 		default:
 			throw new Error(`Unknown image type "${type}".`)
 	}
