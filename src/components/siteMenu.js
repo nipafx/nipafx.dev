@@ -19,9 +19,13 @@ const SiteMenu = ({ className, onIndexPage }) => {
 		return () => window.removeEventListener("click", closeOpenMenus)
 	})
 	return (
-		<nav id={SITE_NAV} {...classNames(className, style.menu, style.topLevelContainer)}>
-			{json.entries.map(entry => topLevelEntry(entry, onIndexPage))}
-		</nav>
+		<div id={SITE_NAV} {...classNames(className, style.rootContainer)}>
+			<div>
+				<nav {...classNames(style.menu, style.topLevelContainer)}>
+					{json.entries.map(entry => topLevelEntry(entry, onIndexPage))}
+				</nav>
+			</div>
+		</div>
 	)
 }
 
@@ -179,91 +183,134 @@ const expandSecondLevel = container => {
 }
 
 const collapseSecondLevel = container => {
-	container.style.maxHeight = container.scrollHeight + "px"
 	requestAnimationFrame(() => {
-		container.style.transition = "max-height var(--menu-transition)"
-		container.style.maxHeight = 0
-	})
-
-	const resetStyle = () => {
-		container.removeEventListener("transitionend", resetStyle)
-		container.style.transition = null
-		container.style.maxHeight = null
-		container.style.overflow = null
-	}
-	container.addEventListener("transitionend", resetStyle)
-}
-
-const toggleThirdLevel = (expand, containerId) => {
-	const container = document.getElementById(containerId)
-	if (expand) expandThirdLevel(container)
-	else collapseThirdLevel(container)
-}
-
-const expandThirdLevel = container => {
-	const secondLevelContainer = container.closest(`.${style.secondLevelContainer}`)
-	const secondLevelRectangle = secondLevelContainer.getBoundingClientRect()
-	const thirdLevelInner = container.querySelector(`.${style.thirdLevelContainer}`)
-
-	const menuEnd = container.closest(`#${SITE_NAV}`).getBoundingClientRect().right
-	const secondLevelEnd = secondLevelRectangle.right
-	const thirdLevelWidth = menuEnd - secondLevelEnd
-
-	// set the inner container's width, so we can compute its height
-	thirdLevelInner.style.width = `calc(${thirdLevelWidth}px - 4em)`
-	container.style.maxWidth = 0
-	requestAnimationFrame(() => {
-		container.style.maxHeight = secondLevelRectangle.height + "px"
-		secondLevelContainer.style.minHeight = `calc(${secondLevelRectangle.height}px - 2em)`
+		container.style.maxHeight = container.scrollHeight + "px"
 		requestAnimationFrame(() => {
-			container.style.transition =
-				"max-height var(--menu-transition), max-width var(--menu-transition)"
-			const thirdLevelHeight = Math.max(
-				thirdLevelInner.scrollHeight,
-				secondLevelRectangle.height
-			)
-			container.style.maxWidth = thirdLevelWidth + "px"
-			container.style.height = thirdLevelHeight + "px"
-			container.style.maxHeight = thirdLevelHeight + "px"
-
-			secondLevelContainer.style.transition = "min-height var(--menu-transition)"
-			secondLevelContainer.style.minHeight = `calc(${thirdLevelHeight}px - 2em)`
+			container.style.transition = "max-height var(--menu-transition)"
+			container.style.maxHeight = 0
 		})
 	})
 
 	const resetStyle = () => {
 		container.removeEventListener("transitionend", resetStyle)
-
-		// no reason to reset `thirdLevelInner.style.width`
-
 		container.style.transition = null
-		container.style.maxWidth = null
 		container.style.maxHeight = null
-
-		// don't reset secondLevelContainer.style.minHeight
-		// or it will collapse again (nothing to prop it up)
-		secondLevelContainer.style.transition = null
 	}
 	container.addEventListener("transitionend", resetStyle)
 }
 
-const collapseThirdLevel = container => {
-	const secondLevelContainer = container.closest(`.${style.secondLevelContainer}`)
-	const currentHeight = secondLevelContainer.style.minHeight
-	secondLevelContainer.style.minHeight = 0
-	const targetHeight = secondLevelContainer.scrollHeight
-	secondLevelContainer.style.minHeight = currentHeight
+const toggleThirdLevel = (expand, containerId) => {
+	const sideBySide = window.matchMedia(`all and (min-width: 1000px)`).matches
+	const container = document.getElementById(containerId)
 
+	if (sideBySide) {
+		if (expand) expandThirdLevelToSide(container)
+		else collapseThirdLevelFromSide(container)
+	} else {
+		if (expand) expandThirdLevel(container)
+		else collapseThirdLevel(container)
+	}
+}
+
+const expandThirdLevel = container => {
 	container.style.maxHeight = container.scrollHeight + "px"
-	container.style.maxWidth = container.scrollWidth + "px"
-	requestAnimationFrame(() => {
-		container.style.transition =
-			"max-height var(--menu-transition), max-width var(--menu-transition)"
-		container.style.maxHeight = targetHeight + "px"
-		container.style.maxWidth = 0
+	container.addEventListener("transitionend", () => (container.style.maxHeight = null))
+}
 
-		secondLevelContainer.style.transition = "min-height var(--menu-transition)"
-		secondLevelContainer.style.minHeight = `calc(${targetHeight}px - 2em)`
+const collapseThirdLevel = container => {
+	container.style.transition = "none"
+	requestAnimationFrame(() => {
+		container.style.maxHeight = container.scrollHeight + "px"
+		requestAnimationFrame(() => {
+			container.style.transition = null
+			container.style.maxHeight = null
+		})
+	})
+}
+
+const expandThirdLevelToSide = container => {
+	const secondLevelContainer = container.closest(`.${style.secondLevelContainer}`)
+	const secondLevelRectangle = secondLevelContainer.getBoundingClientRect()
+	const thirdLevelContainer = container.querySelector(`.${style.thirdLevelContainer}`)
+
+	const menuEnd = container.closest(`#${SITE_NAV}`).getBoundingClientRect().right
+	const secondLevelEnd = secondLevelRectangle.right
+	const thirdLevelWidth = menuEnd - secondLevelEnd
+
+	requestAnimationFrame(() => {
+		// set the inner container's width, so we can compute its height
+		thirdLevelContainer.style.width = `calc(${thirdLevelWidth}px - 4em)`
+		container.style.maxWidth = 0
+		requestAnimationFrame(() => {
+			container.style.maxHeight = secondLevelRectangle.height + "px"
+			secondLevelContainer.style.minHeight = `calc(${secondLevelRectangle.height}px - 2em)`
+			requestAnimationFrame(() => {
+				container.style.transition =
+					"max-height var(--menu-transition), max-width var(--menu-transition)"
+				const thirdLevelHeight = Math.max(
+					thirdLevelContainer.scrollHeight,
+					secondLevelRectangle.height
+				)
+				container.style.maxWidth = thirdLevelWidth + "px"
+				container.style.height = thirdLevelHeight + "px"
+				container.style.maxHeight = thirdLevelHeight + "px"
+
+				secondLevelContainer.style.transition = "min-height var(--menu-transition)"
+				secondLevelContainer.style.minHeight = `calc(${thirdLevelHeight}px - 2em)`
+			})
+		})
+	})
+
+	const partiallyResetContainerStyle = () => {
+		container.removeEventListener("transitionend", partiallyResetContainerStyle)
+
+		container.style.transition = null
+		container.style.maxWidth = null
+		container.style.maxHeight = null
+		container.style.height = null
+
+		// don't reset secondLevelContainer.style.minHeight
+		// or it will collapse again (nothing to prop it up)
+		secondLevelContainer.style.transition = null
+
+		// don't reset thirdLevelContainer.style.width
+		// or it will revert back to the default width
+	}
+	container.addEventListener("transitionend", partiallyResetContainerStyle)
+
+	// when these are not reset, the entry has the wrong width
+	// when screen orientation is changed and the menu is opened again on a narrower device
+	const fullyResetContainerStyle = () => {
+		secondLevelContainer.style.minHeight = null
+		thirdLevelContainer.style.width = null
+	}
+	// unfortunately, this means that we pile on global event handlers - one each time
+	// a third-level menu is opened - for the unlikely (?) event that the orientation is
+	// changed; crossing fingers that this doesn't lead to any problems...
+	window.addEventListener("orientationchange", fullyResetContainerStyle)
+}
+
+const collapseThirdLevelFromSide = container => {
+	const secondLevelContainer = container.closest(`.${style.secondLevelContainer}`)
+	const thirdLevelContainer = container.querySelector(`.${style.thirdLevelContainer}`)
+
+	const currentHeight = secondLevelContainer.style.minHeight
+	requestAnimationFrame(() => {
+		secondLevelContainer.style.minHeight = 0
+		const targetHeight = secondLevelContainer.scrollHeight
+		secondLevelContainer.style.minHeight = currentHeight
+
+		container.style.maxHeight = container.scrollHeight + "px"
+		container.style.maxWidth = container.scrollWidth + "px"
+		requestAnimationFrame(() => {
+			container.style.transition =
+				"max-height var(--menu-transition), max-width var(--menu-transition)"
+			container.style.maxHeight = targetHeight + "px"
+			container.style.maxWidth = 0
+
+			secondLevelContainer.style.transition = "min-height var(--menu-transition)"
+			secondLevelContainer.style.minHeight = `calc(${targetHeight}px - 2em)`
+		})
 	})
 
 	const resetStyle = () => {
@@ -274,6 +321,11 @@ const collapseThirdLevel = container => {
 
 		secondLevelContainer.style.transition = null
 		secondLevelContainer.style.minHeight = null
+
+		// this value was set when the menu was opened - without resetting it,
+		// the entry has the wrong width when screen orientation is changed
+		// and the menu is opened again on a narrower device
+		thirdLevelContainer.style.width = null
 	}
 	container.addEventListener("transitionend", resetStyle)
 }

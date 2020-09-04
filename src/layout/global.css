@@ -29,13 +29,13 @@ html {
 	overflow-y: scroll;
 }
 
-/* without the asterisk, it is possible to style Chrome's own scroll bar,
-   but then the thumb doesn't move smoothly anymore */
-
 body {
 	scrollbar-color: var(--alt-color) var(--bg-color-shade-1);
 	scrollbar-width: thin;
 }
+
+/* without the asterisk, it is possible to style Chrome's own scroll bar,
+   but then the thumb doesn't move smoothly anymore */
 
 body *::-webkit-scrollbar,
 body *::-webkit-scrollbar-track {

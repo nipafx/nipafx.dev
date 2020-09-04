@@ -19,7 +19,7 @@
 }
 
 .container > .siteHeader {
-	grid-column: 1 / span 5;
+	grid-column: 2 / span 3;
 }
 
 .container > .header {
@@ -86,10 +86,6 @@
  */
 
 @media all and (min-width: 600px) {
-	.container > .siteHeader {
-		grid-column: 2 / span 3;
-	}
-
 	.textContainer {
 		/* lock text to 50+450 or it gets too wide to read;
 		   add symmetrical margins to center text;

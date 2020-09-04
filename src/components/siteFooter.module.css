@@ -12,7 +12,7 @@
 		"logo"
 		"channels"
 		"meta";
-	grid-gap: 1em;
+	grid-gap: 0.5em;
 }
 
 .logo {
@@ -62,5 +62,12 @@
 
 	.meta {
 		justify-self: end;
+	}
+}
+
+@media all and (min-width: 1200px) {
+	.channels,
+	.meta {
+		letter-spacing: 1px;
 	}
 }

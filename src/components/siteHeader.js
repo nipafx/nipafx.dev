@@ -16,7 +16,7 @@ const SiteHeader = ({ onIndexPage }) => (
 	<header id={PROGRESS_BAR_OFFSET} {...classNames(layout.container, style.header)}>
 		<div {...classNames(layout.siteHeader, style.container)}>
 			<SiteLogo className={style.logo} onIndexPage={onIndexPage} />
-			<LinkList className={style.channels} links={channels.links} />
+			<LinkList showIconsUntil={600} className={style.channels} links={channels.links} />
 			<SiteMenu className={style.menu} onIndexPage={onIndexPage} />
 		</div>
 		<ProgressBar className={layout.fullWidth} />

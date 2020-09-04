@@ -10,32 +10,95 @@
 
 .container {
 	display: grid;
-	grid-template-columns: auto 1fr;
-	grid-template-rows: auto auto;
+	grid-template-columns: 1fr;
 	grid-template-areas:
-		"logo links"
-		"logo menu";
+		"logo"
+		"links"
+		"menu";
+	grid-gap: 0.5em;
 }
 
 .logo {
 	grid-area: logo;
-	justify-self: start;
-	align-self: center;
+	justify-self: center;
+
+	/* the link around the logo adds some weird distance below it;
+	   add a similar amount to top for symmetry*/
+	margin-top: 0.5em;
 }
 
 .channels {
 	grid-area: links;
-	justify-self: end;
+	align-self: center;
+	justify-self: center;
+
+	text-align: right;
 }
 
 .channels a,
 .channels a:visited {
-	color: var(--fg-color-shade-2);
+	color: var(--fg-color);
 }
 
 .menu {
 	grid-area: menu;
-	justify-self: end;
+	align-self: center;
+	/* would be nice to center via justify-self, but then the element
+	   can overlap its parent and blows out the layout on narrow devices */
+	/* justify-self: center; */
 
 	letter-spacing: 1px;
+
+	/* a bit of padding brings the menu to the same level as the text in the logo */
+	padding-bottom: 4px;
+}
+
+@media all and (min-width: 400px) {
+	.container {
+		/* Xrem to split the list of link icons roughly in half */
+		grid-template-columns: 1fr 8rem;
+		grid-template-areas:
+			"logo links"
+			"menu menu";
+			grid-gap: 0;
+	}
+
+	.logo {
+		justify-self: start;
+	}
+}
+
+@media all and (min-width: 600px) {
+	.container {
+		/* Yrem to split the list of link texts roughly in half */
+		grid-template-columns: 1fr 22rem;
+	}
+
+	.channels {
+		justify-self: end;
+	}
+
+	.channels a,
+	.channels a:visited {
+		color: var(--fg-color-shade-2);
+	}
+}
+
+@media all and (min-width: 1000px) {
+	.container {
+		grid-template-columns: auto 1fr;
+		grid-template-areas:
+			"logo links"
+			"logo menu";
+	}
+
+	.menu {
+		justify-self: end;
+	}
+}
+
+@media all and (min-width: 1200px) {
+	.channels {
+		letter-spacing: 1px;
+	}
 }

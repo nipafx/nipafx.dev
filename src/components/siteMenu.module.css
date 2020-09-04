@@ -1,7 +1,22 @@
-.menu {
-	/* a bit of padding brings the menu to the same level as the text in the logo */
-	padding-bottom: 4px;
+.rootContainer > div {
+	overflow-x: auto;
+	overflow-y: hidden;
 
+	/* would be nice to use flexbox and justify-content/self,
+	   but then the div is full-width without scroll bar, blowing out the layout */
+	text-align: center;
+	/* below, the icons get a right margin - "revert" it here to align with right edge of layout */
+	margin-right: -1em;
+	/* Firefox needs the explicit max-width here or the div blows out the layout */
+	max-width: calc(100vw - var(--narrow-sidebar-width) / 2 - var(--narrow-margin));
+}
+
+.rootContainer > div::-webkit-scrollbar,
+.rootContainer > div::-webkit-scrollbar-track {
+	height: 5px;
+}
+
+.menu {
 	text-transform: uppercase;
 	white-space: nowrap;
 	/* clicking a menu entry twice to open and close it,
@@ -22,10 +37,7 @@
 }
 
 .menu input {
-	position: absolute;
-	opacity: 0;
-	/* move to background, so label captures all events (e.g. hover) */
-	z-index: -1;
+	display: none;
 }
 
 .menu label {
@@ -48,11 +60,14 @@
  * TOP LEVEL
  */
 
-.top-level-container {
-	display: flex;
+.top-level-entry {
+	display: inline-block;
+	text-align: left;
 }
 
-.top-level-entry:not(:last-child) {
+.top-level-label {
+	position: relative;
+	/* the rotated icon leads to a spurious scroll bar - adding a bit of margin fixes that */
 	margin-right: 1em;
 }
 
@@ -76,6 +91,8 @@
 	max-height: 0;
 	overflow: hidden;
 	position: absolute;
+	left: calc(var(--narrow-margin) + 2em);
+	right: calc(var(--narrow-margin) + 2em);
 
 	margin: 0 -2em;
 }
@@ -88,38 +105,27 @@
 .second-level-container {
 	color: var(--bg-color);
 	background-color: var(--fg-color);
-	padding: 1em 2em;
+	padding: 1em 0;
 	margin-top: 0.75em;
-}
-
-.second-level-container:before {
-	color: var(--fg-color);
-	position: absolute;
-	content: "◆";
-	font-size: 2.5em;
-	margin-top: -1.25em;
-	margin-left: 1rem;
-	pointer-events: none;
 }
 
 .second-level-entry {
 	position: relative;
 }
 
-.second-level-label {
-	display: flex;
-	justify-content: space-between;
+.second-level-entry > *:not(.third-level-outer-container) {
+	margin: 0 2em;
 }
 
 .second-level-label:after {
 	display: inline-block;
 	content: var(--menu-icon);
-	transform: var(--menu-icon-horizontal-closed);
-	text-align: center;
+	transform: var(--menu-icon-vertical-closed);
+	margin-left: 3em;
 }
 
 .second-level-checkbox:checked + .second-level-label:after {
-	transform: var(--menu-icon-horizontal-open);
+	transform: var(--menu-icon-vertical-open);
 }
 
 /*
@@ -127,16 +133,15 @@
  */
 
 .third-level-outer-container {
-	max-width: 0;
 	max-height: 0;
 	overflow: hidden;
-	position: absolute;
-	left: calc(100% + 2em);
-	top: -1em;
+}
+
+.animated .third-level-outer-container {
+	transition: max-height var(--menu-transition);
 }
 
 .second-level-checkbox:checked ~ .third-level-outer-container {
-	max-width: 100vw;
 	max-height: 100vh;
 }
 
@@ -144,7 +149,6 @@
 	background-color: var(--fg-color-shade-1);
 	white-space: normal;
 	padding: 1em 2em;
-	width: 400px;
 }
 
 .third-level-entry:not(:last-child) {
@@ -156,10 +160,60 @@
 	letter-spacing: initial;
 }
 
-/*
- * ANIMATION
- */
+@media all and (min-width: 800px) {
+	.rootContainer > div {
+		/* Firefox needs the explicit max-width here or the div blows out the layout */
+		max-width: calc(100vw - var(--narrow-sidebar-width) * 2 - var(--medium-margin));
+	}
+}
 
-.animated {
-	transition: width var(--menu-transition), height var(--menu-transition);
+@media all and (min-width: 1000px) {
+	.rootContainer > div {
+		max-width: unset;
+	}
+
+	.second-level-container:before {
+		/* KEEP IN SYNC WITH OTHER MARKER */
+		color: var(--fg-color);
+		position: absolute;
+		content: "◆";
+		font-size: 2.5em;
+		/* carefully pixel-pushed, so tip of the element is not cut off during animation */
+		margin-top: -1.15em;
+		margin-left: 1em;
+		pointer-events: none;
+	}
+
+	.second-level-outer-container {
+		left: unset;
+		right: unset;
+	}
+
+	.second-level-label {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.second-level-label:after {
+		transform: var(--menu-icon-horizontal-closed);
+		margin-left: 3em;
+	}
+
+	.second-level-checkbox:checked + .second-level-label:after {
+		transform: var(--menu-icon-horizontal-open);
+	}
+
+	.third-level-outer-container {
+		position: absolute;
+		left: 100%;
+		top: -1em;
+	}
+
+	.third-level-container {
+		width: 400px;
+	}
+
+	.animated .third-level-outer-container {
+		transition: unset;
+	}
 }
