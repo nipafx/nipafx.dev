@@ -1,13 +1,18 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 import { classNames } from "../infra/functions"
 
 import style from "./accordion.module.css"
 
 const Accordion = ({ className, headerClassName, headers, open, children }) => {
+	const id = ("accordion-" + Math.random()).replace("0.", "")
+	useEffect(() => {
+		document.getElementById(id).classList.add(style.animated)
+	})
+
 	children = Array.isArray(children) ? children : [children]
 	return (
-		<div {...classNames(style.container, className)}>
+		<div id={id} {...classNames(style.container, className)}>
 			{children.map((child, index) =>
 				child ? item(headerClassName, headers[index], open, child) : null
 			)}
@@ -44,18 +49,6 @@ const toggleContent = (expand, itemId) => {
 	else collapseContent(item)
 }
 
-const collapseContent = item => {
-	// disable transition while setting `max-height` to actual height,
-	// so transition has the correct starting point
-	item.style.transition = "unset"
-	item.style.maxHeight = item.scrollHeight + "px"
-	// enable transition and unset `max-height`, so it transitions to zero
-	requestAnimationFrame(() => {
-		item.style.transition = null
-		item.style.maxHeight = null
-	})
-}
-
 const expandContent = item => {
 	// set `max-height` to expected height,
 	// so transition has the correct end point
@@ -67,6 +60,20 @@ const expandContent = item => {
 		item.style.maxHeight = null
 	}
 	item.addEventListener("transitionend", unsetHeight)
+}
+
+const collapseContent = item => {
+	// disable transition while setting `max-height` to actual height,
+	// so transition has the correct starting point
+	item.style.transition = "none"
+	requestAnimationFrame(() => {
+		item.style.maxHeight = item.scrollHeight + "px"
+		// enable transition and unset `max-height`, so it transitions to zero
+		requestAnimationFrame(() => {
+			item.style.transition = null
+			requestAnimationFrame(() => (item.style.maxHeight = null))
+		})
+	})
 }
 
 export default Accordion

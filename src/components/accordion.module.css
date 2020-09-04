@@ -28,16 +28,21 @@
 	color: var(--alt-color);
 }
 
-
 .item-label:after {
 	content: var(--menu-icon);
 	transform: var(--menu-icon-vertical-closed);
-	transition: transform var(--menu-transition);
 	text-align: center;
+}
+
+.animated .item-label:after {
+	transition: transform var(--menu-transition);
 }
 
 .item-content {
 	max-height: 0;
+}
+
+.animated .item-content {
 	transition: all var(--menu-transition);
 }
 

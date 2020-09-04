@@ -5,14 +5,16 @@ import { classNames } from "../infra/functions"
 import style from "./accordion-pop-out.module.css"
 
 const PopOutAccordion = ({ className, headerClassName, headers, children }) => {
+	const id = ("pop-out-accordion-" + Math.random()).replace("0.", "")
 	useEffect(() => {
+		document.getElementById(id).classList.add(style.animated)
 		window.addEventListener("click", closeOpenMenus)
 		return () => window.removeEventListener("click", closeOpenMenus)
 	})
 
 	children = Array.isArray(children) ? children : [children]
 	return (
-		<div {...classNames(style.container, className)}>
+		<div id={id} {...classNames(style.container, className)}>
 			{children.map((child, index) =>
 				child ? item(headerClassName, headers[index], child) : null
 			)}
@@ -26,11 +28,7 @@ const item = (titleClassName, title, item) => {
 	const contentId = id + "-content"
 	return (
 		<div key={title} className={style.item}>
-			<input
-				id={checkboxId}
-				className={style.itemCheckbox}
-				type="checkbox"
-			/>
+			<input id={checkboxId} className={style.itemCheckbox} type="checkbox" />
 			<label {...classNames(style.itemLabel, titleClassName)} htmlFor={checkboxId}>
 				{title}
 			</label>

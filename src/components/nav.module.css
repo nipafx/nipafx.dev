@@ -41,7 +41,8 @@
 
 		color: var(--bg-color);
 		background-color: var(--fg-color);
-		margin: 0;
+		/* without the -1px some browsers/zoom levels show a pixel between title and surrounding border */
+		margin: -1px 0 0 0;
 		/* avoid `0.5em` because indent should be the same for .title and .entry.title */
 		padding: 0 calc(var(--regular-font-size) / 2);
 		font-size: var(--regular-font-size);
