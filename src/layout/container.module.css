@@ -13,7 +13,13 @@
 }
 
 .container > * {
+	/* https://css-tricks.com/preventing-a-grid-blowout/ & https://stackoverflow.com/q/28896807/2525313 */
+	min-width: 0;
 	grid-column: 4 / span 1;
+}
+
+.container > .siteHeader {
+	grid-column: 1 / span 5;
 }
 
 .container > .header {
@@ -43,6 +49,8 @@
 }
 
 .textContainer > * {
+	/* https://css-tricks.com/preventing-a-grid-blowout/ & https://stackoverflow.com/q/28896807/2525313 */
+	min-width: 0;
 	grid-column: 3 / span 2;
 }
 
@@ -72,16 +80,15 @@
 	text-align: right;
 }
 
-.textContainer > :global(.gatsby-highlight) {
-	/* https://stackoverflow.com/q/28896807/2525313 */
-	min-width: 0;
-}
-
 /*
  * BREAK: 600
  */
 
 @media all and (min-width: 600px) {
+	.container > .siteHeader {
+		grid-column: 2 / span 3;
+	}
+
 	.textContainer {
 		/* lock text to 50+450 or it gets too wide to read;
 		   add symmetrical margins to center text;
@@ -113,6 +120,10 @@
 	}
 
 	.container > * {
+		grid-column: 3 / span 3;
+	}
+
+	.container > .siteHeader {
 		grid-column: 3 / span 3;
 	}
 
@@ -150,6 +161,10 @@
 	}
 
 	.container > * {
+		grid-column: 2 / span 12;
+	}
+
+	.container > .siteHeader {
 		grid-column: 2 / span 12;
 	}
 

@@ -13,7 +13,7 @@ import style from "./siteFooter.module.css"
 
 const SiteFooter = () => (
 	<footer {...classNames(layout.container, style.footer)}>
-		<div className={style.container}>
+		<div {...classNames(layout.siteHeader, style.container)}>
 			<SiteLogo className={style.logo} />
 			<LinkList className={style.channels} links={channels.links} />
 			<LinkList className={style.meta} links={meta.links} />

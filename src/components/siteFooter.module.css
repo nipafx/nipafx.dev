@@ -1,7 +1,7 @@
 .footer {
 	border-top: var(--separator-height) solid var(--alt-color);
 	margin-top: 2em;
-	padding: 1em 0;
+	padding: 0.5em 0;
 }
 
 .container {
@@ -19,6 +19,10 @@
 	grid-area: logo;
 	justify-self: center;
 	align-self: center;
+
+	/* the link around the logo adds some weird distance below it;
+	   add a similar amount to top for symmetry*/
+	margin-top: 0.5em;
 }
 
 .channels {
@@ -40,7 +44,6 @@
 
 @media all and (min-width: 600px) {
 	.container {
-		display: grid;
 		grid-template-columns: auto 1fr;
 		grid-template-rows: auto auto;
 		grid-template-areas:

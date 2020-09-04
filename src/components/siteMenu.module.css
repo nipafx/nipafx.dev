@@ -1,11 +1,12 @@
 .menu {
+	/* a bit of padding brings the menu to the same level as the text in the logo */
+	padding-bottom: 4px;
+
 	text-transform: uppercase;
 	white-space: nowrap;
 	/* clicking a menu entry twice to open and close it,
 	   shouldn't select the text */
 	user-select: none;
-
-	margin: 1em 0 0.5em;
 }
 
 .menu a {
@@ -52,7 +53,6 @@
 }
 
 .top-level-entry:not(:last-child) {
-	position: relative;
 	margin-right: 1em;
 }
 

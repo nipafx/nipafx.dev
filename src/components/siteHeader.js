@@ -14,7 +14,7 @@ import style from "./siteHeader.module.css"
 
 const SiteHeader = ({ onIndexPage }) => (
 	<header id={PROGRESS_BAR_OFFSET} {...classNames(layout.container, style.header)}>
-		<div className={style.container}>
+		<div {...classNames(layout.siteHeader, style.container)}>
 			<SiteLogo className={style.logo} onIndexPage={onIndexPage} />
 			<LinkList className={style.channels} links={channels.links} />
 			<SiteMenu className={style.menu} onIndexPage={onIndexPage} />
