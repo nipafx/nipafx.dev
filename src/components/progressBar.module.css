@@ -8,6 +8,6 @@
 
 .bar {
 	background-color: var(--alt-color);
-	height: var(--separator-height);
+	height: var(--progress-bar-height);
 	width: 0;
 }

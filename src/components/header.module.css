@@ -35,8 +35,6 @@
 }
 
 .separator {
-	font-family: "Bedstead", monospace;
-	white-space: pre;
 	color: var(--fg-color);
 }
 

@@ -67,19 +67,6 @@ h2 {
 	font-weight: bold;
 }
 
-h2::before {
-	font-family: "Bedstead", monospace;
-	font-size: 32px;
-	font-weight: normal;
-}
-
-.separator:after {
-	/* same as h2::before */
-	font-family: "Bedstead", monospace;
-	font-size: 32px;
-	font-weight: normal;
-}
-
 h3 {
 	font-size: 24px;
 	font-weight: bold;

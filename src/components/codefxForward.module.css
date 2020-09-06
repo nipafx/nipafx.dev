@@ -31,7 +31,7 @@
 	max-width: 3072px;
 	margin: 80px auto 0;
 
-	border: var(--separator-height) solid var(--alt-color);
+	border: var(--progress-bar-height) solid var(--alt-color);
 	background-color: var(--bg-color);
 }
 

@@ -11,7 +11,7 @@ body {
 	--menu-icon-transition: var(--transition-duration) transform;
 	--menu-transition: var(--transition-duration) ease-in-out;
 
-	--separator-height: calc(var(--regular-font-size) / 4);
+	--progress-bar-height: calc(var(--regular-font-size) / 4);
 
 	--narrow-margin: 20px;
 	--medium-margin: 40px;
@@ -39,11 +39,31 @@ h1 + h2, h2 + h3, h3 + h4, h4 + h5 {
 }
 
 h2::before {
+	/* same as .blockSeparator:after */
+	font-family: "Bedstead", monospace;
+	font-size: 32px;
+	font-weight: normal;
+	color: var(--bg-color-shade-2);
+
 	content: "//";
+	white-space: pre;
 	display: block;
 	text-align: center;
-	color: var(--bg-color-shade-2);
 	margin-bottom: 1em;
+}
+
+.blockSeparator:after {
+	/* same as h2::before */
+	font-family: "Bedstead", monospace;
+	font-size: 32px;
+	font-weight: normal;
+	color: var(--bg-color-shade-2);
+}
+
+.inlineSeparator {
+	font-family: "Bedstead", monospace;
+	white-space: pre;
+	color: var(--alt-color);
 }
 
 /*

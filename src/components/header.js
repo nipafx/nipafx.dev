@@ -74,7 +74,7 @@ const showTags = (channel, tags) => {
 				/>
 			)}
 			{channelExists && tagsExist && (
-				<span key="separator" className={style.separator}>
+				<span key="separator" {...classNames("inlineSeparator", style.separator)}>
 					{" "}
 					//{" "}
 				</span>

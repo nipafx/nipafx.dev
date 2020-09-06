@@ -1,5 +1,5 @@
 .footer {
-	border-top: var(--separator-height) solid var(--alt-color);
+	border-top: var(--progress-bar-height) solid var(--alt-color);
 	margin-top: 2em;
 	padding: 0.5em 0;
 }
