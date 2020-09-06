@@ -1,0 +1,78 @@
+.list {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 1em;
+}
+
+.eventLink {
+	text-decoration: none;
+}
+
+.eventCover {
+	height: 100%;
+	width: 100%;
+	transition: background-color var(--menu-transition);
+}
+
+.eventLink:hover .eventCover {
+	background-color: rgba(var(--alt-color-rgb), 0.8);
+}
+
+.eventName {
+	margin: 0;
+	margin-top: -1.75em;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	transition: all var(--menu-transition);
+}
+
+.eventLink:hover .eventName {
+	color: var(--alt-contrast-color);
+	background-color: transparent;
+}
+
+.eventName > span {
+	padding: 0 0.5em;
+}
+
+.text {
+	background-color: var(--alt-color);
+	padding: 0.5em;
+}
+
+.text a:hover {
+	color: var(--alt-contrast-color);
+}
+
+.coordinates {
+	margin-left: 0;
+	margin-top: 0;
+}
+
+.coordinates dt {
+	font-weight: bold;
+}
+
+.coordinates dd {
+	margin-inline-start: 1em;
+}
+
+.else > *:first-child {
+	/* `inline-block` is needed for `:first-letter` below
+	   https://stackoverflow.com/a/5577380/2525313 */
+	display: inline-block;
+}
+
+.else > *:first-child:first-letter {
+	text-transform: capitalize;
+}
+
+.else > *:not(:first-child):before {
+	content: ", ";
+}
+
+@media all and (min-width: 600px) {
+	.list {
+		grid-template-columns: 1fr 1fr;
+	}
+}

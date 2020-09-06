@@ -59,8 +59,22 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
+				name: `talks`,
+				path: `${__dirname}/content/talks`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
 				name: `videos`,
 				path: `${__dirname}/content/videos`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `conference-logos`,
+				path: `${__dirname}/images/conference-logos`,
 			},
 		},
 		{
@@ -89,6 +103,13 @@ module.exports = {
 			options: {
 				name: `page-title-images`,
 				path: `${__dirname}/images/title-pages`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `talk-title-images`,
+				path: `${__dirname}/images/title-talks`,
 			},
 		},
 		{

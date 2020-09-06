@@ -72,6 +72,13 @@ body {
 	--alt-contrast-color: var(--bg-color);
 }
 
+.talk,
+.talks {
+	--alt-color: var(--theme-pink);
+	--alt-color-rgb: var(--theme-pink-rgb);
+	--alt-contrast-color: var(--bg-color);
+}
+
 .video,
 .videos {
 	--alt-color: var(--theme-red);

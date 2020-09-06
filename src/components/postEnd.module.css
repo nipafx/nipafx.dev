@@ -20,6 +20,10 @@
 	content: "//\Atag.end\A//";
 }
 
+.talk::after {
+	content: "//\Atalk.end\A//";
+}
+
 .video::after {
 	content: "//\Avideo.end\A//";
 }

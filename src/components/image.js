@@ -117,6 +117,18 @@ const getImageData = () => {
 						}
 					}
 				}
+				talkTitle: allImageSharp(
+					filter: { fields: { collection: { eq: "talk-title-images" } } }
+				) {
+					nodes {
+						fields {
+							id
+						}
+						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 80) {
+							...GatsbyImageSharpFluid
+						}
+					}
+				}
 				videoTitle: allImageSharp(
 					filter: { fields: { collection: { eq: "video-title-images" } } }
 				) {
@@ -153,6 +165,18 @@ const getImageData = () => {
 						}
 					}
 				}
+				conferenceLogos: allImageSharp(
+					filter: { fields: { collection: { eq: "conference-logos" } } }
+				) {
+					nodes {
+						fields {
+							id
+						}
+						fluid(maxWidth: 800, srcSetBreakpoints: [300, 800]) {
+							...GatsbyImageSharpFluid
+						}
+					}
+				}
 			}
 		`
 	)
@@ -165,8 +189,11 @@ const findImageInData = (imageData, type, id) => {
 			return (
 				imageData.articleTitle.nodes.find(node => node.fields.id === id) ||
 				imageData.pageTitle.nodes.find(node => node.fields.id === id) ||
+				imageData.talkTitle.nodes.find(node => node.fields.id === id) ||
 				imageData.videoTitle.nodes.find(node => node.fields.id === id)
 			)
+		case "conferenceCard":
+			return imageData.conferenceLogos.nodes.find(node => node.fields.id === id)
 		case "content":
 		case "sidebar":
 			return imageData.content.nodes.find(node => node.fields.id === id)
@@ -198,6 +225,7 @@ const isFixedType = type => {
 		case "postTitle":
 		case "postCard":
 		case "content":
+		case "conferenceCard":
 		case "sidebar":
 		case "videoThumbnail":
 			return false
@@ -214,6 +242,7 @@ const showCredits = type => {
 			return true
 		case "postCard":
 		case "videoThumbnail":
+		case "conferenceCard":
 			return false
 		default:
 			throw new Error(`Unknown image type "${type}".`)

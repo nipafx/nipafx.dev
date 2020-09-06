@@ -11,6 +11,12 @@
 			"url": "http://www.youtube.com/watch?v=vqEg37e4Mkw",
 			"title": "Workflows of Refactoring",
 			"thumbnail": "workflows-of-refactoring"
+		},
+		{
+			"slug": "java-after-eight-jfokus-2020",
+			"url": "https://www.youtube.com/watch?v=k9--KYubKzk",
+			"title": "Java After Eight at Jfokus 2020",
+			"thumbnail": "java-after-eight-jfokus-2020"
 		}
 	]
 }

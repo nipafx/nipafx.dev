@@ -8,6 +8,7 @@ exports.sourceNodes = ({ actions, createContentDigest }) => {
 	createRootNode(`post`, `PostCollection`)
 	createRootNode(`repo`, `RepoCollection`)
 	createRootNode(`tag`, `TagCollection`)
+	createRootNode(`talk`, `TalkCollection`)
 	createRootNode(`video`, `VideoCollection`)
 }
 
@@ -50,6 +51,7 @@ exports.onCreateNode = ({ node, getNode, actions, createContentDigest }) => {
 		createPageNodes(node, createNode, createContentDigest)
 		createRepoNodes(node, createNode, createContentDigest)
 		createTagNodes(node, createNode, createContentDigest)
+		createTalkNodes(node, createNode, createContentDigest)
 		createVideoNodes(node, createNode, createContentDigest)
 	}
 }
@@ -134,6 +136,18 @@ exports.createSchemaCustomization = ({ actions }) => {
 			description: String!
 			seriesDescription: String
 		}
+		type Talk implements Node {
+			title: String!
+			slug: String!
+			date: Date! @dateformat
+			tags: [String!]!
+			description: String!
+			intro: String
+			searchKeywords: String!
+			featuredImage: String
+			slides: String
+			videoSlug: String
+		}
 		type Video implements Node {
 			title: String!
 			slug: String!
@@ -151,7 +165,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 
 createPostNodes = (node, createNode, createContentDigest) => {
-	if (![`articles`, `pages`, `videos`].includes(node.fields.collection)) return
+	if (![`articles`, `pages`, `videos`, `talks`].includes(node.fields.collection)) return
 
 	const post = {
 		id: `${node.fields.id}-as-post`,
@@ -327,6 +341,38 @@ createTagNodes = (node, createNode, createContentDigest) => {
 	createNode(tag)
 }
 
+createTalkNodes = (node, createNode, createContentDigest) => {
+	if (node.fields.collection !== `talks`) return
+
+	const talk = {
+		id: node.fields.id,
+
+		title: node.frontmatter.title,
+		slug: node.frontmatter.slug,
+		date: node.frontmatter.date,
+		tags: node.frontmatter.tags,
+		description: node.frontmatter.description,
+		intro: node.frontmatter.intro,
+		searchKeywords: node.frontmatter.searchKeywords,
+		featuredImage: node.frontmatter.featuredImage,
+		slides: node.frontmatter.slides,
+		videoSlug: node.frontmatter.videoSlug,
+
+		// see comment on creating article nodes
+		content___NODE: node.id,
+
+		parent: `talk`,
+		children: [],
+		internal: {
+			type: `Talk`,
+			content: ``,
+			contentDigest: createContentDigest(``),
+		},
+	}
+
+	createNode(talk)
+}
+
 createVideoNodes = (node, createNode, createContentDigest) => {
 	if (node.fields.collection !== `videos`) return
 
@@ -367,6 +413,7 @@ exports.createPages = ({ graphql, actions }) => {
 		createChannelPages(graphql, createPage),
 		createPagePages(graphql, createPage),
 		createTagPages(graphql, createPage),
+		createTalkPages(graphql, createPage),
 		createVideoPages(graphql, createPage),
 	])
 }
@@ -462,6 +509,31 @@ createTagPages = (graphql, createPage) => {
 				component: tagTemplate,
 				context: {
 					tag: tag.name,
+				},
+			})
+		})
+	})
+}
+
+createTalkPages = (graphql, createPage) => {
+	const talkTemplate = path.resolve(`./src/templates/talk.js`)
+
+	return graphql(`
+		{
+			talks: allTalk {
+				nodes {
+					slug
+				}
+			}
+		}
+	`).then(({ data }) => {
+		data.talks.nodes.forEach(talk => {
+			createPage({
+				// should I publish talks under nipafx.dev/talks ?
+				path: talk.slug,
+				component: talkTemplate,
+				context: {
+					slug: talk.slug,
 				},
 			})
 		})
