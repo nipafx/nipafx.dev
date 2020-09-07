@@ -7,10 +7,10 @@ import Image from "./image"
 import layout from "../layout/container.module.css"
 import style from "./contentImage.module.css"
 
-const ContentImage = ({ slug, options }) => {
+const ContentImage = ({ slug, options, className }) => {
 	options = options || ""
 	let type = "content"
-	const divClasses = []
+	const divClasses = [className]
 	const imageClasses = []
 
 	if (options.includes("wide")) {

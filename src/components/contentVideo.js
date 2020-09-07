@@ -7,9 +7,9 @@ import Video from "./video"
 import layout from "../layout/container.module.css"
 import style from "./contentVideo.module.css"
 
-const ContentVideo = ({ slug, options }) => {
+const ContentVideo = ({ slug, options, className }) => {
 	options = options || ""
-	const classes = []
+	const classes = [className]
 
 	// would be nice to add the two classes above
 	// and remove them here if `narrow` is in the options,

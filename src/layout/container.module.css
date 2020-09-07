@@ -55,7 +55,8 @@
 }
 
 .textContainer > .wide {
-	grid-column: 2 / span 4;
+	grid-column: 2 / span 3;
+	margin-left: 0.5em;
 }
 
 .textContainer > .offWide,
@@ -99,6 +100,10 @@
 
 	.textContainer > .offCenter {
 		grid-column: 4 / span 1;
+	}
+
+	.textContainer > .wide {
+		grid-column: 2 / span 4;
 	}
 
 	.textContainer > .offWide,
