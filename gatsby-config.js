@@ -80,8 +80,8 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
-				name: `conference-logos`,
-				path: `${__dirname}/images/conference-logos`,
+				name: `event-logos`,
+				path: `${__dirname}/images/events`,
 			},
 		},
 		{

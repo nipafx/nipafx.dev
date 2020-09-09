@@ -177,8 +177,8 @@ const getImageData = () => {
 						}
 					}
 				}
-				conferenceLogos: allImageSharp(
-					filter: { fields: { collection: { eq: "conference-logos" } } }
+				eventLogos: allImageSharp(
+					filter: { fields: { collection: { eq: "event-logos" } } }
 				) {
 					nodes {
 						fields {
@@ -205,8 +205,8 @@ const findImageInData = (imageData, type, id) => {
 				imageData.talkTitle.nodes.find(node => node.fields.id === id) ||
 				imageData.videoTitle.nodes.find(node => node.fields.id === id)
 			)
-		case "conferenceCard":
-			return imageData.conferenceLogos.nodes.find(node => node.fields.id === id)
+		case "eventCard":
+			return imageData.eventLogos.nodes.find(node => node.fields.id === id)
 		case "content":
 		case "sidebar":
 			return imageData.content.nodes.find(node => node.fields.id === id)
@@ -238,7 +238,7 @@ const isFixedType = type => {
 		case "postTitle":
 		case "postCard":
 		case "content":
-		case "conferenceCard":
+		case "eventCard":
 		case "sidebar":
 		case "videoThumbnail":
 			return false
@@ -255,7 +255,7 @@ const showCredits = type => {
 			return true
 		case "postCard":
 		case "videoThumbnail":
-		case "conferenceCard":
+		case "eventCard":
 			return false
 		default:
 			throw new Error(`Unknown image type "${type}".`)

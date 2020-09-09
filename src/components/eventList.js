@@ -21,7 +21,7 @@ const present = (event, text) => {
 			<div>
 				<Link to={event.url} className={style.eventLink}>
 					<div className={style.eventCover}>
-						<Image id={event.image} type="conferenceCard" />
+						<Image id={event.image} type="eventCard" />
 						{event.name && (
 							<h3 className={style.eventName}>
 								<span>{event.name}</span>
