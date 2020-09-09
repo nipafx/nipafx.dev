@@ -105,6 +105,18 @@ const getImageData = () => {
 						}
 					}
 				}
+				courseTitle: allImageSharp(
+					filter: { fields: { collection: { eq: "course-title-images" } } }
+				) {
+					nodes {
+						fields {
+							id
+						}
+						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 80) {
+							...GatsbyImageSharpFluid
+						}
+					}
+				}
 				pageTitle: allImageSharp(
 					filter: { fields: { collection: { eq: "page-title-images" } } }
 				) {
@@ -188,6 +200,7 @@ const findImageInData = (imageData, type, id) => {
 		case "postCard":
 			return (
 				imageData.articleTitle.nodes.find(node => node.fields.id === id) ||
+				imageData.courseTitle.nodes.find(node => node.fields.id === id) ||
 				imageData.pageTitle.nodes.find(node => node.fields.id === id) ||
 				imageData.talkTitle.nodes.find(node => node.fields.id === id) ||
 				imageData.videoTitle.nodes.find(node => node.fields.id === id)

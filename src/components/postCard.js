@@ -74,7 +74,7 @@ const getPost = slug => {
 				filter: {
 					fields: {
 						collection: {
-							in: ["article-title-images", "page-title-images", "talk-title-images", "video-title-images"]
+							in: ["article-title-images", "course-title-images", "page-title-images", "talk-title-images", "video-title-images"]
 						}
 					}
 				}

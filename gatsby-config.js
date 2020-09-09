@@ -31,6 +31,13 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
+				name: `courses`,
+				path: `${__dirname}/content/courses`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
 				name: `meta`,
 				path: `${__dirname}/content/meta/`,
 			},
@@ -96,6 +103,13 @@ module.exports = {
 			options: {
 				name: `article-title-images`,
 				path: `${__dirname}/images/title-articles`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `course-title-images`,
+				path: `${__dirname}/images/title-courses`,
 			},
 		},
 		{

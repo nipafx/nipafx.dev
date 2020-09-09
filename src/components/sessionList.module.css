@@ -1,0 +1,8 @@
+.coordinates {
+	margin-left: 0;
+	margin-top: 0;
+}
+
+.coordinates dd {
+	margin-inline-start: 1em;
+}

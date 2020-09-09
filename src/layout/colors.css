@@ -79,6 +79,13 @@ body {
 	--alt-contrast-color: var(--bg-color);
 }
 
+.course,
+.courses {
+	--alt-color: var(--theme-blue-dark);
+	--alt-color-rgb: var(--theme-blue-dark-rgb);
+	--alt-contrast-color: var(--fg-color);
+}
+
 .video,
 .videos {
 	--alt-color: var(--theme-red);

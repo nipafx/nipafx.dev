@@ -85,15 +85,15 @@
 			]
 		},
 		{
-			"title": "Trainings",
+			"title": "Courses",
 			"children": [
 				{
 					"title": "In-house",
-					"url": "/trainings#in-house"
+					"url": "/courses#in-house"
 				},
 				{
 					"title": "Conferences",
-					"url": "/trainings#conferences"
+					"url": "/courses#conferences"
 				},
 				{
 					"title": "Online",

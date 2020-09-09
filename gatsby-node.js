@@ -4,6 +4,7 @@ exports.sourceNodes = ({ actions, createContentDigest }) => {
 	const createRootNode = createCreateRootNode(actions.createNode, createContentDigest)
 	createRootNode(`article`, `ArticleCollection`)
 	createRootNode(`channel`, `ChannelCollection`)
+	createRootNode(`course`, `CourseCollection`)
 	createRootNode(`page`, `PageCollection`)
 	createRootNode(`post`, `PostCollection`)
 	createRootNode(`repo`, `RepoCollection`)
@@ -48,6 +49,7 @@ exports.onCreateNode = ({ node, getNode, actions, createContentDigest }) => {
 		createPostNodes(node, createNode, createContentDigest)
 		createArticleNodes(node, createNode, createContentDigest)
 		createChannelNodes(node, createNode, createContentDigest)
+		createCourseNodes(node, createNode, createContentDigest)
 		createPageNodes(node, createNode, createContentDigest)
 		createRepoNodes(node, createNode, createContentDigest)
 		createTagNodes(node, createNode, createContentDigest)
@@ -113,6 +115,19 @@ exports.createSchemaCustomization = ({ actions }) => {
 			slug: String!
 			description: String!
 		}
+		type Course implements Node {
+			title: String!
+			slug: String!
+			date: Date! @dateformat
+			tags: [String!]!
+			description: String!
+			length: String!
+			audience: String!
+			requirements: String!
+			intro: String
+			searchKeywords: String!
+			featuredImage: String
+		}
 		type Page implements Node {
 			title: String!
 			slug: String!
@@ -165,7 +180,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 
 createPostNodes = (node, createNode, createContentDigest) => {
-	if (![`articles`, `pages`, `videos`, `talks`].includes(node.fields.collection)) return
+	if (![`articles`, `courses`, `pages`, `videos`, `talks`].includes(node.fields.collection)) return
 
 	const post = {
 		id: `${node.fields.id}-as-post`,
@@ -260,6 +275,39 @@ createChannelNodes = (node, createNode, createContentDigest) => {
 	}
 
 	createNode(channel)
+}
+
+createCourseNodes = (node, createNode, createContentDigest) => {
+	if (node.fields.collection !== `courses`) return
+
+	const course = {
+		id: node.fields.id,
+
+		title: node.frontmatter.title,
+		slug: node.frontmatter.slug,
+		date: node.frontmatter.date,
+		tags: node.frontmatter.tags,
+		description: node.frontmatter.description,
+		length: node.frontmatter.length,
+		audience: node.frontmatter.audience,
+		requirements: node.frontmatter.requirements,
+		intro: node.frontmatter.intro,
+		searchKeywords: node.frontmatter.searchKeywords,
+		featuredImage: node.frontmatter.featuredImage,
+
+		// see comment on creating article nodes
+		content___NODE: node.id,
+
+		parent: `course`,
+		children: [],
+		internal: {
+			type: `Course`,
+			content: ``,
+			contentDigest: createContentDigest(``),
+		},
+	}
+
+	createNode(course)
 }
 
 createPageNodes = (node, createNode, createContentDigest) => {
@@ -411,6 +459,7 @@ exports.createPages = ({ graphql, actions }) => {
 	return Promise.all([
 		createArticlePages(graphql, createPage),
 		createChannelPages(graphql, createPage),
+		createCoursePages(graphql, createPage),
 		createPagePages(graphql, createPage),
 		createTagPages(graphql, createPage),
 		createTalkPages(graphql, createPage),
@@ -461,6 +510,30 @@ createChannelPages = (graphql, createPage) => {
 				component: pageTemplate,
 				context: {
 					channel: channel.internalName,
+				},
+			})
+		})
+	})
+}
+
+createCoursePages = (graphql, createPage) => {
+	const courseTemplate = path.resolve(`./src/templates/course.js`)
+
+	return graphql(`
+		{
+			courses: allCourse {
+				nodes {
+					slug
+				}
+			}
+		}
+	`).then(({ data }) => {
+		data.courses.nodes.forEach(course => {
+			createPage({
+				path: course.slug,
+				component: courseTemplate,
+				context: {
+					slug: course.slug,
 				},
 			})
 		})
@@ -529,7 +602,6 @@ createTalkPages = (graphql, createPage) => {
 	`).then(({ data }) => {
 		data.talks.nodes.forEach(talk => {
 			createPage({
-				// should I publish talks under nipafx.dev/talks ?
 				path: talk.slug,
 				component: talkTemplate,
 				context: {

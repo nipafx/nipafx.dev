@@ -12,6 +12,12 @@
 	content: "//\Apost.end\A//";
 }
 
+.course::after {
+	/* Because `Ac` is a valid hexadecimal number,
+	   explicitly use six digits to force the escape to end after `A`  */
+	content: "//\00000Acourse.end\A//";
+}
+
 .page::after {
 	content: "//\Apage.end\A//";
 }

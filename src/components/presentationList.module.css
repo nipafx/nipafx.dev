@@ -3,10 +3,6 @@
 	margin-top: 0;
 }
 
-.coordinates dt {
-	font-weight: bold;
-}
-
 .coordinates dd {
 	margin-inline-start: 1em;
 }

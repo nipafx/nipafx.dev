@@ -7,6 +7,7 @@ import { H1, H2, H3, H4, H5, H6 } from "../components/headings"
 import Admonition from "../components/admonition"
 import ContentImage from "../components/contentImage"
 import ContentVideo from "../components/contentVideo"
+import CourseDetails from "../components/courseDetails"
 import Link from "../components/link"
 import { PullQuote, BlockQuote } from "../components/quote"
 import SeriesList from "../components/seriesList"
@@ -34,6 +35,7 @@ const RenderHtml = ({ withAst, htmlAst }) => {
 			blockquote: BlockQuote,
 			contentimage: ContentImage,
 			contentvideo: ContentVideo,
+			coursedetails: CourseDetails,
 			// div: it would be great to intercept div (e.g. to add `layout.offWide` to `.gatsby-highlight` divs),
 			//      but this seems to override `Fragment: React.Fragment` (details above)
 			ol: renderOrderedList,
