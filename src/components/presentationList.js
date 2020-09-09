@@ -2,7 +2,7 @@ import React from "react"
 
 import { DateTime } from "luxon"
 
-import Image from "./image"
+import EventList from "./eventList"
 import Link from "./link"
 
 import style from "./presentationList.module.css"
@@ -15,22 +15,27 @@ const PresentationList = ({ slug }) => {
 	return (
 		<React.Fragment>
 			{presentations.upcoming.length > 0 && (
-				<div className={layout.main}>
+				<React.Fragment>
 					<h2>Upcoming</h2>
 					<p>{upcomingText(presentations.upcoming)}</p>
-					<div className={style.list}>{presentations.upcoming.map(present)}</div>
-				</div>
+					<EventList
+						events={prepareEvents(presentations.upcoming)}
+						className={layout.main}
+					>
+						{presentations.upcoming.map(present)}
+					</EventList>
+				</React.Fragment>
 			)}
-			<div className={layout.main}>
-				<h2>Past Presentations</h2>
-				<p>{pastText(presentations.pastByYear)}</p>
-				{presentations.pastByYear.map(pres => (
-					<React.Fragment key={pres.year}>
-						<h3>{pres.year}</h3>
-						<div className={style.list}>{pres.presentations.map(present)}</div>
-					</React.Fragment>
-				))}
-			</div>
+			<h2>Past Presentations</h2>
+			<p>{pastText(presentations.pastByYear)}</p>
+			{presentations.pastByYear.map(pres => (
+				<React.Fragment key={pres.year}>
+					<h3>{pres.year}</h3>
+					<EventList events={prepareEvents(pres.presentations)} className={layout.main}>
+						{pres.presentations.map(present)}
+					</EventList>
+				</React.Fragment>
+			))}
 		</React.Fragment>
 	)
 }
@@ -124,36 +129,27 @@ const pastText = pastByYear => {
 	return `${intro} See below for links to slides (as they were at that very event), videos, and other information.`
 }
 
+const prepareEvents = presentations =>
+	presentations.map(pres => {
+		return {
+			name: pres.event.showName ? pres.event.name : undefined,
+			url: pres.event.url,
+			image: pres.event.image,
+		}
+	})
+
 const present = presentation => {
 	return (
-		<div key={presentation.time} className={style.presentation}>
-			<div className={style.event}>
-				<Link to={presentation.event.url} className={style.eventLink}>
-					<div className={style.eventCover}>
-						<Image id={presentation.event.image} type="conferenceCard" />
-						{presentation.event.showName && (
-							<h3 className={style.eventName}>
-								<span>{presentation.event.name}</span>
-							</h3>
-						)}
-					</div>
-				</Link>
-			</div>
-			<div className={style.text}>
-				<dl className={style.coordinates}>
-					{presentation.time && presentDate(presentation.time)}
-					{presentation.location && presentLocation(presentation.location)}
-					{(presentation.announcement ||
-						presentation.slidesUrl ||
-						presentation.videoUrl) &&
-						presentMisc(
-							presentation.announcement,
-							presentation.slidesUrl,
-							presentation.videoUrl
-						)}
-				</dl>
-			</div>
-		</div>
+		<dl className={style.coordinates}>
+			{presentation.time && presentDate(presentation.time)}
+			{presentation.location && presentLocation(presentation.location)}
+			{(presentation.announcement || presentation.slidesUrl || presentation.videoUrl) &&
+				presentMisc(
+					presentation.announcement,
+					presentation.slidesUrl,
+					presentation.videoUrl
+				)}
+		</dl>
 	)
 }
 
