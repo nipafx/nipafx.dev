@@ -3,6 +3,7 @@ import React from "react"
 import { DateTime } from "luxon"
 
 import EventList from "./eventList"
+import { H2, H3 } from "./headings"
 import Link from "./link"
 
 import style from "./presentationList.module.css"
@@ -16,7 +17,7 @@ const PresentationList = ({ slug }) => {
 		<React.Fragment>
 			{presentations.upcoming.length > 0 && (
 				<React.Fragment>
-					<h2>Upcoming</h2>
+					<H2 id="upcoming">Upcoming Presentations</H2>
 					<p>{upcomingText(presentations.upcoming)}</p>
 					<EventList
 						events={prepareEvents(presentations.upcoming)}
@@ -28,11 +29,11 @@ const PresentationList = ({ slug }) => {
 			)}
 			{presentations.pastByYear.length > 0 && (
 				<React.Fragment>
-					<h2>Past Presentations</h2>
+					<H2 id="past">Past Presentations</H2>
 					<p>{pastText(presentations.pastByYear)}</p>
 					{presentations.pastByYear.map(pres => (
 						<React.Fragment key={pres.year}>
-							<h3>{pres.year}</h3>
+							<H3 id={pres.year}>{pres.year}</H3>
 							<EventList
 								events={prepareEvents(pres.presentations)}
 								className={layout.main}

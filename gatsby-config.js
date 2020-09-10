@@ -172,9 +172,12 @@ module.exports = {
 						// use before prismjs (https://www.gatsbyjs.org/packages/gatsby-remark-autolink-headers/#how-to-use)
 						resolve: "gatsby-remark-autolink-headers",
 						options: {
+							// same icon is used in `headings.js`
 							icon: `▚`,
 							// for no apparent reason, the resulting HTML does not include this class
 							// (or, for that matter, the aria tag that the plugin adds)
+							// even though the `props` passed to `headings.js` contains
+							// a react component with the right properties
 							className: `header-id-link`,
 							removeAccents: true,
 							enableCustomId: true,

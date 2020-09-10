@@ -3,6 +3,7 @@ import React from "react"
 import { DateTime } from "luxon"
 
 import EventList from "./eventList"
+import { H2, H3 } from "./headings"
 import Link from "./link"
 
 import style from "./sessionList.module.css"
@@ -14,17 +15,17 @@ const SessionList = ({ slug }) => {
 	const sessions = extractSessionsForCourse(slug)
 	return (
 		<React.Fragment>
-			<h2>Upcoming Public Sessions</h2>
+			<H2 id="upcoming">Upcoming Public Sessions</H2>
 			<p>{upcomingText(sessions.upcoming)}</p>
 			<EventList events={prepareEvents(sessions.upcoming)} className={layout.main}>
 				{sessions.upcoming.map(present)}
 			</EventList>
 			{sessions.pastByYear.length > 0 && (
 				<React.Fragment>
-					<h2>Past Public Sessions</h2>
+					<H2 id="past">Past Public Sessions</H2>
 					{sessions.pastByYear.map(sess => (
 						<React.Fragment key={sess.year}>
-							<h3>{sess.year}</h3>
+							<H3 id={sess.year}>{sess.year}</H3>
 							<EventList
 								events={prepareEvents(sess.sessions)}
 								className={layout.main}
