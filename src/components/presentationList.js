@@ -26,16 +26,23 @@ const PresentationList = ({ slug }) => {
 					</EventList>
 				</React.Fragment>
 			)}
-			<h2>Past Presentations</h2>
-			<p>{pastText(presentations.pastByYear)}</p>
-			{presentations.pastByYear.map(pres => (
-				<React.Fragment key={pres.year}>
-					<h3>{pres.year}</h3>
-					<EventList events={prepareEvents(pres.presentations)} className={layout.main}>
-						{pres.presentations.map(present)}
-					</EventList>
+			{presentations.pastByYear.length > 0 && (
+				<React.Fragment>
+					<h2>Past Presentations</h2>
+					<p>{pastText(presentations.pastByYear)}</p>
+					{presentations.pastByYear.map(pres => (
+						<React.Fragment key={pres.year}>
+							<h3>{pres.year}</h3>
+							<EventList
+								events={prepareEvents(pres.presentations)}
+								className={layout.main}
+							>
+								{pres.presentations.map(present)}
+							</EventList>
+						</React.Fragment>
+					))}
 				</React.Fragment>
-			))}
+			)}
 		</React.Fragment>
 	)
 }

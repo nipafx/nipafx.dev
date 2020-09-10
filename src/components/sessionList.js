@@ -12,7 +12,6 @@ import data from "../../content/meta/sessions.json"
 
 const SessionList = ({ slug }) => {
 	const sessions = extractSessionsForCourse(slug)
-	console.log(sessions)
 	return (
 		<React.Fragment>
 			<h2>Upcoming Public Sessions</h2>
@@ -20,15 +19,22 @@ const SessionList = ({ slug }) => {
 			<EventList events={prepareEvents(sessions.upcoming)} className={layout.main}>
 				{sessions.upcoming.map(present)}
 			</EventList>
-			<h2>Past Public Sessions</h2>
-			{sessions.pastByYear.map(sess => (
-				<React.Fragment key={sess.year}>
-					<h3>{sess.year}</h3>
-					<EventList events={prepareEvents(sess.sessions)} className={layout.main}>
-						{sess.sessions.map(present)}
-					</EventList>
+			{sessions.pastByYear.length > 0 && (
+				<React.Fragment>
+					<h2>Past Public Sessions</h2>
+					{sessions.pastByYear.map(sess => (
+						<React.Fragment key={sess.year}>
+							<h3>{sess.year}</h3>
+							<EventList
+								events={prepareEvents(sess.sessions)}
+								className={layout.main}
+							>
+								{sess.sessions.map(present)}
+							</EventList>
+						</React.Fragment>
+					))}
 				</React.Fragment>
-			))}
+			)}
 		</React.Fragment>
 	)
 }
