@@ -8,25 +8,6 @@
 	text-decoration: none;
 }
 
-.link .thumbnail {
-	grid-column: 1 / span 3;
-	grid-row: 1 / span 4;
-}
-
-.link .button {
-	grid-column: 2;
-	grid-row: 2;
-}
-
-.link .text {
-	grid-column: 1 / span 3;
-	grid-row: 4;
-
-	text-align: center;
-	background-color: var(--button-color);
-	margin: 0.5em 0;
-}
-
 .link:visited {
 	text-decoration: none;
 }
@@ -35,5 +16,25 @@
 	text-decoration: none;
 	color: var(--fg-color);
 	--button-color: var(--alt-color);
+}
+
+.thumbnail {
+	grid-column: 1 / span 3;
+	grid-row: 1 / span 4;
+	z-index: -1;
+}
+
+.button {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+.text {
+	grid-column: 1 / span 3;
+	grid-row: 4;
+
+	text-align: center;
+	background-color: var(--button-color);
+	margin: 0.5em 0;
 }
 

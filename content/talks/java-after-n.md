@@ -1,8 +1,8 @@
 ---
 title: "Java After Eight"
 tags: [java-9, java-10, java-11, java-12, java-13, java-14, java-15]
-date: 2019-11-17
-slug: java-after-n
+date: 2020-02-05
+slug: talk-java-after-n
 description: "A live-coding talk during which I update a Java 8 code base to Java 15, making good use of new language features, additional and improved APIs, and JVM capabilities"
 searchKeywords: "java 8"
 featuredImage: java-after-n

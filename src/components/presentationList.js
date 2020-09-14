@@ -87,6 +87,7 @@ const extractPresentations = () => {
 				location: presentation.location,
 				slidesUrl: presentation.slides,
 				videoUrl: presentation.video,
+				misc: presentation.misc,
 				event: event.event,
 			}
 		})
@@ -148,16 +149,34 @@ const prepareEvents = presentations =>
 
 const present = presentation => {
 	return (
-		<dl className={style.coordinates}>
+		<dl key="coordinates" className={style.coordinates}>
+			{presentLocation(presentation.event.name, presentation.event.url, presentation.location)}
 			{presentation.time && presentDate(presentation.time)}
-			{presentation.location && presentLocation(presentation.location)}
 			{(presentation.announcement || presentation.slidesUrl || presentation.videoUrl) &&
-				presentMisc(
+				presentLinks(
 					presentation.announcement,
 					presentation.slidesUrl,
 					presentation.videoUrl
 				)}
+			{presentation.misc && presentMisc(presentation.misc)}
 		</dl>
+	)
+}
+
+const presentLocation = (name, url, location) => {
+	return (
+		<React.Fragment>
+			<dt>Where?</dt>
+			<dd>
+				{url ? <Link to={url}>{name}</Link> : name}
+				{location && (
+					<React.Fragment>
+						<br />
+						{location.url ? <Link to={location.url}>{location.text}</Link> : location}
+					</React.Fragment>
+				)}
+			</dd>
+		</React.Fragment>
 	)
 }
 
@@ -174,21 +193,10 @@ const presentDate = time => {
 	)
 }
 
-const presentLocation = location => {
-	const text = location.text || location
-	const url = location.url
+const presentLinks = (announcement, slidesUrl, videoUrl) => {
 	return (
 		<React.Fragment>
-			<dt>Where?</dt>
-			<dd>{url ? <Link to={url}>{text}</Link> : text}</dd>
-		</React.Fragment>
-	)
-}
-
-const presentMisc = (announcement, slidesUrl, videoUrl) => {
-	return (
-		<React.Fragment>
-			<dt>What else?</dt>
+			<dt>What?</dt>
 			<dd className={style.else}>
 				{announcement && (
 					<span>
@@ -205,6 +213,21 @@ const presentMisc = (announcement, slidesUrl, videoUrl) => {
 						<Link to={videoUrl}>video</Link>
 					</span>
 				)}
+			</dd>
+		</React.Fragment>
+	)
+}
+
+const presentMisc = misc => {
+	return (
+		<React.Fragment>
+			<dt>What else?</dt>
+			<dd className={style.else}>
+				{misc.map(({ text, url }) => (
+					<span>
+						<Link to={url}>{text}</Link>
+					</span>
+				))}
 			</dd>
 		</React.Fragment>
 	)

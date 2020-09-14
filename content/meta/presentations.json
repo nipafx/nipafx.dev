@@ -8,7 +8,7 @@
 			},
 			"presentations": [
 				{
-					"talk": "java-after-n",
+					"talk": "talk-java-after-n",
 					"title": "Java After Eight",
 					"programEntry": "https://www.jfokus.se/talks/31",
 					"time": "05.02.2020 1915 Europe/Stockholm",
@@ -26,7 +26,7 @@
 			},
 			"presentations": [
 				{
-					"talk": "java-after-n",
+					"talk": "talk-java-after-n",
 					"title": "Java After Eight",
 					"announcement": "http://jug-karlsruhe.de/content/java-after-eight/",
 					"time": "04.03.2020 1915 Europe/Berlin",
@@ -43,7 +43,7 @@
 			},
 			"presentations": [
 				{
-					"talk": "java-after-n",
+					"talk": "talk-java-after-n",
 					"title": "Java After Eight",
 					"program": "https://www.allthetalks.org/schedule",
 					"time": "17.03.2020 1100 Europe/Berlin",
@@ -65,7 +65,7 @@
 			},
 			"presentations": [
 				{
-					"talk": "java-after-n",
+					"talk": "talk-java-after-n",
 					"title": "Java After Eight",
 					"program": "https://www.allthetalks.org/schedule",
 					"time": "15.04.2020 1700 UTC",
@@ -85,7 +85,7 @@
 			},
 			"presentations": [
 				{
-					"talk": "java-after-n",
+					"talk": "talk-java-after-n",
 					"title": "Java After Eight",
 					"announcement": "https://cyberjug.de/vortrag/javaaftereight/",
 					"time": "15.06.2020 2015 Europe/Berlin",
@@ -105,7 +105,7 @@
 			},
 			"presentations": [
 				{
-					"talk": "java-after-n",
+					"talk": "talk-java-after-n",
 					"title": "Java After Eleven",
 					"announcement": "https://developers.redhat.com/devnation/devnationday/java-after-eleven",
 					"time": "15.09.2020 1820 UTC",

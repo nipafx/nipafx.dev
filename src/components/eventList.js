@@ -17,22 +17,25 @@ const EventList = ({ events, className, children }) => {
 
 const present = (event, text) => {
 	return (
-		<div key={event.url}>
+		<div key={event.url} className={style.card}>
 			<div>
-				<Link to={event.url} className={style.eventLink}>
-					<div className={style.eventCover}>
-						<Image id={event.image} type="eventCard" />
-						{event.name && (
-							<h3 className={style.eventName}>
-								<span>{event.name}</span>
-							</h3>
-						)}
-					</div>
-				</Link>
+				{event.url ? (
+					<Link to={event.url} className={style.eventLink}>
+						{header(event)}
+					</Link>
+				) : (
+					header(event)
+				)}
 			</div>
 			<div className={style.text}>{text}</div>
 		</div>
 	)
 }
+
+const header = event => (
+	<div className={style.eventCover}>
+		<Image id={event.image} type="eventCard" className={style.eventLogo} />
+	</div>
+)
 
 export default EventList

@@ -4,6 +4,11 @@
 	grid-gap: 1em;
 }
 
+.card {
+	display: flex;
+	flex-direction: column;
+}
+
 .eventLink {
 	text-decoration: none;
 }
@@ -16,6 +21,11 @@
 
 .eventLink:hover .eventCover {
 	background-color: rgba(var(--alt-color-rgb), 0.8);
+}
+
+.eventLogo {
+	background-color: white;
+	z-index: -1;
 }
 
 .eventName {
@@ -36,6 +46,8 @@
 }
 
 .text {
+	flex: 1;
+
 	background-color: var(--alt-color);
 	padding: 0.5em;
 }

@@ -211,7 +211,14 @@ const findImageInData = (imageData, type, id) => {
 		case "sidebar":
 			return imageData.content.nodes.find(node => node.fields.id === id)
 		case "videoThumbnail":
-			return imageData.videoThumbnail.nodes.find(node => node.fields.id === id)
+			return (
+				imageData.videoThumbnail.nodes.find(node => node.fields.id === id) ||
+				// a video post's title image and the video's thumbnail are often identical;
+				// to reduce duplication of images, we fall through from the thumbnail folder to the video title image folder
+				// (I would've preferred the other way around, but we don't know what kind of post [e.g. article vs video]
+				// we're looking for a title image for)
+				imageData.videoTitle.nodes.find(node => node.fields.id === id)
+			)
 	}
 }
 

@@ -4,6 +4,10 @@
 	background-color: var(--bg-color);
 
 	letter-spacing: 1px;
+
+	/* make sure everything else on the page scrolls under the header
+	   (particularly Gatsby images tend to otherwise scroll over it) */
+	z-index: 1;
 }
 
 .container {

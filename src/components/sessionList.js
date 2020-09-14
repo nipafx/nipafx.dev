@@ -111,13 +111,30 @@ const prepareEvents = sessions =>
 const present = session => {
 	return (
 		<dl key="coordinates" className={style.coordinates}>
+			{presentLocation(session.event.name, session.announcement, session.location)}
 			{session.dates && presentDates(session.dates)}
-			{session.location && presentLocation(session.location)}
 			{session.announcement &&
 				// don't show announcement and sign-up details for past sessions
 				session.dates.from >= DateTime.local() &&
 				presentAnnouncement(session.announcement)}
 		</dl>
+	)
+}
+
+const presentLocation = (name, url, location) => {
+	return (
+		<React.Fragment>
+			<dt>Where?</dt>
+			<dd>
+				{url ? <Link to={url}>{name}</Link> : name}
+				{location && (
+					<React.Fragment>
+						<br />
+						{location.url ? <Link to={location.url}>{location.text}</Link> : location}
+					</React.Fragment>
+				)}
+			</dd>
+		</React.Fragment>
 	)
 }
 
@@ -130,17 +147,6 @@ const presentDates = dates => {
 				<br />
 				<span>{dates.to.toFormat("EEE, MMMM d, yyyy")}</span>
 			</dd>
-		</React.Fragment>
-	)
-}
-
-const presentLocation = location => {
-	const text = location.text || location
-	const url = location.url
-	return (
-		<React.Fragment>
-			<dt>Where?</dt>
-			<dd>{url ? <Link to={url}>{text}</Link> : text}</dd>
 		</React.Fragment>
 	)
 }

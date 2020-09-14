@@ -36,7 +36,7 @@ const TalkLayout = ({title, slug, date, tags, description, intro, featuredImage,
 					{videoSlug && (
 						<React.Fragment>
 							<H2 id="video">Video</H2>
-							<p>Here's a good recording of the talk. Enjoy.</p>
+							<p>Here's a good recording of the talk. I hope you'll like it.</p>
 							<ContentVideo slug={videoSlug} />
 						</React.Fragment>
 					)}

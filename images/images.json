@@ -1161,5 +1161,21 @@
 				"url": "https://creativecommons.org/licenses/by/2.0/"
 			}
 		}
+	},
+	{
+		"slug": "java-after-n",
+		"credits": {
+			"author": {
+				"name": "Joanna Kosinska",
+				"url": "https://unsplash.com/@joannakosinska"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/4dnG4q3kxdg"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
