@@ -2,6 +2,1457 @@
 	"events": [
 		{
 			"event": {
+				"name": "JUG Frankfurt",
+				"url": "https://sites.google.com/site/jugffm/",
+				"image": "jug-ffm"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"announcement": "https://sites.google.com/site/jugffm/home/27-11-2019-java-next---new-releases-amber-valhalla-and-more-goodies",
+					"time": "27.11.2019 1830 Europe/Berlin",
+					"location": "Deutsche Nationalbibliothek, Adickesallee 1, Frankfurt",
+					"slides": "https://slides.codefx.org/java-next/2019-11-27-jug-frankfurt"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "GDG DevFest Karlsruhe",
+				"url": "http://www.devfestka.de/info",
+				"image": "devfest-karlsruhe"
+			},
+			"presentations": [
+				{
+					"talk": "talk-junit-5",
+					"title": "JUnit 5",
+					"program": "http://www.devfestka.de/programm",
+					"time": "09.11.2019 1330 Europe/Berlin",
+					"location": "Karlsruhe, Duale Hochschule, Erzbergerstraße 121",
+					"slides": "https://slides.codefx.org/junit-5/2019-11-09-gdg-devfest"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Hessen",
+				"url": "https://jugh.de",
+				"image": "jug-hessen"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"announcement": "https://www.meetup.com/Java-User-Group-Hessen-JUGH/events/263058106/",
+					"time": "31.10.2019 1800 Europe/Berlin",
+					"location": "Kassel, Ing.-Schule Universität, Raum HS 0315, Wilhelmshöher Allee 73",
+					"slides": "https://slides.codefx.org/java-next/2019-10-31-jug-hessen",
+					"video": "https://www.youtube.com/watch?&v=A-e8fu99R-s"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Accento",
+				"url": "https://accento.dev",
+				"image": "accento"
+			},
+			"presentations": [
+				{
+					"talk": "talk-best-practices-harmful",
+					"title": "Best Practices Considered Harmful",
+					"program": "https://2019.accento.dev/talks",
+					"time": "24.09.2019 1130 Europe/Berlin",
+					"location": "Südwerk, Henriette-Obermüller-Straße 10, Karlsruhe",
+					"slides": "https://slides.codefx.org/best-practices/2019-09-24-accento"
+				},
+				{
+					"talk": "talk-comment-your-code",
+					"title": "Comment Your &*☠# Code!",
+					"programEntry": "https://2019.accento.dev/talks/code-comments/",
+					"time": "24.09.2019 1300 Europe/Berlin",
+					"location": "Südwerk, Henriette-Obermüller-Straße 10, Karlsruhe",
+					"slides": "https://slides.codefx.org/comment-your-code/2019-09-24-accento",
+					"video": "https://www.youtube.com/watch?v=a4BWbbgO67Q"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Virtual JUG",
+				"url": "http://virtualjug.com/",
+				"image": "vjug"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"announcement": "https://www.meetup.com/virtualJUG/events/263744810/",
+					"time": "22.08.2019 1600 UTC",
+					"location": {
+						"text": "virtualjug.com/#live",
+						"url": "http://virtualjug.com/#live"
+					},
+					"slides": "https://slides.codefx.org/java-next/2019-08-22-vjug",
+					"video": "https://www.youtube.com/watch?v=sG6wUipM8mo"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "javaBin Oslo",
+				"url": "https://www.meetup.com/javaBin/",
+				"image": "javabin"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"announcement": "https://www.meetup.com/javaBin/events/262963213/",
+					"time": "14.08.2019 1730 Europe/Oslo",
+					"location": "Teknologihuset, Pilestredet 56, Oslo",
+					"slides": "https://slides.codefx.org/java-next/2019-08-14-javabin",
+					"video": "https://vimeo.com/353981712"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Darmstadt",
+				"url": "http://jug-da.de/",
+				"image": "jug-darmstadt"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-9-migration",
+					"title": "To JAR Hell And Back",
+					"announcement": "https://www.jug-da.de/2019/07/Java-Livecoding/",
+					"time": "10.07.2019 1830 Europe/Berlin",
+					"location": "TU Darmstadt, S2|02 (Robert-Piloty-Geb.), Raum C110, Hochschulstr. 10",
+					"slides": "https://slides.codefx.org/java-9-migration/2019-07-10-jug-darmstadt"
+				},
+				{
+					"talk": "talk-java-var",
+					"title": "Fun with `var`",
+					"announcement": "https://www.jug-da.de/2019/07/Java-Livecoding/",
+					"time": "10.07.2019 1830 Europe/Berlin",
+					"location": "TU Darmstadt, S2|02 (Robert-Piloty-Geb.), Raum C110, Hochschulstr. 10",
+					"slides": "https://slides.codefx.org/java-var/2019-07-10-jug-darmstadt"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Mannheim",
+				"url": "http://www.majug.de/",
+				"image": "jug-mannheim"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"announcement": "http://www.majug.de/2019/07/04/Java-Next/",
+					"time": "04.07.2019 1900 Europe/Berlin",
+					"location": "Uni Mannheim A5, 6 im Raum C013",
+					"slides": "https://slides.codefx.org/java-next/2019-07-04-jug-mannheim"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "ElsassJUG",
+				"url": "https://www.meetup.com/ElsassJUG/",
+				"image": "jug-elsass"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-9-migration",
+					"title": "To JAR Hell And Back",
+					"announcement": "https://www.meetup.com/fr-FR/ElsassJUG/events/262106556/",
+					"time": "03.07.2019 1800 Europe/Paris",
+					"location": "Epitech, 4 rue du Dome, Strasbourg",
+					"slides": "https://slides.codefx.org/java-9-migration/2019-07-03-elsassjug"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Webmontag Karlsruhe",
+				"url": "http://webmontag.de/location/karlsruhe/index",
+				"image": "webmontag-karlsruhe"
+			},
+			"presentations": [
+				{
+					"talk": "talk-best-practices-harmful",
+					"title": "Best Practices Considered Harmful",
+					"time": "03.06.2019 1900 Europe/Berlin",
+					"location": "Pizzahaus,​ Rintheimer Straße 2, Karlsruhe",
+					"slides": "https://slides.codefx.org/best-practices/2019-06-03-webmontag-karlsruhe"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "DevSum 2019",
+				"url": "https://www.devsum.se/",
+				"image": "devsum-2019"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-9-migration",
+					"title": "To JAR Hell And Back",
+					"programEntry": "https://www.devsum.se/sessions/to-jar-hell-and-back-a-live-migration-to-java-11/",
+					"time": "23.05.2019 1410 Europe/Stockholm",
+					"location": "Stockholm, Folkets Hus, Room 307",
+					"slides": "https://slides.codefx.org/java-9-migration/2019-05-23-devsum"
+				},
+				{
+					"talk": "talk-expert-java-8",
+					"title": "Expert Java 8",
+					"programEntry": "https://www.devsum.se/sessions/lambdas-and-streams-for-aficionados/",
+					"time": "24.05.2019 1410 Europe/Stockholm",
+					"location": "Stockholm, Folkets Hus, Room 201",
+					"slides": "https://slides.codefx.org/expert-java-8/2019-05-24-devsum"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Nürnberg",
+				"url": "https://www.xing.com/communities/groups/java-user-group-metropolregion-nuernberg-1063112",
+				"image": "jug-nürnberg"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-module-system",
+					"title": "The Java 9 Module System",
+					"announcement": "https://www.xing.com/events/getting-started-with-the-java-9-module-system-2089281",
+					"time": "29.04.2019 1800 Europe/Berlin",
+					"location": "DATEV eg – Kegelbahn, Südliche Früher Straße 18-20, Nürnberg",
+					"slides": "https://slides.codefx.org/jpms/2019-04-29-jug-nuernberg"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JEEConf",
+				"url": "http://jeeconf.com/",
+				"image": "jee-conf"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-var",
+					"title": "Fun With `var`",
+					"programEntry": "https://jeeconf.com/program/fun-with-var/",
+					"time": "26.04.2019 1105 Europe/Kiev",
+					"location": "Kiev, Mercure Congress Hall, Track D",
+					"slides": "https://slides.codefx.org/java-var/2019-04-26-jeeconf"
+				},
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"programEntry": "https://jeeconf.com/program/java-next-new-releases-amber-valhalla-and-more-goodies/",
+					"time": "26.04.2019 1400 Europe/Kiev",
+					"location": "Kiew, Mercure Congress Hall, Track A",
+					"slides": "https://slides.codefx.org/java-next/2019-04-26-jeeconf"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JavaLand",
+				"url": "http://www.javaland.eu/de/home/",
+				"image": "javaland-2019"
+			},
+			"presentations": [
+				{
+					"talk": "talk-comment-your-code",
+					"title": "Comment Your &*☠# Code!",
+					"programEntry": "https://programm.javaland.eu/2019/#/scheduledEvent/569986",
+					"time": "19.03.2019 1600 Europe/Berlin",
+					"location": "Brühl, Phantasialand, Silverado Theater",
+					"slides": "https://slides.codefx.org/comment-your-code/2019-03-19-javaland",
+					"video": "https://www.javaland.eu/de/home/news/details/?tx_news_pi1%5Bnews%5D=1917&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=5e6b61c02a21eaa23721233369eaf6a2"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Java Saigon",
+				"url": "https://www.meetup.com/Java-Saigon/events/",
+				"image": "java-saigon"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"announcement": "https://www.meetup.com/Java-Saigon/events/259154363/",
+					"time": "27.02.2019 1800 Asia/Ho_Chi_Minh",
+					"location": "Ho Chi Minh City, Quận Tân Bình, 364 Cộng Hòa, e.town 1 Building, Unit 7.10",
+					"slides": "http://slides.codefx.org/java-next/2019-02-27-java-saigon"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Bangladesh",
+				"url": "https://www.meetup.com/de-DE/jug-bd/",
+				"image": "jug-bangladesh"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"announcement": "https://www.meetup.com/jug-bd/events/256515384/",
+					"time": "13.12.2018 2200 Asia/Dhaka",
+					"slides": "https://slides.codefx.org/java-next/2018-12-13-jug-bd"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Virtual JUG",
+				"url": "http://virtualjug.com/",
+				"image": "vjug"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-var",
+					"title": "Fun with `var` in Java 10",
+					"announcement": "https://www.meetup.com/virtualJUG/events/256608944/",
+					"time": "12.12.2018 1700 UTC",
+					"location": {
+						"text": "virtualjug.com/#live",
+						"url": "http://virtualjug.com/#live"
+					},
+					"slides": "https://slides.codefx.org/java-var/2018-12-12-vjug",
+					"video": "https://www.youtube.com/watch?v=TIumzU4dhRk"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Devoxx Belgium",
+				"url": "https://devoxx.be/",
+				"image": "devoxx-be"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-9-migration",
+					"title": "To JAR Hell And Back",
+					"programEntry": "https://dvbe18.confinabox.com/talk/NUP-3481/To_JAR_Hell_And_Back_-_A_Live_Migration_to_Java_11",
+					"time": "14.11.2018 1200 Europe/Brussels",
+					"location": "Antwerpen, Kinepolis, Room 8",
+					"slides": "https://slides.codefx.org/java-9-migration/2018-11-14-devoxxbe",
+					"video": "https://www.youtube.com/watch?v=xKmv24_2Asw"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "J-Fall",
+				"url": "https://jfall.nl/",
+				"image": "j-fall"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-var",
+					"title": "Fun with `var` in Java 10",
+					"programEntry": "https://jfall.nl/sessions/fun-with-var-in-java-11/",
+					"time": "08.11.2018 1650 Europe/Amsterdam",
+					"location": "Pathé Ede, Zaal 1",
+					"slides": "https://slides.codefx.org/java-var/2018-11-08-j-fall",
+					"video": "https://www.youtube.com/watch?v=BdnaXuthR-U"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Trondheim Developer Conference",
+				"url": "https://2018.trondheimdc.no/",
+				"image": "tdc"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"program": "https://2018.trondheimdc.no/program",
+					"time": "22.10.2018 1015 Europe/Oslo",
+					"location": "Trondheim, Clarion Congress",
+					"slides": "https://slides.codefx.org/java-next/2018-10-22-tdc"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Jokerconf",
+				"url": "https://jokerconf.com/en/",
+				"image": "jokerconf"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 11 Is Here!",
+					"programEntry": "https://jokerconf.com/en/2018/talks/1hk3oploee6cyq80i664co/",
+					"time": "19.10.2018 1200 Europe/Moscow",
+					"location": "Saint Petersburg, Expoforum, Track 1",
+					"slides": "https://slides.codefx.org/java-x/2018-10-19-jokerconf"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Softwerkskammer Karlsruhe",
+				"url": "https://www.softwerkskammer.org/groups/karlsruhe",
+				"image": "softwerkskammer"
+			},
+			"presentations": [
+				{
+					"talk": "talk-comment-your-code",
+					"title": "Comment That Damn Code!",
+					"announcement": "https://www.softwerkskammer.org/activities/ka-treffen-85/",
+					"time": "02.10.2018 1930 Europe/Berlin",
+					"location": "Karlsruhe, diva-e Platforms GmbH, Ludwig-Erhard-Allee 20",
+					"slides": "https://slides.codefx.org/comment-your-code/2018-10-02-softwerkskammer-karlsruhe"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "jDays",
+				"url": "https://jdays.se/",
+				"image": "jdays"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 11 Is Here!",
+					"program": "https://jdays.se/schedule/",
+					"time": "25.09.2018 1045 Europe/Stockholm",
+					"location": "Gothenburg, Clarion Hotel Post, Brevsalen 1",
+					"slides": "https://slides.codefx.org/java-x/2018-09-25-jdays"
+				},
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"program": "https://jdays.se/schedule/",
+					"time": "25.09.2018 1430 Europe/Stockholm",
+					"location": "Gothenburg, Clarion Hotel Post, Brevsalen 1",
+					"slides": "https://slides.codefx.org/java-next/2018-09-25-jdays"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JavaZone",
+				"url": "https://2018.javazone.no",
+				"image": "javazone-2018"
+			},
+			"presentations": [
+				{
+					"talk": "talk-comment-your-code",
+					"title": "Comment That Damn Code!",
+					"programEntry": "https://2018.javazone.no/program/6fdd1618-4f7e-4186-8081-e92768f60e9d",
+					"time": "12.09.2018 1820 Europe/Oslo",
+					"location": "Oslo Spektrum, Room 7",
+					"slides": "https://slides.codefx.org/comment-your-code/2018-09-12-javazone",
+					"video": "https://vimeo.com/289655623"
+				},
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"programEntry": "https://2018.javazone.no/program/84afe8de-ee8a-4540-a9dc-bab395d0b2af",
+					"time": "13.09.2018 1700 Europe/Oslo",
+					"location": "Oslo Spektrum, Room 6",
+					"slides": "https://slides.codefx.org/java-next/2018-09-13-javazone",
+					"video": "https://vimeo.com/289852355"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Berlin Expert Days",
+				"url": "http://bed-con.org/2018/",
+				"image": "bedcon-2018"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"program": "http://bed-con.org/2018/programm",
+					"time": "07.09.2018 1020 Europe/Berlin",
+					"location": "Urania Berlin, Humboldtsaal",
+					"slides": "https://slides.codefx.org/java-next/2018-09-07-bed-con"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Write the Docs Karlsruhe",
+				"url": "https://www.meetup.com/de-DE/Write-the-Docs-Karlsruhe/",
+				"image": "write-the-docs"
+			},
+			"presentations": [
+				{
+					"talk": "talk-comment-your-code",
+					"title": "Comment That Damn Code!",
+					"announcement": "https://www.meetup.com/de-DE/Write-the-Docs-Karlsruhe/events/250444386/",
+					"time": "09.07.2018 1830 Europe/Berlin",
+					"location": "Karlsruhe, connyun GmbH, Alter Schlachthof 51",
+					"slides": "https://slides.codefx.org/comment-your-code/2018-07-09-write-the-docs"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "inovex Meetup",
+				"url": "https://www.meetup.com/inovex-karlsruhe",
+				"image": "inovex"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-9-migration",
+					"title": "To JAR Hell And Back",
+					"announcement": "https://www.meetup.com/de-DE/inovex-karlsruhe/events/249381296",
+					"time": "26.06.2018 1800 Europe/Berlin",
+					"location": "Karlsruhe, inovex office, Ludwig-Erhard-Allee 6",
+					"slides": "https://slides.codefx.org/java-9-migration/2018-06-26-inovex"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "GeekOut",
+				"url": "https://2018.geekout.ee/",
+				"image": "geekout"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next – New Releases, Valhalla, Amber, and More Goodies",
+					"programEntry": "https://2018.geekout.ee/nicolai-parlog",
+					"time": "07.06.2018 1330 Europe/Tallinn",
+					"location": "Tallinn, Kultuurikatel, Room 1",
+					"slides": "https://slides.codefx.org/java-next/2018-06-07-geekout",
+					"video": "https://player.vimeo.com/video/274558807"
+				},
+				{
+					"talk": "talk-java-9-migration",
+					"title": "To JAR Hell And Back",
+					"programEntry": "https://2018.geekout.ee/nicolai-parlog",
+					"time": "08.06.2018 1130 Europe/Tallinn",
+					"location": "Tallinn, Kultuurikatel, Room 1",
+					"slides": "https://slides.codefx.org/java-9-migration/2018-06-08-geekout",
+					"video": "https://player.vimeo.com/video/274560367"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Riga DevDays",
+				"url": "http://rigadevdays.lv/",
+				"image": "riga-dev-days"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next – New Releases, Valhalla, Amber, and More Goodies",
+					"programEntry": "https://rigadevdays.lv/schedule/2018-05-30?sessionId=153",
+					"time": "30.05.2018 1200 Europe/Riga",
+					"location": "Riga, Kino Citadele, Room 3",
+					"slides": "https://slides.codefx.org/java-next/2018-05-30-rigadevdays"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Devoxx UK",
+				"url": "https://www.devoxx.co.uk/",
+				"image": "devoxx-uk"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-9-migration",
+					"title": "To JAR Hell And Back",
+					"programEntry": "https://cfp.devoxx.co.uk/2018/talk/VMP-3166/To_JAR_Hell_And_Back_-_A_Live_Migration_to_Java_9",
+					"time": "11.05.2018 0900 Europe/London",
+					"location": "London Islington, Business Design Centre, 52 Upper Street",
+					"slides": "https://slides.codefx.org/java-9-migration/2018-05-11-devoxxuk",
+					"video": "https://www.youtube.com/watch?v=ZF_WLtbEfqA"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Java Saigon",
+				"url": "https://www.meetup.com/Java-Saigon/events/",
+				"image": "java-saigon"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-module-system",
+					"title": "The Java 9 Module System",
+					"announcement": "https://www.meetup.com/Java-Saigon/events/248885704/",
+					"time": "30.03.2018 1700 Asia/Ho_Chi_Minh",
+					"location": "Ho Chi Minh City, CirCO, 1st Floor, H3 Building, 384 Hoàng Diệu, phường 6, Quận 4",
+					"slides": "http://slides.codefx.org/jpms/2018-03-30-javasaigon",
+					"video": "https://www.youtube.com/watch?v=HXnqYF2Csho"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JavaLand",
+				"url": "http://www.javaland.eu/de/home/",
+				"image": "javaland-2018"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-module-system",
+					"title": "The Java 9 Module System",
+					"programEntry": "https://programm.javaland.eu/2018/talk.html#talk?talkId=548942",
+					"time": "13.03.2018 1700 Europe/Berlin",
+					"location": "Brühl, Phantasialand, Silverado Theater",
+					"slides": "http://slides.codefx.org/jpms/2018-03-13-javaland"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Voxxed Days Zürich",
+				"url": "https://voxxeddays.com/zurich/",
+				"image": "voxxed-days-zurich"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-module-system",
+					"title": "The Java 9 Module System",
+					"announcement": "https://cfp-vdz.exteso.com/2018/talk/KAR-2047",
+					"time": "08.03.2018 1120 Europe/Zurich",
+					"location": "Zürich, Arena Cinema Sihlcity, Room 3",
+					"slides": "http://slides.codefx.org/jpms/2018-03-08-voxxed-days-zürich",
+					"video": "https://www.youtube.com/watch?v=pfXsQyToipM"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Jfokus",
+				"url": "https://www.jfokus.se/jfokus/index.jsp",
+				"image": "jfokus-2018"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-module-system",
+					"title": "The Java 9 Module System",
+					"programEntry": "https://www.jfokus.se/jfokus/talks.jsp#Gettingyourhandsdirt",
+					"time": "05.02.2018 0900 Europe/Stockholm",
+					"location": "Stockholm Waterfront Conference, Room 22",
+					"slides": "http://slides.codefx.org/jpms/2018-02-05-jfokus"
+				},
+				{
+					"talk": "talk-java-9-migration",
+					"title": "To JAR Hell And Back",
+					"programEntry": "https://www.jfokus.se/jfokus/talks.jsp#ToJARHellAndBack-ALi",
+					"time": "06.02.2018 1100 Europe/Stockholm",
+					"location": "Stockholm Waterfront Conference, Room A1",
+					"slides": "http://slides.codefx.org/java-9-migration/2018-02-06-jfokus",
+					"video": "https://www.youtube.com/watch?v=FH8ncXalmAg"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "jProfessionals: Winter Edition",
+				"url": "https://jug.bg/events/jprofessionals-winter-edition/",
+				"image": "jprofessionals-2018"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-9-migration",
+					"title": "To JAR Hell And Back",
+					"announcement": "https://jug.bg/events/jprofessionals-winter-edition/",
+					"time": "27.01.2018 1430 Europe/Sofia",
+					"location": "Sofia, Capital Fort",
+					"slides": "http://slides.codefx.org/java-9-migration/2018-01-27-jprofessionals"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Code Europe, Wroclaw",
+				"url": "https://www.codeeurope.pl/en",
+				"image": "code-europe"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 9 Is Here!",
+					"programEntry": "https://www.codeeurope.pl/en/speakers/nicolai-parlog",
+					"time": "13.12.2017 1420 Europe/Warsaw",
+					"location": "Wroclaw, Hala Stulecia, Room Redmond",
+					"slides": "http://slides.codefx.org/java-9/2017-12-13-codeeurope",
+					"video": "https://www.youtube.com/watch?v=kgBRlIWgDuw"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Gesellschaft für Informatik, Dortmund",
+				"url": "https://rg-dortmund.gi.de",
+				"image": "gesellschaft-informatik"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 9 Is Here!",
+					"announcement": "https://rg-dortmund.gi.de/veranstaltung/neues-in-java-9",
+					"time": "04.12.2017 1900 Europe/Berlin",
+					"location": "Mercure Hotel Dortmund, Olpe 2",
+					"slides": "http://slides.codefx.org/java-9/2017-12-04-gi-dortmund"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JavaDay",
+				"url": "http://javaday.org.ua",
+				"image": "javaday-2017"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-module-system",
+					"title": "The Java 9 Module System",
+					"programEntry": "http://javaday.org.ua/nicolai-parlog-the-java-9-module-system-beyond-the-basics/",
+					"time": "04.11.2017 1610 Europe/Kiev",
+					"location": "Kiev, Convention Center “Parkovy”, Parkova road 16a, Track 1",
+					"slides": "http://slides.codefx.org/jpms/2017-11-04-javaday",
+					"video": "https://www.youtube.com/watch?v=FvEboOV7PQA"
+				},
+				{
+					"talk": "talk-java-9-migration",
+					"title": "To JAR Hell And Back",
+					"programEntry": "http://javaday.org.ua/to-jar-hell-and-back-a-live-migration-to-the-java-9-module-system/",
+					"time": "05.11.2017 1400 Europe/Kiev",
+					"location": "Kiev, Convention Center “Parkovy”, Parkova road 16a, Track 1",
+					"slides": "http://slides.codefx.org/java-9-migration/2017-11-05-javaday",
+					"video": "https://www.youtube.com/watch?v=UEXfGL5K8eU"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "BaselOne",
+				"url": "http://baselone.ch/",
+				"image": "basel-one-2017"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-module-system",
+					"title": "The Java 9 Module System",
+					"program": "https://2018.baselone.ch/archive/2017/index.html#programm",
+					"time": "19.10.2017 1130 Europe/Zurich",
+					"location": "Basel, Markthalle Basel, Viaduktstrasse 10",
+					"slides": "http://slides.codefx.org/jpms/2017-10-19-baselone"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Objektforum Frankfurt",
+				"url": "https://www.andrena.de/objektforum",
+				"image": "objektforum-ffm"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 9 Is Here!",
+					"announcement": "https://www.andrena.de/event/java-9-kommt",
+					"time": "26.09.2017 1830 Europe/Berlin",
+					"location": "Frankfurt, Saalbau Gutleut, Rottweiler Straße 32",
+					"slides": "http://slides.codefx.org/java-9/2017-09-26-objektforum-frankfurt"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "ObjektForum Stuttgart",
+				"url": "http://www.jugs.org/",
+				"image": "jug-stutgart"
+			},
+			"presentations": [
+				{
+					"talk": "talk-expert-java-8",
+					"title": "Expert Java 8",
+					"announcement": "http://jugs.org/va2017/09-18.html",
+					"time": "18.09.2017 1830 Europe/Berlin",
+					"location": "Stuttgart, SODEXO, Wankelstraße 12",
+					"slides": "http://slides.codefx.org/expert-java-8/2017-09-18-objektforum-stuttgart"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JavaZone",
+				"url": "https://2017.javazone.no",
+				"image": "javazone-2017"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-9-migration",
+					"title": "To JAR Hell And Back",
+					"programEntry": "https://2017.javazone.no/program/cf1d1c8380994a24a86b87251b58ace3",
+					"time": "13.09.2017 1300 Europe/Oslo",
+					"location": "Oslo",
+					"slides": "http://slides.codefx.org/java-9-migration/2017-09-13-javazone",
+					"video": "https://vimeo.com/233801793",
+					"misc": [
+						{
+							"text": "impressions",
+							"url": "/impressions-javazone-2017"
+						},
+						{
+							"text": "visual notes",
+							"url": "https://sleepingpill.javazone.no/public/picture/e02d727fff0b45648ee8299ea7990b12"
+						}
+					]
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Java Forum Nord",
+				"url": "http://javaforumnord.de/",
+				"image": "javaforumnord"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 9 Is Here!",
+					"programEntry": "http://www.javaforumnord.de/site/2017/page/Talk-109",
+					"time": "12.09.2017 1300 Europe/Berlin",
+					"location": "Hannover, Hotel Dormero, Saal 1",
+					"slides": "http://slides.codefx.org/java-9/2017-09-12-javaforumnord"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Virtual JUG",
+				"url": "http://virtualjug.com/",
+				"image": "vjug"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-9-migration",
+					"title": "To JAR Hell And Back",
+					"announcement": "https://www.meetup.com/virtualJUG/events/240448837/",
+					"time": "25.07.2017 1600 UTC",
+					"location": {
+						"text": "virtualjug.com/#live",
+						"url": "http://virtualjug.com/#live"
+					},
+					"slides": "http://slides.codefx.org/java-9-migration/2017-07-25-vjug",
+					"video": "https://www.youtube.com/watch?v=NKY2FYTCo7I"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Dortmund",
+				"url": "https://www.jugdo.de/",
+				"image": "jug-dortmund"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 9 Is Coming!",
+					"announcement": "https://www.jugdo.de/2017/05/03/talk-im-juli-java-9-kommt/",
+					"time": "11.07.2017 1900 Europe/Berlin",
+					"location": "Dortmund, adesso AG, Stockholmer Allee 20",
+					"slides": "http://slides.codefx.org/java-9/2017-07-11-jug-dortmund"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Bremen",
+				"url": "https://www.meetup.com/jugbremen/",
+				"image": "jug-bremen"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 9 Is Coming!",
+					"announcement": "https://www.meetup.com/jugbremen/events/239511640/",
+					"time": "21.06.2017 1830 Europe/Berlin",
+					"location": "Bremen, team neusta, Konsul-Smidt-Straße 24",
+					"slides": "http://slides.codefx.org/java-9/2017-06-21-jug-bremen"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Ostfalen",
+				"url": "http://www.jug-ostfalen.de/",
+				"image": "jug-ostfalen"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 9 Is Coming!",
+					"announcement": "http://www.jug-ostfalen.de/event/2017/05/18/java-9.html",
+					"time": "18.05.2017 1900 Europe/Berlin",
+					"location": "Braunschweig, CKC Group, Am Alten Bahnhof 13",
+					"slides": "http://slides.codefx.org/java-9/2017-05-18-jug-ostfalen",
+					"video": "https://www.youtube.com/watch?v=-aj2GiWhDkM"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Riga DevDays",
+				"url": "http://rigadevdays.lv/",
+				"image": "riga-dev-days"
+			},
+			"presentations": [
+				{
+					"talk": "talk-junit-5",
+					"title": "JUnit 5",
+					"programEntry": "http://rigadevdays.lv/schedule/day2?sessionId=134",
+					"time": "16.05.2017 1545 Europe/Riga",
+					"location": "Riga, Kino Citadele, Room 6",
+					"slides": "http://slides.codefx.org/junit-5/2017-05-16-rigadevdays",
+					"video": "https://www.youtube.com/watch?v=OA3UJYxTBRA",
+					"misc": [
+						{
+							"test": "gave a Java 9 workshop",
+							"url": "/course-java-x"
+						}
+					]
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Objektforum Karlsruhe",
+				"url": "https://www.andrena.de/objektforum",
+				"image": "objektforum-ka"
+			},
+			"presentations": [
+				{
+					"talk": "talk-expert-java-8",
+					"title": "Expert Java 8",
+					"announcement": "https://www.andrena.de/event/objektforum-karlsruhe-266",
+					"time": "03.04.2017 1830 Europe/Berlin",
+					"location": "Karlsruhe, Technologiepark Casino, Albert-Nestler-Str.10",
+					"slides": "http://slides.codefx.org/expert-java-8/2017-04-03-objektforumkarlsruhe"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JavaLand",
+				"url": "http://www.javaland.eu/de/home/",
+				"image": "javaland-2017"
+			},
+			"presentations": [
+				{
+					"talk": "talk-junit-5",
+					"title": "JUnit 5",
+					"programEntry": "https://www.doag.org/konferenz/konferenzplaner/konferenzplaner_details.php?id=522447&locS=0&vid=529384",
+					"time": "28.03.2017 1300 Europe/Berlin",
+					"location": "Brühl, Phantasialand, Eventhalle",
+					"slides": "http://slides.codefx.org/junit-5/2017-03-28-javaland",
+					"misc": [
+						{
+							"text": "NightHacking session exploring JUnit 5's parameterized tests",
+							"url": "/junit-5-parameterized-tests-nighthacking"
+						}
+					]
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Freiburg",
+				"url": "https://jugfr.de/",
+				"image": "jug-fr"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 9 Is Coming!",
+					"announcement": "https://www.meetup.com/Java-User-Group-Freiburg/events/237532610/?_locale=de-DE",
+					"time": "06.03.2017 1930 Europe/Berlin",
+					"location": "Freiburg, Munzinger Straße 9, Haufe-Lexware",
+					"slides": "http://slides.codefx.org/java-9/2017-03-06-jug-fr"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Voxxed Days Zürich",
+				"url": "https://voxxeddays.com/zurich/",
+				"image": "voxxed-days-zurich"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 9 Is Coming!",
+					"announcement": "https://cfp-vdz.exteso.com/2017/talk/JYZ-6493/Java_9_Is_Coming_",
+					"time": "23.02.2017 1330 Europe/Zurich",
+					"location": "Zürich, Arena Cinema Sihlcity, Room 2",
+					"slides": "http://slides.codefx.org/java-9/2017-02-23-voxxed-days-zuerich",
+					"video": "https://www.youtube.com/watch?v=vOdFuvIyN0E"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Frankfurter Entwicklertag",
+				"url": "https://entwicklertag.de/frankfurt/2017/",
+				"image": "frankfurter-entwicklertag"
+			},
+			"presentations": [
+				{
+					"talk": "talk-junit-5",
+					"title": "JUnit 5",
+					"announcement": "https://entwicklertag.de/frankfurt/2017/junit-5-next-generation-testing-jvm",
+					"time": "16.02.2017 1140 Europe/Berlin",
+					"location": "Frankfurt, Goethe-Universität – Casino Gebäude, Seminarraum 1.812",
+					"slides": "http://slides.codefx.org/junit-5/2017-02-16-etffm"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "European Testing Conference",
+				"url": "http://europeantestingconference.eu/2017/",
+				"image": "etc"
+			},
+			"presentations": [
+				{
+					"talk": "talk-junit-5",
+					"title": "JUnit 5",
+					"programEntry": "http://europeantestingconference.eu/2017/topics/#nicolai-parlog",
+					"time": "09.02.2017 1020 Europe/Helsinki",
+					"location": "Helsinki, Wanha Satama",
+					"slides": "http://slides.codefx.org/junit-5/2017-02-09-etc"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Jfokus",
+				"url": "https://www.jfokus.se/jfokus/index.jsp",
+				"image": "jfokus-2017"
+			},
+			"presentations": [
+				{
+					"talk": "talk-expert-java-8",
+					"title": "Expert Java 8",
+					"programEntry": "https://www.jfokus.se/jfokus/talks.jsp#ExpertJava8",
+					"time": "07.02.2017 1100 Europe/Stockholm",
+					"location": "Stockholm Waterfront Conference, Room A1",
+					"slides": "http://slides.codefx.org/expert-java-8/2017-02-07-jfokus",
+					"video": "https://www.youtube.com/watch?v=J3mDjgdZJSc"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Karlsruhe",
+				"url": "http://jug-karlsruhe.de/",
+				"image": "jug-karlsruhe"
+			},
+			"presentations": [
+				{
+					"talk": "talk-junit-5",
+					"title": "JUnit 5",
+					"announcement": "http://jug-karlsruhe.de/content/junit-workshop/",
+					"time": "25.01.2017 1800 Europe/Berlin",
+					"location": "Citrix – GetGo Germany GmbH, Alter Schlachthof 51",
+					"slides": "https://slides.codefx.org/junit-5/2017-01-25-JUG-Karlsruhe",
+					"misc": [
+						{
+							"text": "workshop sources",
+							"url": "https://github.com/junit-team/junit5-workshop"
+						}
+					]
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Darmstadt",
+				"url": "http://jug-da.de/",
+				"image": "jug-darmstadt"
+			},
+			"presentations": [
+				{
+					"talk": "talk-junit-5",
+					"title": "JUnit 5",
+					"announcement": "http://jug-da.de/2017/01/JUnit5/",
+					"time": "19.01.2017 1830 Europe/Berlin",
+					"location": "TU Darmstadt, S2|02 Raum C110",
+					"slides": "https://slides.codefx.org/junit-5/2017-01-19-JUG-Darmstadt"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Mannheim",
+				"url": "http://www.majug.de/",
+				"image": "jug-mannheim"
+			},
+			"presentations": [
+				{
+					"talk": "talk-junit-5",
+					"title": "JUnit 5",
+					"announcement": "http://www.majug.de/2017/01/12/junit5-next-generation/",
+					"time": "12.01.2017 1900 Europe/Berlin",
+					"location": "University of Mannheim A5, 6; Room C013",
+					"slides": "https://slides.codefx.org/junit-5/2017-01-12-JUG-Mannheim"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "GDG DevFest Karlsruhe",
+				"url": "http://www.devfestka.de/info",
+				"image": "devfest-karlsruhe"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-module-system",
+					"title": "The Java 9 Module System In Action",
+					"program": "http://www.devfestka.de/programm",
+					"time": "21.11.2016 1145 Europe/Berlin",
+					"location": "Karlsruhe, Schauburg, Bambi",
+					"slides": "https://slides.codefx.org/jpms/2016-11-21-Devfest-Ka"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "ModConf",
+				"url": "https://web.liferay.com/web/events2016/modconf/",
+				"image": "modconf"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-module-system",
+					"title": "The Java 9 Module System In Action",
+					"program": "https://web.liferay.com/web/events2016/modconf#agenda",
+					"time": "15.11.2016 1145 Europe/Berlin",
+					"location": "Darmstadt, Science and Congress Centre",
+					"slides": "https://slides.codefx.org/jpms/2016-11-15-Modconf",
+					"video": "https://www.youtube.com/watch?v=gfm_yUwjB-0"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JVM Group Stockholm"
+			},
+			"presentations": [
+				{
+					"talk": "talk-junit-5",
+					"title": "JUnit 5",
+					"time": "10.11.2016 1800 Europe/Stockholm",
+					"location": "Stockholm, Regeringsgatan 20",
+					"slides": "https://slides.codefx.org/junit-5/2016-11-10-JVM-Group-Stockholm"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Devoxx Belgium",
+				"url": "https://devoxx.be/",
+				"image": "devoxx-be"
+			},
+			"presentations": [
+				{
+					"talk": "talk-junit-5",
+					"title": "JUnit 5",
+					"programEntry": "http://cfp.devoxx.be/2016/talk/PPQ-9247/JUnit_5:_Next_Generation_Testing_on_the_JVM",
+					"time": "08.11.2016 1815 Europe/Brussels",
+					"location": "Antwerpen, Kinepolis, Room 8",
+					"slides": "https://slides.codefx.org/junit-5/2016-11-08-DevoxxBE",
+					"video": "https://www.youtube.com/watch?v=VfC00bby8XQ",
+					"misc": [
+						{
+							"text": "Interview On JUnit 5 - Rewrite, Architecture, Extensions",
+							"url": "/junit-5-rewrite-architecture-extensions"
+						}
+					]
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "javaBin Trondheim",
+				"url": "http://www.meetup.com/javaBin-Trondheim/",
+				"image": "javabin"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-module-system",
+					"title": "The Java Module System In Action",
+					"announcement": "http://www.meetup.com/javaBin-Trondheim/events/231696590/",
+					"time": "01.11.2016 1800 Europe/Oslo",
+					"location": "Trondheim, DIGS, Olav Tryggvasonsgt. 30",
+					"slides": "https://slides.codefx.org/jpms/2016-11-01-javaBin"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Trondheim Developer Conference",
+				"url": "http://2016.trondheimdc.no/about",
+				"image": "tdc"
+			},
+			"presentations": [
+				{
+					"talk": "talk-junit-5",
+					"title": "JUnit 5",
+					"program": "http://2016.trondheimdc.no/program",
+					"time": "31.10.2016 1145 Europe/Oslo",
+					"location": "Trondheim, Clarion Trondheim, Sal 3",
+					"slides": "https://slides.codefx.org/junit-5/2016-10-31-TDC",
+					"video": "https://vimeo.com/189721692"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Java Forum Nord",
+				"url": "http://javaforumnord.de/",
+				"image": "javaforumnord"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-module-system",
+					"title": "The Java Module System",
+					"program": "http://javaforumnord.de/site/2016/#programme",
+					"time": "20.10.2016 1600 Europe/Berlin",
+					"location": "Hannover, Hotel Dormero",
+					"slides": "https://slides.codefx.org/jpms/2016-10-20-Java-Forum-Nord"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JAX London",
+				"url": "https://jaxlondon.com/",
+				"image": "jax-london"
+			},
+			"presentations": [
+				{
+					"talk": "talk-junit-5",
+					"title": "JUnit 5",
+					"programEntry": "https://jaxlondon.com/session/junit-5-next-generation-testing-on-the-jvm/",
+					"time": "12.10.2016 1630 Europe/London",
+					"location": "London Islington, Business Design Centre",
+					"slides": "https://slides.codefx.org/junit-5/2016-10-12-JAXLondon"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Switzerland",
+				"url": "http://jug.ch/",
+				"image": "jug-ch"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-module-system",
+					"title": "The Java 9 Module System In Action",
+					"announcement": "https://www.jug.ch/html/events/2016/jigsaw_zh.html",
+					"time": "26.09.2016 1815 Europe/Zurich",
+					"location": "Zürich (26.09.), Bern (27.09.), Luzern (28.09.), St.Gallen (29.09.)",
+					"slides": "https://slides.codefx.org/jpms/2016-09-29-JUG-Ch"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JavaZone",
+				"url": "https://2016.javazone.no/info",
+				"image": "javazone-2016"
+			},
+			"presentations": [
+				{
+					"talk": "talk-junit-5",
+					"title": "JUnit 5",
+					"programEntry": "https://2016.javazone.no/program/j-unit-5-next-generation-testing-on-the-jvm",
+					"time": "08.09.2016 1540 Europe/Oslo",
+					"location": "Oslo, Oslo Spektrum, Room 1",
+					"slides": "https://slides.codefx.org/junit-5/2016-09-08-JavaZone",
+					"video": "https://vimeo.com/182074594"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Virtual JUG",
+				"url": "http://www.meetup.com/virtualJUG/",
+				"image": "vjug"
+			},
+			"presentations": [
+				{
+					"talk": "talk-junit-5",
+					"title": "JUnit 5",
+					"announcement": "http://www.meetup.com/virtualJUG/events/232090674/",
+					"time": "19.07.2016 1600 UTC",
+					"location": {
+						"text": "virtualjug.com/#live",
+						"url": "http://virtualjug.com/#live"
+					},
+					"slides": "https://slides.codefx.org/junit-5/2016-07-19-vJUG",
+					"video": "https://www.youtube.com/watch?v=ct9sIsrnE9Y",
+					"misc": [
+						{
+							"text": "Rebellabs created a writeup of my talk",
+							"url": "http://zeroturnaround.com/rebellabs/junit-5-next-generation-testing-on-the-jvm-with-nicolai-parlog"
+						}
+					]
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Objektforum Karlsruhe",
+				"url": "https://www.andrena.de/objektforum",
+				"image": "objektforum-ka"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-module-system",
+					"title": "The Java Module System",
+					"announcement": "https://www.andrena.de/event/objektforum-karlsruhe-juli2016",
+					"time": "04.07.2016 1830 Europe/Berlin",
+					"location": "Karlsruhe, Technologiepark Casino, Albert-Nestler-Str.10",
+					"slides": "https://slides.codefx.org/jpms/2016-07-04-Objektforum-Karlsruhe"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Devoxx Poland",
+				"url": "http://devoxx.pl/",
+				"image": "devoxx-pl-2016"
+			},
+			"presentations": [
+				{
+					"talk": "talk-junit-5",
+					"title": "JUnit 5",
+					"programEntry": "http://cfp.devoxx.pl/2016/talk/OOT-4758",
+					"time": "24.06.2016 0900 Europe/Warsaw",
+					"location": "Krakow, ICE Congress Centre, Room 1",
+					"slides": "https://slides.codefx.org/junit-5/2016-06-24-DevoxxPL",
+					"video": "https://www.youtube.com/watch?v=oG80XZUN1lQ"
+				},
+				{
+					"talk": "talk-comment-your-code",
+					"title": "Comment Your &*☠# Code!",
+					"programEntry": "http://cfp.devoxx.pl/2016/talk/YNB-4234",
+					"time": "24.06.2016 1020 Europe/Warsaw",
+					"location": "Krakow, ICE Congress Centre, Room 3",
+					"slides": "https://slides.codefx.org/comment-your-code/2016-06-24-DevoxxPL",
+					"video": "https://www.youtube.com/watch?v=t_PEeSMqztc"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JEEConf",
+				"url": "http://jeeconf.com/",
+				"image": "jee-conf"
+			},
+			"presentations": [
+				{
+					"talk": "talk-junit-5",
+					"title": "JUnit 5",
+					"programEntry": "http://jeeconf.com/program/junit-5-next-generation-testing-on-the-jvm/",
+					"time": "20.05.2016 1200 Europe/Kiev",
+					"location": "Kiew, Parkovyi Convention Center, Track E",
+					"slides": "https://slides.codefx.org/junit-5/2016-05-20-JEEConf",
+					"video": "https://www.youtube.com/watch?v=857I8Fo-Wxg"
+				},
+				{
+					"talk": "talk-java-module-system",
+					"title": "The Java Module System In Action",
+					"programEntry": "http://jeeconf.com/program/jigsaw-walkthrough-modularize-your-java-application/",
+					"time": "20.05.2016 1530 Europe/Kiev",
+					"location": "Kiew, Parkovyi Convention Center, Track A",
+					"slides": "https://slides.codefx.org/jpms/2016-05-20-JEEConf",
+					"video": "https://www.youtube.com/watch?v=0M72pH2rXwA"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Mannheim",
+				"url": "http://www.majug.de/",
+				"image": "jug-mannheim"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-module-system",
+					"title": "Jigsaw Walkthrough",
+					"announcement": "http://www.majug.de/2016/05/12/Jigsaw-Walkthrough/",
+					"time": "12.05.2016 1900 Europe/Berlin",
+					"location": "University of Mannheim A5, 6; Room C013",
+					"slides": "https://slides.codefx.org/jpms/2016-05-12-JUG-Mannheim"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Stuttgart",
+				"url": "http://www.jugs.org/",
+				"image": "jug-stutgart"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-module-system",
+					"title": "Jigsaw Walkthrough",
+					"announcement": "http://www.jugs.org/va2016/04-14.html",
+					"time": "14.04.2016 1830 Europe/Berlin",
+					"location": "Stuttgart, Alte Scheuer Degerloch, Agnes-Kneher-Platz",
+					"slides": "https://slides.codefx.org/jpms/2016-04-14-JUG-Stuttgart"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Karlsruhe",
+				"url": "http://jug-karlsruhe.de/",
+				"image": "jug-karlsruhe"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-module-system",
+					"title": "Jigsaw Walkthrough",
+					"announcement": "http://jug-karlsruhe.de/content/project-jigsaw/",
+					"time": "16.03.2016 1915 Europe/Berlin",
+					"location": "Karlsruhe, Disy Informationssysteme, Ludwig-Erhard-Allee 6",
+					"slides": "https://slides.codefx.org/jpms/2016-03-16-JUG-Karlsruhe",
+					"video": "https://youtu.be/JC6stYKQLHM",
+					"misc": [
+						{
+							"text": "helt with Florian Troßbach",
+							"url": "https://twitter.com/ftrde83"
+						}
+					]
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Jfokus",
 				"url": "https://www.jfokus.se/jfokus/index.jsp",
 				"image": "jfokus-2020"

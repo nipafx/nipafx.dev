@@ -1163,6 +1163,86 @@
 		}
 	},
 	{
+		"slug": "best-practices",
+		"credits": {
+			"author": {
+				"name": "O12",
+				"url": "https://pixabay.com/users/o12-4397258/"
+			},
+			"source": {
+				"url": "https://pixabay.com/photos/chess-king-chess-pieces-chess-board-2727443/"
+			},
+			"license": {
+				"name": "Pixabay License",
+				"url": "https://pixabay.com/service/license/"
+			}
+		}
+	},
+	{
+		"slug": "java-9-migration",
+		"credits": {
+			"author": {
+				"name": "skeeze",
+				"url": "https://pixabay.com/en/users/skeeze-272447/"
+			},
+			"source": {
+				"url": "https://pixabay.com/en/bison-buffalo-group-herd-snow-2237654/"
+			},
+			"license": {
+				"name": "CC0",
+				"url": "http://creativecommons.org/publicdomain/zero/1.0"
+			}
+		}
+	},
+	{
+		"slug": "java-var",
+		"credits": {
+			"author": {
+				"name": "Pineapple Supply Co.",
+				"url": "https://unsplash.com/@pineapple"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/qWlkCwBnwOE"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "comment-your-code",
+		"credits": {
+			"author": {
+				"name": "Marcus dePaul",
+				"url": "https://unsplash.com/@marcusdepaula"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/tk7OAxsXNL0"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "java-next",
+		"credits": {
+			"author": {
+				"name": "Jason Chen",
+				"url": "https://unsplash.com/@ja5on"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/bEXy1YQNIII"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
 		"slug": "java-after-n",
 		"credits": {
 			"author": {

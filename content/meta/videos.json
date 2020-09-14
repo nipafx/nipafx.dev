@@ -17,6 +17,66 @@
 			"url": "https://www.youtube.com/watch?v=k9--KYubKzk",
 			"title": "Java After Eight at Jfokus 2020",
 			"thumbnail": "java-after-eight-jfokus-2020"
+		},
+		{
+			"slug": "java-next-vjug-2019",
+			"url": "https://www.youtube.com/watch?v=sG6wUipM8mo",
+			"title": "Java Next at vJUG in September 2019",
+			"thumbnail": "java-next-vjug-2019"
+		},
+		{
+			"slug": "expert-java-8-jfokus-2017",
+			"url": "https://www.youtube.com/watch?v=J3mDjgdZJSc",
+			"title": "Expert Java 8 at Jfokus 2017",
+			"thumbnail": "expert-java-8-jfokus-2017"
+		},
+		{
+			"slug": "jpms-java-saigon-2018",
+			"url": "https://www.youtube.com/watch?v=HXnqYF2Csho",
+			"title": "The Java Module System at Java Saigon in 2018",
+			"thumbnail": "jpms-java-saigon-2018"
+		},
+		{
+			"slug": "java-9-migration-devoxx-be-2018",
+			"url": "https://www.youtube.com/watch?v=xKmv24_2Asw",
+			"title": "To JAR Hell And Back at Devoxx Belgium 2018",
+			"thumbnail": "java-9-migration-devoxx-be-2018"
+		},
+		{
+			"slug": "java-var-jfall-2018",
+			"url": "https://www.youtube.com/watch?v=BdnaXuthR-U",
+			"title": "Fun With `var` at J-Fall 2018",
+			"thumbnail": "java-var-jfall-2018"
+		},
+		{
+			"slug": "comment-your-code-accento-2019",
+			"url": "https://www.youtube.com/watch?v=a4BWbbgO67Q",
+			"title": "Comment Your &*☠# Code! at Accento 2019",
+			"thumbnail": "comment-your-code-accento-2019"
+		},
+		{
+			"slug": "nighthacking-javaland-2017",
+			"url": "https://www.youtube.com/watch?v=UfTSjl1F0vo",
+			"title": "JUnit 5 NightHacking session at JavaLand 2017",
+			"thumbnail": "nighthacking-javaland-2017"
+		},
+		{
+			"slug": "impressions-javazone-2017",
+			"url": "https://www.youtube.com/watch?v=kbbANlwI1G0",
+			"title": "Impressions of JavaLand 2017",
+			"thumbnail": "impressions-javazone-2017"
+		},
+		{
+			"slug": "interview-devoxx-be-2016",
+			"url": "https://www.youtube.com/watch?v=WZ5J4eocHjY",
+			"title": "Interview about JUnit 5 at Devoxx Belgium 2016",
+			"thumbnail": "interview-devoxx-be-2016"
+		},
+		{
+			"slug": "keynote-blip-code-one-2019",
+			"url": "https://www.youtube.com/watch?v=jVWIfw9eIcY&t=9m15s",
+			"title": "Blip during the keynote of Code One 2019",
+			"thumbnail": "keynote-blip-code-one-2019"
 		}
 	]
 }
