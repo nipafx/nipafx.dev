@@ -183,7 +183,7 @@ createPostNodes = (node, createNode, createContentDigest) => {
 	if (![`articles`, `courses`, `pages`, `videos`, `talks`].includes(node.fields.collection)) return
 
 	const post = {
-		id: `${node.fields.id}-as-post`,
+		id: node.fields.collection + `-as-post-` + node.fields.id,
 
 		title: node.frontmatter.title,
 		slug: node.frontmatter.slug,
@@ -209,7 +209,7 @@ createArticleNodes = (node, createNode, createContentDigest) => {
 	if (node.fields.collection !== `articles`) return
 
 	const article = {
-		id: node.fields.id,
+		id: `article-` + node.fields.id,
 
 		title: node.frontmatter.title,
 		slug: node.frontmatter.slug,
@@ -253,7 +253,7 @@ createChannelNodes = (node, createNode, createContentDigest) => {
 	const fileName = path.substring(path.lastIndexOf(`/`) + 1, path.length - 3)
 
 	const channel = {
-		id: node.fields.id,
+		id: `channel-` + node.fields.id,
 
 		title: node.frontmatter.title,
 		internalName: fileName,
@@ -281,7 +281,7 @@ createCourseNodes = (node, createNode, createContentDigest) => {
 	if (node.fields.collection !== `courses`) return
 
 	const course = {
-		id: node.fields.id,
+		id: `course-` + node.fields.id,
 
 		title: node.frontmatter.title,
 		slug: node.frontmatter.slug,
@@ -314,7 +314,7 @@ createPageNodes = (node, createNode, createContentDigest) => {
 	if (node.fields.collection !== `pages`) return
 
 	const page = {
-		id: node.fields.id,
+		id: `page-` + node.fields.id,
 
 		title: node.frontmatter.title,
 		slug: node.frontmatter.slug,
@@ -342,7 +342,7 @@ createRepoNodes = (node, createNode, createContentDigest) => {
 	if (node.fields.collection !== `repos`) return
 
 	const repo = {
-		id: node.fields.id,
+		id: `repo-` + node.fields.id,
 
 		title: node.frontmatter.title,
 		slug: node.frontmatter.slug,
@@ -366,7 +366,7 @@ createTagNodes = (node, createNode, createContentDigest) => {
 	if (node.fields.collection !== `tags`) return
 
 	const tag = {
-		id: node.fields.id,
+		id: `tag-` + node.fields.id,
 
 		title: node.frontmatter.title,
 		slug: node.frontmatter.slug,
@@ -393,7 +393,7 @@ createTalkNodes = (node, createNode, createContentDigest) => {
 	if (node.fields.collection !== `talks`) return
 
 	const talk = {
-		id: node.fields.id,
+		id: `talk-` + node.fields.id,
 
 		title: node.frontmatter.title,
 		slug: node.frontmatter.slug,
@@ -425,7 +425,7 @@ createVideoNodes = (node, createNode, createContentDigest) => {
 	if (node.fields.collection !== `videos`) return
 
 	const video = {
-		id: node.fields.id,
+		id: `video-` + node.fields.id,
 
 		title: node.frontmatter.title,
 		slug: node.frontmatter.slug,
