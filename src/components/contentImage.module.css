@@ -1,10 +1,12 @@
-.margins {
+.image {
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
 
 .bg {
 	background: linear-gradient(to left, var(--bg-color-shade-1), var(--bg-color-shade-2));
+	/* add a bit of padding to make the image/diagram look better in front of the background */
+	padding: 1em;
 }
 
 .border {
