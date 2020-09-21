@@ -1,25 +1,24 @@
 import React from "react"
 
-import MarkdownAsHtml from "../infra/markdownAsHtml"
-
 import style from "./admonition.module.css"
 
-const Admonition = ({ children, type }) => {
+const Admonition = ({ children, type, hint }) => {
+	const text = typeText(type) + (hint ? ` (${hint})` : "") + ":"
 	children = children.filter(child => child != "\n")
 	if (children.length === 1)
 		return (
 			<div className={style.shortAdmonition}>
-				<span className={style.type}>{typeText(type)}:</span> {children[1]}
-				{children}
+				<span className={style.type}>{text}</span> {children[0]}
+				{children.slice(1)}
 			</div>
 		)
 	else
 		return (
 			<div className={style.longAdmonition}>
 				<div>
-					<span className={style.type}>{typeText(type)}:</span> {children[1]}
+					<span className={style.type}>{text}</span> {children[0]}
 				</div>
-				{children}
+				{children.slice(1)}
 			</div>
 		)
 }
