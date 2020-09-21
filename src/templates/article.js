@@ -12,9 +12,10 @@ export default ({ data }) => {
 		slug: data.article.slug,
 		date: data.article.date,
 		tags: data.article.tags,
-		canonical: data.article.canonicalUrl
-			? { url: data.article.canonicalUrl, text: data.article.canonicalText }
-			: undefined,
+		canonical:
+			data.article.canonicalUrl || data.article.canonicalText
+				? { url: data.article.canonicalUrl, text: data.article.canonicalText }
+				: undefined,
 		description: data.article.description,
 		intro: data.article.intro ?? data.article.description,
 		featuredImage: data.article.featuredImage,
@@ -52,7 +53,7 @@ const findSeries = data => {
 				.includes(article)
 		)
 
-	if (seriesTags.length == 0) return null
+	if (seriesTags.length === 0) return null
 	// I assume each post can only be part of at most one series - hence `seriesTags[0]`
 	const series = seriesTags[0]
 	const description = series.seriesDescription

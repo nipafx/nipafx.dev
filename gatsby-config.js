@@ -310,7 +310,6 @@ module.exports = {
 								videos: allVideo {
 									nodes {
 										slug
-										url
 										content {
 											html
 										}

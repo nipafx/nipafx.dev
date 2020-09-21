@@ -43,9 +43,6 @@ const Meta = ({ title, slug, canonicalUrl, description, searchKeywords, videoUrl
 		robots: "noindex",
 		// Google
 		description,
-		// yes, it's useless for search engines, but it's documentation what I'm aiming for
-		// and it helps other tools judge the SEO quality
-		keywords: searchKeywords,
 		// Twitter
 		"twitter:card": videoUrl ? "player" : pageImage ? "summary_large_image" : "summary",
 		"twitter:site": site.twitter,
@@ -58,6 +55,11 @@ const Meta = ({ title, slug, canonicalUrl, description, searchKeywords, videoUrl
 		"twitter:player:width": videoUrl ? 1280 : null,
 		"twitter:player:height": videoUrl ? 720 : null,
 	}
+
+	// yes, it's useless for search engines, but it's documentation what I'm aiming for
+	// and it helps other tools judge the SEO quality
+	if (searchKeywords)
+		metaNames.keywords = searchKeywords
 
 	const metaProperties = {
 		// Open Graph

@@ -37,7 +37,9 @@ const credits = (credits, type) => {
 			{credits.author && (
 				<span key="author">
 					{credits.author.url ? (
-						<Link to={credits.author.url}>artist</Link>
+						<Link to={credits.author.url}>
+							{credits.author.name === "me" ? "me" : "artist"}
+						</Link>
 					) : (
 						credits.author.name
 					)}
@@ -272,8 +274,8 @@ const exists = (image, id, type) => {
 	if (image.image) return true
 
 	const message = `Missing ${type} image: ${id}`
-	if (process.env.NODE_ENV === `production`) throw new Error(message)
-	else console.warn(message)
+	// console.warn(message)
+	throw new Error(message)
 
 	return false
 }

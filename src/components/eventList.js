@@ -34,7 +34,7 @@ const present = (event, text) => {
 
 const header = event => (
 	<div className={style.eventCover}>
-		<Image id={event.image} type="eventCard" className={style.eventLogo} />
+		{event.image && <Image id={event.image} type="eventCard" className={style.eventLogo} />}
 	</div>
 )
 

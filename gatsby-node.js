@@ -103,7 +103,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			canonicalText: String
 			description: String!
 			intro: String
-			searchKeywords: String!
+			searchKeywords: String
 			featuredImage: String
 			source: String
 		}
@@ -125,7 +125,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			audience: String!
 			requirements: String!
 			intro: String
-			searchKeywords: String!
+			searchKeywords: String
 			featuredImage: String
 		}
 		type Page implements Node {
@@ -134,7 +134,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			date: Date! @dateformat
 			tags: [String!]!
 			description: String!
-			searchKeywords: String!
+			searchKeywords: String
 			featuredImage: String
 		}
 		type Repo implements Node {
@@ -158,7 +158,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			tags: [String!]!
 			description: String!
 			intro: String
-			searchKeywords: String!
+			searchKeywords: String
 			featuredImage: String
 			slides: String
 			videoSlug: String
@@ -171,7 +171,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			tags: [String!]!
 			description: String!
 			intro: String
-			searchKeywords: String!
+			searchKeywords: String
 			featuredImage: String
 			source: String
 		}
@@ -180,7 +180,8 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 
 createPostNodes = (node, createNode, createContentDigest) => {
-	if (![`articles`, `courses`, `pages`, `videos`, `talks`].includes(node.fields.collection)) return
+	if (![`articles`, `courses`, `pages`, `videos`, `talks`].includes(node.fields.collection))
+		return
 
 	const post = {
 		id: node.fields.collection + `-as-post-` + node.fields.id,
