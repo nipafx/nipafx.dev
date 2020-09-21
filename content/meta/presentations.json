@@ -12,7 +12,7 @@
 					"title": "Java Next",
 					"announcement": "https://sites.google.com/site/jugffm/home/27-11-2019-java-next---new-releases-amber-valhalla-and-more-goodies",
 					"time": "27.11.2019 1830 Europe/Berlin",
-					"location": "Deutsche Nationalbibliothek, Adickesallee 1, Frankfurt",
+					"locationText": "Deutsche Nationalbibliothek, Adickesallee 1, Frankfurt",
 					"slides": "https://slides.codefx.org/java-next/2019-11-27-jug-frankfurt"
 				}
 			]
@@ -29,7 +29,7 @@
 					"title": "JUnit 5",
 					"program": "http://www.devfestka.de/programm",
 					"time": "09.11.2019 1330 Europe/Berlin",
-					"location": "Karlsruhe, Duale Hochschule, Erzbergerstraße 121",
+					"locationText": "Karlsruhe, Duale Hochschule, Erzbergerstraße 121",
 					"slides": "https://slides.codefx.org/junit-5/2019-11-09-gdg-devfest"
 				}
 			]
@@ -46,7 +46,7 @@
 					"title": "Java Next",
 					"announcement": "https://www.meetup.com/Java-User-Group-Hessen-JUGH/events/263058106/",
 					"time": "31.10.2019 1800 Europe/Berlin",
-					"location": "Kassel, Ing.-Schule Universität, Raum HS 0315, Wilhelmshöher Allee 73",
+					"locationText": "Kassel, Ing.-Schule Universität, Raum HS 0315, Wilhelmshöher Allee 73",
 					"slides": "https://slides.codefx.org/java-next/2019-10-31-jug-hessen",
 					"video": "https://www.youtube.com/watch?&v=A-e8fu99R-s"
 				}
@@ -64,7 +64,7 @@
 					"title": "Best Practices Considered Harmful",
 					"program": "https://2019.accento.dev/talks",
 					"time": "24.09.2019 1130 Europe/Berlin",
-					"location": "Südwerk, Henriette-Obermüller-Straße 10, Karlsruhe",
+					"locationText": "Südwerk, Henriette-Obermüller-Straße 10, Karlsruhe",
 					"slides": "https://slides.codefx.org/best-practices/2019-09-24-accento"
 				},
 				{
@@ -72,7 +72,7 @@
 					"title": "Comment Your &*☠# Code!",
 					"programEntry": "https://2019.accento.dev/talks/code-comments/",
 					"time": "24.09.2019 1300 Europe/Berlin",
-					"location": "Südwerk, Henriette-Obermüller-Straße 10, Karlsruhe",
+					"locationText": "Südwerk, Henriette-Obermüller-Straße 10, Karlsruhe",
 					"slides": "https://slides.codefx.org/comment-your-code/2019-09-24-accento",
 					"video": "https://www.youtube.com/watch?v=a4BWbbgO67Q"
 				}
@@ -111,7 +111,7 @@
 					"title": "Java Next",
 					"announcement": "https://www.meetup.com/javaBin/events/262963213/",
 					"time": "14.08.2019 1730 Europe/Oslo",
-					"location": "Teknologihuset, Pilestredet 56, Oslo",
+					"locationText": "Teknologihuset, Pilestredet 56, Oslo",
 					"slides": "https://slides.codefx.org/java-next/2019-08-14-javabin",
 					"video": "https://vimeo.com/353981712"
 				}
@@ -129,7 +129,7 @@
 					"title": "To JAR Hell And Back",
 					"announcement": "https://www.jug-da.de/2019/07/Java-Livecoding/",
 					"time": "10.07.2019 1830 Europe/Berlin",
-					"location": "TU Darmstadt, S2|02 (Robert-Piloty-Geb.), Raum C110, Hochschulstr. 10",
+					"locationText": "TU Darmstadt, S2|02 (Robert-Piloty-Geb.), Raum C110, Hochschulstr. 10",
 					"slides": "https://slides.codefx.org/java-9-migration/2019-07-10-jug-darmstadt"
 				},
 				{
@@ -137,7 +137,7 @@
 					"title": "Fun with `var`",
 					"announcement": "https://www.jug-da.de/2019/07/Java-Livecoding/",
 					"time": "10.07.2019 1830 Europe/Berlin",
-					"location": "TU Darmstadt, S2|02 (Robert-Piloty-Geb.), Raum C110, Hochschulstr. 10",
+					"locationText": "TU Darmstadt, S2|02 (Robert-Piloty-Geb.), Raum C110, Hochschulstr. 10",
 					"slides": "https://slides.codefx.org/java-var/2019-07-10-jug-darmstadt"
 				}
 			]
@@ -154,7 +154,7 @@
 					"title": "Java Next",
 					"announcement": "http://www.majug.de/2019/07/04/Java-Next/",
 					"time": "04.07.2019 1900 Europe/Berlin",
-					"location": "Uni Mannheim A5, 6 im Raum C013",
+					"locationText": "Uni Mannheim A5, 6 im Raum C013",
 					"slides": "https://slides.codefx.org/java-next/2019-07-04-jug-mannheim"
 				}
 			]
@@ -171,7 +171,7 @@
 					"title": "To JAR Hell And Back",
 					"announcement": "https://www.meetup.com/fr-FR/ElsassJUG/events/262106556/",
 					"time": "03.07.2019 1800 Europe/Paris",
-					"location": "Epitech, 4 rue du Dome, Strasbourg",
+					"locationText": "Epitech, 4 rue du Dome, Strasbourg",
 					"slides": "https://slides.codefx.org/java-9-migration/2019-07-03-elsassjug"
 				}
 			]
@@ -187,7 +187,7 @@
 					"talk": "talk-best-practices-harmful",
 					"title": "Best Practices Considered Harmful",
 					"time": "03.06.2019 1900 Europe/Berlin",
-					"location": "Pizzahaus,​ Rintheimer Straße 2, Karlsruhe",
+					"locationText": "Pizzahaus,​ Rintheimer Straße 2, Karlsruhe",
 					"slides": "https://slides.codefx.org/best-practices/2019-06-03-webmontag-karlsruhe"
 				}
 			]
@@ -204,7 +204,7 @@
 					"title": "To JAR Hell And Back",
 					"programEntry": "https://www.devsum.se/sessions/to-jar-hell-and-back-a-live-migration-to-java-11/",
 					"time": "23.05.2019 1410 Europe/Stockholm",
-					"location": "Stockholm, Folkets Hus, Room 307",
+					"locationText": "Stockholm, Folkets Hus, Room 307",
 					"slides": "https://slides.codefx.org/java-9-migration/2019-05-23-devsum"
 				},
 				{
@@ -212,7 +212,7 @@
 					"title": "Expert Java 8",
 					"programEntry": "https://www.devsum.se/sessions/lambdas-and-streams-for-aficionados/",
 					"time": "24.05.2019 1410 Europe/Stockholm",
-					"location": "Stockholm, Folkets Hus, Room 201",
+					"locationText": "Stockholm, Folkets Hus, Room 201",
 					"slides": "https://slides.codefx.org/expert-java-8/2019-05-24-devsum"
 				}
 			]
@@ -229,7 +229,7 @@
 					"title": "The Java 9 Module System",
 					"announcement": "https://www.xing.com/events/getting-started-with-the-java-9-module-system-2089281",
 					"time": "29.04.2019 1800 Europe/Berlin",
-					"location": "DATEV eg – Kegelbahn, Südliche Früher Straße 18-20, Nürnberg",
+					"locationText": "DATEV eg – Kegelbahn, Südliche Früher Straße 18-20, Nürnberg",
 					"slides": "https://slides.codefx.org/jpms/2019-04-29-jug-nuernberg"
 				}
 			]
@@ -246,7 +246,7 @@
 					"title": "Fun With `var`",
 					"programEntry": "https://jeeconf.com/program/fun-with-var/",
 					"time": "26.04.2019 1105 Europe/Kiev",
-					"location": "Kiev, Mercure Congress Hall, Track D",
+					"locationText": "Kiev, Mercure Congress Hall, Track D",
 					"slides": "https://slides.codefx.org/java-var/2019-04-26-jeeconf"
 				},
 				{
@@ -254,7 +254,7 @@
 					"title": "Java Next",
 					"programEntry": "https://jeeconf.com/program/java-next-new-releases-amber-valhalla-and-more-goodies/",
 					"time": "26.04.2019 1400 Europe/Kiev",
-					"location": "Kiew, Mercure Congress Hall, Track A",
+					"locationText": "Kiew, Mercure Congress Hall, Track A",
 					"slides": "https://slides.codefx.org/java-next/2019-04-26-jeeconf"
 				}
 			]
@@ -271,7 +271,7 @@
 					"title": "Comment Your &*☠# Code!",
 					"programEntry": "https://programm.javaland.eu/2019/#/scheduledEvent/569986",
 					"time": "19.03.2019 1600 Europe/Berlin",
-					"location": "Brühl, Phantasialand, Silverado Theater",
+					"locationText": "Brühl, Phantasialand, Silverado Theater",
 					"slides": "https://slides.codefx.org/comment-your-code/2019-03-19-javaland",
 					"video": "https://www.javaland.eu/de/home/news/details/?tx_news_pi1%5Bnews%5D=1917&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=5e6b61c02a21eaa23721233369eaf6a2"
 				}
@@ -289,7 +289,7 @@
 					"title": "Java Next",
 					"announcement": "https://www.meetup.com/Java-Saigon/events/259154363/",
 					"time": "27.02.2019 1800 Asia/Ho_Chi_Minh",
-					"location": "Ho Chi Minh City, Quận Tân Bình, 364 Cộng Hòa, e.town 1 Building, Unit 7.10",
+					"locationText": "Ho Chi Minh City, Quận Tân Bình, 364 Cộng Hòa, e.town 1 Building, Unit 7.10",
 					"slides": "http://slides.codefx.org/java-next/2019-02-27-java-saigon"
 				}
 			]
@@ -343,7 +343,7 @@
 					"title": "To JAR Hell And Back",
 					"programEntry": "https://dvbe18.confinabox.com/talk/NUP-3481/To_JAR_Hell_And_Back_-_A_Live_Migration_to_Java_11",
 					"time": "14.11.2018 1200 Europe/Brussels",
-					"location": "Antwerpen, Kinepolis, Room 8",
+					"locationText": "Antwerpen, Kinepolis, Room 8",
 					"slides": "https://slides.codefx.org/java-9-migration/2018-11-14-devoxxbe",
 					"video": "https://www.youtube.com/watch?v=xKmv24_2Asw"
 				}
@@ -361,7 +361,7 @@
 					"title": "Fun with `var` in Java 10",
 					"programEntry": "https://jfall.nl/sessions/fun-with-var-in-java-11/",
 					"time": "08.11.2018 1650 Europe/Amsterdam",
-					"location": "Pathé Ede, Zaal 1",
+					"locationText": "Pathé Ede, Zaal 1",
 					"slides": "https://slides.codefx.org/java-var/2018-11-08-j-fall",
 					"video": "https://www.youtube.com/watch?v=BdnaXuthR-U"
 				}
@@ -379,7 +379,7 @@
 					"title": "Java Next",
 					"program": "https://2018.trondheimdc.no/program",
 					"time": "22.10.2018 1015 Europe/Oslo",
-					"location": "Trondheim, Clarion Congress",
+					"locationText": "Trondheim, Clarion Congress",
 					"slides": "https://slides.codefx.org/java-next/2018-10-22-tdc"
 				}
 			]
@@ -396,7 +396,7 @@
 					"title": "Java 11 Is Here!",
 					"programEntry": "https://jokerconf.com/en/2018/talks/1hk3oploee6cyq80i664co/",
 					"time": "19.10.2018 1200 Europe/Moscow",
-					"location": "Saint Petersburg, Expoforum, Track 1",
+					"locationText": "Saint Petersburg, Expoforum, Track 1",
 					"slides": "https://slides.codefx.org/java-x/2018-10-19-jokerconf"
 				}
 			]
@@ -413,7 +413,7 @@
 					"title": "Comment That Damn Code!",
 					"announcement": "https://www.softwerkskammer.org/activities/ka-treffen-85/",
 					"time": "02.10.2018 1930 Europe/Berlin",
-					"location": "Karlsruhe, diva-e Platforms GmbH, Ludwig-Erhard-Allee 20",
+					"locationText": "Karlsruhe, diva-e Platforms GmbH, Ludwig-Erhard-Allee 20",
 					"slides": "https://slides.codefx.org/comment-your-code/2018-10-02-softwerkskammer-karlsruhe"
 				}
 			]
@@ -430,7 +430,7 @@
 					"title": "Java 11 Is Here!",
 					"program": "https://jdays.se/schedule/",
 					"time": "25.09.2018 1045 Europe/Stockholm",
-					"location": "Gothenburg, Clarion Hotel Post, Brevsalen 1",
+					"locationText": "Gothenburg, Clarion Hotel Post, Brevsalen 1",
 					"slides": "https://slides.codefx.org/java-x/2018-09-25-jdays"
 				},
 				{
@@ -438,7 +438,7 @@
 					"title": "Java Next",
 					"program": "https://jdays.se/schedule/",
 					"time": "25.09.2018 1430 Europe/Stockholm",
-					"location": "Gothenburg, Clarion Hotel Post, Brevsalen 1",
+					"locationText": "Gothenburg, Clarion Hotel Post, Brevsalen 1",
 					"slides": "https://slides.codefx.org/java-next/2018-09-25-jdays"
 				}
 			]
@@ -455,7 +455,7 @@
 					"title": "Comment That Damn Code!",
 					"programEntry": "https://2018.javazone.no/program/6fdd1618-4f7e-4186-8081-e92768f60e9d",
 					"time": "12.09.2018 1820 Europe/Oslo",
-					"location": "Oslo Spektrum, Room 7",
+					"locationText": "Oslo Spektrum, Room 7",
 					"slides": "https://slides.codefx.org/comment-your-code/2018-09-12-javazone",
 					"video": "https://vimeo.com/289655623"
 				},
@@ -464,7 +464,7 @@
 					"title": "Java Next",
 					"programEntry": "https://2018.javazone.no/program/84afe8de-ee8a-4540-a9dc-bab395d0b2af",
 					"time": "13.09.2018 1700 Europe/Oslo",
-					"location": "Oslo Spektrum, Room 6",
+					"locationText": "Oslo Spektrum, Room 6",
 					"slides": "https://slides.codefx.org/java-next/2018-09-13-javazone",
 					"video": "https://vimeo.com/289852355"
 				}
@@ -482,7 +482,7 @@
 					"title": "Java Next",
 					"program": "http://bed-con.org/2018/programm",
 					"time": "07.09.2018 1020 Europe/Berlin",
-					"location": "Urania Berlin, Humboldtsaal",
+					"locationText": "Urania Berlin, Humboldtsaal",
 					"slides": "https://slides.codefx.org/java-next/2018-09-07-bed-con"
 				}
 			]
@@ -499,7 +499,7 @@
 					"title": "Comment That Damn Code!",
 					"announcement": "https://www.meetup.com/de-DE/Write-the-Docs-Karlsruhe/events/250444386/",
 					"time": "09.07.2018 1830 Europe/Berlin",
-					"location": "Karlsruhe, connyun GmbH, Alter Schlachthof 51",
+					"locationText": "Karlsruhe, connyun GmbH, Alter Schlachthof 51",
 					"slides": "https://slides.codefx.org/comment-your-code/2018-07-09-write-the-docs"
 				}
 			]
@@ -516,7 +516,7 @@
 					"title": "To JAR Hell And Back",
 					"announcement": "https://www.meetup.com/de-DE/inovex-karlsruhe/events/249381296",
 					"time": "26.06.2018 1800 Europe/Berlin",
-					"location": "Karlsruhe, inovex office, Ludwig-Erhard-Allee 6",
+					"locationText": "Karlsruhe, inovex office, Ludwig-Erhard-Allee 6",
 					"slides": "https://slides.codefx.org/java-9-migration/2018-06-26-inovex"
 				}
 			]
@@ -533,7 +533,7 @@
 					"title": "Java Next – New Releases, Valhalla, Amber, and More Goodies",
 					"programEntry": "https://2018.geekout.ee/nicolai-parlog",
 					"time": "07.06.2018 1330 Europe/Tallinn",
-					"location": "Tallinn, Kultuurikatel, Room 1",
+					"locationText": "Tallinn, Kultuurikatel, Room 1",
 					"slides": "https://slides.codefx.org/java-next/2018-06-07-geekout",
 					"video": "https://player.vimeo.com/video/274558807"
 				},
@@ -542,7 +542,7 @@
 					"title": "To JAR Hell And Back",
 					"programEntry": "https://2018.geekout.ee/nicolai-parlog",
 					"time": "08.06.2018 1130 Europe/Tallinn",
-					"location": "Tallinn, Kultuurikatel, Room 1",
+					"locationText": "Tallinn, Kultuurikatel, Room 1",
 					"slides": "https://slides.codefx.org/java-9-migration/2018-06-08-geekout",
 					"video": "https://player.vimeo.com/video/274560367"
 				}
@@ -560,7 +560,7 @@
 					"title": "Java Next – New Releases, Valhalla, Amber, and More Goodies",
 					"programEntry": "https://rigadevdays.lv/schedule/2018-05-30?sessionId=153",
 					"time": "30.05.2018 1200 Europe/Riga",
-					"location": "Riga, Kino Citadele, Room 3",
+					"locationText": "Riga, Kino Citadele, Room 3",
 					"slides": "https://slides.codefx.org/java-next/2018-05-30-rigadevdays"
 				}
 			]
@@ -577,7 +577,7 @@
 					"title": "To JAR Hell And Back",
 					"programEntry": "https://cfp.devoxx.co.uk/2018/talk/VMP-3166/To_JAR_Hell_And_Back_-_A_Live_Migration_to_Java_9",
 					"time": "11.05.2018 0900 Europe/London",
-					"location": "London Islington, Business Design Centre, 52 Upper Street",
+					"locationText": "London Islington, Business Design Centre, 52 Upper Street",
 					"slides": "https://slides.codefx.org/java-9-migration/2018-05-11-devoxxuk",
 					"video": "https://www.youtube.com/watch?v=ZF_WLtbEfqA"
 				}
@@ -595,7 +595,7 @@
 					"title": "The Java 9 Module System",
 					"announcement": "https://www.meetup.com/Java-Saigon/events/248885704/",
 					"time": "30.03.2018 1700 Asia/Ho_Chi_Minh",
-					"location": "Ho Chi Minh City, CirCO, 1st Floor, H3 Building, 384 Hoàng Diệu, phường 6, Quận 4",
+					"locationText": "Ho Chi Minh City, CirCO, 1st Floor, H3 Building, 384 Hoàng Diệu, phường 6, Quận 4",
 					"slides": "http://slides.codefx.org/jpms/2018-03-30-javasaigon",
 					"video": "https://www.youtube.com/watch?v=HXnqYF2Csho"
 				}
@@ -613,7 +613,7 @@
 					"title": "The Java 9 Module System",
 					"programEntry": "https://programm.javaland.eu/2018/talk.html#talk?talkId=548942",
 					"time": "13.03.2018 1700 Europe/Berlin",
-					"location": "Brühl, Phantasialand, Silverado Theater",
+					"locationText": "Brühl, Phantasialand, Silverado Theater",
 					"slides": "http://slides.codefx.org/jpms/2018-03-13-javaland"
 				}
 			]
@@ -630,7 +630,7 @@
 					"title": "The Java 9 Module System",
 					"announcement": "https://cfp-vdz.exteso.com/2018/talk/KAR-2047",
 					"time": "08.03.2018 1120 Europe/Zurich",
-					"location": "Zürich, Arena Cinema Sihlcity, Room 3",
+					"locationText": "Zürich, Arena Cinema Sihlcity, Room 3",
 					"slides": "http://slides.codefx.org/jpms/2018-03-08-voxxed-days-zürich",
 					"video": "https://www.youtube.com/watch?v=pfXsQyToipM"
 				}
@@ -648,7 +648,7 @@
 					"title": "The Java 9 Module System",
 					"programEntry": "https://www.jfokus.se/jfokus/talks.jsp#Gettingyourhandsdirt",
 					"time": "05.02.2018 0900 Europe/Stockholm",
-					"location": "Stockholm Waterfront Conference, Room 22",
+					"locationText": "Stockholm Waterfront Conference, Room 22",
 					"slides": "http://slides.codefx.org/jpms/2018-02-05-jfokus"
 				},
 				{
@@ -656,7 +656,7 @@
 					"title": "To JAR Hell And Back",
 					"programEntry": "https://www.jfokus.se/jfokus/talks.jsp#ToJARHellAndBack-ALi",
 					"time": "06.02.2018 1100 Europe/Stockholm",
-					"location": "Stockholm Waterfront Conference, Room A1",
+					"locationText": "Stockholm Waterfront Conference, Room A1",
 					"slides": "http://slides.codefx.org/java-9-migration/2018-02-06-jfokus",
 					"video": "https://www.youtube.com/watch?v=FH8ncXalmAg"
 				}
@@ -674,7 +674,7 @@
 					"title": "To JAR Hell And Back",
 					"announcement": "https://jug.bg/events/jprofessionals-winter-edition/",
 					"time": "27.01.2018 1430 Europe/Sofia",
-					"location": "Sofia, Capital Fort",
+					"locationText": "Sofia, Capital Fort",
 					"slides": "http://slides.codefx.org/java-9-migration/2018-01-27-jprofessionals"
 				}
 			]
@@ -691,7 +691,7 @@
 					"title": "Java 9 Is Here!",
 					"programEntry": "https://www.codeeurope.pl/en/speakers/nicolai-parlog",
 					"time": "13.12.2017 1420 Europe/Warsaw",
-					"location": "Wroclaw, Hala Stulecia, Room Redmond",
+					"locationText": "Wroclaw, Hala Stulecia, Room Redmond",
 					"slides": "http://slides.codefx.org/java-9/2017-12-13-codeeurope",
 					"video": "https://www.youtube.com/watch?v=kgBRlIWgDuw"
 				}
@@ -709,7 +709,7 @@
 					"title": "Java 9 Is Here!",
 					"announcement": "https://rg-dortmund.gi.de/veranstaltung/neues-in-java-9",
 					"time": "04.12.2017 1900 Europe/Berlin",
-					"location": "Mercure Hotel Dortmund, Olpe 2",
+					"locationText": "Mercure Hotel Dortmund, Olpe 2",
 					"slides": "http://slides.codefx.org/java-9/2017-12-04-gi-dortmund"
 				}
 			]
@@ -726,7 +726,7 @@
 					"title": "The Java 9 Module System",
 					"programEntry": "http://javaday.org.ua/nicolai-parlog-the-java-9-module-system-beyond-the-basics/",
 					"time": "04.11.2017 1610 Europe/Kiev",
-					"location": "Kiev, Convention Center “Parkovy”, Parkova road 16a, Track 1",
+					"locationText": "Kiev, Convention Center “Parkovy”, Parkova road 16a, Track 1",
 					"slides": "http://slides.codefx.org/jpms/2017-11-04-javaday",
 					"video": "https://www.youtube.com/watch?v=FvEboOV7PQA"
 				},
@@ -735,7 +735,7 @@
 					"title": "To JAR Hell And Back",
 					"programEntry": "http://javaday.org.ua/to-jar-hell-and-back-a-live-migration-to-the-java-9-module-system/",
 					"time": "05.11.2017 1400 Europe/Kiev",
-					"location": "Kiev, Convention Center “Parkovy”, Parkova road 16a, Track 1",
+					"locationText": "Kiev, Convention Center “Parkovy”, Parkova road 16a, Track 1",
 					"slides": "http://slides.codefx.org/java-9-migration/2017-11-05-javaday",
 					"video": "https://www.youtube.com/watch?v=UEXfGL5K8eU"
 				}
@@ -753,7 +753,7 @@
 					"title": "The Java 9 Module System",
 					"program": "https://2018.baselone.ch/archive/2017/index.html#programm",
 					"time": "19.10.2017 1130 Europe/Zurich",
-					"location": "Basel, Markthalle Basel, Viaduktstrasse 10",
+					"locationText": "Basel, Markthalle Basel, Viaduktstrasse 10",
 					"slides": "http://slides.codefx.org/jpms/2017-10-19-baselone"
 				}
 			]
@@ -770,7 +770,7 @@
 					"title": "Java 9 Is Here!",
 					"announcement": "https://www.andrena.de/event/java-9-kommt",
 					"time": "26.09.2017 1830 Europe/Berlin",
-					"location": "Frankfurt, Saalbau Gutleut, Rottweiler Straße 32",
+					"locationText": "Frankfurt, Saalbau Gutleut, Rottweiler Straße 32",
 					"slides": "http://slides.codefx.org/java-9/2017-09-26-objektforum-frankfurt"
 				}
 			]
@@ -787,7 +787,7 @@
 					"title": "Expert Java 8",
 					"announcement": "http://jugs.org/va2017/09-18.html",
 					"time": "18.09.2017 1830 Europe/Berlin",
-					"location": "Stuttgart, SODEXO, Wankelstraße 12",
+					"locationText": "Stuttgart, SODEXO, Wankelstraße 12",
 					"slides": "http://slides.codefx.org/expert-java-8/2017-09-18-objektforum-stuttgart"
 				}
 			]
@@ -804,7 +804,7 @@
 					"title": "To JAR Hell And Back",
 					"programEntry": "https://2017.javazone.no/program/cf1d1c8380994a24a86b87251b58ace3",
 					"time": "13.09.2017 1300 Europe/Oslo",
-					"location": "Oslo",
+					"locationText": "Oslo",
 					"slides": "http://slides.codefx.org/java-9-migration/2017-09-13-javazone",
 					"video": "https://vimeo.com/233801793",
 					"misc": [
@@ -832,7 +832,7 @@
 					"title": "Java 9 Is Here!",
 					"programEntry": "http://www.javaforumnord.de/site/2017/page/Talk-109",
 					"time": "12.09.2017 1300 Europe/Berlin",
-					"location": "Hannover, Hotel Dormero, Saal 1",
+					"locationText": "Hannover, Hotel Dormero, Saal 1",
 					"slides": "http://slides.codefx.org/java-9/2017-09-12-javaforumnord"
 				}
 			]
@@ -870,7 +870,7 @@
 					"title": "Java 9 Is Coming!",
 					"announcement": "https://www.jugdo.de/2017/05/03/talk-im-juli-java-9-kommt/",
 					"time": "11.07.2017 1900 Europe/Berlin",
-					"location": "Dortmund, adesso AG, Stockholmer Allee 20",
+					"locationText": "Dortmund, adesso AG, Stockholmer Allee 20",
 					"slides": "http://slides.codefx.org/java-9/2017-07-11-jug-dortmund"
 				}
 			]
@@ -887,7 +887,7 @@
 					"title": "Java 9 Is Coming!",
 					"announcement": "https://www.meetup.com/jugbremen/events/239511640/",
 					"time": "21.06.2017 1830 Europe/Berlin",
-					"location": "Bremen, team neusta, Konsul-Smidt-Straße 24",
+					"locationText": "Bremen, team neusta, Konsul-Smidt-Straße 24",
 					"slides": "http://slides.codefx.org/java-9/2017-06-21-jug-bremen"
 				}
 			]
@@ -904,7 +904,7 @@
 					"title": "Java 9 Is Coming!",
 					"announcement": "http://www.jug-ostfalen.de/event/2017/05/18/java-9.html",
 					"time": "18.05.2017 1900 Europe/Berlin",
-					"location": "Braunschweig, CKC Group, Am Alten Bahnhof 13",
+					"locationText": "Braunschweig, CKC Group, Am Alten Bahnhof 13",
 					"slides": "http://slides.codefx.org/java-9/2017-05-18-jug-ostfalen",
 					"video": "https://www.youtube.com/watch?v=-aj2GiWhDkM"
 				}
@@ -922,7 +922,7 @@
 					"title": "JUnit 5",
 					"programEntry": "http://rigadevdays.lv/schedule/day2?sessionId=134",
 					"time": "16.05.2017 1545 Europe/Riga",
-					"location": "Riga, Kino Citadele, Room 6",
+					"locationText": "Riga, Kino Citadele, Room 6",
 					"slides": "http://slides.codefx.org/junit-5/2017-05-16-rigadevdays",
 					"video": "https://www.youtube.com/watch?v=OA3UJYxTBRA",
 					"misc": [
@@ -946,7 +946,7 @@
 					"title": "Expert Java 8",
 					"announcement": "https://www.andrena.de/event/objektforum-karlsruhe-266",
 					"time": "03.04.2017 1830 Europe/Berlin",
-					"location": "Karlsruhe, Technologiepark Casino, Albert-Nestler-Str.10",
+					"locationText": "Karlsruhe, Technologiepark Casino, Albert-Nestler-Str.10",
 					"slides": "http://slides.codefx.org/expert-java-8/2017-04-03-objektforumkarlsruhe"
 				}
 			]
@@ -963,7 +963,7 @@
 					"title": "JUnit 5",
 					"programEntry": "https://www.doag.org/konferenz/konferenzplaner/konferenzplaner_details.php?id=522447&locS=0&vid=529384",
 					"time": "28.03.2017 1300 Europe/Berlin",
-					"location": "Brühl, Phantasialand, Eventhalle",
+					"locationText": "Brühl, Phantasialand, Eventhalle",
 					"slides": "http://slides.codefx.org/junit-5/2017-03-28-javaland",
 					"misc": [
 						{
@@ -986,7 +986,7 @@
 					"title": "Java 9 Is Coming!",
 					"announcement": "https://www.meetup.com/Java-User-Group-Freiburg/events/237532610/?_locale=de-DE",
 					"time": "06.03.2017 1930 Europe/Berlin",
-					"location": "Freiburg, Munzinger Straße 9, Haufe-Lexware",
+					"locationText": "Freiburg, Munzinger Straße 9, Haufe-Lexware",
 					"slides": "http://slides.codefx.org/java-9/2017-03-06-jug-fr"
 				}
 			]
@@ -1003,7 +1003,7 @@
 					"title": "Java 9 Is Coming!",
 					"announcement": "https://cfp-vdz.exteso.com/2017/talk/JYZ-6493/Java_9_Is_Coming_",
 					"time": "23.02.2017 1330 Europe/Zurich",
-					"location": "Zürich, Arena Cinema Sihlcity, Room 2",
+					"locationText": "Zürich, Arena Cinema Sihlcity, Room 2",
 					"slides": "http://slides.codefx.org/java-9/2017-02-23-voxxed-days-zuerich",
 					"video": "https://www.youtube.com/watch?v=vOdFuvIyN0E"
 				}
@@ -1021,7 +1021,7 @@
 					"title": "JUnit 5",
 					"announcement": "https://entwicklertag.de/frankfurt/2017/junit-5-next-generation-testing-jvm",
 					"time": "16.02.2017 1140 Europe/Berlin",
-					"location": "Frankfurt, Goethe-Universität – Casino Gebäude, Seminarraum 1.812",
+					"locationText": "Frankfurt, Goethe-Universität – Casino Gebäude, Seminarraum 1.812",
 					"slides": "http://slides.codefx.org/junit-5/2017-02-16-etffm"
 				}
 			]
@@ -1038,7 +1038,7 @@
 					"title": "JUnit 5",
 					"programEntry": "http://europeantestingconference.eu/2017/topics/#nicolai-parlog",
 					"time": "09.02.2017 1020 Europe/Helsinki",
-					"location": "Helsinki, Wanha Satama",
+					"locationText": "Helsinki, Wanha Satama",
 					"slides": "http://slides.codefx.org/junit-5/2017-02-09-etc"
 				}
 			]
@@ -1055,7 +1055,7 @@
 					"title": "Expert Java 8",
 					"programEntry": "https://www.jfokus.se/jfokus/talks.jsp#ExpertJava8",
 					"time": "07.02.2017 1100 Europe/Stockholm",
-					"location": "Stockholm Waterfront Conference, Room A1",
+					"locationText": "Stockholm Waterfront Conference, Room A1",
 					"slides": "http://slides.codefx.org/expert-java-8/2017-02-07-jfokus",
 					"video": "https://www.youtube.com/watch?v=J3mDjgdZJSc"
 				}
@@ -1073,7 +1073,7 @@
 					"title": "JUnit 5",
 					"announcement": "http://jug-karlsruhe.de/content/junit-workshop/",
 					"time": "25.01.2017 1800 Europe/Berlin",
-					"location": "Citrix – GetGo Germany GmbH, Alter Schlachthof 51",
+					"locationText": "Citrix – GetGo Germany GmbH, Alter Schlachthof 51",
 					"slides": "https://slides.codefx.org/junit-5/2017-01-25-JUG-Karlsruhe",
 					"misc": [
 						{
@@ -1096,7 +1096,7 @@
 					"title": "JUnit 5",
 					"announcement": "http://jug-da.de/2017/01/JUnit5/",
 					"time": "19.01.2017 1830 Europe/Berlin",
-					"location": "TU Darmstadt, S2|02 Raum C110",
+					"locationText": "TU Darmstadt, S2|02 Raum C110",
 					"slides": "https://slides.codefx.org/junit-5/2017-01-19-JUG-Darmstadt"
 				}
 			]
@@ -1113,7 +1113,7 @@
 					"title": "JUnit 5",
 					"announcement": "http://www.majug.de/2017/01/12/junit5-next-generation/",
 					"time": "12.01.2017 1900 Europe/Berlin",
-					"location": "University of Mannheim A5, 6; Room C013",
+					"locationText": "University of Mannheim A5, 6; Room C013",
 					"slides": "https://slides.codefx.org/junit-5/2017-01-12-JUG-Mannheim"
 				}
 			]
@@ -1130,7 +1130,7 @@
 					"title": "The Java 9 Module System In Action",
 					"program": "http://www.devfestka.de/programm",
 					"time": "21.11.2016 1145 Europe/Berlin",
-					"location": "Karlsruhe, Schauburg, Bambi",
+					"locationText": "Karlsruhe, Schauburg, Bambi",
 					"slides": "https://slides.codefx.org/jpms/2016-11-21-Devfest-Ka"
 				}
 			]
@@ -1147,7 +1147,7 @@
 					"title": "The Java 9 Module System In Action",
 					"program": "https://web.liferay.com/web/events2016/modconf#agenda",
 					"time": "15.11.2016 1145 Europe/Berlin",
-					"location": "Darmstadt, Science and Congress Centre",
+					"locationText": "Darmstadt, Science and Congress Centre",
 					"slides": "https://slides.codefx.org/jpms/2016-11-15-Modconf",
 					"video": "https://www.youtube.com/watch?v=gfm_yUwjB-0"
 				}
@@ -1162,7 +1162,7 @@
 					"talk": "talk-junit-5",
 					"title": "JUnit 5",
 					"time": "10.11.2016 1800 Europe/Stockholm",
-					"location": "Stockholm, Regeringsgatan 20",
+					"locationText": "Stockholm, Regeringsgatan 20",
 					"slides": "https://slides.codefx.org/junit-5/2016-11-10-JVM-Group-Stockholm"
 				}
 			]
@@ -1179,7 +1179,7 @@
 					"title": "JUnit 5",
 					"programEntry": "http://cfp.devoxx.be/2016/talk/PPQ-9247/JUnit_5:_Next_Generation_Testing_on_the_JVM",
 					"time": "08.11.2016 1815 Europe/Brussels",
-					"location": "Antwerpen, Kinepolis, Room 8",
+					"locationText": "Antwerpen, Kinepolis, Room 8",
 					"slides": "https://slides.codefx.org/junit-5/2016-11-08-DevoxxBE",
 					"video": "https://www.youtube.com/watch?v=VfC00bby8XQ",
 					"misc": [
@@ -1203,7 +1203,7 @@
 					"title": "The Java Module System In Action",
 					"announcement": "http://www.meetup.com/javaBin-Trondheim/events/231696590/",
 					"time": "01.11.2016 1800 Europe/Oslo",
-					"location": "Trondheim, DIGS, Olav Tryggvasonsgt. 30",
+					"locationText": "Trondheim, DIGS, Olav Tryggvasonsgt. 30",
 					"slides": "https://slides.codefx.org/jpms/2016-11-01-javaBin"
 				}
 			]
@@ -1220,7 +1220,7 @@
 					"title": "JUnit 5",
 					"program": "http://2016.trondheimdc.no/program",
 					"time": "31.10.2016 1145 Europe/Oslo",
-					"location": "Trondheim, Clarion Trondheim, Sal 3",
+					"locationText": "Trondheim, Clarion Trondheim, Sal 3",
 					"slides": "https://slides.codefx.org/junit-5/2016-10-31-TDC",
 					"video": "https://vimeo.com/189721692"
 				}
@@ -1238,7 +1238,7 @@
 					"title": "The Java Module System",
 					"program": "http://javaforumnord.de/site/2016/#programme",
 					"time": "20.10.2016 1600 Europe/Berlin",
-					"location": "Hannover, Hotel Dormero",
+					"locationText": "Hannover, Hotel Dormero",
 					"slides": "https://slides.codefx.org/jpms/2016-10-20-Java-Forum-Nord"
 				}
 			]
@@ -1255,7 +1255,7 @@
 					"title": "JUnit 5",
 					"programEntry": "https://jaxlondon.com/session/junit-5-next-generation-testing-on-the-jvm/",
 					"time": "12.10.2016 1630 Europe/London",
-					"location": "London Islington, Business Design Centre",
+					"locationText": "London Islington, Business Design Centre",
 					"slides": "https://slides.codefx.org/junit-5/2016-10-12-JAXLondon"
 				}
 			]
@@ -1272,7 +1272,7 @@
 					"title": "The Java 9 Module System In Action",
 					"announcement": "https://www.jug.ch/html/events/2016/jigsaw_zh.html",
 					"time": "26.09.2016 1815 Europe/Zurich",
-					"location": "Zürich (26.09.), Bern (27.09.), Luzern (28.09.), St.Gallen (29.09.)",
+					"locationText": "Zürich (26.09.), Bern (27.09.), Luzern (28.09.), St.Gallen (29.09.)",
 					"slides": "https://slides.codefx.org/jpms/2016-09-29-JUG-Ch"
 				}
 			]
@@ -1289,7 +1289,7 @@
 					"title": "JUnit 5",
 					"programEntry": "https://2016.javazone.no/program/j-unit-5-next-generation-testing-on-the-jvm",
 					"time": "08.09.2016 1540 Europe/Oslo",
-					"location": "Oslo, Oslo Spektrum, Room 1",
+					"locationText": "Oslo, Oslo Spektrum, Room 1",
 					"slides": "https://slides.codefx.org/junit-5/2016-09-08-JavaZone",
 					"video": "https://vimeo.com/182074594"
 				}
@@ -1334,7 +1334,7 @@
 					"title": "The Java Module System",
 					"announcement": "https://www.andrena.de/event/objektforum-karlsruhe-juli2016",
 					"time": "04.07.2016 1830 Europe/Berlin",
-					"location": "Karlsruhe, Technologiepark Casino, Albert-Nestler-Str.10",
+					"locationText": "Karlsruhe, Technologiepark Casino, Albert-Nestler-Str.10",
 					"slides": "https://slides.codefx.org/jpms/2016-07-04-Objektforum-Karlsruhe"
 				}
 			]
@@ -1351,7 +1351,7 @@
 					"title": "JUnit 5",
 					"programEntry": "http://cfp.devoxx.pl/2016/talk/OOT-4758",
 					"time": "24.06.2016 0900 Europe/Warsaw",
-					"location": "Krakow, ICE Congress Centre, Room 1",
+					"locationText": "Krakow, ICE Congress Centre, Room 1",
 					"slides": "https://slides.codefx.org/junit-5/2016-06-24-DevoxxPL",
 					"video": "https://www.youtube.com/watch?v=oG80XZUN1lQ"
 				},
@@ -1360,7 +1360,7 @@
 					"title": "Comment Your &*☠# Code!",
 					"programEntry": "http://cfp.devoxx.pl/2016/talk/YNB-4234",
 					"time": "24.06.2016 1020 Europe/Warsaw",
-					"location": "Krakow, ICE Congress Centre, Room 3",
+					"locationText": "Krakow, ICE Congress Centre, Room 3",
 					"slides": "https://slides.codefx.org/comment-your-code/2016-06-24-DevoxxPL",
 					"video": "https://www.youtube.com/watch?v=t_PEeSMqztc"
 				}
@@ -1378,7 +1378,7 @@
 					"title": "JUnit 5",
 					"programEntry": "http://jeeconf.com/program/junit-5-next-generation-testing-on-the-jvm/",
 					"time": "20.05.2016 1200 Europe/Kiev",
-					"location": "Kiew, Parkovyi Convention Center, Track E",
+					"locationText": "Kiew, Parkovyi Convention Center, Track E",
 					"slides": "https://slides.codefx.org/junit-5/2016-05-20-JEEConf",
 					"video": "https://www.youtube.com/watch?v=857I8Fo-Wxg"
 				},
@@ -1387,7 +1387,7 @@
 					"title": "The Java Module System In Action",
 					"programEntry": "http://jeeconf.com/program/jigsaw-walkthrough-modularize-your-java-application/",
 					"time": "20.05.2016 1530 Europe/Kiev",
-					"location": "Kiew, Parkovyi Convention Center, Track A",
+					"locationText": "Kiew, Parkovyi Convention Center, Track A",
 					"slides": "https://slides.codefx.org/jpms/2016-05-20-JEEConf",
 					"video": "https://www.youtube.com/watch?v=0M72pH2rXwA"
 				}
@@ -1405,7 +1405,7 @@
 					"title": "Jigsaw Walkthrough",
 					"announcement": "http://www.majug.de/2016/05/12/Jigsaw-Walkthrough/",
 					"time": "12.05.2016 1900 Europe/Berlin",
-					"location": "University of Mannheim A5, 6; Room C013",
+					"locationText": "University of Mannheim A5, 6; Room C013",
 					"slides": "https://slides.codefx.org/jpms/2016-05-12-JUG-Mannheim"
 				}
 			]
@@ -1422,7 +1422,7 @@
 					"title": "Jigsaw Walkthrough",
 					"announcement": "http://www.jugs.org/va2016/04-14.html",
 					"time": "14.04.2016 1830 Europe/Berlin",
-					"location": "Stuttgart, Alte Scheuer Degerloch, Agnes-Kneher-Platz",
+					"locationText": "Stuttgart, Alte Scheuer Degerloch, Agnes-Kneher-Platz",
 					"slides": "https://slides.codefx.org/jpms/2016-04-14-JUG-Stuttgart"
 				}
 			]
@@ -1439,7 +1439,7 @@
 					"title": "Jigsaw Walkthrough",
 					"announcement": "http://jug-karlsruhe.de/content/project-jigsaw/",
 					"time": "16.03.2016 1915 Europe/Berlin",
-					"location": "Karlsruhe, Disy Informationssysteme, Ludwig-Erhard-Allee 6",
+					"locationText": "Karlsruhe, Disy Informationssysteme, Ludwig-Erhard-Allee 6",
 					"slides": "https://slides.codefx.org/jpms/2016-03-16-JUG-Karlsruhe",
 					"video": "https://youtu.be/JC6stYKQLHM",
 					"misc": [
@@ -1463,7 +1463,7 @@
 					"title": "Java After Eight",
 					"programEntry": "https://www.jfokus.se/talks/31",
 					"time": "05.02.2020 1915 Europe/Stockholm",
-					"location": "Stockholm Waterfront Conference, Room A1",
+					"locationText": "Stockholm Waterfront Conference, Room A1",
 					"slides": "https://slides.codefx.org/java-after-eight/2020-02-05-jfokus",
 					"video": "https://www.youtube.com/watch?v=k9--KYubKzk"
 				}
@@ -1481,7 +1481,7 @@
 					"title": "Java After Eight",
 					"announcement": "http://jug-karlsruhe.de/content/java-after-eight/",
 					"time": "04.03.2020 1915 Europe/Berlin",
-					"location": "Disy Informationssysteme, Ludwig-Erhard-Allee 6",
+					"locationText": "Disy Informationssysteme, Ludwig-Erhard-Allee 6",
 					"slides": "https://slides.codefx.org/java-after-eight/2020-03-04-jug-karlsruhe"
 				}
 			]
@@ -1563,7 +1563,9 @@
 					"location": {
 						"text": "crowdcast.io",
 						"url": "https://www.crowdcast.io/e/RHD-DevNationDay/register"
-					}
+					},
+					"slides": "https://slides.codefx.org/java-after-eight/2020-09-15-devnationday",
+					"video": "https://www.youtube.com/watch?v=ugXHFyefvp4"
 				}
 			]
 		}

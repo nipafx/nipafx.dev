@@ -84,7 +84,7 @@ const extractPresentations = () => {
 					presentation.programEntry
 				),
 				time: parseTime(presentation.time),
-				location: presentation.location,
+				location: extractLocation(presentation.location, presentation.locationText),
 				slidesUrl: presentation.slides,
 				videoUrl: presentation.video,
 				misc: presentation.misc,
@@ -114,6 +114,13 @@ const extractAnnouncement = (announcement, program, programEntry) => {
 
 const parseTime = timeString =>
 	DateTime.fromFormat(timeString, "dd.MM.yyyy HHmm z", { setZone: true })
+
+const extractLocation = (location, locationText) => {
+	return {
+		text: (location && location.text) ? location.text : locationText,
+		url: location ? location.url : null
+	}
+}
 
 const upcomingText = upcoming => {
 	const intro =
@@ -150,7 +157,11 @@ const prepareEvents = presentations =>
 const present = presentation => {
 	return (
 		<dl key="coordinates" className={style.coordinates}>
-			{presentLocation(presentation.event.name, presentation.event.url, presentation.location)}
+			{presentLocation(
+				presentation.event.name,
+				presentation.event.url,
+				presentation.location
+			)}
 			{presentation.time && presentDate(presentation.time)}
 			{(presentation.announcement || presentation.slidesUrl || presentation.videoUrl) &&
 				presentLinks(
@@ -172,7 +183,7 @@ const presentLocation = (name, url, location) => {
 				{location && (
 					<React.Fragment>
 						<br />
-						{location.url ? <Link to={location.url}>{location.text}</Link> : location}
+						{location.url ? <Link to={location.url}>{location.text}</Link> : location.text}
 					</React.Fragment>
 				)}
 			</dd>
