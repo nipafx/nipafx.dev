@@ -6,7 +6,7 @@ slug: decorator-pattern-default-methods
 description: "Use Java 8's default methods to make the decorator pattern even more beautiful, which results in more concise and readable code."
 searchKeywords: "decorator pattern default methods"
 featuredImage: decorator-pattern-default-methods
-repo: demo-decorator-java-8
+repo: decorator-java-8
 ---
 
 In [a recent post](decorator-pattern-saved-my-day) I described how the decorator pattern saved my day.

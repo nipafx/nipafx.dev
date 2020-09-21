@@ -6,7 +6,7 @@ slug: java-serialization-proxy-pattern
 description: "A presentation of the Serialization Proxy Pattern as defined in Effective Java. It defines the pattern, describes its implementation and gives examples."
 searchKeywords: "Serialization Proxy Pattern"
 featuredImage: serialization-proxy-pattern
-repo: demo-serialization-proxy-pattern
+repo: serialization-proxy-pattern
 ---
 
 In my [last post](java-concepts-serialization), I talked about serialization in general.

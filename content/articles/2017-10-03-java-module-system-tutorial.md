@@ -8,6 +8,7 @@ intro: "Learn all the module system basics in this tutorial: how to declare modu
 searchKeywords: "module system"
 featuredImage: jpms-tutorial-pieces
 inlineCodeLanguage: shell
+repo: jpms-monitor
 ---
 
 The Java Platform Module System (JPMS) brings modularization to Java and the JVM and it changes how we program in the large.

@@ -49,12 +49,12 @@ export const query = graphql`
 			description
 			intro
 			searchKeywords
-			repo {
-				url
-				title
-				description
-				restrictive
-			}
+			# repo {
+			# 	url
+			# 	title
+			# 	description
+			# 	restrictive
+			# }
 			source
 			content {
 				htmlAst

@@ -9,6 +9,7 @@ searchKeywords: "java 9 migration"
 featuredImage: java-9-migration
 slides: https://slides.codefx.org/java-9-migration
 videoSlug: java-9-migration-devoxx-be-2018
+repo: java-9-migration
 ---
 
 I'm sure you've heard about compatibility issues when upgrading from Java 8 to 9 and beyond, but did you try it yourself yet?

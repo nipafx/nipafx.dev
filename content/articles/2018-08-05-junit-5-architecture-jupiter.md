@@ -7,7 +7,7 @@ description: "The JUnit 5 architecture promotes a better separation of concerns 
 intro: "JUnit 4 came in a single artifact, blending all uses cases into one bundle. The JUnit 5 architecture promotes a better separation of concerns and provides clear APIs for testers (Jupiter) and tools (Platform)."
 searchKeywords: "JUnit 5 architecture"
 featuredImage: junit-5-architecture
-repo: demo-junit-5
+repo: junit-5-demo
 ---
 
 JUnit 5 has a very interesting architecture.

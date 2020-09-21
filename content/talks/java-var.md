@@ -8,6 +8,7 @@ searchKeywords: "java var"
 featuredImage: java-var
 slides: https://slides.codefx.org/java-var
 videoSlug: java-var-jfall-2018
+repo: java-x-demo
 ---
 
 Since Java 10 you can use `var` to let the compiler infer a local variable's type:

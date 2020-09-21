@@ -7,6 +7,7 @@ description: "Java 10 introduces the var keyword, which lets the compiler infer 
 intro: "Java 10 introduces 'var' which lets the compiler infer local variable types. Here's how it works, why it exists, and how it impacts readability."
 searchKeywords: "var"
 featuredImage: var-example
+repo: java-x-demo
 ---
 
 [Java 10 will be released on March 20th 2018](https://medium.com/codefx-weekly/java-10-and-cross-references-in-asciidoctor-597abcfef8d3) and all features that want to be shipped with it must be merged into the main development line by December 14th.

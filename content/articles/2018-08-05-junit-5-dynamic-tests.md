@@ -7,7 +7,7 @@ description: "With JUnit 5's dynamic tests, we can create tests at run time, for
 intro: "With dynamic tests, JUnit 5 allows us to create tests at run time. With this we can parameterize tests. generate hierarchical test plans, and even define tests with lambdas!"
 searchKeywords: "dynamic tests"
 featuredImage: junit-5-dynamic-tests
-repo: demo-junit-5
+repo: junit-5-demo
 ---
 
 With JUnit 5's dynamic tests it is possible to define fully fledged test cases at run time.

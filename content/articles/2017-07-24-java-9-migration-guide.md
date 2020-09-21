@@ -7,6 +7,7 @@ description: "Solutions to the seven most common challenges for a Java 9 migrati
 intro: "Migrating to Java 9 is no walk in the park, but it's not intractable either. If you know how to fix these seven most common problems, you'll be able to power through and make your project Java 9 compatible."
 searchKeywords: "java 9 migration"
 featuredImage: java-9-migration
+repo: java-9-migration
 ---
 
 I'm sure you've heard that updating to Java 9 is no walk in the park, maybe even that it's an incompatible update and that a migration makes no sense for large code bases.

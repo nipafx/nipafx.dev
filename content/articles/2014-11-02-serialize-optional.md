@@ -7,7 +7,7 @@ intro: "A summary of why you can't serialize `Optional` and what can be done to 
 description: "A summary of why you can't serialize Optional and what can be done to deal with that limitation if necessary."
 searchKeywords: "serialize optional"
 featuredImage: serialize-optional
-repo: demo-serialize-optional
+repo: serialize-optional
 ---
 
 In [a recent post](why-isnt-java-optional-serializable) I explained why we can't serialize Optional.

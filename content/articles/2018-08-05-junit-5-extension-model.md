@@ -7,7 +7,7 @@ description: "The JUnit 5 extension model enables detailed, flexible, and powerf
 intro: "The JUnit 5 extension model enables detailed, flexible, and powerful additions to JUnit 5's core features. For that it provides specific extension points and easy composition of annotations."
 searchKeywords: "JUnit 5 extension"
 featuredImage: junit-5-extension-model
-repo: demo-junit-5
+repo: junit-5-demo
 ---
 
 We already know [quite](junit-5-setup) [a](junit-5-basics) [lot](junit-5-parameterized-tests) about [JUnit 5](tag:junit-5), the next version of Java's most ubiquitous testing framework.

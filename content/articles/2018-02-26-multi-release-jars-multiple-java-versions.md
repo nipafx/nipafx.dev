@@ -6,6 +6,7 @@ slug: multi-release-jars-multiple-java-versions
 description: "Multi-release JARs allow you to create a single JAR that contains bytecode for several Java versions with jar --version 9 (or 10, or...). Presented with a multi-release JAR, JVMs version 9 and later will load the code that was included for their version."
 searchKeywords: "multi-release JAR"
 featuredImage: multi-release-jars
+repo: java-x-demo
 ---
 
 It's never easy to decide which Java version to require for your project: On the one hand you want to give users the freedom of choice, so it would be nice to support several major versions, not just the newest one.

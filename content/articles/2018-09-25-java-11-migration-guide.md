@@ -7,6 +7,7 @@ description: "Migrating from Java 8 to Java 11? This has got you covered: licens
 intro: "Migrating from Java 8 to Java 11? Then this post has got you covered. It discusses licensing, long-term support, update preparations, version requirements, common migration challenges, and more."
 searchKeywords: "Java 11 migration"
 featuredImage: java-11-migration
+repo: java-9-migration
 ---
 
 [Java 11](http://jdk.java.net/11/) is released today!

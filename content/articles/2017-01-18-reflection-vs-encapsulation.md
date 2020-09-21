@@ -6,6 +6,7 @@ slug: java-modules-reflection-vs-encapsulation
 canonicalUrl: https://www.sitepoint.com/reflection-vs-encapsulation-in-the-java-module-system
 description: "Reflection wants to break into all code; encapsulation wants to give modules a safe space. How can this stand off be resolved?"
 featuredImage: reflection-vs-encapsulation-module-system
+repo: jigsaw-encapsulation
 ---
 
 Historically reflection could be used to break into any code that ran in the same JVM.

@@ -7,7 +7,7 @@ description: "The Java Platform Module System allows optional dependencies with 
 intro: "The module system allows optional dependencies with the `requires static` clause. Module required this way are accessible at compile time but can be absent at run time."
 searchKeywords: "optional dependencies"
 featuredImage: jpms-optional-dependency
-# TODO repo
+repo: jpms-monitor
 ---
 
 The [Java Platform Module System](tag:j_ms) has a strong opinion on dependencies: By default, they need to be required (to be accessible) and then they need to be present both at compile and at run time.

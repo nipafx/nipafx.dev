@@ -7,6 +7,7 @@ description: "Java 9 is coming! One of the many changes are new Stream methods: 
 intro: "Java 9 is coming! And it is more than just Jigsaw. One of the many changes are new Stream methods: `takeWhile`, `dropWhile`, and `ofNullable`. For more fun with streams!"
 searchKeywords: "Java 9 stream"
 featuredImage: java-9-stream
+repo: java-x-demo
 ---
 
 Java 9 is coming!

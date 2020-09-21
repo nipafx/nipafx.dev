@@ -8,6 +8,7 @@ intro: "Get your code running on the Java 9 Module System with the command line 
 searchKeywords: "command line options"
 featuredImage: java-9-command-line-options
 inlineCodeLanguage: shell
+repo: java-9-migration
 ---
 
 The [Java Platform Module System](tag:j_ms) (JPMS) not only comes with [an entire set of new rules to abide by](java-module-system-tutorial), it also introduces a host of command line options to break them.

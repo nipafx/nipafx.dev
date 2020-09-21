@@ -6,7 +6,7 @@ slug: junit-5-setup
 description: "How to set up JUnit 5 so tests run in IntelliJ, Eclipse, Maven, Gradle or, if all else fails, via JUnit 4 or on the command line."
 searchKeywords: "setup"
 featuredImage: junit-5-setup
-repo: demo-junit-5
+repo: junit-5-demo
 ---
 
 JUnit 5 tool support has come a long way since its early days in 2017, so setting JUnit 5 up in your favorite IDE or build tool should be fairly straight-forward.

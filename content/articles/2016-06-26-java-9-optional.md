@@ -7,6 +7,7 @@ description: "Java 9 is coming! One of the changes are new methods on Optional: 
 intro: "More about Java 9 - this time: `Optional`. We'll see how the new methods `stream()`, `or()`, and `ifPresentOrElse()` considerably improve its API."
 searchKeywords: "java 9 optional"
 featuredImage: java-9-optional
+repo: java-x-demo
 ---
 
 Wow, people were *really* interested in [Java 9's additions to the Stream API](java-9-stream).

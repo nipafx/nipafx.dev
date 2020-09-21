@@ -6,7 +6,7 @@ slug: junit-lambda-prototype
 description: "JUnit Lambda will eventually bring us JUnit 5. This is a discussion of the recent prototype, its features, core principles and compatibility considerations."
 searchKeywords: "junit lambda"
 featuredImage: junit-lambda
-repo: lab-junit-lambda
+repo: junit-lambda-demo
 ---
 
 Did you hear about [*JUnit Lambda*](http://junit.org/junit-lambda.html)?

@@ -7,6 +7,7 @@ description: "In Java 9 a module must read another to use its API. With implied 
 intro: "In Java 9 a module must read another to be able to use its API. With implied readability a third module passes the dependency on, allowing the first to read the second without explicitly depending on it."
 searchKeywords: "implied readability"
 featuredImage: implied-readability
+repo: jpms-monitor
 ---
 
 The [module system tutorial](jigsaw-hands-on-guide) brushes past a feature I would like to discuss in more detail: *implied readability*, which is expressed with `requires transitive`.

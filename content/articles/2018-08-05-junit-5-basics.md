@@ -7,7 +7,7 @@ description: "The Basics of JUnit 5: How to use `@Test`, `@BeforeAll`, `@BeforeE
 intro: "Get to know the basics of JUnit 5: `@Test`, lifecycle methods, assertions, and assumptions; how to disable, name, and tag tests; as well as previews on nesting, parameterization, and test interfaces. Let's write some tests!"
 searchKeywords: "JUnit 5"
 featuredImage: junit-5-basics
-repo: demo-junit-5
+repo: junit-5-demo
 ---
 
 After [setting JUnit 5 up](junit-5-setup), we can write some basic tests, getting to know the test lifecycle, assertions, and assumptions as well as some more advanced features like test interfaces, disabled, tagged, nested, and parameterized tests.

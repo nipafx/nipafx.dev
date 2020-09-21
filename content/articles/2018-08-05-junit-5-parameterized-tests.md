@@ -7,7 +7,7 @@ description: "Thorough introduction to parameterized tests in JUnit 5 with @Para
 intro: "Thorough introduction to parameterized tests in JUnit 5: How to create them, how to name them, where to get the arguments from, how to convert then, and how to customize that."
 searchKeywords: "parameterized tests"
 featuredImage: junit-5-params
-repo: demo-junit-5
+repo: junit-5-demo
 ---
 
 JUnit 5 is pretty impressive, particularly when you look under the covers, at the [extension model](junit-5-extension-model) and the [architecture](junit-5-architecture).

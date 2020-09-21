@@ -7,7 +7,7 @@ description: "A detailed look at JUnit 5's `@Disabled`, `@DisabledOnOs`, `@Disab
 intro: "A detailed look at `@Disabled`, its conditional counterparts, and how to  create custom conditions that allow us to flexibly disable test methods."
 searchKeywords: "conditions"
 featuredImage: junit-5-conditions
-repo: demo-junit-5
+repo: junit-5-demo
 ---
 
 It is time to combine two topics that we've been exploring in the past: [conditions like `@DisabledOnOs` and `@DisabledOnJre`](junit-5-basics#disabling-tests) on the one hand and [extending JUnit 5 with custom behavior](junit-5-extension-model) on the other hand.

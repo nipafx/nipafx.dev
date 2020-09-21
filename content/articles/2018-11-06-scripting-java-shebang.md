@@ -7,8 +7,8 @@ description: "On Java 11+, you can run a single source file without compiling it
 intro: "From Java 11 on, you can execute a single source file without compiling it first. Beyond experimentation, you can write scripts this way. Even the shebang is supported!"
 searchKeywords: "script"
 featuredImage: java-scripts
-repo: java-x-demo
 inlineCodeLanguage: shell
+repo: java-x-demo
 ---
 
 There are several reasons why writing scripts in Java seems to be a bad idea, chief among them that it's always a two step process to run a source file: It first has to be compiled (with `javac`) before it can be executed (with `java`).

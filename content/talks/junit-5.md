@@ -9,8 +9,7 @@ searchKeywords: "junit 5"
 featuredImage: junit-5
 slides: https://slides.codefx.org/junit-5
 # videoSlug: https://www.youtube.com/watch?v=OA3UJYxTBRA https://www.youtube.com/watch?v=VfC00bby8XQ
-# TODO: replace with actual JUnit 5 repo once it's created
-repo: java-x
+repo: junit-5-demo
 ---
 
 Java's most ubiquitous library got an update! This talk...

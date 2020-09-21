@@ -6,7 +6,7 @@ slug: java-pirate-elvis-operator
 description: "Java has no Elvis operator (or null coalescing operator / null-safe member selection) but with lambda expressions / method references you can roll your own."
 searchKeywords: "elvis operator"
 featuredImage: elvis-operator
-repo: demo-elvis-operator
+repo: elvis-operator
 ---
 
 So, Java doesn't have an Elvis operator (or, as it is more formally known, null coalescing operator or null-safe member selection) ... While I personally don't much care about it, some people seem to really like it.

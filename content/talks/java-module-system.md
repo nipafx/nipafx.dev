@@ -8,6 +8,7 @@ searchKeywords: "java module system"
 featuredImage: java-module-system
 slides: https://slides.codefx.org/jpms
 videoSlug: jpms-java-saigon-2018
+repo: jpms-monitor
 ---
 
 Java 9 shipped the Java Platform Module System, which brings language-level modularity to the Java ecosystem.

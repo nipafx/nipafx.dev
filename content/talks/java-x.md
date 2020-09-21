@@ -7,6 +7,7 @@ description: "In this talk, I introduce the Java language features, new/updated 
 searchKeywords: "java 15"
 featuredImage: java-15
 slides: https://slides.codefx.org/java-x
+repo: java-x-demo
 ---
 
 Many projects are still on Java 8, some already on 11 and yet, these days Java 15 gets released!

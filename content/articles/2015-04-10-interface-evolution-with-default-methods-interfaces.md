@@ -6,6 +6,7 @@ slug: java-default-methods-interface-evolution-failure
 description: "Why interface evolution with default methods does not work for whole interfaces - at least not smooth enough to be practical."
 searchKeywords: "interface evolution"
 featuredImage: interface-evolution-with-default-methods-II
+repo: java-x-demo
 ---
 
 [Default methods](java-default-methods-guide) were introduced to enable interface evolution.

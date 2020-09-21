@@ -6,6 +6,7 @@ slug: libfx-0-3-0
 description: "Release post for LibFX 0.3.0 including pointers to GitHub, feature descriptions, Maven coordinates and the Javadoc."
 searchKeywords: "libfx 0.3.0"
 featuredImage: libfx-library
+# repo: libfx
 ---
 
 I just released [**LibFX 0.3.0**](https://github.com/CodeFX-org/LibFX/releases/tag/v0.3.0)!

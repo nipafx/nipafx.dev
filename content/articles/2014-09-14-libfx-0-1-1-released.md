@@ -6,6 +6,7 @@ slug: libfx-0-1-1
 description: "Release post for LibFX 0.1.1 including a description of `Nestings` and pointers to GitHub, Maven and the Javadoc."
 searchKeywords: "libfx 0.1.1"
 featuredImage: libfx-library
+# repo: libfx
 ---
 
 Just today I released [LibFX 0.1.1](https://github.com/CodeFX-org/LibFX/releases/tag/v0.1.1)!

@@ -8,6 +8,7 @@ intro: "Java 9 introduces unified logging, a central mechanism configurable with
 searchKeywords: "xlog"
 featuredImage: unified-logging
 inlineCodeLanguage: shell
+repo: java-x-demo
 ---
 
 Java 9 comes with a unified logging architecture ([JEP 158](http://openjdk.java.net/jeps/158)) that pipes a lot of messages that the JVM generates through the same mechanism, which can be configured with the `-Xlog` option.

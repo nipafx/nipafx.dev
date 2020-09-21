@@ -8,8 +8,7 @@ videoSlug: nighthacking-javaland-2017
 description: "At JavaLand 2017, I spent 15 minutes exploring JUnit 5's (then) brand-new parameterized test feature in a NightHacking session"
 searchKeywords: "JUnit 5 parameterized tests"
 featuredImage: nighthacking-javaland-2017
-# TODO: replace with junit-5-demo once that was created
-repo: java-x-demo
+repo: junit-5-demo
 ---
 
 Thanks Sebastian (Daschner) for inviting me to this session, exploring things live on camera is fun.

@@ -8,6 +8,7 @@ searchKeywords: "java 8"
 featuredImage: java-after-n
 slides: https://slides.codefx.org/java-after-eight
 videoSlug: java-after-eight-jfokus-2020
+repo: java-after-8
 ---
 
 Many projects are still on Java 8 and yet, Java 14 is already out! The small releases after 9 created the illusion of nothing much happening, but nothing could be further from the truth - a lot changed since then that shapes the look of everyday Java code:
