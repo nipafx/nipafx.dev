@@ -3,7 +3,7 @@ title: "Videos"
 singularName: "video"
 pluralName: "videos"
 slug: "videos"
-description: "I occasionally make YouTube-Videos, mostly about Java (TODO)"
+description: "I occasionally make YouTube-Videos, mostly about Java - here they are"
 ---
 
-TODO
+$PLACEHOLDER

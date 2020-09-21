@@ -9,17 +9,13 @@
 				},
 				{
 					"title": "Blog Posts",
-					"url": "/posts",
+					"url": "channel:articles",
 					"className": "articles"
 				},
 				{
 					"title": "Newsletters",
 					"url": "https://medium.com/codefx-weekly",
 					"className": "medium"
-				},
-				{
-					"title": "Articles",
-					"url": "/"
 				},
 				{
 					"title": "The JMS",
@@ -36,12 +32,12 @@
 				},
 				{
 					"title": "Recordings",
-					"url": "/videos",
+					"url": "channel:videos",
 					"className": "videos"
 				},
 				{
 					"title": "Streams",
-					"url": "/",
+					"url": "https://twitch.tv/nipafx",
 					"className": "twitch"
 				}
 			]

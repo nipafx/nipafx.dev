@@ -3,7 +3,7 @@
 		{
 			"title": "RSS",
 			"fontAwesome": ["fa", "rss"],
-			"url": "https://nipafx.dev/feed.xml",
+			"url": "feed.xml",
 			"className": "rss"
 		},
 		{
