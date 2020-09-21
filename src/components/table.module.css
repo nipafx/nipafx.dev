@@ -10,10 +10,6 @@
 	border-collapse: collapse;
 }
 
-.table thead, .table tbody {
-	display: block;
-}
-
 .table th, .table td {
 	padding: 0 0.5em;
 	border-right: 1px solid var(--alt-color);

@@ -56,17 +56,17 @@ const renderLink = ({ href, children }) => {
 	return <Link to={href} children={children}/>
 }
 
-const renderOrderedList = ({ id, className, children }) => {
+const renderOrderedList = ({ id, className, style, children }) => {
 	return (
-		<ol id={id} {...classNames(className, layout.offCenter)}>
+		<ol id={id} {...classNames(className, layout.offCenter)} style={style}>
 			{children}
 		</ol>
 	)
 }
 
-const renderUnorderedList = ({ id, className, children }) => {
+const renderUnorderedList = ({ id, className, style, children }) => {
 	return (
-		<ul id={id} {...classNames(className, layout.offCenter)}>
+		<ul id={id} {...classNames(className, layout.offCenter)} style={style}>
 			{children}
 		</ul>
 	)
