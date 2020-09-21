@@ -78,6 +78,11 @@ const showSeries = series => {
 }
 
 const showSource = source => (
+	// TODO:
+	//  - extract into own component
+	//  - create "type", e.g. for "demo", "lab", "project", so text can be written accordingly
+	//    (check in with `jdeps-maven-plugin` and `junit-5-parameterized-tests-nighthacking`, create `libfx`)
+	//  - detect channel, so text can be written accordingly
 	<div className={style.entry}>
 		{source.repo && (
 			<p>

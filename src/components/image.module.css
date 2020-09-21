@@ -2,10 +2,10 @@
 	position: relative;
 }
 
- /* TODO: decide whether to use duotone hover effect
-    source: https://jmperezperez.com/duotone-using-css-blend-modes/ */
-
-/* .container:hover::before {
+/* break glass for duotone hover effect
+   (source: https://jmperezperez.com/duotone-using-css-blend-modes/) */
+/*
+.container:hover::before {
 	background-color: #69ea7d;
 	content: "";
 	display: block;
@@ -30,7 +30,8 @@
 	top: 0;
 	left: 0;
 	pointer-events: none;
-} */
+}
+*/
 
 .credits {
 	position: absolute;

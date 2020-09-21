@@ -8,6 +8,7 @@ import { Tag } from "../components/taglet"
 
 import layout from "../layout/container.module.css"
 
+// TODO: is this needed or does it duplicate <TagletLayout> (taglet.js)?
 const TagsPage = ({ data }) => (
 	<Site
 		meta={{

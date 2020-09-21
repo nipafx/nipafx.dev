@@ -8,6 +8,7 @@ import Link from "./link"
 
 import style from "./linkList.module.css"
 
+// TODO include Discord
 const LinkList = ({ showIcons, links, className }) => {
 	const styles = [className, style.links]
 	const showOnlyTexts = !links[0].fontAwesome

@@ -64,7 +64,6 @@ const typeClasses = type => {
 		case "sidebar":
 			return [style.sideCredits]
 		case "postTitle":
-			// TODO always use side credits?
 			return [style.topCredit]
 		case "postCard":
 		case "videoThumbnail":

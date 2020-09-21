@@ -281,7 +281,8 @@ module.exports = {
 								const content = article
 									? article.content.html
 									: video
-									? `<p><a href="${video.url}">Watch the video.</a></p>${video.content.html}`
+									// TODO: find video URL and use it here
+									? `<p>Watch the video.</p>`
 									: null
 								if (content) item.custom_elements = [{ "content:encoded": content }]
 

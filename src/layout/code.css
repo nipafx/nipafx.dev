@@ -7,6 +7,16 @@
  * Based on dabblet (http://dabblet.com)
  * @author Lea Verou
  */
+
+/* TODO:
+	* should hovering over inline snippets in links or links in headers change their color?
+	* what's up with the colors in goodbye-2016's headers under "My Favorite Posts"?
+	* code blocks in lists can blow out layout, e.g. stream-performance:
+		```
+		java -jar target/benchmarks.jar Control
+		```
+/*
+
 /*********************************************************
 * General
 */

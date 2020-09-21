@@ -8,7 +8,7 @@ const EXTRA_MARGIN = 50
 const INTERSECTION_THRESHOLD = 1
 
 const Toc = ({ toc }) => {
-	/* TODO: Make this work again.
+	/*
 		This worked fine until it didn't. Even when hooking into `useEffect`, no ToC items
 		are highlighted. That changes when the properties in `new IntersectionObserver` are
 		removed, but the resulting behavior is very buggy.

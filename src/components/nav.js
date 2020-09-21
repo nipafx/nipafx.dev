@@ -10,6 +10,11 @@ import MarkdownAsHtml from "../infra/markdownAsHtml"
 import layout from "../layout/container.module.css"
 import style from "./nav.module.css"
 
+// TODO:
+//  * does not behave well when content doesn't fit on screen
+//    (can not be scrolled independently of main content;
+//     only grows to height 100% and thus hides some content [e.g. more tags])
+
 const Nav = ({ title, longHeaders, shortHeaders, open, children }) => {
 	return (
 		<div {...classNames(layout.navbar, style.container)}>

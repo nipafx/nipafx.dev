@@ -68,6 +68,7 @@ const secondLevelEntry = ({ title, url, children, className }, onIndexPage) => {
 	if (url)
 		return (
 			<div key={title} className={style.secondLevelEntry}>
+				{/* TODO: instead of Link, detect channel: and tag:, so a index page links work correctly */}
 				<Link className={className} to={url}>
 					{title}
 				</Link>

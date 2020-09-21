@@ -40,7 +40,6 @@ const Meta = ({ title, slug, canonicalUrl, description, searchKeywords, videoUrl
 	}
 
 	const metaNames = {
-		// TODO: remove before publication
 		robots: "noindex",
 		// Google
 		description,
