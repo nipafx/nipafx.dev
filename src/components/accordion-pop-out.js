@@ -5,7 +5,7 @@ import { classNames } from "../infra/functions"
 import style from "./accordion-pop-out.module.css"
 
 const PopOutAccordion = ({ className, headerClassName, headers, children }) => {
-	const id = ("pop-out-accordion-" + Math.random()).replace("0.", "")
+	const id = "pop-out-accordion-c92x5f"
 	useEffect(() => {
 		document.getElementById(id).classList.add(style.animated)
 		window.addEventListener("click", closeOpenMenus)
