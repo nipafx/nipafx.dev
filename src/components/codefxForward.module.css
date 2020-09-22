@@ -1,11 +1,12 @@
-:global(#codefx-forward), :global(#codefx-catch-all) {
+:global(#codefx-forward),
+:global(#codefx-catch-all) {
 	transform: translateY(-100vh);
 	opacity: 0;
-	transition: opacity var(--transition-duration),
-		transform 0s var(--transition-duration);
+	transition: opacity var(--transition-duration), transform 0s var(--transition-duration);
 }
 
-:global(#codefx-forward):target, :global(#codefx-catch-all):target {
+:global(#codefx-forward):target,
+:global(#codefx-catch-all):target {
 	transform: translateY(0);
 	opacity: 1;
 	/* If the reader has a cookie, they should never see the popover,
@@ -27,9 +28,7 @@
 }
 
 .popover {
-	width: 70%;
-	max-width: 3072px;
-	margin: 80px auto 0;
+	margin: 80px var(--medium-margin) 0;
 
 	border: var(--progress-bar-height) solid var(--alt-color);
 	background-color: var(--bg-color);
@@ -64,8 +63,7 @@
 
 .choices {
 	display: grid;
-	grid-auto-flow: column;
-	grid-auto-columns: 1fr;
+	grid-gap: 1em;
 
 	margin: 2em 0 1.5em;
 }
@@ -103,4 +101,18 @@
 
 :global(#codefx-catch-all):target .catch-all {
 	display: unset;
+}
+
+@media all and (min-width: 800px) {
+	.choices {
+		grid-auto-flow: column;
+	}
+}
+
+@media all and (min-width: 1000px) {
+	.popover {
+		width: 80%;
+		max-width: 1400px;
+		margin: 80px auto 0;
+	}
 }
