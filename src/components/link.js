@@ -8,7 +8,7 @@ const Link = ({ to, children, onClick, className }) => {
 	className = className || ""
 
 	const external =
-		to.includes("://") || to.startsWith("//") || to.startsWith("mailto")
+		to.includes("://") || to.startsWith("//") || to.startsWith("mailto") || to === "feed.xml"
 	if (external) return <ExternalLink to={to} className={className} onClick={onClick}>{children}</ExternalLink>
 
 	const id = to.startsWith("#")

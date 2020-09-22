@@ -1,3 +1,5 @@
+const videoData = require("./content/meta/videos.json")
+
 module.exports = {
 	siteMetadata: {
 		title: `nipafx`,
@@ -165,7 +167,13 @@ module.exports = {
 					{
 						resolve: `gatsby-remark-promote-tags`,
 						options: {
-							tags: ["admonition", "contentimage", "contentvideo", "pullquote", "series-list"],
+							tags: [
+								"admonition",
+								"contentimage",
+								"contentvideo",
+								"pullquote",
+								"series-list",
+							],
 						},
 					},
 					{
@@ -219,7 +227,7 @@ module.exports = {
 		{
 			// pull in FontAwesome CSS during build
 			// https://medium.com/@johnny02/how-to-add-font-awesome-to-a-gatsby-site-89da940924d5
-			resolve: "gatsby-plugin-fontawesome-css"
+			resolve: "gatsby-plugin-fontawesome-css",
 		},
 		{
 			resolve: "gatsby-plugin-matomo",
@@ -258,10 +266,10 @@ module.exports = {
 								generator: `Gatsby using "gatsby-plugin-feed" using "rss" (node module)`,
 								feed_url: `${site.siteMetadata.siteUrl}/feed.xml`,
 								site_url: site.siteMetadata.siteUrl,
-								// TODO: add logo as `image_url`
+								image_url: `${site.siteMetadata.siteUrl}/logo-bg.png`,
 								managingEditor: site.siteMetadata.author,
 								webMaster: site.siteMetadata.author,
-								// TODO add `copyright` notice
+								copyright: `Mostly CC-BY-NC 4.0 for words and ASL 2.0 for code - for details check ${site.siteMetadata.siteUrl}/license`,
 								language: "en-us",
 								categories: ["java", "software-development", "programming"],
 								pubDate: new Date(),
@@ -279,18 +287,22 @@ module.exports = {
 									date: post.date,
 								}
 
+								let content = null
 								const article = articles.nodes.find(
 									article => article.slug === post.slug
 								)
 								const video = videos.nodes.find(video => video.slug === post.slug)
-								const content = article
-									? article.content.html
-									: video
-									// TODO: find video URL and use it here
-									? `<p>Watch the video.</p>`
-									: null
-								if (content) item.custom_elements = [{ "content:encoded": content }]
+								if (article) content = article.content.html
+								else if (video) {
+									const videoInfo = videoData.videos.find(
+										v => v.slug === video.videoSlug
+									)
+									if (!videoInfo)
+										throw new Error(`Can't find URL of ${videoSlug}.`)
+									content = `${video.content.html}<p><a href="${videoInfo.url}">Watch the video.</a></p>`
+								}
 
+								if (content) item.custom_elements = [{ "content:encoded": content }]
 								return item
 							}),
 						query: `
@@ -315,6 +327,7 @@ module.exports = {
 								videos: allVideo {
 									nodes {
 										slug
+										videoSlug
 										content {
 											html
 										}
