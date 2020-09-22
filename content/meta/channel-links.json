@@ -13,6 +13,12 @@
 			"className": "twitter"
 		},
 		{
+			"title": "Discord",
+			"fontAwesome": ["fab", "discord"],
+			"url": "https://discord.com/invite/7m9w8Td",
+			"className": "discord"
+		},
+		{
 			"title": "Medium",
 			"fontAwesome": ["fab", "medium-m"],
 			"url": "https://medium.com/codefx-weekly",

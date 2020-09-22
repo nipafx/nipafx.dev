@@ -101,6 +101,10 @@ body {
 	--alt-color: var(--twitter-color);
 }
 
+.discord {
+	--alt-color: var(--discord-color);
+}
+
 .medium {
 	--alt-color: var(--medium-color);
 }
