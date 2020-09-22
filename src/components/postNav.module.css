@@ -12,6 +12,10 @@
 	padding-top: 0;
 }
 
+.entry > *:last-child {
+	margin-bottom: 0.5em;
+}
+
 .seriesList li {
 	padding-bottom: 0.5em;
 }
