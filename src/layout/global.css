@@ -84,7 +84,7 @@ a:hover {
 }
 
 /* these are the header id links added by `gatsby-remark-autolink-headers` */
-h2 > a, h3 > a, h4 > a, h5 > a {
+h2 > a:first-of-type, h3 > a:first-of-type, h4 > a:first-of-type, h5 > a:first-of-type {
 	color: var(--alt-color);
 	text-decoration: none;
 	float: left;
@@ -93,11 +93,11 @@ h2 > a, h3 > a, h4 > a, h5 > a {
 	line-height: 3.5em;
 }
 
-h2 > a:visited, h3 > a:visited, h4 > a:visited, h5 > a:visited {
+h2 > a:first-of-type:visited, h3 > a:first-of-type:visited, h4 > a:first-of-type:visited, h5 > a:first-of-type:visited {
 	color: var(--alt-color);
 }
 
-h2:hover > a, h3:hover > a, h4:hover > a, h5:hover > a {
+h2 > a:first-of-type:hover, h3 > a:first-of-type:hover, h4 > a:first-of-type:hover, h5 > a:first-of-type:hover {
 	color: var(--fg-color);
 }
 

@@ -9,13 +9,11 @@
  */
 
 /* TODO:
-	* should hovering over inline snippets in links or links in headers change their color?
-	* what's up with the colors in goodbye-2016's headers under "My Favorite Posts"?
 	* code blocks in lists can blow out layout, e.g. stream-performance:
 		```
 		java -jar target/benchmarks.jar Control
 		```
-/*
+*/
 
 /*********************************************************
 * General
@@ -45,6 +43,11 @@ code[class*="language-"] {
 
 	/* otherwise code is on top of the nav bar content */
 	z-index: -1;
+}
+/* flip colors for hovered links */
+a:hover code[class*="language-"] {
+	--code-fg-color: var(--alt-color);
+	--code-alt-color: var(--fg-color);
 }
 pre[class*="language-"]::selection,
 code[class*="language-"]::selection,
