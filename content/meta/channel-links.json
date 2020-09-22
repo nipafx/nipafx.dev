@@ -2,49 +2,49 @@
 	"links": [
 		{
 			"title": "RSS",
-			"fontAwesome": ["fa", "rss"],
+			"fontAwesome": "faRss",
 			"url": "feed.xml",
 			"className": "rss"
 		},
 		{
 			"title": "Twitter",
-			"fontAwesome": ["fab", "twitter"],
+			"fontAwesome": "faTwitter",
 			"url": "https://twitter.com/nipafx/",
 			"className": "twitter"
 		},
 		{
 			"title": "Discord",
-			"fontAwesome": ["fab", "discord"],
+			"fontAwesome": "faDiscord",
 			"url": "https://discord.com/invite/7m9w8Td",
 			"className": "discord"
 		},
 		{
 			"title": "Medium",
-			"fontAwesome": ["fab", "medium-m"],
+			"fontAwesome": "faMediumM",
 			"url": "https://medium.com/codefx-weekly",
 			"className": "medium"
 		},
 		{
 			"title": "YouTube",
-			"fontAwesome": ["fab", "youtube"],
+			"fontAwesome": "faYoutube",
 			"url": "https://youtube.com/codefx",
 			"className": "youtube"
 		},
 		{
 			"title": "Twitch",
-			"fontAwesome": ["fab", "twitch"],
+			"fontAwesome": "faTwitch",
 			"url": "https://twitch.tv/nipafx",
 			"className": "twitch"
 		},
 		{
 			"title": "GitHub",
-			"fontAwesome": ["fab", "github"],
+			"fontAwesome": "faGithub",
 			"url": "https://github.com/codefx-org",
 			"className": "github"
 		},
 		{
 			"title": "StackOverflow",
-			"fontAwesome": ["fab", "stack-overflow"],
+			"fontAwesome": "faStackOverflow",
 			"url": "http://stackoverflow.com/users/2525313/nicolai-parlog",
 			"className": "stackoverflow"
 		}

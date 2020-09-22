@@ -2,43 +2,43 @@
 	"links": [
 		{
 			"title": "Twitter",
-			"fontAwesome": ["fab", "twitter"],
+			"fontAwesome": "faTwitter",
 			"url": "https://twitter.com/intent/tweet?text=\"$TITLE\" by @nipafx:\n\n$DESCRIPTION\n\nhttps://nipafx.dev/$SLUG",
 			"className": "twitter"
 		},
 		{
 			"title": "Facebook",
-			"fontAwesome": ["fab", "facebook-f"],
+			"fontAwesome": "faFacebookF",
 			"url": "https://www.facebook.com/sharer/sharer.php?u=https://nipafx.dev/$SLUG",
 			"className": "facebook"
 		},
 		{
 			"title": "LinkedIn",
-			"fontAwesome": ["fab", "linkedin-in"],
+			"fontAwesome": "faLinkedinIn",
 			"url": "https://www.linkedin.com/sharing/share-offsite/?url=https://nipafx.dev/$SLUG",
 			"className": "linkedin"
 		},
 		{
 			"title": "Xing",
-			"fontAwesome": ["fab", "xing"],
+			"fontAwesome": "faXing",
 			"url": "https://www.xing.com/spi/shares/new?url=https://nipafx.dev/$SLUG",
 			"className": "xing"
 		},
 		{
 			"title": "VK",
-			"fontAwesome": ["fab", "vk"],
+			"fontAwesome": "faVk",
 			"url": "http://vk.com/share.php?url=https://nipafx.dev/$SLUG&title=$TITLE&comment=$DESCRIPTION",
 			"className": "vk"
 		},
 		{
 			"title": "Reddit",
-			"fontAwesome": ["fab", "reddit-alien"],
+			"fontAwesome": "faRedditAlien",
 			"url": "https://reddit.com/submit?url=https://nipafx.dev/$SLUG&title=$TITLE",
 			"className": "reddit"
 		},
 		{
 			"title": "HackerNews",
-			"fontAwesome": ["fab", "hacker-news"],
+			"fontAwesome": "faHackerNews",
 			"url": "https://news.ycombinator.com/submitlink?u=https://nipafx.dev/$SLUG&t=$TITLE",
 			"className": "hackernews"
 		}

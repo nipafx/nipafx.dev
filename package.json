@@ -16,6 +16,7 @@
 		"gatsby-link": "^2.4.14",
 		"gatsby-plugin-favicon": "^3.1.6",
 		"gatsby-plugin-feed": "^2.5.12",
+		"gatsby-plugin-fontawesome-css": "^1.0.0",
 		"gatsby-plugin-manifest": "^2.4.30",
 		"gatsby-plugin-matomo": "^0.7.2",
 		"gatsby-plugin-react-helmet": "^3.3.11",

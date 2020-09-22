@@ -1,6 +1,6 @@
 import React from "react"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import FaIcon from "./faIcon"
 
 import { classNames } from "../infra/functions"
 
@@ -22,7 +22,7 @@ const showLink = ({ title, fontAwesome, url, className }) => (
 		<Link to={url} className={className}>
 			{fontAwesome && (
 				<span className={style.icon}>
-					<FontAwesomeIcon icon={fontAwesome} />
+					<FaIcon icon={fontAwesome} />
 				</span>
 			)}
 			<span className={style.text}>{title}</span>
