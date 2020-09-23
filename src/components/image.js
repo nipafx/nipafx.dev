@@ -11,8 +11,7 @@ import style from "./image.module.css"
 import metaData from "../../images/images.json"
 
 const Image = ({ id, type, className }) => {
-	const image = getImage(id, type)
-	if (!exists(image, id, type)) return null
+	const image = getImageWithCredits(id, type)
 
 	return (
 		<div {...classNames(className, style.container)}>
@@ -74,20 +73,25 @@ const typeClasses = type => {
 	}
 }
 
-const getImage = (id, type) => {
-	const imageData = getImageData()
-	const img = findImageInData(imageData, type, id)
-	const image = img
-		? isFixedType(type)
-			? { fixed: img.fixed }
-			: { fluid: img.fluid }
-		: undefined
+const getImageWithCredits = (id, type) => {
+	const img = getImage(id, type)
+	const image = isFixedType(type) ? { fixed: img.fixed } : { fluid: img.fluid }
 	const json = metaData.find(node => node.slug === id)
 	const credits = findCreditsInData(json)
 	return {
 		image,
 		credits,
 	}
+}
+
+const getImage = (id, type) => {
+	const imageData = getImageData()
+	const image = findImageInData(imageData, type, id)
+	if (!image) {
+		const message = `Missing ${type} image: ${id}`
+		throw new Error(message)
+	}
+	return image
 }
 
 const getImageData = () => {
@@ -268,16 +272,6 @@ const showCredits = type => {
 		default:
 			throw new Error(`Unknown image type "${type}".`)
 	}
-}
-
-const exists = (image, id, type) => {
-	if (image.image) return true
-
-	const message = `Missing ${type} image: ${id}`
-	// console.warn(message)
-	throw new Error(message)
-
-	return false
 }
 
 export default Image
