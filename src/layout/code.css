@@ -8,13 +8,6 @@
  * @author Lea Verou
  */
 
-/* TODO:
-	* code blocks in lists can blow out layout, e.g. stream-performance:
-		```
-		java -jar target/benchmarks.jar Control
-		```
-*/
-
 /*********************************************************
 * General
 */
