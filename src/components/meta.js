@@ -3,7 +3,9 @@ import Helmet from "react-helmet"
 
 import { graphql, useStaticQuery } from "gatsby"
 
-const Meta = ({ title, slug, canonicalUrl, description, searchKeywords, videoUrl }) => {
+import { getImagePath } from "./image"
+
+const Meta = ({ title, slug, canonicalUrl, image, description, searchKeywords, videoUrl }) => {
 	const data = useStaticQuery(
 		graphql`
 			query {
@@ -28,8 +30,7 @@ const Meta = ({ title, slug, canonicalUrl, description, searchKeywords, videoUrl
 	// (which Google treats as two different pages), the canonical URL
 	// has to be used to identify one of them as the... well, canonical URL
 	const pageCanonicalUrl = canonicalUrl || pageUrl
-	// TODO: image
-	const pageImage = null
+	const pageImage = image ? site.siteUrl + getImagePath(image, "postTitle") : `${site.siteUrl}/nicolai.jpg`
 	const pageImageAlt = null
 
 	if (pageTitle.length > 60) console.warn("Long title: ", slug)

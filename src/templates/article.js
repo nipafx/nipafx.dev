@@ -31,6 +31,7 @@ export default ({ data }) => {
 		title: data.article.title,
 		slug: data.article.slug,
 		canonicalUrl: data.article.canonicalUrl,
+		image: data.article.featuredImage,
 		description: data.article.description,
 		searchKeywords: data.article.searchKeywords,
 	}

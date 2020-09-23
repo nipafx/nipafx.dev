@@ -27,6 +27,7 @@ export default ({ data }) => {
 	const meta = {
 		title: data.video.title,
 		slug: data.video.slug,
+		image: data.video.featuredImage,
 		description: data.video.description,
 		searchKeywords: data.video.searchKeywords,
 		videoUrl: videoData.videos.find(video => video.slug === data.video.videoSlug).url,

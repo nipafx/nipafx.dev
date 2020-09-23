@@ -84,6 +84,11 @@ const getImageWithCredits = (id, type) => {
 	}
 }
 
+export const getImagePath = (id, type) => {
+	const img = getImage(id, type)
+	return img[isFixedType(type) ? "fixed" : "fluid"].src
+}
+
 const getImage = (id, type) => {
 	const imageData = getImageData()
 	const image = findImageInData(imageData, type, id)

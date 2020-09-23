@@ -18,6 +18,7 @@ export default ({ data }) => {
 	const meta = {
 		title: data.course.title,
 		slug: data.course.slug,
+		image: data.course.featuredImage,
 		description: data.course.description,
 		searchKeywords: data.course.searchKeywords,
 	}

@@ -20,6 +20,7 @@ export default ({ data }) => {
 	const meta = {
 		title: data.talk.title,
 		slug: data.talk.slug,
+		image: data.talk.featuredImage,
 		description: data.talk.description,
 		searchKeywords: data.talk.searchKeywords,
 	}
