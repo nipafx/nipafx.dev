@@ -19,10 +19,32 @@ body {
 	--narrow-sidebar-width: 40px;
 }
 
+ /*
+  * SCROLLING
+  */
+
 html {
 	scroll-behavior: smooth;
 	/* always show scroll bar, so site jumps less on filter */
 	overflow-y: scroll;
+}
+
+/* without the asterisk, it is possible to style Chrome's own scroll bar,
+   but then the thumb doesn't move smoothly anymore */
+
+body {
+	scrollbar-color: var(--alt-color) var(--bg-color-shade-1);
+	scrollbar-width: thin;
+}
+
+body *::-webkit-scrollbar,
+body *::-webkit-scrollbar-track {
+	background-color: var(--bg-color-shade-1);
+	height: 10px;
+}
+
+body *::-webkit-scrollbar-thumb {
+	background-color: var(--alt-color);
 }
 
 /*
@@ -161,5 +183,3 @@ ol > li::marker {
 img {
 	max-width: 100%;
 }
-
-/* TODO: style scroll bars */
