@@ -7,7 +7,7 @@ description: "The JDeps Maven Plugin will break a project's build if it contains
 intro: "The JDeps Maven Plugin will break a project's build if it contains dependencies on JDK-internal APIs. This helps to prepare for Java 9, where these dependencies will be unaccessible."
 searchKeywords: "JDeps Maven Plugin"
 featuredImage: jdeps-mvn-motor
-# repo: jdeps-maven-plugin
+repo: jdeps-maven-plugin
 ---
 
 Two weeks ago I wrote about [how Java 9 may break your code](how-java-9-and-project-jigsaw-may-break-your-code).

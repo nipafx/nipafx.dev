@@ -11,7 +11,7 @@ const CourseLayout = ({title, slug, date, tags, description, intro, featuredImag
 		<main>
 			<section id={PROGRESS_BAR_REFERENCE}>
 				<PostHeader {...{ title, channel: "courses", date, tags, intro, featuredImage }} />
-				<PostContent {...{ title, slug, description, htmlAst }}>
+				<PostContent {...{ title, slug, channel: "courses", description, htmlAst }}>
 					<SessionList slug={slug} />
 				</PostContent>
 				<PostEnd type="course" />

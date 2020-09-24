@@ -15,6 +15,10 @@ export default ({ data }) => {
 		featuredImage: data.talk.featuredImage,
 		slides: data.talk.slides,
 		videoSlug: data.talk.videoSlug,
+		source:
+			data.talk.repo || data.talk.source
+				? { repo: data.talk.repo, text: data.talk.source }
+				: undefined,
 		htmlAst: data.talk.content.htmlAst,
 	}
 	const meta = {
@@ -44,6 +48,13 @@ export const query = graphql`
 			featuredImage
 			slides
 			videoSlug
+			repo {
+				url
+				title
+				type
+				description
+				restrictive
+			}
 			content {
 				htmlAst
 			}

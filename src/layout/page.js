@@ -10,7 +10,7 @@ const PageLayout = ({ title, slug, date, tags, description, toc, htmlAst }) => {
 		<main>
 			<section id={PROGRESS_BAR_REFERENCE}>
 				<PageHeader {...{ title, date, tags, description }} />
-				<PostContent {...{ title, slug, description, toc, htmlAst }} />
+				<PostContent {...{ title, slug, channel: "pages", description, toc, htmlAst }} />
 				<PostEnd type="page" />
 			</section>
 		</main>

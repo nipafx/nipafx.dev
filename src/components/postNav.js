@@ -14,7 +14,7 @@ import shareLinks from "../../content/meta/share-links.json"
 
 import style from "./postNav.module.css"
 
-const PostNav = ({ title, slug, description, toc, canonical, series, source }) => {
+const PostNav = ({ title, slug, channel, description, toc, canonical, series, source }) => {
 	return (
 		<Nav
 			title={title}
@@ -23,7 +23,7 @@ const PostNav = ({ title, slug, description, toc, canonical, series, source }) =
 		>
 			{canonical && showCanonical(canonical, title)}
 			{series && showSeries(series)}
-			{source && showSource(source)}
+			{source && showSource(source, channel)}
 			{toc && showToc(toc)}
 			{showShare(title, slug, description)}
 		</Nav>
@@ -77,23 +77,9 @@ const showSeries = series => {
 	)
 }
 
-const showSource = source => (
-	// TODO:
-	//  - extract into own component
-	//  - create "type", e.g. for "demo", "lab", "project", so text can be written accordingly
-	//    (check in with `jdeps-maven-plugin` and `junit-5-parameterized-tests-nighthacking`, create `libfx`)
-	//  - detect channel, so text can be written accordingly
+const showSource = (source, channel) => (
 	<div className={style.entry}>
-		{source.repo && (
-			<p>
-				Want to play around with the code yourself? Check out the repository{" "}
-				<Link to={source.repo.url}>{source.repo.title}</Link>,{" "}
-				<MarkdownAsHtml>{lowercaseFirstLetter(source.repo.description)}</MarkdownAsHtml> -
-				it contains many of the snippets shown here.
-				{!source.repo.restrictive &&
-					" It has a permissive license, so you can reuse the code for your projects."}
-			</p>
-		)}
+		{source.repo && <p>{textInSource(source, channel)}</p>}
 		{source.text && (
 			<p>
 				<MarkdownAsHtml>{source.text}</MarkdownAsHtml>
@@ -101,6 +87,50 @@ const showSource = source => (
 		)}
 	</div>
 )
+
+const textInSource = (source, channel) => {
+	switch (source.repo.type) {
+		case "demo":
+			return (
+				<React.Fragment>
+					Want to play around with the code yourself? Check out the repository{" "}
+					<Link to={source.repo.url}>{source.repo.title}</Link>,{" "}
+					<MarkdownAsHtml>{lowercaseFirstLetter(source.repo.description)}</MarkdownAsHtml>{" "}
+					- it contains many of the snippets {channelInSource(channel)}.
+					{!source.repo.restrictive &&
+						" It has a permissive license, so you can reuse the code for your projects."}
+				</React.Fragment>
+			)
+		case "project":
+			return (
+				<React.Fragment>
+					Interested in the project {channelInSource(channel)}? Check out{" "}
+					<Link to={source.repo.url}>{source.repo.title}</Link>,{" "}
+					<MarkdownAsHtml>{lowercaseFirstLetter(source.repo.description)}</MarkdownAsHtml>
+					.
+				</React.Fragment>
+			)
+		default:
+			throw new Error("Unknown repo type: " + source.repo.type)
+	}
+}
+
+const channelInSource = channel => {
+	switch (channel) {
+		case "articles":
+			return "shown in this blog post"
+		case "courses":
+			return "used in this course"
+		case "pages":
+			return "shown on this page"
+		case "talks":
+			return "shown in this talk"
+		case "videos":
+			return "shown in the video"
+		default:
+			throw new Error("Unknown channel: " + channel)
+	}
+}
 
 const lowercaseFirstLetter = string => string.charAt(0).toLowerCase() + string.substring(1)
 
@@ -117,8 +147,8 @@ const showShare = (title, slug, description) => {
 				/>
 			</div>
 			<p>
-				I'm active on various platforms. Watch this space or follow me there to get
-				notified when I publish new content:
+				I'm active on various platforms. Watch this space or follow me there to get notified
+				when I publish new content:
 			</p>
 			<div className={style.icons}>
 				<LinkList showIcons links={channelLinks.links} />

@@ -7,7 +7,7 @@ description: "With v0.2 the JDeps Maven Plugin allows the creation of flexible e
 intro: "With the second release the JDeps Maven Plugin allows the creation of flexible exemptions from build-breaking. This enables a self-paced migration away from dependencies of JDK-internal APIs that will be unavailable in Java 9."
 searchKeywords: "JDeps Maven Plugin"
 featuredImage: jdeps-mvn-motor
-# repo: jdeps-maven-plugin
+repo: jdeps-maven-plugin
 ---
 
 It only took me six months after [the initial release](jdeps-maven-plugin-0-1) but last week I finally published [version 0.2](https://github.com/CodeFX-org/JDeps-Maven-Plugin/releases/tag/v0.2) of my *JDeps Maven Plugin*, now lovingly nicknamed *JDeps Mvn*.

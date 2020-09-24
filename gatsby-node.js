@@ -159,6 +159,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			title: String!
 			slug: String!
 			tags: [String!]!
+			type: String!
 			description: String!
 			url: String!
 			restrictive: Boolean
@@ -366,6 +367,7 @@ createRepoNodes = (node, createNode, createContentDigest) => {
 		title: node.frontmatter.title,
 		slug: node.frontmatter.slug,
 		tags: node.frontmatter.tags,
+		type: node.frontmatter.type,
 		description: node.frontmatter.description,
 		url: node.frontmatter.url,
 
@@ -424,6 +426,7 @@ createTalkNodes = (node, createNode, createContentDigest) => {
 		featuredImage: node.frontmatter.featuredImage,
 		slides: node.frontmatter.slides,
 		videoSlug: node.frontmatter.videoSlug,
+		repo: node.frontmatter.repo,
 
 		// see comment on creating article nodes
 		content___NODE: node.id,

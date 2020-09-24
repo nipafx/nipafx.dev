@@ -10,7 +10,7 @@ const ArticleLayout = ({ title, slug, date, tags, canonical, description, intro,
 		<main>
 			<section id={PROGRESS_BAR_REFERENCE}>
 				<PostHeader {...{ title, date, channel: "articles", tags, intro, featuredImage }} />
-				<PostContent {...{ title, slug, description, toc, canonical, series, source, htmlAst }} />
+				<PostContent {...{ title, slug, channel: "articles", description, toc, canonical, series, source, htmlAst }} />
 				<PostEnd type="article" />
 			</section>
 		</main>

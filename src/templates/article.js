@@ -82,6 +82,7 @@ export const query = graphql`
 			repo {
 				url
 				title
+				type
 				description
 				restrictive
 			}

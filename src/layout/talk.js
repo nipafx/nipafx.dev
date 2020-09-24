@@ -12,12 +12,12 @@ import PresentationList from "../components/presentationList"
 
 import layout from "../layout/container.module.css"
 
-const TalkLayout = ({title, slug, date, tags, description, intro, featuredImage, slides, videoSlug, htmlAst}) => {
+const TalkLayout = ({title, slug, date, tags, description, intro, featuredImage, slides, videoSlug, source, htmlAst}) => {
 	return (
 		<main>
 			<section id={PROGRESS_BAR_REFERENCE}>
 				<PostHeader {...{ title, channel: "talks", date, tags, intro, featuredImage }} />
-				<PostContent {...{ title, slug, description, htmlAst }}>
+				<PostContent {...{ title, slug, channel: "talks", description, source, htmlAst }}>
 					{slides && (
 						<React.Fragment>
 							<H2 id="slides">Slides</H2>
