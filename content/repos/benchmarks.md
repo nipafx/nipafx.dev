@@ -1,9 +1,7 @@
 ---
 title: "Benchmark Lab"
-tags: [performance, collections, stream]
+tags: [performance, collections, streams]
 slug: benchmarks
 description: "A collection of various JMH-based Java benchmarks"
 url: "https://github.com/CodeFX-org/benchmarks"
 ---
-
-$PLACEHOLDER

@@ -98,39 +98,40 @@ const showTags = (channel, tags) => {
 
 // PAGE HEADER
 
-export const PageHeader = ({ title, date, tags }) => {
+export const PageHeader = ({ title, date, tags, description }) => {
 	return (
 		<Header>
 			<FormattedDate date={date} />
 			<MarkdownAsHtml>{title}</MarkdownAsHtml>
 			{showTags("pages", tags)}
-			{null /* TODO: teaser */}
+			<MarkdownAsHtml>{description}</MarkdownAsHtml>
 		</Header>
 	)
 }
 
 // CHANNEL HEADER
 
-export const ChannelHeader = ({ channel }) => {
+export const ChannelHeader = ({ channel, description }) => {
 	return (
 		<Header>
 			<span>Everything in</span>
 			<Channel channel={channel} plural />
 			{null}
-			{null /* TODO: description */}
+			<MarkdownAsHtml>{description}</MarkdownAsHtml>
 		</Header>
 	)
 }
 
 // TAG HEADER
 
-export const TagHeader = ({ tag }) => {
+export const TagHeader = ({ tag, description }) => {
 	return (
 		<Header>
 			<span>Everything about</span>
 			<Tag tag={tag} />
 			{null}
-			{null /* TODO: description */}
+			{/* not all tags have a Markdown file and so not all tags have a description */}
+			{ description ? <MarkdownAsHtml>{description}</MarkdownAsHtml> : null}
 		</Header>
 	)
 }

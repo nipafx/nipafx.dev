@@ -5,5 +5,3 @@ slug: java-after-eight
 description: "A real-life code base, initially on Java 8, that invites an update to Java 15 and to the many new language features, additional and improved APIs, and JVM capabilities"
 url: https://github.com/CodeFX-org/java-after-eight
 ---
-
-$PLACEHOLDER

@@ -7,7 +7,8 @@ import TagletLayout from "../layout/taglet"
 export default ({ data }) => {
 	const channel = {
 		channel: data.channel.internalName,
-		descriptionHtmlAst: data.channel.content.htmlAst,
+		description: data.channel.description,
+		content: data.channel.content.htmlAst,
 		postSlugs: data.posts.nodes.map(post => post.slug),
 	}
 	const meta = {

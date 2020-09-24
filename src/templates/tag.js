@@ -12,7 +12,8 @@ const TagPage = ({ pageContext, data }) => {
 		tag: tag.slug,
 		postSlugs,
 	}
-	if (tag.content) tagOptions.descriptionHtmlAst = tag.content.htmlAst
+	if (tag.description) tagOptions.description = tag.description
+	if (tag.content) tagOptions.content = tag.content.htmlAst
 	const meta = {
 		title: tag.title,
 		slug: tag.slug,

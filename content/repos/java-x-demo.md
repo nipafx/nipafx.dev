@@ -5,5 +5,3 @@ slug: java-x-demo
 description: "A project showcasing all important Java 9-13 features"
 url: https://github.com/CodeFX-org/demo-java-x
 ---
-
-$PLACEHOLDER
