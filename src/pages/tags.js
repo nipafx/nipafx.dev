@@ -7,8 +7,8 @@ import { AllTagsHeader } from "../components/header"
 import { Tag } from "../components/taglet"
 
 import layout from "../layout/container.module.css"
+import style from "./tags.module.css"
 
-// TODO: is this needed or does it duplicate <TagletLayout> (taglet.js)?
 const TagsPage = ({ data }) => (
 	<Site
 		meta={{
@@ -20,16 +20,15 @@ const TagsPage = ({ data }) => (
 		<main>
 			<section id={PROGRESS_BAR_REFERENCE}>
 				<AllTagsHeader />
-				{/* TODO: more beautiful list */}
 				<div className={layout.container}>
-					<ul>
+					<div className={style.container}>
 						{data.tags.group.map(tag => (
-							<li key={tag.slug}>
+							<span key={tag.slug}>
 								<Tag tag={tag.slug} mode="forward" />
 								<span>{` (${tag.count})`}</span>
-							</li>
+							</span>
 						))}
-					</ul>
+					</div>
 				</div>
 			</section>
 		</main>
