@@ -198,7 +198,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 
 createPostNodes = (node, createNode, createContentDigest) => {
-	if (![`articles`, `courses`, `pages`, `videos`, `talks`].includes(node.fields.collection))
+	if (![`articles`, `courses`, `videos`, `talks`].includes(node.fields.collection))
 		return
 
 	const post = {

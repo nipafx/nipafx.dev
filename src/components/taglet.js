@@ -92,6 +92,14 @@ const taglet = (text, link, forward, onClick) => {
  *  - overlink: set the hash (i.e. overwrite existing hash) instead of linking to a different page
  */
 const detectMode = (mode, kind, taglet, otherTaglet) => {
+	// as long as pages are not processed as posts, `#page` can't link anywhere
+	if (kind === "channel" && taglet === "pages")
+		return {
+			link: null,
+			forward: null,
+			onClick: null,
+		}
+
 	mode = mode || "text"
 	switch (mode) {
 		case "text":

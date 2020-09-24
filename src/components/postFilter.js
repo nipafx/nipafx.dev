@@ -97,7 +97,10 @@ const channelsAndTags = () => {
 		}
 	`)
 	return {
-		channels: channels.nodes.map(node => node.internalName),
+		channels: channels.nodes
+			.map(node => node.internalName)
+			// remove pages (for now?)
+			.filter(channel => channel !== "pages"),
 		tags: tags.group.map(group => group.slug),
 	}
 }
