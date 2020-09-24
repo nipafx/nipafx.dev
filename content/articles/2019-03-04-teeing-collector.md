@@ -1,6 +1,6 @@
 ---
 title: "Teeing Collector in Java 12"
-tags: [java-12, stream]
+tags: [java-12, streams]
 date: 2019-03-04
 slug: java-12-teeing-collector
 description: "The teeing collector, available since Java 12 as Collectors::teeing, forwards its input to two other collectors before merging their results with a function."

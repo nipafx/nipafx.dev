@@ -1,6 +1,6 @@
 ---
 title: "Stream Performance - Your Ideas"
-tags: [java-8, performance, stream]
+tags: [java-8, performance, streams]
 date: 2015-09-18
 slug: java-stream-performance-your-ideas
 description: "Another post about stream performance - this one implements your ideas about how else to approach the topic."

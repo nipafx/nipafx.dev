@@ -1,6 +1,6 @@
 ---
 title: "Expert Java 8"
-tags: [java-8, lambda, stream, optional, default-methods]
+tags: [java-8, lambda, streams, optional, default-methods]
 date: 2017-02-07
 slug: talk-expert-java-8
 description: "With this talk, I help you get the most out of lambdas, `Stream`s, `Optional`s, and default methods, helping you master Java 8's core features"

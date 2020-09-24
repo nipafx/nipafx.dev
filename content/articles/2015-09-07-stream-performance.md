@@ -1,6 +1,6 @@
 ---
 title: "Stream Performance"
-tags: [java-8, performance, stream]
+tags: [java-8, performance, streams]
 date: 2015-09-07
 slug: java-stream-performance
 description: "A close look at stream performance. How do they compare to for and for-each loops oder arrays and lists. And what role plays boxing?"

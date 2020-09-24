@@ -1,6 +1,6 @@
 ---
 title: "Code-First Java 9 Tutorial"
-tags: [java-9, migration, stream, optional, collections, j_ms]
+tags: [java-9, migration, streams, optional, collections, j_ms]
 date: 2018-02-05
 slug: java-9-tutorial
 description: "Showing code for the most important Java 9 features: private interface methods, stream and optional APIs, collection factories, reactive streams, stack walking, multi-release JARs, redirected platform logging, unified logging, the module system, and more. If you're new to Java 9, start here."

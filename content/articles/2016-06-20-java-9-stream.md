@@ -1,6 +1,6 @@
 ---
 title: "Java 9 Additions To `Stream`"
-tags: [java-9, stream]
+tags: [java-9, streams]
 date: 2016-06-20
 slug: java-9-stream
 description: "Java 9 is coming! One of the many changes are new Stream methods: `takeWhile`, `dropWhile`, and `ofNullable`. For more fun with streams!"

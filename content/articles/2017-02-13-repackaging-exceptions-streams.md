@@ -1,6 +1,6 @@
 ---
 title: "Repackaging Exceptions In Streams"
-tags: [clean-code, java-8, lambda, stream]
+tags: [clean-code, java-8, lambda, streams]
 date: 2017-02-13
 slug: java-repackaging-exceptions-streams
 description: "How to repackage checked exceptions that get thrown in a Java stream pipeline so that they can be thrown without the compiler complaining about it."

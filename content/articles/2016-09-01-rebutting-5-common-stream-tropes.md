@@ -1,6 +1,6 @@
 ---
 title: "Rebutting 5 Common Stream Tropes"
-tags: [java-8, rant, stream]
+tags: [java-8, rant, streams]
 date: 2016-09-01
 slug: rebutting-5-common-java-stream-tropes
 description: "Articles about Java 8's streams often repeat a bunch of tropes: succinctness, ugly mechanics, anemic pipelines, weak exception handling. This is a rebuttal!"
