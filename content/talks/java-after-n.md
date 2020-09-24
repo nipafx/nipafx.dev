@@ -18,3 +18,11 @@ Many projects are still on Java 8 and yet, Java 14 is already out! The small rel
 * additions to existing APIs, like `Stream` and `Optional`
 
 In this talk, we'll take a simple Java 8 code base, update it to 14, and refactor it to use the new language features and APIs. You'll be surprised how much the code changes!
+
+<!--
+Most projects that updated past Java 8 decided to stick to the LTS release 11.
+The new cadence created the illusion of not much happening after that, but nothing could be further from the truth - with new language features like switch expressions, text blocks, records, and sealed classes, Java is moving faster than ever.
+
+In this talk, we'll take a simple Java 11 code base, update it to 15, and refactor it to use the new language features and APIs.
+You'll be surprised how much the code changes!
+-->
