@@ -1,10 +1,106 @@
 {
 	"videos": [
 		{
+			"slug": "impressions-javazone-2017",
+			"url": "https://www.youtube.com/watch?v=kbbANlwI1G0",
+			"title": "Impressions of JavaLand 2017",
+			"thumbnail": "impressions-javazone-2017"
+		},
+		{
+			"slug": "welcome-java-9",
+			"url": "https://www.youtube.com/watch?v=sjIdWNHrMs4",
+			"title": "Welcome Java 9",
+			"thumbnail": "welcome-java-9"
+		},
+		{
+			"slug": "var-java-10",
+			"url": "https://www.youtube.com/watch?v=Le1DbpRZdRQ",
+			"title": "First contact with `var` in Java 10",
+			"thumbnail": "var-java-10"
+		},
+		{
+			"slug": "effective-java-00",
+			"url": "https://www.youtube.com/watch?v=Tbcoah86QlA",
+			"title": "Kicking off a series on Effective Java, Third Edition",
+			"thumbnail": "effective-java-00"
+		},
+		{
+			"slug": "effective-java-01",
+			"url": "https://www.youtube.com/watch?v=WUROOKn2OTk",
+			"title": "Static Factory Methods - Effective Java, Item 1",
+			"thumbnail": "effective-java-01"
+		},
+		{
+			"slug": "java-11-new-dawn",
+			"url": "https://www.youtube.com/watch?v=7xkyV2kLb0c",
+			"title": "Java 11: A New Dawn - Releases, Oracle JDK vs OpenJDK, and LTS",
+			"thumbnail": "java-11-new-dawn"
+		},
+		{
+			"slug": "effective-java-02",
+			"url": "https://www.youtube.com/watch?v=2GMp8VuxZnw",
+			"title": "Use Builders... Cautiously - Effective Java, Item 2",
+			"thumbnail": "effective-java-02"
+		},
+		{
+			"slug": "switch-java-12",
+			"url": "https://www.youtube.com/watch?v=1znHEf3oSNI",
+			"title": "First Contact with Switch Expressions in Java 12",
+			"thumbnail": "switch-java-12"
+		},
+		{
+			"slug": "robert-scholte-maven-3-4-5",
+			"url": "https://www.youtube.com/watch?v=vw9ypxJWMnA",
+			"title": "Maven 3 / 4 / 5 with Robert Scholte",
+			"thumbnail": "robert-scholte-maven-3-4-5"
+		},
+		{
+			"slug": "effective-java-03-04-05",
+			"url": "https://www.youtube.com/watch?v=kVuOveApdCk",
+			"title": "Utilities, Singletons and Dependency Injection - Effective Java, Items 3-5",
+			"thumbnail": "effective-java-03-04-05"
+		},
+		{
+			"slug": "java-12-experiments-live",
+			"url": "https://www.youtube.com/watch?v=TiObH-1NtNY",
+			"title": "Java 12 Experiments (Live Stream)",
+			"thumbnail": "java-12-experiments-live"
+		},
+		{
+			"slug": "caliz-1",
+			"url": "https://www.youtube.com/watch?v=8fWdv6HWHy0",
+			"title": "Caliz I: Wrapping JVM 11 and learning about Graal AOT",
+			"thumbnail": "caliz-1"
+		},
+		{
+			"slug": "caliz-2",
+			"url": "https://www.youtube.com/watch?v=UqTLXqjmHDU",
+			"title": "Caliz II: Wrapping Graal AOT",
+			"thumbnail": "caliz-2"
+		},
+		{
+			"slug": "caliz-3",
+			"url": "https://www.youtube.com/watch?v=RtWWzsA4Z1g",
+			"title": "Caliz III: Hashing scripts and background compilation",
+			"thumbnail": "caliz-3"
+		},
+		{
 			"slug": "jpms-sander-mak",
 			"url": "https://www.youtube.com/watch?v=6VoCwyzrMfQ",
 			"title": "The Java Module System with Sander Mak",
 			"thumbnail": "jpms-sander-mak"
+		},
+		{
+			"slug": "oliver-drotbohm-modularity",
+			"url": "https://www.youtube.com/watch?v=YYvc-DNuwr8",
+			"title": "Modularity with Oliver Drotbohm",
+			"thumbnail": "oliver-drotbohm-modularity"
+		},
+		{
+			"slug": "generics-1",
+			"url": "https://www.youtube.com/watch?v=I3th4SjihyM",
+			"title": "Java Generics I - The Basics",
+			"thumbnail": "generics-1"
 		},
 		{
 			"slug": "workflows-refactoring",
@@ -13,16 +109,28 @@
 			"thumbnail": "workflows-of-refactoring"
 		},
 		{
-			"slug": "java-after-eight-jfokus-2020",
-			"url": "https://www.youtube.com/watch?v=k9--KYubKzk",
-			"title": "Java After Eight at Jfokus 2020",
-			"thumbnail": "java-after-eight-jfokus-2020"
+			"slug": "javaone-2015-jigsaw",
+			"url": "https://www.youtube.com/watch?v=8RhwmJlZQgs",
+			"title": "JavaOne 2015 - Monday, Continental Ballroom 5",
+			"thumbnail": "javaone-2015"
 		},
 		{
-			"slug": "java-next-vjug-2019",
-			"url": "https://www.youtube.com/watch?v=sG6wUipM8mo",
-			"title": "Java Next at vJUG in September 2019",
-			"thumbnail": "java-next-vjug-2019"
+			"slug": "onuka-vidlik",
+			"url": "https://www.youtube.com/watch?v=yRHwWGO_A48",
+			"title": "ONUKA - Vidlik",
+			"thumbnail": "onuka-vidlik"
+		},
+		{
+			"slug": "interview-devoxx-be-2016",
+			"url": "https://www.youtube.com/watch?v=WZ5J4eocHjY",
+			"title": "Interview about JUnit 5 at Devoxx Belgium 2016",
+			"thumbnail": "interview-devoxx-be-2016"
+		},
+		{
+			"slug": "nighthacking-javaland-2017",
+			"url": "https://www.youtube.com/watch?v=UfTSjl1F0vo",
+			"title": "JUnit 5 NightHacking session at JavaLand 2017",
+			"thumbnail": "nighthacking-javaland-2017"
 		},
 		{
 			"slug": "expert-java-8-jfokus-2017",
@@ -55,22 +163,10 @@
 			"thumbnail": "comment-your-code-accento-2019"
 		},
 		{
-			"slug": "nighthacking-javaland-2017",
-			"url": "https://www.youtube.com/watch?v=UfTSjl1F0vo",
-			"title": "JUnit 5 NightHacking session at JavaLand 2017",
-			"thumbnail": "nighthacking-javaland-2017"
-		},
-		{
-			"slug": "impressions-javazone-2017",
-			"url": "https://www.youtube.com/watch?v=kbbANlwI1G0",
-			"title": "Impressions of JavaLand 2017",
-			"thumbnail": "impressions-javazone-2017"
-		},
-		{
-			"slug": "interview-devoxx-be-2016",
-			"url": "https://www.youtube.com/watch?v=WZ5J4eocHjY",
-			"title": "Interview about JUnit 5 at Devoxx Belgium 2016",
-			"thumbnail": "interview-devoxx-be-2016"
+			"slug": "java-next-vjug-2019",
+			"url": "https://www.youtube.com/watch?v=sG6wUipM8mo",
+			"title": "Java Next at vJUG in September 2019",
+			"thumbnail": "java-next-vjug-2019"
 		},
 		{
 			"slug": "keynote-blip-code-one-2019",
@@ -79,16 +175,10 @@
 			"thumbnail": "keynote-blip-code-one-2019"
 		},
 		{
-			"slug": "javaone-2015-jigsaw",
-			"url": "https://www.youtube.com/watch?v=8RhwmJlZQgs",
-			"title": "JavaOne 2015 - Monday, Continental Ballroom 5",
-			"thumbnail": "javaone-2015"
-		},
-		{
-			"slug": "onuka-vidlik",
-			"url": "https://www.youtube.com/watch?v=yRHwWGO_A48",
-			"title": "ONUKA - Vidlik",
-			"thumbnail": "onuka-vidlik"
+			"slug": "java-after-eight-jfokus-2020",
+			"url": "https://www.youtube.com/watch?v=k9--KYubKzk",
+			"title": "Java After Eight at Jfokus 2020",
+			"thumbnail": "java-after-eight-jfokus-2020"
 		}
 	]
 }
