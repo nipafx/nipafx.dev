@@ -38,9 +38,9 @@ export const IndexHeader = () => (
 		<span>You. Me. Java.</span>
 		{null}
 		<span>
-			Nice of you to stop by. I'm Nicolai (aka nipafx), a Java enthusiast with a
-			passion for learning and sharing, online and offline. If you want to sharpen your Java
-			skills, you've come to the right place.
+			Nice of you to stop by. I'm Nicolai (aka nipafx), a Java enthusiast with a passion for
+			learning and sharing, online and offline. If you want to sharpen your Java skills,
+			you've come to the right place.
 		</span>
 	</Header>
 )
@@ -65,19 +65,25 @@ const showTags = (channel, tags) => {
 	return (
 		<React.Fragment>
 			{channelExists && (
-				<Channel
-					key={channel}
-					channel={channel}
-					mode="forward"
-					colorize
-					className={style.channel}
-				/>
+				// without the useless <div>, channels and tag are not aligned
+				<div>
+					<Channel
+						key={channel}
+						channel={channel}
+						mode="forward"
+						colorize
+						className={style.channel}
+					/>
+				</div>
 			)}
 			{channelExists && tagsExist && (
-				<span key="separator" {...classNames("inlineSeparator", style.separator)}>
-					{" "}
-					//{" "}
-				</span>
+				// without the useless <div>, channels and tag are not aligned
+				<div>
+					<span key="separator" {...classNames("inlineSeparator", style.separator)}>
+						{" "}
+						//{" "}
+					</span>
+				</div>
 			)}
 			{tagsExist && (
 				<div key="tags" className={style.tags}>
