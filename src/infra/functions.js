@@ -31,19 +31,20 @@ export function processTableOfContents(toc) {
 	)
 }
 
-export function tagletPath(kind, taglet) {
-	if (kind === "tag") return taglet === "all" ? "/" : `/#tags~~${taglet}`
-	if (kind === "channel") return taglet === "all" ? "/" : `/#channels~~${taglet}`
-	throw new Error("Unknown kind: " + kind)
+export function tagletsPath(channel, tag) {
+	if (!channel && !tag) return `/`
+	return `/#` + tagletsHash(false, channel ? [channel] : [], false, tag ? [tag] : [])
 }
 
-export function tagletsPath(channel, tag) {
-	if (!channel && !tag) return ``
-	const path = [`/#`]
-	if (channel) path.push(`channels~~${channel}`)
-	if (channel && tag) path.push(`~~~`)
-	if (tag) path.push(`tags~~${tag}`)
-	return path.join(``)
+function tagletsHash(allChannels, channels, allTags, tags) {
+	const channelPath =
+		allChannels || channels.length === 0 ? null : "channels~~" + channels.join("~")
+	const tagPath = allTags || tags.length === 0 ? null : "tags~~" + tags.join("~")
+
+	if (channelPath && tagPath) return `${channelPath}~~~${tagPath}`
+	if (channelPath) return channelPath
+	if (tagPath) return tagPath
+	return null
 }
 
 export function emptyTaglets() {
@@ -125,15 +126,12 @@ function tagletsFrom(allChannels, channels, allTags, tags) {
 		},
 
 		writePath: function() {
-			const channelHash = this._channels.all
-				? null
-				: "channels~~" + this._channels.entries.join("~")
-			const tagHash = this._tags.all ? null : "tags~~" + this._tags.entries.join("~")
-
-			let hash = channelHash
-			if (tagHash)
-				if (hash) hash += "~~~" + tagHash
-				else hash = tagHash
+			const hash = tagletsHash(
+				this._channels.all,
+				this._channels.entries,
+				this._tags.all,
+				this._tags.entries
+			)
 
 			if (hash) window.location.hash = hash
 			else resetPath()

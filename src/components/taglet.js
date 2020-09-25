@@ -1,86 +1,80 @@
 import React, { useState, useLayoutEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import {
-	classNames,
-	tagletsFromPath,
-	emptyTaglets,
-	tagletPath,
-	tagletsPath,
-} from "../infra/functions"
+import { classNames, tagletsFromPath, emptyTaglets, tagletsPath } from "../infra/functions"
 
 import Link from "./link"
 
 import style from "./taglet.module.css"
 
-export const Tag = ({ tag, mode, className }) => {
-	const { link, forward, onClick } = detectMode(mode, "tag", tag)
+export const Tag = ({ tag, mode, className, children }) => {
+	const { link, forward, onClick } = detectMode(mode, null, tag)
 
-	const id = ("tag-" + tag + "-" + Math.random()).replace("0.", "")
 	// replace hyphen with non-breaking hyphen
 	const text = tag === "all" ? "ALL‑TAGS" : tag.replace("-", "‑")
+	const tagletChildren = children || `#${text}`
+
+	const classes = []
+	if (!children) classes.push(style.taglet)
+	if (className) classes.push(className)
 
 	return (
-		<span id={id} data-tag={tag} {...classNames(className, style.taglet)}>
-			{taglet(text, link, forward, onClick)}
+		<span data-tag={tag} {...classNames(...classes)}>
+			{taglet(link, forward, onClick, tagletChildren)}
 		</span>
 	)
 }
 
-export const Channel = ({ channel, plural, mode, colorize, className }) => {
-	let { link, forward, onClick } = detectMode(mode, "channel", channel)
+export const Channel = ({ channel, plural, mode, colorize, className, children }) => {
+	let { link, forward, onClick } = detectMode(mode, channel, null)
 	const { singularName, pluralName, slug } = channelInfo(channel)
 	if (link) link = slug
 
-	const id = ("channel-" + channel + "-" + Math.random()).replace("0.", "")
 	// replace hyphen with non-breaking hyphen
 	const text = (plural ? pluralName : singularName).replace("-", "‑")
+	const tagletChildren = children || `#${text}`
 
-	const classes = [style.taglet]
+	const classes = []
+	if (!children) classes.push(style.taglet)
 	if (colorize) classes.push(style.colorize)
 	if (className) classes.push(className)
 
 	return (
-		<span id={id} data-channel={channel} {...classNames(...classes)}>
-			{taglet(text, link, forward, onClick)}
+		<span data-channel={channel} {...classNames(...classes)}>
+			{taglet(link, forward, onClick, tagletChildren)}
 		</span>
 	)
 }
 
-export const MenuTag = ({ channel, tag, onIndexPage, className }) => {
-	const id = (
-		"channel-" +
-		channel +
-		"-" +
-		Math.random() +
-		"-tag-" +
-		tag +
-		"-" +
-		Math.random()
-	).replace("0.", "")
+export const ChannelTag = ({ channel, tag, mode, className, children }) => {
+	const { link, forward, onClick } = detectMode(mode, channel, tag)
 
-	const text = tag
-	const mode = onIndexPage ? "overlink" : "forward"
-	const { link, forward, onClick } = detectMode(mode, "tag", tag, channel)
+	// replace hyphen with non-breaking hyphen
+	const text = tag.replace("-", "‑")
+	const tagletChildren = children || `#${text}`
+
+	const classes = []
+	if (!children) classes.push(style.taglet)
+	if (className) classes.push(className)
 
 	return (
-		<span id={id} data-tag={tag} {...classNames(className, style.taglet)}>
-			{taglet(text, link, forward, onClick)}
+		<span data-channel={channel} data-tag={tag} {...classNames(...classes)}>
+			{taglet(link, forward, onClick, tagletChildren)}
 		</span>
 	)
 }
 
-const taglet = (text, link, forward, onClick) => {
+const taglet = (link, forward, onClick, children) => {
 	const [jsEnabled, setJsEnabled] = useState(false)
 	useLayoutEffect(() => {
 		setJsEnabled(true)
 	}, [])
 	return link ? (
 		<Link to={jsEnabled ? forward : link} onClick={onClick}>
-			#{text}
+			{children}
 		</Link>
 	) : (
-		`#${text}`
+		children
 	)
 }
 
@@ -90,10 +84,14 @@ const taglet = (text, link, forward, onClick) => {
  *  - forward: link to index page (with hash) instead of a dedicated page
  *  - uplink: update the hash (i.e. read existing and toggle selection) instead of linking to a different page
  *  - overlink: set the hash (i.e. overwrite existing hash) instead of linking to a different page
+ * Returned:
+ *  - link: used as href if JS disabled
+ *  - forward: used as href if JS enabled
+ *  - onClick: event handler
  */
-const detectMode = (mode, kind, taglet, otherTaglet) => {
+const detectMode = (mode, channel, tag) => {
 	// as long as pages are not processed as posts, `#page` can't link anywhere
-	if (kind === "channel" && taglet === "pages")
+	if (channel === "pages")
 		return {
 			link: null,
 			forward: null,
@@ -101,6 +99,7 @@ const detectMode = (mode, kind, taglet, otherTaglet) => {
 		}
 
 	mode = mode || "text"
+	const taglet = tag || channel
 	switch (mode) {
 		case "text":
 			return {
@@ -111,37 +110,38 @@ const detectMode = (mode, kind, taglet, otherTaglet) => {
 		case "forward":
 			return {
 				link: taglet,
-				forward: tagletPath(kind, taglet),
+				forward: tagletsPath(channel, tag),
 				onClick: null,
 			}
 		case "uplink":
 			return {
 				link: taglet,
-				forward: tagletPath(kind, taglet),
-				onClick: event => updatePath(kind, taglet, event),
+				forward: tagletsPath(channel, tag),
+				onClick: event => updatePath(channel, tag, event),
 			}
 		case "overlink":
 			return {
 				link: taglet,
-				forward: tagletsPath(otherTaglet, taglet),
-				onClick: event => overridePath(otherTaglet, taglet, event),
+				forward: tagletsPath(channel, tag),
+				onClick: event => overridePath(channel, tag, event),
 			}
 	}
 }
 
-const updatePath = (kind, taglet, event) => {
+const updatePath = (channel, tag, event) => {
 	event.preventDefault()
-	tagletsFromPath()
-		.toggleSelection(kind, taglet)
-		.writePath()
+	const taglets = tagletsFromPath()
+	if (channel) taglets.toggleSelection("channel", channel)
+	if (tag) taglets.toggleSelection("tag", tag)
+	taglets.writePath()
 }
 
 const overridePath = (channel, tag, event) => {
 	event.preventDefault()
-	emptyTaglets()
-		.toggleSelection("channel", channel)
-		.toggleSelection("tag", tag)
-		.writePath()
+	const taglets = emptyTaglets()
+	if (channel) taglets.toggleSelection("channel", channel)
+	if (tag) taglets.toggleSelection("tag", tag)
+	taglets.writePath()
 }
 
 const channelInfo = channel =>

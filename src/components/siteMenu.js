@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { classNames } from "../infra/functions"
 
 import Link from "./link"
-import { MenuTag } from "./taglet"
+import { ChannelTag } from "./taglet"
 
 import style from "./siteMenu.module.css"
 
@@ -68,8 +68,7 @@ const secondLevelEntry = ({ title, url, children, className }, onIndexPage) => {
 	if (url)
 		return (
 			<div key={title} className={style.secondLevelEntry}>
-				{/* TODO: instead of Link, detect channel: and tag:, so a index page links work correctly */}
-				<Link className={className} to={url}>
+				<Link to={url} onIndexPage={onIndexPage} className={className}>
 					{title}
 				</Link>
 			</div>
@@ -112,7 +111,13 @@ const thirdLevelEntry = ({ title, url, channel, tag, className }, onIndexPage) =
 		return (
 			<span key={tag} {...classNames(style.thirdLevelEntry, style.tag)}>
 				{/* the trailing space is important - without it, browsers won't line-break */}
-				<MenuTag key={tag} channel={channel} tag={tag} onIndexPage={onIndexPage} className={className} />{" "}
+				<ChannelTag
+					key={tag}
+					channel={channel}
+					tag={tag}
+					mode={onIndexPage ? "overlink" : "forward"}
+					className={className}
+				/>{" "}
 			</span>
 		)
 	throw new Error(`Nav entry "${title}" with neither URL nor tag.`)
