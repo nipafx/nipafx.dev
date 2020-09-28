@@ -156,9 +156,7 @@ const showDatesForEvent = event => {
 			<React.Fragment>
 				<span className={style.weekday}>{event.startTime.toFormat("EEE")}</span>
 				<span className={style.day}>{ordinalDay(event.startTime.day)}</span>
-				<span className={style.time}>
-					{event.startTime.toUTC().toFormat("HH:mm")} UTC
-				</span>
+				<span className={style.time}>{event.startTime.toUTC().toFormat("HH:mm")} UTC</span>
 			</React.Fragment>
 		)
 }
@@ -193,6 +191,7 @@ const getEventsByMonth = (courses, talks) => {
 		millisecond: 0,
 	})
 	const entries = [...getPresentations(talks), ...getSessions(courses), ...getStreams()]
+		.filter(event => !event.draft)
 		// to see the entire year
 		// .filter(event => event.startTime.year === DateTime.utc().year)
 		.filter(event => event.startTime > firstOfCurrentMonth)
@@ -220,6 +219,7 @@ const getPresentations = talks => {
 						presentation.programEntry ||
 						event.event.url,
 				},
+				draft: presentation.draft,
 			}
 		})
 	)
@@ -245,6 +245,7 @@ const getSessions = courses => {
 				name: session.event.name,
 				url: session.announcement,
 			},
+			draft: session.draft,
 		}
 	})
 }
@@ -259,6 +260,7 @@ const getStreams = () => {
 				zone: "UTC",
 				setZone: true,
 			}),
+			draft: stream.draft,
 		}
 	})
 }

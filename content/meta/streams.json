@@ -339,6 +339,30 @@
 			"time": "29.09.2020 1700",
 			"title": "JUnit Pioneer",
 			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "06.10.2020 1900",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions",
+			"draft": true
+		},
+		{
+			"time": "10.10.2020 1900",
+			"title": "Some Games",
+			"description": "Details t.b.d.",
+			"draft": true
+		},
+		{
+			"time": "24.10.2020 0700",
+			"title": "nipafx.dev // GatsbyJS",
+			"description": "Polishing Nicolai's new website",
+			"draft": true
+		},
+		{
+			"time": "27.10.2020 1700",
+			"title": "JUnit Pioneer (maybe)",
+			"description": "I may not be home that week",
+			"draft": true
 		}
 	]
 }
