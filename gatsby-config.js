@@ -171,6 +171,7 @@ module.exports = {
 								"admonition",
 								"contentimage",
 								"contentvideo",
+								"coursedetails",
 								"pullquote",
 								"series-list",
 							],

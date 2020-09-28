@@ -2,6 +2,8 @@ import React from "react"
 
 import { DateTime } from "luxon"
 
+import { ordinalDay } from "../infra/functions"
+
 import EventList from "./eventList"
 import { H2, H3 } from "./headings"
 import Link from "./link"
@@ -139,13 +141,16 @@ const presentLocation = (name, url, location) => {
 }
 
 const presentDates = dates => {
+	const fromDay = `${dates.from.toFormat("EEE, MMMM")} ${ordinalDay(dates.from.day)} to`
+	// prettier-ignore
+	const toDay = `${dates.to.toFormat("EEE, MMMM")} ${ordinalDay(dates.to.day)}, ${dates.to.toFormat("yyyy")}`
 	return (
 		<React.Fragment>
 			<dt>When?</dt>
 			<dd>
-				<span>{dates.from.toFormat("EEE, MMMM d")} to</span>
+				<span>{fromDay}</span>
 				<br />
-				<span>{dates.to.toFormat("EEE, MMMM d, yyyy")}</span>
+				<span>{toDay}</span>
 			</dd>
 		</React.Fragment>
 	)

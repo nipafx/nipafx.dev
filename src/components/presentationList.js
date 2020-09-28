@@ -2,6 +2,8 @@ import React from "react"
 
 import { DateTime } from "luxon"
 
+import { ordinalDay } from "../infra/functions"
+
 import EventList from "./eventList"
 import { H2, H3 } from "./headings"
 import Link from "./link"
@@ -117,8 +119,8 @@ const parseTime = timeString =>
 
 const extractLocation = (location, locationText) => {
 	return {
-		text: (location && location.text) ? location.text : locationText,
-		url: location ? location.url : null
+		text: location && location.text ? location.text : locationText,
+		url: location ? location.url : null,
 	}
 }
 
@@ -192,11 +194,12 @@ const presentLocation = (name, url, location) => {
 }
 
 const presentDate = time => {
+	const day = `${time.toFormat("EEE, MMMM")} ${ordinalDay(time.day)}, ${time.toFormat("yyyy")}`
 	return (
 		<React.Fragment>
 			<dt>When?</dt>
 			<dd>
-				<span>{time.toFormat("EEE, MMMM d, yyyy")}</span>
+				<span>{day}</span>
 				<br />
 				<span>{time.toFormat("HH:mm z")}</span>
 			</dd>
