@@ -22,8 +22,10 @@ const PopOutAccordion = ({ className, headerClassName, headers, children }) => {
 	)
 }
 
+let idCounter = 1
+
 const item = (titleClassName, title, item) => {
-	const id = ("accordion-item-" + Math.random()).replace("0.", "")
+	const id = "pop-out-accordion-item-" + idCounter++
 	const checkboxId = id + "-checkbox"
 	const contentId = id + "-content"
 	return (

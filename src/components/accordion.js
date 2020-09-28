@@ -20,8 +20,10 @@ const Accordion = ({ className, headerClassName, headers, open, children }) => {
 	)
 }
 
+let idCounter = 1
+
 const item = (titleClassName, title, open, item) => {
-	const id = ("accordion-item-" + Math.random()).replace("0.", "")
+	const id = "accordion-item-" + idCounter++
 	const checkboxId = id + "-checkbox"
 	const contentId = id + "-content"
 	return (

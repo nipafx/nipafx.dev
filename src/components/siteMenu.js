@@ -25,8 +25,10 @@ const SiteMenu = ({ className, onIndexPage }) => {
 	)
 }
 
+let idCounter = 1
+
 const topLevelEntry = ({ title, url, children, className }, onIndexPage) => {
-	const id = ("site-nav-top-level-entry-" + Math.random()).replace("0.", "")
+	const id = "site-nav-top-level-entry-" + idCounter++
 	const checkboxId = id + "-checkbox"
 	const contentId = id + "-content"
 	if (url)
@@ -62,7 +64,7 @@ const topLevelEntry = ({ title, url, children, className }, onIndexPage) => {
 }
 
 const secondLevelEntry = ({ title, url, children, className }, onIndexPage) => {
-	const id = ("site-nav-second-level-entry-" + Math.random()).replace("0.", "")
+	const id = "site-nav-second-level-entry-" + idCounter++
 	const checkboxId = id + "-checkbox"
 	const contentId = id + "-content"
 	if (url)

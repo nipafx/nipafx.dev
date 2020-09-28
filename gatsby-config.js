@@ -345,6 +345,9 @@ module.exports = {
 			},
 		},
 		{
+			resolve: `gatsby-plugin-remove-fingerprints`
+		},
+		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
 				name: `nipafx.dev - You. Me. Java.`,
