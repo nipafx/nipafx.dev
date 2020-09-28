@@ -1,0 +1,344 @@
+{
+	"streams": [
+		{
+			"time": "02.01.2020 2000",
+			"title": "Records in Java 14",
+			"description": "Exploring Java 14's flagship feature"
+		},
+		{
+			"time": "07.01.2020 1800",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "09.01.2020 2000",
+			"title": "Rest of Java 14",
+			"description": "Exploring everything else in Java 14"
+		},
+		{
+			"time": "14.01.2020 1800",
+			"title": "Bach.java",
+			"description": "Exploring Bach, a JShell-based builder, with its creator Christian Stein"
+		},
+		{
+			"time": "16.01.2020 2000",
+			"title": "Java After Eight",
+			"description": "Creating a new talk: Live-refactoring from Java 8 to 14, showing off new features"
+		},
+		{
+			"time": "21.01.2020 1800",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "23.01.2020 2000",
+			"title": "Java After Eight",
+			"description": "Creating a new talk: Live-refactoring from Java 8 to 14, showing off new features"
+		},
+		{
+			"time": "28.01.2020 1800",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "30.01.2020 2000",
+			"title": "Java After Eight",
+			"description": "Creating a new talk: Live-refactoring from Java 8 to 14, showing off new features"
+		},
+		{
+			"time": "06.02.2020 2000",
+			"title": "Developing OpenJDK",
+			"description": "Figuring out how to clone, import, edit, and build OpenJDK"
+		},
+		{
+			"time": "11.02.2020 1800",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "13.02.2020 2000",
+			"title": "Foreign Memory Access in Java 14",
+			"description": "Learning about JEP 370 from Oracle developer Jorn Vernee"
+		},
+		{
+			"time": "21.02.2020 2000",
+			"title": "Pandemic",
+			"description": "We'll be playing the board game! 🤒 💊 💉"
+		},
+		{
+			"time": "18.02.2020 1800",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "20.02.2020 2000",
+			"title": "Developing OpenJDK",
+			"description": "Figuring out how to clone, import, edit, and build OpenJDK"
+		},
+		{
+			"time": "25.02.2020 1300",
+			"title": "Code Freeze",
+			"description": "I'll be on holiday in Finland - good time to hang out and chat"
+		},
+		{
+			"time": "03.03.2020 1800",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "05.03.2020 2000",
+			"title": "Developing OpenJDK",
+			"description": "Consolidating knowledge; creating the talk"
+		},
+		{
+			"time": "10.03.2020 1800",
+			"title": "SLF4J System Logger Adapter",
+			"description": "Patching up my POC for SLF4J and JEP 264 to create a PR"
+		},
+		{
+			"time": "17.03.2020 1800",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "19.03.2020 2000",
+			"title": "NPE performance in Java 14",
+			"description": "Measuring performance impact of helpful NPEs in Java 14 (JEP 358)"
+		},
+		{
+			"time": "24.03.2020 2030",
+			"title": "Java Generics",
+			"description": "Recap and Frankenstein Lab"
+		},
+		{
+			"time": "26.03.2020 2000",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "28.03.2020 1800",
+			"title": "Stellaris",
+			"description": "Let's play some Stellaris Federations!"
+		},
+		{
+			"time": "31.03.2020 1700",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "02.04.2020 1900",
+			"title": "Modularity Match // Oliver Drotbohm",
+			"description": "Modules in Java: Spring & J_MS, prerequisites & adoption, features & shortcomings"
+		},
+		{
+			"time": "04.04.2020 1700",
+			"title": "Stellaris Federations",
+			"description": "Will the Kaan-Visam continue their fratricide or can they unite over their shared psionic potential?"
+		},
+		{
+			"time": "07.04.2020 1700",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "09.04.2020 1900",
+			"title": "JUnit Pioneer @ Java 11",
+			"description": "How much good can Java 11 do for the Pioneer code base?"
+		},
+		{
+			"time": "14.04.2020 1700",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "16.04.2020 1900",
+			"title": "StackOverflow: Java 9-14",
+			"description": "Answering StackOverflow questions on new Java versions"
+		},
+		{
+			"time": "18.04.2020 1700",
+			"title": "Age of Wonders: Planetfall",
+			"description": "Freshly unpacked, let's learn this game together"
+		},
+		{
+			"time": "21.04.2020 1700",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "23.04.2020 1900",
+			"title": "NPE Performance // Sadiq Jaffer",
+			"description": "Drilling deeper into Java 14 NPE performance"
+		},
+		{
+			"time": "28.04.2020 1700",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "30.04.2020 1900",
+			"title": "Throwback Thursday: Optional",
+			"description": "Recap, updates, deep dive, controversy - all about Optional"
+		},
+		{
+			"time": "01.05.2020 2000",
+			"title": "Migration and Modularization",
+			"description": "How to migrate a Java 8 code base to Java 11 and how to turn JARs into modules - on https://www.twitch.tv/manningpublications"
+		},
+		{
+			"time": "05.05.2020 1700",
+			"title": "JUnit Pioneer Website",
+			"description": "Improving the website, fixing its build"
+		},
+		{
+			"time": "12.05.2020 1700",
+			"title": "StackOverflow: Java 9-14",
+			"description": "Answering StackOverflow questions on new Java versions"
+		},
+		{
+			"time": "15.05.2020 1900",
+			"title": "Hellblade: Senua's Sacrifice",
+			"description": "This game is amazing! And terrifying. And disturbing. And amazing! I have to share it with you. (Bring good headphones.)"
+		},
+		{
+			"time": "19.05.2020 1700",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "23.05.2020 0600",
+			"title": "25 Hours of Java",
+			"description": "Celebration of Java's 25th birthday with technical deep dives (Java 9-14, upcoming features, JUnit 5), guests (Brian Goetz, Trisha Gee, Venkat Subramaniam, and more), and cake. Details: https://bit.ly/25hJava"
+		},
+		{
+			"time": "26.05.2020 1700",
+			"title": "T'rowback Tuesday: Streams",
+			"description": "Recap, updates, deep dive, controversy - all about streams"
+		},
+		{
+			"time": "02.06.2020 1400",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "09.06.2020 1700",
+			"title": "Corona App Backend",
+			"description": "The German Corona App backend is a Spring Boot application and it's open source on GitHub - we'll check it out."
+		},
+		{
+			"time": "16.06.2020 1700",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "20.06.2020 0320",
+			"title": "Midsummer Hackathon",
+			"description": "First day of summer, longest day of the year. 🌞 Nothing better to do than to code from dawn till dusk. Not sure on what yet... JUnit Pioneer? nipafx.dev?"
+		},
+		{
+			"time": "23.06.2020 1700",
+			"title": "Clojure for Noobs // NPException",
+			"description": "Ever since we created the \"Java After Eight\" codebase, NPException wanted to port it to Clojure. What better time to have a look at that than a month after Brian Goetz' endorsement of the language?"
+		},
+		{
+			"time": "29.06.2020 1900",
+			"title": "Code Games",
+			"description": "For Accento, I need a few entertaining mini games centered around code. Let's see what we can find or write!"
+		},
+		{
+			"time": "30.06.2020 1900",
+			"title": "Code Games",
+			"description": "For Accento, I need a few entertaining mini games centered around code. Let's see what we can find or write!"
+		},
+		{
+			"time": "01.07.2020 1900",
+			"title": "Code Games",
+			"description": "For Accento, I need a few entertaining mini games centered around code. Let's see what we can find or write!"
+		},
+		{
+			"time": "14.07.2020 1700",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "21.07.2020 1700",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "28.07.2020 1700",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "04.08.2020 1700",
+			"title": "Java 15",
+			"description": "Sealed classes, hidden classes, deprecated biased locking, standardizations (text blocks), and improvements (instanceof, records) - Java 15 is in rampdown phase. Let's dig into the upcoming release."
+		},
+		{
+			"time": "08.08.2020 0700",
+			"title": "JUnit Pioneer - A Full Day's Work",
+			"description": "Working from 9 to 5 (CEST) on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "10.08.2020 0800",
+			"title": "nipafx.dev // GatsbyJS",
+			"description": "Putting finishing touches on Nicolai's new blog"
+		},
+		{
+			"time": "11.08.2020 0800",
+			"title": "nipafx.dev // GatsbyJS",
+			"description": "Putting finishing touches on Nicolai's new blog"
+		},
+		{
+			"time": "11.08.2020 1700",
+			"title": "Maurice Naftalin",
+			"description": "Maurice is a Java Champion, maintains the Lambda FAQ, co-organizes JAlba, and wrote _Java Generics and Collections_ and _Mastering Lambdas_. We'll talk about Java."
+		},
+		{
+			"time": "12.08.2020 0800",
+			"title": "nipafx.dev // GatsbyJS",
+			"description": "Putting finishing touches on Nicolai's new blog"
+		},
+		{
+			"time": "18.08.2020 1700",
+			"title": "Embold - an AI-based static code analyzer",
+			"description": "There was an interesting talk at Accento about Embold and I want to give it a try."
+		},
+		{
+			"time": "29.08.2020 0700",
+			"title": "JUnit Pioneer - A Full Day's Work",
+			"description": "Working from 9 to 5 (CEST) on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "01.09.2020 1700",
+			"title": "Java After Eight",
+			"description": "Updating the demo project to Java 15, trying to force in sealed classes and other new features."
+		},
+		{
+			"time": "06.09.2020 0700",
+			"title": "nipafx.dev // GatsbyJS",
+			"description": "Putting finishing touches on Nicolai's new blog"
+		},
+		{
+			"time": "08.09.2020 1700",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "22.09.2020 1900",
+			"title": "StackOverflow: Java 9-15",
+			"description": "Answering StackOverflow questions on new Java versions"
+		},
+		{
+			"time": "26.09.2020 0700",
+			"title": "nipafx.dev // GatsbyJS",
+			"description": "Putting finishing touches on Nicolai's new blog"
+		},
+		{
+			"time": "29.09.2020 1700",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		}
+	]
+}
