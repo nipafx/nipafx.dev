@@ -1,5 +1,5 @@
 ---
-title: "Evolving Java With ––enable–preview aka Preview Language Features"
+title: "Evolving Java With `––enable–preview` aka Preview Language Features"
 tags: [java-next]
 date: 2019-07-11
 slug: enable-preview-language-features
