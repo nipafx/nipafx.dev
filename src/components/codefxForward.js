@@ -95,8 +95,15 @@ const setCookie = () => {
 }
 
 const hideIfCookie = () => {
+	let hash = window.location.hash
+	if (!hash.includes("codefx-forward") && !hash.includes("codefx-catch-all")) return
+
 	const readerGotIt = document.cookie.includes(`${COOKIE_NAME}=${COOKIE_VALUE}`)
-	if (readerGotIt) window.location.hash = ""
+	if (!readerGotIt) return
+
+	hash = hash.replace("codefx-forward", "").replace("codefx-catch-all", "")
+	if (hash === "#") hash = ""
+	window.location.hash = hash
 }
 
 const showJsButtons = () => {
