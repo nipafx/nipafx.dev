@@ -13,8 +13,7 @@ const IndexPage = ({ data }) => (
 	<Site
 		className="list"
 		meta={{
-			slug: "",
-			searchKeywords: "Java",
+			description: "A website to sharpen your Java skills - by Nicolai (aka nipafx), a Java enthusiast with a passion for learning and sharing, online and offline."
 		}}
 		onIndexPage
 	>

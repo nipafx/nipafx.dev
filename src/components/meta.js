@@ -25,7 +25,7 @@ const Meta = ({ title, slug, canonicalUrl, image, description, searchKeywords, v
 	const siteName = `${site.title} // ${site.description}`
 	const pageTitle = title ? `${title} // ${site.title}` : siteName
 	const pageDescription = description || site.description
-	const pageUrl = `${site.siteUrl}/${slug}`
+	const pageUrl = slug ? `${site.siteUrl}/${slug}` : site.siteUrl
 	// because pages are reachable with and without trailing slash
 	// (which Google treats as two different pages), the canonical URL
 	// has to be used to identify one of them as the... well, canonical URL
