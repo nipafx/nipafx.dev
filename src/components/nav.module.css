@@ -9,6 +9,9 @@
 	align-self: flex-end;
 	width: 100%;
 
+	/* otherwise pop-out nav is beneath post list entries */
+	z-index: 1;
+
 	scrollbar-color: var(--fg-color) var(--bg-color-shade-1);
 	scrollbar-width: thin;
 }
