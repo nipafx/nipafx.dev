@@ -15,7 +15,6 @@ const Image = ({ id, type, className }) => {
 
 	return (
 		<div {...classNames(className, style.container)}>
-			{/* TODO: specify dimensions (see console warning) / add alt text */}
 			<Img {...image.image} />
 			{showCredits(type) && credits(image.credits, type)}
 		</div>
@@ -110,7 +109,7 @@ const getImageData = () => {
 						fields {
 							id
 						}
-						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 80) {
+						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 60) {
 							...GatsbyImageSharpFluid
 						}
 					}
@@ -122,7 +121,7 @@ const getImageData = () => {
 						fields {
 							id
 						}
-						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 80) {
+						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 60) {
 							...GatsbyImageSharpFluid
 						}
 					}
@@ -134,7 +133,7 @@ const getImageData = () => {
 						fields {
 							id
 						}
-						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 80) {
+						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 60) {
 							...GatsbyImageSharpFluid
 						}
 					}
@@ -146,7 +145,7 @@ const getImageData = () => {
 						fields {
 							id
 						}
-						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 80) {
+						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 60) {
 							...GatsbyImageSharpFluid
 						}
 					}
@@ -158,7 +157,7 @@ const getImageData = () => {
 						fields {
 							id
 						}
-						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 80) {
+						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 60) {
 							...GatsbyImageSharpFluid
 						}
 					}
@@ -170,7 +169,7 @@ const getImageData = () => {
 						fields {
 							id
 						}
-						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 80) {
+						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 60) {
 							...GatsbyImageSharpFluid
 						}
 					}
@@ -182,7 +181,7 @@ const getImageData = () => {
 						fields {
 							id
 						}
-						fluid(maxWidth: 800, srcSetBreakpoints: [300, 800]) {
+						fluid(maxWidth: 800, srcSetBreakpoints: [800], jpegQuality: 60) {
 							...GatsbyImageSharpFluid
 						}
 					}
@@ -194,7 +193,7 @@ const getImageData = () => {
 						fields {
 							id
 						}
-						fluid(maxWidth: 800, srcSetBreakpoints: [300, 800]) {
+						fluid(maxWidth: 800, srcSetBreakpoints: [800], jpegQuality: 60) {
 							...GatsbyImageSharpFluid
 						}
 					}

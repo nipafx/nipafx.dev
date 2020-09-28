@@ -56,7 +56,6 @@ const ImageCard = ({ image, children }) => {
 }
 
 const getPost = slug => {
-	// TODO it looks like the 400px image is never used - why not?
 	const { posts, images } = useStaticQuery(graphql`
 		query {
 			posts: allPost {
@@ -83,7 +82,7 @@ const getPost = slug => {
 					fields {
 						id
 					}
-					fluid(maxWidth: 800, srcSetBreakpoints: [400, 800], toFormat: JPG, jpegQuality: 40) {
+					fluid(maxWidth: 800, base64Width: 10, srcSetBreakpoints: [800, 1600], toFormat: JPG, jpegQuality: 40) {
 						...GatsbyImageSharpFluid
 					}
 				}

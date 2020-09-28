@@ -83,7 +83,7 @@ const codefx = () =>
 				fields {
 					id
 				}
-				fluid(maxWidth: 3072) {
+				fluid(maxWidth: 1400, srcSetBreakpoints: [600, 1000, 1400, 2800]) {
 					...GatsbyImageSharpFluid
 				}
 			}

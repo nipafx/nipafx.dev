@@ -13,7 +13,7 @@ const SiteLogo = ({ className, onIndexPage }) => {
 	return (
 		<div {...classNames(className, style.logo)}>
 			<Link to="/" onClick={onClick}>
-				<Img {...logo()} />
+				<Img fixed={logo().fixed} loading="eager" durationFadeIn={200} />
 			</Link>
 		</div>
 	)
@@ -28,7 +28,7 @@ const logo = () =>
 				fields {
 					id
 				}
-				fixed(width: 200, jpegQuality: 80) {
+				fixed(width: 200) {
 					...GatsbyImageSharpFixed_noBase64
 				}
 			}
