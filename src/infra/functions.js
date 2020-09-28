@@ -170,3 +170,7 @@ export function ordinalDay(day) {
 			return day + "th"
 	}
 }
+
+export function arrayTo(length) {
+	return [...Array(length).keys()]
+}

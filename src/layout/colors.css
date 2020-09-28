@@ -93,6 +93,13 @@ body {
 	--alt-contrast-color: var(--fg-color);
 }
 
+.stream,
+.streams {
+	--alt-color: var(--theme-purple);
+	--alt-color-rgb: var(--theme-purple-rgb);
+	--alt-contrast-color: var(--fg-color);
+}
+
 .rss {
 	--alt-color: var(--rss-color);
 }

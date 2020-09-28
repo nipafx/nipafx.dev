@@ -37,7 +37,7 @@
 				},
 				{
 					"title": "Streams",
-					"url": "https://twitch.tv/nipafx",
+					"url": "/schedule",
 					"className": "twitch"
 				}
 			]
@@ -72,7 +72,7 @@
 				},
 				{
 					"title": "Upcoming",
-					"url": "/upcoming-talks"
+					"url": "/schedule"
 				},
 				{
 					"title": "Slides",

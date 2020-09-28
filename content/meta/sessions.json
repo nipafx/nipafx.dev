@@ -3,6 +3,7 @@
 		{
 			"courses": ["course-java-9-11", "course-java-12-17"],
 			"title": "Java 9 to 15",
+			"description": "A 2-day course on Java 9 to 15: From new language features, APIs, and JVM capabilities to migration challenges, JDK distributions, and the 6-month release cycle.",
 			"announcement": "https://www.doag.org/de/eventdetails?tx_doagevents_single[id]=603090",
 			"event": {
 				"name": "DOAG - Berliner Expertenseminar",
