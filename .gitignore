@@ -1,4 +1,5 @@
 /.vscode/*
+/.netlify/*
 /.cache/*
 /build/*
 /node_modules/*

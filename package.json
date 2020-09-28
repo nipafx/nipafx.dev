@@ -19,6 +19,7 @@
 		"gatsby-plugin-fontawesome-css": "^1.0.0",
 		"gatsby-plugin-manifest": "^2.4.30",
 		"gatsby-plugin-matomo": "^0.7.2",
+		"gatsby-plugin-netlify": "^2.3.16",
 		"gatsby-plugin-react-helmet": "^3.3.11",
 		"gatsby-plugin-react-svg": "^3.0.0",
 		"gatsby-plugin-sharp": "^2.6.36",
@@ -46,6 +47,7 @@
 	},
 	"devDependencies": {
 		"luxon": "^1.25.0",
+		"netlify-cli": "^2.64.1",
 		"prettier": "^1.19.1",
 		"webpack-filter-warnings-plugin": "^1.2.1"
 	},
@@ -56,8 +58,8 @@
 	"main": "n/a",
 	"scripts": {
 		"develop": "gatsby develop",
-		"build": "gatsby build",
 		"start": "npm run develop",
+		"build": "gatsby build",
 		"deploy": "./deploy.sh"
 	}
 }

@@ -359,6 +359,9 @@ module.exports = {
 				lang: `en-US`,
 			},
 		},
+		{
+			resolve: `gatsby-plugin-netlify`,
+		},
 	],
 	mapping: {
 		// NOTE: don't declare the fields on the left-hand side in the schema in `gatsby-node`

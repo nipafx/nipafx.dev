@@ -1,11 +1,6 @@
 #!/bin/bash
+set -e
 
-npx gatsby clean
-ln -s ../../nipafx.dev-site/ public
+# npx gatsby clean
 npx gatsby build
-cd public
-git add --all
-git commit -m "Release"
-git push
-cd ..
-npx gatsby clean
+npx netlify deploy --prod --dir=public
