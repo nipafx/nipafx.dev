@@ -9,8 +9,7 @@
 				},
 				{
 					"title": "Blog Posts",
-					"url": "channel:articles",
-					"className": "articles"
+					"url": "channel:articles"
 				},
 				{
 					"title": "Newsletters",
@@ -32,13 +31,11 @@
 				},
 				{
 					"title": "Recordings",
-					"url": "channel:videos",
-					"className": "videos"
+					"url": "channel:videos"
 				},
 				{
 					"title": "Streams",
-					"url": "/schedule",
-					"className": "twitch"
+					"url": "/schedule"
 				}
 			]
 		},
