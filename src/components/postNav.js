@@ -140,7 +140,7 @@ const showShare = (title, slug, description) => {
 			<p>Share this post with your community:</p>
 			<div className={style.icons}>
 				<LinkList
-					showIcons
+					showOnlyIcons
 					links={shareLinks.links.map(link =>
 						updateShareUrl(link, title, slug, description)
 					)}
@@ -151,7 +151,7 @@ const showShare = (title, slug, description) => {
 				when I publish new content:
 			</p>
 			<div className={style.icons}>
-				<LinkList showIcons links={channelLinks.links} />
+				<LinkList showOnlyIcons links={channelLinks.links} />
 			</div>
 		</div>
 	)

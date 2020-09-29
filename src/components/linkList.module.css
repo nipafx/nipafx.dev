@@ -21,26 +21,42 @@
 	display: none;
 }
 
-.onlyTexts .text {
+.texts .text {
 	display: unset;
 }
 
-.onlyTexts > *:not(:last-child):after {
+.texts > *:not(:last-child):after {
 	color: var(--alt-color);
 	white-space: unset;
 	content: " // ";
 }
 
-@media all and (min-width: 1000px) {
-	.texts .icon {
+@media all and (min-width: 600px) {
+	.textsFrom600 .icon {
 		display: none;
 	}
 
-	.texts .text {
+	.textsFrom600 .text {
 		display: unset;
 	}
 
-	.texts > *:not(:last-child):after {
+	.textsFrom600 > *:not(:last-child):after {
+		color: var(--alt-color);
+		white-space: unset;
+		content: " // ";
+	}
+}
+
+@media all and (min-width: 1000px) {
+	.textsFrom1000 .icon {
+		display: none;
+	}
+
+	.textsFrom1000 .text {
+		display: unset;
+	}
+
+	.textsFrom1000 > *:not(:last-child):after {
 		color: var(--alt-color);
 		white-space: unset;
 		content: " // ";

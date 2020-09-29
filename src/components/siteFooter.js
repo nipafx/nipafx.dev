@@ -15,8 +15,8 @@ const SiteFooter = () => (
 	<footer {...classNames(layout.container, style.footer)}>
 		<div {...classNames(layout.siteHeader, style.container)}>
 			<SiteLogo className={style.logo} />
-			<LinkList className={style.channels} links={channels.links} />
-			<LinkList className={style.meta} links={meta.links} />
+			<LinkList showIconsUntil={1000} className={style.channels} links={channels.links} />
+			<LinkList showOnlyTexts className={style.meta} links={meta.links} />
 		</div>
 	</footer>
 )

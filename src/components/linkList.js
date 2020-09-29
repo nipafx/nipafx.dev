@@ -8,13 +8,31 @@ import Link from "./link"
 
 import style from "./linkList.module.css"
 
-const LinkList = ({ showIcons, links, className }) => {
+const LinkList = ({ showOnlyTexts, showOnlyIcons, showIconsUntil, links, className }) => {
+	const textsFrom = showTextsFrom(showOnlyTexts, showOnlyIcons, showIconsUntil)
+
 	const styles = [className, style.links]
-	const showOnlyTexts = !links[0].fontAwesome
-	const showTexts = !showIcons
-	if (showOnlyTexts) styles.push(style.onlyTexts)
-	else if (showTexts) styles.push(style.texts)
+	if (textsFrom === 0) styles.push(style.texts)
+	if (textsFrom === 600) styles.push(style.textsFrom600)
+	if (textsFrom === 1000) styles.push(style.textsFrom1000)
+
 	return <div {...classNames(...styles)}>{links.map(showLink)}</div>
+}
+
+const showTextsFrom = (showOnlyTexts, showOnlyIcons, showIconsUntil) => {
+	const xor =
+		[showOnlyTexts, showOnlyIcons, showIconsUntil]
+			.map(flag => (flag ? 1 : 0))
+			.reduce((a, b) => a + b, 0) === 1
+	if (!xor) {
+		const message = `Specify either \`showOnlyTexts\` ("${showOnlyTexts}") or \`showOnlyIcons\` ("${showOnlyIcons}") or \`showIconsUntil\` ("${showIconsUntil}").`
+		throw new Error(message)
+	}
+
+	if (showOnlyTexts) return 0
+	if (showOnlyIcons) return -1
+	if ([0, 600, 1000].includes(showIconsUntil)) return showIconsUntil
+	throw new Error(`Illegal value for \`showIconsUntil\` ("${showIconsUntil}).`)
 }
 
 const showLink = ({ title, fontAwesome, url, className }) => (
