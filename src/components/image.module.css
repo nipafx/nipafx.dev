@@ -66,3 +66,17 @@
 	white-space: pre;
 	content: " // ";
 }
+
+.long {
+	display: none;
+}
+
+@media all and (min-width: 1000px) {
+	.short {
+		display: none;
+	}
+
+	.long {
+		display: unset;
+	}
+}

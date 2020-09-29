@@ -24,37 +24,45 @@ const Image = ({ id, type, className }) => {
 const credits = (credits, type) => {
 	if (!credits || (!credits.author && !credits.source && !credits.license)) return null
 	const classes = [style.credits].concat(typeClasses(type))
+	const source = responsiveText("src", "source")
+	const author = responsiveText(
+		credits.author.name === "me" ? "me" : "dev",
+		credits.author.name === "me" ? "me" : "artist"
+	)
+	const license = responsiveText("lic", "license")
 
 	return (
 		<div {...classNames(...classes)}>
 			{credits.source && (
 				<span key="source">
-					{credits.source.url ? <Link to={credits.source.url}>source</Link> : source}
+					{credits.source.url ? <Link to={credits.source.url}>{source}</Link> : source}
 				</span>
 			)}
 			{credits.author && (
 				<span key="author">
-					{credits.author.url ? (
-						<Link to={credits.author.url}>
-							{credits.author.name === "me" ? "me" : "artist"}
-						</Link>
-					) : (
-						credits.author.name
-					)}
+					{credits.author.url ? <Link to={credits.author.url}>{author}</Link> : author}
 					{credits.edited && <span> (edited by me)</span>}
 				</span>
 			)}
-			{credits.license &&
-				(credits.license.url ? (
-					<span key="license">
-						<Link to={credits.license.url}>
-							{credits.license.name ? credits.license.name : "license"}
-						</Link>
-					</span>
-				) : (
-					<span>{credits.license.name}</span>
-				))}
+			{credits.license && (
+				<span key="license">
+					{credits.license.url ? (
+						<Link to={credits.license.url}>{license}</Link>
+					) : (
+						license
+					)}
+				</span>
+			)}
 		</div>
+	)
+}
+
+const responsiveText = (short, long) => {
+	return (
+		<React.Fragment>
+			<span className={style.short}>{short}</span>
+			<span className={style.long}>{long}</span>
+		</React.Fragment>
 	)
 }
 
