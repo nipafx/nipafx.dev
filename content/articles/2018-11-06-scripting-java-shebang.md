@@ -170,7 +170,7 @@ public class HelloJavaScripts {
 }
 ```
 
-If the file is executable (with `chmod +x hello-java-scripts`), you can run it with `./hello-java-scripts` or, if it's on your `PATH`, even with `hello-java-scripts`.
+If the file is executable (with `chmod +x hello-java-scripts`) and its name doesn't end with `.java`, you can run it with `./hello-java-scripts` or, if it's on your `PATH`, even with `hello-java-scripts`.
 Arguments following the script's name are naturally passed on to the `main` method.
 
 If you need to add further compiler or JVM flags, you can either put them into the source file *after* the `--source` option or fall back to explicitly launching the JVM as usual:
@@ -182,7 +182,9 @@ java -Xlog --source 11 hello-java-scripts
 (What's `-Xlog` you ask?
 [Here you go.](java-unified-logging-xlog))
 
-FYI: Before passing the file to the compiler, the JVM will replace the shebang line with an empty one.
+FYI:
+If a script file starts with a shebang line, the file name [must not end in `.java`](https://stackoverflow.com/a/52543589/2525313).
+Before passing the file to the compiler, the JVM will replace the shebang line with an empty one.
 This keeps the compiler from barfing while preserving line numbers, which is handy for fixing compile errors.
 
 ### "Are You Serious?!"
