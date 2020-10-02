@@ -8,4 +8,4 @@ seriesDescription: "Everybody talks about clean code, but what about clean comme
 
 I recommend to read my posts on clean comments in the following order:
 
-<series-list></series-list>
+<serieslist></serieslist>

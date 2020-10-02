@@ -9,6 +9,6 @@ seriesDescription: "A thorough introduction to Project Jigsaw. This is the recom
 I wrote a thorough introduction to Project Jigsaw.
 In the recommended order (which is different from their publication order) these are:
 
-<series-list></series-list>
+<serieslist></serieslist>
 
 Then there are a bunch more posts on the topic that can be read in pretty much any order:

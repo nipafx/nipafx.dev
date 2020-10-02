@@ -3,8 +3,14 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import PostList from "./postList"
 
+import layout from "../layout/container.module.css"
+
 const SeriesList = ({ slug }) => {
-	return <PostList slugs={getPostSlugs(slug)} />
+	return (
+		<div className={layout.wide}>
+			<PostList slugs={getPostSlugs(slug)} />
+		</div>
+	)
 }
 
 const getPostSlugs = slug => {
@@ -22,9 +28,11 @@ const getPostSlugs = slug => {
 			}
 		`
 	)
+	// prettier-ignore
 	return tags.nodes
 		.find(tag => tag.slug === slug)
-		.series.filter(post => post)
+		.series
+		.filter(post => post)
 		.map(post => post.slug)
 }
 

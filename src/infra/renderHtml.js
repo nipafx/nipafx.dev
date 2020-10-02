@@ -40,7 +40,7 @@ const RenderHtml = ({ withAst, htmlAst }) => {
 			//      but this seems to override `Fragment: React.Fragment` (details above)
 			ol: renderOrderedList,
 			pullquote: PullQuote,
-			"series-list": SeriesList,
+			"serieslist": SeriesList,
 			table: Table,
 			ul: renderUnorderedList,
 		},

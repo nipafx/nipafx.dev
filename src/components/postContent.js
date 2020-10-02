@@ -12,7 +12,7 @@ const PostContent = ({ title, slug, channel, description, toc, canonical, series
 	return (
 		<article {...classNames(layout.textContainer, style.content)}>
 			<PostNav {...{ title, slug, channel, description, toc, canonical, series, source }} />
-			<RenderHtml htmlAst={htmlAst} />
+			{htmlAst && <RenderHtml htmlAst={htmlAst} />}
 			{children}
 		</article>
 	)

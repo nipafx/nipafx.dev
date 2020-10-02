@@ -173,7 +173,7 @@ module.exports = {
 								"contentvideo",
 								"coursedetails",
 								"pullquote",
-								"series-list",
+								"serieslist",
 							],
 						},
 					},

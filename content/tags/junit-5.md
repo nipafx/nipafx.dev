@@ -6,8 +6,12 @@ series: ["junit-5-setup", "junit-5-basics", "junit-5-disabled-conditions", "juni
 seriesDescription: "An introductory series about JUnit 5 - all you need to know to get you started."
 ---
 
+## Introduction
+
 I wrote a series of posts that introduce you to JUnit 5 and I recommend you read them in following order:
 
-<series-list></series-list>
+<serieslist></serieslist>
+
+## Diving Deeper
 
 Then there are a few more posts on the topic that can be read in pretty much any order:
