@@ -1,5 +1,5 @@
 ---
-title: "Talk"
+title: "Talks"
 singularName: "talk"
 pluralName: "talks"
 slug: "talks"

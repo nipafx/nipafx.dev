@@ -1,14 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import { processTableOfContents } from "../infra/functions"
+
 import SiteLayout from "../layout/site"
 import TagletLayout from "../layout/taglet"
 
-export default ({ data }) => {
+const ChannelPage = ({ data }) => {
 	const channel = {
 		channel: data.channel.internalName,
+		title: data.channel.title,
 		description: data.channel.description,
-		content: data.channel.content.htmlAst,
+		contentAst: data.channel.content.htmlAst,
+		toc: processTableOfContents(data.channel.content.tableOfContents),
 		postSlugs: data.posts.nodes.map(post => post.slug),
 	}
 	const meta = {
@@ -32,6 +36,7 @@ export const query = graphql`
 			description
 			content {
 				htmlAst
+				tableOfContents(pathToSlugField: "frontmatter.slug")
 			}
 		}
 		posts: allPost(
@@ -44,3 +49,5 @@ export const query = graphql`
 		}
 	}
 `
+
+export default ChannelPage

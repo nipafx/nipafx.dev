@@ -1,5 +1,5 @@
 ---
-title: "Course"
+title: "Courses"
 singularName: "course"
 pluralName: "courses"
 slug: "courses"
