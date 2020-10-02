@@ -2,9 +2,8 @@ const visit = require(`unist-util-visit`)
 
 module.exports = ({ markdownAST, markdownNode }) => {
 	visit(markdownAST, `html`, node => {
-		if (node.value === `<serieslist>`)
-			node.value = `<serieslist slug=${markdownNode.frontmatter.slug}>`
-		if (node.value === `<channellist>`)
-			node.value = `<channellist slug=${markdownNode.frontmatter.slug}>`
+		if (node.value.startsWith(`<postlist`))
+			// prettier-ignore
+			node.value = `<postlist slug="${markdownNode.frontmatter.slug}" ${node.value.substring(10)}`
 	})
 }

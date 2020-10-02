@@ -1,16 +1,11 @@
 import React from "react"
 
-import { classNames } from "../infra/functions"
-
 import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
 import { ChannelHeader, TagHeader } from "../components/header"
 import PostContent from "../components/postContent"
-import PostList from "../components/postList"
 import PostEnd from "../components/postEnd"
 
-import layout from "./container.module.css"
-
-const TagletLayout = ({ channel, tag, title, description, contentAst, toc, postSlugs }) => {
+const TagletLayout = ({ channel, tag, title, description, contentAst, toc, children }) => {
 	const xor = channel ? !tag : tag
 	if (!xor) throw new Error(`Specify either \`channel\` ("${channel}") or \`tag\` ("${tag}").`)
 	const post = {
@@ -28,7 +23,7 @@ const TagletLayout = ({ channel, tag, title, description, contentAst, toc, postS
 				) : (
 					<TagHeader {...{ tag, description }} />
 				)}
-				<PostContent {...post} />
+				<PostContent {...post}>{children}</PostContent>
 				<PostEnd type={channel ? "channel" : "tag"} />
 			</section>
 		</main>

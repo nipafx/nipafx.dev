@@ -169,12 +169,11 @@ module.exports = {
 						options: {
 							tags: [
 								"admonition",
-								"channellist",
 								"contentimage",
 								"contentvideo",
 								"coursedetails",
+								"postlist",
 								"pullquote",
-								"serieslist",
 							],
 						},
 					},

@@ -8,6 +8,8 @@ seriesDescription: "These posts give you more insight into one of Java's more mi
 
 I wrote a series of posts about `Optional` that I recommend you read in the following order:
 
-<serieslist></serieslist>
+<postlist kind="series"></postlist>
 
 Then there are a few more posts on the topic that can be read in pretty much any order:
+
+<postlist kind="tag"></postlist>
