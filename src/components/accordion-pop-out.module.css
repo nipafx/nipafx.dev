@@ -65,8 +65,7 @@
 	z-index: -1;
 
 	min-height: 100%;
-	/* the 120 px are the estimated (!) height of the header plus a little margin */
-	max-height: calc(100vh - 120px);
+	max-height: calc(100vh - var(--site-header-height) - 2em);
 	width: 0;
 	overflow: hidden;
 	overflow-y: auto;

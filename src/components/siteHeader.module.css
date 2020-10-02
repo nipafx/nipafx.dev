@@ -1,11 +1,16 @@
 .header {
 	position: sticky;
-	top: 0;
+	top: calc(0px - var(--site-header-height));
+	transition: top var(--menu-transition);
 	background-color: var(--bg-color);
 
 	/* make sure everything else on the page scrolls under the header
 	   (particularly Gatsby images tend to otherwise scroll over it) */
 	z-index: 2;
+}
+
+.header.show {
+	top: 0;
 }
 
 .container {
@@ -53,6 +58,12 @@
 	padding-bottom: 4px;
 }
 
+@media all and (min-height: 800px) {
+	.header {
+		top: 0px;
+	}
+}
+
 @media all and (min-width: 400px) {
 	.container {
 		/* Xrem to split the list of link icons roughly in half */
@@ -60,7 +71,7 @@
 		grid-template-areas:
 			"logo links"
 			"menu menu";
-			grid-gap: 0;
+		grid-gap: 0;
 	}
 
 	.logo {

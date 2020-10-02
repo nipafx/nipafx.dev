@@ -1,5 +1,4 @@
 .bumper {
 	position: relative;
-	/* DEPENDS ON site header height */
-	top: -120px;
+	top: calc(0px - var(--site-header-height) - 1em);
 }

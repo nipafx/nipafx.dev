@@ -19,9 +19,36 @@ body {
 	--narrow-sidebar-width: 40px;
 }
 
- /*
-  * SCROLLING
-  */
+/*
+ * SITE HEADER HEIGHT
+ * There are a few places where the height of the header becomes important
+ * and so it helps to have a variable defining it. This is of course
+ * inherently fragile as anything from layout changes to font styles to
+ * varying browsers can break this (in fact, there are slight differences
+ * between Firefox and Chrome). It may be possible to compute this by
+ * adding up logo height, grid gaps, font sizes, etc., but that's a lot
+ * of work.
+ */
+
+body {
+	--site-header-height: 172px;
+}
+
+@media all and (min-width: 400px) {
+	body {
+		--site-header-height: 122px;
+	}
+}
+
+@media all and (min-width: 1000px) {
+	body {
+		--site-header-height: 86px;
+	}
+}
+
+/*
+ * SCROLLING
+ */
 
 html {
 	scroll-behavior: smooth;

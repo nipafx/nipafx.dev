@@ -45,8 +45,7 @@
 		background-color: var(--bg-color);
 		border: 1px solid var(--fg-color);
 
-		/* the 120 px are the estimated (!) height of the header plus a little margin */
-		max-height: calc(100vh - 120px);
+		max-height: calc(100vh - var(--site-header-height) - 2em);
 		overflow-y: auto;
 	}
 
