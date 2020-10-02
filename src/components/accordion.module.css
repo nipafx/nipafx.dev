@@ -8,10 +8,7 @@
 }
 
 .item-checkbox {
-	position: absolute;
-	opacity: 0;
-	/* move to background, so label captures all events (e.g. hover) */
-	z-index: -1;
+	display: none;
 }
 
 .item-label {
@@ -51,5 +48,7 @@
 }
 
 .item-checkbox:checked ~ .item-content {
-	max-height: 100vh;
+	/* this needs to be very large so the content can always be accommodated,
+	   even if there's a lot of it on a very small screen */
+	max-height: 10000vh;
 }

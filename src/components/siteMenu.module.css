@@ -13,7 +13,7 @@
 
 .rootContainer > div::-webkit-scrollbar,
 .rootContainer > div::-webkit-scrollbar-track {
-	height: 5px;
+	height: 0.2rem;
 }
 
 .menu {
