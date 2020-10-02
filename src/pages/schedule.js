@@ -44,7 +44,7 @@ const SchedulePage = ({ data }) => {
 		description: "My live streams, talks, courses, etc in the coming months.",
 	}
 	const eventsByMonth = getEventsByMonth(data.courses.nodes, data.talks.nodes)
-	const description = `I regularly [stream on Twitch](https://twitch.tn/nipafx), [speak at conferences](/talks) and occasionally give of [my courses](/courses) in a public forum. Here's the schedule for the coming months.`
+	const description = `I regularly [stream on Twitch](https://twitch.tn/nipafx), [speak at conferences](/talks) and occasionally give [Java courses](/courses) in a public forum. Here's the schedule for the coming months.`
 	const noEvents = `Looks like nothing's planned at the moment. 🏝️🍹`
 	return (
 		<SiteLayout className="page" meta={meta}>
