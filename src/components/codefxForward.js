@@ -54,7 +54,7 @@ const popover = () => (
 						Got it!
 					</a>
 					<p>
-						(and give me a cookie to remember - <Link to="/privacy">privacy policy</Link>)
+						(and give me a cookie to remember - <Link to="privacy">privacy policy</Link>)
 					</p>
 				</div>
 				<div className={style.choice}>
@@ -67,10 +67,7 @@ const popover = () => (
 			<p className={style.catchAll}>
 				By the way, it looks like you didn't get forwarded to the page you were looking for.
 				If that's indeed the case, it would be great if you could{" "}
-				<Link to={"mailto:nicolai@nipafx.dev?subject=Unfulfilling forward to nipafx.dev&"}>
-					let me know
-				</Link>
-				, so I can fix it.
+				<Link to="contact">let me know</Link>, so I can fix it.
 			</p>
 		</div>
 	</div>

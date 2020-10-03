@@ -84,9 +84,8 @@ const upcomingText = upcoming => {
 	if (upcoming.length === 0)
 		return (
 			<span>
-				{intro} None are planned now, but if you{" "}
-				<Link to="mailto:nicolai@nipafx.dev">get in touch</Link>, I'll let you know when
-				that changes.
+				{intro} None are planned now, but if you <Link to="contact">get in touch</Link>,
+				I'll let you know when that changes.
 			</span>
 		)
 

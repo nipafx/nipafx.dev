@@ -27,13 +27,9 @@ const FourOhFourPage = () => (
 				</p>
 				<p>
 					But look at the bright side: You're out and about learning about Java and that's
-					pretty cool! I'd love to help you with that as much as I can: If you reach out
-					to me <Link to={"https://twitter.com/nipafx"}>on Twitter</Link> or{" "}
-					<Link to={"mailto:nicolai@nipafx.dev?subject=404 on nipafx.dev&"}>
-						via mail
-					</Link>{" "}
-					and let me know what you were looking for, I'll find it and get back to you
-					ASAP.
+					pretty cool! I'd love to help you with that as much as I can: If you
+					<Link to="contact">reach out to me</Link> and let me know what you were looking
+					for, I'll find it and get back to you ASAP.
 				</p>
 			</section>
 		</main>

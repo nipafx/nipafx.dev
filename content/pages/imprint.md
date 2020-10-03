@@ -33,7 +33,7 @@ Instead, it is quite obviously the provider of those pages who's responsible for
 
 That said, when initially creating a link I checked the linked page for possible violations of the law and couldn't recognize anything illegal.
 A permanent control of the linked pages is not reasonable without concrete proof of a violation of the law.
-When you know of such a violation, please [report it](mailto:nicolai@nipafx.dev), so I can remove the link immediately.
+When you know of such a violation, please [report it](contact), so I can remove the link immediately.
 
 ## Copyright
 

@@ -21,7 +21,7 @@ An exact definition of _commercial use_ is impossible, but here are some guideli
 -   it is **ok** to reuse my texts for a free book (electronic or paper) as long as it advertizes no paid products or services
 -   it is **ok** to reuse my texts for conference talks as long as you don't charge a speaker fee (if travel expenses are reimbursed, that's ok with me)
 
-If you are in any way unsure of the legality of your intended use case or I simply missed to include it, please [send me a mail](mailto:nicolai@nipafx.dev).
+If you are in any way unsure of the legality of your intended use case or I simply missed to include it, please [get in touch](contact).
 
 ### Attribution
 
