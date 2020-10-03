@@ -1,0 +1,102 @@
+.header {
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+.header .date {
+	color: var(--alt-color);
+	font-size: 64px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.header .byline {
+	margin: -0.5em 0 0;
+	font-size: 32px;
+	font-weight: bold;
+}
+
+
+.schedule {
+	display: grid;
+	grid-template-columns: 1fr repeat(5, 450px) 1fr;
+	grid-template-rows: repeat(18, 80px);
+	grid-template-areas:
+	". overflow	.		martijn		java1011	sharat	."
+	". overflow	.		martijn		java1011	sharat	."
+	". birthday	trisha	projects	java1011	.		."
+	". birthday	trisha	projects	java1011	.		."
+	". stream	trisha	brian		venkat		.		."
+	". stream	trisha	brian		venkat		.		."
+	". kevlin	junit	brian		venkat		.		."
+	". kevlin	junit	brian		venkat		.		."
+	". kevlin	junit	java9		var			.		."
+	". kevlin	junit	java9		var			.		."
+	". jms		next	java9		java1214	.		."
+	". jms		next	christian	java1214	.		."
+	". jms		.		christian	.			.		."
+	". jms		.		.			.			.		."
+}
+
+
+.entry {
+	border: 1px solid var(--alt-color);
+	border-radius: 3px;
+	text-align: center;
+	margin: 10px 20px;
+	padding: 0 10px;
+	display: flex;
+	/* align-items: center; */
+	justify-content: center;
+}
+
+.content {
+
+}
+
+.date {
+	font-family: "Bedstead", monospace;
+	color: var(--fg-color-shade-2);
+	margin: 0;
+}
+
+.date::before {
+	content: "// ";
+}
+
+.date::after {
+	content: " //";
+}
+
+.weekday::after {
+	content: "; ";
+}
+
+.day::after {
+	content: "; ";
+}
+
+.start-time {
+	color: var(--alt-color);
+}
+
+.end-time::before {
+	content: " to ";
+}
+
+
+.topic::before {
+	content: none;
+}
+
+.topic {
+	font-size: 1.6em;
+	margin: 0;
+}
+
+
+.description {
+	font-size: 1.4em;
+	color: var(--fg-color-shade-2);
+	margin: 0;
+}
