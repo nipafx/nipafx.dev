@@ -231,6 +231,9 @@ module.exports = {
 			resolve: "gatsby-plugin-fontawesome-css",
 		},
 		{
+			resolve: "gatsby-plugin-react-helmet",
+		},
+		{
 			resolve: "gatsby-plugin-matomo",
 			options: {
 				siteId: "1",
