@@ -148,40 +148,34 @@ This has two implications:
 
 This is the ground for the [limitations stated in the Javadoc](https://docs.oracle.com/javase/8/docs/api/java/lang/doc-files/ValueBased.html) and they can hence be separated into limitations for the declaration of the class and the use of its instances.
 
-### Declaration Site
+### Declaration-Side
 
 Straight from the documentation (numbering and formatting mine):
 
 > Instances of a value-based class:
 >
-> 1.
- are final and immutable (though may contain references to mutable objects);
-> 2.
- have implementations of `equals`, `hashCode`, and `toString` which are computed solely from the instance's state and not from its identity or the state of any other object or variable;
-> 3.
- make no use of identity-sensitive operations such as reference equality (`==`) between instances, identity hash code of instances, or synchronization on an instances's intrinsic lock;
-> 4.
- are considered equal solely based on `equals()`, not based on reference equality (`==`);
-> 5.
- do not have accessible constructors, but are instead instantiated through factory methods which make no committment as to the identity of returned instances;
-> 6.
- are freely substitutable when equal, meaning that interchanging any two instances `x` and `y` that are equal according to `equals()` in any computation or method invocation should produce no visible change in behavior.
+> 1. are final and immutable (though may contain references to mutable objects);
+> 2. have implementations of `equals`, `hashCode`, and `toString` which are computed solely from the instance's state and not from its identity or the state of any other object or variable;
+> 3. make no use of identity-sensitive operations such as reference equality (`==`) between instances, identity hash code of instances, or synchronization on an instances's intrinsic lock;
+> 4. are considered equal solely based on `equals()`, not based on reference equality (`==`);
+> 5. do not have accessible constructors, but are instead instantiated through factory methods which make no committment as to the identity of returned instances;
+> 6. are freely substitutable when equal, meaning that interchanging any two instances `x` and `y` that are equal according to `equals()` in any computation or method invocation should produce no visible change in behavior.
 
 With what was discussed above most of these rules are obvious.
 
-Rule 1 is motivated by value-based classes being boxes for value types.
+**Rule 1** is motivated by value-based classes being boxes for value types.
 For technical and design reasons those must be final and immutable and these requirements are transfered to their boxes.
 
-Rule 2 [murkily](http://mail.openjdk.java.net/pipermail/valhalla-dev/2015-February/001047.html) addresses the concerns about how to define the state of a value-based class.
+**Rule 2** [murkily](http://mail.openjdk.java.net/pipermail/valhalla-dev/2015-February/001047.html) addresses the concerns about how to define the state of a value-based class.
 The rule's precise effect depends on the interpretation of "the instance's state" and "any other variable".
 One way to read it is to include "value-ish" classes in the state and regard typical reference types as other variables.
 
-Number 3 through 6 regard the missing identity.
+**Number 3 through 6** regard the missing identity.
 
 It is interesting to note, that `Optional` breaks rule 2 because it calls `equals` on the wrapped value.
 Similarly, all value-based classes from `java.time` and `java.time.chrono` break rule 3 by being serializable (which is an identity-based operation - see below; [this thread on the Valhalla mailing list](http://mail.openjdk.java.net/pipermail/valhalla-dev/2015-February/001042.html) talks about this).
 
-### Use Site
+### Use-side
 
 Again from the documentation:
 
@@ -191,39 +185,40 @@ Considering the missing identity it is straight forward that references should n
 There is no explanation, though, why the listed examples are violating that rule, so let's have a closer look.
 I made a list of all violations I could come up with and included a short explanation and concrete cases for each (*vbi* stands for *instance of value-based class*):
 
-Reference Comparison
-:   This obviously distinguishes instances based on their identity.
+#### Reference Comparison
 
-Serialization of vbi
+This obviously distinguishes instances based on their identity.
 
-:   It is desirable to make value types serializable and a meaningful definition for that seems straight-forward.
+#### Serialization of vbi
+
+It is desirable to make value types serializable and a meaningful definition for that seems straight-forward.
 But as it is today, serialization makes promises about object identity which conflict with the notion of identity-less value-based classes.
 In its current implementation, serialization also uses object identity when traversing the object graph.
 So for now, it must be regarded as an identity-based operation which should be avoided.
 
-	Cases:
+Cases:
 
-	-   non-transient field in serializable class
-	-   direct serialization via `ObjectOutputStream.writeObject`
+-   non-transient field in serializable class
+-   direct serialization via `ObjectOutputStream.writeObject`
 
-Locking on a vbi
+#### Locking on a vbi
 
-:   Uses the object header to access the instance's monitor - headers of value-based classes are free to be removed and recreated and primitive/value types have no headers.
+Uses the object header to access the instance's monitor - headers of value-based classes are free to be removed and recreated and primitive/value types have no headers.
 
-	Cases:
+Cases:
 
-	-   use in synchronized block
-	-   calls to `Object.wait`, `Object.notify` or `Object.notifyAll`
+-   use in synchronized block
+-   calls to `Object.wait`, `Object.notify` or `Object.notifyAll`
 
-Identity Hash Code
+#### Identity Hash Code
 
-:   This hash code is required to be constant over an instance's lifetime.
+This hash code is required to be constant over an instance's lifetime.
 With instances of value-based classes being free to be removed and recreated constancy can not be guaranteed in a sense which is meaningful to developers.
 
-	Cases:
+Cases:
 
-	-   argument to `System.identityHashCode`
-	-   key in an `IdentityHashMap`
+-   argument to `System.identityHashCode`
+-   key in an `IdentityHashMap`
 
 Comments highlighting other violations or improving upon the explanations are greatly appreciated!
 
