@@ -5,7 +5,7 @@ import { ChannelHeader, TagHeader } from "../components/header"
 import PostContent from "../components/postContent"
 import PostEnd from "../components/postEnd"
 
-const TagletLayout = ({ channel, tag, title, description, contentAst, toc, children }) => {
+const TagletLayout = ({ channel, tag, title, description, featuredImage, contentAst, toc, children }) => {
 	const xor = channel ? !tag : tag
 	if (!xor) throw new Error(`Specify either \`channel\` ("${channel}") or \`tag\` ("${tag}").`)
 	const post = {
@@ -19,9 +19,9 @@ const TagletLayout = ({ channel, tag, title, description, contentAst, toc, child
 		<main>
 			<section id={PROGRESS_BAR_REFERENCE}>
 				{channel ? (
-					<ChannelHeader {...{ channel, description }} />
+					<ChannelHeader {...{ channel, description, featuredImage }} />
 				) : (
-					<TagHeader {...{ tag, description }} />
+					<TagHeader {...{ tag, description, featuredImage }} />
 				)}
 				<PostContent {...post}>{children}</PostContent>
 				<PostEnd type={channel ? "channel" : "tag"} />

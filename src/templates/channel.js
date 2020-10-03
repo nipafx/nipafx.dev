@@ -12,6 +12,7 @@ const ChannelPage = ({ data }) => {
 		title: data.channel.title,
 		description: data.channel.description,
 		contentAst: data.channel.content.htmlAst,
+		featuredImage: data.channel.featuredImage,
 		toc: processTableOfContents(data.channel.content.tableOfContents),
 		postSlugs: data.posts.nodes.map(post => post.slug),
 	}
@@ -19,6 +20,7 @@ const ChannelPage = ({ data }) => {
 		title: data.channel.title,
 		slug: data.channel.slug,
 		description: data.channel.description,
+		image: data.channel.featuredImage,
 	}
 	return (
 		<SiteLayout className={channel.channel} meta={meta}>
@@ -34,6 +36,7 @@ export const query = graphql`
 			internalName
 			slug
 			description
+			featuredImage
 			content {
 				htmlAst
 				tableOfContents(pathToSlugField: "frontmatter.slug")

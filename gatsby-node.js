@@ -281,6 +281,7 @@ createChannelNodes = (node, createNode, createContentDigest) => {
 		pluralName: node.frontmatter.pluralName,
 		slug: node.frontmatter.slug,
 		description: node.frontmatter.description,
+		featuredImage: node.frontmatter.featuredImage,
 
 		// see comment on creating article nodes
 		content___NODE: node.id,
@@ -342,6 +343,7 @@ createPageNodes = (node, createNode, createContentDigest) => {
 		tags: node.frontmatter.tags,
 		description: node.frontmatter.description,
 		searchKeywords: node.frontmatter.searchKeywords,
+		featuredImage: node.frontmatter.featuredImage,
 
 		// see comment on creating article nodes
 		content___NODE: node.id,

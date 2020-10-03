@@ -98,9 +98,9 @@ const showTags = (channel, tags) => {
 
 // PAGE HEADER
 
-export const PageHeader = ({ title, date, tags, description }) => {
+export const PageHeader = ({ title, date, tags, description, featuredImage }) => {
 	return (
-		<Header>
+		<Header featuredImage={featuredImage}>
 			<FormattedDate date={date} />
 			<MarkdownAsHtml>{title}</MarkdownAsHtml>
 			{showTags("pages", tags)}
@@ -111,9 +111,9 @@ export const PageHeader = ({ title, date, tags, description }) => {
 
 // CHANNEL HEADER
 
-export const ChannelHeader = ({ channel, description }) => {
+export const ChannelHeader = ({ channel, description, featuredImage }) => {
 	return (
-		<Header>
+		<Header featuredImage={featuredImage}>
 			<span>Everything in</span>
 			<Channel channel={channel} plural />
 			{null}
@@ -124,9 +124,9 @@ export const ChannelHeader = ({ channel, description }) => {
 
 // TAG HEADER
 
-export const TagHeader = ({ tag, description }) => {
+export const TagHeader = ({ tag, description, featuredImage }) => {
 	return (
-		<Header>
+		<Header featuredImage={featuredImage}>
 			<span>Everything about</span>
 			<Tag tag={tag} />
 			{null}
