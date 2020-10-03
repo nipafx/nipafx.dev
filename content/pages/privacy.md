@@ -3,10 +3,12 @@ title: "Privacy Policy"
 tags: [meta]
 date: 2020-10-03
 slug: privacy
-description: "TODO"
+description: "The site is hot from the oven and this part is still under construction..."
 ---
 
-TODO
+There should be something here very soon - be sure to check back!
+
+<!-- TODO -->
 
 <!--
 CodeFX is spread across several subdomains. The following sites were created with GitHub Pages so <a href="https://help.github.com/articles/github-privacy-policy">GitHub's Privacy Policy</a> applies:

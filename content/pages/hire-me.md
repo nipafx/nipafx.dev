@@ -3,11 +3,13 @@ title: "Hire Nicolai Parlog"
 tags: [meta]
 date: 2020-10-03
 slug: hire
-description: "TODO"
+description: "The site is hot from the oven and this part is still under construction..."
 searchKeywords: "Nicolai Parlog"
 ---
 
-TODO
+There should be something here very soon - be sure to check back!
+
+<!-- TODO -->
 
 <!--
 <div class="alignright">

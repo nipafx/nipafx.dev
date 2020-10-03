@@ -3,11 +3,13 @@ title: "About Nicolai Parlog"
 tags: [personal]
 date: 2020-10-03
 slug: nicolai-parlog
-description: "TODO"
+description: "The site is hot from the oven and this part is still under construction..."
 searchKeywords: "Nicolai Parlog"
 ---
 
-TODO
+There should be something here very soon - be sure to check back!
+
+<!-- TODO -->
 
 <!--
 I’m a thirty year old boy, as the narrator would put it, who has found his passion in software development. I constantly read, think and write about it, code for a living as well as for fun, and am always thinking about ways to improve skills and workflows – mine as well as those of the people sharing their time with me.
