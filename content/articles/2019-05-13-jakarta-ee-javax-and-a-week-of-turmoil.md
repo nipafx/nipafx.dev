@@ -42,7 +42,7 @@ This became public knowledge on May 3rd when Mike Milinkovich, Executive Directo
 If you only click one link in this post, it should be that one, but if you don't, here's the money quote:
 
 > Eclipse and Oracle have agreed that the javax package namespace cannot be evolved by the Jakarta EE community.
-As well, Java trademarks such as the existing specification names cannot be used by Jakarta EE specifications.
+> As well, Java trademarks such as the existing specification names cannot be used by Jakarta EE specifications.
 
 That means `javax`, root package name for all Java EE packages, can't be touched.
 Jakarta is allowed to publish artifacts that contain the API as-is, but it's *not* allowed to evolve it - no new methods, no removal of classes, no moving things around, nothing.
@@ -82,22 +82,22 @@ Published very soon after Mark Milinkovich's first post, David describes his ini
 It basically is *clarity*:
 
 > We were never going to have complete freedom over `javax`.
-This recent change ultimately means that we can no longer stretch the reality of that over 10 years and must deal with it now, immediately.
-In many ways it is a blessing in disguise.
-Some challenges we would have had to have faced are gone.
-We do now have new challenges.
+> This recent change ultimately means that we can no longer stretch the reality of that over 10 years and must deal with it now, immediately.
+> In many ways it is a blessing in disguise.
+> Some challenges we would have had to have faced are gone.
+> We do now have new challenges.
 
 He also links this to the advent of [Quarkus](https://quarkus.io/) in a very interesting way:
 
 > A healthy disruption Quarkus brings to our industry is forcing us all to transition into deploy-time and build-time generation.
-This does require a huge investment, however.
-This impossible-to-avoid `javax` to `jakarta` migration will require vendors to make a big investment in the exact place it needs to make anyway to catch up to Quarkus.
-The reality is this unfortunate legal restriction on `javax` will force the industry to do something it needed to do anyway, invest in deploy-time bytecode enhancement, and very likely bring us more "Quarkuses" 1 to 2 years sooner.
+> This does require a huge investment, however.
+> This impossible-to-avoid `javax` to `jakarta` migration will require vendors to make a big investment in the exact place it needs to make anyway to catch up to Quarkus.
+> The reality is this unfortunate legal restriction on `javax` will force the industry to do something it needed to do anyway, invest in deploy-time bytecode enhancement, and very likely bring us more "Quarkuses" 1 to 2 years sooner.
 
 He closes:
 
 > It will be tough, but ultimately we're being forced to free ourselves.
-On the other side, what we do is truly up to us.
+> On the other side, what we do is truly up to us.
 
 ⇝ [*Negotiations Failed: How Oracle killed Java EE.*](https://headcrashing.wordpress.com/2019/05/03/negotiations-failed-how-oracle-killed-java-ee/) by Markus Karg (May 3rd)
 
@@ -105,16 +105,16 @@ Not everybody's that optimistic, though.
 Markus paints a bleak picture and he clearly blames Oracle for the result:
 
 > The reason simply spoken is, according to the [recent board meeting minutes](https://www.eclipse.org/org/foundation/boardminutes/2019_03_26_Minutes.pdf), that Oracle wanted to have in turn a set of inacceptable demands.
-Some of them would put the existence of the Eclipse Foundation at severe risk.
-Oracle claimed that products distributed by the Eclipse Foundation (like the Eclipse IDE) must *only* be bundled with Java runtimes certified particularly by *Oracle and its licencees* — *not any other vendor's* certification and not any uncertified runtime.
-Hence, the IDE and GlassFish wouldn't be vendor-neutral products anymore.
-[...] But once Eclipse products would be not vendor-neutral anymore, the EFs tax exemption might become void, which would mean a financial fiasco, or possibly mean the end of the organization as a hole.
-Hence, it not only was *inacceptable*, but it was simply *impossible* to agree to Oracle's requests, so the negotiations more or less completely failed.
+> Some of them would put the existence of the Eclipse Foundation at severe risk.
+> Oracle claimed that products distributed by the Eclipse Foundation (like the Eclipse IDE) must *only* be bundled with Java runtimes certified particularly by *Oracle and its licencees* — *not any other vendor's* certification and not any uncertified runtime.
+> Hence, the IDE and GlassFish wouldn't be vendor-neutral products anymore.
+> [...] But once Eclipse products would be not vendor-neutral anymore, the EFs tax exemption might become void, which would mean a financial fiasco, or possibly mean the end of the organization as a hole.
+> Hence, it not only was *inacceptable*, but it was simply *impossible* to agree to Oracle's requests, so the negotiations more or less completely failed.
 
 He closes:
 
 > For me, the glass is not just half-empty anymore: Today it cracked into pieces.
-This is the day when Java EE was killed by Oracle.
+> This is the day when Java EE was killed by Oracle.
 
 Everybody else (whose blog post I discovered) is ok with the required migration from `javax` to `jakarta`, though:
 
@@ -146,7 +146,7 @@ Unfortunately, [Mark Milinkovich's FAQ](https://eclipse-foundation.blog/2019/05/
 Jeanne Boyarsky, who I'm proud to say was technical editor of [my book in the module system](https://www.manning.com/books/the-java-module-system?a_aid=nipa&a_bid=869915cb), [made an interesting proposal](https://twitter.com/jeanneboyarsky/status/1124836152593342464) that combines both approaches:
 
 > Create the new naming and package both in the same jar to facilitate transition.
-Aka start as soon as possible but also keep support as long as possible
+> Aka start as soon as possible but also keep support as long as possible
 
 That said, Mark already went ahead and experimented with renaming packages in Apache Tomcat and was successful [as it seems](https://twitter.com/struberg/status/1125871529802252288).
 
@@ -156,7 +156,7 @@ Martijn quotes a dutch proverb saying "Gentle doctors make stinking wounds" (hah
 Interestingly he thinks this may *increase* adoption of Jakarta EE 8 because, without that rename, Java EE 8 and Jakarta EE 8 are identical, so why would anybody make the switch?
 
 > The future of JavaEE is Jakarta EE, might as well make it official with the proper package names.
-This will delay the release of Jakarta EE 8, but I don't think anyone was anxiously to adopt this release as the only change would be a new steward for the standards.
+> This will delay the release of Jakarta EE 8, but I don't think anyone was anxiously to adopt this release as the only change would be a new steward for the standards.
 
 ⇝ [*Thoughts on the Jakarta EE package name change*](https://blog.sebastian-daschner.com/entries/thoughts-on-jakarta-package-name) by Sebastian Daschner (May 7th)
 
@@ -164,17 +164,17 @@ Sebastian clearly discerns between the impact on JEE app servers and on JEE API 
 Regarding the servers he writes:
 
 > Any runtimes that know and handle EE APIs, e.g. application servers, have to adapt and switch to the new name.
-They will have to implement some functionality to live with both `javax` and `jakarta`, very likely simultaneously, simply because they have to.
-There's too much code out there that won't be migrated to base on either `javax` or `jakarta` fashion.
-In the real world, there are legacy projects, tons of libraries and dependencies, binaries for which no source exists, and much more.
-We need a way to tell a runtime to just live with both, at least temporarily, or in specific compatibility profiles.
+> They will have to implement some functionality to live with both `javax` and `jakarta`, very likely simultaneously, simply because they have to.
+> There's too much code out there that won't be migrated to base on either `javax` or `jakarta` fashion.
+> In the real world, there are legacy projects, tons of libraries and dependencies, binaries for which no source exists, and much more.
+> We need a way to tell a runtime to just live with both, at least temporarily, or in specific compatibility profiles.
 
 We'll see in the next post how that could be implemented, but before getting there I want to come to Sebastian's second point.
 He also advocates for a Jakarta EE release that is identical to Java EE 8 except for the package name, but would give individual projects time until a future release (8.1?, 9?) to update all their dependencies and imports:
 
 > I think a clean cut is to offer the current Java EE APIs, under both Java EE, with `javax`, and Jakarta EE with `jakarta`.
-This would be needed for both the platform (`javaee-api`) and individual specifications such as JAX-RS.
-The projects then have an easy control, via their resolved dependencies, which one to use and can swap their imports accordingly.
+> This would be needed for both the platform (`javaee-api`) and individual specifications such as JAX-RS.
+> The projects then have an easy control, via their resolved dependencies, which one to use and can swap their imports accordingly.
 
 So how would the application servers be able to handle both namespaces?
 
@@ -183,11 +183,11 @@ So how would the application servers be able to handle both namespaces?
 Dmitry describes how a big-bang rename may go over well for users who want to run their Java EE applications on new Jakarta application servers:
 
 > A good option is to create a special backwards compatibility profile in Jakarta EE platform.
-This profile should contain a frozen Java EE 8 APIs and will allow to run Java EE 8 applications on future versions of Jakara EE Platform.
-This profile can be optional to allow new potencial Jakarta EE vendors concentrate only on innovations, but I am sure that all big players such Oracle and IBM will support it anyway.
+> This profile should contain a frozen Java EE 8 APIs and will allow to run Java EE 8 applications on future versions of Jakara EE Platform.
+> This profile can be optional to allow new potencial Jakarta EE vendors concentrate only on innovations, but I am sure that all big players such Oracle and IBM will support it anyway.
 > How the backwards compatibility can be implemented technically?
-[...] Another way is patching application binaries at runtime or build time.
-Runtime solution can be accomplished using JavaAgent and build time via tooling and build plugins.
+> [...] Another way is patching application binaries at runtime or build time.
+> Runtime solution can be accomplished using JavaAgent and build time via tooling and build plugins.
 
 [Rafael Winterhalter on Twitter](https://twitter.com/rafaelcodes/status/1125032183167688706) already wrote the code for that Java agent proposal:
 
@@ -217,11 +217,11 @@ On May 6th, David Blevins [posted two proposals](https://www.eclipse.org/lists/j
 I'll leave you with an intriguing and a cynic tweet on the topic.
 
 > Alrighty, so, hypothetically, can I fork Java and add packages to it?
-Add types to existing packages ?
-As long as I don't call it Java?
-Just the packages stay the same?
+> Add types to existing packages ?
+> As long as I don't call it Java?
+> Just the packages stay the same?
 > [Josh Long on Twitter](https://twitter.com/starbuxman/status/1125123193692405762)
 
 > Credit where it's due, this javax decision has done the impossible task of unifying the Java EE and Spring communities.
-They both think it's f\*\*ing stupid!
+> They both think it's f\*\*ing stupid!
 > [Phill Webb on Twitter](https://twitter.com/phillip_webb/status/1125389244778700801)

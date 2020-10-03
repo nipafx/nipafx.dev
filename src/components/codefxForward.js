@@ -45,7 +45,7 @@ const popover = () => (
 					<a className={style.button} href="#" role="button">
 						Got it!
 					</a>
-					<p>(JavaScript is off, so no cookies—tell me again next time)</p>
+					<p>(JavaScript is off, so no cookies - tell me again next time)</p>
 				</div>
 			</div>
 			<div {...classNames(style.choices, style.js)}>
@@ -54,7 +54,7 @@ const popover = () => (
 						Got it!
 					</a>
 					<p>
-						(and give me a cookie to remember—<Link to="/privacy">privacy policy</Link>)
+						(and give me a cookie to remember - <Link to="/privacy">privacy policy</Link>)
 					</p>
 				</div>
 				<div className={style.choice}>

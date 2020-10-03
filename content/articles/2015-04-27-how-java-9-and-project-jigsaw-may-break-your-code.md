@@ -211,8 +211,8 @@ Information gathered this way can be returned to the project, e.g. by posting it
 To quote the (almost) final words of JEP 220:
 
 > It is impossible to determine the full impact of these changes in the abstract.
-We must therefore rely upon extensive internal and—especially—external testing.
-[...] If some of these changes prove to be insurmountable hurdles for developers, deployers, or end users then we will investigate ways to mitigate their impact.
+> We must therefore rely upon extensive internal and—especially—external testing.
+> [...] If some of these changes prove to be insurmountable hurdles for developers, deployers, or end users then we will investigate ways to mitigate their impact.
 
 ## Reflection & Lookout
 
