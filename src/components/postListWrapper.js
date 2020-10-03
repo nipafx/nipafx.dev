@@ -1,13 +1,16 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
+import { classNames } from "../infra/functions"
+
 import PostList from "./postList"
 
+import style from "./postListWrapper.module.css"
 import layout from "../layout/container.module.css"
 
 const PostListWrapper = ({ kind, slug }) => {
 	return (
-		<div className={layout.wide}>
+		<div {...classNames(layout.wide, style.wrapper)}>
 			<PostList slugs={getPostSlugs(kind, slug)} />
 		</div>
 	)
