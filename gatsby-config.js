@@ -270,7 +270,7 @@ module.exports = {
 								image_url: `${site.siteMetadata.siteUrl}/logo-bg.png`,
 								managingEditor: site.siteMetadata.author,
 								webMaster: site.siteMetadata.author,
-								copyright: `Mostly CC-BY-NC 4.0 for words and ASL 2.0 for code - for details check ${site.siteMetadata.siteUrl}/license`,
+								copyright: `Mostly CC-BY-NC 4.0 for words and Apache 2.0 for code - for details check ${site.siteMetadata.siteUrl}/license`,
 								language: "en-us",
 								categories: ["java", "software-development", "programming"],
 								pubDate: new Date(),
