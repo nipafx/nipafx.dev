@@ -90,7 +90,7 @@ Let me leave you with a couple of articles I think you might find interesting:
 
 -   [Java EE 8 Delayed Until End of 2017, Oracle Announces at JavaOne](https://www.infoq.com/news/2016/09/java-ee-delayed-2017)
 -   [Private methods in interfaces in Java 9](http://blog.joda.org/2016/09/private-methods-in-interfaces-in-java-9.html)
--   [TDD for PL/SQL Developement](http://blog.disy.net/tdd-for-plsql-with-junit/)
+-   [TDD for PL/SQL Developement](https://blog.disy.net/tdd-for-plsql-with-junit/)
 -   [Advice on removing javac lint warnings](https://blogs.oracle.com/darcy/entry/warnings_removal_advice)
 -   [How PayPal Scaled to Billions of Transactions Daily Using Just 8VMs](http://highscalability.com/blog/2016/8/15/how-paypal-scaled-to-billions-of-transactions-daily-using-ju.html)
 

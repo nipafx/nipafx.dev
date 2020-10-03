@@ -4,7 +4,7 @@ title: "Code Reviews At Disy - Where We Were And What We Wanted"
 tags: [code-review, techniques]
 date: 2016-08-15
 slug: code-reviews-disy-part-1
-canonicalUrl: http://blog.disy.net/code-reviews/
+canonicalUrl: https://blog.disy.net/code-reviews/
 description: "At Disy we review almost all the code we write. Here, we want to share why that was not always the case and how we started with code reviews."
 featuredImage: disy-code-reviews-i
 ---

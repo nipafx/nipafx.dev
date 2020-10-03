@@ -4,7 +4,7 @@ title: "Code Reviews At Disy - Observations"
 tags: [code-review, techniques]
 date: 2016-10-26
 slug: code-reviews-disy-part-3
-canonicalUrl: http://blog.disy.net/code-reviews-iii/
+canonicalUrl: https://blog.disy.net/code-reviews-iii/
 description: "After reviewing almost all code we wrote for 18 months, completing some 1'500 reviews, we want to share some recommendations."
 intro: "After reviewing almost all code we wrote for 18 months, completing some 1'500 reviews, we want to share some recommendations and look at things we'd like to change."
 featuredImage: disy-code-reviews-iii

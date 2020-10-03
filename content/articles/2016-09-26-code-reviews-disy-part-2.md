@@ -4,7 +4,7 @@ title: "Code Reviews At Disy - How We Review"
 tags: [code-review, techniques]
 date: 2016-09-26
 slug: code-reviews-disy-part-2
-canonicalUrl: http://blog.disy.net/code-reviews-ii/
+canonicalUrl: https://blog.disy.net/code-reviews-ii/
 description: "After setting out to create a peer review culture we came up with a workflow and picked a tool (yes, Crucible) that would help us get there."
 featuredImage: disy-code-reviews-ii
 ---

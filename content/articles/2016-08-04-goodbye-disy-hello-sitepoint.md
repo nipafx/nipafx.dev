@@ -37,7 +37,7 @@ Guys and gals, I will miss you!
 SitePoint is building a Java channel and asked me to become its editor.
 Oh, the pride!
 And it's right up my alley, too!
-I've built three blogs (this one, [Do-Foss](http://blog.do-foss.de/en/), and [Disy's TechBlog](http://blog.disy.net/)) and feel right at home in the Java community, This offer gave me an opportunity to build on this and make it a more integral part of my life.
+I've built three blogs (this one, [Do-Foss](http://blog.do-foss.de/en/), and [Disy's TechBlog](https://blog.disy.net/)) and feel right at home in the Java community, This offer gave me an opportunity to build on this and make it a more integral part of my life.
 
 So since Monday I've been doing my new thing: finding authors, curating content, and generally scheming to make the channel a great success.
 
@@ -66,7 +66,7 @@ Heck, I might even write about something else one day.
 That's actually one thing I planned.
 My list of ideas contains a lot of topics that are not immediately technical but address development as a whole.
 I've always been interested in the cultural and social aspects of creating software and can't wait to share my thoughts.
-On Disy's blog I already started to write about [how we/they do code reviews](http://blog.disy.net/code-reviews/) - a series, which I will soon cross-post here.
+On Disy's blog I already started to write about [how we/they do code reviews](https://blog.disy.net/code-reviews/) - a series, which I will soon cross-post here.
 
 ### Bla, Bla, Bla
 
