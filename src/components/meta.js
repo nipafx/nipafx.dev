@@ -41,7 +41,6 @@ const Meta = ({ title, slug, canonicalUrl, image, description, searchKeywords, v
 	}
 
 	const metaNames = {
-		robots: "noindex",
 		// Google
 		description,
 		// Twitter
