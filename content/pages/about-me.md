@@ -1,14 +1,15 @@
 ---
 title: "About Nicolai Parlog"
 tags: [personal]
-date: 2019-01-19
+date: 2020-10-03
 slug: nicolai-parlog
-description: "About me - TODO"
+description: "TODO"
 searchKeywords: "Nicolai Parlog"
 ---
 
-TODO!
+TODO
 
+<!--
 I’m a thirty year old boy, as the narrator would put it, who has found his passion in software development. I constantly read, think and write about it, code for a living as well as for fun, and am always thinking about ways to improve skills and workflows – mine as well as those of the people sharing their time with me.
 
 Initially, I considered this whole blogging thing a hobby, aimed at improving my knowledge and giving back to the great community which enabled me to even call myself a developer (as opposed to just some guy hacking away at his keyboard). But after about a year and a half it turned into much more. Researching topics that really interested me, I inadvertently acquired knowledge that others seek.
@@ -69,3 +70,4 @@ Nicolai Parlog
 Werderstraße 96
 76137 Karlsruhe
 Germany
+-->
