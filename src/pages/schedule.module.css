@@ -133,6 +133,19 @@
 	content: " //";
 }
 
+.colors {
+	text-align: right;
+}
+
+.colors > a,
+.colors > a:visited {
+	color: var(--alt-color);
+}
+
+.colors > a:hover {
+	color: var(--fg-color);
+}
+
 @media all and (min-width: 1000px) {
 	.schedule {
 		display: grid;

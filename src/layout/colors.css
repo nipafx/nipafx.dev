@@ -72,6 +72,7 @@ body {
 	--alt-contrast-color: var(--bg-color);
 }
 
+/* text in schedule.js references that talks are pink */
 .talk,
 .talks {
 	--alt-color: var(--theme-pink);
@@ -79,6 +80,7 @@ body {
 	--alt-contrast-color: var(--bg-color);
 }
 
+/* text in schedule.js references that courses are blue */
 .course,
 .courses {
 	--alt-color: var(--theme-blue-dark);
@@ -93,6 +95,7 @@ body {
 	--alt-contrast-color: var(--fg-color);
 }
 
+/* text in schedule.js references that talks are purple */
 .stream,
 .streams {
 	--alt-color: var(--theme-purple);

@@ -54,6 +54,22 @@ const SchedulePage = ({ data }) => {
 						<PageHeader title="Schedule" date={new Date()} description={description} />
 					</div>
 					<div className={layout.container}>
+						<p className={style.colors}>
+							The events are color-coded:
+							<br />
+							<Link className="stream" to="streams">
+								streams are purple
+							</Link>
+							,{" "}
+							<Link className="course" to="courses">
+								courses are blue
+							</Link>
+							<br />
+							<Link className="talk" to="talks">
+								talks are pink
+							</Link>
+							, and I love you. 😊
+						</p>
 						{eventsByMonth.length === 0 ? (
 							<p className={layout.header}>{noEvents}</p>
 						) : (
