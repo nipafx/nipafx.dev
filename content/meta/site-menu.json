@@ -44,7 +44,7 @@
 			"children": [
 				{
 					"title": "Java After Eight",
-					"url": "/java-after-eight"
+					"url": "https://github.com/CodeFX-org/java-after-eight"
 				},
 				{
 					"title": "Demos, demos, demos",
@@ -52,11 +52,11 @@
 				},
 				{
 					"title": "JUnit Pioneer",
-					"url": "/junit-pioneer"
+					"url": "https://junit-pioneer.org/"
 				},
 				{
 					"title": "LibFX",
-					"url": "/libfx"
+					"url": "http://libfx.codefx.org/"
 				}
 			]
 		},
@@ -65,7 +65,7 @@
 			"children": [
 				{
 					"title": "Past",
-					"url": "/past-talks"
+					"url": "/talks"
 				},
 				{
 					"title": "Upcoming",
