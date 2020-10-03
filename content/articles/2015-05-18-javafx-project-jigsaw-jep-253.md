@@ -1,6 +1,6 @@
 ---
 title: "JavaFX, Project Jigsaw and JEP 253"
-tags: [java-next, java-9, javafx, project-jigsaw]
+tags: [java-next, java-9, javafx, project-jigsaw, patterns]
 date: 2015-05-18
 slug: javafx-project-jigsaw-jep-253
 description: "JEP253 aims to prepare JavaFX for Project Jigsaw by defining public APIs for functionality that will become inaccessible due to modularization."
