@@ -8,7 +8,7 @@ import layout from "../layout/container.module.css"
 
 const FourOhFourPage = () => (
 	<Site
-		className="article"
+		className="page"
 		meta={{
 			title: "404",
 			slug: "404",
