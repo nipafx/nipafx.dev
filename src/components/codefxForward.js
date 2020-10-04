@@ -99,8 +99,12 @@ const hideIfCookie = () => {
 	if (!readerGotIt) return
 
 	hash = hash.replace("codefx-forward", "").replace("codefx-catch-all", "")
-	if (hash === "#") hash = ""
-	window.location.hash = hash
+	// window.location.hash = hash
+	//		~> changes history, which breaks back button (JS is immediately reevaluated)
+	// history.replaceState(undefined, undefined, hash)
+	//		~> does not trigger a style recomputation and so popup stays visible with :target
+	// location.replace(hash) ~> seems to work fine
+	location.replace(hash)
 }
 
 const showJsButtons = () => {
