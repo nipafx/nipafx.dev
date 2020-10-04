@@ -88,7 +88,7 @@ const codefx = () =>
 	`).codefxWide
 
 const setCookie = () => {
-	document.cookie = `${COOKIE_NAME}=${COOKIE_VALUE}`
+	document.cookie = `${COOKIE_NAME}=${COOKIE_VALUE};path=/`
 }
 
 const hideIfCookie = () => {
