@@ -13,7 +13,7 @@
 					"announcement": "https://sites.google.com/site/jugffm/home/27-11-2019-java-next---new-releases-amber-valhalla-and-more-goodies",
 					"time": "27.11.2019 1830 Europe/Berlin",
 					"locationText": "Deutsche Nationalbibliothek, Adickesallee 1, Frankfurt",
-					"slides": "https://slides.codefx.org/java-next/2019-11-27-jug-frankfurt"
+					"slides": "https://slides.nipafx.dev/java-next/2019-11-27-jug-frankfurt"
 				}
 			]
 		},
@@ -30,7 +30,7 @@
 					"program": "http://www.devfestka.de/programm",
 					"time": "09.11.2019 1330 Europe/Berlin",
 					"locationText": "Karlsruhe, Duale Hochschule, Erzbergerstraße 121",
-					"slides": "https://slides.codefx.org/junit-5/2019-11-09-gdg-devfest"
+					"slides": "https://slides.nipafx.dev/junit-5/2019-11-09-gdg-devfest"
 				}
 			]
 		},
@@ -47,7 +47,7 @@
 					"announcement": "https://www.meetup.com/Java-User-Group-Hessen-JUGH/events/263058106/",
 					"time": "31.10.2019 1800 Europe/Berlin",
 					"locationText": "Kassel, Ing.-Schule Universität, Raum HS 0315, Wilhelmshöher Allee 73",
-					"slides": "https://slides.codefx.org/java-next/2019-10-31-jug-hessen",
+					"slides": "https://slides.nipafx.dev/java-next/2019-10-31-jug-hessen",
 					"video": "https://www.youtube.com/watch?&v=A-e8fu99R-s"
 				}
 			]
@@ -65,7 +65,7 @@
 					"program": "https://2019.accento.dev/talks",
 					"time": "24.09.2019 1130 Europe/Berlin",
 					"locationText": "Südwerk, Henriette-Obermüller-Straße 10, Karlsruhe",
-					"slides": "https://slides.codefx.org/best-practices/2019-09-24-accento"
+					"slides": "https://slides.nipafx.dev/best-practices/2019-09-24-accento"
 				},
 				{
 					"talk": "talk-comment-your-code",
@@ -73,7 +73,7 @@
 					"programEntry": "https://2019.accento.dev/talks/code-comments/",
 					"time": "24.09.2019 1300 Europe/Berlin",
 					"locationText": "Südwerk, Henriette-Obermüller-Straße 10, Karlsruhe",
-					"slides": "https://slides.codefx.org/comment-your-code/2019-09-24-accento",
+					"slides": "https://slides.nipafx.dev/comment-your-code/2019-09-24-accento",
 					"video": "https://www.youtube.com/watch?v=a4BWbbgO67Q"
 				}
 			]
@@ -94,7 +94,7 @@
 						"text": "virtualjug.com/#live",
 						"url": "http://virtualjug.com/#live"
 					},
-					"slides": "https://slides.codefx.org/java-next/2019-08-22-vjug",
+					"slides": "https://slides.nipafx.dev/java-next/2019-08-22-vjug",
 					"video": "https://www.youtube.com/watch?v=sG6wUipM8mo"
 				}
 			]
@@ -112,7 +112,7 @@
 					"announcement": "https://www.meetup.com/javaBin/events/262963213/",
 					"time": "14.08.2019 1730 Europe/Oslo",
 					"locationText": "Teknologihuset, Pilestredet 56, Oslo",
-					"slides": "https://slides.codefx.org/java-next/2019-08-14-javabin",
+					"slides": "https://slides.nipafx.dev/java-next/2019-08-14-javabin",
 					"video": "https://vimeo.com/353981712"
 				}
 			]
@@ -130,7 +130,7 @@
 					"announcement": "https://www.jug-da.de/2019/07/Java-Livecoding/",
 					"time": "10.07.2019 1830 Europe/Berlin",
 					"locationText": "TU Darmstadt, S2|02 (Robert-Piloty-Geb.), Raum C110, Hochschulstr. 10",
-					"slides": "https://slides.codefx.org/java-9-migration/2019-07-10-jug-darmstadt"
+					"slides": "https://slides.nipafx.dev/java-9-migration/2019-07-10-jug-darmstadt"
 				},
 				{
 					"talk": "talk-java-var",
@@ -138,7 +138,7 @@
 					"announcement": "https://www.jug-da.de/2019/07/Java-Livecoding/",
 					"time": "10.07.2019 1830 Europe/Berlin",
 					"locationText": "TU Darmstadt, S2|02 (Robert-Piloty-Geb.), Raum C110, Hochschulstr. 10",
-					"slides": "https://slides.codefx.org/java-var/2019-07-10-jug-darmstadt"
+					"slides": "https://slides.nipafx.dev/java-var/2019-07-10-jug-darmstadt"
 				}
 			]
 		},
@@ -155,7 +155,7 @@
 					"announcement": "http://www.majug.de/2019/07/04/Java-Next/",
 					"time": "04.07.2019 1900 Europe/Berlin",
 					"locationText": "Uni Mannheim A5, 6 im Raum C013",
-					"slides": "https://slides.codefx.org/java-next/2019-07-04-jug-mannheim"
+					"slides": "https://slides.nipafx.dev/java-next/2019-07-04-jug-mannheim"
 				}
 			]
 		},
@@ -172,7 +172,7 @@
 					"announcement": "https://www.meetup.com/fr-FR/ElsassJUG/events/262106556/",
 					"time": "03.07.2019 1800 Europe/Paris",
 					"locationText": "Epitech, 4 rue du Dome, Strasbourg",
-					"slides": "https://slides.codefx.org/java-9-migration/2019-07-03-elsassjug"
+					"slides": "https://slides.nipafx.dev/java-9-migration/2019-07-03-elsassjug"
 				}
 			]
 		},
@@ -188,7 +188,7 @@
 					"title": "Best Practices Considered Harmful",
 					"time": "03.06.2019 1900 Europe/Berlin",
 					"locationText": "Pizzahaus,​ Rintheimer Straße 2, Karlsruhe",
-					"slides": "https://slides.codefx.org/best-practices/2019-06-03-webmontag-karlsruhe"
+					"slides": "https://slides.nipafx.dev/best-practices/2019-06-03-webmontag-karlsruhe"
 				}
 			]
 		},
@@ -205,7 +205,7 @@
 					"programEntry": "https://www.devsum.se/sessions/to-jar-hell-and-back-a-live-migration-to-java-11/",
 					"time": "23.05.2019 1410 Europe/Stockholm",
 					"locationText": "Stockholm, Folkets Hus, Room 307",
-					"slides": "https://slides.codefx.org/java-9-migration/2019-05-23-devsum"
+					"slides": "https://slides.nipafx.dev/java-9-migration/2019-05-23-devsum"
 				},
 				{
 					"talk": "talk-expert-java-8",
@@ -213,7 +213,7 @@
 					"programEntry": "https://www.devsum.se/sessions/lambdas-and-streams-for-aficionados/",
 					"time": "24.05.2019 1410 Europe/Stockholm",
 					"locationText": "Stockholm, Folkets Hus, Room 201",
-					"slides": "https://slides.codefx.org/expert-java-8/2019-05-24-devsum"
+					"slides": "https://slides.nipafx.dev/expert-java-8/2019-05-24-devsum"
 				}
 			]
 		},
@@ -230,7 +230,7 @@
 					"announcement": "https://www.xing.com/events/getting-started-with-the-java-9-module-system-2089281",
 					"time": "29.04.2019 1800 Europe/Berlin",
 					"locationText": "DATEV eg – Kegelbahn, Südliche Früher Straße 18-20, Nürnberg",
-					"slides": "https://slides.codefx.org/jpms/2019-04-29-jug-nuernberg"
+					"slides": "https://slides.nipafx.dev/jpms/2019-04-29-jug-nuernberg"
 				}
 			]
 		},
@@ -247,7 +247,7 @@
 					"programEntry": "https://jeeconf.com/program/fun-with-var/",
 					"time": "26.04.2019 1105 Europe/Kiev",
 					"locationText": "Kiev, Mercure Congress Hall, Track D",
-					"slides": "https://slides.codefx.org/java-var/2019-04-26-jeeconf"
+					"slides": "https://slides.nipafx.dev/java-var/2019-04-26-jeeconf"
 				},
 				{
 					"talk": "talk-java-next",
@@ -255,7 +255,7 @@
 					"programEntry": "https://jeeconf.com/program/java-next-new-releases-amber-valhalla-and-more-goodies/",
 					"time": "26.04.2019 1400 Europe/Kiev",
 					"locationText": "Kiew, Mercure Congress Hall, Track A",
-					"slides": "https://slides.codefx.org/java-next/2019-04-26-jeeconf"
+					"slides": "https://slides.nipafx.dev/java-next/2019-04-26-jeeconf"
 				}
 			]
 		},
@@ -272,7 +272,7 @@
 					"programEntry": "https://programm.javaland.eu/2019/#/scheduledEvent/569986",
 					"time": "19.03.2019 1600 Europe/Berlin",
 					"locationText": "Brühl, Phantasialand, Silverado Theater",
-					"slides": "https://slides.codefx.org/comment-your-code/2019-03-19-javaland",
+					"slides": "https://slides.nipafx.dev/comment-your-code/2019-03-19-javaland",
 					"video": "https://www.javaland.eu/de/home/news/details/?tx_news_pi1%5Bnews%5D=1917&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=5e6b61c02a21eaa23721233369eaf6a2"
 				}
 			]
@@ -290,7 +290,7 @@
 					"announcement": "https://www.meetup.com/Java-Saigon/events/259154363/",
 					"time": "27.02.2019 1800 Asia/Ho_Chi_Minh",
 					"locationText": "Ho Chi Minh City, Quận Tân Bình, 364 Cộng Hòa, e.town 1 Building, Unit 7.10",
-					"slides": "http://slides.codefx.org/java-next/2019-02-27-java-saigon"
+					"slides": "http://slides.nipafx.dev/java-next/2019-02-27-java-saigon"
 				}
 			]
 		},
@@ -306,7 +306,7 @@
 					"title": "Java Next",
 					"announcement": "https://www.meetup.com/jug-bd/events/256515384/",
 					"time": "13.12.2018 2200 Asia/Dhaka",
-					"slides": "https://slides.codefx.org/java-next/2018-12-13-jug-bd"
+					"slides": "https://slides.nipafx.dev/java-next/2018-12-13-jug-bd"
 				}
 			]
 		},
@@ -326,7 +326,7 @@
 						"text": "virtualjug.com/#live",
 						"url": "http://virtualjug.com/#live"
 					},
-					"slides": "https://slides.codefx.org/java-var/2018-12-12-vjug",
+					"slides": "https://slides.nipafx.dev/java-var/2018-12-12-vjug",
 					"video": "https://www.youtube.com/watch?v=TIumzU4dhRk"
 				}
 			]
@@ -344,7 +344,7 @@
 					"programEntry": "https://dvbe18.confinabox.com/talk/NUP-3481/To_JAR_Hell_And_Back_-_A_Live_Migration_to_Java_11",
 					"time": "14.11.2018 1200 Europe/Brussels",
 					"locationText": "Antwerpen, Kinepolis, Room 8",
-					"slides": "https://slides.codefx.org/java-9-migration/2018-11-14-devoxxbe",
+					"slides": "https://slides.nipafx.dev/java-9-migration/2018-11-14-devoxxbe",
 					"video": "https://www.youtube.com/watch?v=xKmv24_2Asw"
 				}
 			]
@@ -362,7 +362,7 @@
 					"programEntry": "https://jfall.nl/sessions/fun-with-var-in-java-11/",
 					"time": "08.11.2018 1650 Europe/Amsterdam",
 					"locationText": "Pathé Ede, Zaal 1",
-					"slides": "https://slides.codefx.org/java-var/2018-11-08-j-fall",
+					"slides": "https://slides.nipafx.dev/java-var/2018-11-08-j-fall",
 					"video": "https://www.youtube.com/watch?v=BdnaXuthR-U"
 				}
 			]
@@ -380,7 +380,7 @@
 					"program": "https://2018.trondheimdc.no/program",
 					"time": "22.10.2018 1015 Europe/Oslo",
 					"locationText": "Trondheim, Clarion Congress",
-					"slides": "https://slides.codefx.org/java-next/2018-10-22-tdc"
+					"slides": "https://slides.nipafx.dev/java-next/2018-10-22-tdc"
 				}
 			]
 		},
@@ -397,7 +397,7 @@
 					"programEntry": "https://jokerconf.com/en/2018/talks/1hk3oploee6cyq80i664co/",
 					"time": "19.10.2018 1200 Europe/Moscow",
 					"locationText": "Saint Petersburg, Expoforum, Track 1",
-					"slides": "https://slides.codefx.org/java-x/2018-10-19-jokerconf"
+					"slides": "https://slides.nipafx.dev/java-x/2018-10-19-jokerconf"
 				}
 			]
 		},
@@ -414,7 +414,7 @@
 					"announcement": "https://www.softwerkskammer.org/activities/ka-treffen-85/",
 					"time": "02.10.2018 1930 Europe/Berlin",
 					"locationText": "Karlsruhe, diva-e Platforms GmbH, Ludwig-Erhard-Allee 20",
-					"slides": "https://slides.codefx.org/comment-your-code/2018-10-02-softwerkskammer-karlsruhe"
+					"slides": "https://slides.nipafx.dev/comment-your-code/2018-10-02-softwerkskammer-karlsruhe"
 				}
 			]
 		},
@@ -431,7 +431,7 @@
 					"program": "https://jdays.se/schedule/",
 					"time": "25.09.2018 1045 Europe/Stockholm",
 					"locationText": "Gothenburg, Clarion Hotel Post, Brevsalen 1",
-					"slides": "https://slides.codefx.org/java-x/2018-09-25-jdays"
+					"slides": "https://slides.nipafx.dev/java-x/2018-09-25-jdays"
 				},
 				{
 					"talk": "talk-java-next",
@@ -439,7 +439,7 @@
 					"program": "https://jdays.se/schedule/",
 					"time": "25.09.2018 1430 Europe/Stockholm",
 					"locationText": "Gothenburg, Clarion Hotel Post, Brevsalen 1",
-					"slides": "https://slides.codefx.org/java-next/2018-09-25-jdays"
+					"slides": "https://slides.nipafx.dev/java-next/2018-09-25-jdays"
 				}
 			]
 		},
@@ -456,7 +456,7 @@
 					"programEntry": "https://2018.javazone.no/program/6fdd1618-4f7e-4186-8081-e92768f60e9d",
 					"time": "12.09.2018 1820 Europe/Oslo",
 					"locationText": "Oslo Spektrum, Room 7",
-					"slides": "https://slides.codefx.org/comment-your-code/2018-09-12-javazone",
+					"slides": "https://slides.nipafx.dev/comment-your-code/2018-09-12-javazone",
 					"video": "https://vimeo.com/289655623"
 				},
 				{
@@ -465,7 +465,7 @@
 					"programEntry": "https://2018.javazone.no/program/84afe8de-ee8a-4540-a9dc-bab395d0b2af",
 					"time": "13.09.2018 1700 Europe/Oslo",
 					"locationText": "Oslo Spektrum, Room 6",
-					"slides": "https://slides.codefx.org/java-next/2018-09-13-javazone",
+					"slides": "https://slides.nipafx.dev/java-next/2018-09-13-javazone",
 					"video": "https://vimeo.com/289852355"
 				}
 			]
@@ -483,7 +483,7 @@
 					"program": "http://bed-con.org/2018/programm",
 					"time": "07.09.2018 1020 Europe/Berlin",
 					"locationText": "Urania Berlin, Humboldtsaal",
-					"slides": "https://slides.codefx.org/java-next/2018-09-07-bed-con"
+					"slides": "https://slides.nipafx.dev/java-next/2018-09-07-bed-con"
 				}
 			]
 		},
@@ -500,7 +500,7 @@
 					"announcement": "https://www.meetup.com/de-DE/Write-the-Docs-Karlsruhe/events/250444386/",
 					"time": "09.07.2018 1830 Europe/Berlin",
 					"locationText": "Karlsruhe, connyun GmbH, Alter Schlachthof 51",
-					"slides": "https://slides.codefx.org/comment-your-code/2018-07-09-write-the-docs"
+					"slides": "https://slides.nipafx.dev/comment-your-code/2018-07-09-write-the-docs"
 				}
 			]
 		},
@@ -517,7 +517,7 @@
 					"announcement": "https://www.meetup.com/de-DE/inovex-karlsruhe/events/249381296",
 					"time": "26.06.2018 1800 Europe/Berlin",
 					"locationText": "Karlsruhe, inovex office, Ludwig-Erhard-Allee 6",
-					"slides": "https://slides.codefx.org/java-9-migration/2018-06-26-inovex"
+					"slides": "https://slides.nipafx.dev/java-9-migration/2018-06-26-inovex"
 				}
 			]
 		},
@@ -534,7 +534,7 @@
 					"programEntry": "https://2018.geekout.ee/nicolai-parlog",
 					"time": "07.06.2018 1330 Europe/Tallinn",
 					"locationText": "Tallinn, Kultuurikatel, Room 1",
-					"slides": "https://slides.codefx.org/java-next/2018-06-07-geekout",
+					"slides": "https://slides.nipafx.dev/java-next/2018-06-07-geekout",
 					"video": "https://player.vimeo.com/video/274558807"
 				},
 				{
@@ -543,7 +543,7 @@
 					"programEntry": "https://2018.geekout.ee/nicolai-parlog",
 					"time": "08.06.2018 1130 Europe/Tallinn",
 					"locationText": "Tallinn, Kultuurikatel, Room 1",
-					"slides": "https://slides.codefx.org/java-9-migration/2018-06-08-geekout",
+					"slides": "https://slides.nipafx.dev/java-9-migration/2018-06-08-geekout",
 					"video": "https://player.vimeo.com/video/274560367"
 				}
 			]
@@ -561,7 +561,7 @@
 					"programEntry": "https://rigadevdays.lv/schedule/2018-05-30?sessionId=153",
 					"time": "30.05.2018 1200 Europe/Riga",
 					"locationText": "Riga, Kino Citadele, Room 3",
-					"slides": "https://slides.codefx.org/java-next/2018-05-30-rigadevdays"
+					"slides": "https://slides.nipafx.dev/java-next/2018-05-30-rigadevdays"
 				}
 			]
 		},
@@ -578,7 +578,7 @@
 					"programEntry": "https://cfp.devoxx.co.uk/2018/talk/VMP-3166/To_JAR_Hell_And_Back_-_A_Live_Migration_to_Java_9",
 					"time": "11.05.2018 0900 Europe/London",
 					"locationText": "London Islington, Business Design Centre, 52 Upper Street",
-					"slides": "https://slides.codefx.org/java-9-migration/2018-05-11-devoxxuk",
+					"slides": "https://slides.nipafx.dev/java-9-migration/2018-05-11-devoxxuk",
 					"video": "https://www.youtube.com/watch?v=ZF_WLtbEfqA"
 				}
 			]
@@ -596,7 +596,7 @@
 					"announcement": "https://www.meetup.com/Java-Saigon/events/248885704/",
 					"time": "30.03.2018 1700 Asia/Ho_Chi_Minh",
 					"locationText": "Ho Chi Minh City, CirCO, 1st Floor, H3 Building, 384 Hoàng Diệu, phường 6, Quận 4",
-					"slides": "http://slides.codefx.org/jpms/2018-03-30-javasaigon",
+					"slides": "http://slides.nipafx.dev/jpms/2018-03-30-javasaigon",
 					"video": "https://www.youtube.com/watch?v=HXnqYF2Csho"
 				}
 			]
@@ -614,7 +614,7 @@
 					"programEntry": "https://programm.javaland.eu/2018/talk.html#talk?talkId=548942",
 					"time": "13.03.2018 1700 Europe/Berlin",
 					"locationText": "Brühl, Phantasialand, Silverado Theater",
-					"slides": "http://slides.codefx.org/jpms/2018-03-13-javaland"
+					"slides": "http://slides.nipafx.dev/jpms/2018-03-13-javaland"
 				}
 			]
 		},
@@ -631,7 +631,7 @@
 					"announcement": "https://cfp-vdz.exteso.com/2018/talk/KAR-2047",
 					"time": "08.03.2018 1120 Europe/Zurich",
 					"locationText": "Zürich, Arena Cinema Sihlcity, Room 3",
-					"slides": "http://slides.codefx.org/jpms/2018-03-08-voxxed-days-zürich",
+					"slides": "http://slides.nipafx.dev/jpms/2018-03-08-voxxed-days-zürich",
 					"video": "https://www.youtube.com/watch?v=pfXsQyToipM"
 				}
 			]
@@ -649,7 +649,7 @@
 					"programEntry": "https://www.jfokus.se/jfokus/talks.jsp#Gettingyourhandsdirt",
 					"time": "05.02.2018 0900 Europe/Stockholm",
 					"locationText": "Stockholm Waterfront Conference, Room 22",
-					"slides": "http://slides.codefx.org/jpms/2018-02-05-jfokus"
+					"slides": "http://slides.nipafx.dev/jpms/2018-02-05-jfokus"
 				},
 				{
 					"talk": "talk-java-9-migration",
@@ -657,7 +657,7 @@
 					"programEntry": "https://www.jfokus.se/jfokus/talks.jsp#ToJARHellAndBack-ALi",
 					"time": "06.02.2018 1100 Europe/Stockholm",
 					"locationText": "Stockholm Waterfront Conference, Room A1",
-					"slides": "http://slides.codefx.org/java-9-migration/2018-02-06-jfokus",
+					"slides": "http://slides.nipafx.dev/java-9-migration/2018-02-06-jfokus",
 					"video": "https://www.youtube.com/watch?v=FH8ncXalmAg"
 				}
 			]
@@ -675,7 +675,7 @@
 					"announcement": "https://jug.bg/events/jprofessionals-winter-edition/",
 					"time": "27.01.2018 1430 Europe/Sofia",
 					"locationText": "Sofia, Capital Fort",
-					"slides": "http://slides.codefx.org/java-9-migration/2018-01-27-jprofessionals"
+					"slides": "http://slides.nipafx.dev/java-9-migration/2018-01-27-jprofessionals"
 				}
 			]
 		},
@@ -692,7 +692,7 @@
 					"programEntry": "https://www.codeeurope.pl/en/speakers/nicolai-parlog",
 					"time": "13.12.2017 1420 Europe/Warsaw",
 					"locationText": "Wroclaw, Hala Stulecia, Room Redmond",
-					"slides": "http://slides.codefx.org/java-9/2017-12-13-codeeurope",
+					"slides": "http://slides.nipafx.dev/java-9/2017-12-13-codeeurope",
 					"video": "https://www.youtube.com/watch?v=kgBRlIWgDuw"
 				}
 			]
@@ -710,7 +710,7 @@
 					"announcement": "https://rg-dortmund.gi.de/veranstaltung/neues-in-java-9",
 					"time": "04.12.2017 1900 Europe/Berlin",
 					"locationText": "Mercure Hotel Dortmund, Olpe 2",
-					"slides": "http://slides.codefx.org/java-9/2017-12-04-gi-dortmund"
+					"slides": "http://slides.nipafx.dev/java-9/2017-12-04-gi-dortmund"
 				}
 			]
 		},
@@ -727,7 +727,7 @@
 					"programEntry": "http://javaday.org.ua/nicolai-parlog-the-java-9-module-system-beyond-the-basics/",
 					"time": "04.11.2017 1610 Europe/Kiev",
 					"locationText": "Kiev, Convention Center “Parkovy”, Parkova road 16a, Track 1",
-					"slides": "http://slides.codefx.org/jpms/2017-11-04-javaday",
+					"slides": "http://slides.nipafx.dev/jpms/2017-11-04-javaday",
 					"video": "https://www.youtube.com/watch?v=FvEboOV7PQA"
 				},
 				{
@@ -736,7 +736,7 @@
 					"programEntry": "http://javaday.org.ua/to-jar-hell-and-back-a-live-migration-to-the-java-9-module-system/",
 					"time": "05.11.2017 1400 Europe/Kiev",
 					"locationText": "Kiev, Convention Center “Parkovy”, Parkova road 16a, Track 1",
-					"slides": "http://slides.codefx.org/java-9-migration/2017-11-05-javaday",
+					"slides": "http://slides.nipafx.dev/java-9-migration/2017-11-05-javaday",
 					"video": "https://www.youtube.com/watch?v=UEXfGL5K8eU"
 				}
 			]
@@ -754,7 +754,7 @@
 					"program": "https://2018.baselone.ch/archive/2017/index.html#programm",
 					"time": "19.10.2017 1130 Europe/Zurich",
 					"locationText": "Basel, Markthalle Basel, Viaduktstrasse 10",
-					"slides": "http://slides.codefx.org/jpms/2017-10-19-baselone"
+					"slides": "http://slides.nipafx.dev/jpms/2017-10-19-baselone"
 				}
 			]
 		},
@@ -771,7 +771,7 @@
 					"announcement": "https://www.andrena.de/event/java-9-kommt",
 					"time": "26.09.2017 1830 Europe/Berlin",
 					"locationText": "Frankfurt, Saalbau Gutleut, Rottweiler Straße 32",
-					"slides": "http://slides.codefx.org/java-9/2017-09-26-objektforum-frankfurt"
+					"slides": "http://slides.nipafx.dev/java-9/2017-09-26-objektforum-frankfurt"
 				}
 			]
 		},
@@ -788,7 +788,7 @@
 					"announcement": "http://jugs.org/va2017/09-18.html",
 					"time": "18.09.2017 1830 Europe/Berlin",
 					"locationText": "Stuttgart, SODEXO, Wankelstraße 12",
-					"slides": "http://slides.codefx.org/expert-java-8/2017-09-18-objektforum-stuttgart"
+					"slides": "http://slides.nipafx.dev/expert-java-8/2017-09-18-objektforum-stuttgart"
 				}
 			]
 		},
@@ -805,7 +805,7 @@
 					"programEntry": "https://2017.javazone.no/program/cf1d1c8380994a24a86b87251b58ace3",
 					"time": "13.09.2017 1300 Europe/Oslo",
 					"locationText": "Oslo",
-					"slides": "http://slides.codefx.org/java-9-migration/2017-09-13-javazone",
+					"slides": "http://slides.nipafx.dev/java-9-migration/2017-09-13-javazone",
 					"video": "https://vimeo.com/233801793",
 					"misc": [
 						{
@@ -833,7 +833,7 @@
 					"programEntry": "http://www.javaforumnord.de/site/2017/page/Talk-109",
 					"time": "12.09.2017 1300 Europe/Berlin",
 					"locationText": "Hannover, Hotel Dormero, Saal 1",
-					"slides": "http://slides.codefx.org/java-9/2017-09-12-javaforumnord"
+					"slides": "http://slides.nipafx.dev/java-9/2017-09-12-javaforumnord"
 				}
 			]
 		},
@@ -853,7 +853,7 @@
 						"text": "virtualjug.com/#live",
 						"url": "http://virtualjug.com/#live"
 					},
-					"slides": "http://slides.codefx.org/java-9-migration/2017-07-25-vjug",
+					"slides": "http://slides.nipafx.dev/java-9-migration/2017-07-25-vjug",
 					"video": "https://www.youtube.com/watch?v=NKY2FYTCo7I"
 				}
 			]
@@ -871,7 +871,7 @@
 					"announcement": "https://www.jugdo.de/2017/05/03/talk-im-juli-java-9-kommt/",
 					"time": "11.07.2017 1900 Europe/Berlin",
 					"locationText": "Dortmund, adesso AG, Stockholmer Allee 20",
-					"slides": "http://slides.codefx.org/java-9/2017-07-11-jug-dortmund"
+					"slides": "http://slides.nipafx.dev/java-9/2017-07-11-jug-dortmund"
 				}
 			]
 		},
@@ -888,7 +888,7 @@
 					"announcement": "https://www.meetup.com/jugbremen/events/239511640/",
 					"time": "21.06.2017 1830 Europe/Berlin",
 					"locationText": "Bremen, team neusta, Konsul-Smidt-Straße 24",
-					"slides": "http://slides.codefx.org/java-9/2017-06-21-jug-bremen"
+					"slides": "http://slides.nipafx.dev/java-9/2017-06-21-jug-bremen"
 				}
 			]
 		},
@@ -905,7 +905,7 @@
 					"announcement": "http://www.jug-ostfalen.de/event/2017/05/18/java-9.html",
 					"time": "18.05.2017 1900 Europe/Berlin",
 					"locationText": "Braunschweig, CKC Group, Am Alten Bahnhof 13",
-					"slides": "http://slides.codefx.org/java-9/2017-05-18-jug-ostfalen",
+					"slides": "http://slides.nipafx.dev/java-9/2017-05-18-jug-ostfalen",
 					"video": "https://www.youtube.com/watch?v=-aj2GiWhDkM"
 				}
 			]
@@ -923,7 +923,7 @@
 					"programEntry": "http://rigadevdays.lv/schedule/day2?sessionId=134",
 					"time": "16.05.2017 1545 Europe/Riga",
 					"locationText": "Riga, Kino Citadele, Room 6",
-					"slides": "http://slides.codefx.org/junit-5/2017-05-16-rigadevdays",
+					"slides": "http://slides.nipafx.dev/junit-5/2017-05-16-rigadevdays",
 					"video": "https://www.youtube.com/watch?v=OA3UJYxTBRA",
 					"misc": [
 						{
@@ -947,7 +947,7 @@
 					"announcement": "https://www.andrena.de/event/objektforum-karlsruhe-266",
 					"time": "03.04.2017 1830 Europe/Berlin",
 					"locationText": "Karlsruhe, Technologiepark Casino, Albert-Nestler-Str.10",
-					"slides": "http://slides.codefx.org/expert-java-8/2017-04-03-objektforumkarlsruhe"
+					"slides": "http://slides.nipafx.dev/expert-java-8/2017-04-03-objektforumkarlsruhe"
 				}
 			]
 		},
@@ -964,7 +964,7 @@
 					"programEntry": "https://www.doag.org/konferenz/konferenzplaner/konferenzplaner_details.php?id=522447&locS=0&vid=529384",
 					"time": "28.03.2017 1300 Europe/Berlin",
 					"locationText": "Brühl, Phantasialand, Eventhalle",
-					"slides": "http://slides.codefx.org/junit-5/2017-03-28-javaland",
+					"slides": "http://slides.nipafx.dev/junit-5/2017-03-28-javaland",
 					"misc": [
 						{
 							"text": "NightHacking session exploring JUnit 5's parameterized tests",
@@ -987,7 +987,7 @@
 					"announcement": "https://www.meetup.com/Java-User-Group-Freiburg/events/237532610/?_locale=de-DE",
 					"time": "06.03.2017 1930 Europe/Berlin",
 					"locationText": "Freiburg, Munzinger Straße 9, Haufe-Lexware",
-					"slides": "http://slides.codefx.org/java-9/2017-03-06-jug-fr"
+					"slides": "http://slides.nipafx.dev/java-9/2017-03-06-jug-fr"
 				}
 			]
 		},
@@ -1004,7 +1004,7 @@
 					"announcement": "https://cfp-vdz.exteso.com/2017/talk/JYZ-6493/Java_9_Is_Coming_",
 					"time": "23.02.2017 1330 Europe/Zurich",
 					"locationText": "Zürich, Arena Cinema Sihlcity, Room 2",
-					"slides": "http://slides.codefx.org/java-9/2017-02-23-voxxed-days-zuerich",
+					"slides": "http://slides.nipafx.dev/java-9/2017-02-23-voxxed-days-zuerich",
 					"video": "https://www.youtube.com/watch?v=vOdFuvIyN0E"
 				}
 			]
@@ -1022,7 +1022,7 @@
 					"announcement": "https://entwicklertag.de/frankfurt/2017/junit-5-next-generation-testing-jvm",
 					"time": "16.02.2017 1140 Europe/Berlin",
 					"locationText": "Frankfurt, Goethe-Universität – Casino Gebäude, Seminarraum 1.812",
-					"slides": "http://slides.codefx.org/junit-5/2017-02-16-etffm"
+					"slides": "http://slides.nipafx.dev/junit-5/2017-02-16-etffm"
 				}
 			]
 		},
@@ -1039,7 +1039,7 @@
 					"programEntry": "http://europeantestingconference.eu/2017/topics/#nicolai-parlog",
 					"time": "09.02.2017 1020 Europe/Helsinki",
 					"locationText": "Helsinki, Wanha Satama",
-					"slides": "http://slides.codefx.org/junit-5/2017-02-09-etc"
+					"slides": "http://slides.nipafx.dev/junit-5/2017-02-09-etc"
 				}
 			]
 		},
@@ -1056,7 +1056,7 @@
 					"programEntry": "https://www.jfokus.se/jfokus/talks.jsp#ExpertJava8",
 					"time": "07.02.2017 1100 Europe/Stockholm",
 					"locationText": "Stockholm Waterfront Conference, Room A1",
-					"slides": "http://slides.codefx.org/expert-java-8/2017-02-07-jfokus",
+					"slides": "http://slides.nipafx.dev/expert-java-8/2017-02-07-jfokus",
 					"video": "https://www.youtube.com/watch?v=J3mDjgdZJSc"
 				}
 			]
@@ -1074,7 +1074,7 @@
 					"announcement": "http://jug-karlsruhe.de/content/junit-workshop/",
 					"time": "25.01.2017 1800 Europe/Berlin",
 					"locationText": "Citrix – GetGo Germany GmbH, Alter Schlachthof 51",
-					"slides": "https://slides.codefx.org/junit-5/2017-01-25-JUG-Karlsruhe",
+					"slides": "https://slides.nipafx.dev/junit-5/2017-01-25-JUG-Karlsruhe",
 					"misc": [
 						{
 							"text": "workshop sources",
@@ -1097,7 +1097,7 @@
 					"announcement": "http://jug-da.de/2017/01/JUnit5/",
 					"time": "19.01.2017 1830 Europe/Berlin",
 					"locationText": "TU Darmstadt, S2|02 Raum C110",
-					"slides": "https://slides.codefx.org/junit-5/2017-01-19-JUG-Darmstadt"
+					"slides": "https://slides.nipafx.dev/junit-5/2017-01-19-JUG-Darmstadt"
 				}
 			]
 		},
@@ -1114,7 +1114,7 @@
 					"announcement": "http://www.majug.de/2017/01/12/junit5-next-generation/",
 					"time": "12.01.2017 1900 Europe/Berlin",
 					"locationText": "University of Mannheim A5, 6; Room C013",
-					"slides": "https://slides.codefx.org/junit-5/2017-01-12-JUG-Mannheim"
+					"slides": "https://slides.nipafx.dev/junit-5/2017-01-12-JUG-Mannheim"
 				}
 			]
 		},
@@ -1131,7 +1131,7 @@
 					"program": "http://www.devfestka.de/programm",
 					"time": "21.11.2016 1145 Europe/Berlin",
 					"locationText": "Karlsruhe, Schauburg, Bambi",
-					"slides": "https://slides.codefx.org/jpms/2016-11-21-Devfest-Ka"
+					"slides": "https://slides.nipafx.dev/jpms/2016-11-21-Devfest-Ka"
 				}
 			]
 		},
@@ -1148,7 +1148,7 @@
 					"program": "https://web.liferay.com/web/events2016/modconf#agenda",
 					"time": "15.11.2016 1145 Europe/Berlin",
 					"locationText": "Darmstadt, Science and Congress Centre",
-					"slides": "https://slides.codefx.org/jpms/2016-11-15-Modconf",
+					"slides": "https://slides.nipafx.dev/jpms/2016-11-15-Modconf",
 					"video": "https://www.youtube.com/watch?v=gfm_yUwjB-0"
 				}
 			]
@@ -1163,7 +1163,7 @@
 					"title": "JUnit 5",
 					"time": "10.11.2016 1800 Europe/Stockholm",
 					"locationText": "Stockholm, Regeringsgatan 20",
-					"slides": "https://slides.codefx.org/junit-5/2016-11-10-JVM-Group-Stockholm"
+					"slides": "https://slides.nipafx.dev/junit-5/2016-11-10-JVM-Group-Stockholm"
 				}
 			]
 		},
@@ -1180,7 +1180,7 @@
 					"programEntry": "http://cfp.devoxx.be/2016/talk/PPQ-9247/JUnit_5:_Next_Generation_Testing_on_the_JVM",
 					"time": "08.11.2016 1815 Europe/Brussels",
 					"locationText": "Antwerpen, Kinepolis, Room 8",
-					"slides": "https://slides.codefx.org/junit-5/2016-11-08-DevoxxBE",
+					"slides": "https://slides.nipafx.dev/junit-5/2016-11-08-DevoxxBE",
 					"video": "https://www.youtube.com/watch?v=VfC00bby8XQ",
 					"misc": [
 						{
@@ -1204,7 +1204,7 @@
 					"announcement": "http://www.meetup.com/javaBin-Trondheim/events/231696590/",
 					"time": "01.11.2016 1800 Europe/Oslo",
 					"locationText": "Trondheim, DIGS, Olav Tryggvasonsgt. 30",
-					"slides": "https://slides.codefx.org/jpms/2016-11-01-javaBin"
+					"slides": "https://slides.nipafx.dev/jpms/2016-11-01-javaBin"
 				}
 			]
 		},
@@ -1221,7 +1221,7 @@
 					"program": "http://2016.trondheimdc.no/program",
 					"time": "31.10.2016 1145 Europe/Oslo",
 					"locationText": "Trondheim, Clarion Trondheim, Sal 3",
-					"slides": "https://slides.codefx.org/junit-5/2016-10-31-TDC",
+					"slides": "https://slides.nipafx.dev/junit-5/2016-10-31-TDC",
 					"video": "https://vimeo.com/189721692"
 				}
 			]
@@ -1239,7 +1239,7 @@
 					"program": "http://javaforumnord.de/site/2016/#programme",
 					"time": "20.10.2016 1600 Europe/Berlin",
 					"locationText": "Hannover, Hotel Dormero",
-					"slides": "https://slides.codefx.org/jpms/2016-10-20-Java-Forum-Nord"
+					"slides": "https://slides.nipafx.dev/jpms/2016-10-20-Java-Forum-Nord"
 				}
 			]
 		},
@@ -1256,7 +1256,7 @@
 					"programEntry": "https://jaxlondon.com/session/junit-5-next-generation-testing-on-the-jvm/",
 					"time": "12.10.2016 1630 Europe/London",
 					"locationText": "London Islington, Business Design Centre",
-					"slides": "https://slides.codefx.org/junit-5/2016-10-12-JAXLondon"
+					"slides": "https://slides.nipafx.dev/junit-5/2016-10-12-JAXLondon"
 				}
 			]
 		},
@@ -1273,7 +1273,7 @@
 					"announcement": "https://www.jug.ch/html/events/2016/jigsaw_zh.html",
 					"time": "26.09.2016 1815 Europe/Zurich",
 					"locationText": "Zürich (26.09.), Bern (27.09.), Luzern (28.09.), St.Gallen (29.09.)",
-					"slides": "https://slides.codefx.org/jpms/2016-09-29-JUG-Ch"
+					"slides": "https://slides.nipafx.dev/jpms/2016-09-29-JUG-Ch"
 				}
 			]
 		},
@@ -1290,7 +1290,7 @@
 					"programEntry": "https://2016.javazone.no/program/j-unit-5-next-generation-testing-on-the-jvm",
 					"time": "08.09.2016 1540 Europe/Oslo",
 					"locationText": "Oslo, Oslo Spektrum, Room 1",
-					"slides": "https://slides.codefx.org/junit-5/2016-09-08-JavaZone",
+					"slides": "https://slides.nipafx.dev/junit-5/2016-09-08-JavaZone",
 					"video": "https://vimeo.com/182074594"
 				}
 			]
@@ -1311,7 +1311,7 @@
 						"text": "virtualjug.com/#live",
 						"url": "http://virtualjug.com/#live"
 					},
-					"slides": "https://slides.codefx.org/junit-5/2016-07-19-vJUG",
+					"slides": "https://slides.nipafx.dev/junit-5/2016-07-19-vJUG",
 					"video": "https://www.youtube.com/watch?v=ct9sIsrnE9Y",
 					"misc": [
 						{
@@ -1335,7 +1335,7 @@
 					"announcement": "https://www.andrena.de/event/objektforum-karlsruhe-juli2016",
 					"time": "04.07.2016 1830 Europe/Berlin",
 					"locationText": "Karlsruhe, Technologiepark Casino, Albert-Nestler-Str.10",
-					"slides": "https://slides.codefx.org/jpms/2016-07-04-Objektforum-Karlsruhe"
+					"slides": "https://slides.nipafx.dev/jpms/2016-07-04-Objektforum-Karlsruhe"
 				}
 			]
 		},
@@ -1352,7 +1352,7 @@
 					"programEntry": "http://cfp.devoxx.pl/2016/talk/OOT-4758",
 					"time": "24.06.2016 0900 Europe/Warsaw",
 					"locationText": "Krakow, ICE Congress Centre, Room 1",
-					"slides": "https://slides.codefx.org/junit-5/2016-06-24-DevoxxPL",
+					"slides": "https://slides.nipafx.dev/junit-5/2016-06-24-DevoxxPL",
 					"video": "https://www.youtube.com/watch?v=oG80XZUN1lQ"
 				},
 				{
@@ -1361,7 +1361,7 @@
 					"programEntry": "http://cfp.devoxx.pl/2016/talk/YNB-4234",
 					"time": "24.06.2016 1020 Europe/Warsaw",
 					"locationText": "Krakow, ICE Congress Centre, Room 3",
-					"slides": "https://slides.codefx.org/comment-your-code/2016-06-24-DevoxxPL",
+					"slides": "https://slides.nipafx.dev/comment-your-code/2016-06-24-DevoxxPL",
 					"video": "https://www.youtube.com/watch?v=t_PEeSMqztc"
 				}
 			]
@@ -1379,7 +1379,7 @@
 					"programEntry": "http://jeeconf.com/program/junit-5-next-generation-testing-on-the-jvm/",
 					"time": "20.05.2016 1200 Europe/Kiev",
 					"locationText": "Kiew, Parkovyi Convention Center, Track E",
-					"slides": "https://slides.codefx.org/junit-5/2016-05-20-JEEConf",
+					"slides": "https://slides.nipafx.dev/junit-5/2016-05-20-JEEConf",
 					"video": "https://www.youtube.com/watch?v=857I8Fo-Wxg"
 				},
 				{
@@ -1388,7 +1388,7 @@
 					"programEntry": "http://jeeconf.com/program/jigsaw-walkthrough-modularize-your-java-application/",
 					"time": "20.05.2016 1530 Europe/Kiev",
 					"locationText": "Kiew, Parkovyi Convention Center, Track A",
-					"slides": "https://slides.codefx.org/jpms/2016-05-20-JEEConf",
+					"slides": "https://slides.nipafx.dev/jpms/2016-05-20-JEEConf",
 					"video": "https://www.youtube.com/watch?v=0M72pH2rXwA"
 				}
 			]
@@ -1406,7 +1406,7 @@
 					"announcement": "http://www.majug.de/2016/05/12/Jigsaw-Walkthrough/",
 					"time": "12.05.2016 1900 Europe/Berlin",
 					"locationText": "University of Mannheim A5, 6; Room C013",
-					"slides": "https://slides.codefx.org/jpms/2016-05-12-JUG-Mannheim"
+					"slides": "https://slides.nipafx.dev/jpms/2016-05-12-JUG-Mannheim"
 				}
 			]
 		},
@@ -1423,7 +1423,7 @@
 					"announcement": "http://www.jugs.org/va2016/04-14.html",
 					"time": "14.04.2016 1830 Europe/Berlin",
 					"locationText": "Stuttgart, Alte Scheuer Degerloch, Agnes-Kneher-Platz",
-					"slides": "https://slides.codefx.org/jpms/2016-04-14-JUG-Stuttgart"
+					"slides": "https://slides.nipafx.dev/jpms/2016-04-14-JUG-Stuttgart"
 				}
 			]
 		},
@@ -1440,7 +1440,7 @@
 					"announcement": "http://jug-karlsruhe.de/content/project-jigsaw/",
 					"time": "16.03.2016 1915 Europe/Berlin",
 					"locationText": "Karlsruhe, Disy Informationssysteme, Ludwig-Erhard-Allee 6",
-					"slides": "https://slides.codefx.org/jpms/2016-03-16-JUG-Karlsruhe",
+					"slides": "https://slides.nipafx.dev/jpms/2016-03-16-JUG-Karlsruhe",
 					"video": "https://youtu.be/JC6stYKQLHM",
 					"misc": [
 						{
@@ -1464,7 +1464,7 @@
 					"programEntry": "https://www.jfokus.se/talks/31",
 					"time": "05.02.2020 1915 Europe/Stockholm",
 					"locationText": "Stockholm Waterfront Conference, Room A1",
-					"slides": "https://slides.codefx.org/java-after-eight/2020-02-05-jfokus",
+					"slides": "https://slides.nipafx.dev/java-after-eight/2020-02-05-jfokus",
 					"video": "https://www.youtube.com/watch?v=k9--KYubKzk"
 				}
 			]
@@ -1482,7 +1482,7 @@
 					"announcement": "http://jug-karlsruhe.de/content/java-after-eight/",
 					"time": "04.03.2020 1915 Europe/Berlin",
 					"locationText": "Disy Informationssysteme, Ludwig-Erhard-Allee 6",
-					"slides": "https://slides.codefx.org/java-after-eight/2020-03-04-jug-karlsruhe"
+					"slides": "https://slides.nipafx.dev/java-after-eight/2020-03-04-jug-karlsruhe"
 				}
 			]
 		},
@@ -1502,7 +1502,7 @@
 						"text": "bigmarker.com",
 						"url": "https://www.bigmarker.com/series/cyberland/series_summit"
 					},
-					"slides": "https://slides.codefx.org/java-after-eight/2020-03-17-cyberland",
+					"slides": "https://slides.nipafx.dev/java-after-eight/2020-03-17-cyberland",
 					"video": "https://www.youtube.com/watch?v=Wg_anWbDVsk"
 				}
 			]
@@ -1524,7 +1524,7 @@
 						"text": "allthetalks.org",
 						"url": "https://live.allthetalks.org/"
 					},
-					"slides": "https://slides.codefx.org/java-after-eight/2020-04-15-allthetalks"
+					"slides": "https://slides.nipafx.dev/java-after-eight/2020-04-15-allthetalks"
 				}
 			]
 		},
@@ -1544,7 +1544,7 @@
 						"text": "twitch.tv/nipafx",
 						"url": "https://twitch.tv/nipafx"
 					},
-					"slides": "https://slides.codefx.org/java-after-eight/2020-06-15-cyberjug"
+					"slides": "https://slides.nipafx.dev/java-after-eight/2020-06-15-cyberjug"
 				}
 			]
 		},
@@ -1564,7 +1564,7 @@
 						"text": "crowdcast.io",
 						"url": "https://www.crowdcast.io/e/RHD-DevNationDay/register"
 					},
-					"slides": "https://slides.codefx.org/java-after-eight/2020-09-15-devnationday",
+					"slides": "https://slides.nipafx.dev/java-after-eight/2020-09-15-devnationday",
 					"video": "https://www.youtube.com/watch?v=ugXHFyefvp4"
 				}
 			]

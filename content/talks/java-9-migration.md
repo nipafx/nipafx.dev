@@ -7,7 +7,7 @@ slug: talk-java-9-migration
 description: "A live-coding talk where we take a typical Java 8 code base and update it to Java 9 and beyond, overcoming some common and some less common hurdles like dependencies on internal APIs and split packages"
 searchKeywords: "java 9 migration"
 featuredImage: java-9-migration
-slides: https://slides.codefx.org/java-9-migration
+slides: https://slides.nipafx.dev/java-9-migration
 videoSlug: java-9-migration-devoxx-be-2018
 repo: java-9-migration
 ---
@@ -33,7 +33,7 @@ The talk will use [this slide deck][fx-slides-j9-mig] and [this demo project][gh
 
 [jms]: http://tiny.cc/jms
 [fx-talks]: http://blog.codefx.org/past-talks
-[fx-slides-j9-mig]: http://slides.codefx.org/java-9-migration
+[fx-slides-j9-mig]: http://slides.nipafx.dev/java-9-migration
 [fx-java-9]: http://blog.codefx.org/tag/java-9
 [fx-jigsaw]: http://blog.codefx.org/tag/project-jigsaw
 [fx-jpms]: http://blog.codefx.org/tag/jpms

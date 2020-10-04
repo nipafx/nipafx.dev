@@ -6,7 +6,7 @@ slug: talk-best-practices-harmful
 description: "A lightning talk about how best practices promote a one-size-fits all mentality that harms our ability to create solutions that are tailored to the problems at hand"
 searchKeywords: "best practices"
 featuredImage: best-practices
-slides: https://slides.codefx.org/best-practices
+slides: https://slides.nipafx.dev/best-practices
 ---
 
 Software development is full of "best practices" - index your database columns, write tests for your code, don't reinvent the wheel...

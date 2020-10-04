@@ -7,7 +7,7 @@ slug: talk-junit-5
 description: "In this talk, I introduce JUnit 5 from basic tests to more advanced features like nesting, parameterization, parallelization, and extensions. We also discuss its architecture and compatibility with JUnit 4."
 searchKeywords: "junit 5"
 featuredImage: junit-5
-slides: https://slides.codefx.org/junit-5
+slides: https://slides.nipafx.dev/junit-5
 # videoSlug: https://www.youtube.com/watch?v=OA3UJYxTBRA https://www.youtube.com/watch?v=VfC00bby8XQ
 repo: junit-5-demo
 ---

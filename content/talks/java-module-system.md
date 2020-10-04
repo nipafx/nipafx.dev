@@ -6,7 +6,7 @@ slug: talk-java-module-system
 description: "In this talk, I go beyond the module system basics and present more advanced features for those who want to become their team's module system expert"
 searchKeywords: "java module system"
 featuredImage: java-module-system
-slides: https://slides.codefx.org/jpms
+slides: https://slides.nipafx.dev/jpms
 videoSlug: jpms-java-saigon-2018
 repo: jpms-monitor
 ---
@@ -35,7 +35,7 @@ The talk will build [on this slide deck][fx-slides-jpms].
 
 [jms]: http://tiny.cc/jms
 [fx-talks]: http://blog.codefx.org/past-talks
-[fx-slides-jpms]: http://slides.codefx.org/jpms
+[fx-slides-jpms]: http://slides.nipafx.dev/jpms
 [fx-java-9]: http://blog.codefx.org/tag/java-9
 [fx-jigsaw]: http://blog.codefx.org/tag/project-jigsaw
 [fx-jpms]: http://blog.codefx.org/tag/jpms

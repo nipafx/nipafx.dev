@@ -15,7 +15,7 @@ I discuss all of these in detail to make sure you know what to expect.
 
 Links to follow up:
 
-* [Slides](https://slides.codefx.org/java-next/2018-09-30-codefx@yt/)
+* [Slides](https://slides.nipafx.dev/java-next/2018-09-30-codefx@yt/)
 * [Java 11 migration](https://blog.codefx.org/java/java-11-migration-guide/)
 * [Incubator modules](http://openjdk.java.net/jeps/11)
 * [Language previews](http://openjdk.java.net/jeps/12)

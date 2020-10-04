@@ -7,7 +7,7 @@ slug: talk-java-next
 description: "In this talk we reflect over recent developments and peek into Java's future: the six-month release cycle, the new license and support landscape as well as recent and upcoming features"
 searchKeywords: "java update"
 featuredImage: java-next
-slides: https://slides.codefx.org/java-next
+slides: https://slides.nipafx.dev/java-next
 videoSlug: java-next-vjug-2019
 ---
 

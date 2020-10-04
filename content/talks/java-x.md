@@ -6,7 +6,7 @@ slug: talk-java-x
 description: "In this talk, I introduce the Java language features, new/updated APIs, and new JVM capabilities that recent Java releases brought to the ecosystem"
 searchKeywords: "java 15"
 featuredImage: java-15
-slides: https://slides.codefx.org/java-x
+slides: https://slides.nipafx.dev/java-x
 repo: java-x-demo
 ---
 

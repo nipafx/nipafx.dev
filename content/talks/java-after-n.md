@@ -6,7 +6,7 @@ slug: talk-java-after-n
 description: "A live-coding talk during which I update a Java 8 code base to Java 15, making good use of new language features, additional and improved APIs, and JVM capabilities"
 searchKeywords: "java 8"
 featuredImage: java-after-n
-slides: https://slides.codefx.org/java-after-eight
+slides: https://slides.nipafx.dev/java-after-eight
 videoSlug: java-after-eight-jfokus-2020
 repo: java-after-eight
 ---

@@ -6,7 +6,7 @@ slug: talk-java-var
 description: "A live-coding talk where I show off all you need to know about `var` in Java. And then some."
 searchKeywords: "java var"
 featuredImage: java-var
-slides: https://slides.codefx.org/java-var
+slides: https://slides.nipafx.dev/java-var
 videoSlug: java-var-jfall-2018
 repo: java-x-demo
 ---

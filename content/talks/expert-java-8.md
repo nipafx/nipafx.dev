@@ -6,7 +6,7 @@ slug: talk-expert-java-8
 description: "With this talk, I help you get the most out of lambdas, `Stream`s, `Optional`s, and default methods, helping you master Java 8's core features"
 searchKeywords: "java 8"
 featuredImage: java-8-expert
-slides: https://slides.codefx.org/expert-java-8
+slides: https://slides.nipafx.dev/expert-java-8
 videoSlug: expert-java-8-jfokus-2017
 ---
 
@@ -33,5 +33,5 @@ I wrote a number of [articles about Java 8](http://blog.codefx.org/tag/java-8/),
 * [Stream Performance](http://blog.codefx.org/java/stream-performance/)
 * [Rebutting 5 Common Stream Tropes](http://blog.codefx.org/java/rebutting-5-common-stream-tropes/)
 
-I also [held this talk before](https://www.youtube.com/watch?v=J3mDjgdZJSc) - you can see [the slides here](http://slides.codefx.org/expert-java-8/2017-02-07-jfokus/#/).
+I also [held this talk before](https://www.youtube.com/watch?v=J3mDjgdZJSc) - you can see [the slides here](http://slides.nipafx.dev/expert-java-8/2017-02-07-jfokus/#/).
  -->

@@ -6,7 +6,7 @@ slug: talk-comment-your-code
 description: "A heartfelt rant / thoughtful talk arguing for more comments in code"
 searchKeywords: "comments"
 featuredImage: comment-your-code
-slides: https://slides.codefx.org/comment-your-code
+slides: https://slides.nipafx.dev/comment-your-code
 videoSlug: comment-your-code-accento-2019
 ---
 
