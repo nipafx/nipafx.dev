@@ -194,7 +194,7 @@ Ship it or scrap it?
 ### Inner Classes
 
 Some people use inner classes in their test suites.
-I do it to [inherit interface tests](https://github.com/CodeFX-org/LibFX/blob/3ec42447a99cbac33642cef35d0e522f7b595435/src/test/java/org/codefx/libfx/collection/tree/stream/StackTreePathTest.java), others to [keep their test classes small](http://www.petrikainulainen.net/programming/testing/writing-clean-tests-small-is-beautiful/).
+I do it to [inherit interface tests](https://github.com/nipafx/LibFX/blob/3ec42447a99cbac33642cef35d0e522f7b595435/src/test/java/org/codefx/libfx/collection/tree/stream/StackTreePathTest.java), others to [keep their test classes small](http://www.petrikainulainen.net/programming/testing/writing-clean-tests-small-is-beautiful/).
 To have them run in JUnit 4 you have to either use [JUnit's `@Suite`](http://junit.sourceforge.net/javadoc/org/junit/runners/Suite.html) or [NitorCreations' more elegant `NestedRunner`](https://github.com/NitorCreations/CoreComponents/tree/master/junit-runners#nestedrunner).
 Still you have to do *something*.
 

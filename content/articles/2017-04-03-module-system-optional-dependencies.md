@@ -18,7 +18,7 @@ I will show you a couple of examples in which the default behavior's strictness 
 Coding against them is not trivial, though, so we will have a close look at that as well.
 
 If you don't know much about the module system yet, [you should read this tutorial](java-module-system-tutorial), so you've for the basics covered.
-Some examples build on [the `optional-dependencies` branch](https://github.com/CodeFX-org/demo-jpms-monitor/tree/feature-optional-dependencies) of [a small demo application](https://github.com/CodeFX-org/demo-jpms-monitor), called the *ServiceMonitor*.
+Some examples build on [the `optional-dependencies` branch](https://github.com/nipafx/demo-jpms-monitor/tree/feature-optional-dependencies) of [a small demo application](https://github.com/nipafx/demo-jpms-monitor), called the *ServiceMonitor*.
 
 ## The Conundrum Of Unrequired Dependencies
 
@@ -49,7 +49,7 @@ That's not a nice move from us.
 
 ### The Fancy Statistics Library
 
-The second example comes from [the demo application](https://github.com/CodeFX-org/demo-jpms-monitor), which contains a module *monitor.statistics*.
+The second example comes from [the demo application](https://github.com/nipafx/demo-jpms-monitor), which contains a module *monitor.statistics*.
 Let's assume there was some advanced statistics library containing a module *stats.fancy* that *monitor.statistics* wants to use but which could not be present on the module path for each deployment of the application.
 (The reason for that is irrelevant but let's go with a license that prevents the fancy code from being used "for evil" but, evil masterminds that we are, we occasionally want to do just that.)
 

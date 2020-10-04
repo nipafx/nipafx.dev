@@ -74,7 +74,7 @@ Only if that is not the case, does it make sense to serialize the field.
 
 ## Serializable Optional
 
-The `SerializableOptional<T>` ([link](https://github.com/CodeFX-org/demo-serialize-optional/blob/master/src/org/codefx/lab/optional/SerializableOptional.java)) only exists to wrap and unwrap an Optional and offers little of its features.
+The `SerializableOptional<T>` ([link](https://github.com/nipafx/demo-serialize-optional/blob/master/src/org/codefx/lab/optional/SerializableOptional.java)) only exists to wrap and unwrap an Optional and offers little of its features.
 In the case of arguments or return values, it can (and in most cases should) be used without even declaring a variable of type `SerializableOptional`.
 
 ### Wrapping
@@ -123,7 +123,7 @@ public static <T> SerializableOptional<T> ofNullable(T value);
 Its logical representation only consists of the value contained in the wrapped Optional (or null if it is empty).
 
 Serialization then works as usual.
-See the [demo](https://github.com/CodeFX-org/demo-serialize-optional/blob/master/src/org/codefx/lab/optional/Demo.java) for different use cases.
+See the [demo](https://github.com/nipafx/demo-serialize-optional/blob/master/src/org/codefx/lab/optional/Demo.java) for different use cases.
 
 ## Serialize Optional
 
@@ -163,7 +163,7 @@ In that case, there are two possibilities to serialize Optional.
 The proxy can simply have a field of the type which is wrapped by the Optional.
 In its constructor it then assigns the value contained in the Optional (or null if it is empty) to that field.
 
-This is done by the `ClassUsingOptionalCorrectly` ([link](https://github.com/CodeFX-org/demo-serialize-optional/blob/master/src/org/codefx/lab/optional/ClassUsingOptionalCorrectly.java)):
+This is done by the `ClassUsingOptionalCorrectly` ([link](https://github.com/nipafx/demo-serialize-optional/blob/master/src/org/codefx/lab/optional/ClassUsingOptionalCorrectly.java)):
 
 ```java
 private static class SerializationProxy<T> implements Serializable {
@@ -181,7 +181,7 @@ private static class SerializationProxy<T> implements Serializable {
 #### Using SerializableOptional
 
 Alternatively, the serialization proxy can have an instance of `SerializableOptional`.
-This is done by the class `TransformForSerializationProxy` ([link](https://github.com/CodeFX-org/demo-serialize-optional/blob/master/src/org/codefx/lab/optional/TransformForSerializationProxy.java)):
+This is done by the class `TransformForSerializationProxy` ([link](https://github.com/nipafx/demo-serialize-optional/blob/master/src/org/codefx/lab/optional/TransformForSerializationProxy.java)):
 
 ```java
 private static class SerializationProxy<T> implements Serializable {
@@ -206,4 +206,4 @@ I guess that, as usual, it depends.
 We have seen the two main (and only?) reasons to serialize an Optional and what to do about it: If a method's arguments or return value needs to be serialized, use the `SerializableOptional` and immediately wrap/unwrap it when the method is called.
 If a class has an optional field which it wants to serialize, its serialization proxy could either extract the Optional's value or use write the `SerializableOptional` to the byte stream.
 
-The helper class [`SerializableOptional` from my demo project](https://github.com/CodeFX-org/demo-serialize-optional/blob/master/src/org/codefx/lab/optional/SerializableOptional.java) is public domain and can be used without any legal limitations.
+The helper class [`SerializableOptional` from my demo project](https://github.com/nipafx/demo-serialize-optional/blob/master/src/org/codefx/lab/optional/SerializableOptional.java) is public domain and can be used without any legal limitations.

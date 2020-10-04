@@ -171,7 +171,7 @@ The compiler and runtime option `--add-reads $module=$targets` adds readability 
 This allows *\$module* to access all public types in packages exported by those modules even though *\$module* has no `java§requires` clauses mentioning them.
 If *\$targets* is set to `ALL-UNNAMED`, *\$module* can even read the unnamed module.
 
-As an example let's turn to [the *ServiceMonitor* application](https://github.com/CodeFX-org/demo-jpms-monitor), which has a *monitor.statistics* module that could sometimes make use of a *monitor.statistics.fancy* module.
+As an example let's turn to [the *ServiceMonitor* application](https://github.com/nipafx/demo-jpms-monitor), which has a *monitor.statistics* module that could sometimes make use of a *monitor.statistics.fancy* module.
 Without resorting to [optional dependencies](java-modules-optional-dependencies) (which would likely be the proper solution for this specific case), we can use `--add-modules` to add the fancy module and then `add-reads` to allow *monitor.statistics* to read it:
 
 ```shell

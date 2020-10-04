@@ -464,7 +464,7 @@ Interesting details are:
 -   `storeNowAsLaunchTime`/`loadLaunchTime` use the store to write and read the launch times
 -   `report` uses the context to log its result instead of simply printing it to the console
 
-You can find [the code on GitHub](https://github.com/CodeFX-org/demo-junit-5/tree/master/src/main/java/org/codefx/demo/junit5).
+You can find [the code on GitHub](https://github.com/nipafx/demo-junit-5/tree/master/src/main/java/org/codefx/demo/junit5).
 
 ## Reflection
 

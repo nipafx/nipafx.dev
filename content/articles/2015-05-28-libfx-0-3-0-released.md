@@ -9,43 +9,43 @@ featuredImage: libfx-library
 repo: libfx
 ---
 
-I just released [**LibFX 0.3.0**](https://github.com/CodeFX-org/LibFX/releases/tag/v0.3.0)!
+I just released [**LibFX 0.3.0**](https://github.com/nipafx/LibFX/releases/tag/v0.3.0)!
 
 ## Features
 
-The killer feature are [transforming collections](https://github.com/CodeFX-org/LibFX/wiki/TransformingCollections) about which I already [blogged a few days ago](java-transforming-collections).
+The killer feature are [transforming collections](https://github.com/nipafx/LibFX/wiki/TransformingCollections) about which I already [blogged a few days ago](java-transforming-collections).
 I also created an easy way to stream nodes of all kinds of trees.
-(I didn't get around to write up a wiki page for it yet but when I do, you will find it [here](https://github.com/CodeFX-org/LibFX/wiki/TreeStreams).)
+(I didn't get around to write up a wiki page for it yet but when I do, you will find it [here](https://github.com/nipafx/LibFX/wiki/TreeStreams).)
 
 And don't forget about the other features:
 
-**[ControlPropertyListener](https://github.com/CodeFX-org/LibFX/wiki/ControlPropertyListener)**:
+**[ControlPropertyListener](https://github.com/nipafx/LibFX/wiki/ControlPropertyListener)**:
 Creating listeners for the property map of JavaFX' controls.
 
-**[ListenerHandle](https://github.com/CodeFX-org/LibFX/wiki/ListenerHandle)**:
+**[ListenerHandle](https://github.com/nipafx/LibFX/wiki/ListenerHandle)**:
 Encapsulating an observable and a listener for easier add/remove of the listener ([I blogged about it here](java-listenerhandles)).
 
-**[Nestings](https://github.com/CodeFX-org/LibFX/wiki/Nestings)**:
+**[Nestings](https://github.com/nipafx/LibFX/wiki/Nestings)**:
 Using all the power of JavaFX' properties for nested object aggregations.
 
-**[SerializableOptional](https://github.com/CodeFX-org/LibFX/wiki/SerializableOptional)**:
+**[SerializableOptional](https://github.com/nipafx/LibFX/wiki/SerializableOptional)**:
 Serializable wrapper for `Optional`.
 
-**[WebViewHyperlinkListener](https://github.com/CodeFX-org/LibFX/wiki/WebViewHyperlinkListener)**:
+**[WebViewHyperlinkListener](https://github.com/nipafx/LibFX/wiki/WebViewHyperlinkListener)**:
 Add hyperlink listeners to JavaFX' `WebView`.
 
 ## Getting Started
 
-The links above point to the [**LibFX** wiki on GitHub](https://github.com/CodeFX-org/LibFX/wiki).
+The links above point to the [**LibFX** wiki on GitHub](https://github.com/nipafx/LibFX/wiki).
 It has an article for each feature explaining the concept, giving some examples and pointing to the best resource in the code to get started.
 
-Most key features also have self-contained demos, which can be found in [their own source folder](https://github.com/CodeFX-org/LibFX/tree/master/src/demo/java/org/codefx/libfx).
+Most key features also have self-contained demos, which can be found in [their own source folder](https://github.com/nipafx/LibFX/tree/master/src/demo/java/org/codefx/libfx).
 
 Finally, there's extensive Javadoc under [libfx.codefx.org/apidocs/](http://libfx.codefx.org/apidocs/).
 
 ## Getting LibFX 0.3.0
 
-You can download the jars from the [GitHub release site](https://github.com/CodeFX-org/LibFX/releases/tag/v0.3.0) or use your favorite dependency management system:
+You can download the jars from the [GitHub release site](https://github.com/nipafx/LibFX/releases/tag/v0.3.0) or use your favorite dependency management system:
 
 <contentimage slug="LibFX-v0.3.0"></contentimage>
 

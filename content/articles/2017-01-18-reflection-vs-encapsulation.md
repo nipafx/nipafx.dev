@@ -135,7 +135,7 @@ public: ✓   protected: ✗   default: ✗   private: ✗
 
 (Here only the public method could be accessed.)
 
-All the code I'm using here can be found in [a GitHub repository](https://github.com/CodeFX-org/demo-jigsaw-reflection), including Linux scripts that run it for you.
+All the code I'm using here can be found in [a GitHub repository](https://github.com/nipafx/demo-jigsaw-reflection), including Linux scripts that run it for you.
 
 ### Regular Exports
 

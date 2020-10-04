@@ -17,7 +17,7 @@ If there was only one thing a developer would want to know about the topic, I'd 
 As far as I know, the pattern was first defined in Joshua Bloch's excellent book [Effective Java](http://www.amazon.com/Effective-Java-Edition-Joshua-Bloch/dp/0321356683) (1st edition: item 57; 2nd edition: [item 78](http://books.google.de/books?id=ka2VUBqHiWkC&pg=PA297&source=gbs_toc_r&cad=3#v=onepage&q&f=false)).
 This post mostly restates what is said there and focuses on presenting a detailed definition of the pattern before giving two short examples and finally covering the pros and cons.
 
-The code samples used throughout this post come from a [demo project](https://github.com/CodeFX-org/demo-serialization-proxy-pattern) I created on GitHub.
+The code samples used throughout this post come from a [demo project](https://github.com/nipafx/demo-serialization-proxy-pattern) I created on GitHub.
 Check it out for more details!
 
 ## Serialization Proxy Pattern
@@ -87,7 +87,7 @@ private void readObject(ObjectInputStream stream) throws InvalidObjectException 
 
 ## Examples
 
-The following examples are excerpts from a [complete demo project](https://github.com/CodeFX-org/demo-serialization-proxy-pattern).
+The following examples are excerpts from a [complete demo project](https://github.com/nipafx/demo-serialization-proxy-pattern).
 They only show the juicy parts and leave out some details (like `writeReplace` and `readObject`).
 
 ### ComplexNumber

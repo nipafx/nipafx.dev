@@ -9,7 +9,7 @@ featuredImage: libfx-library
 repo: libfx
 ---
 
-Just today I released [LibFX 0.1.1](https://github.com/CodeFX-org/LibFX/releases/tag/v0.1.1)!
+Just today I released [LibFX 0.1.1](https://github.com/nipafx/LibFX/releases/tag/v0.1.1)!
 
 > That's one small step for everybody else, one giant leap for me.
 
@@ -22,7 +22,7 @@ So I am here to proudly present it!
 
 So what can **LibFX** do for you?
 Currently it has only one feature, namely *Nestings*.
-It is [described in detail in the project's wiki](https://github.com/CodeFX-org/LibFX/wiki/Nestings) but I will give a quick introduction here.
+It is [described in detail in the project's wiki](https://github.com/nipafx/LibFX/wiki/Nestings) but I will give a quick introduction here.
 
 <contentimage slug="LibFX-v0.1.1" options="sidebar"></contentimage>
 
@@ -58,10 +58,10 @@ I finally got (almost) all the tools up and running.
 
 ### About LibFX
 
-The project is hosted on [GitHub](https://github.com/CodeFX-org/LibFX), which also offers the awesome [GitHub Pages](https://pages.github.com/).
+The project is hosted on [GitHub](https://github.com/nipafx/LibFX), which also offers the awesome [GitHub Pages](https://pages.github.com/).
 
 They run the project page under [libfx.codefx.org](http://libfx.codefx.org), which is the central point for all information regarding **LibFX**.
-It links to all tools, services and resources involved in creating the library, which especially include the [wiki](https://github.com/CodeFX-org/LibFX/wiki) and the [Javadoc](http://libfx.codefx.org/javadoc/).
+It links to all tools, services and resources involved in creating the library, which especially include the [wiki](https://github.com/nipafx/LibFX/wiki) and the [Javadoc](http://libfx.codefx.org/javadoc/).
 
 ### Maven Coordinates
 

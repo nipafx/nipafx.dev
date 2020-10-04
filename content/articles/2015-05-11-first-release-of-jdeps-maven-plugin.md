@@ -16,7 +16,7 @@ These will be unaccessible in the new Java version and code containing them will
 It is hence important to weed them out in the remaining time.
 (Btw, Java 9 is [scheduled for September 2016](http://mail.openjdk.java.net/pipermail/jdk9-dev/2015-May/002172.html).)
 
-To help our projects (and maybe yours) with that, I created the [*JDeps Maven Plugin*](https://github.com/CodeFX-org/JDeps-Maven-Plugin).
+To help our projects (and maybe yours) with that, I created the [*JDeps Maven Plugin*](https://github.com/nipafx/JDeps-Maven-Plugin).
 It breaks the build if the code contains any problematic dependencies.
 
 ## JDeps
@@ -94,7 +94,7 @@ This is the next step.
 A simple configuration consisting of elements of the form `org.codefx.lab.ExampleClass -> sun.misc.*` will allow to ignore certain dependencies.
 The plugin can hence be included in any build and be configured such that it only breaks when new dependencies are introduced.
 
-You can track the progress in [this issue](https://github.com/CodeFX-org/JDeps-Maven-Plugin/issues/1).
+You can track the progress in [this issue](https://github.com/nipafx/JDeps-Maven-Plugin/issues/1).
 
 ## Existing Plugins
 

@@ -38,5 +38,5 @@ The talk will use [this slide deck][fx-slides-j9-mig] and [this demo project][gh
 [fx-jigsaw]: http://blog.codefx.org/tag/project-jigsaw
 [fx-jpms]: http://blog.codefx.org/tag/jpms
 [sp-java-9]: https://www.sitepoint.com/ultimate-guide-to-java-9
-[gh-j9-mig]: https://github.com/CodeFX-org/demo-java-9-migration
+[gh-j9-mig]: https://github.com/nipafx/demo-java-9-migration
 -->

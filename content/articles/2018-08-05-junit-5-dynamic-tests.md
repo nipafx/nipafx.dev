@@ -198,7 +198,7 @@ When walking the structure, maybe by iteration, recursion, or visitor pattern, y
 
 This gives you a one-to-one relationship of nodes in your data structure to dynamic containers in the resulting test tree, where each container holds the tests that apply to the corresponding node.
 
-Here is [a simplified example](https://github.com/CodeFX-org/demo-junit-5/blob/master/src/test/java/org/codefx/demo/junit5/dynamic/ArithmeticTreeTest.java) for recursively creating that test tree:
+Here is [a simplified example](https://github.com/nipafx/demo-junit-5/blob/master/src/test/java/org/codefx/demo/junit5/dynamic/ArithmeticTreeTest.java) for recursively creating that test tree:
 
 ```java
 // ArithmeticTreeTestData know the test results for each node

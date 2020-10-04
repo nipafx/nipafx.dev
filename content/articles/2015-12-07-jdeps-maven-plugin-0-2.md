@@ -10,14 +10,14 @@ featuredImage: jdeps-mvn-motor
 repo: jdeps-maven-plugin
 ---
 
-It only took me six months after [the initial release](jdeps-maven-plugin-0-1) but last week I finally published [version 0.2](https://github.com/CodeFX-org/JDeps-Maven-Plugin/releases/tag/v0.2) of my *JDeps Maven Plugin*, now lovingly nicknamed *JDeps Mvn*.
+It only took me six months after [the initial release](jdeps-maven-plugin-0-1) but last week I finally published [version 0.2](https://github.com/nipafx/JDeps-Maven-Plugin/releases/tag/v0.2) of my *JDeps Maven Plugin*, now lovingly nicknamed *JDeps Mvn*.
 
 Since Apache released theirs recently this begs the question "Why even bother?" Well, because mine actually understands [*jdeps*](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jdeps.html) and can do some stuff the official can't.
 This makes it much more useful for large projects.
 
 Before we go on, let me point you to [that old post again](jdeps-maven-plugin-0-1).
 You might want to read it if you need some background on how Java 9 may break your code and how *jdeps* can help.
-Many links lead to the [documentation on GitHub](https://github.com/CodeFX-org/JDeps-Maven-Plugin/wiki), of which the [walkthrough](https://github.com/CodeFX-org/JDeps-Maven-Plugin/wiki/Walkthrough) comes highly recommended.
+Many links lead to the [documentation on GitHub](https://github.com/nipafx/JDeps-Maven-Plugin/wiki), of which the [walkthrough](https://github.com/nipafx/JDeps-Maven-Plugin/wiki/Walkthrough) comes highly recommended.
 
 ## What's So Special?
 
@@ -31,14 +31,14 @@ When including *jdpes* in a large project's build, two things are prohibitive:
 -   Smartly interacting rules allow a detailed and flexible configuration.
 -   Initial rules can be automatically created from identified dependencies.
 
-If no rule matches, the plugin will apply a [default value](https://github.com/CodeFX-org/JDeps-Maven-Plugin/wiki/Configuration#default-severity), which will usually be configured to FAIL.
+If no rule matches, the plugin will apply a [default value](https://github.com/nipafx/JDeps-Maven-Plugin/wiki/Configuration#default-severity), which will usually be configured to FAIL.
 This way the rules can be used to create exemptions and have the build break on all unexpected dependencies.
 
 <contentimage slug="JDeps-Maven-Plugin-v0.2" options="sidebar"></contentimage>
 
 ### Introducing Rules
 
-[Rules](https://github.com/CodeFX-org/JDeps-Maven-Plugin/wiki/Concepts#rules) are of the form `dependent -> dependee: severity`, where both the dependent and the dependee are fully qualified class or package names.
+[Rules](https://github.com/nipafx/JDeps-Maven-Plugin/wiki/Concepts#rules) are of the form `dependent -> dependee: severity`, where both the dependent and the dependee are fully qualified class or package names.
 
 The most basic rules are used to define severities for class-to-class dependencies:
 
@@ -57,7 +57,7 @@ For example this will set all uses of `Unsafe` in `org.food.fruits` to INFORM:
 org.food.fruits -> sun.misc.Unsafe: INFORM
 ```
 
-It is up to you how the plugin will interpret [package relations](https://github.com/CodeFX-org/JDeps-Maven-Plugin/wiki/Configuration#package-inclusion).
+It is up to you how the plugin will interpret [package relations](https://github.com/nipafx/JDeps-Maven-Plugin/wiki/Configuration#package-inclusion).
 By default it does it like the JVM, where the concept of "subpackages" does not exist and `org.food` and `org.food.fruits` are unrelated.
 But you can also configure a hierarchical mode where packages are interpreted like folders and `org.food` contains `org.food.fruits`.
 
@@ -70,14 +70,14 @@ org.food.fruit -> sun.misc: FAIL
 org.food.fruit -> sun.misc.Unsafe: WARN
 ```
 
-The interaction of conflicting rules is [well-defined](https://github.com/CodeFX-org/JDeps-Maven-Plugin/wiki/Concepts#resolution) and follows general intuition.
+The interaction of conflicting rules is [well-defined](https://github.com/nipafx/JDeps-Maven-Plugin/wiki/Concepts#resolution) and follows general intuition.
 In short: Find the best match on the left side that still matches on the right.
 If there are several such matches, pick the one with the most specific right side.
 
 ### Creating Rules
 
 You can of course go through your code base or the output of a *jdeps* run and write rules to exempt the existing dependencies from breaking your build.
-Or you can have *JDeps Mvn* [do that for you](https://github.com/CodeFX-org/JDeps-Maven-Plugin/wiki/Walkthrough#godlike-clap):
+Or you can have *JDeps Mvn* [do that for you](https://github.com/nipafx/JDeps-Maven-Plugin/wiki/Walkthrough#godlike-clap):
 
 ```xml
 <configuration>
@@ -125,5 +125,5 @@ Your config might then look like this:
 ## What Else Is There?
 
 Nothing much feature-wise.
-As I said, there is [proper documentation](https://github.com/CodeFX-org/JDeps-Maven-Plugin/wiki), so if you start using *JDeps Mvn* in anger, make sure to check it out.
+As I said, there is [proper documentation](https://github.com/nipafx/JDeps-Maven-Plugin/wiki), so if you start using *JDeps Mvn* in anger, make sure to check it out.
 If you do, I'd be happy to hear your feedback!

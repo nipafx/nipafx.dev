@@ -104,7 +104,7 @@ As a Java developer you can use **LibFX**, which supports listener handles on th
 
 Every feature of **LibFX** which can do so without conflicting with the Java API returns a `ListenerHandle` when adding listeners.
 
-Take the [WebViewHyperlinkListener](https://github.com/CodeFX-org/LibFX/wiki/WebViewHyperlinkListener) as an example:
+Take the [WebViewHyperlinkListener](https://github.com/nipafx/LibFX/wiki/WebViewHyperlinkListener) as an example:
 
 ```java
 WebView webView;

@@ -31,7 +31,7 @@ Since 2017 we've got [private interface methods](java-9-tutorial#private-interfa
 Up to and including Java 10 these features were set in stone as soon as they first appeared in a public release, but Java 11 changed that.
 
 Since [Java 11](tag:java-11), major releases can contain syntax changes that are hidden behind the command-line flag `--enable-preview` - so-called *preview language features*.
-[Java 12](java-12-guide)'s switch expressions were the first such feature and when [experimenting with it](https://github.com/CodeFX-org/demo-java-x#language-changes) you need to add two command line flags during compilation and one when launching:
+[Java 12](java-12-guide)'s switch expressions were the first such feature and when [experimenting with it](https://github.com/nipafx/demo-java-x#language-changes) you need to add two command line flags during compilation and one when launching:
 
 ```shell
 # compile

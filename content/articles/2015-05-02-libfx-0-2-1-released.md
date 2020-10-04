@@ -9,15 +9,15 @@ featuredImage: libfx-library
 repo: libfx
 ---
 
-I released [**LibFX 0.2.1**](https://github.com/CodeFX-org/LibFX/releases/tag/v0.2.1) yesterday!
-It contains a bugfix in [Nestings](https://github.com/CodeFX-org/LibFX/wiki/Nestings).
+I released [**LibFX 0.2.1**](https://github.com/nipafx/LibFX/releases/tag/v0.2.1) yesterday!
+It contains a bugfix in [Nestings](https://github.com/nipafx/LibFX/wiki/Nestings).
 
 ## Getting Started
 
-If you want to find out about **LibFX** check out the [wiki on GitHub](https://github.com/CodeFX-org/LibFX/wiki).
+If you want to find out about **LibFX** check out the [wiki on GitHub](https://github.com/nipafx/LibFX/wiki).
 It has an article for each feature explaining the concept, giving some examples and pointing to the best resource in the code to get started.
 
-Most key features also have self-contained demos, which can be found in [their own source folder](https://github.com/CodeFX-org/LibFX/tree/master/src/demo/java/org/codefx/libfx).
+Most key features also have self-contained demos, which can be found in [their own source folder](https://github.com/nipafx/LibFX/tree/master/src/demo/java/org/codefx/libfx).
 
 Finally, there's extensive Javadoc under [libfx.codefx.org/javadoc](http://libfx.codefx.org/javadoc).
 

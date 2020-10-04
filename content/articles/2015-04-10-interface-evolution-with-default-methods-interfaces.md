@@ -202,7 +202,7 @@ You could provide adapters for containers which are used with the old interface 
 This will essentially allow you to call `asNew()` on those containers.
 
 (For an unrelated reason I'm currently working on such transformations for some of the JDK collections.
-The next version of [LibFX](http://libfx.codefx.org) will contain them; if you're curious, you can already check out a demo over at [GitHub](https://github.com/CodeFX-org/LibFX/blob/2718dd2d0c9df8745e901cee9157be87a4d5f2da/src/demo/java/org/codefx/libfx/collection/transform/TransformingSetDemo.java).)
+The next version of [LibFX](http://libfx.codefx.org) will contain them; if you're curious, you can already check out a demo over at [GitHub](https://github.com/nipafx/LibFX/blob/2718dd2d0c9df8745e901cee9157be87a4d5f2da/src/demo/java/org/codefx/libfx/collection/transform/TransformingSetDemo.java).)
 
 ### Screw It!
 

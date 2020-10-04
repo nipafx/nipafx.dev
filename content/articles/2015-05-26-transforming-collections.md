@@ -19,9 +19,9 @@ This post will present the general idea, cover technical details and finish with
 <admonition type="update">
 
 In the meantime, [version 0.3.0 was released](libfx-0-3-0).
-While this post might get out of date at some point, [the wiki page for transforming collections](https://github.com/CodeFX-org/LibFX/wiki/TransformingCollections) will be updated.
+While this post might get out of date at some point, [the wiki page for transforming collections](https://github.com/nipafx/LibFX/wiki/TransformingCollections) will be updated.
 If you're a visitor from the future, make sure to check it out.
-The ongoing example is a slightly adapted variant of [the feature demo contained in **LibFX**](https://github.com/CodeFX-org/LibFX/blob/master/src/demo/java/org/codefx/libfx/collection/transform/TransformingSetDemo.java).
+The ongoing example is a slightly adapted variant of [the feature demo contained in **LibFX**](https://github.com/nipafx/LibFX/blob/master/src/demo/java/org/codefx/libfx/collection/transform/TransformingSetDemo.java).
 Keep in mind that it is only an example to demonstrate the concept.
 
 </admonition>
@@ -286,7 +286,7 @@ Set<String> transformingSet =
 This avoids Optional as well as null as an element but now you have to be sure that there is never an Optional which contains *DEFAULT*.
 (If it does, the implicit transformations are not inverse to each other, which we have already seen above to cause problems.)
 
-For more details on this example, check out [the demo](https://github.com/CodeFX-org/LibFX/blob/master/src/demo/java/org/codefx/libfx/collection/transform/OptionalTransformingSetDemo.java).
+For more details on this example, check out [the demo](https://github.com/nipafx/LibFX/blob/master/src/demo/java/org/codefx/libfx/collection/transform/OptionalTransformingSetDemo.java).
 
 ## Reflection
 
@@ -302,7 +302,7 @@ As I said, transforming collections are a part of my open source project **LibFX
 If you consider using it, I'd like to point out a few things:
 
 -   This post presents the idea and *some* details but does not replace the documentation.
-Check out [the wiki](https://github.com/CodeFX-org/LibFX/wiki) for an up-to-date description and pointers to the javadoc (currently [here](http://libfx.codefx.org/apidocs/org/codefx/libfx/collection/transform/package-summary.html)).
+Check out [the wiki](https://github.com/nipafx/LibFX/wiki) for an up-to-date description and pointers to the javadoc (currently [here](http://libfx.codefx.org/apidocs/org/codefx/libfx/collection/transform/package-summary.html)).
 -   I take testing seriously.
 [Thanks to Guava](test-collection-implementations-guava), transforming collections are covered by about 6.500 unit tests.
 -   **LibFX** is licensed under GPL.

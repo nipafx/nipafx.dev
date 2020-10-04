@@ -14,7 +14,7 @@ With [Java 11's new HTTP API](java-http-2-api-tutorial) you can do more than jus
 
 In this post we're going to look at streaming request and response bodies and because that requires a working understanding of reactive streams (introduced in Java 9 as *Flow API*), we're going to quickly discuss them as well - if you already know how they work skip ahead to [*Streaming The Request Body*](#streaming-the-request-body).
 That section builds a solution in several steps, where individual steps may contain bugs that you should not put into your code!
-For a complete picture, please use [the sources on GitHub](https://github.com/CodeFX-org/demo-java-x).
+For a complete picture, please use [the sources on GitHub](https://github.com/nipafx/demo-java-x).
 
 ## Reactive Stream Crash Course
 
@@ -65,7 +65,7 @@ Formally, you have to hand over a `BodyPublisher`, which is essentially a `Publi
 it publishes blocks of bytes.
 The HTTP request will then subscribe to that publisher and request bytes to send over the wire.
 
-We can observe that behavior by creating [decorators](decorator-pattern-default-methods) for the interfaces `BodyPublisher`, `Subscriber`, and `Subscription` [that log to standard out](https://github.com/CodeFX-org/demo-java-x/blob/master/src/main/java/org/codefx/demo/java11/api/http2/ReactivePost.java#L38-L59) and then inject them into the HTTP request builder:
+We can observe that behavior by creating [decorators](decorator-pattern-default-methods) for the interfaces `BodyPublisher`, `Subscriber`, and `Subscription` [that log to standard out](https://github.com/nipafx/demo-java-x/blob/master/src/main/java/org/codefx/demo/java11/api/http2/ReactivePost.java#L38-L59) and then inject them into the HTTP request builder:
 
 ```java
 HttpClient client = HttpClient.newBuilder().build();
@@ -241,7 +241,7 @@ private static class StringFinder implements Subscriber<String> {
 }
 ```
 
-(Remember, check [the demo project](https://github.com/CodeFX-org/demo-java-x) for [the complete example](https://github.com/CodeFX-org/demo-java-x/blob/master/src/main/java/org/codefx/demo/java11/api/http2/Http2Api.java).)
+(Remember, check [the demo project](https://github.com/nipafx/demo-java-x) for [the complete example](https://github.com/nipafx/demo-java-x/blob/master/src/main/java/org/codefx/demo/java11/api/http2/Http2Api.java).)
 
 Let's plug `StringFinder` into `reactiveSearch` and see what we've got:
 
@@ -366,5 +366,5 @@ In short:
 -   be careful to properly handle errors
 
 You can be proud of yourself - learning about reactive streams and how Java's new HTTP/2 API uses it, is no easy feat.
-👍 It becomes clearer if you play around with it yourself, so I want to point you to [the demo](https://github.com/CodeFX-org/demo-java-x) one last time: clone it, play around with it, break it, fix it.
+👍 It becomes clearer if you play around with it yourself, so I want to point you to [the demo](https://github.com/nipafx/demo-java-x) one last time: clone it, play around with it, break it, fix it.
 Best way to learn.

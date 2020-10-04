@@ -22,7 +22,7 @@ To write tests, you need the Jupiter API artifact:
 -   **Scope**: test
 
 Including it in your project with your favorite build tool is all it takes to write tests.
-So lets do that and quickly create [our first test](https://github.com/CodeFX-org/demo-junit-5/blob/master/src/test/java/org/codefx/demo/junit5/HelloWorldTest.java):
+So lets do that and quickly create [our first test](https://github.com/nipafx/demo-junit-5/blob/master/src/test/java/org/codefx/demo/junit5/HelloWorldTest.java):
 
 ```java
 import org.junit.jupiter.api.Test;
@@ -179,7 +179,7 @@ We will revisit this topic when we're exploring migration paths (stay tuned).
 <pullquote>A project can contain and run tests from different JUnit versions</pullquote>
 
 Assertion libraries like Hamcrest and AssertJ, which communicate with JUnit via exceptions, continues to work in the new version.
-Check out the [complete version of `HelloWorldTest`](https://github.com/CodeFX-org/demo-junit-5/blob/master/src/test/java/org/codefx/demo/junit5/HelloWorldTest.java) for an example using Mockito and AssertJ.
+Check out the [complete version of `HelloWorldTest`](https://github.com/nipafx/demo-junit-5/blob/master/src/test/java/org/codefx/demo/junit5/HelloWorldTest.java) for an example using Mockito and AssertJ.
 
 ## Reflection
 

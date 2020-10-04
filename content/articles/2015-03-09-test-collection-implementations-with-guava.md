@@ -103,7 +103,7 @@ To do this you have to implement the `TestSetGenerator<E>` (where `E` is the typ
 
 This is straight forward with `order(List<E>)` being the only method which may require some thought.
 Note that contrary to the documentation the current versoin of the testlib (18.0) does call this method even when `CollectionFeature.KNOWN_ORDER` is not reported (see below for details about features).
-[In my case](https://github.com/CodeFX-org/LibFX/blob/680e87321ab3a7f09920b275e63b673afc3dc98e/src/test/java/org/codefx/libfx/collection/transform/TransformingSetTest.java?ts=4#L83-L86) it suffices to return the insertion order.
+[In my case](https://github.com/nipafx/LibFX/blob/680e87321ab3a7f09920b275e63b673afc3dc98e/src/test/java/org/codefx/libfx/collection/transform/TransformingSetTest.java?ts=4#L83-L86) it suffices to return the insertion order.
 
 ### Test Suite Builder
 

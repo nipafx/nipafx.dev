@@ -16,5 +16,6 @@ Thanks again to everyone who was there for the amazing time. 🏆
 
 Links to follow up:
 
+* [Caliz](https://github.com/nipafx/Caliz)
 * [Scripting Java](https://blog.codefx.org/java/scripting-java-shebang/)
 * [Graal AOT](https://www.graalvm.org/docs/reference-manual/aot-compilation/)

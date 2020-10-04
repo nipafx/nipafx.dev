@@ -64,7 +64,7 @@ With complicated decorators you might even use a factory.
 
 I'm a big fan of static constructor methods so I use them and make the constructors private.
 In order to keep callers of these methods in the dark about the details, I declare the return type of those methods as `Component` as opposed to the more detailed type of the decorator.
-This can, for example, be seen in [*LogEventsToConsole*](https://github.com/CodeFX-org/demo-decorator-java-8/blob/master/src/org/codefx/lab/decorator/def/LogEventsToConsole.java).
+This can, for example, be seen in [*LogEventsToConsole*](https://github.com/nipafx/demo-decorator-java-8/blob/master/src/org/codefx/lab/decorator/def/LogEventsToConsole.java).
 
 My proposal changes the way decorators are created.
 
@@ -86,8 +86,8 @@ These are static or [default/defender methods](java-default-methods-guide) (so t
 This way, the new interface does not add an extra burden on the implementations further down the inheritance tree.
 
 Regarding the following code samples: The generic ones were only created for this post.
-The ones which involve hyperlink listeners come from the [demo application](https://github.com/CodeFX-org/demo-decorator-java-8).
-Most notable is the `DecoratingHyperlinkListener` ([link to source file](https://github.com/CodeFX-org/demo-decorator-java-8/blob/master/src/org/codefx/lab/decorator/def/DecoratingHyperlinkListener.java)), which extends Swing's [HyperlinkListener](http://docs.oracle.com/javase/8/docs/api/javax/swing/event/HyperlinkListener.html).
+The ones which involve hyperlink listeners come from the [demo application](https://github.com/nipafx/demo-decorator-java-8).
+Most notable is the `DecoratingHyperlinkListener` ([link to source file](https://github.com/nipafx/demo-decorator-java-8/blob/master/src/org/codefx/lab/decorator/def/DecoratingHyperlinkListener.java)), which extends Swing's [HyperlinkListener](http://docs.oracle.com/javase/8/docs/api/javax/swing/event/HyperlinkListener.html).
 
 #### Methods
 
@@ -287,4 +287,4 @@ Sorry Brian, it was just too tempting.
 Got some insights on the decorator pattern?
 Want to improve on my idea or criticize it?
 Then leave a comment!
-And don't forget to check out [the code on GitHub](https://github.com/CodeFX-org/demo-decorator-java-8).
+And don't forget to check out [the code on GitHub](https://github.com/nipafx/demo-decorator-java-8).

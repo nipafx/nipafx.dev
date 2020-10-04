@@ -89,7 +89,7 @@ E.g. is "runs in linear time" part of the method's specification (and should hen
 ### Examples
 
 Let's see some examples!
-First from the [demo project](https://github.com/CodeFX-org/demo-javadoc-8-tags) to show some rationale behind how to use the tags and then from the JDK to see them in production.
+First from the [demo project](https://github.com/nipafx/demo-javadoc-8-tags) to show some rationale behind how to use the tags and then from the JDK to see them in production.
 
 #### The Lottery
 
@@ -145,7 +145,7 @@ When an overriding method has no comment or inherits its comment via `{@inheritD
 This is a good thing, since they will not generally apply.
 To inherit specific tags, just add the snippet `@tag {@inheritDoc}` to the comment.
 
-The implementing classes in the [demo project](https://github.com/CodeFX-org/demo-javadoc-8-tags) examine the different possibilities.
+The implementing classes in the [demo project](https://github.com/nipafx/demo-javadoc-8-tags) examine the different possibilities.
 The README gives an overview.
 
 ## Tool Support
@@ -203,7 +203,7 @@ To change this, *all* tags have to be listed in the desired order, so you have t
 #### Maven
 
 [Maven's Javadoc plugin](http://maven.apache.org/plugins/maven-javadoc-plugin/) has a [configuration setting *tag*](http://maven.apache.org/plugins/maven-javadoc-plugin/javadoc-mojo.html#tags) which is used to verbosely create the same command line arguments.
-The demo project on GitHub shows [how this looks like in the *pom*](https://github.com/CodeFX-org/demo-javadoc-8-tags/blob/master/pom.xml?ts=4#L110-L133).
+The demo project on GitHub shows [how this looks like in the *pom*](https://github.com/nipafx/demo-javadoc-8-tags/blob/master/pom.xml?ts=4#L110-L133).
 
 ## Reflection
 

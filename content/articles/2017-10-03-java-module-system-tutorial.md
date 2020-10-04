@@ -16,7 +16,7 @@ To get the most out of it, we need to know it well, and the first step is to lea
 In this tutorial I'll first show you a simple *Hello World* example and then we'll take an existing demo application and modularize it with Java 9.
 We will create module declarations (`module-info.java`) and use the module path to compile, package, and run the application - code first, explanations second, so you can cut to the chase.
 
-I use two projects in this tutorial and both can be found on GitHub: The first is [a very simple *Hello World* example](https://github.com/CodeFX-org/demo-jpms-hello-world), the other [the *ServiceMonitor*](https://github.com/CodeFX-org/demo-jpms-monitor), which is the same one I use in [my book on the module system](https://www.manning.com/books/the-java-module-system?a_aid=nipa&a_bid=869915cb).
+I use two projects in this tutorial and both can be found on GitHub: The first is [a very simple *Hello World* example](https://github.com/CodeFX-org/demo-jpms-hello-world), the other [the *ServiceMonitor*](https://github.com/nipafx/demo-jpms-monitor), which is the same one I use in [my book on the module system](https://www.manning.com/books/the-java-module-system?a_aid=nipa&a_bid=869915cb).
 Check them out if you want to take a closer look.
 All commands like `javac`, `jar`, and `java` refer to the Java 9 variants.
 
