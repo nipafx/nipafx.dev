@@ -110,6 +110,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			channel: String!
 			tags: [String!]!
 			description: String!
+			repo: String
 			featuredImage: String
 		}
 		type Article implements Node {
@@ -212,6 +213,7 @@ createPostNodes = (node, createNode, createContentDigest) => {
 		tags: node.frontmatter.tags,
 		description: node.frontmatter.description,
 		featuredImage: node.frontmatter.featuredImage,
+		repo: node.frontmatter.repo,
 
 		parent: `post`,
 		children: [],

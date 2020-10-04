@@ -174,6 +174,7 @@ module.exports = {
 								"coursedetails",
 								"postlist",
 								"pullquote",
+								"repolist",
 							],
 						},
 					},

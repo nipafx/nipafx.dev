@@ -1,0 +1,16 @@
+.repoLink {
+	text-align: center;
+}
+
+.repoLink > a,
+.repoLink > a:visited {
+	color: var(--alt-color)
+}
+
+.repoLink > a:hover {
+	color: var(--fg-color)
+}
+
+.posts {
+	margin-top: 1em;
+}

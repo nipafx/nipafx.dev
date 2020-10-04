@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import SiteLayout from "../layout/site"
+import DemosLayout from "../layout/demos"
 import PageLayout from "../layout/page"
 
 export default ({ data }) => {
@@ -24,7 +25,7 @@ export default ({ data }) => {
 	}
 	return (
 		<SiteLayout className="page" meta={meta}>
-			<PageLayout {...page} />
+			{page.slug === "demos" ? <DemosLayout {...page} /> : <PageLayout {...page} />}
 		</SiteLayout>
 	)
 }
