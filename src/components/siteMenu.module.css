@@ -160,6 +160,16 @@
 	letter-spacing: initial;
 }
 
+@media all and (min-width: 600px) {
+	.rootContainer > div {
+		margin-right: -1.5em;
+	}
+
+	.top-level-label {
+		margin-right: 1.5em;
+	}
+}
+
 @media all and (min-width: 800px) {
 	.rootContainer > div {
 		/* Firefox needs the explicit max-width here or the div blows out the layout */
