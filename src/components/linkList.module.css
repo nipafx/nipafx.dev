@@ -7,17 +7,13 @@
 	color: var(--alt-color);
 }
 
-.links .text {
-	font-size: var(--small-font-size);
-	text-transform: uppercase;
-}
-
 .links > *:not(:last-child):after {
 	white-space: pre;
 	content: "   ";
 }
 
 .links .text {
+	text-transform: uppercase;
 	display: none;
 }
 
@@ -25,10 +21,18 @@
 	display: unset;
 }
 
+.texts .icon {
+	display: none;
+}
+
 .texts > *:not(:last-child):after {
 	color: var(--alt-color);
 	white-space: unset;
 	content: " // ";
+}
+
+.icon {
+	font-size: 1.2em;
 }
 
 @media all and (min-width: 600px) {

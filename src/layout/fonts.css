@@ -50,6 +50,7 @@ body {
 	--large-font-size: 24px;
 	--regular-font-size: 18px;
 	--small-font-size: 16px;
+	--tiny-font-size: 14px;
 
 	font-family: "Source Sans Pro", sans-serif;
 	font-size: var(--regular-font-size);

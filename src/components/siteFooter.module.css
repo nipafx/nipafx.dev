@@ -29,6 +29,9 @@
 	grid-area: channels;
 	justify-self: center;
 	align-self: center;
+
+	font-size: var(--small-font-size);
+	letter-spacing: 1px;
 }
 
 .channels a,
@@ -40,6 +43,9 @@
 	grid-area: meta;
 	justify-self: center;
 	align-self: center;
+
+	font-size: var(--small-font-size);
+	letter-spacing: 1px;
 }
 
 @media all and (min-width: 600px) {
@@ -62,12 +68,5 @@
 
 	.meta {
 		justify-self: end;
-	}
-}
-
-@media all and (min-width: 1200px) {
-	.channels,
-	.meta {
-		letter-spacing: 1px;
 	}
 }

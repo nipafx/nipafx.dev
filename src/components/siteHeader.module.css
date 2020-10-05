@@ -38,6 +38,8 @@
 	justify-self: center;
 
 	text-align: right;
+	font-size: var(--tiny-font-size);
+	letter-spacing: 1px;
 }
 
 .channels a,
@@ -67,7 +69,7 @@
 @media all and (min-width: 400px) {
 	.container {
 		/* Xrem to split the list of link icons roughly in half */
-		grid-template-columns: 1fr 8rem;
+		grid-template-columns: 1fr 7rem;
 		grid-template-areas:
 			"logo links"
 			"menu menu";
@@ -105,11 +107,5 @@
 
 	.menu {
 		justify-self: end;
-	}
-}
-
-@media all and (min-width: 1200px) {
-	.channels {
-		letter-spacing: 1px;
 	}
 }
