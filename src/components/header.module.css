@@ -17,7 +17,7 @@
 .first-line {
 	text-align: center;
 	color: var(--fg-color-shade-2);
-	font-size: var(--smaller-font-size);
+	font-size: var(--small-font-size);
 }
 
 .title {
@@ -25,7 +25,7 @@
 }
 
 .taglets {
-	font-size: var(--smaller-font-size);
+	font-size: var(--small-font-size);
 	display: flex;
 	justify-content: center;
 }
@@ -52,5 +52,5 @@
 }
 
 .intro {
-	font-size: var(--larger-font-size);
+	font-size: var(--large-font-size);
 }

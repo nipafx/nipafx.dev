@@ -28,7 +28,7 @@
 	flex-direction: column;
 	justify-content: flex-end;
 
-	font-size: var(--smaller-font-size);
+	font-size: var(--small-font-size);
 }
 
 :global(.highlight-first-post-card) .card:first-child .content {
@@ -60,7 +60,7 @@
 }
 
 :global(.highlight-first-post-card) .card:first-child .title {
-	font-size: var(--larger-font-size);
+	font-size: var(--large-font-size);
 }
 
 .channel {

@@ -39,7 +39,7 @@
 	transform-origin: 100% 100%;
 
 	background-color: var(--bg-color);
-	font-size: var(--smaller-font-size);
+	font-size: var(--small-font-size);
 	text-transform: uppercase;
 	line-height: 1;
 

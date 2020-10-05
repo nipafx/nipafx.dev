@@ -1,6 +1,6 @@
 .pull {
 	color: var(--alt-color);
-	font-size: var(--larger-font-size);
+	font-size: var(--large-font-size);
 	line-height: 1.5;
 
 	/* the 4px align the baseline of pull quote

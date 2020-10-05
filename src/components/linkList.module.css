@@ -8,7 +8,7 @@
 }
 
 .links .text {
-	font-size: var(--smaller-font-size);
+	font-size: var(--small-font-size);
 	text-transform: uppercase;
 }
 

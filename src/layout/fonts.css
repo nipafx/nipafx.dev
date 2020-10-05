@@ -47,9 +47,9 @@
 }
 
 body {
-	--larger-font-size: 24px;
+	--large-font-size: 24px;
 	--regular-font-size: 18px;
-	--smaller-font-size: 16px;
+	--small-font-size: 16px;
 
 	font-family: "Source Sans Pro", sans-serif;
 	font-size: var(--regular-font-size);
@@ -91,5 +91,5 @@ code {
 }
 
 pre > code {
-	font-size: var(--smaller-font-size);
+	font-size: var(--small-font-size);
 }
