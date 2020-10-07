@@ -2366,5 +2366,21 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "junit-pioneer",
+		"credits": {
+			"author": {
+				"name": "NASA/Don Davis",
+				"url": "http://www.nasa.gov/centers/ames/news/2013/pioneer11-40-years.html"
+			},
+			"source": {
+				"url": "https://commons.wikimedia.org/w/index.php?curid=25464775"
+			},
+			"license": {
+				"name": "Public Domain",
+				"url": "https://en.wikipedia.org/wiki/Public_domain"
+			}
+		}
 	}
 ]
