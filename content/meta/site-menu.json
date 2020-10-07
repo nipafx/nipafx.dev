@@ -13,8 +13,7 @@
 				},
 				{
 					"title": "Newsletters",
-					"url": "https://medium.com/codefx-weekly",
-					"className": "medium"
+					"url": "/news"
 				},
 				{
 					"title": "The JMS",
