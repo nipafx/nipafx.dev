@@ -1,0 +1,159 @@
+/*
+ * SIMPLE LIST
+ */
+
+.allEventContainer {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 20px;
+}
+
+/*
+ * MONTHLY CALENDAR
+ */
+
+.month {
+	/* offset the 10px left/right margin of the events */
+	margin: 0 -10px;
+}
+
+.monthTitle {
+	text-align: center;
+}
+
+.schedule {
+	grid-template-rows: repeat(6, auto);
+	/* grid-template-columns and grid-template-areas are computed during build */
+}
+
+.event {
+	display: flex;
+	flex-direction: column;
+
+	border: 1px solid var(--alt-color);
+	text-align: center;
+	padding: 10px 10px 0;
+}
+
+.schedule .event {
+	margin: 10px;
+}
+
+/* SLOTS/MULTI-DAY START */
+
+.event.slot1 {
+	margin-bottom: 0;
+}
+
+.event.slot2 {
+	margin-top: 0;
+	padding-top: 0;
+	border-top-style: none;
+}
+
+.event.slot1 > *:last-child {
+	padding-bottom: 10px;
+}
+
+.event.slot2 > *:first-child {
+	border-top: 1px solid var(--fg-color);
+	padding-top: 10px;
+}
+
+.event:not(.multi-day).slot1 {
+	border-bottom-style: none;
+}
+
+.multi-day + .event.slot2 {
+	margin-top: -1px;
+	border-top: 1px solid var(--bg-color);
+}
+
+/* SLOTS/MULTI-DAY END */
+
+.date {
+	font-family: "Bedstead", monospace;
+	color: var(--fg-color-shade-2);
+	margin: 0;
+}
+
+.weekday::after {
+	content: " ";
+}
+
+.day {
+	color: var(--alt-color);
+}
+
+.time::before {
+	content: ", ";
+}
+
+.title {
+	margin: 0;
+}
+
+.description {
+	color: var(--fg-color-shade-2);
+	margin: 0;
+	flex-grow: 1;
+}
+
+.details {
+	font-family: "Bedstead", monospace;
+	justify-self: end;
+	align-self: flex-end;
+}
+
+.details a,
+.details a:visited {
+	color: var(--alt-color);
+	text-decoration: none;
+}
+
+.details a:hover {
+	color: var(--fg-color);
+}
+
+/*
+ * FULLSCREEN
+ */
+
+.fullscreen.month {
+	min-height: 100vh;
+	margin: 2em;
+}
+
+.fullscreen .monthTitle {
+	font-size: 48px;
+	font-family: "Bedstead", monospace;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.fullscreen .monthTitle::before {
+	/* partially unset/override h2::before from global.css */
+	font-size: 48px;
+	color: var(--fg-color);
+
+	content: "// ";
+	display: inline;
+	margin: 0;
+}
+
+.fullscreen .monthTitle::after {
+	font-family: "Bedstead", monospace;
+	content: " //";
+}
+
+@media all and (min-width: 800px) {
+	.allEventContainer {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media all and (min-width: 1000px) {
+	.schedule {
+		display: grid;
+	}
+}

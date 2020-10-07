@@ -5,7 +5,7 @@ import { classNames } from "../infra/functions"
 
 import PostList from "./postList"
 
-import style from "./postListWrapper.module.css"
+import style from "./wrapper.module.css"
 import layout from "../layout/container.module.css"
 
 const PostListWrapper = ({ kind, slug }) => {

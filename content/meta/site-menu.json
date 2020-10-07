@@ -35,6 +35,10 @@
 				},
 				{
 					"title": "Streams",
+					"url": "/live"
+				},
+				{
+					"title": "Schedule",
 					"url": "/schedule"
 				}
 			]

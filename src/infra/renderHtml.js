@@ -5,6 +5,7 @@ import { classNames } from "../infra/functions"
 
 import { H1, H2, H3, H4, H5, H6 } from "../components/headings"
 import Admonition from "../components/admonition"
+import CalendarWrapper from "../components/calendarWrapper"
 import ContentImage from "../components/contentImage"
 import ContentVideo from "../components/contentVideo"
 import CourseDetails from "../components/courseDetails"
@@ -33,6 +34,7 @@ const RenderHtml = ({ withAst, htmlAst }) => {
 			a: renderLink,
 			admonition: Admonition,
 			blockquote: BlockQuote,
+			calendar: CalendarWrapper,
 			contentimage: ContentImage,
 			contentvideo: ContentVideo,
 			coursedetails: CourseDetails,
