@@ -23,8 +23,9 @@ export default ({ data }) => {
 		searchKeywords: data.page.searchKeywords,
 		image: data.page.featuredImage,
 	}
+	const className = data.page.style ?? "page"
 	return (
-		<SiteLayout className="page" meta={meta}>
+		<SiteLayout className={className} meta={meta}>
 			{page.slug === "demos" ? <DemosLayout {...page} /> : <PageLayout {...page} />}
 		</SiteLayout>
 	)
@@ -42,6 +43,7 @@ export const query = graphql`
 			slug
 			date
 			tags
+			style
 			description
 			searchKeywords
 			featuredImage

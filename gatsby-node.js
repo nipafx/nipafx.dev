@@ -152,6 +152,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			slug: String!
 			date: Date! @dateformat
 			tags: [String!]!
+			style: String
 			description: String!
 			searchKeywords: String
 			featuredImage: String
@@ -343,6 +344,7 @@ createPageNodes = (node, createNode, createContentDigest) => {
 		slug: node.frontmatter.slug,
 		date: node.frontmatter.date,
 		tags: node.frontmatter.tags,
+		style: node.frontmatter.style,
 		description: node.frontmatter.description,
 		searchKeywords: node.frontmatter.searchKeywords,
 		featuredImage: node.frontmatter.featuredImage,
