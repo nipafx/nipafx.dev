@@ -1,0 +1,13 @@
+.mark {
+	position: relative;
+}
+
+/* .mark::before {
+	position: absolute;
+	left: -1.5rem;
+	content: "⌬";
+} */
+
+.mark::after {
+	content: " ⟴";
+}

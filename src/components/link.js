@@ -4,14 +4,14 @@ import { Link as Internal } from "gatsby"
 import ExternalLink from "./externalLink"
 import { Channel, ChannelTag, Tag } from "./taglet"
 
-const Link = ({ to, onIndexPage, onClick, className, children }) => {
+const Link = ({ to, onClick, onIndexPage, markExternal, className, children }) => {
 	className = className || ""
 
 	const external =
 		to.includes("://") || to.startsWith("//") || to.startsWith("mailto") || to === "feed.xml"
 	if (external)
 		return (
-			<ExternalLink to={to} className={className} onClick={onClick}>
+			<ExternalLink to={to} onClick={onClick} mark={markExternal} className={className}>
 				{children}
 			</ExternalLink>
 		)

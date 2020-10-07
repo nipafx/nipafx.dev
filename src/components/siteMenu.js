@@ -38,7 +38,7 @@ const topLevelEntry = ({ title, url, children, className }, onIndexPage) => {
 	if (url)
 		return (
 			<div key={title} className={style.topLevelEntry}>
-				<Link className={className} to={url}>
+				<Link to={url} markExternal className={className}>
 					{title}
 				</Link>
 			</div>
@@ -74,7 +74,7 @@ const secondLevelEntry = ({ title, url, children, className }, onIndexPage) => {
 	if (url)
 		return (
 			<div key={title} className={style.secondLevelEntry}>
-				<Link to={url} onIndexPage={onIndexPage} className={className}>
+				<Link to={url} onIndexPage={onIndexPage} markExternal className={className}>
 					{title}
 				</Link>
 			</div>
@@ -107,7 +107,7 @@ const thirdLevelEntry = ({ title, url, channel, tag, className }, onIndexPage) =
 	if (url)
 		return (
 			<span key={title} className={style.thirdLevelEntry}>
-				<Link key={title} className={className} to={url}>
+				<Link key={title} to={url} markExternal className={className}>
 					{title}
 					{/* the trailing space is important - without it, browsers won't line-break */}
 				</Link>{" "}
