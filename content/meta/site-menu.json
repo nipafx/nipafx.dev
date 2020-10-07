@@ -47,10 +47,6 @@
 			"title": "Code",
 			"children": [
 				{
-					"title": "Java After Eight",
-					"url": "https://github.com/nipafx/java-after-eight"
-				},
-				{
 					"title": "Demos, demos, demos",
 					"url": "/demos"
 				},
