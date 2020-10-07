@@ -23,6 +23,6 @@
 	color: var(--fg-color);
 }
 
-.play:before {
+.play::before {
 	content: '▶️';
 }

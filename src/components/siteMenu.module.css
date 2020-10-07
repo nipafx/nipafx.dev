@@ -182,7 +182,7 @@
 		max-width: unset;
 	}
 
-	.second-level-container:before {
+	.second-level-container::before {
 		/* KEEP IN SYNC WITH OTHER MARKER */
 		color: var(--fg-color);
 		position: absolute;

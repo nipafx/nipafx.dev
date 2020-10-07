@@ -17,6 +17,6 @@
 	text-transform: capitalize;
 }
 
-.else > *:not(:first-child):before {
+.else > *:not(:first-child)::before {
 	content: ", ";
 }

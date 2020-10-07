@@ -24,7 +24,7 @@
 }
 
 /*
-	It would have been nice to use ::marker instead of :before, but I didn't
+	It would have been nice to use ::marker instead of ::before, but I didn't
 	get it to look properly across browsers. To work with `overflow: hidden`
 	(which prevents long headers from wrapping in the ToC), I need to put the
 	marker inside the element (i.e. `list-style-position: inside`), but then
@@ -33,22 +33,22 @@
 	(See https://bugs.chromium.org/p/chromium/issues/detail?id=644630)
 */
 
-#toc li:before {
+#toc li::before {
 	color: var(--alt-color);
 	content: "├";
 	font-size: 1.5em;
 	margin-right: 0.25em;
 }
 
-#toc li:first-child:before {
+#toc li:first-child::before {
 	content: "┌";
 }
 
-#toc li:last-child:before {
+#toc li:last-child::before {
 	content: "└";
 }
 
-#toc li:only-child:before {
+#toc li:only-child::before {
 	content: "╶";
 }
 
