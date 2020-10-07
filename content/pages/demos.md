@@ -1,6 +1,6 @@
 ---
 title: "Demos, Demos, Demos"
-tags: [newsletter]
+tags: [java-next, book-club, patterns, junit-5, performance]
 date: 2020-10-04
 slug: demos
 description: "A list of the demo projects I created for various posts and videos - they include the snippets shown therein and then some. Now they wait for you to try them out."
