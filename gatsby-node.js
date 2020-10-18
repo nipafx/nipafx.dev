@@ -139,7 +139,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			channel: String!
 			tags: [String!]!
 			description: String!
-			repo: String
+			intro: String
 			featuredImage: String
 		}
 		type Article implements Node {
@@ -234,21 +234,10 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 
 createPostNodes = (node, createNode, createContentDigest) => {
-	if (![`articles`, `courses`, `videos`, `talks`].includes(node.fields.collection))
+	if (![`articles`, `courses`, `posts`, `videos`, `talks`].includes(node.fields.collection))
 		return
 
 	const post = {
-		id: node.fields.collection + `-as-post-` + node.fields.id,
-
-		title: node.frontmatter.title,
-		slug: node.frontmatter.slug,
-		date: node.frontmatter.date,
-		channel: node.fields.collection,
-		tags: node.frontmatter.tags,
-		description: node.frontmatter.description,
-		featuredImage: node.frontmatter.featuredImage,
-		repo: node.frontmatter.repo,
-
 		parent: `post`,
 		children: [],
 		internal: {
@@ -256,6 +245,32 @@ createPostNodes = (node, createNode, createContentDigest) => {
 			content: ``,
 			contentDigest: createContentDigest(``),
 		},
+	}
+
+	if (node.fields.collection === `posts`) {
+		post.id = `post-` + node.fields.id
+		post.title = node.frontmatter.title
+		post.slug = node.frontmatter.slug
+		post.date = node.frontmatter.date
+		post.channel = node.frontmatter.channel
+		post.tags = node.frontmatter.tags
+		post.intro = node.frontmatter.intro
+		post.description = node.frontmatter.description
+		post.featuredImage = node.frontmatter.featuredImage
+		post.repo = node.frontmatter.repo
+
+		// see comment on creating article nodes
+		post.content___NODE = node.id
+	} else {
+		post.id = node.fields.collection + `-as-post-` + node.fields.id
+		post.title = node.frontmatter.title
+		post.slug = node.frontmatter.slug
+		post.date = node.frontmatter.date
+		post.channel = node.fields.collection
+		post.tags = node.frontmatter.tags
+		post.description = node.frontmatter.description
+		post.featuredImage = node.frontmatter.featuredImage
+		post.repo = node.frontmatter.repo
 	}
 
 	createNode(post)

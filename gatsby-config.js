@@ -54,6 +54,13 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
+				name: `posts`,
+				path: `${__dirname}/content/posts`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
 				name: `repos`,
 				path: `${__dirname}/content/repos`,
 			},
@@ -379,6 +386,7 @@ module.exports = {
 	mapping: {
 		// NOTE: don't declare the fields on the left-hand side in the schema in `gatsby-node`
 		"Article.repo": `Repo.slug`,
+		"Post.repo": `Repo.slug`,
 		"Talk.repo": `Repo.slug`,
 		"Video.repo": `Repo.slug`,
 		"Tag.series": `Post.slug`,

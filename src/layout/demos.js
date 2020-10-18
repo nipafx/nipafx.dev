@@ -56,21 +56,24 @@ const getReposWithPostSlugs = () => {
 				}
 				posts: allPost(
 					sort: { fields: date, order: DESC }
-					filter: { repo: { ne: null } }
 				) {
 					nodes {
 						date
-						repo
+						repo {
+							slug
+						}
 						slug
 					}
 				}
 			}
 		`
 	)
+	const postsWithRepos = posts.nodes
+		.filter(post => post.repo)
 	// prettier-ignore
 	return repos.nodes
 		.map(repo => {
-			const repoPosts = posts.nodes.filter(post => post.repo === repo.slug)
+			const repoPosts = postsWithRepos.filter(post => post.repo.slug === repo.slug)
 			return { ...repo, posts: repoPosts }
 		})
 		// sort repos by date of the youngest post;
