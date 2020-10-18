@@ -12,6 +12,7 @@ import CourseDetails from "../components/courseDetails"
 import Link from "../components/link"
 import PostListWrapper from "../components/postListWrapper"
 import { PullQuote, BlockQuote } from "../components/quote"
+import Snippet from "../components/snippet"
 import Table from "../components/table"
 
 import layout from "../layout/container.module.css"
@@ -43,6 +44,7 @@ const RenderHtml = ({ withAst, htmlAst }) => {
 			ol: renderOrderedList,
 			postlist: PostListWrapper,
 			pullquote: PullQuote,
+			snippet: Snippet,
 			table: Table,
 			ul: renderUnorderedList,
 		},

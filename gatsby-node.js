@@ -1,5 +1,6 @@
+const fs = require(`fs`)
 const path = require(`path`)
-const FilterWarningsPlugin = require('webpack-filter-warnings-plugin');
+const FilterWarningsPlugin = require(`webpack-filter-warnings-plugin`)
 
 exports.onCreateWebpackConfig = ({ actions }) => {
 	actions.setWebpackConfig({
@@ -49,7 +50,10 @@ const createRootNode = (createNode, id, type, createContentDigest) =>
 exports.onCreateNode = ({ node, getNode, actions, createContentDigest }) => {
 	const { createNodeField, createNode, deleteNode } = actions
 
-	createFields(node, getNode, createNodeField)
+	createFieldsOnContentNodes(node, getNode, createNodeField)
+	createFieldsOnFileNodes(node, createNodeField)
+
+	createSnippetNodes(node, createNode, createContentDigest)
 
 	if (node.internal.type === `MarkdownRemark`) {
 		// draft nodes shouldn't show up anywhere during a production build
@@ -76,7 +80,7 @@ exports.onCreateNode = ({ node, getNode, actions, createContentDigest }) => {
 	}
 }
 
-createFields = (node, getNode, createNodeField) => {
+createFieldsOnContentNodes = (node, getNode, createNodeField) => {
 	if (![`ImageSharp`, `MarkdownRemark`].includes(node.internal.type)) return
 
 	// add a field `collection` with the source instance (e.g. `articles`),
@@ -94,6 +98,31 @@ createFields = (node, getNode, createNodeField) => {
 		node,
 		name: `id`,
 		value: file,
+	})
+}
+
+createFieldsOnFileNodes = (node, createNodeField) => {
+	if (node.internal.type !== `File` || node.sourceInstanceName !== `snippets`) return
+
+	// see `createFieldsOnContentNodes`
+	createNodeField({
+		node,
+		name: `collection`,
+		value: node.sourceInstanceName,
+	})
+	const relative = node.relativePath
+	const file = relative.substring(0, relative.lastIndexOf(`.`)).replace(`/`, `-`)
+	createNodeField({
+		node,
+		name: `id`,
+		value: file,
+	})
+
+	// create field for local path to extract content
+	createNodeField({
+		node,
+		name: `localPath`,
+		value: node.absolutePath,
 	})
 }
 
@@ -165,6 +194,10 @@ exports.createSchemaCustomization = ({ actions }) => {
 			description: String!
 			url: String!
 			restrictive: Boolean
+		}
+		type Snippet implements Node {
+			slug: String!
+			rawContent: String
 		}
 		type Tag implements Node {
 			title: String!
@@ -387,6 +420,38 @@ createRepoNodes = (node, createNode, createContentDigest) => {
 	}
 
 	createNode(repo)
+}
+
+createSnippetNodes = (node, createNode, createContentDigest) => {
+	if (
+		!node.fields ||
+		node.fields.collection !== `snippets` ||
+		// Markdown files in `content/snippets` are processed automatically and
+		// two nodes are generated for them: a `File` node and `MarkdownRemark` node (see `node.internal.type`)
+		// We only turn the `MarkdownRemark` node into a snippet node (it is richer anyway)
+		node.internal.mediaType === `text/markdown`
+	)
+		return
+
+	const snippet = {
+		id: `snippet-` + node.fields.id,
+
+		slug: node.fields.id,
+
+		rawContent: node.fields.localPath && fs.readFileSync(node.fields.localPath, `utf8`),
+		// see comment on creating article nodes
+		content___NODE: node.id,
+
+		parent: `snippet`,
+		children: [],
+		internal: {
+			type: `Snippet`,
+			content: ``,
+			contentDigest: createContentDigest(``),
+		},
+	}
+
+	createNode(snippet)
 }
 
 createTagNodes = (node, createNode, createContentDigest) => {

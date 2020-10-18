@@ -61,6 +61,13 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
+				name: `snippets`,
+				path: `${__dirname}/content/snippets`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
 				name: `tags`,
 				path: `${__dirname}/content/tags`,
 			},
@@ -176,6 +183,7 @@ module.exports = {
 								"postlist",
 								"pullquote",
 								"repolist",
+								"snippet",
 							],
 						},
 					},
