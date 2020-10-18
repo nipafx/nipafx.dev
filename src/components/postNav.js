@@ -14,12 +14,13 @@ import shareLinks from "../../content/meta/share-links.json"
 
 import style from "./postNav.module.css"
 
-const PostNav = ({ title, slug, channel, description, toc, canonical, series, source }) => {
+const PostNav = ({ title, slug, channel, description, toc, canonical, series, source, open }) => {
 	return (
 		<Nav
 			title={title}
 			longHeaders={["origin", "series", "source code", "table of contents", "share & follow"]}
 			shortHeaders={["org", "ser", "src", "toc", "s+f"]}
+			open={open}
 		>
 			{canonical && showCanonical(canonical, title)}
 			{series && showSeries(series)}
