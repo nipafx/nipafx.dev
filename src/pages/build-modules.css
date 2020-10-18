@@ -1,0 +1,140 @@
+.cheat-modules-description {
+	padding: 15px;
+	padding-bottom: 0;
+	border: 2px solid var(--alt-color);
+}
+
+.cheat-modules-description h2 {
+	text-align: center;
+	background-color: var(--alt-color);
+	color: var(--bg-color);
+	margin: -15px -15px 0.5em -15px;
+}
+.cheat-modules-description h2::before {
+	content: none;
+}
+
+.cheat-modules-description h3 {
+	text-align: center;
+	border-top: 1px solid var(--alt-color);
+	padding-top: 1em;
+}
+
+.svg-tool {
+	font-family: "Source Sans Pro", sans-serif !important;
+	font-weight: bold !important;
+	font-size: 2.5mm !important;
+}
+
+.svg-code {
+	font-family: "Bedstead", monospace !important;
+	font-size: 4px !important;
+}
+
+.svg-modular {
+	fill: var(--alt-color);
+}
+
+.cheat-modules-description h2 code {
+	color: var(--bg-color);
+}
+
+.cheat-modules-options dt {
+	font-family: "Bedstead", monospace;
+	font-weight: normal;
+	word-break: break-all;
+}
+
+.cheat-modules-modular {
+	color: var(--alt-color) !important;
+}
+
+.cheat-modules-snippet {
+	text-align: center;
+}
+.cheat-modules-snippet pre {
+	display: inline-block;
+	text-align: left;
+	margin: 0;
+}
+
+.svg-directory {
+	font-family: "Bedstead", monospace !important;
+	font-size: 4px !important;
+}
+
+#cheat-modules-overview {
+	grid-area: overview;
+}
+#cheat-modules-svg8 {
+	width: 100%;
+	height: auto;
+	margin: -25px 5px 5px;
+}
+#cheat-modules-javac {
+	grid-area: javac;
+}
+#cheat-modules-jar {
+	grid-area: jar;
+}
+#cheat-modules-java {
+	grid-area: java;
+}
+#cheat-modules-general {
+	grid-area: general;
+}
+#cheat-modules-versions {
+	grid-area: versions;
+}
+#cheat-modules-hacking {
+	grid-area: hacking;
+}
+
+#cheat-modules-layout {
+	display: grid;
+	grid-gap: 1em;
+	margin: 1em;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"overview"
+		"javac   "
+		"jar     "
+		"java    "
+		"general "
+		"versions"
+		"hacking ";
+}
+
+@media (min-width: 840px) {
+	#cheat-modules-layout {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"overview overview"
+			"javac    jar     "
+			"javac    java "
+			"hacking  java "
+			"general  versions";
+	}
+}
+
+@media (min-width: 1240px) {
+	#cheat-modules-layout {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+			"overview overview overview"
+			"javac    jar      java    "
+			"javac    general  java    "
+			"versions hacking  hacking ";
+	}
+}
+
+@media (min-width: 2050px) {
+	#cheat-modules-layout {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas:
+			"overview overview overview general "
+			"overview overview overview hacking "
+			"javac    jar      java     hacking "
+			"javac    jar      java     versions";
+	}
+}

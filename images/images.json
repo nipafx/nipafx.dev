@@ -2382,5 +2382,13 @@
 				"url": "https://en.wikipedia.org/wiki/Public_domain"
 			}
 		}
+	},
+	{
+		"slug": "cheat-sheet-build-modules",
+		"credits": {
+			"author": {
+				"name": "me"
+			}
+		}
 	}
 ]

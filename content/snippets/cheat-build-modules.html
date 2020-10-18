@@ -1,0 +1,1047 @@
+<div id="cheat-modules-layout">
+	<div id="cheat-modules-javac" class="cheat-modules-description">
+		<h2>Compiler &mdash; <code class="language-shell">javac</code></h2>
+		<div class="cheat-modules-snippet">
+			<pre><code class="language-shell">javac
+	${path_to_deps} &#9312;
+	-d ${class_dir}
+	${more_options}
+	${source_files} &#9313;</code></pre>
+		</div>
+		<dl class="cheat-modules-options">
+			<dt>-d ${class_dir}</dt>
+			<dd>Directory for generated class files</dd>
+		</dl>
+
+		<h3>&#9312; Path to Dependencies</h3>
+		<p>Tell the compiler where to find your dependencies' JARs:</p>
+		<dl class="cheat-modules-options">
+			<dt>--class-path, -cp ${path}</dt>
+			<dd>Path to JARs, separated by : (&#128039;) or ; (<em>&#8862;</em>), e.g.
+				<code class="language-shell">--class-path libs/foo.jar:libs/bar.jar</code>.
+				Alternatively, add all JARs in a directory with <code class="language-shell">--class-path 'libs/*'</code>.</dd>
+			<dt class="cheat-modules-modular">--module-path, -p ${path}</dt>
+				<dd>Like class path but with first-level support for directories: <code class="language-shell">--module-path libs</code>.</dd>
+		</dl>
+		<p>Usually, regular JARs go on the class path and modular JARs on the module path, but that's not a hard rule.</p>
+
+		<!-- <h3>&#9313; More Options</h3>
+
+		<p>There are many options. Here are a few of them - they relate to the
+
+		<dl class="cheat-modules-options">
+			<dt>--release ${release}</dt>
+			<dd>Compile for a specific VM version. Supported targets: 6, 7, 8, 9, 10, 11</dd>
+			<dt>-source ${release}</dt>
+			<dd>Provide source compatibility with specified release</dd>
+			<dt>-target ${release}</dt>
+			<dd>Generate class files for specific VM version</dd>
+		</dl> -->
+
+		<h3>&#9313; Source Files</h3>
+		<p>Tell the compiler which source files to compile. There are various options:</p>
+		<ul>
+			<li>Manually list all source files (possibly including <code class="cheat-modules-modular">module-info.java</code>), separated by space</li>
+			<li>Automatically determine all source files with <code class="language-shell">`find ${path_to_src} -name *.java`</code>
+				(include backticks, replace <code class="language-shell">${path_to_src}</code> with actual path; &#128039;)</li>
+			<li>Use <code class="language-shell">--source-path</code> or <code class="cheat-modules-modular">--module-source-path</code> (not covered here)</li>
+			<!-- <li>See alternative box <span class="cheat-modules-reference">Source Path</span></li> -->
+		</ul>
+	</div>
+
+	<div id="cheat-modules-jar" class="cheat-modules-description">
+		<h2>Archiver &mdash; <code class="language-shell">jar</code></h2>
+		<div class="cheat-modules-snippet">
+			<pre><code class="language-shell">jar --create
+	--file ${jar}
+	${more_options} &#9312;
+	-C ${class_dir} .</code></pre>
+		</div>
+		<dl class="cheat-modules-options">
+			<dt>--create, -c</dt>
+			<dd>Operation mode that creates an archive</dd>
+			<dt>--file, -f ${jar}</dt>
+			<dd>The name of the JAR that will be created</dd>
+			<dt>-C ${class_dir} .</dt>
+			<dd>Includes all files in directory <code class="language-shell">${class_dir}</code> (the trailing dot is important!)</dd>
+		</dl>
+		<p>If <code class="language-shell">${class_dir}</code> contains a <code class="cheat-modules-modular">module-info.class</code>, the JAR will be modular.</p>
+
+		<h3>&#9312; More Options</h3>
+		<p>Option of particular interest when packaging modules:</p>
+		<dl class="cheat-modules-options">
+			<dt class="cheat-modules-modular">--main-class, -e ${main_class}</dt>
+			<dd>Record the application entry point, i.e. the class with the <code class="language-shell">main</code> method</dd>
+		</dl>
+	</div>
+
+	<div id="cheat-modules-java" class="cheat-modules-description">
+		<h2>Virtual Machine &mdash; <code class="language-shell">java</code></h2>
+		<div class="cheat-modules-snippet">
+			<pre><code class="language-shell">java
+	${path_to_jars} &#9312;
+	${more_options} &#9313;
+	${main} &#9314;
+	${app_arguments}</code></pre>
+		</div>
+
+		<h3>&#9312; Path to JARs</h3>
+		<p>Tell the compiler where to find your application's JARs.
+			Works exactly as during compilation, but remember to include your JARs.</p>
+
+		<h3>&#9313; More Options</h3>
+		<p>Option of particular interest when running modules:</p>
+		<dl class="cheat-modules-options">
+			<dt class="cheat-modules-modular">--show-module-resolution</dt>
+			<dd>During JVM startup, log messages that show module resolution</dd>
+			<dt class="cheat-modules-modular">--illegal-access ${value}</dt>
+			<dd>Define whether code in unnamed modules can use inaccessible types/members in named modules;
+				<code class="language-shell">${value}</code> can be <code class="language-shell">permit</code>, <code class="language-shell">warn</code> (default on Java 11), <code class="language-shell">debug</code>, or <code class="language-shell">deny</code></dd>
+		</dl>
+
+		<h3>&#9314; Main Module or Class</h3>
+		<p>Tell the JVM how to launch the application. If the main class is on the class path:</p>
+		<ul>
+			<li>Fully qualified name of the main class</li>
+		</ul>
+		<p>If the main class is in a JAR on the module path:</p>
+		<ul>
+			<li><code class="cheat-modules-modular">--module ${module}</code> if <code class="language-shell">jar</code> recorded <code class="language-shell">${module}</code>'s main class</li>
+			<li><code class="cheat-modules-modular">--module ${module}/{main_class}</code> to specify or override <code class="language-shell">${module}</code>'s main class</li>
+		</ul>
+	</div>
+
+	<div id="cheat-modules-general" class="cheat-modules-description">
+		<h2>General Options &mdash; <code class="language-shell">javac</code>, <code class="language-shell">jar</code>, <code class="language-shell">java</code></h2>
+		<dl class="cheat-modules-options">
+			<dt>@${filename}</dt>
+			<dd>Read options and possibly filenames from file (only <code class="language-shell">javac</code>, <code class="language-shell">java</code>),
+				e.g. <code class="language-shell">javac @opts @sources</code> for files <code class="language-shell">opts</code> (containing all options) and <code class="language-shell">sources</code> (listing all source files)</dd>
+			<dt>--help, -help, -?, -h / --help-extra, -X</dt>
+			<dd>Print help text with all standard / non-standard tool options (<code class="language-shell">-h</code> only on <code class="language-shell">jar</code>, <code class="language-shell">java</code> / <code class="language-shell">-X</code> only on <code class="language-shell">javac</code>, <code class="language-shell">java</code>)</d	d>
+			<dt>--version, -version</dt>
+			<dd>Print tool version</dd>
+		</dl>
+	</div>
+
+	<div id="cheat-modules-versions" class="cheat-modules-description">
+		<h2>Recording Versions &mdash; <code class="language-shell">javac</code>, <code class="language-shell">jar</code></h2>
+		<p>The module system does not interpret module versions, but it can record them:</p>
+		<dl class="cheat-modules-options">
+			<dt><code class="language-shell">javac </code><code class="cheat-modules-modular">--module-version ${version}</code><version>
+			<dd>Embed the ${version} in the module declaration</dd>
+			<dt><code class="language-shell">jar </code><code class="cheat-modules-modular">--module-version ${version}</code><version>
+			<dd>Embed the ${version} in the module declaration, possibly overriding the one embedded earlier by the compiler</dd>
+		</dl>
+		<p>At run time, the version of a module and its dependencies are available
+			via <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/module/ModuleDescriptor.html#requires()"><code class="language-shell">ModuleDescriptor::requires</code></a>.</p>
+	</div>
+
+	<div id="cheat-modules-hacking" class="cheat-modules-description">
+		<h2>Hacking the Module System &mdash; <code class="language-shell">javac</code>, <code class="language-shell">java</code></h2>
+		<dl class="cheat-modules-options">
+			<dt class="cheat-modules-modular">--add-modules ${modules}</dt>
+			<dd>Add the <code class="language-shell">${modules}</code> and their dependencies to the module graph;
+				use <code class="language-shell">ALL-MODULE-PATH</code> to add all modules from the module path</dd>
+			<dt class="cheat-modules-modular">--add-reads ${module}=${target_modules}</dt>
+			<dd>Make <code class="language-shell">${module}</code> read the target modules;
+				use <code class="language-shell">ALL-UNNAMED</code> as target to make the module read the class path</dd>
+			<dt class="cheat-modules-modular">--add-exports ${module}/${package}=${target_modules}</dt>
+			<dd>Let the <code class="language-shell">${target_modules}</code> access public types and members from <code class="language-shell">${module}</code>'s <code class="language-shell">${package}</code></dd>
+			<dt class="cheat-modules-modular">--add-opens ${module}/${package}=${target_modules}</dt>
+			<dd>Let the <code class="language-shell">${target_modules}</code> access all types and members, regardless of visibility, from <code class="language-shell">${module}</code>'s <code class="language-shell">${package}</code> (only on <code class="language-shell">java</code>)</dd>
+			<dt class="cheat-modules-modular">--patch-module ${module}=${jar_files}</dt>
+			<dd>Add classes from the <code class="language-shell">${jar_files}</code> to the <code class="language-shell">${module}</code>, possibly overriding them</dd>
+		</dl>
+		<p>In some places you can specify more than one module. To do that, separate them with commas.</p>
+	</div>
+
+	<div id="cheat-modules-overview" class="cheat-modules-description highlight">
+	<!-- To update the diagram:
+		* edit file in Inkscape
+		* copy-pase SVG tag here
+		* add CSS classes:
+			* "svg-tool" to <text> tags with texts like "Compiler - javac"
+			* "svg-code" to <text> tags with code snippets
+			* "svg-modular" to <tspan> tags with module-related snippets
+				(including parts of direcotry trees)
+			* "svg-directory" to <text> tags with directory trees
+		* replace
+			* "▸" with "&#9656;"
+			* "▼" with "&#9662;"
+	-->
+	<svg
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:cc="http://creativecommons.org/ns#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:svg="http://www.w3.org/2000/svg"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+	xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+	width="470mm"
+	height="140mm"
+	viewBox="0 0 470 140"
+	version="1.1"
+	id="cheat-modules-svg8"
+	inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+	sodipodi:docname="command-line-cheat-sheet.svg">
+	<defs
+	  id="cheat-modules-defs2">
+	 <marker
+		inkscape:stockid="cheat-modules-Arrow2Mend"
+		orient="auto"
+		refY="0.0"
+		refX="0.0"
+		id="cheat-modules-marker1333"
+		style="overflow:visible;"
+		inkscape:isstock="true">
+	   <path
+		  id="cheat-modules-path1097"
+		  style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#FFF;stroke-opacity:1;fill:#FFF;fill-opacity:1"
+		  d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+		  transform="scale(0.6) rotate(180) translate(0,0)" />
+	 </marker>
+	 <marker
+		inkscape:stockid="cheat-modules-Arrow2Mstart"
+		orient="auto"
+		refY="0"
+		refX="0"
+		id="cheat-modules-marker7125"
+		style="overflow:visible"
+		inkscape:isstock="true">
+	   <path
+		  id="cheat-modules-path7123"
+		  style="fill:#FFF;fill-opacity:1;fill-rule:evenodd;stroke:#FFF;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+		  d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+		  transform="scale(0.6)"
+		  inkscape:connector-curvature="0" />
+	 </marker>
+	 <marker
+		inkscape:stockid="cheat-modules-Arrow2Mstart"
+		orient="auto"
+		refY="0"
+		refX="0"
+		id="cheat-modules-marker7037"
+		style="overflow:visible"
+		inkscape:isstock="true">
+	   <path
+		  id="cheat-modules-path7035"
+		  style="fill:#FFF;fill-opacity:1;fill-rule:evenodd;stroke:#FFF;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+		  d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+		  transform="scale(0.6)"
+		  inkscape:connector-curvature="0" />
+	 </marker>
+	 <marker
+		inkscape:stockid="cheat-modules-Arrow2Lstart"
+		orient="auto"
+		refY="0"
+		refX="0"
+		id="cheat-modules-Arrow2Lstart"
+		style="overflow:visible"
+		inkscape:isstock="true">
+	   <path
+		  id="cheat-modules-path6037"
+		  style="fill:#FFF;fill-opacity:1;fill-rule:evenodd;stroke:#FFF;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+		  d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+		  transform="matrix(1.1,0,0,1.1,1.1,0)"
+		  inkscape:connector-curvature="0" />
+	 </marker>
+	 <marker
+		inkscape:stockid="cheat-modules-Arrow1Sstart"
+		orient="auto"
+		refY="0"
+		refX="0"
+		id="cheat-modules-Arrow1Sstart"
+		style="overflow:visible"
+		inkscape:isstock="true">
+	   <path
+		  id="cheat-modules-path6031"
+		  d="M 0,0 5,-5 -12.5,0 5,5 Z"
+		  style="fill:#FFF;fill-opacity:1;fill-rule:evenodd;stroke:#FFF;stroke-width:1.00000003pt;stroke-opacity:1"
+		  transform="matrix(0.2,0,0,0.2,1.2,0)"
+		  inkscape:connector-curvature="0" />
+	 </marker>
+	 <marker
+		inkscape:stockid="cheat-modules-Arrow1Mstart"
+		orient="auto"
+		refY="0"
+		refX="0"
+		id="cheat-modules-marker6849"
+		style="overflow:visible"
+		inkscape:isstock="true">
+	   <path
+		  id="cheat-modules-path6847"
+		  d="M 0,0 5,-5 -12.5,0 5,5 Z"
+		  style="fill:#FFF;fill-opacity:1;fill-rule:evenodd;stroke:#FFF;stroke-width:1.00000003pt;stroke-opacity:1"
+		  transform="matrix(0.4,0,0,0.4,4,0)"
+		  inkscape:connector-curvature="0" />
+	 </marker>
+	 <marker
+		inkscape:stockid="cheat-modules-Arrow2Mstart"
+		orient="auto"
+		refY="0"
+		refX="0"
+		id="cheat-modules-marker6615"
+		style="overflow:visible"
+		inkscape:isstock="true">
+	   <path
+		  id="cheat-modules-path6613"
+		  style="fill:#FFF;fill-opacity:1;fill-rule:evenodd;stroke:#FFF;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+		  d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+		  transform="scale(0.6)"
+		  inkscape:connector-curvature="0" />
+	 </marker>
+	 <marker
+		inkscape:stockid="cheat-modules-Arrow2Mend"
+		orient="auto"
+		refY="0"
+		refX="0"
+		id="cheat-modules-marker6569"
+		style="overflow:visible"
+		inkscape:isstock="true">
+	   <path
+		  id="cheat-modules-path6567"
+		  style="fill:#FFF;fill-opacity:1;fill-rule:evenodd;stroke:#FFF;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+		  d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+		  transform="scale(-0.6)"
+		  inkscape:connector-curvature="0" />
+	 </marker>
+	 <marker
+		inkscape:stockid="cheat-modules-Arrow2Mstart"
+		orient="auto"
+		refY="0"
+		refX="0"
+		id="cheat-modules-Arrow2Mstart"
+		style="overflow:visible"
+		inkscape:isstock="true">
+	   <path
+		  id="cheat-modules-path6043"
+		  style="fill:#FFF;fill-opacity:1;fill-rule:evenodd;stroke:#FFF;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+		  d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+		  transform="scale(0.6)"
+		  inkscape:connector-curvature="0" />
+	 </marker>
+	 <marker
+		inkscape:stockid="cheat-modules-Arrow2Mend"
+		orient="auto"
+		refY="0"
+		refX="0"
+		id="cheat-modules-Arrow2Mend"
+		style="overflow:visible"
+		inkscape:isstock="true">
+	   <path
+		  id="cheat-modules-path6046"
+		  style="fill:#FFF;fill-opacity:1;fill-rule:evenodd;stroke:#FFF;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+		  d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+		  transform="scale(-0.6)"
+		  inkscape:connector-curvature="0" />
+	 </marker>
+	 <marker
+		inkscape:stockid="cheat-modules-Arrow1Send"
+		orient="auto"
+		refY="0"
+		refX="0"
+		id="cheat-modules-Arrow1Send"
+		style="overflow:visible"
+		inkscape:isstock="true">
+	   <path
+		  id="cheat-modules-path6034"
+		  d="M 0,0 5,-5 -12.5,0 5,5 Z"
+		  style="fill:#FFF;fill-opacity:1;fill-rule:evenodd;stroke:#FFF;stroke-width:1.00000003pt;stroke-opacity:1"
+		  transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+		  inkscape:connector-curvature="0" />
+	 </marker>
+	 <marker
+		inkscape:stockid="cheat-modules-Arrow1Mstart"
+		orient="auto"
+		refY="0"
+		refX="0"
+		id="cheat-modules-Arrow1Mstart"
+		style="overflow:visible"
+		inkscape:isstock="true">
+	   <path
+		  id="cheat-modules-path6025"
+		  d="M 0,0 5,-5 -12.5,0 5,5 Z"
+		  style="fill:#FFF;fill-opacity:1;fill-rule:evenodd;stroke:#FFF;stroke-width:1.00000003pt;stroke-opacity:1"
+		  transform="matrix(0.4,0,0,0.4,4,0)"
+		  inkscape:connector-curvature="0" />
+	 </marker>
+	</defs>
+	<sodipodi:namedview
+	  id="cheat-modules-base"
+	  pagecolor="#ffffff"
+	  bordercolor="#666666"
+	  borderopacity="1.0"
+	  inkscape:pageopacity="0.0"
+	  inkscape:pageshadow="2"
+	  inkscape:zoom="0.5"
+	  inkscape:cx="795.33591"
+	  inkscape:cy="-37.266207"
+	  inkscape:document-units="mm"
+	  inkscape:current-layer="layer1"
+	  showgrid="cheat-modules-false"
+	  inkscape:window-width="1920"
+	  inkscape:window-height="1080"
+	  inkscape:window-x="0"
+	  inkscape:window-y="0"
+	  inkscape:window-maximized="1"
+	  showborder="true"
+	  fit-margin-top="0"
+	  fit-margin-left="0"
+	  fit-margin-right="0"
+	  fit-margin-bottom="0" />
+	<metadata
+	  id="cheat-modules-metadata5">
+	 <rdf:RDF>
+	   <cc:Work
+		  rdf:about="">
+		 <dc:format>image/svg+xml</dc:format>
+		 <dc:type
+			rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+		 <dc:title></dc:title>
+	   </cc:Work>
+	 </rdf:RDF>
+	</metadata>
+	<g
+	  inkscape:label="Layer 1"
+	  inkscape:groupmode="layer"
+	  id="cheat-modules-layer1"
+	  transform="translate(-20,-16.673613)">
+	 <text
+		xml:space="preserve"
+		style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:125%;font-family:'Noto Sans Mono CJK JP';-inkscape-font-specification:'Noto Sans Mono CJK JP';letter-spacing:0px;word-spacing:0px;fill:#FFF;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+		x="20"
+		y="106.18335"
+		id="cheat-modules-text7953"
+		class="svg-directory"
+		inkscape:label="sources-layout"><tspan
+		  sodipodi:role="line"
+		  id="cheat-modules-tspan7951"
+		  x="20"
+		  y="106.18335"
+		  style="stroke-width:0.26458332px">&#9656; classes</tspan><tspan
+		  sodipodi:role="line"
+		  x="20"
+		  y="112.35696"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7955">&#9656; jars</tspan><tspan
+		  sodipodi:role="line"
+		  x="20"
+		  y="118.53057"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7957">&#9662; libs</tspan><tspan
+		  sodipodi:role="line"
+		  x="20"
+		  y="124.70418"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7959">   greetings-framework-v2.4.1.jar</tspan><tspan
+		  sodipodi:role="line"
+		  x="20"
+		  y="130.87779"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7961">&#9662; src</tspan><tspan
+		  sodipodi:role="line"
+		  x="20"
+		  y="137.05141"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7963">   &#9662; org</tspan><tspan
+		  sodipodi:role="line"
+		  x="20"
+		  y="143.22501"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7965">      &#9662; codefx</tspan><tspan
+		  sodipodi:role="line"
+		  x="20"
+		  y="149.39862"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7967">         HelloWorld.java</tspan><tspan
+		  sodipodi:role="line"
+		  x="20"
+		  y="155.57224"
+		  style="stroke-width:0.26458332px"
+		  class="svg-modular"
+		  id="cheat-modules-tspan141">   module-info.java</tspan><tspan
+		  sodipodi:role="line"
+		  x="20"
+		  y="161.74585"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7969" /></text>
+	 <g
+		id="cheat-modules-miu"
+		transform="matrix(2.2727273,0,0,2.2727273,13.181819,44.72727)"
+		style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1"
+		inkscape:label="sources">
+	   <g
+		  transform="translate(-539,-227)"
+		  id="cheat-modules-Artboard-1">
+		 <g
+			transform="translate(215,119)"
+			id="cheat-modules-slice" />
+		 <path
+			id="cheat-modules-editor-documents-files-glyph"
+			d="M 542.20634,231 C 542.09238,231 542,231.09327 542,231.21013 v 18.57974 c 0,0.11605 0.0919,0.21013 0.20634,0.21013 h 14.58732 C 556.90762,250 557,249.90673 557,249.78987 V 231.21013 C 557,231.09408 556.9081,231 556.79366,231 Z M 544,234 v 1 h 11 v -1 z m 0,3 v 1 h 11 v -1 z m 0,3 v 1 h 11 v -1 z m 0,3 v 1 h 11 v -1 z m 0,3 v 1 h 7 v -1 z m 1,-16 h 13 v 17 h 2 v -19 h -15 z"
+			inkscape:connector-curvature="0"
+			style="fill:#FFF" />
+	   </g>
+	 </g>
+	 <text
+		xml:space="preserve"
+		style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:125%;font-family:'Noto Sans Mono CJK JP';-inkscape-font-specification:'Noto Sans Mono CJK JP';letter-spacing:0px;word-spacing:0px;fill:#FFF;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+		x="160"
+		y="105.79902"
+		id="cheat-modules-text7973"
+		class="svg-directory"
+		inkscape:label="bytes-layout"><tspan
+		  sodipodi:role="line"
+		  id="cheat-modules-tspan7971"
+		  x="160"
+		  y="105.79902"
+		  style="stroke-width:0.26458332px">&#9662; classes</tspan><tspan
+		  sodipodi:role="line"
+		  x="160"
+		  y="111.97263"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7975">   &#9662; org</tspan><tspan
+		  sodipodi:role="line"
+		  x="160"
+		  y="118.14624"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7977">      &#9662; codefx</tspan><tspan
+		  sodipodi:role="line"
+		  x="160"
+		  y="124.31985"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7979">         HelloWorld.class</tspan><tspan
+		  sodipodi:role="line"
+		  x="160"
+		  y="130.49347"
+		  style="stroke-width:0.26458332px"
+		  class="svg-modular"
+		  id="cheat-modules-tspan1491">   module-info.class</tspan><tspan
+		  sodipodi:role="line"
+		  x="160"
+		  y="136.66707"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7981">&#9656; jars</tspan><tspan
+		  sodipodi:role="line"
+		  x="160"
+		  y="142.84068"
+		  style="stroke-width:0.26458332px"
+			  id="cheat-modules-tspan7983">&#9656; libs</tspan><tspan
+		  sodipodi:role="line"
+		  x="160"
+		  y="149.0143"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7985">&#9656; src</tspan><tspan
+		  sodipodi:role="line"
+		  x="160"
+		  y="155.1879"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7987" /></text>
+	 <g
+		id="cheat-modules-miu-3"
+		transform="matrix(2.2727273,0,0,2.2727273,153.18181,44.727271)"
+		style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1"
+		inkscape:label="bytes">
+	   <g
+		  transform="translate(-611,-227)"
+		  id="cheat-modules-Artboard-1-6">
+		 <g
+			transform="translate(215,119)"
+			id="cheat-modules-slice-7" />
+		 <path
+			id="cheat-modules-editor-copy-duplicate-glyph"
+			d="M 614.20634,231 C 614.09238,231 614,231.09327 614,231.21013 v 18.57974 c 0,0.11605 0.0919,0.21013 0.20634,0.21013 h 14.58732 C 628.90762,250 629,249.90673 629,249.78987 V 231.21013 C 629,231.09408 628.9081,231 628.79366,231 Z M 617,230 h 13 v 17 h 2 v -19 h -15 z"
+			inkscape:connector-curvature="0"
+			style="fill:#FFF" />
+	   </g>
+	 </g>
+	 <text
+		xml:space="preserve"
+		style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:125%;font-family:'Noto Sans Mono CJK JP';-inkscape-font-specification:'Noto Sans Mono CJK JP';letter-spacing:0px;word-spacing:0px;fill:#FFF;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+		x="300"
+		y="106.17263"
+		id="cheat-modules-text7991"
+		class="svg-directory"
+		inkscape:label="jar-layout"><tspan
+		  sodipodi:role="line"
+		  id="cheat-modules-tspan7989"
+		  x="300"
+		  y="106.17263"
+		  style="stroke-width:0.26458332px">&#9656; classes</tspan><tspan
+		  sodipodi:role="line"
+		  x="300"
+		  y="112.34624"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7993">&#9662; jars</tspan><tspan
+		  sodipodi:role="line"
+		  x="300"
+		  y="118.51985"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7995">   hello.jar</tspan><tspan
+		  sodipodi:role="line"
+		  x="300"
+		  y="124.69347"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7997">&#9662; libs</tspan><tspan
+		  sodipodi:role="line"
+		  x="300"
+		  y="130.86707"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7999">   greetings-framework-v2.4.1.jar</tspan><tspan
+		  sodipodi:role="line"
+		  x="300"
+		  y="137.04068"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan8001">&#9656; src</tspan><tspan
+		  sodipodi:role="line"
+		  x="300"
+		  y="143.21429"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan8003" /></text>
+	 <g
+		id="cheat-modules-g7333"
+		transform="matrix(0.78125,0,0,0.78125,288.35938,47.234365)"
+		style="fill:#FFF;fill-opacity:1"
+		inkscape:label="jar">
+	   <g
+		  id="cheat-modules-g7331"
+		  style="fill:#FFF;fill-opacity:1">
+		 <path
+			id="cheat-modules-path7325"
+			d="m 15,57.6 c 0,3.6 2.2,6.1 5.2,6.1 h 23.6 c 3,0 5.1,-2.5 5.1,-6.1 V 36 l 3.8,3.2 c 0.2,0.2 0.5,0.3 0.7,0.3 0,0 0.1,0 0.1,0 0.3,0 0.5,-0.1 0.7,-0.3 l 8.7,-9.8 C 63.3,29 63.2,28.4 62.8,28 L 47.3,14 c -0.2,-0.2 -0.5,-0.2 -0.7,-0.3 h -0.9 c -1,-1.2 -2.2,-2.1 -3.5,-2.6 L 42,11 V 7.7 h 1.5 C 44.1,7.7 45,7.1 45,6.6 V 1.1 c 0,-0.6 -0.9,-1.4 -1.5,-1.4 h -23 C 19.9,-0.3 19,0.5 19,1.1 v 5.5 c 0,0.6 0.9,1.1 1.5,1.1 H 22 v 3.4 l -0.1,0.1 C 18,13 15,18.3 14.9,23.4 Z M 21,1.7 h 22 v 4 H 21 Z M 41.4,13 c 0.5,0.2 1,0.5 1.5,0.8 h -6 c -0.1,0 -0.2,0 -0.3,0.1 L 35.3,13 M 47,54 c 0,-0.9 -1.8,-1.3 -3.4,-1.3 -0.1,0 -0.1,0 -0.3,0 C 43,51.8 42.6,51 41.9,50.3 L 46,47.5 c 0.5,-0.3 1,-0.7 1,-1.1 z M 36.1,52 c -0.2,-0.4 -0.4,-0.9 -0.7,-1.2 l 1.2,-0.1 c 0.2,0 0.3,-0.1 0.5,-0.1 -0.5,0.4 -0.8,0.9 -1,1.4 z M 31.4,23.7 c 0.1,0 0.1,0 0,0 0.5,0 1,-0.4 1,-0.9 0.1,-1.2 0.7,-2.8 1.8,-2.8 1.2,0.1 2.2,1.2 2.1,2.4 L 36,28 30.5,27.5 C 30,27.5 29.6,27.3 29.3,27 l 1.9,-2.8 c 0.1,-0.2 0.2,-0.3 0.2,-0.5 0,0 0,0 0,0 z m -3.3,5 c 0.5,0.3 1,0.6 1.5,0.7 -0.4,0.4 -0.7,0.9 -1,1.5 -0.2,-0.6 -0.6,-1.1 -1,-1.5 z m 7.4,1.4 c 0,0 0,-0.1 -0.1,-0.1 h 0.1 c 0.1,0 0,0.1 0,0.1 z m 0,11.1 c -0.3,-0.5 -0.7,-1 -1.1,-1.4 l 2.1,-0.2 c 0.1,0 0.2,-0.1 0.4,-0.1 -0.6,0.5 -1.1,1 -1.4,1.7 z m -7.7,-1.5 0.8,-4.4 0.3,4 c 0,0.3 0.1,0.5 0.3,0.7 0.2,0.2 0.4,0.2 0.7,0.2 0,0 0.1,0 0.1,0 h 0.1 c -0.6,0.5 -1,1.1 -1.3,1.8 -0.3,-0.7 -0.7,-1.3 -1.3,-1.7 0.1,-0.2 0.3,-0.4 0.3,-0.6 z m -2.6,1.6 c 1.2,0.2 2,1.4 1.8,2.6 l -0.9,5.2 c -0.3,0 -0.6,0.1 -1,0.2 l -4.6,-0.9 c -1.2,-0.3 -2,-1.5 -1.8,-2.7 0.2,-0.8 1.2,-1.1 2.3,-1.1 0.3,0 0.6,0 0.9,0.1 0.5,0.1 1,-0.3 1.1,-0.8 0.3,-1.1 1.1,-2.8 2.2,-2.6 z m -2.4,9.5 c 0,0 -0.1,0.1 -0.1,0.1 -0.2,-0.1 -0.5,-0.2 -0.7,-0.3 z m 6.5,0.5 C 29,50.7 28.6,50.2 28,49.8 l 0.6,-3.4 0.3,4 c 0,0.3 0.1,0.5 0.3,0.7 0,0 0.1,0 0.1,0.1 0,-0.1 0,0 0,0.1 z m 1.5,-2.1 -0.4,-5.5 c -0.1,-1.2 0.9,-2.3 2.2,-2.4 1,0 1.6,1.7 1.7,2.8 0.1,0.5 0.5,0.9 1,0.9 0.1,0 0.2,0 0.3,0 1,0 2.7,0.3 2.8,1.4 0,0.5 -0.1,1 -0.4,1.5 0,0 0,0 0,0 -0.4,0.5 -0.9,0.9 -1.6,1 z M 40.5,48.9 40,48.3 c 0.3,-0.6 0.5,-1.4 0.4,-2.1 -0.1,-1.6 -1.4,-2.7 -3.3,-3.1 0,-0.8 0.4,-1.5 1,-1.9 0.9,-0.6 2.2,0.6 2.9,1.6 0.3,0.4 0.9,0.5 1.3,0.3 1,-0.6 2.7,-1.2 3.3,-0.3 0.7,1 0.4,2.4 -0.6,3.1 z M 38.4,39 c 0.1,-0.1 0.2,-0.1 0.3,-0.2 l 0.1,0.2 c -0.1,0 -0.3,0 -0.4,0 z m -2,-1.4 -5.6,0.5 -0.4,-5.5 c -0.1,-1.2 0.9,-2.3 2.1,-2.4 1.1,-0.1 1.7,1.6 1.8,2.8 0.1,0.5 0.5,0.9 1,0.9 0,0 0.1,0 0.1,0 0.1,0.2 0.1,0.3 0.2,0.5 l 1.8,2.8 c -0.2,0.2 -0.6,0.4 -1,0.4 z m -7,-14.5 -2.3,3.5 c 0,0 0,0 0,0 l -0.8,1.2 -4.6,-3.1 c -1,-0.7 -1.3,-2.1 -0.6,-3.2 0.1,-0.2 0.4,-0.5 1,-0.5 0.7,0 1.5,0.3 2.3,0.8 0.5,0.3 1,0.2 1.3,-0.3 0.7,-1 1.7,-1.7 2.4,-1.7 0.2,0 0.4,0.1 0.5,0.2 1.1,0.7 1.4,2.1 0.8,3.1 z m -4.2,7.1 c 1.2,0.2 2,1.4 1.8,2.6 l -1,5.5 -5.5,-1.1 c -1.2,-0.3 -2,-1.5 -1.8,-2.7 0.2,-1 1.6,-1.1 2.2,-1.1 0.3,0 0.6,0 0.9,0.1 0.5,0.1 1,-0.3 1.1,-0.8 0.5,-1.3 1.3,-2.6 2.3,-2.5 z m -4.9,9 3.1,0.6 c -0.9,0.6 -1.6,1.6 -2,2.8 -2.1,-0.1 -4.1,0.7 -4.4,2.7 0,0.3 0,0.5 0,0.8 v -11 c 0,2 1.3,3.7 3.3,4.1 z m -3.3,7 c 0,1.9 1.3,3.7 3.3,4.1 v 0 c -1.1,0 -2.1,0.3 -2.7,1.4 -0.5,0.7 -0.6,1.4 -0.6,2.2 z m 2.1,6.6 c 0.6,-0.9 2.3,-0.3 3.3,0.3 0.4,0.3 1,0.2 1.3,-0.3 0.7,-1 2,-2.2 2.9,-1.6 0.6,0.4 1,1.1 1,1.9 -1.9,0.4 -3.2,1.5 -3.3,3.1 -0.1,0.8 0.1,1.5 0.4,2.1 L 24.3,59 19.7,55.9 c -1,-0.7 -1.3,-2.1 -0.6,-3.1 z m 7.3,3.5 c 0.1,-1.1 1.8,-1.4 2.8,-1.4 0.1,0 0.2,0.1 0.3,0.1 0.5,0 1,-0.3 1,-0.8 0.1,-1.1 0.7,-2.6 1.8,-2.6 0,0 0,0 0,0 1.2,0 2.2,1 2.1,2.2 L 34,59.3 28.5,58.8 c -1.3,-0.1 -2.2,-1.2 -2.1,-2.5 z m 13.2,-4.9 c 0.1,0 0.1,0 0.2,0 0.9,0 1.6,1.3 1.9,2.6 0.1,0.5 0.6,0.8 1.1,0.8 0.3,0 0.6,-0.1 0.9,-0.1 0.6,0 2.1,0.1 2.2,1.1 0.2,1.2 -0.6,2.4 -1.8,2.7 l -5.5,1.1 -1,-5.5 c 0,-1.3 0.8,-2.5 2,-2.7 z M 47,41.6 c -1,-1.7 -3.2,-1.6 -5.1,-0.7 -0.3,-0.4 -0.6,-0.7 -1,-1 L 46,36.4 c 0.4,-0.3 1,-0.7 1,-1.1 z m -1.9,-6.8 -4.6,3.1 -0.8,-1.2 c 0,0 0,0 0,0 l -2.3,-3.5 c -0.7,-1 -0.4,-2.5 0.7,-3.1 0.9,-0.6 2.2,0.6 2.9,1.6 0.3,0.4 0.9,0.5 1.3,0.3 0.5,-0.3 1.1,-0.6 1.6,-0.7 l 2,1.8 c 0.1,0.6 -0.3,1.3 -0.8,1.7 z m -3,-5 C 41,28.5 39.5,27.7 38,28 l 0.1,-1.9 4.1,3.7 c 0,-0.1 0,0 -0.1,0 z M 40,9.7 H 24 v -2 h 16 z m -16,2 v -1 h 16 v 1 z m 9.6,1.2 2.2,1.7 c 0,0.1 0,0.2 0,0.3 l 0.4,3.7 C 35.7,18.3 35.1,18.1 34.4,18 33,17.9 31.9,18.7 31.2,20 30.9,19.3 30.4,18.7 29.7,18.3 29.2,18 28.6,17.8 28.1,17.8 c -1.5,0 -2.7,1.1 -3.5,1.9 -2.2,-1 -4.3,-0.7 -5.2,0.7 -1.3,2 -0.8,4.6 1.1,5.9 l 3.2,2.1 c -1.2,0.5 -2,1.8 -2.4,3 -2.5,-0.1 -4.1,0.9 -4.4,2.7 V 23.5 c 0,-4.4 2.7,-9.3 6,-10.7 m 21,48.9 H 20.2 C 18.3,61.7 17,60 17,57.6 v -3.4 c 0,1.3 0.6,2.5 1.7,3.4 l 5.4,3.7 c 0.2,0.1 0.3,0.2 0.5,0.2 0.1,0 0.1,0 0.2,0 0.3,-0.1 0.5,-0.2 0.6,-0.4 l 0.7,-1 c 0.6,0.4 1.3,0.8 2.1,0.8 l 6.6,0.5 c 0,0 0.1,0 0.1,0 0.2,0 0.5,-0.1 0.7,-0.2 0.2,-0.2 0.3,-0.4 0.3,-0.7 l 0.3,-4 0.8,4.4 c 0,0.3 0.2,0.5 0.4,0.6 0.2,0.1 0.4,0.2 0.6,0.2 0.1,0 0.1,0 0.2,0 l 6.5,-1.3 c 1.1,-0.2 1.9,-1 2.5,-1.9 -0.4,1.9 -1.8,3.2 -3.3,3.2 z M 53.5,37 38.9,24.1 38,16.6 l 2.9,2.5 c -0.8,1.3 -0.6,3.1 0.6,4.1 0.6,0.5 1.4,0.8 2.1,0.8 0.9,0 1.8,-0.4 2.4,-1.1 1.2,-1.3 1.1,-3.4 -0.3,-4.6 -1.2,-1 -3,-1 -4.2,-0.1 l -2.9,-2.5 h 7.6 L 60.8,28.6 Z M 43.3,21.2 c 0.1,0.1 0.2,0.1 0.3,0.1 0.1,0 0.3,-0.1 0.4,-0.2 0.2,-0.2 0.2,-0.5 0,-0.7 l -0.8,-0.7 c 0.2,-0.1 0.3,-0.1 0.5,-0.1 0.3,0 0.6,0.1 0.8,0.3 0.5,0.5 0.6,1.2 0.1,1.7 -0.4,0.5 -1.2,0.5 -1.7,0.1 -0.4,-0.3 -0.5,-0.8 -0.4,-1.3 z"
+			inkscape:connector-curvature="0"
+			style="fill:#FFF;fill-opacity:1" />
+		 <path
+			id="cheat-modules-path7327"
+			d="m 53.9,31.9 c 0.1,0.1 0.2,0.1 0.3,0.1 0.1,0 0.3,-0.1 0.4,-0.2 0.2,-0.2 0.2,-0.5 0,-0.7 l -6.8,-6 c -0.2,-0.2 -0.5,-0.2 -0.7,0 -0.2,0.2 -0.2,0.5 0,0.7 z"
+			inkscape:connector-curvature="0"
+			style="fill:#FFF;fill-opacity:1" />
+		 <path
+			id="cheat-modules-path7329"
+			d="m 55.2,30.4 c 0.1,0.1 0.2,0.1 0.3,0.1 0.1,0 0.3,-0.1 0.4,-0.2 0.2,-0.2 0.2,-0.5 0,-0.7 l -6.8,-6 c -0.2,-0.2 -0.5,-0.2 -0.7,0 -0.2,0.2 -0.2,0.5 0,0.7 z"
+			inkscape:connector-curvature="0"
+			style="fill:#FFF;fill-opacity:1" />
+	   </g>
+	 </g>
+	 <g
+		id="cheat-modules-g7884"
+		transform="matrix(1.0869565,0,0,1.0869565,436.73913,43.739116)"
+		inkscape:label="cpu"
+		style="fill:#FFF;fill-opacity:1">
+	   <rect
+		  id="cheat-modules-rect7834"
+		  y="11.996338"
+		  x="12"
+		  width="28"
+		  height="28" />
+	   <rect
+		  id="cheat-modules-rect7836"
+		  y="6"
+		  x="38"
+		  width="2"
+		  height="4" />
+	   <rect
+		  id="cheat-modules-rect7838"
+		  y="3"
+		  x="33"
+		  width="2"
+		  height="7" />
+	   <rect
+		  id="cheat-modules-rect7840"
+		  y="6"
+		  x="28"
+		  width="2"
+		  height="4" />
+	   <rect
+		  id="cheat-modules-rect7842"
+		  y="3"
+		  x="23"
+		  width="2"
+		  height="7" />
+	   <rect
+		  id="cheat-modules-rect7844"
+		  y="6"
+		  x="18"
+		  width="2"
+		  height="4" />
+	   <rect
+		  id="cheat-modules-rect7846"
+		  y="3"
+		  x="13"
+		  width="2"
+		  height="7" />
+	   <rect
+		  id="cheat-modules-rect7848"
+		  y="12"
+		  x="42"
+		  width="4"
+		  height="2" />
+	   <rect
+		  id="cheat-modules-rect7850"
+		  y="17"
+		  x="42"
+		  width="7"
+		  height="2" />
+	   <rect
+		  id="cheat-modules-rect7852"
+		  y="22"
+		  x="42"
+		  width="4"
+		  height="2" />
+	   <rect
+		  id="cheat-modules-rect7854"
+		  y="27"
+		  x="42"
+		  width="7"
+		  height="2" />
+	   <rect
+		  id="cheat-modules-rect7856"
+		  y="32"
+		  x="42"
+		  width="4"
+		  height="2" />
+	   <rect
+		  id="cheat-modules-rect7858"
+		  y="37"
+		  x="42"
+		  width="7"
+		  height="2" />
+	   <rect
+		  id="cheat-modules-rect7860"
+		  y="42"
+		  x="12"
+		  width="2"
+		  height="4" />
+	   <rect
+		  id="cheat-modules-rect7862"
+		  y="42"
+		  x="17"
+		  width="2"
+		  height="7" />
+	   <rect
+		  id="cheat-modules-rect7864"
+		  y="42"
+		  x="22"
+		  width="2"
+		  height="4" />
+	   <rect
+		  id="cheat-modules-rect7866"
+		  y="42"
+		  x="27"
+		  width="2"
+		  height="7" />
+	   <rect
+		  id="cheat-modules-rect7868"
+		  y="42"
+		  x="32"
+		  width="2"
+		  height="4" />
+	   <rect
+		  id="cheat-modules-rect7870"
+		  y="42"
+		  x="37"
+		  width="2"
+		  height="7" />
+	   <rect
+		  id="cheat-modules-rect7872"
+		  y="38"
+		  x="6"
+		  width="4"
+		  height="2" />
+	   <rect
+		  id="cheat-modules-rect7874"
+		  y="33"
+		  x="3"
+		  width="7"
+		  height="2" />
+	   <rect
+		  id="cheat-modules-rect7876"
+		  y="28"
+		  x="6"
+		  width="4"
+		  height="2" />
+	   <rect
+		  id="cheat-modules-rect7878"
+		  y="23"
+		  x="3"
+		  width="7"
+		  height="2" />
+	   <rect
+		  id="cheat-modules-rect7880"
+		  y="18"
+		  x="6"
+		  width="4"
+		  height="2" />
+	   <rect
+		  id="cheat-modules-rect7882"
+		  y="13"
+		  x="3"
+		  width="7"
+		  height="2" />
+	 </g>
+	 <text
+		xml:space="preserve"
+		style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93890953px;line-height:125%;font-family:'Noto Sans Mono CJK JP';-inkscape-font-specification:'Noto Sans Mono CJK JP';letter-spacing:0px;word-spacing:0px;fill:#FFF;fill-opacity:1;stroke:none;stroke-width:0.26458442px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+		x="64.752777"
+		y="35.572392"
+		id="cheat-modules-text7941"
+		class="svg-tool"
+		transform="scale(1.0000042,0.9999958)"
+		inkscape:label="compiler"><tspan
+		  sodipodi:role="line"
+		  id="cheat-modules-tspan7939"
+		  x="64.752777"
+		  y="35.572392"
+		  style="stroke-width:0.26458442px">Compiler &mdash; javac</tspan></text>
+	 <text
+		xml:space="preserve"
+		style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:125%;font-family:'Noto Sans Mono CJK JP';-inkscape-font-specification:'Noto Sans Mono CJK JP';letter-spacing:0px;word-spacing:0px;fill:#FFF;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+		x="65"
+		y="47.283955"
+		id="cheat-modules-text329"
+		class="svg-code"
+		inkscape:label="javac-cp"><tspan
+		  sodipodi:role="line"
+		  id="cheat-modules-tspan327"
+		  x="65"
+		  y="47.283955"
+		  style="stroke-width:0.26458332px">javac</tspan><tspan
+		  sodipodi:role="line"
+		  x="65"
+		  y="53.457565"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan331">    --class-path 'libs/*'</tspan><tspan
+		  sodipodi:role="line"
+		  x="65"
+		  y="59.631176"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan333">    -d classes</tspan><tspan
+		  sodipodi:role="line"
+		  x="65"
+		  y="65.804787"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan335">    src/org/codefx/HelloWorld.java</tspan></text>
+	 <text
+		xml:space="preserve"
+		style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:125%;font-family:'Noto Sans Mono CJK JP';-inkscape-font-specification:'Noto Sans Mono CJK JP';letter-spacing:0px;word-spacing:0px;fill:#FFF;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+		x="65"
+		y="80.804184"
+		id="cheat-modules-text353"
+		class="svg-code"
+		inkscape:label="javac-mp"><tspan
+		  sodipodi:role="line"
+		  id="cheat-modules-tspan351"
+		  x="65"
+		  y="80.804184"
+		  style="stroke-width:0.26458332px">javac</tspan><tspan
+		  sodipodi:role="line"
+		  x="65"
+		  y="86.977798"
+		  style="stroke-width:0.26458332px"
+		  class="svg-modular"
+		  id="cheat-modules-tspan355">    --module-path libs</tspan><tspan
+		  sodipodi:role="line"
+		  x="65"
+		  y="93.151405"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan357">    -d classes</tspan><tspan
+		  sodipodi:role="line"
+		  x="65"
+		  y="99.325012"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan359">    src/org/codefx/HelloWorld.java</tspan><tspan
+		  sodipodi:role="line"
+		  x="65"
+		  y="105.49863"
+		  style="stroke-width:0.26458332px"
+		  class="svg-modular"
+		  id="cheat-modules-tspan361">    src/module-info.java</tspan></text>
+	 <text
+		xml:space="preserve"
+		style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:125%;font-family:'Noto Sans Mono CJK JP';-inkscape-font-specification:'Noto Sans Mono CJK JP';letter-spacing:0px;word-spacing:0px;fill:#FFF;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+		x="204.89613"
+		y="35.572392"
+		id="cheat-modules-text7945"
+		class="svg-tool"
+		inkscape:label="archiver"><tspan
+		  sodipodi:role="line"
+		  id="cheat-modules-tspan7943"
+		  x="204.89613"
+		  y="35.572392"
+		  style="stroke-width:0.26458332px">Archiver &mdash; jar</tspan></text>
+	 <text
+		xml:space="preserve"
+		style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:125%;font-family:'Noto Sans Mono CJK JP';-inkscape-font-specification:'Noto Sans Mono CJK JP';letter-spacing:0px;word-spacing:0px;fill:#FFF;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+		x="205"
+		y="54.588573"
+		id="cheat-modules-text7349"
+		class="svg-code"
+		inkscape:label="jar-cp"><tspan
+		  sodipodi:role="line"
+		  id="cheat-modules-tspan7347"
+		  x="205"
+		  y="54.588573"
+		  style="stroke-width:0.26458332px">jar --create</tspan><tspan
+		  sodipodi:role="line"
+		  x="205"
+		  y="60.762184"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7351">    --file jars/hello.jar</tspan><tspan
+		  sodipodi:role="line"
+		  x="205"
+		  y="66.935791"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7353">    -C classes .</tspan><tspan
+		  sodipodi:role="line"
+		  x="205"
+		  y="73.109406"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7355" /></text>
+	 <text
+		xml:space="preserve"
+		style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:125%;font-family:'Noto Sans Mono CJK JP';-inkscape-font-specification:'Noto Sans Mono CJK JP';letter-spacing:0px;word-spacing:0px;fill:#FFF;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+		x="205.00011"
+		y="80.814964"
+		id="cheat-modules-text7359"
+		class="svg-code"
+		inkscape:label="jar-mp"><tspan
+		  sodipodi:role="line"
+		  id="cheat-modules-tspan7357"
+		  x="205.00011"
+		  y="80.814964"
+		  style="stroke-width:0.26458332px">jar --create</tspan><tspan
+		  sodipodi:role="line"
+		  x="205.00011"
+		  y="86.988571"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7361">    --file jars/hello.jar</tspan><tspan
+		  sodipodi:role="line"
+		  x="205.00011"
+		  y="93.162186"
+		  style="stroke-width:0.26458332px"
+		  class="svg-modular"
+		  id="cheat-modules-tspan7363">    --main-class org.codefx.HelloWorld</tspan><tspan
+		  sodipodi:role="line"
+		  x="205.00011"
+		  y="99.3358"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7365">    -C classes .</tspan><tspan
+		  sodipodi:role="line"
+		  x="205.00011"
+		  y="105.50941"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7367" /></text>
+	 <text
+		xml:space="preserve"
+		style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:125%;font-family:'Noto Sans Mono CJK JP';-inkscape-font-specification:'Noto Sans Mono CJK JP';letter-spacing:0px;word-spacing:0px;fill:#FFF;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+		x="344.86664"
+		y="35.572392"
+		id="cheat-modules-text7949"
+		class="svg-tool"
+		inkscape:label="VM"><tspan
+		  sodipodi:role="line"
+		  id="cheat-modules-tspan7947"
+		  x="344.86664"
+		  y="35.572392"
+		  style="stroke-width:0.26458332px">Virtual Machine &mdash; java</tspan></text>
+	 <text
+		xml:space="preserve"
+		style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:125%;font-family:'Noto Sans Mono CJK JP';-inkscape-font-specification:'Noto Sans Mono CJK JP';letter-spacing:0px;word-spacing:0px;fill:#FFF;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+		x="345"
+		y="53.457569"
+		id="cheat-modules-text7921"
+		class="svg-code"
+		inkscape:label="java-cp"><tspan
+		  sodipodi:role="line"
+		  id="cheat-modules-tspan7919"
+		  x="345"
+		  y="53.457569"
+		  style="stroke-width:0.26458332px">java</tspan><tspan
+		  sodipodi:role="line"
+		  x="345"
+		  y="59.63118"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7923">    --class-path 'libs/*':'jars/*'</tspan><tspan
+		  sodipodi:role="line"
+		  x="345"
+		  y="65.804794"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7925">    org.codefx.HelloWorld</tspan><tspan
+		  sodipodi:role="line"
+		  x="345"
+		  y="71.978401"
+		  style="stroke-width:0.26458332px"
+		  id="cheat-modules-tspan7927" /></text>
+	 <text
+		xml:space="preserve"
+		style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93890333px;line-height:125%;font-family:'Noto Sans Mono CJK JP';-inkscape-font-specification:'Noto Sans Mono CJK JP';letter-spacing:0px;word-spacing:0px;fill:#FFF;fill-opacity:1;stroke:none;stroke-width:0.26458412px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+		x="344.99896"
+		y="80.857811"
+		id="cheat-modules-text7931"
+		class="svg-code"
+		inkscape:label="java-mp"
+		transform="scale(1.000003,0.99999701)"><tspan
+		  sodipodi:role="line"
+		  id="cheat-modules-tspan7929"
+		  x="344.99896"
+		  y="80.857811"
+		  style="stroke-width:0.26458412px">java</tspan><tspan
+		  sodipodi:role="line"
+		  x="344.99896"
+		  y="87.031441"
+		  style="stroke-width:0.26458412px"
+		  class="svg-modular"
+		  id="cheat-modules-tspan7933">    --module-path libs:jars</tspan><tspan
+		  sodipodi:role="line"
+		  x="344.99896"
+		  y="93.20507"
+		  style="stroke-width:0.26458412px"
+		  class="svg-modular"
+		  id="cheat-modules-tspan7935">    --module org.codefx.hello</tspan><tspan
+		  sodipodi:role="line"
+		  x="344.99896"
+		  y="99.3787"
+		  style="stroke-width:0.26458412px"
+		  id="cheat-modules-tspan7937" /></text>
+	 <path
+		style="color:#FFF;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#FFF;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#FFF;solid-opacity:1;vector-effect:none;fill:#FFF;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.9928996;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+		d="m 151.03773,69.352613 c 0.41198,0.582279 0.65613,1.244611 0.73817,1.920854 H 62.5 v 0.999961 h 89.27692 c -0.0811,0.673761 -0.325,1.329206 -0.73919,1.900185 l 5.09339,-1.900185 h 0.0632 v -0.02326 l 1.30565,-0.48732 -1.30569,-0.486802 v -0.0026 h -0.007 z"
+		id="cheat-modules-path143"
+		inkscape:connector-curvature="0" />
+	 <path
+		style="color:#FFF;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#FFF;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#FFF;solid-opacity:1;vector-effect:none;fill:#FFF;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.99289966;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+		d="m 291.03773,69.352613 c 0.41198,0.582279 0.65613,1.244611 0.73817,1.920854 H 202.5 v 0.999961 h 89.27692 c -0.0811,0.673761 -0.325,1.329206 -0.73919,1.900185 l 5.09339,-1.900185 h 0.0632 v -0.02326 l 1.30565,-0.48732 -1.30569,-0.486802 v -0.0026 h -0.007 z"
+		id="cheat-modules-path143-3"
+		inkscape:connector-curvature="0" />
+	 <path
+		style="color:#FFF;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#FFF;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#FFF;solid-opacity:1;vector-effect:none;fill:#FFF;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.99289972;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+		d="m 431.03773,69.352613 c 0.41198,0.582279 0.65613,1.244611 0.73817,1.920854 H 342.5 v 0.999961 h 89.27692 c -0.0811,0.673761 -0.325,1.329206 -0.73919,1.900185 l 5.09339,-1.900185 h 0.0632 v -0.02326 l 1.30565,-0.48732 -1.30569,-0.486802 v -0.0026 h -0.007 z"
+		id="cheat-modules-path143-3-6"
+		inkscape:connector-curvature="0" />
+	 <text
+		xml:space="preserve"
+		style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.28888893px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono';letter-spacing:0px;word-spacing:0px;fill:#FFF;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+		x="163.02928"
+		y="65.2808"
+		id="cheat-modules-text1483"><tspan
+		  sodipodi:role="line"
+		  id="cheat-modules-tspan1481"
+		  x="163.02928"
+		  y="65.2808"
+		  style="fill:#ffffff;stroke-width:0.26458332px">0110</tspan><tspan
+		  sodipodi:role="line"
+		  x="163.02928"
+		  y="79.391907"
+		  style="fill:#ffffff;stroke-width:0.26458332px"
+		  id="cheat-modules-tspan1485">1101</tspan><tspan
+		  sodipodi:role="line"
+		  x="163.02928"
+		  y="93.503021"
+		  style="fill:#ffffff;stroke-width:0.26458332px"
+		  id="cheat-modules-tspan1487">0101</tspan></text>
+	</g>
+	</svg>
+
+	</div>
+</div>
