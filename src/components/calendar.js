@@ -170,11 +170,7 @@ const showDetailsForEvent = event => {
 			return <Link to="https://twitch.tv/nipafx">on Twitch</Link>
 		case "course":
 		case "talk":
-			return event.host.url ? (
-				<Link to={event.host.url}>at {event.host.name}</Link>
-			) : (
-				event.host.name
-			)
+			return <Link to={event.host.url}>at {event.host.name}</Link>
 	}
 }
 

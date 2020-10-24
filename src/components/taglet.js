@@ -73,12 +73,10 @@ const taglet = (link, forward, onClick_Internal, onClick_External, children) => 
 	useLayoutEffect(() => {
 		setJsEnabled(true)
 	}, [])
-	return link ? (
+	return (
 		<Link to={jsEnabled ? forward : link} onClick={onClick}>
 			{children}
 		</Link>
-	) : (
-		children
 	)
 }
 

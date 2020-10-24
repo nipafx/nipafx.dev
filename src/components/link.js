@@ -5,6 +5,13 @@ import ExternalLink from "./externalLink"
 import { Channel, ChannelTag, Tag } from "./taglet"
 
 const Link = ({ to, onClick, onIndexPage, markExternal, className, children }) => {
+	// this allows use of <Link> if URL is possibly null,
+	// in which case the component becomes transparent
+	if (!to)
+		// if `children` are undefined, this can't return `undefined` or React is
+		// very unhappy that the render method didn't return anything; null is ok, though :)
+		return children ?? null
+
 	className = className || ""
 
 	const external =

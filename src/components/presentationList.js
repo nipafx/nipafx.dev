@@ -118,6 +118,7 @@ const parseTime = timeString =>
 	DateTime.fromFormat(timeString, "dd.MM.yyyy HHmm z", { setZone: true })
 
 const extractLocation = (location, locationText) => {
+	if (!location && !locationText) return undefined
 	return {
 		text: location && location.text ? location.text : locationText,
 		url: location ? location.url : null,
@@ -181,11 +182,11 @@ const presentLocation = (name, url, location) => {
 		<React.Fragment>
 			<dt>Where?</dt>
 			<dd>
-				{url ? <Link to={url}>{name}</Link> : name}
+				<Link to={url}>{name}</Link>
 				{location && (
 					<React.Fragment>
 						<br />
-						{location.url ? <Link to={location.url}>{location.text}</Link> : location.text}
+						<Link to={location.url}>{location.text}</Link>
 					</React.Fragment>
 				)}
 			</dd>

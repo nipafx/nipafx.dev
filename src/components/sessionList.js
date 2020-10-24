@@ -72,10 +72,16 @@ const extractSessions = () => {
 			from: DateTime.fromFormat(session.dates.from, "dd.MM.yyyy"),
 			to: DateTime.fromFormat(session.dates.to, "dd.MM.yyyy"),
 		}
+		const location = session.location
+			? {
+					text: session.location.text ?? session.location,
+					url: session.location.url,
+			  }
+			: null
 		// for unknown reasons (Gatsby caching?) this parsing does not behave well
 		// when `session.dates` is overridden with the parsed dates,
 		// so I create a new object instead
-		return { ...session, dates }
+		return { ...session, dates, location }
 	})
 }
 
@@ -127,11 +133,11 @@ const presentLocation = (name, url, location) => {
 		<React.Fragment>
 			<dt>Where?</dt>
 			<dd>
-				{url ? <Link to={url}>{name}</Link> : name}
+				<Link to={url}>{name}</Link>
 				{location && (
 					<React.Fragment>
 						<br />
-						{location.url ? <Link to={location.url}>{location.text}</Link> : location}
+						<Link to={location.url}>{location.text}</Link>
 					</React.Fragment>
 				)}
 			</dd>

@@ -35,22 +35,18 @@ const credits = (credits, type) => {
 		<div {...classNames(...classes)}>
 			{credits.source && (
 				<span key="source">
-					{credits.source.url ? <Link to={credits.source.url}>{source}</Link> : source}
+					<Link to={credits.source.url}>{source}</Link>
 				</span>
 			)}
 			{credits.author && (
 				<span key="author">
-					{credits.author.url ? <Link to={credits.author.url}>{author}</Link> : author}
+					<Link to={credits.author.url}>{author}</Link>
 					{credits.edited && <span> (edited by me)</span>}
 				</span>
 			)}
 			{credits.license && (
 				<span key="license">
-					{credits.license.url ? (
-						<Link to={credits.license.url}>{license}</Link>
-					) : (
-						license
-					)}
+					<Link to={credits.license.url}>{license}</Link>
 				</span>
 			)}
 		</div>

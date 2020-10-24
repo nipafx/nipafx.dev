@@ -19,13 +19,9 @@ const present = (event, text) => {
 	return (
 		<div key={event.url} className={style.card}>
 			<div>
-				{event.url ? (
-					<Link to={event.url} className={style.eventLink}>
-						{header(event)}
-					</Link>
-				) : (
-					header(event)
-				)}
+				<Link to={event.url} className={style.eventLink}>
+					{header(event)}
+				</Link>
 			</div>
 			<div className={style.text}>{text}</div>
 		</div>
