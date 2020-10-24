@@ -34,20 +34,22 @@ const getPostSlugs = (kind, slug) => {
 			}
 		`
 	)
+	// remember that "posts" (external) are "articles" (internal)!
+	const internalSlug = slug === "posts" ? "articles" : slug
 	switch (kind) {
 		// prettier-ignore
 		case "channel": return posts.nodes
-			.filter(post => post.channel === slug)
+			.filter(post => post.channel === internalSlug)
 			.map(post => post.slug)
 		// prettier-ignore
 		case "series": return tags.nodes
-			.find(tag => tag.slug === slug)
+			.find(tag => tag.slug === internalSlug)
 			.series
 			// a series can contain `null` to indicate it is ongoing
 			.filter(post => post)
 			.map(post => post.slug)
 		case "tag":
-			return extractPostsWithoutSeries(slug, tags.nodes, posts.nodes)
+			return extractPostsWithoutSeries(internalSlug, tags.nodes, posts.nodes)
 		default:
 			throw new Error("Unknown post list type: " + kind)
 	}
