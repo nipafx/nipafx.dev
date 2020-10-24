@@ -16,7 +16,7 @@ const LinkList = ({ showOnlyTexts, showOnlyIcons, showIconsUntil, links, classNa
 	if (textsFrom === 600) styles.push(style.textsFrom600)
 	if (textsFrom === 1000) styles.push(style.textsFrom1000)
 
-	return <div {...classNames(...styles)}>{links.map(showLink)}</div>
+	return <div {...classNames(styles)}>{links.map(showLink)}</div>
 }
 
 const showTextsFrom = (showOnlyTexts, showOnlyIcons, showIconsUntil) => {

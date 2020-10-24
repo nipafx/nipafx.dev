@@ -36,7 +36,7 @@ const createIntersectionObserver = () => {
 				// `event.isIntersecting` should indicate whether the element
 				// transitioned into or out of intersection, but Firefox instead
 				// returns true if intersection ratio is > 0;
-				// instead fall back to comparing intersection ratio with threshould
+				// instead fall back to comparing intersection ratio with threshold
 				const visible = event.intersectionRatio < INTERSECTION_THRESHOLD
 				if (visible) {
 					const position = event.boundingClientRect.top

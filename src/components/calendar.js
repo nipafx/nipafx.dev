@@ -120,7 +120,7 @@ const showEvent = (event, inMonth) => {
 	const gridArea = inMonth ? gridAreaForEvent(event) : undefined
 
 	return (
-		<div key={event.startTime} {...classNames(...classes)} style={{ gridArea }}>
+		<div key={event.startTime} {...classNames(classes)} style={{ gridArea }}>
 			<span className={style.date}>{showDatesForEvent(event)}</span>
 			<h3 className={style.title}>
 				<MarkdownAsHtml>{event.title}</MarkdownAsHtml>
