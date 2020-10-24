@@ -29,7 +29,8 @@ const createIntersectionObserver = () => {
 	// to make sure only events after the initial observation are acted on,
 	// store the ids of visited headers
 	const visited = []
-	const update = events =>
+
+	const update = events => {
 		events.forEach(event => {
 			const id = event.target.querySelector(`span`).id
 			if (visited.includes(id)) {
@@ -40,23 +41,19 @@ const createIntersectionObserver = () => {
 				const visible = event.intersectionRatio < INTERSECTION_THRESHOLD
 				if (visible) {
 					const position = event.boundingClientRect.top
-					updateHighlight(id, position)
+					lowlightItems()
+					highlightItems(id, position)
 				}
 			} else visited.push(id)
 		})
+	}
+		
 	return new IntersectionObserver(update, {
 		// when scrolling to a header in the toc, no event is thrown if the margin
 		// is exactly the same as the header height
 		rootMargin: `-${HEADER_HEIGHT + EXTRA_MARGIN}px 0px -50%`,
 		threshold: INTERSECTION_THRESHOLD,
 	})
-}
-
-const updateHighlight = (id, position) => {
-	// remember that the ToC is duplicated (accordion and pop-out-accordion),
-	// so each ToC entry exists twice on the page; hence "itemS" (plural)
-	lowlightItems()
-	highlightItems(id, position)
 }
 
 const lowlightItems = () => {
@@ -86,21 +83,18 @@ const itemAbove = item => {
 	if (siblingItem) {
 		const above = lastTransitiveItem(siblingItem)
 		return above
-	} else {
-		// if this gets called on the first toc entry, the expectation is
-		// that `parent` is null, but if the toc gets nested into a <ul>,
-		// this wouldn't be the case; so... if you're reading this...
-		const parent = item.closest(`ul`).closest(`li`)
-		return parent
 	}
+	// if this gets called on the first toc entry, the expectation is
+	// that `parent` is null, but if the toc gets nested into a <ul>,
+	// this wouldn't be the case; so... if you're reading this...
+	const parent = item.closest(`ul`).closest(`li`)
+	return parent
 }
 
 const lastTransitiveItem = item => {
 	const list = item.querySelector(`ul`)
-	if (!list) return item
-
-	const descendant = list.children.length === 0 ? null : list.children[list.children.length - 1]
-	return descendant ? lastTransitiveItem(descendant) : item
+	if (!list?.children.length) return item
+	return  lastTransitiveItem(list.children[list.children.length - 1])
 }
 
 export default Toc
