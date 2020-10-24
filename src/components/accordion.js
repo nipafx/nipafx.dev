@@ -14,16 +14,14 @@ const Accordion = ({ className, headerClassName, headers, open, children }) => {
 	return (
 		<div id={id} {...classNames(style.container, className)}>
 			{children.map((child, index) =>
-				child ? item(headerClassName, headers[index], open, child) : null
+				child ? item(headers[index], headerClassName, index, open, child) : null
 			)}
 		</div>
 	)
 }
 
-let idCounter = 1
-
-const item = (titleClassName, title, open, item) => {
-	const id = "accordion-item-" + idCounter++
+const item = (title, titleClassName, index, open, item) => {
+	const id = "accordion-item-" + index
 	const checkboxId = id + "-checkbox"
 	const contentId = id + "-content"
 	return (

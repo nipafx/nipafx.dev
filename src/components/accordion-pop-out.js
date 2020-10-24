@@ -16,16 +16,14 @@ const PopOutAccordion = ({ className, headerClassName, headers, children }) => {
 	return (
 		<div id={id} {...classNames(style.container, className)}>
 			{children.map((child, index) =>
-				child ? item(headerClassName, headers[index], child) : null
+				child ? item(headers[index], headerClassName, index, child) : null
 			)}
 		</div>
 	)
 }
 
-let idCounter = 1
-
-const item = (titleClassName, title, item) => {
-	const id = "pop-out-accordion-item-" + idCounter++
+const item = (title, titleClassName, index, item) => {
+	const id = "pop-out-accordion-item-" + index
 	const checkboxId = id + "-checkbox"
 	const contentId = id + "-content"
 	return (

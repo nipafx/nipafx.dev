@@ -11,6 +11,9 @@ import style from "./siteMenu.module.css"
 import json from "../../content/meta/site-menu.json"
 
 const SITE_NAV = "site-nav"
+// I'm assuming there will never be a menu with more than 1000 entries
+// (1000 may seem excessive, but 100 could be too few, because of tag lists)
+const MENU_ENTRY_OFFSET = 1000
 
 const SiteMenu = ({ className, onIndexPage }) => {
 	useEffect(() => {
@@ -22,17 +25,15 @@ const SiteMenu = ({ className, onIndexPage }) => {
 		<div id={SITE_NAV} {...classNames(className, style.rootContainer)}>
 			<div>
 				<nav {...classNames(style.menu, style.topLevelContainer)}>
-					{json.entries.map(entry => topLevelEntry(entry, onIndexPage))}
+					{json.entries.map((entry, index) => topLevelEntry(entry, index, onIndexPage))}
 				</nav>
 			</div>
 		</div>
 	)
 }
 
-let idCounter = 1
-
-const topLevelEntry = ({ title, url, children, className }, onIndexPage) => {
-	const id = "site-nav-top-level-entry-" + idCounter++
+const topLevelEntry = ({ title, url, children, className }, topLevelIndex, onIndexPage) => {
+	const id = "site-nav-top-level-entry-" + topLevelIndex
 	const checkboxId = id + "-checkbox"
 	const contentId = id + "-content"
 	if (url)
@@ -58,7 +59,13 @@ const topLevelEntry = ({ title, url, children, className }, onIndexPage) => {
 				</label>
 				<div id={contentId} className={style.secondLevelOuterContainer}>
 					<div className={style.secondLevelContainer}>
-						{children.map(entry => secondLevelEntry(entry, onIndexPage))}
+						{children.map((entry, secondLevelIndex) =>
+							secondLevelEntry(
+								entry,
+								(topLevelIndex + 1) * MENU_ENTRY_OFFSET + secondLevelIndex,
+								onIndexPage
+							)
+						)}
 					</div>
 				</div>
 			</div>
@@ -67,8 +74,8 @@ const topLevelEntry = ({ title, url, children, className }, onIndexPage) => {
 	throw new Error(`Nav entry "${title}" with neither URL nor children.`)
 }
 
-const secondLevelEntry = ({ title, url, children, className }, onIndexPage) => {
-	const id = "site-nav-second-level-entry-" + idCounter++
+const secondLevelEntry = ({ title, url, children, className }, secondLevelIndex, onIndexPage) => {
+	const id = "site-nav-second-level-entry-" + secondLevelIndex
 	const checkboxId = id + "-checkbox"
 	const contentId = id + "-content"
 	if (url)
