@@ -20,7 +20,7 @@ const Toc = ({ toc }) => {
 		}
 	})
 
-	return <nav id={style.toc} dangerouslySetInnerHTML={{ __html: toc }} />
+	return <nav className={style.toc} dangerouslySetInnerHTML={{ __html: toc }} />
 }
 
 const createIntersectionObserver = () => {
@@ -47,21 +47,37 @@ const createIntersectionObserver = () => {
 	return new IntersectionObserver(update, {
 		// when scrolling to a header in the toc, no event is thrown if the margin
 		// is exactly the same as the header height
-		rootMargin: `-${HEADER_HEIGHT+EXTRA_MARGIN}px 0px -50%`,
+		rootMargin: `-${HEADER_HEIGHT + EXTRA_MARGIN}px 0px -50%`,
 		threshold: INTERSECTION_THRESHOLD,
 	})
 }
 
 const updateHighlight = (id, position) => {
-	const aboveViewport = position <= HEADER_HEIGHT+EXTRA_MARGIN
-	const item = document.querySelector(`#${style.toc} a[href="#${id}"]`).closest(`li`)
-	if (aboveViewport) highlightItem(item)
-	else highlightItem(itemAbove(item))
+	// remember that the ToC is duplicated (accordion and pop-out-accordion),
+	// so each ToC entry exists twice on the page; hence "itemS" (plural)
+	lowlightItems()
+	highlightItems(id, position)
+}
+
+const lowlightItems = () => {
+	document
+		.querySelectorAll(`.${style.toc} a.${style.highlighted}`)
+		.forEach(highlightedItem => highlightedItem.classList.remove(style.highlighted))
+}
+
+const highlightItems = (id, position) => {
+	const aboveViewport = position <= HEADER_HEIGHT + EXTRA_MARGIN
+	// prettier-ignore
+	document
+		.querySelectorAll(`.${style.toc} a[href="#${id}"]`)
+		.forEach(anchor => {
+			const item = anchor.closest(`li`)
+			if (aboveViewport) highlightItem(item)
+			else highlightItem(itemAbove(item))
+		})
 }
 
 const highlightItem = item => {
-	const highlightedItem = document.querySelector(`#${style.toc} a.${style.highlighted}`)
-	if (highlightedItem) highlightedItem.classList.remove(style.highlighted)
 	if (item) item.querySelector(`a`).classList.add(style.highlighted)
 }
 

@@ -1,15 +1,15 @@
-#toc ul {
+.toc ul {
 	margin: 0;
 	margin-left: 1.5em;
 	list-style: none;
 	line-height: 1.5em;
 }
 
-#toc > ul:first-child {
+.toc > ul:first-child {
 	margin-left: 0;
 }
 
-#toc li {
+.toc li {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -17,7 +17,7 @@
 	padding: 0;
 }
 
-#toc li code {
+.toc li code {
 	/* prevent otherwise allowed line breaks in code snippets, to force ellipsis */
 	white-space: pre;
 	word-break: normal;
@@ -33,41 +33,41 @@
 	(See https://bugs.chromium.org/p/chromium/issues/detail?id=644630)
 */
 
-#toc li::before {
+.toc li::before {
 	color: var(--alt-color);
 	content: "├";
 	font-size: 1.5em;
 	margin-right: 0.25em;
 }
 
-#toc li:first-child::before {
+.toc li:first-child::before {
 	content: "┌";
 }
 
-#toc li:last-child::before {
+.toc li:last-child::before {
 	content: "└";
 }
 
-#toc li:only-child::before {
+.toc li:only-child::before {
 	content: "╶";
 }
 
-#toc a {
+.toc a {
 	text-decoration: none;
 }
 
-#toc a:visited {
+.toc a:visited {
 	color: unset;
 }
 
-#toc a:hover, #toc a:hover * {
+.toc a:hover, .toc a:hover * {
 	color: var(--alt-color);
 }
 
-#toc .highlighted, #toc .highlighted * {
+.toc .highlighted, .toc .highlighted * {
 	color: var(--alt-color);
 }
 
-#toc .highlighted:visited, #toc .highlighted:visited * {
+.toc .highlighted:visited, .toc .highlighted:visited * {
 	color: var(--alt-color);
 }
