@@ -6,16 +6,17 @@ import style from "./toc.module.css"
 const HEADER_HEIGHT = 85
 const EXTRA_MARGIN = 50
 const INTERSECTION_THRESHOLD = 1
+const OBSERVATION_POINTS = "article h2, article h3, article h4, article h5, article h6"
 
 const Toc = ({ toc }) => {
 	useEffect(() => {
 		const observer = createIntersectionObserver()
 		document
-			.querySelectorAll(`article h2, article h3, article h4, article h5, article h6`)
+			.querySelectorAll(OBSERVATION_POINTS)
 			.forEach(heading => observer.observe(heading))
 		return () => {
 			document
-				.querySelectorAll(`article h2, article h3, article h4, article h5, article h6`)
+				.querySelectorAll(OBSERVATION_POINTS)
 				.forEach(heading => observer.unobserve(heading))
 		}
 	})
@@ -28,27 +29,23 @@ const createIntersectionObserver = () => {
 
 	// to make sure only events after the initial observation are acted on,
 	// store the ids of visited headers
-	const visited = []
+	const visited = {}
 
-	const update = events => {
-		events.forEach(event => {
-			const id = event.target.querySelector(`span`).id
-			if (visited.includes(id)) {
-				// `event.isIntersecting` should indicate whether the element
-				// transitioned into or out of intersection, but Firefox instead
-				// returns true if intersection ratio is > 0;
-				// instead fall back to comparing intersection ratio with threshould
-				const visible = event.intersectionRatio < INTERSECTION_THRESHOLD
-				if (visible) {
-					const position = event.boundingClientRect.top
-					lowlightItems()
-					highlightItems(id, position)
-				}
-			} else visited.push(id)
-		})
+	const updateHighlights = entry => {
+		const titleId = entry.target.querySelector(`span`).id
+		const isVisible = entry.intersectionRatio < INTERSECTION_THRESHOLD
+		if (visited[titleId] && isVisible) {
+			const position = entry.boundingClientRect.top
+			lowlightItems()
+			highlightItems(titleId, position)
+			return
+		}
+		visited[titleId] = true
 	}
+
+	const onObserve = entries => entries.forEach(updateHighlights)
 		
-	return new IntersectionObserver(update, {
+	return new IntersectionObserver(onObserve, {
 		// when scrolling to a header in the toc, no event is thrown if the margin
 		// is exactly the same as the header height
 		rootMargin: `-${HEADER_HEIGHT + EXTRA_MARGIN}px 0px -50%`,
@@ -75,7 +72,7 @@ const highlightItems = (id, position) => {
 }
 
 const highlightItem = item => {
-	if (item) item.querySelector(`a`).classList.add(style.highlighted)
+	item?.querySelector(`a`).classList.add(style.highlighted)
 }
 
 const itemAbove = item => {
