@@ -7,8 +7,8 @@ import Link from "./link"
 
 import style from "./taglet.module.css"
 
-export const Tag = ({ tag, mode, className, children }) => {
-	const { link, forward, onClick } = detectMode(mode, null, tag)
+export const Tag = ({ tag, mode, className, onClick: onClick_External, children }) => {
+	const { link, forward, onClick: onClick_Internal } = detectMode(mode, null, tag)
 
 	// replace hyphen with non-breaking hyphen
 	const text = tag === "all" ? "ALL‑TAGS" : tag.replace("-", "‑")
@@ -20,13 +20,13 @@ export const Tag = ({ tag, mode, className, children }) => {
 
 	return (
 		<span data-tag={tag} {...classNames(...classes)}>
-			{taglet(link, forward, onClick, tagletChildren)}
+			{taglet(link, forward, onClick_Internal, onClick_External, tagletChildren)}
 		</span>
 	)
 }
 
-export const Channel = ({ channel, plural, mode, colorize, className, children }) => {
-	let { link, forward, onClick } = detectMode(mode, channel, null)
+export const Channel = ({ channel, plural, mode, colorize, className, onClick: onClick_External, children }) => {
+	let { link, forward, onClick: onClick_Internal } = detectMode(mode, channel, null)
 	const { singularName, pluralName, slug } = channelInfo(channel)
 	if (link) link = slug
 
@@ -41,13 +41,13 @@ export const Channel = ({ channel, plural, mode, colorize, className, children }
 
 	return (
 		<span data-channel={channel} {...classNames(...classes)}>
-			{taglet(link, forward, onClick, tagletChildren)}
+			{taglet(link, forward, onClick_Internal, onClick_External, tagletChildren)}
 		</span>
 	)
 }
 
-export const ChannelTag = ({ channel, tag, mode, className, children }) => {
-	const { link, forward, onClick } = detectMode(mode, channel, tag)
+export const ChannelTag = ({ channel, tag, mode, className, onClick: onClick_External, children }) => {
+	const { link, forward, onClick: onClick_Internal } = detectMode(mode, channel, tag)
 
 	// replace hyphen with non-breaking hyphen
 	const text = tag.replace("-", "‑")
@@ -59,12 +59,16 @@ export const ChannelTag = ({ channel, tag, mode, className, children }) => {
 
 	return (
 		<span data-channel={channel} data-tag={tag} {...classNames(...classes)}>
-			{taglet(link, forward, onClick, tagletChildren)}
+			{taglet(link, forward, onClick_Internal, onClick_External, tagletChildren)}
 		</span>
 	)
 }
 
-const taglet = (link, forward, onClick, children) => {
+const taglet = (link, forward, onClick_Internal, onClick_External, children) => {
+	const onClick = event => {
+		if (onClick_External) onClick_External(event)
+		if (onClick_Internal) onClick_Internal(event)
+	}
 	const [jsEnabled, setJsEnabled] = useState(false)
 	useLayoutEffect(() => {
 		setJsEnabled(true)

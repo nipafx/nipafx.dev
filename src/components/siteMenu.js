@@ -18,8 +18,9 @@ const MENU_ENTRY_OFFSET = 1000
 const SiteMenu = ({ className, onIndexPage }) => {
 	useEffect(() => {
 		document.getElementById(SITE_NAV).classList.add(style.animated)
-		window.addEventListener("click", closeOpenMenus)
-		return () => window.removeEventListener("click", closeOpenMenus)
+		const close = closeOpenMenus(false)
+		window.addEventListener("click", close)
+		return () => window.removeEventListener("click", close)
 	})
 	return (
 		<div id={SITE_NAV} {...classNames(className, style.rootContainer)}>
@@ -130,6 +131,7 @@ const thirdLevelEntry = ({ title, url, channel, tag, className }, onIndexPage) =
 					tag={tag}
 					mode={onIndexPage ? "overlink" : "forward"}
 					className={className}
+					onClick={closeOpenMenus(true)}
 				/>{" "}
 			</span>
 		)
@@ -337,16 +339,16 @@ const collapseThirdLevelFromSide = container => {
 	container.addEventListener("transitionend", resetStyle)
 }
 
-const closeOpenMenus = event => {
+const closeOpenMenus = closeAlways => event => {
 	document
 		.querySelectorAll(`.${style.topLevelCheckbox}:checked`)
-		.forEach(checkbox => closeOpenMenu(event, checkbox))
+		.forEach(checkbox => closeOpenMenu(event, checkbox, closeAlways))
 	document
 		.querySelectorAll(`.${style.secondLevelCheckbox}:checked`)
-		.forEach(checkbox => closeOpenMenu(event, checkbox))
+		.forEach(checkbox => closeOpenMenu(event, checkbox, closeAlways))
 }
 
-const closeOpenMenu = (event, checkbox) => {
+const closeOpenMenu = (event, checkbox, closeAlways) => {
 	const target = event.target
 	const clickedLabel = target.nodeName.toLowerCase() === "label" && target.htmlFor === checkbox.id
 	// if the label was clicked, ignore the event;
@@ -354,8 +356,10 @@ const closeOpenMenu = (event, checkbox) => {
 	if (clickedLabel) return
 
 	// if either the checkbox or the div was clicked, we do nothing
-	const clickedMenuEntry = checkbox.parentNode.contains(event.target)
-	if (clickedMenuEntry) return
+	if (!closeAlways) {
+		const clickedMenuEntry = checkbox.parentNode.contains(event.target)
+		if (clickedMenuEntry) return
+	}
 
 	// something unrelated to the currently open menu was clicked ~> close it
 	// (by simulating a click, so the animations are triggered)
