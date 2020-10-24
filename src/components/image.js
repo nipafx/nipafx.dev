@@ -33,18 +33,18 @@ const credits = (credits, type) => {
 
 	return (
 		<div {...classNames(...classes)}>
-			{credits.source && (
+			{credits.source && credits.source.url && (
 				<span key="source">
 					<Link to={credits.source.url}>{source}</Link>
 				</span>
 			)}
-			{credits.author && (
+			{credits.author && credits.author.url && (
 				<span key="author">
 					<Link to={credits.author.url}>{author}</Link>
 					{credits.edited && <span> (edited by me)</span>}
 				</span>
 			)}
-			{credits.license && (
+			{credits.license && credits.license.url && (
 				<span key="license">
 					<Link to={credits.license.url}>{license}</Link>
 				</span>
