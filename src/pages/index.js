@@ -13,16 +13,19 @@ const IndexPage = ({ data }) => (
 	<Site
 		className="list"
 		meta={{
-			description: "A website to sharpen your Java skills - by Nicolai (aka nipafx), a Java enthusiast with a passion for learning and sharing, online and offline."
+			description:
+				"A website to sharpen your Java skills - by Nicolai (aka nipafx), a Java enthusiast with a passion for learning and sharing, online and offline.",
 		}}
 		onIndexPage
 	>
 		<IndexHeader />
 		<div id={PROGRESS_BAR_REFERENCE} className={layout.container}>
 			<PostFilter />
-			<div className={layout.main}>
-				<PostList slugs={data.posts.nodes.map(post => post.slug)} highlightFirst />
-			</div>
+			<PostList
+				slugs={data.posts.nodes.map(post => post.slug)}
+				highlightFirst
+				className={layout.main}
+			/>
 		</div>
 	</Site>
 )

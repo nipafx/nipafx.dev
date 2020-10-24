@@ -6,7 +6,7 @@ import PostCard from "./postCard"
 
 import style from "./postList.module.css"
 
-const PostList = ({ slugs, highlightFirst }) => {
+const PostList = ({ slugs, highlightFirst, className }) => {
 	if (slugs.length === 0) return null
 
 	const id = "post-list-462383"
@@ -24,6 +24,7 @@ const PostList = ({ slugs, highlightFirst }) => {
 	})
 
 	const classes = [style.container]
+	if (className) classes.push(className)
 	if (highlightFirst) classes.push("highlight-first-post-card")
 
 	return (

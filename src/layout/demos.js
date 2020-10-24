@@ -35,9 +35,10 @@ const showRepo = repo => {
 				<Link to={repo.url}>Find the repository here.</Link>
 			</p>
 			<p>Here's a list of the posts that reference it:</p>
-			<div {...classNames(layout.wide, style.posts)}>
-				<PostList slugs={repo.posts.map(post => post.slug)} />
-			</div>
+			<PostList
+				slugs={repo.posts.map(post => post.slug)}
+				{...classNames(layout.wide, style.posts)}
+			/>
 		</React.Fragment>
 	)
 }
@@ -54,9 +55,7 @@ const getReposWithPostSlugs = () => {
 						description
 					}
 				}
-				posts: allPost(
-					sort: { fields: date, order: DESC }
-				) {
+				posts: allPost(sort: { fields: date, order: DESC }) {
 					nodes {
 						date
 						repo {
@@ -68,8 +67,7 @@ const getReposWithPostSlugs = () => {
 			}
 		`
 	)
-	const postsWithRepos = posts.nodes
-		.filter(post => post.repo)
+	const postsWithRepos = posts.nodes.filter(post => post.repo)
 	// prettier-ignore
 	return repos.nodes
 		.map(repo => {

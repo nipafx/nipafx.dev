@@ -9,11 +9,7 @@ import style from "./wrapper.module.css"
 import layout from "../layout/container.module.css"
 
 const PostListWrapper = ({ kind, slug }) => {
-	return (
-		<div {...classNames(layout.wide, style.wrapper)}>
-			<PostList slugs={getPostSlugs(kind, slug)} />
-		</div>
-	)
+	return <PostList slugs={getPostSlugs(kind, slug)} {...classNames(layout.wide, style.wrapper)} />
 }
 
 const getPostSlugs = (kind, slug) => {
