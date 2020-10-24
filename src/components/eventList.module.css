@@ -52,10 +52,6 @@
 	padding: 0.5em;
 }
 
-.text a:hover {
-	color: var(--alt-contrast-color);
-}
-
 @media all and (min-width: 600px) {
 	.list {
 		grid-template-columns: 1fr 1fr;
