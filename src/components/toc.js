@@ -32,15 +32,15 @@ const createIntersectionObserver = () => {
 	const visited = {}
 
 	const updateHighlights = entry => {
-		const titleId = entry.target.querySelector(`span`).id
-		const isVisible = entry.intersectionRatio < INTERSECTION_THRESHOLD
-		if (visited[titleId] && isVisible) {
-			const position = entry.boundingClientRect.top
+		const focusedTitleId = entry.target.querySelector(`span`).id
+		const isTitleVisible = entry.intersectionRatio < INTERSECTION_THRESHOLD
+		if (visited[focusedTitleId] && isTitleVisible) {
+			const titlePosition = entry.boundingClientRect.top
 			lowlightItems()
-			highlightItems(titleId, position)
+			highlightItems(focusedTitleId, titlePosition)
 			return
 		}
-		visited[titleId] = true
+		visited[focusedTitleId] = true
 	}
 
 	const onObserve = entries => entries.forEach(updateHighlights)
