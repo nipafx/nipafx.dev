@@ -74,7 +74,7 @@
 
 .channel:after {
 	color: var(--fg-color);
-	font-family: "Bedstead", monospace;
+	font-family: "JetBrains Mono", monospace;
 	content: " // ";
 	white-space: pre;
 	transition: color var(--menu-transition);

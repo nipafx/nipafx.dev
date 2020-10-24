@@ -55,7 +55,7 @@
 }
 
 .date {
-	font-family: "Bedstead", monospace;
+	font-family: "JetBrains Mono", monospace;
 	color: var(--fg-color-shade-2);
 	margin: 0;
 }

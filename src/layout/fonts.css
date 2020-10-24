@@ -39,6 +39,46 @@
 }
 
 @font-face {
+	font-family: "JetBrains Mono";
+	font-style: normal;
+	font-weight: normal;
+	src: local("JetBrains Mono Regular"), local("JetBrainsMono-Regular"),
+		url("../fonts/JetBrainsMono-Regular.woff2") format("woff2"),
+		url("../fonts/JetBrainsMono-Regular.woff") format("woff"),
+		url("../fonts/JetBrainsMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "JetBrains Mono";
+	font-style: normal;
+	font-weight: bold;
+	src: local("JetBrains Mono Bold"), local("JetBrainsMono-Bold"),
+		url("../fonts/JetBrainsMono-Bold.woff2") format("woff2"),
+		url("../fonts/JetBrainsMono-Bold.woff") format("woff"),
+		url("../fonts/JetBrainsMono-Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "JetBrains Mono";
+	font-style: italic;
+	font-weight: normal;
+	src: local("JetBrains Mono Italic"), local("JetBrainsMono-Italic"),
+		url("../fonts/JetBrainsMono-Italic.woff2") format("woff2"),
+		url("../fonts/JetBrainsMono-Italic.woff") format("woff"),
+		url("../fonts/JetBrainsMono-Italic.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "JetBrains Mono";
+	font-style: italic;
+	font-weight: bold;
+	src: local("JetBrains Mono Bold Italic"), local("JetBrainsMono-Bold-Italic"),
+		url("../fonts/JetBrainsMono-Bold-Italic.woff2") format("woff2"),
+		url("../fonts/JetBrainsMono-Bold-Italic.woff") format("woff"),
+		url("../fonts/JetBrainsMono-Bold-Italic.ttf") format("truetype");
+}
+
+@font-face {
 	font-family: "Bedstead";
 	font-style: normal;
 	font-weight: normal;
@@ -88,7 +128,7 @@ dt {
 }
 
 code {
-	font-family: "Bedstead", monospace;
+	font-family: "JetBrains Mono", monospace;
 }
 
 pre > code {
