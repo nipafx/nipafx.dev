@@ -1,5 +1,6 @@
 ---
 title: "25 Hours of Java"
+isPost: true
 channel: "articles"
 tags: [conversation, community]
 date: 2020-04-20

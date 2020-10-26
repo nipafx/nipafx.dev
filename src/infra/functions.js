@@ -21,42 +21,6 @@ export function classNames() {
 	return className ? { className } : null
 }
 
-export function processTableOfContents(toc) {
-	return (
-		toc
-			.replace(/"/g, `'`)
-			.replace(/<a href='[^#"]*(#[^']*)'>(.*)<\/a>/g, `<a href="$1" title="$2">$2<\/a>`)
-			.replace(/<p>|<\/p>/g, "")
-			// the Remark-generated ToC contains line-breaks, some of which Firefox
-			// displays as a whitespace where there shouldn't be one
-			// (e.g. before <li>s that contain a <ul>)
-			.replace(/\n/g, ``)
-	)
-}
-
-export function findSeries(slug, tags) {
-	const seriesTags = tags
-		.filter(tag => tag.series)
-		.filter(tag =>
-			tag.series
-				// `null` post is allowed to indicate an ongoing series
-				.filter(post => post)
-				.map(post => post.slug)
-				.includes(slug)
-		)
-
-	if (seriesTags.length === 0) return null
-	// I assume each post can only be part of at most one series - hence `seriesTags[0]`
-	const series = seriesTags[0]
-	const description = series.seriesDescription
-	// `null` post is allowed to indicate an ongoing series
-	const ongoing = series.series.includes(null)
-	const posts = series.series
-		.filter(post => post)
-		.map(post => (post.slug === slug ? { ...post, current: true } : post))
-	return { description, posts, ongoing }
-}
-
 export function tagletsPath(channel, tag) {
 	if (!channel && !tag) return `/`
 	return `/#` + tagletsHash(false, channel ? [channel] : [], false, tag ? [tag] : [])

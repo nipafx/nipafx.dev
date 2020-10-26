@@ -74,6 +74,7 @@ exports.onCreateNode = ({ node, getNode, actions, createContentDigest }) => {
 		createCourseNodes(node, createNode, createContentDigest)
 		createPageNodes(node, createNode, createContentDigest)
 		createRepoNodes(node, createNode, createContentDigest)
+		createStubNodes(node, createNode, createContentDigest)
 		createTagNodes(node, createNode, createContentDigest)
 		createTalkNodes(node, createNode, createContentDigest)
 		createVideoNodes(node, createNode, createContentDigest)
@@ -199,6 +200,19 @@ exports.createSchemaCustomization = ({ actions }) => {
 			slug: String!
 			rawContent: String
 		}
+		type Stub implements Node {
+			title: String!
+			slug: String!
+			date: Date! @dateformat
+			isPost: Boolean!
+			channel: String!
+			tags: [String!]!
+			description: String!
+			intro: String
+			searchKeywords: String
+			featuredImage: String
+			source: String
+		}
 		type Tag implements Node {
 			title: String!
 			slug: String!
@@ -234,10 +248,23 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 
 createPostNodes = (node, createNode, createContentDigest) => {
-	if (![`articles`, `courses`, `posts`, `videos`, `talks`].includes(node.fields.collection))
+	if (![`articles`, `courses`, `videos`, `stubs`, `talks`].includes(node.fields.collection))
 		return
+	if (node.fields.collection === `stubs` && !node.frontmatter.isPost) return
 
 	const post = {
+		id: node.fields.collection + `-as-post-` + node.fields.id,
+
+		title: node.frontmatter.title,
+		slug: node.frontmatter.slug,
+		date: node.frontmatter.date,
+		channel:
+			node.fields.collection === `stubs` ? node.frontmatter.channel : node.fields.collection,
+		tags: node.frontmatter.tags,
+		description: node.frontmatter.description,
+		featuredImage: node.frontmatter.featuredImage,
+		repo: node.frontmatter.repo,
+
 		parent: `post`,
 		children: [],
 		internal: {
@@ -245,32 +272,6 @@ createPostNodes = (node, createNode, createContentDigest) => {
 			content: ``,
 			contentDigest: createContentDigest(``),
 		},
-	}
-
-	if (node.fields.collection === `posts`) {
-		post.id = `post-` + node.fields.id
-		post.title = node.frontmatter.title
-		post.slug = node.frontmatter.slug
-		post.date = node.frontmatter.date
-		post.channel = node.frontmatter.channel
-		post.tags = node.frontmatter.tags
-		post.intro = node.frontmatter.intro
-		post.description = node.frontmatter.description
-		post.featuredImage = node.frontmatter.featuredImage
-		post.repo = node.frontmatter.repo
-
-		// see comment on creating article nodes
-		post.content___NODE = node.id
-	} else {
-		post.id = node.fields.collection + `-as-post-` + node.fields.id
-		post.title = node.frontmatter.title
-		post.slug = node.frontmatter.slug
-		post.date = node.frontmatter.date
-		post.channel = node.fields.collection
-		post.tags = node.frontmatter.tags
-		post.description = node.frontmatter.description
-		post.featuredImage = node.frontmatter.featuredImage
-		post.repo = node.frontmatter.repo
 	}
 
 	createNode(post)
@@ -467,6 +468,44 @@ createSnippetNodes = (node, createNode, createContentDigest) => {
 	}
 
 	createNode(snippet)
+}
+
+// This creates a `Stub` node for each stub. It might make sense to _also_ create a node
+// in the respective channel, but that would require additional code (here or in the
+// channel?) and a new flag (to prevent creation via templates) without apparent benefit.
+// So I don't do that (for now).
+createStubNodes = (node, createNode, createContentDigest) => {
+	if (node.fields.collection !== `stubs`) return
+
+	const stub = {
+		id: `stub-` + node.fields.id,
+
+		title: node.frontmatter.title,
+		slug: node.frontmatter.slug,
+		date: node.frontmatter.date,
+		isPost: node.frontmatter.isPost ?? false,
+		channel: node.frontmatter.channel,
+		tags: node.frontmatter.tags,
+		description: node.frontmatter.description,
+		intro: node.frontmatter.intro,
+		searchKeywords: node.frontmatter.searchKeywords,
+		featuredImage: node.frontmatter.featuredImage,
+		repo: node.frontmatter.repo,
+		source: node.frontmatter.source,
+
+		// see comment on creating article nodes
+		content___NODE: node.id,
+
+		parent: `stub`,
+		children: [],
+		internal: {
+			type: `Stub`,
+			content: ``,
+			contentDigest: createContentDigest(``),
+		},
+	}
+
+	createNode(stub)
 }
 
 createTagNodes = (node, createNode, createContentDigest) => {

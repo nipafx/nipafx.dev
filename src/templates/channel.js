@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import { processTableOfContents } from "../infra/functions"
+import { processTableOfContents } from "../infra/stubs"
 
 import SiteLayout from "../layout/site"
 import TagletLayout from "../layout/taglet"

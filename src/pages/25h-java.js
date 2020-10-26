@@ -1,7 +1,6 @@
 import React from "react"
-import { graphql } from "gatsby"
 
-import { processTableOfContents } from "../infra/functions"
+import stub from "../infra/stubs"
 
 import PostLayout from "../layout/post"
 import PostContent from "../components/postContent"
@@ -9,39 +8,13 @@ import SiteLayout from "../layout/site"
 
 import style from "./25h-java.module.css"
 
-const BuildModulesPage = ({ data }) => {
-	const post = data.posts.nodes.find(p => p.slug === `25h-java`)
-
-	const postMeta = {
-		title: post.title,
-		slug: post.slug,
-		image: post.featuredImage,
-		description: post.description,
-		searchKeywords: post.searchKeywords,
-	}
-	const postHeader = {
-		title: post.title,
-		date: post.date,
-		channel: "articles",
-		tags: post.tags,
-		intro: post.intro ?? post.description,
-		featuredImage: post.featuredImage,
-	}
-	const postContent = {
-		title: post.title,
-		slug: post.slug,
-		channel: "articles",
-		description: post.description,
-		toc: processTableOfContents(post.content.tableOfContents),
-		// series: findSeries(data),
-		source: post.repo ?? post.source ? { repo: post.repo, text: post.source } : undefined,
-		htmlAst: post.content.htmlAst,
-	}
+const BuildModulesPage = () => {
+	const { meta, header, content } = stub(`25h-java`)
 
 	return (
-		<SiteLayout className="article" meta={postMeta}>
-			<PostLayout {...postHeader}>
-				<PostContent {...postContent} />
+		<SiteLayout className="article" meta={meta}>
+			<PostLayout {...header}>
+				<PostContent {...content} />
 				<Schedule />
 			</PostLayout>
 		</SiteLayout>
@@ -219,33 +192,5 @@ const time = (date, showUtc) => {
 	if (minutes < 10) minutes = "0" + minutes
 	return date.getHours() + ":" + minutes + (showUtc ? " UTC" : "")
 }
-
-export const query = graphql`
-	{
-		posts: allPost {
-			nodes {
-				title
-				slug
-				date
-				channel
-				tags
-				description
-				intro
-				featuredImage
-				repo {
-					url
-					title
-					type
-					description
-					restrictive
-				}
-				content {
-					htmlAst
-					tableOfContents(pathToSlugField: "frontmatter.slug")
-				}
-			}
-		}
-	}
-`
 
 export default BuildModulesPage

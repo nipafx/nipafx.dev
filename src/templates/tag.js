@@ -2,7 +2,7 @@ import React from "react"
 
 import { graphql } from "gatsby"
 
-import { processTableOfContents } from "../infra/functions"
+import { processTableOfContents } from "../infra/stubs"
 
 import PostListWrapper from "../components/postListWrapper"
 import SiteLayout from "../layout/site"

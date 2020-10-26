@@ -1,24 +1,32 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
+import stub from "../infra/stubs"
+
 import { classNames } from "../infra/functions"
 
 import { H2 } from "../components/headings"
 import Link from "../components/link"
 import MarkdownAsHtml from "../infra/markdownAsHtml"
-import PageLayout from "../layout/page"
+import PostLayout from "../layout/post"
+import PostContent from "../components/postContent"
 import PostList from "../components/postList"
+import SiteLayout from "../layout/site"
 
 import style from "./demos.module.css"
 import layout from "../layout/container.module.css"
 
-const DemosLayout = page => {
+const DemosPage = () => {
+	const { meta, header, content } = stub(`demos`)
 	const repos = getReposWithPostSlugs()
-	const toc = generateToc(repos)
+	content.toc = generateToc(repos)
+
 	return (
-		<PageLayout {...page} toc={toc}>
-			{repos.map(showRepo)}
-		</PageLayout>
+		<SiteLayout className={content.channel} meta={meta}>
+			<PostLayout {...header}>
+				<PostContent {...content}>{repos.map(showRepo)}</PostContent>
+			</PostLayout>
+		</SiteLayout>
 	)
 }
 
@@ -90,4 +98,4 @@ const generateToc = repos => {
 
 const anchorOf = title => title.replace(/[\s\/\+_]/g, "-").toLowerCase()
 
-export default DemosLayout
+export default DemosPage
