@@ -4,54 +4,6 @@
 	grid-gap: 1em;
 }
 
-.card {
-	display: flex;
-	flex-direction: column;
-
-	border: 1px solid var(--alt-color);
-}
-
-.eventLink {
-	text-decoration: none;
-}
-
-.eventCover {
-	height: 100%;
-	width: 100%;
-	transition: background-color var(--menu-transition);
-}
-
-.eventLink:hover .eventCover {
-	background-color: rgba(var(--alt-color-rgb), 0.8);
-}
-
-.eventLogo {
-	background-color: white;
-	z-index: -1;
-}
-
-.eventName {
-	margin: 0;
-	margin-top: -1.75em;
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.7);
-	transition: all var(--menu-transition);
-}
-
-.eventLink:hover .eventName {
-	color: var(--alt-contrast-color);
-	background-color: transparent;
-}
-
-.eventName > span {
-	padding: 0 0.5em;
-}
-
-.text {
-	flex: 1;
-	padding: 0.5em;
-}
-
 @media all and (min-width: 600px) {
 	.list {
 		grid-template-columns: 1fr 1fr;
