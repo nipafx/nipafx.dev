@@ -67,6 +67,10 @@
 					"url": "/talks"
 				},
 				{
+					"title": "Past",
+					"url": "/past-talks"
+				},
+				{
 					"title": "Upcoming",
 					"url": "/schedule"
 				},

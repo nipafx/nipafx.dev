@@ -16,7 +16,7 @@ const PresentationList = ({ slug }) => {
 			{presentations.upcoming.length > 0 && (
 				<React.Fragment>
 					<H2 id="upcoming">Upcoming Presentations</H2>
-					<p>{upcomingText(presentations.upcoming)}</p>
+					<p>{upcomingText(presentations.upcoming, slug)}</p>
 					<EventList
 						events={preparePresentations(presentations.upcoming)}
 						className={layout.main}
@@ -44,17 +44,21 @@ const PresentationList = ({ slug }) => {
 	)
 }
 
-const upcomingText = upcoming => {
+const upcomingText = (upcoming, specificTalk) => {
+	const present = specificTalk ? "present this talk" : "be"
 	const intro =
 		upcoming.length === 1
-			? `In the coming months, I'll present this talk at ${upcoming[0].event.name}.`
+			? `In the coming months, I'll ${present} at ${upcoming[0].event.name}.`
 			: upcoming.length === 2
-			? `In the coming months, I'll present this talk at ${upcoming[0].event.name} and ${upcoming[1].event.name}.`
-			: `In the coming months, I'll present this talk at ${upcoming[0].event.name} and a few other conferences.`
-	return `${intro} If you're there as well, I'd love to meet you - I'm always up for a chat. 😁 Just flag me down when you see me.`
+			? `In the coming months, I'll ${present} at ${upcoming[0].event.name} and ${upcoming[1].event.name}.`
+			: `In the coming months, I'll ${present} at ${upcoming[0].event.name} and a few other conferences.`
+	return `${intro} If you're there as well, I'd love to meet you - I'm always up for a chat. 😁 Just flag me down when you see me. (This includes chat rooms.)`
 }
 
-const pastText = pastByYear => {
+const pastText = (pastByYear, specificTalk) => {
+	if (!specificTalk)
+		return `I've been speaking at conferences for a few years now - prepare for a long list. 😉`
+
 	const numberOfPresentations = pastByYear
 		.map(pres => pres.presentations.length)
 		.reduce((accumulator, currentValue) => accumulator + currentValue, 0)

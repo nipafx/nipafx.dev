@@ -14,6 +14,15 @@ More are always in the making and some of them are pretty malleable, so feel fre
 
 <postlist kind="channel"></postlist>
 
+## Past & Upcoming
+
+In case you're interested in a talk I gave at a past event, for example to check the slides or watch a video, you can select the respective talk above.
+Alternatively, check [this list of all past talks](/past-talks) to find a presentation by date or event.
+
+Looking into the future, these are the next two planned presentations - for more check [the full schedule](/schedule):
+
+<calendar type="talks" time="upcoming" order="asc" limit="2" display="list"></calendar>
+
 ## Events
 
 ### Community Meetings
