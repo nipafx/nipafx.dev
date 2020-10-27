@@ -6,18 +6,14 @@ import style from "./toc.module.css"
 const HEADER_HEIGHT = 85
 const EXTRA_MARGIN = 50
 const INTERSECTION_THRESHOLD = 1
-const OBSERVATION_POINTS = "article h2, article h3, article h4, article h5, article h6"
+const HEADERS = "article h2, article h3, article h4, article h5, article h6"
 
 const Toc = ({ toc }) => {
 	useEffect(() => {
 		const observer = createIntersectionObserver()
-		document
-			.querySelectorAll(OBSERVATION_POINTS)
-			.forEach(heading => observer.observe(heading))
+		document.querySelectorAll(HEADERS).forEach(heading => observer.observe(heading))
 		return () => {
-			document
-				.querySelectorAll(OBSERVATION_POINTS)
-				.forEach(heading => observer.unobserve(heading))
+			document.querySelectorAll(HEADERS).forEach(heading => observer.unobserve(heading))
 		}
 	})
 
@@ -27,23 +23,32 @@ const Toc = ({ toc }) => {
 const createIntersectionObserver = () => {
 	// gripes with intersection observer: https://twitter.com/nipafx/status/1217590444772810753
 
-	// to make sure only events after the initial observation are acted on,
-	// store the ids of visited headers
+	// registering the intersection observer triggers an event for each
+	// observed header, but none of them should be highlighted at this point;
+	// instead store the initial events' targets and only act on an event
+	// if its target was stored earlier.
 	const visited = {}
 
-	const updateHighlights = entry => {
-		const focusedTitleId = entry.target.querySelector(`span`).id
-		const isTitleVisible = entry.intersectionRatio < INTERSECTION_THRESHOLD
-		if (visited[focusedTitleId] && isTitleVisible) {
-			const titlePosition = entry.boundingClientRect.top
-			lowlightItems()
-			highlightItems(focusedTitleId, titlePosition)
+	const updateHighlights = event => {
+		const focusedHeaderId = event.target.querySelector(`span`).id
+		if (!visited[focusedHeaderId]) {
+			visited[focusedHeaderId] = true
 			return
 		}
-		visited[focusedTitleId] = true
+
+		const isHeaderVisible = event.intersectionRatio < INTERSECTION_THRESHOLD
+		if (isHeaderVisible) {
+			// `event.isIntersecting` should indicate whether the element
+			// transitioned into or out of intersection, but Firefox instead
+			// returns true if intersection ratio is > 0;
+			// instead fall back to comparing intersection ratio with threshold
+			const headerPosition = event.boundingClientRect.top
+			lowlightItems()
+			highlightItems(focusedHeaderId, headerPosition)
+		}
 	}
 
-	const onObserve = entries => entries.forEach(updateHighlights)
+	const onObserve = events => events.forEach(updateHighlights)
 
 	return new IntersectionObserver(onObserve, {
 		// when scrolling to a header in the toc, no event is thrown if the margin
@@ -72,7 +77,7 @@ const highlightItems = (id, position) => {
 }
 
 const highlightItem = item => {
-	item?.querySelector(`a`).classList.add(style.highlighted)
+	if (item) item.querySelector(`a`).classList.add(style.highlighted)
 }
 
 const itemAbove = item => {
@@ -80,18 +85,21 @@ const itemAbove = item => {
 	if (siblingItem) {
 		const above = lastTransitiveItem(siblingItem)
 		return above
+	} else {
+		// if this gets called on the first toc entry, the expectation is
+		// that `parent` is null, but if the toc gets nested into a <ul>,
+		// this wouldn't be the case; so... if you're reading this...
+		const parent = item.closest(`ul`).closest(`li`)
+		return parent
 	}
-	// if this gets called on the first toc entry, the expectation is
-	// that `parent` is null, but if the toc gets nested into a <ul>,
-	// this wouldn't be the case; so... if you're reading this...
-	const parent = item.closest(`ul`).closest(`li`)
-	return parent
 }
 
 const lastTransitiveItem = item => {
 	const list = item.querySelector(`ul`)
-	if (!list?.children.length) return item
-	return  lastTransitiveItem(list.children[list.children.length - 1])
+	if (!list || list.children.length === 0) return item
+
+	const lastChild = list.children[list.children.length - 1]
+	return lastTransitiveItem(lastChild)
 }
 
 export default Toc
