@@ -13,13 +13,21 @@ import channelLinks from "../../content/meta/channel-links.json"
 import shareLinks from "../../content/meta/share-links.json"
 
 import style from "./postNav.module.css"
+import Feedback from "./feedback"
 
 const PostNav = ({ title, slug, channel, description, toc, canonical, series, source, open }) => {
 	return (
 		<Nav
 			title={title}
-			longHeaders={["origin", "series", "source code", "table of contents", "share & follow"]}
-			shortHeaders={["org", "ser", "src", "toc", "s+f"]}
+			longHeaders={[
+				"origin",
+				"series",
+				"source code",
+				"table of contents",
+				"share & follow",
+				"bugs & features",
+			]}
+			shortHeaders={["org", "ser", "src", "toc", "s+f", "bug"]}
 			open={open}
 		>
 			{canonical && showCanonical(canonical, title)}
@@ -27,6 +35,7 @@ const PostNav = ({ title, slug, channel, description, toc, canonical, series, so
 			{source && showSource(source, channel)}
 			{toc && showToc(toc)}
 			{showShare(title, slug, description)}
+			<Feedback className={style.entry} />
 		</Nav>
 	)
 }

@@ -8,6 +8,7 @@ import Nav from "./nav"
 
 import style from "./postFilter.module.css"
 import tagletStyle from "./taglet.module.css"
+import Feedback from "./feedback"
 
 const PostFilter = () => {
 	const channelListId = "post-filter-channels-426396"
@@ -32,7 +33,12 @@ const PostFilter = () => {
 
 	const { channels, tags } = channelsAndTags()
 	return (
-		<Nav title="Filter" longHeaders={["channels", "tags"]} open>
+		<Nav
+			title="Filter"
+			longHeaders={["channels", "tags", "bugs & features"]}
+			shortHeaders={["channels", "tags", "bugs"]}
+			open
+		>
 			<div {...classNames(channelListId, style.entries)}>
 				<Channel key="all" channel="all" plural mode="uplink" />
 				<br />
@@ -53,6 +59,7 @@ const PostFilter = () => {
 					<Tag key={tag} tag={tag} mode="uplink" />
 				))}
 			</div>
+			<Feedback className={style.entries} />
 		</Nav>
 	)
 }
