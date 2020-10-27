@@ -1,5 +1,6 @@
 import React from "react"
 
+import Event from "./event"
 import Image from "./image"
 import Link from "./link"
 
@@ -7,31 +8,14 @@ import { classNames } from "../infra/functions"
 
 import style from "./eventList.module.css"
 
-const EventList = ({ events, className, children }) => {
+const EventList = ({ events, presentDate, className }) => {
 	return (
 		<div {...classNames(style.list, className)}>
-			{children.map((child, index) => present(events[index], child))}
+			{events.map(event => (
+				<Event  key={event.url} event={event} presentDate={presentDate} />
+			))}
 		</div>
 	)
 }
-
-const present = (event, text) => {
-	return (
-		<div key={event.url} className={style.card}>
-			<div>
-				<Link to={event.url} className={style.eventLink}>
-					{header(event)}
-				</Link>
-			</div>
-			<div className={style.text}>{text}</div>
-		</div>
-	)
-}
-
-const header = event => (
-	<div className={style.eventCover}>
-		{event.image && <Image id={event.image} type="eventCard" className={style.eventLogo} />}
-	</div>
-)
 
 export default EventList

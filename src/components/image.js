@@ -32,7 +32,7 @@ const credits = (credits, type) => {
 	const license = responsiveText("lic", "license")
 
 	return (
-		<div {...classNames(...classes)}>
+		<div {...classNames(classes)}>
 			{credits.source && credits.source.url && (
 				<span key="source">
 					<Link to={credits.source.url}>{source}</Link>

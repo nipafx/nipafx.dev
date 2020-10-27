@@ -25,8 +25,8 @@ const ContentImage = ({ slug, options, className }) => {
 	if (options.includes("bg")) imageClasses.push(style.bg)
 
 	return (
-		<div {...classNames(...divClasses)}>
-			<Image id={slug} type={type} {...classNames(...imageClasses)} />
+		<div {...classNames(divClasses)}>
+			<Image id={slug} type={type} {...classNames(imageClasses)} />
 		</div>
 	)
 }

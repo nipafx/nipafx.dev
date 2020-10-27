@@ -1,5 +1,7 @@
 ---
 title: "Demos, Demos, Demos"
+isPost: false
+channel: "pages"
 tags: [java-next, book-club, patterns, junit-5, performance]
 date: 2020-10-04
 slug: demos

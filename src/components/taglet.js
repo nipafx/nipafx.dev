@@ -19,7 +19,7 @@ export const Tag = ({ tag, mode, className, onClick: onClick_External, children 
 	if (className) classes.push(className)
 
 	return (
-		<span data-tag={tag} {...classNames(...classes)}>
+		<span data-tag={tag} {...classNames(classes)}>
 			{taglet(link, forward, onClick_Internal, onClick_External, tagletChildren)}
 		</span>
 	)
@@ -40,7 +40,7 @@ export const Channel = ({ channel, plural, mode, colorize, className, onClick: o
 	if (className) classes.push(className)
 
 	return (
-		<span data-channel={channel} {...classNames(...classes)}>
+		<span data-channel={channel} {...classNames(classes)}>
 			{taglet(link, forward, onClick_Internal, onClick_External, tagletChildren)}
 		</span>
 	)
@@ -58,7 +58,7 @@ export const ChannelTag = ({ channel, tag, mode, className, onClick: onClick_Ext
 	if (className) classes.push(className)
 
 	return (
-		<span data-channel={channel} data-tag={tag} {...classNames(...classes)}>
+		<span data-channel={channel} data-tag={tag} {...classNames(classes)}>
 			{taglet(link, forward, onClick_Internal, onClick_External, tagletChildren)}
 		</span>
 	)

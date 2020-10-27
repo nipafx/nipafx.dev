@@ -44,7 +44,7 @@ const createIntersectionObserver = () => {
 	}
 
 	const onObserve = entries => entries.forEach(updateHighlights)
-		
+
 	return new IntersectionObserver(onObserve, {
 		// when scrolling to a header in the toc, no event is thrown if the margin
 		// is exactly the same as the header height

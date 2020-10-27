@@ -1,6 +1,6 @@
 ---
 title: "The Java Module System with Sander Mak"
-tags: [j_ms]
+tags: [conversation, j_ms]
 date: 2019-05-26
 slug: java-module-system-sander-mak
 videoSlug: jpms-sander-mak

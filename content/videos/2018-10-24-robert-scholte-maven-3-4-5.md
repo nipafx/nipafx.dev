@@ -1,6 +1,6 @@
 ---
 title: "Maven 3 / 4 / 5 with Robert Scholte"
-tags: [tools]
+tags: [conversation, tools]
 date: 2018-10-24
 slug: robert-scholte-maven-3-4-5
 videoSlug: robert-scholte-maven-3-4-5

@@ -16,8 +16,7 @@ Formally, that means such texts are licensed under [CC-BY-NC 4.0](https://creati
 
 An exact definition of _commercial use_ is impossible, but here are some guidelines as to how I interpret it in this context:
 
--   it is **ok** to partially reuse my texts on your website as long as it displays no ads and offers no paid products or services
--   while hence **technically ok**, it's a dick move to simply republish entire posts elsewhere without adding a [canonical URL](https://yoast.com/what-is-a-canonical-url/) back to the exact page containing the original content - don't be that guy/gal
+-   it is **ok** to reuse my texts on your website as long as it displays no ads and offers no paid products or services
 -   it is **ok** to reuse my texts for a free book (electronic or paper) as long as it advertizes no paid products or services
 -   it is **ok** to reuse my texts for conference talks as long as you don't charge a speaker fee (if travel expenses are reimbursed, that's ok with me)
 
@@ -26,6 +25,8 @@ If you are in any way unsure of the legality of your intended use case or I simp
 ### Attribution
 
 To provide proper attribution, please mention my full name (_Nicolai Parlog_) and link to this website (_https://nipafx.dev_) close to where you reused the content.
+
+If you publish large parts or entire posts on your website, attribution must also include a [canonical URL](https://yoast.com/what-is-a-canonical-url/) linking back to the exact page containing the original content.
 
 ### Nota Bene
 

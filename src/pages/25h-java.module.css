@@ -1,0 +1,131 @@
+.schedule {
+	margin: 2em 1em 0;
+	display: grid;
+	grid-gap: 20px;
+
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"overflow	"
+		"birthday	"
+		"stream		"
+		"kevlin		"
+		"jms		"
+		"trisha		"
+		"junit		"
+		"next		"
+		"martijn	"
+		"projects	"
+		"brian		"
+		"java9		"
+		"christian	"
+		"java1011	"
+		"venkat		"
+		"var		"
+		"java1214	"
+		"sharat		"
+}
+
+.entry {
+	border: 1px solid var(--alt-color);
+	text-align: center;
+	padding: 10px 10px;
+}
+
+.date {
+	font-family: "Bedstead", monospace;
+	color: var(--fg-color-shade-2);
+	margin: 0;
+	font-size: var(--small-font-size);
+}
+
+.date::before {
+	content: "// ";
+}
+
+.date::after {
+	content: " //";
+}
+
+.day::after {
+	content: "; ";
+}
+
+.start-time {
+	color: var(--alt-color);
+}
+
+.end-time::before {
+	content: " to ";
+}
+
+.topic::before {
+	content: none;
+}
+
+.topic {
+	margin: 0;
+}
+
+.description {
+	color: var(--fg-color-shade-2);
+	margin: 0;
+}
+
+@media all and (min-width: 600px) {
+	.schedule {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(14, auto) 3em repeat(14, auto);
+		grid-template-areas:
+			"overflow	.		"
+			"overflow	.		"
+			"birthday	trisha	"
+			"birthday	trisha	"
+			"stream		trisha	"
+			"stream		trisha	"
+			"kevlin		junit	"
+			"kevlin		junit	"
+			"kevlin		junit	"
+			"kevlin		junit	"
+			"jms		next	"
+			"jms		next	"
+			"jms		.		"
+			"jms		.		"
+			".			.		"
+			"martijn	java1011	"
+			"martijn	java1011	"
+			"projects	java1011	"
+			"projects	java1011	"
+			"brian		venkat		"
+			"brian		venkat		"
+			"brian		venkat		"
+			"brian		venkat		"
+			"java9		var			"
+			"java9		var			"
+			"java9		java1214	"
+			"christian	java1214	"
+			"christian	sharat		"
+			".			sharat		"
+	}
+}
+
+@media all and (min-width: 1100px) {
+	.schedule {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: repeat(14, auto);
+		grid-template-areas:
+			"overflow	.		martijn		java1011	"
+			"overflow	.		martijn		java1011	"
+			"birthday	trisha	projects	java1011	"
+			"birthday	trisha	projects	java1011	"
+			"stream		trisha	brian		venkat		"
+			"stream		trisha	brian		venkat		"
+			"kevlin		junit	brian		venkat		"
+			"kevlin		junit	brian		venkat		"
+			"kevlin		junit	java9		var			"
+			"kevlin		junit	java9		var			"
+			"jms		next	java9		java1214	"
+			"jms		next	christian	java1214	"
+			"jms		.		christian	sharat		"
+			"jms		.		.			sharat		";
+	}
+}

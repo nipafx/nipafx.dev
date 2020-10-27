@@ -2390,5 +2390,21 @@
 				"name": "me"
 			}
 		}
+	},
+	{
+		"slug": "25h-java",
+		"credits": {
+			"author": {
+				"name": "Annie Spratt",
+				"url": "https://unsplash.com/@anniespratt"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/M20ylqCzSZw"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]

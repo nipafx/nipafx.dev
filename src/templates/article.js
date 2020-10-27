@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import { processTableOfContents, findSeries } from "../infra/functions"
+import { detectSeries, detectSource, processTableOfContents } from "../infra/stubs"
 
 import SiteLayout from "../layout/site"
 import ArticleLayout from "../layout/article"
@@ -20,11 +20,8 @@ export default ({ data }) => {
 		intro: data.article.intro ?? data.article.description,
 		featuredImage: data.article.featuredImage,
 		toc: processTableOfContents(data.article.content.tableOfContents),
-		source:
-			data.article.repo ?? data.article.source
-				? { repo: data.article.repo, text: data.article.source }
-				: undefined,
-		series: findSeries(data.article.slug, data.tags.nodes),
+		source: detectSource(data.article.repo, data.article.source),
+		series: detectSeries(data.article.slug),
 		htmlAst: data.article.content.htmlAst,
 	}
 	const meta = {
@@ -66,17 +63,6 @@ export const query = graphql`
 			content {
 				htmlAst
 				tableOfContents(pathToSlugField: "frontmatter.slug")
-			}
-		}
-		tags: allTag {
-			nodes {
-				title
-				slug
-				series {
-					title
-					slug
-				}
-				seriesDescription
 			}
 		}
 	}

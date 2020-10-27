@@ -1,6 +1,6 @@
 ---
 title: "Welcome, Java 9!"
-tags: [java-9]
+tags: [community, java-9]
 date: 2017-09-21
 slug: welcome-java-9
 videoSlug: welcome-java-9

@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import SiteLayout from "../layout/site"
-import DemosLayout from "../layout/demos"
 import PageLayout from "../layout/page"
 
 export default ({ data }) => {
@@ -12,6 +11,7 @@ export default ({ data }) => {
 		date: data.page.date,
 		tags: data.page.tags,
 		description: data.page.description,
+		intro: data.page.intro ?? data.page.description,
 		featuredImage: data.page.featuredImage,
 		toc: createTableOfContents(data.page),
 		htmlAst: data.page.content.htmlAst,
@@ -26,7 +26,7 @@ export default ({ data }) => {
 	const className = data.page.style ?? "page"
 	return (
 		<SiteLayout className={className} meta={meta}>
-			{page.slug === "demos" ? <DemosLayout {...page} /> : <PageLayout {...page} />}
+			<PageLayout {...page} />
 		</SiteLayout>
 	)
 }

@@ -16,7 +16,7 @@ const ContentVideo = ({ slug, options, className }) => {
 	// but apparently JS is too cool for Array::remove 🙄
 	if (!options.includes("narrow")) classes.push(layout.wide)
 
-	return <Video slug={slug} {...classNames(...classes)} />
+	return <Video slug={slug} {...classNames(classes)} />
 }
 
 export default ContentVideo

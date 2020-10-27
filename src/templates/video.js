@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import SiteLayout from "../layout/site"
 import VideoLayout from "../layout/video"
 
-import { processTableOfContents } from "../infra/functions"
+import { detectSource, processTableOfContents } from "../infra/stubs"
 
 import videoData from "../../content/meta/videos.json"
 
@@ -18,10 +18,7 @@ export default ({ data }) => {
 		description: data.video.description,
 		intro: data.video.intro ?? data.video.description,
 		toc: processTableOfContents(data.video.content.tableOfContents),
-		source:
-			data.video.repo || data.video.source
-				? { repo: data.video.repo, text: data.video.source }
-				: undefined,
+		source: detectSource(data.video.repo, data.video.source),
 		htmlAst: data.video.content.htmlAst,
 	}
 	const meta = {

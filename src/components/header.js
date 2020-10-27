@@ -98,13 +98,13 @@ const showTags = (channel, tags) => {
 
 // PAGE HEADER
 
-export const PageHeader = ({ title, date, tags, description, featuredImage }) => {
+export const PageHeader = ({ title, date, tags, intro, featuredImage }) => {
 	return (
 		<Header featuredImage={featuredImage}>
 			<FormattedDate date={date} />
 			<MarkdownAsHtml>{title}</MarkdownAsHtml>
 			{showTags("pages", tags)}
-			<MarkdownAsHtml>{description}</MarkdownAsHtml>
+			<MarkdownAsHtml>{intro}</MarkdownAsHtml>
 		</Header>
 	)
 }

@@ -28,7 +28,7 @@ const PostList = ({ slugs, highlightFirst, className }) => {
 	if (highlightFirst) classes.push("highlight-first-post-card")
 
 	return (
-		<div id={id} {...classNames(...classes)}>
+		<div id={id} {...classNames(classes)}>
 			{slugs.map(slug => (
 				<PostCard key={slug} slug={slug} className={style.card} />
 			))}

@@ -1,5 +1,7 @@
 import React, { useEffect } from "react"
 
+import stub from "../infra/stubs"
+
 import SiteLayout from "../layout/site"
 import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
 import { PageHeader } from "../components/header"
@@ -21,18 +23,15 @@ const SchedulePage = () => {
 		}
 	})
 
-	const meta = {
-		title: "Schedule",
-		slug: "schedule",
-		description: "My live streams, talks, courses, etc in the coming months.",
-	}
-	const description = `I regularly [stream on Twitch](/live), [speak at conferences](/talks) and occasionally give [Java courses](/courses) in a public forum. Here's the schedule for the coming months.`
+	const { meta, header } = stub(`schedule`)
+	header.date = new Date()
+
 	return (
 		<SiteLayout className="stream" meta={meta}>
 			<main>
 				<section id={PROGRESS_BAR_REFERENCE}>
 					<div className={style.header}>
-						<PageHeader title="Schedule" date={new Date()} description={description} />
+						<PageHeader {...header} />
 					</div>
 					<div className={layout.container}>
 						<p className={style.colors}>

@@ -105,8 +105,10 @@
 .second-level-container {
 	color: var(--bg-color);
 	background-color: var(--fg-color);
-	padding: 1em 0;
 	margin-top: 0.75em;
+	padding: 1em 0;
+	max-height: calc(100vh - var(--site-header-height) - 3em);
+	overflow-y: auto;
 }
 
 .second-level-entry {
@@ -197,6 +199,11 @@
 	.second-level-outer-container {
 		left: unset;
 		right: unset;
+	}
+
+	.second-level-container {
+		max-height: unset;
+		overflow-y: unset;
 	}
 
 	.second-level-label {

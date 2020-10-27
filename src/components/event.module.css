@@ -1,0 +1,56 @@
+.card {
+	display: flex;
+	flex-direction: column;
+
+	border: 1px solid var(--alt-color);
+}
+
+.link {
+	text-decoration: none;
+}
+
+.cover {
+	height: 100%;
+	width: 100%;
+	transition: background-color var(--menu-transition);
+}
+
+.link:hover .cover {
+	background-color: rgba(var(--alt-color-rgb), 0.8);
+}
+
+.logo {
+	background-color: var(--fg-color);
+	z-index: -1;
+}
+
+.date {
+	margin: 10px;
+
+	font-family: "Bedstead", monospace;
+	color: var(--fg-color-shade-2);
+	text-align: center;
+}
+
+.title {
+	margin: 10px;
+	text-align: center;
+}
+
+.description {
+	margin: 10px;
+	text-align: center;
+}
+
+.filler {
+	flex-grow: 1;
+}
+
+.location {
+	margin: 10px;
+	justify-self: end;
+
+	font-family: "Bedstead", monospace;
+	color: var(--fg-color-shade-2);
+	text-align: right;
+}

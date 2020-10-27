@@ -1,6 +1,6 @@
 ---
 title: "Modularity with Oliver Drotbohm"
-tags: [architecture, j_ms]
+tags: [architecture, conversation, j_ms]
 date: 2020-04-07
 slug: oliver-drotbohm-modularity
 videoSlug: oliver-drotbohm-modularity

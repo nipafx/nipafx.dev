@@ -2,6 +2,7 @@ import React from "react"
 
 import { DateTime } from "luxon"
 
+import { getSessionsByYear } from "./event"
 import { ordinalDay } from "../infra/functions"
 
 import EventList from "./eventList"
@@ -11,17 +12,17 @@ import Link from "./link"
 import style from "./sessionList.module.css"
 import layout from "../layout/container.module.css"
 
-import data from "../../content/meta/sessions.json"
-
 const SessionList = ({ slug }) => {
-	const sessions = extractSessionsForCourse(slug)
+	const sessions = getSessionsByYear(slug)
 	return (
 		<React.Fragment>
 			<H2 id="upcoming">Upcoming Public Sessions</H2>
 			<p>{upcomingText(sessions.upcoming)}</p>
-			<EventList events={prepareEvents(sessions.upcoming)} className={layout.main}>
-				{sessions.upcoming.map(present)}
-			</EventList>
+			<EventList
+				events={prepareSessions(sessions.upcoming)}
+				className={layout.main}
+				presentDate={presentDates}
+			/>
 			{sessions.pastByYear.length > 0 && (
 				<React.Fragment>
 					<H2 id="past">Past Public Sessions</H2>
@@ -29,60 +30,16 @@ const SessionList = ({ slug }) => {
 						<React.Fragment key={sess.year}>
 							<H3 id={sess.year}>{sess.year}</H3>
 							<EventList
-								events={prepareEvents(sess.sessions)}
+								events={prepareSessions(sess.sessions)}
+								presentDate={presentDates}
 								className={layout.main}
-							>
-								{sess.sessions.map(present)}
-							</EventList>
+							/>
 						</React.Fragment>
 					))}
 				</React.Fragment>
 			)}
 		</React.Fragment>
 	)
-}
-
-const extractSessionsForCourse = slug => {
-	const sessions = extractSessions().filter(session => session.courses.includes(slug))
-	const today = DateTime.local()
-	const pastByYear = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016]
-		.map(year => {
-			return {
-				year,
-				sessions: sessions
-					.filter(session => session.dates.from.year === year)
-					.filter(session => session.dates.from < today)
-					.sort(
-						// pres2 - pres1 to get most recent session ("largest" date) first
-						(session1, session2) => session2.dates.from - session1.dates.from
-					),
-			}
-		})
-		.filter(sess => sess.sessions.length > 0)
-	const upcoming = sessions
-		.filter(session => session.dates.from >= today)
-		.sort((session1, session2) => session1.dates.from - session2.dates.from)
-
-	return { pastByYear, upcoming }
-}
-
-const extractSessions = () => {
-	return data.sessions.map(session => {
-		const dates = {
-			from: DateTime.fromFormat(session.dates.from, "dd.MM.yyyy"),
-			to: DateTime.fromFormat(session.dates.to, "dd.MM.yyyy"),
-		}
-		const location = session.location
-			? {
-					text: session.location.text ?? session.location,
-					url: session.location.url,
-			  }
-			: null
-		// for unknown reasons (Gatsby caching?) this parsing does not behave well
-		// when `session.dates` is overridden with the parsed dates,
-		// so I create a new object instead
-		return { ...session, dates, location }
-	})
 }
 
 const upcomingText = upcoming => {
@@ -106,70 +63,49 @@ const upcomingText = upcoming => {
 	} below if you want to participate.`
 }
 
-const prepareEvents = sessions =>
+const prepareSessions = sessions =>
 	sessions.map(session => {
 		return {
-			name: session.event.showName ? session.event.name : undefined,
 			url: session.announcement,
 			image: session.event.image,
+			title: session.title,
+			description: prepareDescription(session),
+			location: prepareLocation(session),
+			dates: session.dates,
 		}
 	})
 
-const present = session => {
-	return (
-		<dl key="coordinates" className={style.coordinates}>
-			{presentLocation(session.event.name, session.announcement, session.location)}
-			{session.dates && presentDates(session.dates)}
-			{session.announcement &&
-				// don't show announcement and sign-up details for past sessions
-				session.dates.from >= DateTime.local() &&
-				presentAnnouncement(session.announcement)}
-		</dl>
-	)
+const prepareDescription = ({ announcement, dates }) => {
+	// don't show announcement and sign-up details for past sessions
+	return announcement && dates.from >= DateTime.local()
+		? `Check [the event page](${announcement}) for prices, exact content, and details on how to sign up.`
+		: null
 }
 
-const presentLocation = (name, url, location) => {
-	return (
-		<React.Fragment>
-			<dt>Where?</dt>
-			<dd>
-				<Link to={url}>{name}</Link>
-				{location && (
-					<React.Fragment>
-						<br />
-						<Link to={location.url}>{location.text}</Link>
-					</React.Fragment>
-				)}
-			</dd>
-		</React.Fragment>
-	)
+const prepareLocation = ({ event, location }) => {
+	let locationString = event.url ? `[at ${event.name}](${event.url})` : `at ${event.name}`
+	if (location)
+		locationString += location.url
+			? `<br />[${location.text}](${location.url})`
+			: `<br />${location.text}`
+	return locationString
 }
 
-const presentDates = dates => {
-	const fromDay = `${dates.from.toFormat("EEE, MMMM")} ${ordinalDay(dates.from.day)} to`
-	// prettier-ignore
-	const toDay = `${dates.to.toFormat("EEE, MMMM")} ${ordinalDay(dates.to.day)}, ${dates.to.toFormat("yyyy")}`
+const presentDates = ({ dates }) => {
 	return (
-		<React.Fragment>
-			<dt>When?</dt>
-			<dd>
-				<span>{fromDay}</span>
-				<br />
-				<span>{toDay}</span>
-			</dd>
-		</React.Fragment>
-	)
-}
-
-const presentAnnouncement = announcement => {
-	return (
-		<React.Fragment>
-			<dt>What else?</dt>
-			<dd>
-				Check <Link to={announcement}>the event page</Link> for prices, exact content, and
-				details on how to sign up.
-			</dd>
-		</React.Fragment>
+		<span className={style.date}>
+			<span>{dates.from.toFormat("EEE")}, </span>
+			<span className={style.day}>
+				{dates.from.toFormat("MMMM")} {ordinalDay(dates.from.day)}
+			</span>
+			<span> to</span>
+			<br />
+			<span>{dates.to.toFormat("EEE")}, </span>
+			<span className={style.day}>
+				{dates.to.toFormat("MMMM")} {ordinalDay(dates.to.day)}
+			</span>
+			<span>, {dates.to.toFormat("yyyy")}</span>
+		</span>
 	)
 }
 
