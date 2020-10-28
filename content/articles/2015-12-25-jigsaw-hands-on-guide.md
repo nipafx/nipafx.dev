@@ -18,8 +18,8 @@ And [then Java 9 got delayed for half year](delay-of-java-9-release) due to Jig
 
 But let's ignore all of that for now and just focus on the code.
 In this post we'll take an existing demo application and modularize it with Java 9.
-If you want to follow along, head over [to GitHub](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar), where all of the code can be found.
-The [setup instructions](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar/tree/master#setup) are important to get the scripts running with Java 9.
+If you want to follow along, head over [to GitHub](https://github.com/nipafx/demo-jigsaw-advent-calendar), where all of the code can be found.
+The [setup instructions](https://github.com/nipafx/demo-jigsaw-advent-calendar/tree/master#setup) are important to get the scripts running with Java 9.
 For brevity, I removed the prefix `org.codefx.demo` from all package, module, and folder names in this article.
 
 ## The Application Before Jigsaw
@@ -34,7 +34,7 @@ So it models an advent calendar:
 Of course the calendar needs to be created first.
 It can do that by itself but it needs a way to create surprises.
 To this end it gets handed a list of surprise factories.
-This is what [the `main` method](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar/blob/00-before-jigsaw/src/org.codefx.demo.advent/org/codefx/demo/advent/Main.java#L11-L18) looks like:
+This is what [the `main` method](https://github.com/nipafx/demo-jigsaw-advent-calendar/blob/00-before-jigsaw/src/org.codefx.demo.advent/org/codefx/demo/advent/Main.java#L11-L18) looks like:
 
 ```java
 public static void main(String[] args) {
@@ -48,16 +48,16 @@ public static void main(String[] args) {
 }
 ```
 
-The [initial state of the project](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar/tree/00-before-jigsaw) is by no means the best of what is possible before Jigsaw.
+The [initial state of the project](https://github.com/nipafx/demo-jigsaw-advent-calendar/tree/00-before-jigsaw) is by no means the best of what is possible before Jigsaw.
 Quite the contrary, it is a simplistic starting point.
-It consists of a single module (in the abstract sense, not the Jigsaw interpretation) that contains [all required types](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar/tree/00-before-jigsaw/src/org.codefx.demo.advent/org/codefx/demo/advent):
+It consists of a single module (in the abstract sense, not the Jigsaw interpretation) that contains [all required types](https://github.com/nipafx/demo-jigsaw-advent-calendar/tree/00-before-jigsaw/src/org.codefx.demo.advent/org/codefx/demo/advent):
 
 -   "Surprise API" - `Surprise` and `SurpriseFactory` (both are interfaces)
 -   "Calendar API" - `Calendar` and `CalendarSheet` to create the calendar
 -   Surprises - a couple of `Surprise` and `SurpriseFactory` implementations
 -   Main - to wire up and run the whole thing.
 
-[Compiling and running](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar/blob/00-before-jigsaw/compileAndRun.sh) is straight forward (commands for Java 8):
+[Compiling and running](https://github.com/nipafx/demo-jigsaw-advent-calendar/blob/00-before-jigsaw/compileAndRun.sh) is straight forward (commands for Java 8):
 
 ```shell
 # compile
@@ -70,7 +70,7 @@ java -jar jars/advent.jar
 
 ## Entering Jigsaw Land
 
-The [next step](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar/tree/01-creating-a-module) is small but important.
+The [next step](https://github.com/nipafx/demo-jigsaw-advent-calendar/tree/01-creating-a-module) is small but important.
 It changes nothing about the code or its organization but moves it into a Jigsaw module.
 
 ### Modules
@@ -166,7 +166,7 @@ The idea is to tell Java where to find the application modules (with `--module-p
 
 ## Splitting Into Modules
 
-Now it's time to really get to know Jigsaw and [split that monolith up](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar/tree/02-splitting-into-modules) into separate modules.
+Now it's time to really get to know Jigsaw and [split that monolith up](https://github.com/nipafx/demo-jigsaw-advent-calendar/tree/02-splitting-into-modules) into separate modules.
 
 ### Made-up Rationale
 
@@ -220,7 +220,7 @@ README
 
 To keep this readable I truncated the folders below `org`.
 What's missing are the packages and eventually the source files for each module.
-See it [on GitHub](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar/tree/02-splitting-into-modules) in its full glory.
+See it [on GitHub](https://github.com/nipafx/demo-jigsaw-advent-calendar/tree/02-splitting-into-modules) in its full glory.
 
 Let's now see what those module infos have to contain and how we can compile and run the application.
 
@@ -258,7 +258,7 @@ The module's API consists of the class `Calendar`.
 For it to be publicly accessible the containing package `advent.calendar` must be exported.
 Note that `CalendarSheet`, private to the same package, will not be visible outside the module.
 
-But there is an additional twist: We just made [`Calendar.createWithSurprises(List<SurpriseFactory>)`](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar/blob/02-splitting-into-modules/src/org.codefx.demo.advent.calendar/org/codefx/demo/advent/calendar/Calendar.java#L22) publicly available, which exposes types from the *surprise* module.
+But there is an additional twist: We just made [`Calendar.createWithSurprises(List<SurpriseFactory>)`](https://github.com/nipafx/demo-jigsaw-advent-calendar/blob/02-splitting-into-modules/src/org.codefx.demo.advent.calendar/org/codefx/demo/advent/calendar/Calendar.java#L22) publicly available, which exposes types from the *surprise* module.
 So unless modules reading *calendar* also require *surprise*, Jigsaw will prevent them from accessing these types, which would lead to compile and runtime errors.
 
 Marking the requires clause as `transitive` fixes this.
@@ -349,7 +349,7 @@ java --module-path mods --module advent
 ## Services
 
 Jigsaw enables loose coupling by implementing the [service locator pattern](https://en.wikipedia.org/wiki/Service_locator_pattern), where the module system itself acts as the locator.
-Let's see [how that goes](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar/tree/03-services).
+Let's see [how that goes](https://github.com/nipafx/demo-jigsaw-advent-calendar/tree/03-services).
 
 ### Made-up Rationale
 
@@ -447,7 +447,7 @@ jar --create \
 #### *main*
 
 The most interesting part about *main* is how it uses the ServiceLocator to find implementation of SurpriseFactory.
-From [its main method](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar/blob/03-services/src/org.codefx.demo.advent/org/codefx/demo/advent/Main.java#L13-L14):
+From [its main method](https://github.com/nipafx/demo-jigsaw-advent-calendar/blob/03-services/src/org.codefx.demo.advent/org/codefx/demo/advent/Main.java#L13-L14):
 
 ```java
 List<SurpriseFactory> surpriseFactories = new ArrayList<>();
@@ -478,7 +478,7 @@ Neat!
 So that's it.
 We have seen how to move a monolithic application into a single module and how we can split it up into several.
 We even used a service locator to decouple our application from concrete implementations of services.
-All of this is [on GitHub](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar) so check it out to see more code!
+All of this is [on GitHub](https://github.com/nipafx/demo-jigsaw-advent-calendar) so check it out to see more code!
 
 But there is lots more to talk about!
 Jigsaw brings [a couple of incompatibilities](how-java-9-and-project-jigsaw-may-break-your-code) but also the means to solve many of them.

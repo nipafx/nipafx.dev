@@ -44,9 +44,9 @@ For shorter bits there are a couple of interviews the Voxxed folks recorded:
 
 Of course people started writing code and there are a few interesting repositories that demonstrate Java 9 features:
 
--   [CodeFX/java-9](https://github.com/CodeFX-org/demo-java-9): A repository demonstrating all kinds of Java 9 features
+-   [CodeFX/java-9](https://github.com/nipafx/demo-java-x): A repository demonstrating all kinds of Java 9 features
 -   [AdoptOpenJDK/jdk9-jigsaw](https://github.com/AdoptOpenJDK/jdk9-jigsaw): Examples of some of the module system features
--   [CodeFX/jigsaw-advent-calendar](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar): A simple demo application demonstrating JPMS features
+-   [CodeFX/jigsaw-advent-calendar](https://github.com/nipafx/demo-jigsaw-advent-calendar): A simple demo application demonstrating JPMS features
 -   [CodeFX/jpms-monitor](https://github.com/nipafx/demo-jpms-monitor): The JPMS demo application I use in my book
 
 ## Articles

@@ -6,6 +6,7 @@ slug: java-non-capturing-lambdas
 description: "See how Java's creation of instances of non-capturing lambda expressions can lead to unexpected and possibly bug-inducing behavior."
 searchKeywords: "Instances non capturing lambda"
 featuredImage: instances-non-capturing-lambdas
+repo: lambda-instances
 ---
 
 Roughly a month ago, I summarized [Brian Goetz' peek under the hood of lambda expressions in Java 8](lambdas-java-peek-hood).
@@ -13,7 +14,7 @@ Currently I'm researching for a post about default methods and to my mild surpri
 The intersection of these two features can have a subtle but surprising effect, which I want to discuss.
 
 To make this more interesting I'll start with an example, which will culminate in my personal *WTF?!* moment.
-The full example can be found in a dedicated [GitHub project](https://github.com/CodeFX-org/demo-lambda-instances).
+The full example can be found in a dedicated [GitHub project](https://github.com/nipafx/demo-lambda-instances).
 We will then see the explanation for this somewhat unexpected behavior and finally draw some conclusions to prevent bugs.
 
 ## Example
@@ -28,7 +29,7 @@ Assume we need a specialization of [the interface `Future`](http://docs.oracle.c
 We decide to implement this by creating an interface `ImmediateFuture` which implements all functionality except `get()` with default methods.
 This results in a [functional interface](http://docs.oracle.com/javase/specs/jls/se8/html/jls-9.html#jls-9.8).
 
-You can see the source [here](https://github.com/CodeFX-org/demo-lambda-instances/blob/master/src/org/codefx/lab/lambda/instances/ImmediateFuture.java).
+You can see the source [here](https://github.com/nipafx/demo-lambda-instances/blob/master/src/org/codefx/lab/lambda/instances/ImmediateFuture.java).
 
 ### A Factory
 

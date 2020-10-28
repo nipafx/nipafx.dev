@@ -73,7 +73,7 @@ Since creating millions of randomized integers takes considerable time, I opted 
 
 #### Code
 
-The benchmark code itself is [available on GitHub](https://github.com/CodeFX-org/lab-java8streamperformancebenchmark).
+The benchmark code itself is [available on GitHub](https://github.com/nipafx/benchmarks).
 To run it, simply go to the command line, build the project, and execute the resulting jar:
 
 ```

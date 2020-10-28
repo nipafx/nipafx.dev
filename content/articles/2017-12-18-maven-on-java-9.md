@@ -7,6 +7,7 @@ description: "How to use the compiler executable, toolchains, and mavenrc to run
 intro: "Want to build with Maven on Java 9? Here's which versions to pick, how to use the compiler executable, toolchains, and mavenrc to run Maven on Java 9, and how to use mvn/jvm.config and profiles to configure your build for Java 8 and 9."
 searchKeywords: "Maven Java 9"
 featuredImage: maven-java-9
+repo: mvn-java-9
 ---
 
 You're ready to build your Maven-based project with [Java 9](tag:java-9) or later?
@@ -39,7 +40,7 @@ Next you'll want to configure Maven so that it actually uses Java 9.
 -   [mavenrc](#themavenrcfile)
 
 Each approach uses Java 9 a little more than the last and some are more intrusive while others are more brittle - have a look at the individual solutions for a small discussion of their respective pros and cons.
-If you want to try this out yourself, have a look at [my Maven-on-Java-9 demo project](https://github.com/CodeFX-org/mvn-java-9).
+If you want to try this out yourself, have a look at [my Maven-on-Java-9 demo project](https://github.com/nipafx/mvn-java-9).
 
 ### Executable
 

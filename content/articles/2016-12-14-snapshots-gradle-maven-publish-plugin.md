@@ -9,7 +9,7 @@ searchKeywords: "maven-publish"
 featuredImage: gradle-publish-snapshot-maven-publish
 ---
 
-I've recently started [a new project](https://github.com/CodeFX-org/junit-io) with Gradle and decided to jump straight in - no Gradle experience, no clue about Groovy, no tutorials, just hammer on it until it works.
+I've recently started [a new project](https://github.com/junit-pioneer/junit-pioneer) with Gradle and decided to jump straight in - no Gradle experience, no clue about Groovy, no tutorials, just hammer on it until it works.
 That went surprisingly well until I decided to publish snapshots to Sonatype's Maven snapshot repository with the incubating [*maven-publish* plugin](https://docs.gradle.org/current/userguide/publishing_maven.html) - that took, ahh, a little convincing.
 
 <admonition type="caveat">
@@ -19,7 +19,7 @@ I write this down for myself as much as for you.
 
 </admonition>
 
-The final (but still partial) `build.gradle` file can be found [here](https://gist.github.com/nicolaiparlog/d1850ac402f086e1b4fc42f58f5aa365), the actual variant I used in my project [here](https://github.com/CodeFX-org/junit-io/blob/3ab5fee6dfa2c8b99327d0d198fdaa58f044808e/build.gradle).
+The final (but still partial) `build.gradle` file can be found [here](https://gist.github.com/nicolaiparlog/d1850ac402f086e1b4fc42f58f5aa365), the actual variant I used in my project [here](https://github.com/junit-pioneer/junit-pioneer/blob/3ab5fee6dfa2c8b99327d0d198fdaa58f044808e/build.gradle).
 
 As a zeroth step make sure the project's group, id, and version are present.
 The first and last can usually be found in the `build.gradle` file, the project name doubles for its id and is defined in `settings.gradle`.
@@ -232,7 +232,7 @@ Here's what I did:
 -   Create tasks for source and Javadoc JARs and reference them from the `publications` node.
 -   Specify the repository URL and add your credentials.
 
-As I said before, you can check out two versions of the resulting `build.gradle` file: [an exemplary one](https://gist.github.com/nicolaiparlog/d1850ac402f086e1b4fc42f58f5aa365) consisting of exactly what we build here and [the real deal](https://github.com/CodeFX-org/junit-io/blob/3ab5fee6dfa2c8b99327d0d198fdaa58f044808e/build.gradle).
+As I said before, you can check out two versions of the resulting `build.gradle` file: [an exemplary one](https://gist.github.com/nicolaiparlog/d1850ac402f086e1b4fc42f58f5aa365) consisting of exactly what we build here and [the real deal](https://github.com/junit-pioneer/junit-pioneer/blob/3ab5fee6dfa2c8b99327d0d198fdaa58f044808e/build.gradle).
 
 I also managed to set up Travis CI to publish each successful build and will soon try to publish actual versions.
 I'll write about both...

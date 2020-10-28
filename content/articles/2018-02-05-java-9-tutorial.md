@@ -235,7 +235,7 @@ The new [collection factory methods](http://openjdk.java.net/jeps/269) `List::of
 
 ### Reactive Streams
 
-I'm gonna break with the code first approach here, because for reactive streams there is too much code involved - have a look at [the demo](https://github.com/CodeFX-org/demo-java-9/tree/master/src/org/codefx/demo/java9/api/reactive_streams).
+I'm gonna break with the code first approach here, because for reactive streams there is too much code involved - have a look at [the demo](https://github.com/nipafx/demo-java-x/tree/master/src/main/java/org/codefx/demo/java9/api/reactive_streams).
 
 [Reactive streams](https://docs.oracle.com/javase/9/docs/api/java/util/concurrent/Flow.html) require three basic types:
 

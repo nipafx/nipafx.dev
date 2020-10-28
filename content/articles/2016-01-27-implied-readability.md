@@ -89,7 +89,7 @@ The [calendar](jigsaw-hands-on-guide#splitting-into-modules) contains a module *
 Surprises are part of the *advent.surprise* module.
 So far this looks like a open and shut case for a regular `requires` clause.
 
-But in order to create a calendar we need to pass factories for the different kinds of surprises to [the calendar's static factory method](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar/blob/02-splitting-into-modules/src/org.codefx.demo.advent.calendar/org/codefx/demo/advent/calendar/Calendar.java#L22-L24), which is part of the module's public API.
+But in order to create a calendar we need to pass factories for the different kinds of surprises to [the calendar's static factory method](https://github.com/nipafx/demo-jigsaw-advent-calendar/blob/02-splitting-into-modules/src/org.codefx.demo.advent.calendar/org/codefx/demo/advent/calendar/Calendar.java#L22-L24), which is part of the module's public API.
 So we used implied readability to ensure that modules using the calendar would not have to explicitly require the surprise module.
 
 ```java

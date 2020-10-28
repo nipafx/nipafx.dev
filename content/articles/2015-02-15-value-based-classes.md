@@ -231,7 +231,7 @@ This ticket covers the use-site limitations and will help you uphold them for th
 Being curious about FindBugs and wanting to contribute I decided to set out and try to implement it myself.
 So if you're asking why it takes so long to get that feature ready, now you know: It's my fault.
 But talk is cheap so why don't you join me and help out?
-I put a [FindBugs clone up on GitHub](https://github.com/CodeFX-org/FindBugs-Fork/) and you can see the progress in [this pull request](https://github.com/CodeFX-org/FindBugs-Fork/pull/1).
+I put a FindBugs clone up on GitHub (since deleted) and you can see the progress in this pull request (since deleted).
 
 As soon as that is done I plan to implement the declaration-site rules as well, so you can be sure your value-based classes are properly written and ready when value types finally roll around.
 
