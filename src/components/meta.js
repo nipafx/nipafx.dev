@@ -22,8 +22,8 @@ const Meta = ({ title, slug, canonicalUrl, image, description, searchKeywords, v
 	)
 
 	const site = data.site.siteMetadata
-	const siteName = `${site.title} // ${site.description}`
-	const pageTitle = title ? `${title} // ${site.title}` : siteName
+	const siteName = `${site.title} - ${site.description}`
+	const pageTitle = title ? `${title} - ${site.title}` : siteName
 	const pageDescription = description || site.description
 	const pageUrl = slug ? `${site.siteUrl}/${slug}` : site.siteUrl
 	// because pages are reachable with and without trailing slash
