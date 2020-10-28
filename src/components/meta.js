@@ -44,7 +44,8 @@ const Meta = ({ title, slug, canonicalUrl, image, description, searchKeywords, v
 		// Google
 		description,
 		// Twitter
-		"twitter:card": videoUrl ? "player" : pageImage ? "summary_large_image" : "summary",
+		//                             only use "summary_large_image" with non-default page images
+		"twitter:card": videoUrl ? "player" : image ? "summary_large_image" : "summary",
 		"twitter:site": site.twitter,
 		"twitter:creator": site.twitter,
 		"twitter:title": pageTitle,
