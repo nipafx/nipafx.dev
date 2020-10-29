@@ -13,11 +13,11 @@ const SiteLayout = ({ className, meta, onIndexPage, children }) => {
 	className = className || ""
 	return flatten(
 		<div {...classNames(style.site, className)}>
-			<CodeFXForward />
 			{meta && <Meta {...meta} />}
 			<SiteHeader onIndexPage={onIndexPage} />
 			<div className={style.content}>{children}</div>
 			<SiteFooter />
+			<CodeFXForward />
 		</div>
 	)
 }
