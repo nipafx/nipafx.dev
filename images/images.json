@@ -2406,5 +2406,21 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "java-16-stream-mapMulti",
+		"credits": {
+			"author": {
+				"name": "USGS",
+				"url": "https://unsplash.com/@usgs"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/35Z2ylLRCO8"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
