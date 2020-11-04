@@ -27,10 +27,15 @@ export default ({ data }) => {
 	const meta = {
 		title: data.article.title,
 		slug: data.article.slug,
+		publicationDate: data.article.date,
 		canonicalUrl: data.article.canonicalUrl,
-		image: data.article.featuredImage,
+		image: {
+			slug: data.article.featuredImage,
+			type: "postTitle",
+		},
 		description: data.article.description,
 		searchKeywords: data.article.searchKeywords,
+		structuredDataType: "article",
 	}
 	return (
 		<SiteLayout className="article" meta={meta}>

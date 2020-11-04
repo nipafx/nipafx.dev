@@ -24,7 +24,10 @@ export default ({ data }) => {
 	const meta = {
 		title: data.talk.title,
 		slug: data.talk.slug,
-		image: data.talk.featuredImage,
+		image: {
+			slug: data.talk.featuredImage,
+			type: "postTitle",
+		},
 		description: data.talk.description,
 		searchKeywords: data.talk.searchKeywords,
 	}

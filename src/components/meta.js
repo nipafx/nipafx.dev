@@ -3,9 +3,9 @@ import Helmet from "react-helmet"
 
 import { graphql, useStaticQuery } from "gatsby"
 
-import { getImagePath } from "./image"
+import { getImagePath, getImagePaths } from "./image"
 
-const Meta = ({ title, slug, canonicalUrl, image, description, searchKeywords, videoUrl }) => {
+const Meta = ({title, slug, publicationDate, canonicalUrl, image, description, searchKeywords, videoUrl, structuredDataType}) => {
 	const data = useStaticQuery(
 		graphql`
 			query {
@@ -30,7 +30,9 @@ const Meta = ({ title, slug, canonicalUrl, image, description, searchKeywords, v
 	// (which Google treats as two different pages), the canonical URL
 	// has to be used to identify one of them as the... well, canonical URL
 	const pageCanonicalUrl = canonicalUrl || pageUrl
-	const pageImage = image ? site.siteUrl + getImagePath(image, "postTitle") : `${site.siteUrl}/nicolai.jpg`
+	const pageImage = (image && image.slug)
+		? site.siteUrl + getImagePath(image.slug, image.type)
+		: `${site.siteUrl}/nicolai.jpg`
 	const pageImageAlt = null
 
 	if (pageTitle.length > 60) console.warn("Long title: ", slug)
@@ -59,8 +61,7 @@ const Meta = ({ title, slug, canonicalUrl, image, description, searchKeywords, v
 
 	// yes, it's useless for search engines, but it's documentation what I'm aiming for
 	// and it helps other tools judge the SEO quality
-	if (searchKeywords)
-		metaNames.keywords = searchKeywords
+	if (searchKeywords) metaNames.keywords = searchKeywords
 
 	const metaProperties = {
 		// Open Graph
@@ -72,6 +73,38 @@ const Meta = ({ title, slug, canonicalUrl, image, description, searchKeywords, v
 		"og:site_name": siteName,
 		"og:video": videoUrl,
 	}
+
+	let structuredData = null
+	if (structuredDataType === `article`)
+		structuredData = {
+			"@context": "https://schema.org",
+			"@type": "NewsArticle",
+			headline: title,
+			image: [pageImage],
+			datePublished: publicationDate,
+		}
+		if (structuredDataType === `course`)
+		structuredData = {
+			"@context": "https://schema.org",
+			"@type": "Course",
+			name: title,
+			description,
+			provider: {
+				"@type": "Organization",
+				name: "Nicolai Parlog - nipafx",
+				sameAs: "https://nipafx.dev/nicolai-parlog",
+			},
+		}
+	if (structuredDataType === `video`)
+		structuredData = {
+			"@context": "https://schema.org",
+			"@type": "VideoObject",
+			name: title,
+			description,
+			uploadDate: publicationDate,
+			thumbnailUrl: getImagePaths(image.slug, image.type),
+			contentUrl: getVideoContentUrl(videoUrl)
+		}
 
 	return (
 		<Helmet>
@@ -86,8 +119,19 @@ const Meta = ({ title, slug, canonicalUrl, image, description, searchKeywords, v
 			{propertiesOf(metaProperties).map(([key, value]) => (
 				<meta key={key} property={key} content={value} />
 			))}
+			{structuredData && (
+				<script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+			)}
 		</Helmet>
 	)
+}
+
+const getVideoContentUrl = videoUrl => {
+	if (!videoUrl || !videoUrl.includes("youtube.com/watch?v="))
+		return undefined
+
+	const videoId = videoUrl.match(/.*youtube\.com\/watch\?v=(.*)/)[1]
+	return `https://youtube.com/get_video_info?video_id=${videoId}`
 }
 
 const propertiesOf = object =>

@@ -18,9 +18,13 @@ export default ({ data }) => {
 	const meta = {
 		title: data.course.title,
 		slug: data.course.slug,
-		image: data.course.featuredImage,
+		image: {
+			slug: data.course.featuredImage,
+			type: "postTitle",
+		},
 		description: data.course.description,
 		searchKeywords: data.course.searchKeywords,
+		structuredDataType: "course",
 	}
 	return (
 		<SiteLayout className="course" meta={meta}>

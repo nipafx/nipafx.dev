@@ -92,6 +92,13 @@ export const getImagePath = (id, type) => {
 	return img[isFixedType(type) ? "fixed" : "fluid"].src
 }
 
+export const getImagePaths = (id, type) => {
+	const img = getImage(id, type)
+	return img[isFixedType(type) ? "fixed" : "fluid"]
+		.srcSet.split(",\n")
+		.map(pathWithWidth => pathWithWidth.split(" ")[0])
+}
+
 const getImage = (id, type) => {
 	const imageData = getImageData()
 	const image = findImageInData(imageData, type, id)

@@ -21,7 +21,11 @@ export default ({ data }) => {
 		slug: data.page.slug,
 		description: data.page.description,
 		searchKeywords: data.page.searchKeywords,
-		image: data.page.featuredImage,
+		image: {
+			slug: data.page.featuredImage,
+			type: "postTitle",
+		},
+		structuredDataType: "article",
 	}
 	const className = data.page.style ?? "page"
 	return (

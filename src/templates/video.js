@@ -24,10 +24,15 @@ export default ({ data }) => {
 	const meta = {
 		title: data.video.title,
 		slug: data.video.slug,
-		image: data.video.featuredImage,
+		publicationDate: data.video.date,
+		image: {
+			slug: videoData.videos.find(video => video.slug === data.video.videoSlug).thumbnail,
+			type: "videoThumbnail",
+		},
 		description: data.video.description,
 		searchKeywords: data.video.searchKeywords,
 		videoUrl: videoData.videos.find(video => video.slug === data.video.videoSlug).url,
+		structuredDataType: "video",
 	}
 	return (
 		<SiteLayout className="youtube" meta={meta}>

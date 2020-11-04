@@ -7,7 +7,10 @@ export const stub = slug => {
 	const meta = {
 		title: stub.title,
 		slug: stub.slug,
-		image: stub.featuredImage,
+		image: {
+			slug: stub.featuredImage,
+			type: "postTitle",
+		},
 		description: stub.description,
 		searchKeywords: stub.searchKeywords,
 	}
