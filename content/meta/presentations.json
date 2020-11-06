@@ -1568,6 +1568,20 @@
 					"video": "https://www.youtube.com/watch?v=ugXHFyefvp4"
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "jLove",
+				"url": "https://javaconf.love/",
+				"image": "jlove"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 16 Is Coming!",
+					"time": "05.12.2020 1515 UTC"
+				}
+			]
 		}
 	]
 }
