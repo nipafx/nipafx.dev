@@ -6,17 +6,14 @@ import style from "./toc.module.css"
 const HEADER_HEIGHT = 85
 const EXTRA_MARGIN = 50
 const INTERSECTION_THRESHOLD = 1
+const HEADERS = "article h2, article h3, article h4, article h5, article h6"
 
 const Toc = ({ toc }) => {
 	useEffect(() => {
 		const observer = createIntersectionObserver()
-		document
-			.querySelectorAll(`article h2, article h3, article h4, article h5, article h6`)
-			.forEach(heading => observer.observe(heading))
+		document.querySelectorAll(HEADERS).forEach(heading => observer.observe(heading))
 		return () => {
-			document
-				.querySelectorAll(`article h2, article h3, article h4, article h5, article h6`)
-				.forEach(heading => observer.unobserve(heading))
+			document.querySelectorAll(HEADERS).forEach(heading => observer.unobserve(heading))
 		}
 	})
 
@@ -26,37 +23,41 @@ const Toc = ({ toc }) => {
 const createIntersectionObserver = () => {
 	// gripes with intersection observer: https://twitter.com/nipafx/status/1217590444772810753
 
-	// to make sure only events after the initial observation are acted on,
-	// store the ids of visited headers
-	const visited = []
-	const update = events =>
-		events.forEach(event => {
-			const id = event.target.querySelector(`span`).id
-			if (visited.includes(id)) {
-				// `event.isIntersecting` should indicate whether the element
-				// transitioned into or out of intersection, but Firefox instead
-				// returns true if intersection ratio is > 0;
-				// instead fall back to comparing intersection ratio with threshold
-				const visible = event.intersectionRatio < INTERSECTION_THRESHOLD
-				if (visible) {
-					const position = event.boundingClientRect.top
-					updateHighlight(id, position)
-				}
-			} else visited.push(id)
-		})
-	return new IntersectionObserver(update, {
+	// registering the intersection observer triggers an event for each
+	// observed header, but none of them should be highlighted at this point;
+	// instead store the initial events' targets and only act on an event
+	// if its target was stored earlier.
+	const visited = {}
+
+	const updateHighlights = event => {
+		const focusedHeaderId = event.target.querySelector(`span`).id
+		if (!visited[focusedHeaderId]) {
+			visited[focusedHeaderId] = true
+			return
+		}
+
+		const isHeaderVisible = event.intersectionRatio < INTERSECTION_THRESHOLD
+		if (isHeaderVisible) {
+			// `event.isIntersecting` should indicate whether the element
+			// transitioned into or out of intersection, but Firefox instead
+			// returns true if intersection ratio is > 0;
+			// instead fall back to comparing intersection ratio with threshold
+			const headerPosition = event.boundingClientRect.top
+			// remember that the ToC is duplicated (accordion and pop-out-accordion),
+			// so each ToC entry exists twice on the page; hence "itemS" (plural)
+			lowlightItems()
+			highlightItems(focusedHeaderId, headerPosition)
+		}
+	}
+
+	const onObserve = events => events.forEach(updateHighlights)
+
+	return new IntersectionObserver(onObserve, {
 		// when scrolling to a header in the toc, no event is thrown if the margin
 		// is exactly the same as the header height
 		rootMargin: `-${HEADER_HEIGHT + EXTRA_MARGIN}px 0px -50%`,
 		threshold: INTERSECTION_THRESHOLD,
 	})
-}
-
-const updateHighlight = (id, position) => {
-	// remember that the ToC is duplicated (accordion and pop-out-accordion),
-	// so each ToC entry exists twice on the page; hence "itemS" (plural)
-	lowlightItems()
-	highlightItems(id, position)
 }
 
 const lowlightItems = () => {
@@ -97,10 +98,10 @@ const itemAbove = item => {
 
 const lastTransitiveItem = item => {
 	const list = item.querySelector(`ul`)
-	if (!list) return item
+	if (!list || list.children.length === 0) return item
 
-	const descendant = list.children.length === 0 ? null : list.children[list.children.length - 1]
-	return descendant ? lastTransitiveItem(descendant) : item
+	const lastChild = list.children[list.children.length - 1]
+	return lastTransitiveItem(lastChild)
 }
 
 export default Toc
