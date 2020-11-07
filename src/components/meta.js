@@ -4,6 +4,7 @@ import Helmet from "react-helmet"
 import { graphql, useStaticQuery } from "gatsby"
 
 import { getImagePath, getImagePaths } from "./image"
+import { videoContentUrl } from "../infra/functions"
 
 import structuredDataJson from "../../content/meta/structured-data.json"
 
@@ -114,7 +115,7 @@ const Meta = ({title, slug, publicationDate, canonicalUrl, image, description, s
 			description,
 			uploadDate: publicationDate,
 			thumbnailUrl: getImagePaths(image.slug, image.type),
-			contentUrl: getVideoContentUrl(videoUrl),
+			contentUrl: videoContentUrl(videoUrl),
 		}
 
 	if (structuredDataJson[slug])
@@ -138,13 +139,6 @@ const Meta = ({title, slug, publicationDate, canonicalUrl, image, description, s
 			)}
 		</Helmet>
 	)
-}
-
-const getVideoContentUrl = videoUrl => {
-	if (!videoUrl || !videoUrl.includes("youtube.com/watch?v=")) return undefined
-
-	const videoId = videoUrl.match(/.*youtube\.com\/watch\?v=(.*)/)[1]
-	return `https://youtube.com/get_video_info?video_id=${videoId}`
 }
 
 const propertiesOf = object =>

@@ -1,25 +1,8 @@
 import React from "react"
 
-export function flatten(nodes) {
-	return React.Children.toArray(nodes).reduce((flatChildren, child) => {
-		if (child.type === React.Fragment) {
-			return flatChildren.concat(flatten(child.props.children))
-		}
-		flatChildren.push(child)
-		return flatChildren
-	}, [])
-}
-
-export function classNames() {
-	// accept both varargs and arrays
-	const args = Array.prototype.slice.call(arguments)
-	const classes = args.length === 1 && Array.isArray(args[0]) ? args[0] : args
-
-	const className = classes
-		.filter(cls => cls !== undefined && cls !== null && cls !== "")
-		.join(" ")
-	return className ? { className } : null
-}
+/*
+ * TAGLETS & HASH
+ */
 
 export function tagletsPath(channel, tag) {
 	if (!channel && !tag) return `/`
@@ -135,6 +118,73 @@ export function resetPath() {
 	window.history.pushState("", document.title, window.location.pathname + window.location.search)
 }
 
+/*
+ * JS(X)
+ */
+
+export function flatten(nodes) {
+	return React.Children.toArray(nodes).reduce((flatChildren, child) => {
+		if (child.type === React.Fragment) {
+			return flatChildren.concat(flatten(child.props.children))
+		}
+		flatChildren.push(child)
+		return flatChildren
+	}, [])
+}
+
+export function classNames() {
+	// accept both varargs and arrays
+	const args = Array.prototype.slice.call(arguments)
+	const classes = args.length === 1 && Array.isArray(args[0]) ? args[0] : args
+
+	const className = classes
+		.filter(cls => cls !== undefined && cls !== null && cls !== "")
+		.join(" ")
+	return className ? { className } : null
+}
+
+export function arrayTo(length) {
+	return [...Array(length).keys()]
+}
+
+/*
+ * VIDEOS
+ */
+
+const youTubeVideoId = videoUrl => videoUrl.match(/.*youtube\.com\/watch\?v=([^&]*).*/)[1]
+const youTubeVideoStart = videoUrl => {
+	const timestampMatch = videoUrl.match(/.*youtube\.com\/watch\?v=.*t=([^&]*).*/)
+	if (!timestampMatch) return null
+
+	const timestamp = timestampMatch[1]
+	const timeMatch = timestamp.match(/((\d+)h)?((\d+)m)?(\d*)s/)
+	if (!timeMatch) throw new Error("Unknown timestamp format: " + timestamp)
+
+	return {
+		hours: timeMatch[2] || 0,
+		minutes: timeMatch[4] || 0,
+		seconds: timeMatch[5],
+	}
+}
+
+export const videoEmbedUrl = videoUrl => {
+	if (!videoUrl || !videoUrl.includes("youtube.com/watch?v=")) return undefined
+
+	const start = youTubeVideoStart(videoUrl)
+	const startParameter = start ? `?start=${start.hours * 3600 + start.minutes * 60 + start.seconds * 1}` : ``
+	return `https://www.youtube.com/embed/${youTubeVideoId(videoUrl)}${startParameter}`
+}
+
+export const videoContentUrl = videoUrl => {
+	if (!videoUrl || !videoUrl.includes("youtube.com/watch?v=")) return undefined
+
+	return `https://youtube.com/get_video_info?video_id=${youTubeVideoId(videoUrl)}`
+}
+
+/*
+ * MISC
+ */
+
 export function ordinalDay(day) {
 	switch (day) {
 		case 1:
@@ -159,8 +209,4 @@ export function ordinalDay(day) {
 		default:
 			return day + "th"
 	}
-}
-
-export function arrayTo(length) {
-	return [...Array(length).keys()]
 }

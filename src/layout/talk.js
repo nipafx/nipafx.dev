@@ -30,7 +30,7 @@ const TalkLayout = ({title, slug, date, tags, description, intro, featuredImage,
 								the horizontal axis and chapter content layed out vertically). Use{" "}
 								<em>Page Up/Down</em> for linearized order and <em>?</em> for more shortcuts.
 							</p>
-							<Iframe src={slides} className={layout.wide} />
+							<Iframe title={title} src={slides} className={layout.wide} />
 						</React.Fragment>
 					)}
 					{videoSlug && (

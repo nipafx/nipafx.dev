@@ -1,40 +1,87 @@
-.link {
+.container {
 	display: grid;
-	grid-template-columns: 1fr 20% 1fr;
-	grid-template-rows: 1fr min-content 1fr min-content;
+	grid-template-columns: 0.5em 1fr 0.5em 1fr 0.5em;
+	grid-template-rows: 0.5em 1fr 0.5em;
+	grid-template-areas:
+		". .     . .    ."
+		". embed . link ."
+		". .     . .    .";
+}
+
+.thumbnail {
+	grid-area: thumbnail;
+	grid-column: 1 / span 5;
+	grid-row: 1 / span 3;
+	z-index: -1;
+}
+
+.embed {
+	grid-area: embed;
+}
+
+.link {
+	grid-area: link;
+}
+
+.button {
+	cursor: pointer;
+	text-align: center;
 
 	/* this variable is used in the SVG; we reuse it for the text */
 	--button-color: var(--bg-color-transparent);
 	text-decoration: none;
 }
 
-.link:visited {
+.button:visited {
 	text-decoration: none;
 }
 
-.link:hover {
+.button:hover {
 	text-decoration: none;
 	color: var(--fg-color);
 	--button-color: var(--alt-color);
 }
 
-.thumbnail {
-	grid-column: 1 / span 3;
-	grid-row: 1 / span 4;
-	z-index: -1;
+.button:hover > .text {
+	background-color: var(--alt-color);
 }
 
-.button {
-	grid-column: 2;
-	grid-row: 2;
+.button:hover > .text a:hover {
+	color: var(--bg-color);
+}
+
+.graphic {
+	width: 50%;
 }
 
 .text {
-	grid-column: 1 / span 3;
-	grid-row: 4;
-
-	text-align: center;
-	background-color: var(--button-color);
-	margin: 0.5em 0;
+	background-color: var(--bg-color-transparent);
+	border-radius: 0.5em;
+	padding: 0 0.5em;
 }
 
+.text .optional {
+	display: none;
+}
+
+
+@media all and (min-width: 600px) {
+	.container {
+		grid-template-columns: 1fr 40% 5% 40% 1fr;
+		grid-template-rows: 1fr min-content 1fr;
+	}
+
+	.graphic {
+		width: 100%;
+	}
+
+	.text .optional {
+		display: unset;
+	}
+}
+
+@media all and (min-width: 800px) {
+	.container {
+		grid-template-columns: 1fr 15rem 5rem 15rem 1fr;
+	}
+}
