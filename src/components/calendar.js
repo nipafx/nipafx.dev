@@ -120,13 +120,19 @@ const showEvent = (event, inMonth) => {
 	const gridArea = inMonth ? gridAreaForEvent(event) : undefined
 
 	return (
-		<div key={event.startTime} {...classNames(classes)} style={{ gridArea }}>
+		<div
+			key={event.startTime}
+			itemScope
+			itemType="https://schema.org/Event"
+			{...classNames(classes)}
+			style={{ gridArea }}
+		>
 			<span className={style.date}>{showDatesForEvent(event)}</span>
 			<h3 className={style.title}>
-				<MarkdownAsHtml>{event.title}</MarkdownAsHtml>
+				<MarkdownAsHtml itemProp="name">{event.title}</MarkdownAsHtml>
 			</h3>
 			<p className={style.description}>
-				<MarkdownAsHtml>{event.description}</MarkdownAsHtml>
+				<MarkdownAsHtml itemProp="description">{event.description}</MarkdownAsHtml>
 			</p>
 			<span className={style.details}>{showDetailsForEvent(event)}</span>
 		</div>
@@ -142,6 +148,16 @@ const gridAreaForEvent = event => {
 }
 
 const showDatesForEvent = event => {
+	const structuredStartDate = (
+		<meta
+			itemProp="startDate"
+			content={event.startTime.toISO({
+				suppressSeconds: true,
+				suppressMilliseconds: true,
+			})}
+		/>
+	)
+
 	if (event.days) {
 		const startDate = event.startTime.set({ day: event.days[0] })
 		const endDate = event.startTime.set({ day: event.days[event.days.length - 1] })
@@ -152,6 +168,7 @@ const showDatesForEvent = event => {
 				{` to `}
 				<span className={style.weekday}>{endDate.toFormat("EEE")}</span>
 				<span className={style.day}>{ordinalDay(endDate.day)}</span>
+				{structuredStartDate}
 			</React.Fragment>
 		)
 	} else
@@ -160,6 +177,7 @@ const showDatesForEvent = event => {
 				<span className={style.weekday}>{event.startTime.toFormat("EEE")}</span>
 				<span className={style.day}>{ordinalDay(event.startTime.day)}</span>
 				<span className={style.time}>{event.startTime.toUTC().toFormat("HH:mm")} UTC</span>
+				{structuredStartDate}
 			</React.Fragment>
 		)
 }
