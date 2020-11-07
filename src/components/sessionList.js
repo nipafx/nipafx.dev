@@ -105,6 +105,14 @@ const presentDates = ({ dates }) => {
 				{dates.to.toFormat("MMMM")} {ordinalDay(dates.to.day)}
 			</span>
 			<span>, {dates.to.toFormat("yyyy")}</span>
+			<meta
+				itemProp="startDate"
+				content={dates.from.toISO({ suppressSeconds: true, suppressMilliseconds: true })}
+			/>
+			<meta
+				itemProp="endDate"
+				content={dates.to.toISO({ suppressSeconds: true, suppressMilliseconds: true })}
+			/>
 		</span>
 	)
 }

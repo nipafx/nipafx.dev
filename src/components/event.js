@@ -16,18 +16,24 @@ import sessionData from "../../content/meta/sessions.json"
 const Event = ({ event, presentDate, className }) => {
 	const { url, image, title, description, location } = event
 	return (
-		<div {...classNames(style.card, className)}>
+		<div itemScope itemType="https://schema.org/Event" {...classNames(style.card, className)}>
 			{presentDate && <span className={style.date}>{presentDate(event)}</span>}
 			{title && (
 				<h3 className={style.title}>
-					<MarkdownAsHtml>{title}</MarkdownAsHtml>
+					<MarkdownAsHtml itemProp="name">{title}</MarkdownAsHtml>
 				</h3>
 			)}
 			{description && (
-				<MarkdownAsHtml className={style.description}>{description}</MarkdownAsHtml>
+				<MarkdownAsHtml itemProp="description" className={style.description}>
+					{description}
+				</MarkdownAsHtml>
 			)}
 			<span className={style.filler} />
-			{location && <MarkdownAsHtml className={style.location}>{location}</MarkdownAsHtml>}
+			{location && (
+				<MarkdownAsHtml itemProp="location" className={style.location}>
+					{location}
+				</MarkdownAsHtml>
+			)}
 			{image && (
 				<Link to={url} className={style.link}>
 					<div className={style.cover}>

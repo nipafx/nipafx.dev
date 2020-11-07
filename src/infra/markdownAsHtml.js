@@ -13,14 +13,14 @@ import remarkHTML from "remark-html"
 	by an empty line, Remark will parse the contained Markdown,
 	so there's no need to use this component for that.
 */
-const MarkdownAsHtml = ({ className, children }) => {
+const MarkdownAsHtml = ({ itemProp, className, children }) => {
 	// check whether `children` are React elements
 	if (children.$$typeof)
 		return children
 
 	const __html =
 		children instanceof Array ? children.map(md => toHtml(md)).join("") : toHtml(children)
-	return <span className={className} dangerouslySetInnerHTML={{ __html }} />
+	return <span itemProp={itemProp} className={className} dangerouslySetInnerHTML={{ __html }} />
 }
 
 const toHtml = md => {

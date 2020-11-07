@@ -109,6 +109,10 @@ const presentDate = ({ time }) => {
 				{time.toFormat("MMM")} {ordinalDay(time.day)}
 			</span>
 			<span>, {time.toFormat("HH:mm z")}</span>
+			<meta
+				itemProp="startDate"
+				content={time.toISO({ suppressSeconds: true, suppressMilliseconds: true })}
+			/>
 		</span>
 	)
 }
