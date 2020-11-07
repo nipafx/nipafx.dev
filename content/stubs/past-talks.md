@@ -1,6 +1,7 @@
 ---
 title: "Past Talks"
 channel: "talks"
+structuredDataType: "article"
 tags: []
 date: 2020-10-26
 slug: past-talks

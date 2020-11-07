@@ -206,6 +206,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 			date: Date! @dateformat
 			isPost: Boolean!
 			channel: String!
+			structuredDataType: String
 			tags: [String!]!
 			description: String!
 			intro: String
@@ -485,6 +486,7 @@ createStubNodes = (node, createNode, createContentDigest) => {
 		date: node.frontmatter.date,
 		isPost: node.frontmatter.isPost ?? false,
 		channel: node.frontmatter.channel,
+		structuredDataType: node.frontmatter.structuredDataType,
 		tags: node.frontmatter.tags,
 		description: node.frontmatter.description,
 		intro: node.frontmatter.intro,

@@ -13,6 +13,7 @@ export const stub = slug => {
 		},
 		description: stub.description,
 		searchKeywords: stub.searchKeywords,
+		structuredDataType: stub.structuredDataType,
 	}
 	const header = {
 		title: stub.title,
@@ -84,6 +85,7 @@ const stubsAndTags = () =>
 					slug
 					date
 					channel
+					structuredDataType
 					tags
 					description
 					intro

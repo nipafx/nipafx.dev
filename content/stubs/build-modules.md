@@ -2,6 +2,7 @@
 title: "Java Modules Cheat Sheet"
 isPost: true
 channel: "articles"
+structuredDataType: "article"
 tags: [j_ms, java-9, java-11]
 date: 2020-10-19
 slug: build-modules
