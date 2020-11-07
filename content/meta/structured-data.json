@@ -1,0 +1,22 @@
+{
+	"25h-java": {
+		"startDate": "2020-05-23T06:00+0000",
+		"endDate": "2020-05-23T07:00+0000",
+		"eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+		"eventStatus": "https://schema.org/EventScheduled",
+		"location": {
+			"@type": "VirtualLocation",
+			"name": "Twitch",
+			"url": "https://twitch.tv/nipafx"
+		},
+		"performer": {
+			"@type": "Person",
+			"name": "Nicolai (aka nipafx)"
+		},
+		"organizer": {
+			"@type": "Person",
+			"name": "Nicolai (aka nipafx)",
+			"url": "https://nipafx.dev"
+		}
+	}
+}

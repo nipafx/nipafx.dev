@@ -5,6 +5,8 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import { getImagePath, getImagePaths } from "./image"
 
+import structuredDataJson from "../../content/meta/structured-data.json"
+
 const Meta = ({title, slug, publicationDate, canonicalUrl, image, description, searchKeywords, videoUrl, structuredDataType}) => {
 	const data = useStaticQuery(
 		graphql`
@@ -96,6 +98,14 @@ const Meta = ({title, slug, publicationDate, canonicalUrl, image, description, s
 				sameAs: "https://nipafx.dev/nicolai-parlog",
 			},
 		}
+	if (structuredDataType === `event`)
+		structuredData = {
+			"@context": "https://schema.org",
+			"@type": "Event",
+			name: title,
+			image: [pageImage],
+			description,
+		}
 	if (structuredDataType === `video`)
 		structuredData = {
 			"@context": "https://schema.org",
@@ -106,6 +116,9 @@ const Meta = ({title, slug, publicationDate, canonicalUrl, image, description, s
 			thumbnailUrl: getImagePaths(image.slug, image.type),
 			contentUrl: getVideoContentUrl(videoUrl),
 		}
+
+	if (structuredDataJson[slug])
+		structuredData = { ...structuredData, ...structuredDataJson[slug] }
 
 	return (
 		<Helmet>

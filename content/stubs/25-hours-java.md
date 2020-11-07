@@ -2,6 +2,7 @@
 title: "25 Hours of Java"
 isPost: true
 channel: "articles"
+structuredDataType: "event"
 tags: [conversation, community]
 date: 2020-04-20
 slug: 25h-java
