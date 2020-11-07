@@ -43,6 +43,8 @@ const createIntersectionObserver = () => {
 			// returns true if intersection ratio is > 0;
 			// instead fall back to comparing intersection ratio with threshold
 			const headerPosition = event.boundingClientRect.top
+			// remember that the ToC is duplicated (accordion and pop-out-accordion),
+			// so each ToC entry exists twice on the page; hence "itemS" (plural)
 			lowlightItems()
 			highlightItems(focusedHeaderId, headerPosition)
 		}
