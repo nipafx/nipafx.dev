@@ -9,8 +9,8 @@ import MarkdownAsHtml from "../infra/markdownAsHtml"
 import Link from "../components/link"
 
 import style from "./calendar.module.css"
-
 import layout from "../layout/container.module.css"
+
 import presentations from "../../content/meta/presentations.json"
 import sessions from "../../content/meta/sessions.json"
 import streams from "../../content/meta/streams.json"

@@ -30,9 +30,10 @@ const Meta = ({title, slug, publicationDate, canonicalUrl, image, description, s
 	// (which Google treats as two different pages), the canonical URL
 	// has to be used to identify one of them as the... well, canonical URL
 	const pageCanonicalUrl = canonicalUrl || pageUrl
-	const pageImage = (image && image.slug)
-		? site.siteUrl + getImagePath(image.slug, image.type)
-		: `${site.siteUrl}/nicolai.jpg`
+	const pageImage =
+		image && image.slug
+			? site.siteUrl + getImagePath(image.slug, image.type)
+			: `${site.siteUrl}/nicolai.jpg`
 	const pageImageAlt = null
 
 	if (pageTitle.length > 60) console.warn("Long title: ", slug)
@@ -83,7 +84,7 @@ const Meta = ({title, slug, publicationDate, canonicalUrl, image, description, s
 			image: [pageImage],
 			datePublished: publicationDate,
 		}
-		if (structuredDataType === `course`)
+	if (structuredDataType === `course`)
 		structuredData = {
 			"@context": "https://schema.org",
 			"@type": "Course",
@@ -103,7 +104,7 @@ const Meta = ({title, slug, publicationDate, canonicalUrl, image, description, s
 			description,
 			uploadDate: publicationDate,
 			thumbnailUrl: getImagePaths(image.slug, image.type),
-			contentUrl: getVideoContentUrl(videoUrl)
+			contentUrl: getVideoContentUrl(videoUrl),
 		}
 
 	return (
@@ -127,8 +128,7 @@ const Meta = ({title, slug, publicationDate, canonicalUrl, image, description, s
 }
 
 const getVideoContentUrl = videoUrl => {
-	if (!videoUrl || !videoUrl.includes("youtube.com/watch?v="))
-		return undefined
+	if (!videoUrl || !videoUrl.includes("youtube.com/watch?v=")) return undefined
 
 	const videoId = videoUrl.match(/.*youtube\.com\/watch\?v=(.*)/)[1]
 	return `https://youtube.com/get_video_info?video_id=${videoId}`
