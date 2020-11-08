@@ -50,17 +50,15 @@ const Meta = ({title, slug, publicationDate, canonicalUrl, image, description, s
 		// Google
 		description,
 		// Twitter
-		//                             only use "summary_large_image" with non-default page images
-		"twitter:card": videoUrl ? "player" : image ? "summary_large_image" : "summary",
+		// don't use video card: embedding YouTube videos from other pages does not work - see #104
+		//             only use "summary_large_image" with non-default page images
+		"twitter:card": image ? "summary_large_image" : "summary",
 		"twitter:site": site.twitter,
 		"twitter:creator": site.twitter,
 		"twitter:title": pageTitle,
 		"twitter:description": pageDescription,
 		"twitter:image": pageImage,
 		"twitter:image:alt": pageImageAlt,
-		"twitter:player": videoUrl,
-		"twitter:player:width": videoUrl ? 1280 : null,
-		"twitter:player:height": videoUrl ? 720 : null,
 	}
 
 	// yes, it's useless for search engines, but it's documentation what I'm aiming for
@@ -75,7 +73,6 @@ const Meta = ({title, slug, publicationDate, canonicalUrl, image, description, s
 		"og:url": pageUrl,
 		"og:description": pageDescription,
 		"og:site_name": siteName,
-		"og:video": videoUrl,
 	}
 
 	let structuredData = null
@@ -107,6 +104,7 @@ const Meta = ({title, slug, publicationDate, canonicalUrl, image, description, s
 			image: [pageImage],
 			description,
 		}
+	// Google recommends to include structured data for videos even if they are in YouTube
 	if (structuredDataType === `video`)
 		structuredData = {
 			"@context": "https://schema.org",
