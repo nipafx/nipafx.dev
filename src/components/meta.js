@@ -118,8 +118,11 @@ const Meta = ({title, slug, publicationDate, canonicalUrl, image, description, s
 			contentUrl: videoContentUrl(videoUrl),
 		}
 
-	if (structuredDataJson[slug])
-		structuredData = { ...structuredData, ...structuredDataJson[slug] }
+	const explicitStructuredData = structuredDataJson[slug ?? "index"]
+	if (explicitStructuredData)
+		structuredData = structuredData
+			? { ...structuredData, ...explicitStructuredData }
+			: explicitStructuredData
 
 	return (
 		<Helmet>

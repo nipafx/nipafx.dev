@@ -1,4 +1,11 @@
 {
+	"index": {
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"url": "https://nipafx.dev",
+		"name": "Nicolai Parlog - nipafx",
+		"logo": "https://nipafx.dev/logo-bg.png"
+	},
 	"25h-java": {
 		"startDate": "2020-05-23T06:00+0000",
 		"endDate": "2020-05-23T07:00+0000",

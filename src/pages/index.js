@@ -15,6 +15,7 @@ const IndexPage = ({ data }) => (
 		meta={{
 			description:
 				"A website to sharpen your Java skills - by Nicolai (aka nipafx), a Java enthusiast with a passion for learning and sharing, online and offline.",
+			publicationDate: new Date(),
 		}}
 		onIndexPage
 	>
