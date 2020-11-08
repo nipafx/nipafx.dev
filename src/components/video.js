@@ -45,7 +45,9 @@ const Video = ({ slug, className }) => {
 			</div>
 			<Link to={video.url} {...classNames(style.button, style.link)}>
 				<Play className={style.graphic} />
-				<p className={style.text}>{`Watch on ${platform(video.url)}`}</p>
+				<div className={style.text}>
+					<p>{`Watch on ${platform(video.url)}`}</p>
+				</div>
 			</Link>
 		</div>
 	)

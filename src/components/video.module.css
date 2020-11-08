@@ -1,17 +1,18 @@
 .container {
 	display: grid;
-	grid-template-columns: 0.5em 1fr 0.5em 1fr 0.5em;
-	grid-template-rows: 0.5em 1fr 0.5em;
+	grid-template-columns: 0.25em 1fr 0.25em;
+	grid-template-rows: 0.25em min-content 0.25em min-content 0.25em;
 	grid-template-areas:
-		". .     . .    ."
-		". embed . link ."
-		". .     . .    .";
+		". .     ."
+		". link  ."
+		". .     ."
+		". embed ."
+		". .     .";
 }
 
 .thumbnail {
-	grid-area: thumbnail;
-	grid-column: 1 / span 5;
-	grid-row: 1 / span 3;
+	grid-column: 1 / span 3;
+	grid-row: 1 / span 5;
 	z-index: -1;
 }
 
@@ -25,7 +26,8 @@
 
 .button {
 	cursor: pointer;
-	text-align: center;
+	display: flex;
+	flex-direction: row;
 
 	/* this variable is used in the SVG; we reuse it for the text */
 	--button-color: var(--bg-color-transparent);
@@ -51,28 +53,73 @@
 }
 
 .graphic {
-	width: 50%;
-}
-
-.text {
-	background-color: var(--bg-color-transparent);
-	border-radius: 0.5em;
-	padding: 0 0.5em;
-}
-
-.text .optional {
 	display: none;
 }
 
+.text {
+	border-radius: 0.5em;
+	width: 100%;
+	background-color: var(--bg-color-transparent);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.text .optional {
+}
+
+@media all and (min-width: 400px) {
+	.graphic {
+		display: unset;
+		width: 50%;
+	}
+
+	.text {
+		margin: 0 0 0 0.5em;
+	}
+}
+
+@media all and (min-width: 500px) {
+	.container {
+		grid-template-columns: 1em 1fr 1em;
+		grid-template-rows: 1em min-content 1em min-content 1em;
+	}
+
+	.text {
+		padding: 0 0.5em;
+	}
+}
 
 @media all and (min-width: 600px) {
 	.container {
 		grid-template-columns: 1fr 40% 5% 40% 1fr;
 		grid-template-rows: 1fr min-content 1fr;
+		grid-template-areas:
+			". .    . .     ."
+			". link . embed ."
+			". .    . .     .";
+	}
+
+	.thumbnail {
+		grid-column: 1 / span 5;
+		grid-row: 1 / span 3;
+	}
+
+	.button {
+		flex-direction: column;
+		align-items: center;
 	}
 
 	.graphic {
-		width: 100%;
+		width: 75%;
+	}
+
+	.button .text {
+		margin: 0.5em 0 0 0;
+		flex-grow: 1;
 	}
 
 	.text .optional {
@@ -83,5 +130,9 @@
 @media all and (min-width: 800px) {
 	.container {
 		grid-template-columns: 1fr 15rem 5rem 15rem 1fr;
+	}
+
+	.button .text {
+		margin: 1em 0 0 0;
 	}
 }
