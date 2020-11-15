@@ -2422,5 +2422,21 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "java-16-stream-mapMulti-group",
+		"credits": {
+			"author": {
+				"name": "Forest Simon",
+				"url": "https://unsplash.com/@forest_ms"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/1k3g_rALKRc"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
