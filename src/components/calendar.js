@@ -134,7 +134,7 @@ const showEvent = (event, inMonth) => {
 			<p className={style.description}>
 				<MarkdownAsHtml itemProp="description">{event.description}</MarkdownAsHtml>
 			</p>
-			<span className={style.details}>{showDetailsForEvent(event)}</span>
+			{showLocationForEvent(event)}
 		</div>
 	)
 }
@@ -157,6 +157,7 @@ const showDatesForEvent = event => {
 			})}
 		/>
 	)
+	const status = <meta itemProp="eventStatus" content="http://schema.org/EventScheduled" />
 
 	if (event.days) {
 		const startDate = event.startTime.set({ day: event.days[0] })
@@ -169,6 +170,7 @@ const showDatesForEvent = event => {
 				<span className={style.weekday}>{endDate.toFormat("EEE")}</span>
 				<span className={style.day}>{ordinalDay(endDate.day)}</span>
 				{structuredStartDate}
+				{status}
 			</React.Fragment>
 		)
 	} else
@@ -178,18 +180,88 @@ const showDatesForEvent = event => {
 				<span className={style.day}>{ordinalDay(event.startTime.day)}</span>
 				<span className={style.time}>{event.startTime.toUTC().toFormat("HH:mm")} UTC</span>
 				{structuredStartDate}
+				{status}
 			</React.Fragment>
 		)
 }
 
-const showDetailsForEvent = event => {
-	switch (event.type) {
-		case "stream":
-			return <Link to="https://twitch.tv/nipafx">on Twitch</Link>
-		case "course":
-		case "talk":
-			return <Link to={event.host.url}>at {event.host.name}</Link>
+const showLocationForEvent = event => {
+	let location, attendanceMode, organizer
+	if (event.type === "stream") {
+		location = {
+			type: "https://schema.org/VirtualLocation",
+			name: "Nicolai Parlog (nipafx)",
+			text: "on Twitch",
+			url: "https://twitch.tv/nipafx",
+			details: <meta itemProp="url" content="https://twitch.tv/nipafx" />,
+		}
+		attendanceMode = "https://schema.org/OnlineEventAttendanceMode"
+		organizer = {
+			type: "https://schema.org/Person",
+			name: "Nicolai Parlog (nipafx)",
+			url: "https://nipafx.dev",
+		}
+	} else {
+		// event is a talk or a course
+		location = {
+			name: event.host.name,
+			url: event.host.url,
+			text: `at ${event.host.name}`,
+		}
+		if (event.location.physical) {
+			location.type = "https://schema.org/Place"
+			location.details = (
+				<span itemScope itemProp="address" itemType="https://schema.org/PostalAddress">
+					<meta itemProp="name" content={event.location.physical} />
+				</span>
+			)
+		} else if (event.location.virtual) {
+			location.type = "https://schema.org/VirtualLocation"
+			location.details = <meta itemProp="url" content={event.location.virtual} />
+		}
+
+		attendanceMode = event.location.physical
+			? "https://schema.org/OfflineEventAttendanceMode"
+			: // this implies that unknown locations are considered online events;
+			  // that's just a guess, but for offline events, I usually know the location
+			  "https://schema.org/OnlineEventAttendanceMode"
+
+		organizer = {
+			type: "https://schema.org/Organization",
+			name: event.host.name,
+			url: event.host.url,
+		}
 	}
+
+	return showLocation(location, attendanceMode, organizer)
+}
+
+const showLocation = (location, attendanceMode, organizer) => {
+	const locationProp = location.type
+		? {
+				// itemScope must be truthy
+				itemScope: "-",
+				itemProp: "location",
+				itemType: location.type,
+		  }
+		: {}
+	return (
+		<React.Fragment>
+			<span {...locationProp} className={style.details}>
+				<Link to={location.url}>{location.text}</Link>
+				{location.details}
+			</span>
+			{attendanceMode && <meta itemProp="eventAttendanceMode" content={attendanceMode} />}
+			<span itemScope itemProp="organizer" itemType={organizer.type}>
+				<meta itemProp="name" content={organizer.name} />
+				<meta itemProp="url" content={organizer.url} />
+			</span>
+			<span itemScope itemProp="performer" itemType="https://schema.org/Person">
+				<meta itemProp="name" content="Nicolai Parlog (nipafx)" />
+				<meta itemProp="url" content="https://nipafx.dev" />
+			</span>
+		</React.Fragment>
+	)
 }
 
 export default Calendar
@@ -346,6 +418,10 @@ const getPresentations = talks => {
 						presentation.programEntry ||
 						event.event.url,
 				},
+				location: {
+					physical: presentation.locationText,
+					virtual: presentation.location && presentation.location.url,
+				},
 				draft: presentation.draft,
 			}
 		})
@@ -371,6 +447,10 @@ const getSessions = courses => {
 			host: {
 				name: session.event.name,
 				url: session.announcement,
+			},
+			location: {
+				physical: session.locationText,
+				virtual: session.location && session.location.url,
 			},
 			draft: session.draft,
 		}

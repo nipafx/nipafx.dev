@@ -162,12 +162,12 @@ const extractSessions = () => {
 			from: DateTime.fromFormat(session.dates.from, "dd.MM.yyyy"),
 			to: DateTime.fromFormat(session.dates.to, "dd.MM.yyyy"),
 		}
-		const location = session.location
-			? {
-					text: session.location.text ?? session.location,
-					url: session.location.url,
-			  }
-			: null
+		const location =
+			session.location ?? session.locationText
+				? {
+						text: session.locationText,
+				  }
+				: null
 		// for unknown reasons (Gatsby caching?) this parsing does not behave well
 		// when `session.dates` is overridden with the parsed dates,
 		// so I create a new object instead
