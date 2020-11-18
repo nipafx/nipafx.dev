@@ -8,7 +8,7 @@ description: "Because privacy is a joke unless you're a corporation..."
 
 ## General Information
 
-Information as per German § 5 TMG and person responsible for the content as per German § 55 Abs. 2 RStV:
+General contact information and person responsible for the content:
 
 > Nicolai Parlog  \
 > Werderstraße 96  \
@@ -26,7 +26,7 @@ VAT-ID:
 
 ## Liability for Links
 
-This website contains links to external sites on whose content I have no influence and can therefore assume no responsibility for.
+This website contains links to external sites whose content I have no influence on and can therefore assume no responsibility for.
 Instead, it is quite obviously the provider of those pages who's responsible for them.
 
 <contentimage slug="duh" options="sidebar"></contentimage>
