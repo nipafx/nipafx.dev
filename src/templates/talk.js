@@ -16,7 +16,7 @@ export default ({ data }) => {
 		slides: data.talk.slides,
 		videoSlug: data.talk.videoSlug,
 		source:
-			data.talk.repo || data.talk.source
+			data.talk.repo ?? data.talk.source
 				? { repo: data.talk.repo, text: data.talk.source }
 				: undefined,
 		htmlAst: data.talk.content.htmlAst,

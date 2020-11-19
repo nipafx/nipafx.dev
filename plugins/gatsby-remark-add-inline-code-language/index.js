@@ -10,7 +10,7 @@ module.exports = ({ markdownAST, markdownNode }, userOptions) => {
 	if (!options.inlineCodeMarker)
 		throw new Error("Please define option 'inlineCodeMarker' for plugin 'gatsby-remark-add-inline-code-language'.")
 
-	const language = markdownNode.frontmatter[options.frontmatterProperty] || options.defaultInlineLanguage
+	const language = markdownNode.frontmatter[options.frontmatterProperty] ?? options.defaultInlineLanguage
 	if (!language)
 		return
 	const marker = options.inlineCodeMarker

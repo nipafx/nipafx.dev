@@ -26,7 +26,7 @@ const TagPage = ({ pageContext, data }) => {
 	const meta = {
 		title: tag.title || tag.slug,
 		slug: tag.slug,
-		description: tag.description || "Articles about " + tag.slug,
+		description: tag.description ?? "Articles about " + tag.slug,
 		searchKeywords: tag.slug,
 	}
 

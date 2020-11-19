@@ -141,9 +141,9 @@ const showEvent = (event, inMonth) => {
 
 const gridAreaForEvent = event => {
 	const startDay = event.days ? event.days[0] : event.startTime.day
-	const startSlot = event.slot || 1
+	const startSlot = event.slot ?? 1
 	const endDay = event.days ? event.days[event.days.length - 1] : event.startTime.day
-	const endSlot = event.slot || 2
+	const endSlot = event.slot ?? 2
 	return `d${startDay}s${startSlot}-start / d${startDay}s${startSlot}-start / d${endDay}s${endSlot}-end / d${endDay}s${endSlot}-end`
 }
 
@@ -357,7 +357,7 @@ const aggregateByMonths = events => {
 
 // WARNING: This does not work if a multi-day event collides with other events on 2+ days
 const detectSlots = events => {
-	const daysOf = event => events.days || [event.startTime.day]
+	const daysOf = event => events.days ?? [event.startTime.day]
 	const intersect = (event1, event2) => daysOf(event1).find(day => daysOf(event2).includes(day))
 
 	const processed = []

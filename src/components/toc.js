@@ -79,7 +79,7 @@ const highlightItems = (id, position) => {
 }
 
 const highlightItem = item => {
-	if (item) item.querySelector(`a`).classList.add(style.highlighted)
+	item?.querySelector(`a`).classList.add(style.highlighted)
 }
 
 const itemAbove = item => {
