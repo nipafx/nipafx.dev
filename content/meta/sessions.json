@@ -7,8 +7,7 @@
 			"announcement": "https://www.doag.org/de/eventdetails?tx_doagevents_single[id]=603090",
 			"event": {
 				"name": "DOAG - Berliner Expertenseminar",
-				"image": "doag-expertenseminar-2020",
-				"showName": true
+				"image": "doag-expertenseminar-2020"
 			},
 			"dates": {
 				"from": "02.12.2020",

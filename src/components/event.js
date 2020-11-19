@@ -14,34 +14,89 @@ import presentationData from "../../content/meta/presentations.json"
 import sessionData from "../../content/meta/sessions.json"
 
 const Event = ({ event, presentDate, className }) => {
-	const { url, image, title, description, location } = event
+	const { title, description, host, location } = event
 	return (
 		<div itemScope itemType="https://schema.org/Event" {...classNames(style.card, className)}>
 			{presentDate && <span className={style.date}>{presentDate(event)}</span>}
 			{title && (
-				<h3 className={style.title}>
+				<h3 key="title" className={style.title}>
 					<MarkdownAsHtml itemProp="name">{title}</MarkdownAsHtml>
 				</h3>
 			)}
-			{description && (
-				<MarkdownAsHtml itemProp="description" className={style.description}>
-					{description}
-				</MarkdownAsHtml>
-			)}
+			{presentDescription(description)}
 			<span className={style.filler} />
-			{location && (
-				<MarkdownAsHtml itemProp="location" className={style.location}>
-					{location}
-				</MarkdownAsHtml>
-			)}
-			{image && (
-				<Link to={url} className={style.link}>
+			{presentLocation(host, location)}
+			{host.image && (
+				<Link key="image" to={host.url} className={style.link}>
 					<div className={style.cover}>
-						<Image id={image} type="eventCard" className={style.logo} />
+						<Image id={host.image} type="eventCard" className={style.logo} />
 					</div>
 				</Link>
 			)}
 		</div>
+	)
+}
+
+const presentDescription = description => {
+	if (!description || !description.length) return null
+	return (
+		<div key="description" className={style.description}>
+			{description.map(d => (
+				<span key={d.url}>
+					<Link to={d.url}>{d.text}</Link>
+				</span>
+			))}
+		</div>
+	)
+}
+
+const presentLocation = (host, location) => {
+	if (!location) return null
+
+	const virtual = location.url
+	const attendanceMode = virtual
+		? "https://schema.org/OnlineEventAttendanceMode"
+		: "https://schema.org/OfflineEventAttendanceMode"
+	const locationType = virtual ? "https://schema.org/VirtualLocation" : "https://schema.org/Place"
+
+	return (
+		<React.Fragment>
+			<div
+				key="location"
+				itemScope
+				itemProp="location"
+				itemType={locationType}
+				className={style.location}
+			>
+				<Link to={host.url}>at {host.name}</Link>
+				{location && (
+					<React.Fragment>
+						<br />
+						<Link to={location.url}>{location.text}</Link>
+						{virtual ? (
+							<meta itemProp="url" content={location.url} />
+						) : (
+							<span
+								itemScope
+								itemProp="address"
+								itemType="https://schema.org/PostalAddress"
+							>
+								<meta itemProp="name" content={location.text} />
+							</span>
+						)}
+					</React.Fragment>
+				)}
+			</div>
+			<meta itemProp="eventAttendanceMode" content={attendanceMode} />
+			<span itemScope itemProp="organizer" itemType="https://schema.org/Organization">
+				<meta itemProp="name" content={host.name} />
+				<meta itemProp="url" content={host.url} />
+			</span>
+			<span itemScope itemProp="performer" itemType="https://schema.org/Person">
+				<meta itemProp="name" content="Nicolai Parlog (nipafx)" />
+				<meta itemProp="url" content="https://nipafx.dev" />
+			</span>
+		</React.Fragment>
 	)
 }
 

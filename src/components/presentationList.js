@@ -27,7 +27,7 @@ const PresentationList = ({ slug }) => {
 			{presentations.pastByYear.length > 0 && (
 				<React.Fragment>
 					<H2 id="past">Past Presentations</H2>
-					<p>{pastText(presentations.pastByYear)}</p>
+					<p>{pastText(presentations.pastByYear, slug)}</p>
 					{presentations.pastByYear.map(pres => (
 						<React.Fragment key={pres.year}>
 							<H3 id={pres.year}>{pres.year}</H3>
@@ -74,11 +74,10 @@ const pastText = (pastByYear, specificTalk) => {
 const preparePresentations = presentations =>
 	presentations.map(presentation => {
 		return {
-			url: presentation.event.url,
-			image: presentation.event.image,
 			title: presentation.title,
 			description: prepareDescription(presentation),
-			location: prepareLocation(presentation),
+			host: presentation.event,
+			location: presentation.location,
 			time: presentation.time,
 		}
 	})
@@ -89,16 +88,7 @@ const prepareDescription = ({ announcement, slidesUrl, videoUrl, misc }) => {
 	if (slidesUrl) description.push({ text: `slides`, url: slidesUrl })
 	if (videoUrl) description.push({ text: `video`, url: videoUrl })
 	if (misc) description.push(...misc)
-	return description.map(({ text, url }) => `[${text}](${url})`).join(`, `)
-}
-
-const prepareLocation = ({ event, location }) => {
-	let locationString = `[at ${event.name}](${event.url})`
-	if (location)
-		locationString += location.url
-			? `<br />[${location.text}](${location.url})`
-			: `<br />${location.text}`
-	return locationString
+	return description
 }
 
 const presentDate = ({ time }) => {
@@ -113,6 +103,7 @@ const presentDate = ({ time }) => {
 				itemProp="startDate"
 				content={time.toISO({ suppressSeconds: true, suppressMilliseconds: true })}
 			/>
+			<meta itemProp="eventStatus" content="http://schema.org/EventScheduled" />
 		</span>
 	)
 }

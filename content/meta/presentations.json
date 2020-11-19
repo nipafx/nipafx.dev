@@ -1511,8 +1511,7 @@
 			"event": {
 				"name": "AllTheTalks",
 				"url": "https://www.allthetalks.org/",
-				"image": "all-the-talks",
-				"showName": "true"
+				"image": "all-the-talks"
 			},
 			"presentations": [
 				{

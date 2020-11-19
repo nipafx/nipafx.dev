@@ -66,11 +66,11 @@ const upcomingText = upcoming => {
 const prepareSessions = sessions =>
 	sessions.map(session => {
 		return {
-			url: session.announcement,
-			image: session.event.image,
 			title: session.title,
 			description: prepareDescription(session),
-			location: prepareLocation(session),
+			host: session.event,
+			url: session.announcement,
+			location: session.location,
 			dates: session.dates,
 		}
 	})
@@ -78,17 +78,14 @@ const prepareSessions = sessions =>
 const prepareDescription = ({ announcement, dates }) => {
 	// don't show announcement and sign-up details for past sessions
 	return announcement && dates.from >= DateTime.local()
-		? `Check [the event page](${announcement}) for prices, exact content, and details on how to sign up.`
-		: null
-}
-
-const prepareLocation = ({ event, location }) => {
-	let locationString = event.url ? `[at ${event.name}](${event.url})` : `at ${event.name}`
-	if (location)
-		locationString += location.url
-			? `<br />[${location.text}](${location.url})`
-			: `<br />${location.text}`
-	return locationString
+		? [
+				{
+					url: announcement,
+					text:
+						"Check the event page for prices, exact content, and details on how to sign up.",
+				},
+		  ]
+		: []
 }
 
 const presentDates = ({ dates }) => {

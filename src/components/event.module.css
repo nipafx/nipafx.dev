@@ -42,6 +42,10 @@
 	text-align: center;
 }
 
+.description > *:not(:last-child)::after {
+	content: ', ';
+}
+
 .filler {
 	flex-grow: 1;
 }
