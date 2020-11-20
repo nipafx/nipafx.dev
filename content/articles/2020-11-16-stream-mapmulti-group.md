@@ -9,7 +9,7 @@ featuredImage: java-16-stream-mapMulti-group
 repo: java-x-demo
 ---
 
-Because [I've already introduced `Stream::mapMulti` in detail](java-16-stream-mapMulti), I'll stick to a blitz intro.
+Because [I've already introduced `Stream::mapMulti` in detail](java-16-stream-mapmulti), I'll stick to a blitz intro.
 Here's its signature:
 
 ```java
