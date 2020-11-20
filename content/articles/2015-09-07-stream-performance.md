@@ -219,8 +219,8 @@ These were the results (for 500'000 ordered elements; in milliseconds):
     <th></th>
     <th colspan="2">max</th>
     <th colspan="2">sum</th>
-    <th colspan="2"">arithmetic</th>
-    <th colspan="2"">string</th>
+    <th colspan="2">arithmetic</th>
+    <th colspan="2">string</th>
   </tr>
   <tr>
     <th></th>
@@ -400,7 +400,6 @@ Interesting that these are the simplest iteration mechanisms and operations.
 
 Winners are more complex iteration mechanisms over simple operations:
 
-
 <table>
   <tr>
     <th colspan="2">From 500'000 to 50'000'000 Elements</th>
@@ -430,8 +429,8 @@ This means that the table we have seen above for 500'000 elements looks a little
     <th></th>
     <th colspan="2">max</th>
     <th colspan="2">sum</th>
-    <th colspan="2"">arithmetic</th>
-    <th colspan="2"">string</th>
+    <th colspan="2">arithmetic</th>
+    <th colspan="2">string</th>
   </tr>
   <tr>
     <th></th>

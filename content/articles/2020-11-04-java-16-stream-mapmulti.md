@@ -1,6 +1,6 @@
 ---
 title: "Faster `flatMap`s with `Stream::mapMulti` in Java 16"
-tags: [java-16, stream]
+tags: [java-16, stream, performance]
 date: 2020-11-04
 slug: java-16-stream-mapmulti
 description: "Java 16 adds a new method `mapMulti` to `Stream`. It fills the same role as `flatMap`, but is more imperative - and faster."
