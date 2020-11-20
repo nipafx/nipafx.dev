@@ -10,7 +10,7 @@ const ExternalLink = ({ to, onClick, mark, className, children }) => {
 	if (mark) classes.push(style.mark)
 
 	return (
-		<a {...classNames(classes)} rel="noopener noreferrer" href={to} onClick={onClick}>
+		<a {...classNames(classes)} href={to} onClick={onClick}>
 			{children}
 		</a>
 	)
