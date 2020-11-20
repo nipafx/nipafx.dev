@@ -15,7 +15,7 @@ Maybe even an unyielding roadblock, although I don't think it's that bad.
 During a week of turmoil, many people have written about the matter and this post summarizes the community's opinions and gives you plenty of links to follow up.
 
 *By the way, I have originally written this as a section in my occasional newsletter.
-[Subscribe](http://blog.codefx.org/newsletter/) if you want to read stuff like this in your inbox.*
+[Subscribe](news) if you want to read stuff like this in your inbox.*
 
 ## Java EE to Jakarta EE
 

@@ -17,7 +17,7 @@ There should be something here very soon - be sure to check back!
 <p class="image-credits" style="width:250px;">All Rights reserved by <a href="http://www.my-photographer.com" title="Klaus Mellenthin Photographer">Klaus Mellenthin</a></p>
 </div>
 
-You can hire me for in-house trainings, consulting, or helping your company blog get off the ground. Have a look below for details and <a href="mailto:nipa@codefx.org">drop me a line</a> if anything piques your interest.
+You can hire me for in-house trainings, consulting, or helping your company blog get off the ground. Have a look below for details and <a href="mailto:nicolai@nipafx.dev">drop me a line</a> if anything piques your interest.
 
 (Visit <a href="//blog.codefx.org/about-nicolai-parlog/" title="About Nicolai Parlog">my profile</a> if you'd like to get to know me first.)
 

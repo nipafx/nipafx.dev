@@ -22,7 +22,7 @@ On top of that, they'll let me out of my cage every two weeks to crank out one o
 
 I've been coding Java on and off since 2001 and began doing it professionally in 2011.
 Being a know-it-all I started blogging in 2014, which led me to becoming a part-time author and eventually an editor.
-If you want to know more (and why wouldn't you?), you can find me at [codefx.org](http://codefx.org).
+If you want to know more (and why wouldn't you?), you can find me at [nipafx.dev](https://nipafx.dev).
 To get in touch use [mail](mailto:nicolai.parlog@sitepoint.com), [Twitter](https://twitter.com/nipafx), or, if you absolutely have to, [Google+](https://google.com/+NicolaiParlog).
 
 ## So What Is This About?

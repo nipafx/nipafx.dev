@@ -34,7 +34,7 @@ Christian Stein:
 Nicolai Parlog:
 
 * [Twitter](https://twitter.com/nipafx)
-* [Blog](https://blog.codefx.org)
+* [Blog](https://nipafx.dev)
 * [_The Java Module System_](https://www.manning.com/books/the-java-module-system?a_aid=nipa&a_bid=869915cb)
 
 Trisha Gee:

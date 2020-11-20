@@ -31,5 +31,5 @@ Since fall of 2015 a small, dedicated team has been working on the next version 
 A general availability release was made on September 10th, 2017.
 This is the next generation of testing in Java (and maybe even the JVM as a whole).
 
-This talk is based on an [ongoing series of articles I am publishing on my blog](http://blog.codefx.org/tag/junit-5). I already held it at various conferences.
+This talk is based on an [ongoing series of articles I am publishing on my blog](tag:junit-5). I already held it at various conferences.
 -->

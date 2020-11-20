@@ -25,13 +25,13 @@ This talk discusses these and other advanced topics of Java 8, so you can get th
 
 Like the abstract says, best practices are still forming and many developers I talked to are curious to learn more about how to best use Java 8's features. This is in line with my observation that most technical conference talks stick to explaining a feature's basics but do not provide advanced insights on how to best utilize it. The proposed talk remedies this situation by providing exactly that insight.
 
-I wrote a number of [articles about Java 8](http://blog.codefx.org/tag/java-8/), here are some of the more relevant ones:
+I wrote a number of [articles about Java 8](tag:java-8), here are some of the more relevant ones:
 
-* [Interface Evolution With Default Methods](http://blog.codefx.org/design/patterns/interface-evolution-with-default-methods-methods/)
-* [Java 8 SE Optional, a strict approach](http://blog.codefx.org/java/stephen-colebourne-optional-a-strict-approach/)
-* [Getting Rid Of Anonymous Classes](http://blog.codefx.org/techniques/getting-rid-of-anonymous-classes/)
-* [Stream Performance](http://blog.codefx.org/java/stream-performance/)
-* [Rebutting 5 Common Stream Tropes](http://blog.codefx.org/java/rebutting-5-common-stream-tropes/)
+* [Interface Evolution With Default Methods](java-default-methods-interface-evolution)
+* [Java 8 SE Optional, a strict approach](stephen-colebourne-java-optional-strict-approach)
+* [Getting Rid Of Anonymous Classes](java-getting-rid-of-anonymous-classes)
+* [Stream Performance](java-stream-performance)
+* [Rebutting 5 Common Stream Tropes](rebutting-5-common-java-stream-tropes)
 
 I also [held this talk before](https://www.youtube.com/watch?v=J3mDjgdZJSc) - you can see [the slides here](http://slides.nipafx.dev/expert-java-8/2017-02-07-jfokus/#/).
  -->

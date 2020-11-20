@@ -52,7 +52,7 @@ We'll talk about Java distributions, AdoptOpenJDK, and how Microsoft contributes
 
 ### Brian Goetz
 
-[Brian](https://twitter.com/BrianGoetz) is Java Language Architect at Oracle; creator of [lambdas](https://blog.codefx.org/tag/lambda/) and [streams](https://blog.codefx.org/tag/stream); [bringer of `var`](http://blog.codefx.org/java/java-10-var-type-inference/), [switch expressions](http://blog.codefx.org/java/switch-expressions/), and [records](https://openjdk.java.net/jeps/359); harbinger of pattern matching, reinvented serialization, and value types.
+[Brian](https://twitter.com/BrianGoetz) is Java Language Architect at Oracle; creator of [lambdas](tag:lambda) and [streams](tag:streams); [bringer of `var`](java-10-var-type-inference), [switch expressions](java-13-switch-expressions), and [records](https://openjdk.java.net/jeps/359); harbinger of pattern matching, reinvented serialization, and value types.
 
 Under the headline "today's problems come from yesterday's solutions" we'll talk about a few things that annoy Java developers today (who said `null`?).
 Also: projects Amber and Valhalla.

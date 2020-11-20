@@ -16,7 +16,7 @@ I discuss all of these in detail to make sure you know what to expect.
 Links to follow up:
 
 * [Slides](https://slides.nipafx.dev/java-next/2018-09-30-codefx@yt/)
-* [Java 11 migration](https://blog.codefx.org/java/java-11-migration-guide/)
+* [Java 11 migration](java-11-migration-guide)
 * [Incubator modules](http://openjdk.java.net/jeps/11)
 * [Language previews](http://openjdk.java.net/jeps/12)
 * [Oracle JDK vs OpenJDK](https://blogs.oracle.com/java-platform-group/oracle-jdk-releases-for-java-11-and-later)

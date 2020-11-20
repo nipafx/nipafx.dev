@@ -32,11 +32,11 @@ I migrated a ~1.5 million LOC application to Java 9. I have been [writing about 
 The talk will use [this slide deck][fx-slides-j9-mig] and [this demo project][gh-j9-mig].
 
 [jms]: http://tiny.cc/jms
-[fx-talks]: http://blog.codefx.org/past-talks
+[fx-talks]: past-talks
 [fx-slides-j9-mig]: http://slides.nipafx.dev/java-9-migration
-[fx-java-9]: http://blog.codefx.org/tag/java-9
-[fx-jigsaw]: http://blog.codefx.org/tag/project-jigsaw
-[fx-jpms]: http://blog.codefx.org/tag/jpms
+[fx-java-9]: https://nipafx.dev/java-9
+[fx-jigsaw]: https://nipafx.dev/project-jigsaw
+[fx-jpms]: https://nipafx.dev/j_ms
 [sp-java-9]: https://www.sitepoint.com/ultimate-guide-to-java-9
 [gh-j9-mig]: https://github.com/nipafx/demo-java-9-migration
 -->

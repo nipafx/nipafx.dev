@@ -72,15 +72,15 @@ On Disy's blog I already started to write about [how we/they do code reviews](ht
 
 Yes, I do talks:
 
--   [past talks](http://blog.codefx.org/past-talks/)
--   [upcoming talks](http://blog.codefx.org/upcoming-talks/)
+-   [past talks](past-talks)
+-   [upcoming talks](schedule)
 
 (If you know me, you're now thinking "Of course you are... *roll-eyes*".)
 
 ### For Hire
 
 Turns out that knowledge about Java 9 and JUnit 5 interests other people as well (who would've thought?).
-If you or your company are of such a curious persuasion and would like to get some help on planning migrations or training you and your fellow developers, you can hire me for that - just [drop me a mail](mailto:nipa@codefx.org).
+If you or your company are of such a curious persuasion and would like to get some help on planning migrations or training you and your fellow developers, you can hire me for that - just [drop me a mail](mailto:nicolai@nipafx.dev).
 
 ### Err, coding?
 

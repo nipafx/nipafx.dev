@@ -34,10 +34,10 @@ I migrated a ~1.5 million LOC application to Java 9. I have been [writing about 
 The talk will build [on this slide deck][fx-slides-jpms].
 
 [jms]: http://tiny.cc/jms
-[fx-talks]: http://blog.codefx.org/past-talks
+[fx-talks]: past-talks
 [fx-slides-jpms]: http://slides.nipafx.dev/jpms
-[fx-java-9]: http://blog.codefx.org/tag/java-9
-[fx-jigsaw]: http://blog.codefx.org/tag/project-jigsaw
-[fx-jpms]: http://blog.codefx.org/tag/jpms
+[fx-java-9]: https://nipafx.dev/java-9
+[fx-jigsaw]: https://nipafx.dev/project-jigsaw
+[fx-jpms]: https://nipafx.dev/j_ms
 [sp-java-9]: https://www.sitepoint.com/ultimate-guide-to-java-9
 -->

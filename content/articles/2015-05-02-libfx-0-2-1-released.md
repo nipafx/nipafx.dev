@@ -39,4 +39,4 @@ You can get **LibFX 0.2.1** here:
 compile 'org.codefx.libfx:LibFX:0.2.1'
 ```
 
-**LibFX** is licensed under GLP 3.0 but other arrangements can be made - just [shoot me an email](mailto:nipa@codefx.org).
+**LibFX** is licensed under GLP 3.0 but other arrangements can be made - just [shoot me an email](mailto:nicolai@nipafx.dev).

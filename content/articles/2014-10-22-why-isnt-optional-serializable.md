@@ -164,4 +164,4 @@ We saw that there are different reasons to not make Optional serializable: The d
 
 It is hard to say whether any single one is already a show stopper but together they way heavily against serialization.
 But for those undeterred, I will explore how to serialize Optional in another post in the next couple of days.
-To stay up to date, subscribe via [RSS](feed.xml) or [Newsletter](http://blog.codefx.org/newsletter/)!
+To stay up to date, subscribe via [RSS](feed.xml) or [Newsletter](news)!

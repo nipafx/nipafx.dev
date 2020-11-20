@@ -16,7 +16,7 @@ Here are six things that you need to know to make the two play nice together.
 I'll show you which versions to pick, how to run Maven on a new Java version even though it is not your default JDK, how to apply command line options to your build process, and how to keep your build running on Java 8 *and* and the newer versions.
 
 This post is glued together from different parts of my weekly newsletter, where I covered these topics when I first encountered them.
-Check out [past newsletters on Medium](http://medium.com/codefx-weekly) and [subscribe to get it while it's hot](http://blog.codefx.org/newsletter/).
+Check out [past newsletters on Medium](http://medium.com/codefx-weekly) and [subscribe to get it while it's hot](news).
 This post was originally written for Java 9, but it applies just the same to building with any younger version, Java 11 for example.
 
 ## Maven Version

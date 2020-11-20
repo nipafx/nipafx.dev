@@ -184,7 +184,7 @@ That checkpoint has to evaluate whether the dependency is present and send all c
 <contentimage slug="jpms-optional-dependency-coding-checked" options="bg"></contentimage>
 
 The module system offers a way to check whether a module is present.
-I explained in [my newsletter](blog.codefx.org/newsletter/) how to get there and why I use [the new stack-walking API](https://www.sitepoint.com/deep-dive-into-java-9s-stack-walking-api/), so here you'll just have to trust me when I say that this is the way to go:
+I explained in [my newsletter](news) how to get there and why I use [the new stack-walking API](https://www.sitepoint.com/deep-dive-into-java-9s-stack-walking-api/), so here you'll just have to trust me when I say that this is the way to go:
 
 ```java
 import static java.lang.StackWalker.Option.RETAIN_CLASS_REFERENCE;
@@ -226,5 +226,5 @@ Sometimes you want to write code against a dependency that might not always be p
 To make the dependency's types available at compile time but not enforce its presence at launch time, the module system offers the `requires static` clause.
 Note, though, that a module does not get picked up during resolution if it is only referenced this way and that special care needs to be taken to make sure code does not crash if the optional dependency is absent at run time.
 
-To learn more about the module system check out [the JPMS tag](blog.codefx.org/tag/jpms/) or [get my book *The Java 9 Module System*](https://www.manning.com/books/the-java-9-module-system?a_aid=nipa&a_bid=869915cb) (with Manning).
-If you're interested in the historical perspective, check [the Project Jigsaw tag](blog.codefx.org/tag/project-jigsaw/).
+To learn more about the module system check out [the JPMS tag](tag:j_ms) or [get my book *The Java 9 Module System*](https://www.manning.com/books/the-java-9-module-system?a_aid=nipa&a_bid=869915cb) (with Manning).
+If you're interested in the historical perspective, check [the Project Jigsaw tag](tag:project-jigsaw).

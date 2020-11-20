@@ -371,5 +371,5 @@ And the internet is of course full of articles about the topic:
 ## Reflection
 
 This article should have covered **everything** one needs to know about default methods.
-If you disagree, [tweet](https://twitter.com/nipafx), [mail](mailto:nipa@codefx.org) or leave a comment.
+If you disagree, [tweet](https://twitter.com/nipafx), [mail](mailto:nicolai@nipafx.dev) or leave a comment.
 Approval and +1's are also acceptable.

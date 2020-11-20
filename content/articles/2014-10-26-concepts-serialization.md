@@ -182,7 +182,7 @@ This proxy is written to and read from the byte stream instead of the original i
 This is achieved by implementing the methods `writeReplace` and `readResolve`.
 
 In most cases this is by far the best approach to serialization.
-It deserves [its own post](java-serialization-proxy-pattern) and it will get it soon ([stay](feed.xml) [tuned](http://blog.codefx.org/newsletter/)).
+It deserves [its own post](java-serialization-proxy-pattern) and it will get it soon ([stay](feed.xml) [tuned](news)).
 
 ## Misc
 

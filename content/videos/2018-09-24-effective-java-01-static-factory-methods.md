@@ -22,5 +22,5 @@ Links to follow up:
 * [BED-Con in Berlin](http://www.bed-con.org/)
 * [Twitter-poll](https://twitter.com/nipafx/status/1037310344585261056)
 * [§1 GG](https://twitter.com/nipafx/status/1038376068728676353)
-* [Value-based classes](https://blog.codefx.org/java/value-based-classes/)
+* [Value-based classes](java-value-based-classes)
 * [Comment your &*☠# Code](comment-your-fucking-code)

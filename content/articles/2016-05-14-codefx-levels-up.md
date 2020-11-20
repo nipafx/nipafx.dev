@@ -74,7 +74,7 @@ To be honest: This is almost as scary as it is awesome - but the good kind.
 
 Writing already started and early access e-books should be available sometime in fall.
 The book should be finished in March 2017 and printed copies be available about three months later.
-If you're curious and want to have a chance of a peek preview (gotta check with the publisher), you should [subscribe to my newsletter](http://blog.codefx.org/newsletter/).
+If you're curious and want to have a chance of a peek preview (gotta check with the publisher), you should [subscribe to my newsletter](news).
 
 ### Even Moar?
 
@@ -90,18 +90,18 @@ The curious thing is: Some of them even got accepted!
 Over the next months I will be talking about the [Java Module System](tag:project-jigsaw), [JUnit 5](tag:junit-5) and that everybody should [comment their fucking code](tag:clean-comments) (on stage, where nobody can interrupt me, HarHar!).
 
 By the way, this would be a great opportunity to meet you in person if you're there!
-I will keep an up-to-date list of [upcoming talks](http://blog.codefx.org/upcoming-talks/), so check it out, ping me anytime you want or flag me down if you see me.
+I will keep an up-to-date list of [upcoming talks](schedule), so check it out, ping me anytime you want or flag me down if you see me.
 
 ### Future Past
 
-In case you missed a talk, I will also keep a lost of [past talks](http://blog.codefx.org/past-talks/).
+In case you missed a talk, I will also keep a lost of [past talks](past-talks).
 Yell at me if something doesn't show up.
 
 ## For Hire
 
 Turns out that knowledge about Java 9 and JUnit 5 interests other people than me (who would've thought?).
 If you or your company are of such a curious persuasion and would like to get some help on planning migrations or training you and your fellow developers, you can hire me for that.
-Just [drop me a mail](mailto:nipa@codefx.org).
+Just [drop me a mail](mailto:nicolai@nipafx.dev).
 
 ## Quo Vadis?
 

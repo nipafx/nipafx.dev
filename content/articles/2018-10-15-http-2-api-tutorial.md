@@ -62,7 +62,7 @@ HttpRequest request = HttpRequest.newBuilder()
 ```
 
 You don't have to set the URL in `uri(URI)` and can instead pass it straight to `newBuilder(URI)`.
-I think I prefer it this way, though, because you can so nicely read it as "GET codefx.org".
+I think I prefer it this way, though, because you can so nicely read it as "GET nipafx.dev".
 
 With `header(String, String)`, you add a name/value pair to the request's header.
 If you want to override existing values for a header name, use `setHeader`.

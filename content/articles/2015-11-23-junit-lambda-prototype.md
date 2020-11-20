@@ -448,7 +448,7 @@ public class Resolver implements MethodParameterResolver {
 	@Override
 	public Object resolve(Parameter parameter, TestExecutionContext context)
 			throws ParameterResolutionException {
-		return "nipa@codefx.org";
+		return "nicolai@nipafx.dev";
 	}
 }
 ```
