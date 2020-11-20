@@ -51,13 +51,15 @@ const presentDescription = description => {
 }
 
 const presentLocation = (host, location) => {
-	if (!location) return null
-
-	const virtual = location.url
-	const attendanceMode = virtual
-		? "https://schema.org/OnlineEventAttendanceMode"
-		: "https://schema.org/OfflineEventAttendanceMode"
-	const locationType = virtual ? "https://schema.org/VirtualLocation" : "https://schema.org/Place"
+	// this implies that unknown locations are considered online events;
+	// that's just a guess, but for offline events, I usually know the location
+	const physical = location && !location.url
+	const attendanceMode = physical
+		? "https://schema.org/OfflineEventAttendanceMode"
+		: "https://schema.org/OnlineEventAttendanceMode"
+	const locationType = physical
+		? "https://schema.org/Place"
+		: "https://schema.org/VirtualLocation"
 
 	return (
 		<React.Fragment>
@@ -73,18 +75,15 @@ const presentLocation = (host, location) => {
 					<React.Fragment>
 						<br />
 						<Link to={location.url}>{location.text}</Link>
-						{virtual ? (
-							<meta itemProp="url" content={location.url} />
-						) : (
-							<span
-								itemScope
-								itemProp="address"
-								itemType="https://schema.org/PostalAddress"
-							>
-								<meta itemProp="name" content={location.text} />
-							</span>
-						)}
 					</React.Fragment>
+				)}
+				{physical ? (
+					<span itemScope itemProp="address" itemType="https://schema.org/PostalAddress">
+						<meta itemProp="name" content={location.text} />
+					</span>
+				) : (
+					// use host URL as fallback for virtual events without location URL
+					<meta itemProp="url" content={location?.url ?? host.url} />
 				)}
 			</div>
 			<meta itemProp="eventAttendanceMode" content={attendanceMode} />
