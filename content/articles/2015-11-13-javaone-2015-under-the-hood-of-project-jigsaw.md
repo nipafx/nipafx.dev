@@ -8,7 +8,7 @@ searchKeywords: "JavaOne"
 featuredImage: javaone-project-jigsaw-under-the-hood-sf
 ---
 
-<Snippet markdown="java-one-2015-intro"></Snippet>
+<snippet markdown="java-one-2015-intro"></snippet>
 
 Let's top the series off with a peek under the hood of the Java Platform Module System!
 

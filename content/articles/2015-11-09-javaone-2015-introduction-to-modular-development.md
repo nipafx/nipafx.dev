@@ -8,7 +8,7 @@ searchKeywords: "JavaOne"
 featuredImage: javaone-project-jigsaw-introduction-sf
 ---
 
-<Snippet markdown="java-one-2015-intro"></Snippet>
+<snippet markdown="java-one-2015-intro"></snippet>
 
 After [preparing for JDK 9](javaone-2015-prepare-for-jdk-9) let's continue with an introduction to modular development!
 

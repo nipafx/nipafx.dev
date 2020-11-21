@@ -88,7 +88,7 @@ This directly touches on the critique that Scala allows too many ways to do thin
 Apparently the Scala community is busy bike shedding and flame waring this out, though...
 
 It is interesting to realize that a similar problem starts haunting Java as well.
-Collections over vectors and arrays, NIO over IO, streams over loops, lambda-enabled APIs over those that are not, soon [modules over JARs](jigsaw-hands-on-guide), [value classes](https://www.sitepoint.com/javaone-2016-nucleus/#javase) and [value types](http://cr.openjdk.java.net/~jrose/values/values-0.html) over verbose [value-basedclasses](java-value-based-classes), and maybe at some point [reactive APIs](http://openjdk.java.net/jeps/266) over those that are not.
+Collections over vectors and arrays, NIO over IO, streams over loops, lambda-enabled APIs over those that are not, soon [modules over JARs](jigsaw-hands-on-guide), [value classes](https://www.sitepoint.com/javaone-2016-nucleus/#javase) and [value types](http://cr.openjdk.java.net/~jrose/values/values-0.html) over verbose [value-based classes](java-value-based-classes), and maybe at some point [reactive APIs](http://openjdk.java.net/jeps/266) over those that are not.
 We better get busy coming up with a good way to settle on and communicate idiomatic approaches if we do not want to get into the same situation.
 
 ### So Where *Is* Scala Going?

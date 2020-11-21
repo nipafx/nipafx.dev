@@ -8,8 +8,7 @@ searchKeywords: "JavaOne"
 featuredImage: javaone-project-jigsaw-prepare-sf
 ---
 
-<Snippet markdown="java-one-2015-intro"></Snippet>
-
+<snippet markdown="java-one-2015-intro"></snippet>
 
 Let's start with preparations for JDK 9!
 

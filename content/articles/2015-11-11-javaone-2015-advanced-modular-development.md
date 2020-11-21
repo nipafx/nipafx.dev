@@ -8,7 +8,7 @@ searchKeywords: "JavaOne"
 featuredImage: javaone-project-jigsaw-advanced-sf
 ---
 
-<Snippet markdown="java-one-2015-intro"></Snippet>
+<snippet markdown="java-one-2015-intro"></snippet>
 
 Let's build on the introduction with some advanced modular development and migration advice!
 

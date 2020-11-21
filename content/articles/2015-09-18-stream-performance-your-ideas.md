@@ -53,7 +53,7 @@ Maybe they should stop because it looks like it doesn't improve performance:
 <table class="center">
   <tr>
     <th></th>
-    <th colspan="6">runtime in ms normalized to 1'000'000 elements</td>
+    <th colspan="6">runtime in ms normalized to 1'000'000 elements</th>
   </tr>
   <tr>
     <th></th>
@@ -278,8 +278,8 @@ Just to check again:
   </tr>
   <tr>
     <td><code>boxedArray_max_stream_unbox</code></td>
-    <td>3.367 (<1%)</td>
-    <td>3.515 (<1%)</td>
+    <td>3.367 (&lt;1%)</td>
+    <td>3.515 (&lt;1%)</td>
     <td>3.548 (2%)</td>
     <td>3.632 (1%)</td>
     <td>3.547 (1%)</td>
@@ -288,7 +288,7 @@ Just to check again:
   <tr>
     <td><code>list_max_stream</code></td>
     <td>7.230 (7%)</td>
-    <td>6.492 (<1%)</td>
+    <td>6.492 (&lt;1%)</td>
     <td>5.595 (36%)</td>
     <td>5.619 (48%)</td>
     <td>5.852 (45%)</td>
@@ -296,9 +296,9 @@ Just to check again:
   </tr>
   <tr>
     <td><code>list_max_stream_unbox</code></td>
-    <td>3.370 (<1%)</td>
+    <td>3.370 (&lt;1%)</td>
     <td>3.515 (1%)</td>
-    <td>3.527 (<1%)</td>
+    <td>3.527 (&lt;1%)</td>
     <td>3.668 (3%)</td>
     <td>3.807 (2%)</td>
     <td>3.702 (5%)</td>

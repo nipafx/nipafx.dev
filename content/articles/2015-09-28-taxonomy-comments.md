@@ -181,54 +181,39 @@ We divided comments into these four categories:
   </tr>
   <tr>
     <th>Narrations</th>
-    <td>what
-(descriptive)</td>
-    <td>match
-impl.</td>
+    <td>what (descriptive)</td>
+    <td>match impl.</td>
     <td>very high</td>
     <td>inline</td>
-    <td>very
-important</td>
+    <td>very important</td>
     <td>clean code</td>
   </tr>
   <tr>
     <th>Contracts</th>
-    <td>what
-(declarative)</td>
-    <td>match
-behavior</td>
+    <td>what (declarative)</td>
+    <td>match behavior</td>
     <td>high</td>
-    <td>doc.
-comments</td>
+    <td>doc. comments</td>
     <td>important</td>
-    <td>clean code,
-tests</td>
+    <td>clean code, tests</td>
   </tr>
   <tr>
-    <th>Technical
-Context</th>
+    <th>Technical Context</th>
     <td>what for</td>
-    <td>be
-helpful</td>
+    <td>be helpful</td>
     <td>medium</td>
-    <td>block
-comments</td>
+    <td>block comments</td>
     <td>preferable</td>
-    <td>clean code,
-tests, demos</td>
+    <td>clean code, tests, demos</td>
   </tr>
   <tr>
-    <th>Historical
-Context</th>
+    <th>Historical Context</th>
     <td>why</td>
-    <td>delete if
-outdated</td>
+    <td>delete if outdated</td>
     <td>very low</td>
-    <td>point out
-transience</td>
+    <td>point out transience</td>
     <td>preferable</td>
-    <td>commit msg,
-issues</td>
+    <td>commit msg, issues</td>
   </tr>
 </table>
 

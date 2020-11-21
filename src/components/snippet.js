@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import MarkdownAsHtml from "../infra/markdownAsHtml"
 import RenderHtml from "../infra/renderHtml"
 
 import layout from "../layout/container.module.css"

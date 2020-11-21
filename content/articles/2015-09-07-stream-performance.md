@@ -155,28 +155,28 @@ While this changes their relative performance considerably, it creates the same 
     <th>slower</th>
   </tr>
   <tr>
-    <td><code>array_max_for</code></th>
+    <th><code>array_max_for</code></th>
     <td>0.36</td>
     <td>-</td>
     <td>0.123</td>
     <td>-</td>
   </tr>
   <tr>
-    <td><code>array_max_stream</code></th>
+    <th><code>array_max_stream</code></th>
     <td>5.35</td>
     <td>14'861%</td>
     <td>0.599</td>
     <td>487%</td>
   </tr>
   <tr>
-    <td><code>list_max_for</code></th>
+    <th><code>list_max_for</code></th>
     <td>6.55</td>
     <td>22%</td>
     <td>0.700</td>
     <td>17%</td>
   </tr>
   <tr>
-    <td><code>list_max_stream</code></th>
+    <th><code>list_max_stream</code></th>
     <td>8.33</td>
     <td>27%</td>
     <td>3.272</td>
@@ -494,6 +494,7 @@ This means that the table we have seen above for 500'000 elements looks a little
     <td>15.723</td>
     <td>96.550</td>
     <td>117.690</td>
+  </tr>
 </table>
 
 We can see that there is almost no change for the **arithmetic** and **string** operations.

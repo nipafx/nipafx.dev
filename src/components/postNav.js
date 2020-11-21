@@ -175,10 +175,10 @@ const updateShareUrl = (
 ) => {
 	articleTitle = articleTitle.replace(/[/`/]/g, "")
 	url = url
-		.replace(/\n/g, encodeURI("\n"))
 		.replace("$DESCRIPTION", articleDescription)
 		.replace("$TITLE", articleTitle)
 		.replace("$SLUG", articleSlug)
+	url = encodeURI(url)
 	return { title, fontAwesome, url, className }
 }
 
