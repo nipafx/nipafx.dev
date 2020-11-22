@@ -5,7 +5,16 @@ import style from "./toc.module.css"
 // DEPENDS ON header height
 const HEADER_HEIGHT = 85
 const EXTRA_MARGIN = 50
-const INTERSECTION_THRESHOLD = 1
+const BOTTOM_MARGIN = "50%"
+// On large zoom levels, the rectangle from HEADER_HEIGHT + EXTRA_MARGIN to BOTTOM_MARGIN
+// can be too small to contain an entire header. If the header's visibility ratio never
+// goes above INTERSECTION_THRESHOLD, no event is fired (and the toc doesn't update).
+// That implies a very low threshold, but if it gets too small, clicking on a header will
+// not scroll far enough for that header to be highlighted.
+//
+// This value seems to be the smallest where we still get highlighting on toc clicks on
+// various zoom levels:
+const INTERSECTION_THRESHOLD = 0.5
 const HEADERS = "article h2, article h3, article h4, article h5, article h6"
 
 const Toc = ({ toc }) => {
@@ -55,7 +64,7 @@ const createIntersectionObserver = () => {
 	return new IntersectionObserver(onObserve, {
 		// when scrolling to a header in the toc, no event is thrown if the margin
 		// is exactly the same as the header height
-		rootMargin: `-${HEADER_HEIGHT + EXTRA_MARGIN}px 0px -50%`,
+		rootMargin: `-${HEADER_HEIGHT + EXTRA_MARGIN}px 0px -${BOTTOM_MARGIN}`,
 		threshold: INTERSECTION_THRESHOLD,
 	})
 }
