@@ -16,8 +16,10 @@ With just six months between major versions, the JDK team can release a feature,
 Wait, *refine*, *finalize*?
 Aren't Java features set in stone, never to be changed after their introduction?
 Yes, they are, which is why new Java syntax, JVM features, and APIs that are still suspect to change are called *preview language features* (for the syntax), *preview JVM features* (for the JVM), or *incubator modules* (for APIs).
-They are released for experimentation, but safe-guarded against accidental production use.
+They are released for experimentation, but safe-guarded against accidental production use, so we don't bet too much code on them.
 Once finalized, they're just as set in stone as every other feature.
+
+<pullquote>They are released for *experimentation* and can change, so don't bet too much code on them.</pullquote>
 
 Let's discuss how that works and how you can experiment with them.
 This post looks at using `--enable-preview` to unlock preview language features, a concept introduced by [JEP 12](https://openjdk.java.net/jeps/12).
@@ -157,6 +159,8 @@ So previews are relatively stable.
 That doesn't mean you should bet a lot of code on them, but I'd consider it reasonable, even for commercial code bases, to write a little bit of code using them.
 After all, experimenting on the real thing is always more informative than on laboratory or green-field projects.
 But I would keep the impact small, no more than I can rework in, say, about a day if the feature is overhauled considerably or even pulled.
+
+<pullquote>Keep the impact small; no more code than you can rework in a day.</pullquote>
 
 ## Safeguards Against Accidental Proliferation
 
