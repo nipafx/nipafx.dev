@@ -8,6 +8,12 @@
 
 .bar {
 	background-color: var(--alt-color);
-	height: var(--progress-bar-height);
+	height: calc(3 * var(--progress-bar-height));
 	width: 0;
+}
+
+@media all and (min-height: 800px) {
+	.bar {
+		height: var(--progress-bar-height);
+	}
 }
