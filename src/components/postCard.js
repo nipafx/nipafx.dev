@@ -12,16 +12,22 @@ import Link from "./link"
 import style from "./postCard.module.css"
 
 const PostCard = ({ slug, className }) => {
-	const { title, date, channel, tags, description, image } = getPost(slug)
+	const { title, date, channel, tags, description, featuredImage } = getPost(slug)
 	return (
-		<div data-channel={channel} data-tags={tags} {...classNames(style.card, channel, className)}>
+		<div
+			data-channel={channel}
+			data-tags={tags}
+			{...classNames(style.card, channel, className)}
+		>
 			<Link to={slug}>
-				<ImageCard image={image}>
+				<ImageCard image={featuredImage}>
 					<div className={style.content}>
 						<div className={style.cover} />
 						<div className={style.details}>
 							<div className={style.top}>
-								<span className={style.title}><MarkdownAsHtml>{title}</MarkdownAsHtml></span>
+								<span className={style.title}>
+									<MarkdownAsHtml>{title}</MarkdownAsHtml>
+								</span>
 								<span className={style.channel}>
 									<Channel channel={channel} colorize />
 								</span>
@@ -56,7 +62,7 @@ const ImageCard = ({ image, children }) => {
 }
 
 const getPost = slug => {
-	const { posts, images } = useStaticQuery(graphql`
+	const { posts } = useStaticQuery(graphql`
 		query {
 			posts: allPost {
 				nodes {
@@ -66,32 +72,22 @@ const getPost = slug => {
 					channel
 					tags
 					description
-					featuredImage
-				}
-			}
-			images: allImageSharp(
-				filter: {
-					fields: {
-						collection: {
-							in: ["article-title-images", "course-title-images", "page-title-images", "talk-title-images", "video-title-images"]
+					featuredImage {
+						fluid(
+							maxWidth: 800
+							base64Width: 10
+							srcSetBreakpoints: [800, 1600]
+							toFormat: JPG
+							jpegQuality: 40
+						) {
+							...GatsbyImageSharpFluid
 						}
-					}
-				}
-			) {
-				nodes {
-					fields {
-						id
-					}
-					fluid(maxWidth: 800, base64Width: 10, srcSetBreakpoints: [800, 1600], toFormat: JPG, jpegQuality: 40) {
-						...GatsbyImageSharpFluid
 					}
 				}
 			}
 		}
 	`)
-	const post = posts.nodes.find(node => node.slug === slug)
-	post.image = images.nodes.find(node => node.fields.id === post.featuredImage)
-	return post
+	return posts.nodes.find(node => node.slug === slug)
 }
 
 export default PostCard
