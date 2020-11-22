@@ -2438,5 +2438,21 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "java-16",
+		"credits": {
+			"author": {
+				"name": "NASA Goddard Space Flight Center",
+				"url": "https://www.flickr.com/photos/gsfc/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/gsfc/16241560860/in/photolist-qKdfco-MfVWVp-2CshyT-Mg3o1J-Mg3yHW-Mg331J-MLw2xq-N69d96-bBxjAX-N67eeB-Mg2dYN-2jWgA4A-MfVLUc-2ipDijR-MfW6Jg-MfWf5p-NaCa2j-MjUPtA-GWKYj7-EYcWsg-MLvKXh-N688iX-2CsRgX-ajdsLA-RFhezq-BbpLV-2fdyWXW-ajaJCn-9svPzF-8oQ6Se-fNY9mb-8KbKQe-LCKxxP-7Bsua-3bHzQK-7BrsY-7BsjP-7BrWT-CHrScE-7Bs4G-7BrJa-7BrQb-7Brms-CT3Lv5-7Brds-7BscE-7BqZk-7BqRH-7Br7R-24ihhr9"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
 	}
 ]
