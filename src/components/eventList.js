@@ -12,7 +12,7 @@ const EventList = ({ events, presentDate, className }) => {
 	return (
 		<div {...classNames(style.list, className)}>
 			{events.map(event => (
-				<Event key={event.host.url} event={event} presentDate={presentDate} />
+				<Event key={event.url} event={event} presentDate={presentDate} />
 			))}
 		</div>
 	)

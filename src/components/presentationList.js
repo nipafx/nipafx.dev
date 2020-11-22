@@ -108,4 +108,28 @@ const presentDate = ({ time }) => {
 	)
 }
 
+export const createTableOfContentEntries = slug => {
+	const toc = []
+	const presentations = getPresentationsByYear(slug)
+	if (presentations.upcoming.length > 0)
+		toc.push({
+			title: "Upcoming Presentations",
+			anchor: "upcoming",
+		})
+	if (presentations.pastByYear.length > 0) {
+		const years = presentations.pastByYear.map(({ year }) => {
+			return {
+				title: year,
+				anchor: year,
+			}
+		})
+		toc.push({
+			title: "Past Presentations",
+			anchor: "past",
+			children: years,
+		})
+	}
+	return toc
+}
+
 export default PresentationList

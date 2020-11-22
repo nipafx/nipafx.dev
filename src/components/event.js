@@ -19,9 +19,9 @@ const Event = ({ event, presentDate, className }) => {
 		<div itemScope itemType="https://schema.org/Event" {...classNames(style.card, className)}>
 			{presentDate && <span className={style.date}>{presentDate(event)}</span>}
 			{title && (
-				<h3 key="title" className={style.title}>
+				<span key="title" {...classNames("h3", style.title)}>
 					<MarkdownAsHtml itemProp="name">{title}</MarkdownAsHtml>
-				</h3>
+				</span>
 			)}
 			{presentDescription(description)}
 			<span className={style.filler} />

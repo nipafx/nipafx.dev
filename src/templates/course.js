@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import { processTableOfContents } from "../infra/stubs"
+
 import SiteLayout from "../layout/site"
 import CourseLayout from "../layout/course"
 
@@ -12,6 +14,7 @@ export default ({ data }) => {
 		tags: data.course.tags,
 		description: data.course.description,
 		intro: data.course.intro ?? data.course.description,
+		toc: processTableOfContents(data.course.content.tableOfContents),
 		featuredImage: data.course.featuredImage,
 		htmlAst: data.course.content.htmlAst,
 	}
@@ -46,6 +49,7 @@ export const query = graphql`
 			featuredImage
 			content {
 				htmlAst
+				tableOfContents(pathToSlugField: "frontmatter.slug")
 			}
 		}
 	}

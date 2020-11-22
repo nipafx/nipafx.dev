@@ -1,5 +1,8 @@
 import React from "react"
 
+import { createTableOfContents } from "../infra/stubs"
+import { createTableOfContentEntries } from "../components/presentationList"
+
 import ContentVideo from "../components/contentVideo"
 import { H2 } from "../components/headings"
 import Iframe from "../components/iframe"
@@ -13,11 +16,14 @@ import PresentationList from "../components/presentationList"
 import layout from "../layout/container.module.css"
 
 const TalkLayout = ({title, slug, date, tags, description, intro, featuredImage, slides, videoSlug, source, htmlAst}) => {
+	const toc = generateToc(slug, slides, videoSlug)
 	return (
 		<main>
 			<section id={PROGRESS_BAR_REFERENCE}>
 				<PostHeader {...{ title, channel: "talks", date, tags, intro, featuredImage }} />
-				<PostContent {...{ title, slug, channel: "talks", description, source, htmlAst }}>
+				<PostContent
+					{...{ title, slug, channel: "talks", description, toc, source, htmlAst }}
+				>
 					{slides && (
 						<React.Fragment>
 							<H2 id="slides">Slides</H2>
@@ -28,7 +34,8 @@ const TalkLayout = ({title, slug, date, tags, description, intro, featuredImage,
 								I also embedded them below. If they're focussed, you can navigate
 								with arrow keys or swipes (they're two-dimensional, with chapters on
 								the horizontal axis and chapter content layed out vertically). Use{" "}
-								<em>Page Up/Down</em> for linearized order and <em>?</em> for more shortcuts.
+								<em>Page Up/Down</em> for linearized order and <em>?</em> for more
+								shortcuts.
 							</p>
 							<Iframe title={title} src={slides} className={layout.wide} />
 						</React.Fragment>
@@ -46,6 +53,15 @@ const TalkLayout = ({title, slug, date, tags, description, intro, featuredImage,
 			</section>
 		</main>
 	)
+}
+
+const generateToc = (slug, slides, video) => {
+	const tocEntries = []
+	if (slides) tocEntries.push({ title: "Slides", anchor: "slides" })
+	if (video) tocEntries.push({ title: "Video", anchor: "video" })
+	tocEntries.push(...createTableOfContentEntries(slug))
+	console.log(tocEntries)
+	return createTableOfContents(tocEntries)
 }
 
 export default TalkLayout

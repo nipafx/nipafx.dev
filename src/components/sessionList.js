@@ -114,4 +114,26 @@ const presentDates = ({ dates }) => {
 	)
 }
 
+export const createTableOfContentEntries = slug => {
+	const toc = [{
+		title: "Upcoming Public Sessions",
+		anchor: "upcoming",
+	}]
+	const sessions = getSessionsByYear(slug)
+	if (sessions.pastByYear.length > 0) {
+		const years = sessions.pastByYear.map(({ year }) => {
+			return {
+				title: year,
+				anchor: year,
+			}
+		})
+		toc.push({
+			title: "Past Public Sessions",
+			anchor: "past",
+			children: years,
+		})
+	}
+	return toc
+}
+
 export default SessionList

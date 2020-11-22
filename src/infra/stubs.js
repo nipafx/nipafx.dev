@@ -39,8 +39,8 @@ export const stub = slug => {
 
 export default stub
 
-export const processTableOfContents = toc =>
-	toc
+export const processTableOfContents = tocString =>
+	tocString
 		.replace(/"/g, `'`)
 		.replace(/<a href='[^#"]*(#[^']*)'>(.*)<\/a>/g, `<a href="$1" title="$2">$2<\/a>`)
 		.replace(/<p>|<\/p>/g, "")
@@ -48,6 +48,17 @@ export const processTableOfContents = toc =>
 		// displays as a whitespace where there shouldn't be one
 		// (e.g. before <li>s that contain a <ul>)
 		.replace(/\n/g, ``)
+
+export const createTableOfContents = toc => {
+	if (!toc) return ``
+
+	const anchorList = toc
+		.map(({ title, anchor, children }) => `<li><a href="#${anchor}" title="${title}">${title}</a>${createTableOfContents(children)}</li>`)
+		.join(``)
+	return `<ul>${anchorList}</ul>`
+}
+
+export const anchorOf = title => title.replace(/[\s\/\+_]/g, "-").toLowerCase()
 
 export const detectSeries = slug => {
 	// prettier-ignore

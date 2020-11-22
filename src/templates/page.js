@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import { processTableOfContents } from "../infra/stubs"
+
 import SiteLayout from "../layout/site"
 import PageLayout from "../layout/page"
 
@@ -13,7 +15,7 @@ export default ({ data }) => {
 		description: data.page.description,
 		intro: data.page.intro ?? data.page.description,
 		featuredImage: data.page.featuredImage,
-		toc: createTableOfContents(data.page),
+		toc: processTableOfContents(data.page.content.tableOfContents),
 		htmlAst: data.page.content.htmlAst,
 	}
 	const meta = {
@@ -34,11 +36,6 @@ export default ({ data }) => {
 		</SiteLayout>
 	)
 }
-
-const createTableOfContents = page =>
-	page.content.tableOfContents
-		.replace(/<a href="[^#"]*(#[^"]*)">([^<]*)<\/a>/g, `<a href="$1" title="$2">$2<\/a>`)
-		.replace(/<p>|<\/p>/g, "")
 
 export const query = graphql`
 	query($slug: String!) {

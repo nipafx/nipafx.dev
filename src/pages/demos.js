@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import stub from "../infra/stubs"
+import stub, { createTableOfContents, anchorOf } from "../infra/stubs"
 
 import { classNames } from "../infra/functions"
 
@@ -89,13 +89,13 @@ const getReposWithPostSlugs = () => {
 }
 
 const generateToc = repos => {
-	const anchorList = repos
-		.map(repo => [anchorOf(repo.title), repo.title])
-		.map(([anchor, name]) => `<li><a href="#${anchor}" title="${name}">${name}</a></li>`)
-		.join("")
-	return `<ul>${anchorList}</ul>`
+	const toc = repos.map(repo => {
+		return {
+			title: repo.title,
+			anchor: anchorOf(repo.title),
+		}
+	})
+	return createTableOfContents(toc)
 }
-
-const anchorOf = title => title.replace(/[\s\/\+_]/g, "-").toLowerCase()
 
 export default DemosPage
