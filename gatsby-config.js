@@ -311,5 +311,6 @@ module.exports = {
 		"Talk.repo": `Repo.slug`,
 		"Video.repo": `Repo.slug`,
 		"Tag.series": `Post.slug`,
+		"Post.featuredImage": `ImageSharp.fields.id`,
 	},
 }

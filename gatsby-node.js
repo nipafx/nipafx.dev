@@ -141,7 +141,6 @@ exports.createSchemaCustomization = ({ actions }) => {
 			tags: [String!]!
 			description: String!
 			intro: String
-			featuredImage: String
 		}
 		type Article implements Node {
 			title: String!
