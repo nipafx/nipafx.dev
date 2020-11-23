@@ -12,6 +12,32 @@ There should be something here very soon - be sure to check back!
 <!-- TODO -->
 
 <!--
+
+I'm Nicolai (aka nipafx), a Java enthusiast with a passion for learning and sharing, online and offline.
+
+Hi. 👋
+(I'd love to follow that up with "nice to meet you", but we're note quite there yet.
+If you want to change that, I'm all up for it, so feel free [to get in touch](contact).)
+
+Hi, nice to almost-meet you! 👋
+(Feel free [to get in touch](contact) to compelte the handshake.)
+my name is Nicolai Parlog, but online I go by nipafx.
+I'm the author of this site, [_The Java Module System_ (Manning, 2019)](https://www.manning.com/books/the-java-module-system?a_aid=nipa&a_bid=869915cb), as well as many articles for publications like [The Java Magazine](TODO), [InfoQ](TODO), TODO, and more.
+
+
+
+For years now, Java has been my passion and it's still going strong.
+
+--
+
+Hi, nice to almost-meet you! 👋
+My name is Nicolai Parlog, but online I go by nipafx.
+I'm the author of this site, [_The Java Module System_ (Manning, 2019)](https://www.manning.com/books/the-java-module-system?a_aid=nipa&a_bid=869915cb), as well as many articles for publications like [The Java Magazine](TODO), [InfoQ](TODO), TODO, and more.
+-->
+
+
+
+<!--
 I’m a thirty year old boy, as the narrator would put it, who has found his passion in software development. I constantly read, think and write about it, code for a living as well as for fun, and am always thinking about ways to improve skills and workflows – mine as well as those of the people sharing their time with me.
 
 Initially, I considered this whole blogging thing a hobby, aimed at improving my knowledge and giving back to the great community which enabled me to even call myself a developer (as opposed to just some guy hacking away at his keyboard). But after about a year and a half it turned into much more. Researching topics that really interested me, I inadvertently acquired knowledge that others seek.
