@@ -252,6 +252,9 @@ module.exports = {
 			resolve: "gatsby-plugin-react-helmet",
 		},
 		{
+			resolve: "gatsby-plugin-force-trailing-slashes",
+		},
+		{
 			resolve: "gatsby-plugin-matomo",
 			options: {
 				siteId: "1",
@@ -301,6 +304,14 @@ module.exports = {
 		},
 		{
 			resolve: `gatsby-plugin-netlify`,
+			options: {
+				headers: {
+					"/*": [
+						// apparently, "same-origin" is the default, which I find too restrictive
+						`Referrer-Policy: no-referrer-when-downgrade`
+					]
+				}
+			}
 		},
 	],
 	mapping: {

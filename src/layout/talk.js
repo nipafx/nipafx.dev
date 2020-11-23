@@ -60,7 +60,6 @@ const generateToc = (slug, slides, video) => {
 	if (slides) tocEntries.push({ title: "Slides", anchor: "slides" })
 	if (video) tocEntries.push({ title: "Video", anchor: "video" })
 	tocEntries.push(...createTableOfContentEntries(slug))
-	console.log(tocEntries)
 	return createTableOfContents(tocEntries)
 }
 

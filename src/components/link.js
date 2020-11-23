@@ -69,6 +69,9 @@ const Link = ({ to, onClick, onIndexPage, markExternal, className, children }) =
 	// if internal links don't start with "/", Gatsby emits a warning;
 	// prevent that by prefixing internal links with a "/" if they lack one
 	to = to.startsWith("/") ? to : `/${to}`
+	// since trailing slash is the default, link to those pages directly
+	// to prevent a redirect
+	to = to.endsWith("/") ? to : `${to}/`
 	return (
 		<Internal to={to} className={className} onClick={onClick}>
 			{children}

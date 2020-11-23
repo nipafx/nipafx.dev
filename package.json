@@ -49,6 +49,7 @@
 		"shallow-compare": "^1.2.2"
 	},
 	"devDependencies": {
+		"gatsby-plugin-force-trailing-slashes": "^1.0.4",
 		"netlify-cli": "^2.64.1",
 		"prettier": "^1.19.1",
 		"webpack-filter-warnings-plugin": "^1.2.1"
