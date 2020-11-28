@@ -1,5 +1,7 @@
 const fs = require(`fs`)
 const path = require(`path`)
+const remark = require(`remark`)
+const remarkHTML = require(`remark-html`)
 const FilterWarningsPlugin = require(`webpack-filter-warnings-plugin`)
 
 exports.onCreateWebpackConfig = ({ actions }) => {
@@ -247,6 +249,14 @@ exports.createSchemaCustomization = ({ actions }) => {
 	createTypes(typeDefs)
 }
 
+const markdownToHtml = md => {
+	return remark()
+		.use(remarkHTML)
+		.processSync(md)
+		.toString()
+		.replace(/<p>|<\/p>|\n/g, "")
+}
+
 createPostNodes = (node, createNode, createContentDigest) => {
 	if (![`articles`, `courses`, `videos`, `stubs`, `talks`].includes(node.fields.collection))
 		return
@@ -255,13 +265,13 @@ createPostNodes = (node, createNode, createContentDigest) => {
 	const post = {
 		id: node.fields.collection + `-as-post-` + node.fields.id,
 
-		title: node.frontmatter.title,
+		title: markdownToHtml(node.frontmatter.title),
 		slug: node.frontmatter.slug,
 		date: node.frontmatter.date,
 		channel:
 			node.fields.collection === `stubs` ? node.frontmatter.channel : node.fields.collection,
 		tags: node.frontmatter.tags,
-		description: node.frontmatter.description,
+		description: markdownToHtml(node.frontmatter.description),
 		featuredImage: node.frontmatter.featuredImage,
 		repo: node.frontmatter.repo,
 

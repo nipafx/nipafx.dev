@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 import { classNames, tagletsFromPath } from "../infra/functions"
-import MarkdownAsHtml from "../infra/markdownAsHtml"
 
 import Site from "../layout/site"
 import FormattedDate from "../components/formattedDate"
@@ -79,9 +78,7 @@ const PostCard = ({ post }) => {
 						<div className={style.cover} />
 						<div className={style.details}>
 							<div className={style.top}>
-								<span className={style.title}>
-									<MarkdownAsHtml>{title}</MarkdownAsHtml>
-								</span>
+								<span className={style.title} dangerouslySetInnerHTML={{ __html: title }} />
 								<span className={style.channel}>
 									<Channel channel={channel} colorize />
 								</span>
@@ -92,7 +89,7 @@ const PostCard = ({ post }) => {
 								</span>
 							</div>
 							<p className={style.description}>
-								<MarkdownAsHtml>{description}</MarkdownAsHtml>
+								<span dangerouslySetInnerHTML={{ __html: description}} />
 								<span className={style.date}>
 									<FormattedDate date={date} />
 								</span>
