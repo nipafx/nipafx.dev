@@ -7,7 +7,6 @@ import { classNames } from "../infra/functions"
 
 import { H2 } from "../components/headings"
 import Link from "../components/link"
-import MarkdownAsHtml from "../infra/markdownAsHtml"
 import PostLayout from "../layout/post"
 import PostContent from "../components/postContent"
 import PostList from "../components/postList"
@@ -34,11 +33,9 @@ const showRepo = repo => {
 	return (
 		<React.Fragment key={repo.slug}>
 			<H2 id={anchorOf(repo.title)}>
-				<MarkdownAsHtml>{repo.title}</MarkdownAsHtml>
+				<span dangerouslySetInnerHTML={{ __html: repo.title }} />
 			</H2>
-			<p>
-				<MarkdownAsHtml>{repo.description}</MarkdownAsHtml>.
-			</p>
+			<p dangerouslySetInnerHTML={{ __html: repo.description }} />
 			<p className={style.repoLink}>
 				<Link to={repo.url}>Find the repository here.</Link>
 			</p>

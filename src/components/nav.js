@@ -5,8 +5,6 @@ import { classNames } from "../infra/functions"
 import Accordion from "./accordion"
 import PopOutAccordion from "./accordion-pop-out"
 
-import MarkdownAsHtml from "../infra/markdownAsHtml"
-
 import layout from "../layout/container.module.css"
 import style from "./nav.module.css"
 
@@ -14,9 +12,7 @@ const Nav = ({ title, longHeaders, shortHeaders, open, children }) => {
 	return (
 		<div {...classNames(layout.navbar, style.container)}>
 			<section {...classNames(style.nav)}>
-				<p className={style.title}>
-					<MarkdownAsHtml>{title}</MarkdownAsHtml>
-				</p>
+				<p className={style.title} dangerouslySetInnerHTML={{ __html: title }} />
 				<Accordion
 					className={style.largeNav}
 					headerClassName={style.largeHeader}

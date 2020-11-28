@@ -293,18 +293,18 @@ createArticleNodes = (node, createNode, createContentDigest) => {
 	const article = {
 		id: `article-` + node.fields.id,
 
-		title: node.frontmatter.title,
+		title: markdownToHtml(node.frontmatter.title),
 		slug: node.frontmatter.slug,
 		date: node.frontmatter.date,
 		tags: node.frontmatter.tags,
 		canonicalUrl: node.frontmatter.canonicalUrl,
 		canonicalText: node.frontmatter.canonicalText,
-		description: node.frontmatter.description,
-		intro: node.frontmatter.intro,
+		description: markdownToHtml(node.frontmatter.description),
+		intro: markdownToHtml(node.frontmatter.intro),
 		searchKeywords: node.frontmatter.searchKeywords,
 		featuredImage: node.frontmatter.featuredImage,
 		repo: node.frontmatter.repo,
-		source: node.frontmatter.source,
+		source: markdownToHtml(node.frontmatter.source),
 
 		// it would be nice to simply assign `node.html`/`node.htmlAst` to a field,
 		// but remark creates them later (in setFieldsOnGraphQLNodeType[1]), so they
@@ -337,12 +337,12 @@ createChannelNodes = (node, createNode, createContentDigest) => {
 	const channel = {
 		id: `channel-` + node.fields.id,
 
-		title: node.frontmatter.title,
+		title: markdownToHtml(node.frontmatter.title),
 		internalName: fileName,
 		singularName: node.frontmatter.singularName,
 		pluralName: node.frontmatter.pluralName,
 		slug: node.frontmatter.slug,
-		description: node.frontmatter.description,
+		description: markdownToHtml(node.frontmatter.description),
 		featuredImage: node.frontmatter.featuredImage,
 
 		// see comment on creating article nodes
@@ -366,15 +366,15 @@ createCourseNodes = (node, createNode, createContentDigest) => {
 	const course = {
 		id: `course-` + node.fields.id,
 
-		title: node.frontmatter.title,
+		title: markdownToHtml(node.frontmatter.title),
 		slug: node.frontmatter.slug,
 		date: node.frontmatter.date,
 		tags: node.frontmatter.tags,
-		description: node.frontmatter.description,
+		description: markdownToHtml(node.frontmatter.description),
 		length: node.frontmatter.length,
 		audience: node.frontmatter.audience,
 		requirements: node.frontmatter.requirements,
-		intro: node.frontmatter.intro,
+		intro: markdownToHtml(node.frontmatter.intro),
 		searchKeywords: node.frontmatter.searchKeywords,
 		featuredImage: node.frontmatter.featuredImage,
 
@@ -399,12 +399,12 @@ createPageNodes = (node, createNode, createContentDigest) => {
 	const page = {
 		id: `page-` + node.fields.id,
 
-		title: node.frontmatter.title,
+		title: markdownToHtml(node.frontmatter.title),
 		slug: node.frontmatter.slug,
 		date: node.frontmatter.date,
 		tags: node.frontmatter.tags,
 		style: node.frontmatter.style,
-		description: node.frontmatter.description,
+		description: markdownToHtml(node.frontmatter.description),
 		searchKeywords: node.frontmatter.searchKeywords,
 		featuredImage: node.frontmatter.featuredImage,
 
@@ -429,11 +429,11 @@ createRepoNodes = (node, createNode, createContentDigest) => {
 	const repo = {
 		id: `repo-` + node.fields.id,
 
-		title: node.frontmatter.title,
+		title: markdownToHtml(node.frontmatter.title),
 		slug: node.frontmatter.slug,
 		tags: node.frontmatter.tags,
 		type: node.frontmatter.type,
-		description: node.frontmatter.description,
+		description: markdownToHtml(node.frontmatter.description),
 		url: node.frontmatter.url,
 
 		parent: `repo`,
@@ -490,19 +490,19 @@ createStubNodes = (node, createNode, createContentDigest) => {
 	const stub = {
 		id: `stub-` + node.fields.id,
 
-		title: node.frontmatter.title,
+		title: markdownToHtml(node.frontmatter.title),
 		slug: node.frontmatter.slug,
 		date: node.frontmatter.date,
 		isPost: node.frontmatter.isPost ?? false,
 		channel: node.frontmatter.channel,
 		structuredDataType: node.frontmatter.structuredDataType,
 		tags: node.frontmatter.tags,
-		description: node.frontmatter.description,
-		intro: node.frontmatter.intro,
+		description: markdownToHtml(node.frontmatter.description),
+		intro: markdownToHtml(node.frontmatter.intro),
 		searchKeywords: node.frontmatter.searchKeywords,
 		featuredImage: node.frontmatter.featuredImage,
 		repo: node.frontmatter.repo,
-		source: node.frontmatter.source,
+		source: markdownToHtml(node.frontmatter.source),
 
 		// see comment on creating article nodes
 		content___NODE: node.id,
@@ -525,11 +525,11 @@ createTagNodes = (node, createNode, createContentDigest) => {
 	const tag = {
 		id: `tag-` + node.fields.id,
 
-		title: node.frontmatter.title,
+		title: markdownToHtml(node.frontmatter.title),
 		slug: node.frontmatter.slug,
-		description: node.frontmatter.description,
+		description: markdownToHtml(node.frontmatter.description),
 		series: node.frontmatter.series,
-		seriesDescription: node.frontmatter.seriesDescription,
+		seriesDescription: markdownToHtml(node.frontmatter.seriesDescription),
 
 		// see comment on creating article nodes
 		content___NODE: node.id,
@@ -552,12 +552,12 @@ createTalkNodes = (node, createNode, createContentDigest) => {
 	const talk = {
 		id: `talk-` + node.fields.id,
 
-		title: node.frontmatter.title,
+		title: markdownToHtml(node.frontmatter.title),
 		slug: node.frontmatter.slug,
 		date: node.frontmatter.date,
 		tags: node.frontmatter.tags,
-		description: node.frontmatter.description,
-		intro: node.frontmatter.intro,
+		description: markdownToHtml(node.frontmatter.description),
+		intro: markdownToHtml(node.frontmatter.intro),
 		searchKeywords: node.frontmatter.searchKeywords,
 		featuredImage: node.frontmatter.featuredImage,
 		slides: node.frontmatter.slides,
@@ -585,16 +585,16 @@ createVideoNodes = (node, createNode, createContentDigest) => {
 	const video = {
 		id: `video-` + node.fields.id,
 
-		title: node.frontmatter.title,
+		title: markdownToHtml(node.frontmatter.title),
 		slug: node.frontmatter.slug,
 		videoSlug: node.frontmatter.videoSlug,
 		date: node.frontmatter.date,
 		tags: node.frontmatter.tags,
-		description: node.frontmatter.description,
-		intro: node.frontmatter.intro,
+		description: markdownToHtml(node.frontmatter.description),
+		intro: markdownToHtml(node.frontmatter.intro),
 		searchKeywords: node.frontmatter.searchKeywords,
 		repo: node.frontmatter.repo,
-		source: node.frontmatter.source,
+		source: markdownToHtml(node.frontmatter.source),
 
 		// see comment on creating article nodes
 		content___NODE: node.id,

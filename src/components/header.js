@@ -5,7 +5,6 @@ import { Tag, Channel } from "./taglet"
 import Image from "./image"
 import Video from "./video"
 
-import MarkdownAsHtml from "../infra/markdownAsHtml"
 import { classNames } from "../infra/functions"
 
 import layout from "../layout/container.module.css"
@@ -51,9 +50,9 @@ export const PostHeader = ({ title, date, channel, tags, intro, featuredImage, f
 	return (
 		<Header featuredImage={featuredImage} featuredVideo={featuredVideo}>
 			<FormattedDate date={date} />
-			<MarkdownAsHtml>{title}</MarkdownAsHtml>
+			<span dangerouslySetInnerHTML={{ __html: title }} />
 			{showTags(channel, tags)}
-			<MarkdownAsHtml>{intro}</MarkdownAsHtml>
+			<span dangerouslySetInnerHTML={{ __html: intro }} />
 		</Header>
 	)
 }
@@ -102,9 +101,9 @@ export const PageHeader = ({ title, date, tags, intro, featuredImage }) => {
 	return (
 		<Header featuredImage={featuredImage}>
 			<FormattedDate date={date} />
-			<MarkdownAsHtml>{title}</MarkdownAsHtml>
+			<span dangerouslySetInnerHTML={{ __html: title }} />
 			{showTags("pages", tags)}
-			<MarkdownAsHtml>{intro}</MarkdownAsHtml>
+			<span dangerouslySetInnerHTML={{ __html: intro }} />
 		</Header>
 	)
 }
@@ -117,7 +116,7 @@ export const ChannelHeader = ({ channel, description, featuredImage }) => {
 			<span>Everything in</span>
 			<Channel channel={channel} plural />
 			{null}
-			<MarkdownAsHtml>{description}</MarkdownAsHtml>
+			<span dangerouslySetInnerHTML={{ __html: description }} />
 		</Header>
 	)
 }
@@ -131,7 +130,7 @@ export const TagHeader = ({ tag, description, featuredImage }) => {
 			<Tag tag={tag} />
 			{null}
 			{/* not all tags have a Markdown file and so not all tags have a description */}
-			{ description ? <MarkdownAsHtml>{description}</MarkdownAsHtml> : null}
+			{description ? <span dangerouslySetInnerHTML={{ __html: description }} /> : null}
 		</Header>
 	)
 }

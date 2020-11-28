@@ -4,9 +4,10 @@ tags: [collections, libfx]
 date: 2015-05-26
 slug: java-transforming-collections
 description: "Transforming collections are a view onto another collection, making it appear to be of a different parametric type. They are available in LibFX 0.3.0."
-intro: "Transforming collections are a view onto another collection, making it appear to be of a different parametric type. This can be used to remove optionality from a collection or substitute 'equals' and 'hashCode'."
+intro: "Transforming collections are a view onto another collection, making it appear to be of a different parametric type. This can be used to remove optionality from a collection or substitute `equals` and `hashCode`."
 searchKeywords: "Transforming Collections"
 featuredImage: transforming-collections
+repo: libfx
 ---
 
 Did you ever want to substitute the `equals` and `hashCode` methods a `HashSet` or `HashMap` uses?

@@ -70,12 +70,13 @@ const showSeries = series => {
 				{series.posts.map(post =>
 					post.current ? (
 						<li key={post.slug} className={style.currentPost}>
-							<MarkdownAsHtml>{post.title}</MarkdownAsHtml> (this one)
+							<span dangerouslySetInnerHTML={{ __html: post.title }} />
+							{" (this one)"}
 						</li>
 					) : (
 						<li key={post.slug}>
 							<Link to={post.slug}>
-								<MarkdownAsHtml>{post.title}</MarkdownAsHtml>
+								<span dangerouslySetInnerHTML={{ __html: post.title }} />
 							</Link>
 						</li>
 					)
@@ -90,23 +91,25 @@ const showSeries = series => {
 const showSource = (source, channel) => (
 	<div className={style.entry}>
 		{source.repo && <p>{textInSource(source, channel)}</p>}
-		{source.text && (
-			<p>
-				<MarkdownAsHtml>{source.text}</MarkdownAsHtml>
-			</p>
-		)}
+		{source.text && <p dangerouslySetInnerHTML={{ __html: source.text }} />}
 	</div>
 )
 
 const textInSource = (source, channel) => {
+	const title = <Link to={source.repo.url}>{source.repo.title}</Link>
+	const description = (
+		<span
+			dangerouslySetInnerHTML={{
+				__html: lowercaseFirstLetter(source.repo.description),
+			}}
+		/>
+	)
 	switch (source.repo.type) {
 		case "demo":
 			return (
 				<React.Fragment>
-					Want to play around with the code yourself? Check out the repository{" "}
-					<Link to={source.repo.url}>{source.repo.title}</Link>,{" "}
-					<MarkdownAsHtml>{lowercaseFirstLetter(source.repo.description)}</MarkdownAsHtml>{" "}
-					- it contains many of the snippets {channelInSource(channel)}.
+					Want to play around with the code yourself? Check out the repository {title},{" "}
+					{description} - it contains many of the snippets {channelInSource(channel)}.
 					{!source.repo.restrictive &&
 						" It has a permissive license, so you can reuse the code for your projects."}
 				</React.Fragment>
@@ -114,10 +117,8 @@ const textInSource = (source, channel) => {
 		case "project":
 			return (
 				<React.Fragment>
-					Interested in the project {channelInSource(channel)}? Check out{" "}
-					<Link to={source.repo.url}>{source.repo.title}</Link>,{" "}
-					<MarkdownAsHtml>{lowercaseFirstLetter(source.repo.description)}</MarkdownAsHtml>
-					.
+					Interested in the project {channelInSource(channel)}? Check out {title},{" "}
+					{description}.
 				</React.Fragment>
 			)
 		default:

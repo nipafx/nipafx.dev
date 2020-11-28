@@ -3,7 +3,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 import { classNames } from "../infra/functions"
-import MarkdownAsHtml from "../infra/markdownAsHtml"
 
 import { Channel, Tag } from "./taglet"
 import FormattedDate from "./formattedDate"
@@ -25,9 +24,10 @@ const PostCard = ({ slug, className }) => {
 						<div className={style.cover} />
 						<div className={style.details}>
 							<div className={style.top}>
-								<span className={style.title}>
-									<MarkdownAsHtml>{title}</MarkdownAsHtml>
-								</span>
+								<span
+									className={style.title}
+									dangerouslySetInnerHTML={{ __html: title }}
+								/>
 								<span className={style.channel}>
 									<Channel channel={channel} colorize />
 								</span>
@@ -38,7 +38,7 @@ const PostCard = ({ slug, className }) => {
 								</span>
 							</div>
 							<p className={style.description}>
-								<MarkdownAsHtml>{description}</MarkdownAsHtml>
+								<span dangerouslySetInnerHTML={{ __html: description }} />
 								<span className={style.date}>
 									<FormattedDate date={date} />
 								</span>
