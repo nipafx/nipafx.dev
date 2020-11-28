@@ -1,7 +1,6 @@
 import React from "react"
 
-import remark from "remark"
-import remarkHTML from "remark-html"
+import { markdownToHtml } from "./markdownToHtml"
 
 /* WARNING:
 	This component does not work well if a child string contains
@@ -19,16 +18,8 @@ const MarkdownAsHtml = ({ itemProp, className, children }) => {
 		return children
 
 	const __html =
-		children instanceof Array ? children.map(md => toHtml(md)).join("") : toHtml(children)
+		children instanceof Array ? children.map(md => markdownToHtml(md)).join("") : markdownToHtml(children)
 	return <span itemProp={itemProp} className={className} dangerouslySetInnerHTML={{ __html }} />
-}
-
-const toHtml = md => {
-	return remark()
-		.use(remarkHTML)
-		.processSync(md)
-		.toString()
-		.replace(/<p>|<\/p>|\n/g, "")
 }
 
 export default MarkdownAsHtml

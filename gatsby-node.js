@@ -1,7 +1,6 @@
 const fs = require(`fs`)
 const path = require(`path`)
-const remark = require(`remark`)
-const remarkHTML = require(`remark-html`)
+const { markdownToHtml } = require(`./src/infra/markdownToHtml`)
 const FilterWarningsPlugin = require(`webpack-filter-warnings-plugin`)
 
 exports.onCreateWebpackConfig = ({ actions }) => {
@@ -247,14 +246,6 @@ exports.createSchemaCustomization = ({ actions }) => {
 		}
 	`
 	createTypes(typeDefs)
-}
-
-const markdownToHtml = md => {
-	return remark()
-		.use(remarkHTML)
-		.processSync(md)
-		.toString()
-		.replace(/<p>|<\/p>|\n/g, "")
 }
 
 createPostNodes = (node, createNode, createContentDigest) => {
