@@ -1,5 +1,6 @@
 const fs = require(`fs`)
 const path = require(`path`)
+const { createICalendar } = require(`./src/infra/iCalendar`)
 const { markdownToHtml } = require(`./src/infra/markdownToHtml`)
 const FilterWarningsPlugin = require(`webpack-filter-warnings-plugin`)
 
@@ -782,5 +783,20 @@ createVideoPages = (graphql, createPage) => {
 				},
 			})
 		})
+	})
+}
+
+exports.onPostBuild = ({ graphql }) => {
+	return graphql(`
+		{
+			site {
+				siteMetadata {
+					calendar
+				}
+			}
+		}
+	`).then(({ data }) => {
+		const iCal = createICalendar("", "upcomingMonths", "asc")
+		return fs.writeFileSync(`./public/${data.site.siteMetadata.calendar}`, iCal.toString())
 	})
 }

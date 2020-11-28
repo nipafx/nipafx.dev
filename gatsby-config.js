@@ -8,6 +8,7 @@ module.exports = {
 		author: `Nicolai Parlog`,
 		authorEmail: `nicolai@nipafx.dev`,
 		twitter: `@nipafx`,
+		calendar: `schedule.ics`
 	},
 	plugins: [
 		{

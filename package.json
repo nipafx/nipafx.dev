@@ -50,6 +50,7 @@
 	},
 	"devDependencies": {
 		"gatsby-plugin-force-trailing-slashes": "^1.0.4",
+		"ical-generator": "^1.15.2",
 		"netlify-cli": "^2.64.1",
 		"prettier": "^1.19.1",
 		"webpack-filter-warnings-plugin": "^1.2.1"

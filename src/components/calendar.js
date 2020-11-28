@@ -1,19 +1,14 @@
 import React, { useEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import { DateTime } from "luxon"
-
 import { arrayTo, classNames, ordinalDay } from "../infra/functions"
+import { getEvents } from "../infra/events"
 
 import MarkdownAsHtml from "../infra/markdownAsHtml"
 import Link from "../components/link"
 
 import style from "./calendar.module.css"
 import layout from "../layout/container.module.css"
-
-import presentations from "../../content/meta/presentations.json"
-import sessions from "../../content/meta/sessions.json"
-import streams from "../../content/meta/streams.json"
 
 const Calendar = ({ type, time, order, limit, display, fullscreen }) => {
 	if (fullscreen) {
@@ -34,7 +29,7 @@ const Calendar = ({ type, time, order, limit, display, fullscreen }) => {
 	}
 
 	const noEvents = `Looks like nothing's planned at the moment. 🏝️🍹`
-	const events = getEvents(type, time, order, limit)
+	const events = getEvents(type, time, order, limit, getData())
 	return (
 		<React.Fragment>
 			{events.length === 0 ? (
@@ -270,68 +265,24 @@ export default Calendar
  * PREPARE DATA
  */
 
-const getEvents = (type, time, order, limit) => {
-	return getEntries(type)
-		.filter(event => !event.draft)
-		.filter(timeFilter(time))
-		.sort(sortOrder(order))
-		.slice(0, limit)
-}
-
-const getEntries = type => {
-	const { courses, talks } = getData()
-	const entries = []
-
-	const presentations = !type || type.includes(`talks`)
-	const sessions = !type || type.includes(`courses`)
-	const streams = !type || type.includes(`streams`)
-
-	if (presentations) entries.push(...getPresentations(talks))
-	if (sessions) entries.push(...getSessions(courses))
-	if (streams) entries.push(...getStreams(talks))
-
-	return entries
-}
-
-const timeFilter = time => {
-	if (!time) return event => true
-
-	switch (time) {
-		case "upcoming":
-			const thisMorning = DateTime.utc().set({
-				hour: 0,
-				minute: 0,
-				second: 0,
-				millisecond: 0,
-			})
-			return event => event.startTime > thisMorning
-		case "upcomingMonths":
-			const firstOfCurrentMonth = DateTime.utc().set({
-				day: 1,
-				hour: 0,
-				minute: 0,
-				second: 0,
-				millisecond: 0,
-			})
-			return event => event.startTime > firstOfCurrentMonth
-		case "upcomingYears":
-			return event => event.startTime.year >= DateTime.utc().year
-		default:
-			throw new Error("Unknown time filter: " + time)
-	}
-}
-
-const sortOrder = order => {
-	if (!order) return (event1, event2) => 0
-
-	switch (order) {
-		case "asc":
-			return (event1, event2) => event1.startTime - event2.startTime
-		case "desc":
-			return (event1, event2) => event2.startTime - event1.startTime
-		default:
-			throw new Error("Unknown order: " + order)
-	}
+const getData = () => {
+	const { courses, talks } = useStaticQuery(graphql`
+		query {
+			courses: allCourse {
+				nodes {
+					slug
+					description
+				}
+			}
+			talks: allTalk {
+				nodes {
+					slug
+					description
+				}
+			}
+		}
+	`)
+	return { courses: courses.nodes, talks: talks.nodes }
 }
 
 // returns [ [... events from one month...] [... events from later month...] ]
@@ -374,100 +325,4 @@ const detectSlots = events => {
 	}
 
 	return processed
-}
-
-/*
- * GET DATA
- */
-
-const getData = () => {
-	const { courses, talks } = useStaticQuery(graphql`
-		query {
-			courses: allCourse {
-				nodes {
-					slug
-					description
-				}
-			}
-			talks: allTalk {
-				nodes {
-					slug
-					description
-				}
-			}
-		}
-	`)
-	return { courses: courses.nodes, talks: talks.nodes }
-}
-
-const getPresentations = talks => {
-	return presentations.events.flatMap(event =>
-		event.presentations.map(presentation => {
-			return {
-				type: "talk",
-				title: presentation.title,
-				description: talks.find(talk => talk.slug === presentation.talk).description,
-				startTime: DateTime.fromFormat(presentation.time, "dd.MM.yyyy HHmm z", {
-					setZone: true,
-				}),
-				host: {
-					name: event.event.name,
-					url:
-						presentation.announcement ||
-						presentation.program ||
-						presentation.programEntry ||
-						event.event.url,
-				},
-				location: {
-					physical: presentation.locationText,
-					virtual: presentation.location && presentation.location.url,
-				},
-				draft: presentation.draft,
-			}
-		})
-	)
-}
-
-const getSessions = courses => {
-	return sessions.sessions.map(session => {
-		const times = {
-			start: DateTime.fromFormat(session.dates.from, "dd.MM.yyyy"),
-			end: DateTime.fromFormat(session.dates.to, "dd.MM.yyyy"),
-		}
-		const days = arrayTo(times.end.day - times.start.day + 1).map(day => day + times.start.day)
-
-		return {
-			type: "course",
-			title: session.title,
-			description:
-				session.description ||
-				courses.find(course => course.slug === session.courses[0]).description,
-			startTime: DateTime.fromFormat(session.dates.from, "dd.MM.yyyy"),
-			days,
-			host: {
-				name: session.event.name,
-				url: session.announcement,
-			},
-			location: {
-				physical: session.locationText,
-				virtual: session.location && session.location.url,
-			},
-			draft: session.draft,
-		}
-	})
-}
-
-const getStreams = () => {
-	return streams.streams.map(stream => {
-		return {
-			type: "stream",
-			title: stream.title,
-			description: stream.description,
-			startTime: DateTime.fromFormat(stream.time, "dd.MM.yyyy HHmm", {
-				zone: "UTC",
-				setZone: true,
-			}),
-			draft: stream.draft,
-		}
-	})
 }

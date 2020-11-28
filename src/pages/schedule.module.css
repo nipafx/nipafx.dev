@@ -1,12 +1,12 @@
-.colors {
+.right {
 	text-align: right;
 }
 
-.colors > a,
-.colors > a:visited {
+.colored > a,
+.colored > a:visited {
 	color: var(--alt-color);
 }
 
-.colors > a:hover {
+.colored > a:hover {
 	color: var(--fg-color);
 }

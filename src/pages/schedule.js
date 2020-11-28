@@ -1,5 +1,7 @@
 import React, { useEffect } from "react"
+import { graphql } from "gatsby"
 
+import { classNames } from "../infra/functions"
 import stub from "../infra/stubs"
 
 import SiteLayout from "../layout/site"
@@ -11,7 +13,7 @@ import Calendar from "../components/calendar"
 import layout from "../layout/container.module.css"
 import style from "./schedule.module.css"
 
-const SchedulePage = () => {
+const SchedulePage = ({ data }) => {
 	useEffect(() => {
 		if (window.location.hash !== `#fullscreen`) return
 
@@ -25,6 +27,10 @@ const SchedulePage = () => {
 
 	const { meta, header } = stub(`schedule`)
 	header.date = new Date()
+	const calendarUrl =
+		data.site.siteMetadata.siteUrl.replace(`https:`, `webcal:`) +
+		`/` +
+		data.site.siteMetadata.calendar
 
 	return (
 		<SiteLayout className="stream" meta={meta}>
@@ -34,7 +40,7 @@ const SchedulePage = () => {
 						<PageHeader {...header} />
 					</div>
 					<div className={layout.container}>
-						<p className={style.colors}>
+						<p {...classNames(style.right, style.colored)}>
 							The events are color-coded:
 							<br />
 							<Link className="stream" to="live">
@@ -50,12 +56,33 @@ const SchedulePage = () => {
 							</Link>
 							, and I love you. 😊
 						</p>
-						<Calendar time="upcomingMonths" order="asc" display="monthGrid" fullscreen/>
+						<p className={style.right}>
+							By the way, you can
+							<br />
+							<a href={calendarUrl}>import this into your calendar</a>.
+						</p>
+						<Calendar
+							time="upcomingMonths"
+							order="asc"
+							display="monthGrid"
+							fullscreen
+						/>
 					</div>
 				</section>
 			</main>
 		</SiteLayout>
 	)
 }
+
+export const query = graphql`
+	{
+		site {
+			siteMetadata {
+				siteUrl
+				calendar
+			}
+		}
+	}
+`
 
 export default SchedulePage
