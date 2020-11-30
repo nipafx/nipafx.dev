@@ -70,8 +70,8 @@ const Link = ({ to, onClick, onIndexPage, markExternal, className, children }) =
 	// prevent that by prefixing internal links with a "/" if they lack one
 	to = to.startsWith("/") ? to : `/${to}`
 	// since trailing slash is the default, link to those pages directly
-	// to prevent a redirect
-	to = to.endsWith("/") ? to : `${to}/`
+	// to prevent a redirect, but only if they don't contain a hash
+	to = to.endsWith("/") || to.includes("#") ? to : `${to}/`
 	return (
 		<Internal to={to} className={className} onClick={onClick}>
 			{children}
