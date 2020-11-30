@@ -23,14 +23,6 @@
 	transition: color var(--menu-transition);
 }
 
-.details {
-	padding: 0 1em 0.5em;
-	line-height: 1.5;
-
-	background-color: rgba(0, 0, 0, 0.7);
-	transition: background-color var(--menu-transition);
-}
-
 .top {
 	display: grid;
 	grid-template-columns: auto 1fr;
@@ -39,6 +31,12 @@
 	grid-template-areas:
 		"title title"
 		"channel tags";
+
+	padding: 0.5em 1em;
+	line-height: 1.5;
+
+	background-color: rgba(0, 0, 0, 0.7);
+	transition: background-color var(--menu-transition);
 }
 
 .title {
@@ -77,7 +75,12 @@
 	overflow: hidden;
 	margin: 0;
 
-	transition: max-height var(--menu-transition);
+	padding: 0 1em;
+	line-height: 1.5;
+
+	background-color: rgba(0, 0, 0, 0.7);
+	transition: background-color var(--menu-transition), max-height var(--menu-transition),
+		padding var(--menu-transition);
 }
 
 .date {
@@ -100,12 +103,14 @@
 	background-color: rgba(var(--alt-color-rgb), 0.8);
 }
 
-.card:hover .details {
+.card:hover .top,
+.card:hover .description {
 	background-color: rgba(0, 0, 0, 0);
 }
 
 .card:hover .description {
-	max-height: 6em;
+	max-height: 7em;
+	padding-bottom: 0.5em;
 }
 
 .card:first-child:hover .description {

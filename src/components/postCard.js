@@ -19,21 +19,19 @@ const PostCard = ({ title, slug, date, channel, tags, description, featuredImage
 			fluid={featuredImage.fluid}
 		>
 			<Link to={slug} className={style.content}>
-				<div className={style.details}>
-					<div className={style.top}>
-						<span className={style.title} dangerouslySetInnerHTML={{ __html: title }} />
-						<Channel channel={channel} colorize className={style.channel} />
-						{/* it would be clearer to use <Tag>s instead of concatenating strings and
-						    applying the correct style, but that requires more DOM nodes */}
-						<span {...classNames(tagletStyle.taglet, style.tags)}>
-							{tags.map(tagletText).join(" ")}
-						</span>
-					</div>
-					<p className={style.description}>
-						<span dangerouslySetInnerHTML={{ __html: description }} />
-						<FormattedDate date={date} className={style.date} />
-					</p>
+				<div className={style.top}>
+					<span className={style.title} dangerouslySetInnerHTML={{ __html: title }} />
+					<Channel channel={channel} colorize className={style.channel} />
+					{/* it would be clearer to use <Tag>s instead of concatenating strings and
+						applying the correct style, but that requires more DOM nodes */}
+					<span {...classNames(tagletStyle.taglet, style.tags)}>
+						{tags.map(tagletText).join(" ")}
+					</span>
 				</div>
+				<p className={style.description}>
+					<span dangerouslySetInnerHTML={{ __html: description }} />
+					<FormattedDate date={date} className={style.date} />
+				</p>
 			</Link>
 		</BackgroundImage>
 	)
