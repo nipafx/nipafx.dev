@@ -4,11 +4,12 @@ import BackgroundImage from "gatsby-background-image"
 
 import { classNames } from "../infra/functions"
 
-import { Channel, Tag } from "./taglet"
+import { Channel, tagletText } from "./taglet"
 import FormattedDate from "./formattedDate"
 import Link from "./link"
 
 import style from "./postCard.module.css"
+import tagletStyle from "./taglet.module.css"
 
 const PostCard = ({ slug, className }) => {
 	const { title, date, channel, tags, description, featuredImage } = getPost(slug)
@@ -23,13 +24,11 @@ const PostCard = ({ slug, className }) => {
 				<div className={style.details}>
 					<div className={style.top}>
 						<span className={style.title} dangerouslySetInnerHTML={{ __html: title }} />
-						<span className={style.channel}>
-							<Channel channel={channel} colorize />
-						</span>
-						<span className={style.tags}>
-							{tags.map(tag => (
-								<Tag key={tag} tag={tag} />
-							))}
+						<Channel channel={channel} colorize className={style.channel} />
+						{/* it would be clearer to use <Tag>s instead of concatenating strings and
+						    applying the correct style, but that requires more DOM nodes */}
+						<span {...classNames(tagletStyle.taglet, style.tags)}>
+							{tags.map(tagletText).join(" ")}
 						</span>
 					</div>
 					<p className={style.description}>

@@ -10,11 +10,12 @@ import { IndexHeader } from "../components/header"
 import Link from "../components/link"
 import PostFilter from "../components/postFilter"
 import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
-import { Channel, Tag } from "../components/taglet"
+import { Channel, tagletText } from "../components/taglet"
 
 import layout from "../layout/container.module.css"
 import listStyle from "../components/postList.module.css"
 import style from "../components/postCard.module.css"
+import tagletStyle from "../components/taglet.module.css"
 
 // this page originally used <PostList> with <PostCard> but they have
 // a run time of O(n²), which may be the reason why the page is sluggish
@@ -77,13 +78,11 @@ const PostCard = ({ post, className }) => {
 				<div className={style.details}>
 					<div className={style.top}>
 						<span className={style.title} dangerouslySetInnerHTML={{ __html: title }} />
-						<span className={style.channel}>
-							<Channel channel={channel} colorize />
-						</span>
-						<span className={style.tags}>
-							{tags.map(tag => (
-								<Tag key={tag} tag={tag} />
-							))}
+						<Channel channel={channel} colorize className={style.channel} />
+						{/* it would be clearer to use <Tag>s instead of concatenating strings and
+						    applying the correct style, but that requires more DOM nodes */}
+						<span {...classNames(tagletStyle.taglet, style.tags)}>
+							{tags.map(tagletText).join(" ")}
 						</span>
 					</div>
 					<p className={style.description}>

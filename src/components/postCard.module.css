@@ -64,9 +64,6 @@
 	grid-area: channel;
 	overflow: hidden;
 
-}
-
-.channel > *{
 	transition: color var(--menu-transition);
 }
 
@@ -82,10 +79,6 @@
 	grid-area: tags;
 	overflow: hidden;
 	max-height: 8em;
-}
-
-.tags > *:not(:last-child):after {
-	content: " ";
 }
 
 .description {
@@ -107,7 +100,7 @@
  */
 
 .content:hover,
-.content:hover .channel > *,
+.content:hover .channel,
 .content:hover .channel:after {
 	color: var(--alt-contrast-color);
 }

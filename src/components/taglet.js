@@ -10,9 +10,8 @@ import style from "./taglet.module.css"
 export const Tag = ({ tag, mode, className, onClick: onClick_External, children }) => {
 	const { link, forward, onClick: onClick_Internal } = detectMode(mode, null, tag)
 
-	// replace hyphen with non-breaking hyphen
-	const text = tag === "all" ? "ALL‑TAGS" : tag.replace("-", "‑")
-	const tagletChildren = children || `#${text}`
+	const text = tag === "all" ? "ALL-TAGS" : tag
+	const tagletChildren = children || tagletText(text)
 
 	const classes = [style.taglet]
 	if (!children) classes.push(style.taglet)
@@ -43,9 +42,8 @@ export const Channel = ({
 	const { singularName, pluralName, slug } = channelInfo(channel)
 	if (link) link = slug
 
-	// replace hyphen with non-breaking hyphen
-	const text = (plural ? pluralName : singularName).replace("-", "‑")
-	const tagletChildren = children || `#${text}`
+	const text = plural ? pluralName : singularName
+	const tagletChildren = children || tagletText(text)
 
 	const classes = []
 	if (!children) classes.push(style.taglet)
@@ -73,10 +71,7 @@ export const ChannelTag = ({
 	children,
 }) => {
 	const { link, forward, onClick: onClick_Internal } = detectMode(mode, channel, tag)
-
-	// replace hyphen with non-breaking hyphen
-	const text = tag.replace("-", "‑")
-	const tagletChildren = children || `#${text}`
+	const tagletChildren = children || tagletText(tag)
 
 	const classes = []
 	if (!children) classes.push(style.taglet)
@@ -93,6 +88,9 @@ export const ChannelTag = ({
 		tagletChildren
 	)
 }
+
+// replace hyphen with non-breaking hyphen
+export const tagletText = taglet => `#${taglet.replace("-", "‑")}`
 
 const taglet = (
 	link,
