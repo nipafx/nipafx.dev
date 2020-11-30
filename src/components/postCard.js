@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 import { classNames } from "../infra/functions"
@@ -11,13 +10,12 @@ import Link from "./link"
 import style from "./postCard.module.css"
 import tagletStyle from "./taglet.module.css"
 
-const PostCard = ({ slug, className }) => {
-	const { title, date, channel, tags, description, featuredImage } = getPost(slug)
+const PostCard = ({ title, slug, date, channel, tags, description, featuredImage, className }) => {
 	return (
 		<BackgroundImage
 			data-channel={channel}
 			data-tags={tags}
-			{...classNames(style.card, style.image, channel, className)}
+			{...classNames(style.card, channel, className)}
 			fluid={featuredImage.fluid}
 		>
 			<Link to={slug} className={style.content}>
@@ -39,35 +37,6 @@ const PostCard = ({ slug, className }) => {
 			</Link>
 		</BackgroundImage>
 	)
-}
-
-const getPost = slug => {
-	const { posts } = useStaticQuery(graphql`
-		query {
-			posts: allPost {
-				nodes {
-					title
-					slug
-					date
-					channel
-					tags
-					description
-					featuredImage {
-						fluid(
-							maxWidth: 800
-							base64Width: 10
-							srcSetBreakpoints: [800, 1600]
-							toFormat: JPG
-							jpegQuality: 40
-						) {
-							...GatsbyImageSharpFluid
-						}
-					}
-				}
-			}
-		}
-	`)
-	return posts.nodes.find(node => node.slug === slug)
 }
 
 export default PostCard

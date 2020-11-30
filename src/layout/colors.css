@@ -77,7 +77,7 @@ body {
 .talks {
 	--alt-color: var(--theme-pink);
 	--alt-color-rgb: var(--theme-pink-rgb);
-	--alt-contrast-color: var(--bg-color);
+	--alt-contrast-color: var(--fg-color);
 }
 
 /* text in schedule.js references that courses are blue */

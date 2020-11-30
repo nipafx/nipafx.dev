@@ -1,26 +1,21 @@
 import React, { useEffect, useLayoutEffect } from "react"
 import { graphql } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
 
 import { classNames, tagletsFromPath } from "../infra/functions"
 
 import Site from "../layout/site"
-import FormattedDate from "../components/formattedDate"
 import { IndexHeader } from "../components/header"
-import Link from "../components/link"
 import PostFilter from "../components/postFilter"
+import PostCard from "../components/postCard"
 import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
-import { Channel, tagletText } from "../components/taglet"
 
 import layout from "../layout/container.module.css"
 import listStyle from "../components/postList.module.css"
-import style from "../components/postCard.module.css"
-import tagletStyle from "../components/taglet.module.css"
 
-// this page originally used <PostList> with <PostCard> but they have
-// a run time of O(n²), which may be the reason why the page is sluggish
-// on mobile devices - these components and the related GraphQL queries
-// are now flattened into this page instead
+// this page originally used <PostList> but it has a run time of O(n²),
+// which may be the reason why the page is sluggish on mobile devices;
+// the related GraphQL query is now issued here and the extracted
+// <PostCard> is used directly - c.f. #18 and #106
 
 const IndexPage = ({ data }) => {
 	const id = "post-list-462383"
@@ -57,41 +52,11 @@ const IndexPage = ({ data }) => {
 					{...classNames(layout.main, listStyle.container, "highlight-first-post-card")}
 				>
 					{posts.map(post => (
-						<PostCard key={post.slug} post={post} className={listStyle.card} />
+						<PostCard key={post.slug} {...post} className={listStyle.card} />
 					))}
 				</div>
 			</div>
 		</Site>
-	)
-}
-
-const PostCard = ({ post, className }) => {
-	const { title, slug, date, channel, tags, description, featuredImage } = post
-	return (
-		<BackgroundImage
-			data-channel={channel}
-			data-tags={tags}
-			{...classNames(style.card, style.image, channel, className)}
-			fluid={featuredImage.fluid}
-		>
-			<Link to={slug} className={style.content}>
-				<div className={style.details}>
-					<div className={style.top}>
-						<span className={style.title} dangerouslySetInnerHTML={{ __html: title }} />
-						<Channel channel={channel} colorize className={style.channel} />
-						{/* it would be clearer to use <Tag>s instead of concatenating strings and
-						    applying the correct style, but that requires more DOM nodes */}
-						<span {...classNames(tagletStyle.taglet, style.tags)}>
-							{tags.map(tagletText).join(" ")}
-						</span>
-					</div>
-					<p className={style.description}>
-						<span dangerouslySetInnerHTML={{ __html: description }} />
-						<FormattedDate date={date} className={style.date} />
-					</p>
-				</div>
-			</Link>
-		</BackgroundImage>
 	)
 }
 

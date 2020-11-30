@@ -2,7 +2,7 @@ import React, { useEffect, useLayoutEffect } from "react"
 
 import { classNames, tagletsFromPath } from "../infra/functions"
 
-import PostCard from "./postCard"
+import PostCard from "./postCardWrapper"
 
 import style from "./postList.module.css"
 
