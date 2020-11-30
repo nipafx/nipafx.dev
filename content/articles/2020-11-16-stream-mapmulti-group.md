@@ -1,6 +1,6 @@
 ---
 title: "Broken `Stream::group` with Java 16's `mapMulti`"
-tags: [java-16, stream]
+tags: [java-16, streams]
 date: 2020-11-16
 slug: java-16-stream-mapmulti-group
 description: "Java 16 adds a new method `mapMulti` to `Stream` and it can be abused to simulate a reverse-`flatMap` aka `group` operation (with shortcomings)."
