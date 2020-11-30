@@ -10,7 +10,7 @@
 	color: unset;
 }
 
-.taglet:hover {
+a.taglet:hover {
 	color: var(--alt-color);
 }
 
@@ -19,7 +19,7 @@
 	color: var(--alt-color);
 }
 
-.taglet.colorize:hover,
-.taglet.selected:hover {
+a.taglet.colorize:hover,
+a.taglet.selected:hover {
 	color: var(--fg-color);
 }
