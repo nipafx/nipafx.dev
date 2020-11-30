@@ -13,50 +13,33 @@ import style from "./postCard.module.css"
 const PostCard = ({ slug, className }) => {
 	const { title, date, channel, tags, description, featuredImage } = getPost(slug)
 	return (
-		<div
+		<BackgroundImage
 			data-channel={channel}
 			data-tags={tags}
-			{...classNames(style.card, channel, className)}
+			{...classNames(style.card, style.image, channel, className)}
+			fluid={featuredImage.fluid}
 		>
-			<Link to={slug}>
-				<ImageCard image={featuredImage}>
-					<div className={style.content}>
-						<div className={style.cover} />
-						<div className={style.details}>
-							<div className={style.top}>
-								<span
-									className={style.title}
-									dangerouslySetInnerHTML={{ __html: title }}
-								/>
-								<span className={style.channel}>
-									<Channel channel={channel} colorize />
-								</span>
-								<span className={style.tags}>
-									{tags.map(tag => (
-										<Tag key={tag} tag={tag} />
-									))}
-								</span>
-							</div>
-							<p className={style.description}>
-								<span dangerouslySetInnerHTML={{ __html: description }} />
-								<FormattedDate date={date} className={style.date} />
-							</p>
-						</div>
+			<Link to={slug} className={style.content}>
+				<div className={style.details}>
+					<div className={style.top}>
+						<span className={style.title} dangerouslySetInnerHTML={{ __html: title }} />
+						<span className={style.channel}>
+							<Channel channel={channel} colorize />
+						</span>
+						<span className={style.tags}>
+							{tags.map(tag => (
+								<Tag key={tag} tag={tag} />
+							))}
+						</span>
 					</div>
-				</ImageCard>
+					<p className={style.description}>
+						<span dangerouslySetInnerHTML={{ __html: description }} />
+						<FormattedDate date={date} className={style.date} />
+					</p>
+				</div>
 			</Link>
-		</div>
+		</BackgroundImage>
 	)
-}
-
-const ImageCard = ({ image, children }) => {
-	if (image)
-		return (
-			<BackgroundImage fluid={image.fluid} className={style.image}>
-				{children}
-			</BackgroundImage>
-		)
-	else return <div id={style.image}>{children}</div>
 }
 
 const getPost = slug => {

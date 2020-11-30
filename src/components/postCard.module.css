@@ -2,24 +2,9 @@
 	height: 100%;
 }
 
-.card a {
-	text-decoration: none;
-	transition: color var(--menu-transition);
-}
-
-.card a:visited {
-	color: var(--fg-color);
-}
-
 .image {
 	height: 100%;
 	width: 100%;
-}
-
-.cover {
-	height: 100%;
-	width: 100%;
-	transition: background-color var(--menu-transition);
 }
 
 .content {
@@ -29,10 +14,22 @@
 	justify-content: flex-end;
 
 	font-size: var(--small-font-size);
+	text-decoration: none;
+
+	background-color: rgba(var(--alt-color-rgb), 0.0);
+	transition: background-color var(--menu-transition), color var(--menu-transition);
 }
 
 :global(.highlight-first-post-card) .card:first-child .content {
 	font-size: var(--regular-font-size);
+}
+
+.content:visited {
+	color: var(--fg-color);
+}
+
+.content .channel {
+	transition: color var(--menu-transition);
 }
 
 .details {
@@ -66,9 +63,10 @@
 .channel {
 	grid-area: channel;
 	overflow: hidden;
+
 }
 
-.channel > span {
+.channel > *{
 	transition: color var(--menu-transition);
 }
 
@@ -94,6 +92,8 @@
 	max-height: 0;
 	overflow: hidden;
 	margin: 0;
+
+	transition: max-height var(--menu-transition);
 }
 
 .date {
@@ -106,30 +106,18 @@
  * HOVER
  */
 
-.channel,
-.tags,
-.description {
-	transition: max-height var(--menu-transition);
-}
-
-.card:hover .channel,
-.card:hover .tags,
-.card:hover .description {
-	transition: max-height var(--menu-transition);
-}
-
-.card a:hover,
-.card:hover a:hover .channel > span,
-.card:hover a:hover .channel:after {
+.content:hover,
+.content:hover .channel > *,
+.content:hover .channel:after {
 	color: var(--alt-contrast-color);
 }
 
-.card:hover .cover {
+.card:hover .content {
 	background-color: rgba(var(--alt-color-rgb), 0.8);
 }
 
 .card:hover .details {
-	background-color: rgba(var(--alt-color-rgb), 0.8);
+	background-color: rgba(0, 0, 0, 0);
 }
 
 .card:hover .description {
