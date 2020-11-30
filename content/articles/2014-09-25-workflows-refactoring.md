@@ -10,7 +10,7 @@ featuredImage: workflows-of-refactoring
 
 In February [Martin Fowler held the keynote at OOP 2014](http://www.oop-konferenz.de/nc/oop2014/oop2014-eng/conference/english-sessions/conference-detail/software-design-in-the-21st-century.html).
 Under the resourceful title _Software Design in the 21st Century_ he gave a two-part talk.
-The first part is called _Workflows of Refactoring_ and is the first installment of my _[Impulse](tag:impulse)_ series.
+The first part is called _Workflows of Refactoring_ and is the first installment of my [Impulse](tag:impulse) series.
 
 In this loose collection of posts I recommend to watch a video, read a blog post, listen to a podcast, get a book, tweet, ... or use whatever other technology is available to waste some time on studying software development.
 Besides the prominent embedded media or link, each article will usually consist of a short summary.

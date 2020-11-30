@@ -14,18 +14,31 @@ export const Tag = ({ tag, mode, className, onClick: onClick_External, children 
 	const text = tag === "all" ? "ALL‑TAGS" : tag.replace("-", "‑")
 	const tagletChildren = children || `#${text}`
 
-	const classes = []
+	const classes = [style.taglet]
 	if (!children) classes.push(style.taglet)
 	if (className) classes.push(className)
 
-	return (
-		<span data-tag={tag} {...classNames(classes)}>
-			{taglet(link, forward, onClick_Internal, onClick_External, tagletChildren)}
-		</span>
+	return taglet(
+		link,
+		forward,
+		onClick_Internal,
+		onClick_External,
+		null,
+		tag,
+		classes,
+		tagletChildren
 	)
 }
 
-export const Channel = ({ channel, plural, mode, colorize, className, onClick: onClick_External, children }) => {
+export const Channel = ({
+	channel,
+	plural,
+	mode,
+	colorize,
+	className,
+	onClick: onClick_External,
+	children,
+}) => {
 	let { link, forward, onClick: onClick_Internal } = detectMode(mode, channel, null)
 	const { singularName, pluralName, slug } = channelInfo(channel)
 	if (link) link = slug
@@ -39,14 +52,26 @@ export const Channel = ({ channel, plural, mode, colorize, className, onClick: o
 	if (colorize) classes.push(style.colorize)
 	if (className) classes.push(className)
 
-	return (
-		<span data-channel={channel} {...classNames(classes)}>
-			{taglet(link, forward, onClick_Internal, onClick_External, tagletChildren)}
-		</span>
+	return taglet(
+		link,
+		forward,
+		onClick_Internal,
+		onClick_External,
+		channel,
+		null,
+		classes,
+		tagletChildren
 	)
 }
 
-export const ChannelTag = ({ channel, tag, mode, className, onClick: onClick_External, children }) => {
+export const ChannelTag = ({
+	channel,
+	tag,
+	mode,
+	className,
+	onClick: onClick_External,
+	children,
+}) => {
 	const { link, forward, onClick: onClick_Internal } = detectMode(mode, channel, tag)
 
 	// replace hyphen with non-breaking hyphen
@@ -57,14 +82,28 @@ export const ChannelTag = ({ channel, tag, mode, className, onClick: onClick_Ext
 	if (!children) classes.push(style.taglet)
 	if (className) classes.push(className)
 
-	return (
-		<span data-channel={channel} data-tag={tag} {...classNames(classes)}>
-			{taglet(link, forward, onClick_Internal, onClick_External, tagletChildren)}
-		</span>
+	return taglet(
+		link,
+		forward,
+		onClick_Internal,
+		onClick_External,
+		channel,
+		tag,
+		classes,
+		tagletChildren
 	)
 }
 
-const taglet = (link, forward, onClick_Internal, onClick_External, children) => {
+const taglet = (
+	link,
+	forward,
+	onClick_Internal,
+	onClick_External,
+	dataChannel,
+	dataTag,
+	classes,
+	children
+) => {
 	const onClick = event => {
 		if (onClick_External) onClick_External(event)
 		if (onClick_Internal) onClick_Internal(event)
@@ -73,10 +112,21 @@ const taglet = (link, forward, onClick_Internal, onClick_External, children) => 
 	useLayoutEffect(() => {
 		setJsEnabled(true)
 	}, [])
-	return (
-		<Link to={jsEnabled ? forward : link} onClick={onClick}>
+	const to = jsEnabled ? forward : link
+	return to ? (
+		<Link
+			to={to}
+			dataChannel={dataChannel}
+			dataTag={dataTag}
+			onClick={onClick}
+			{...classNames(classes)}
+		>
 			{children}
 		</Link>
+	) : (
+		<span data-channel={dataChannel} data-tag={dataTag} {...classNames(classes)}>
+			{children}
+		</span>
 	)
 }
 

@@ -1,10 +1,19 @@
 import React from "react"
-import { Link as Internal } from "gatsby"
+import { Link as InternalLink } from "gatsby"
 
 import ExternalLink from "./externalLink"
 import { Channel, ChannelTag, Tag } from "./taglet"
 
-const Link = ({ to, onClick, onIndexPage, markExternal, className, children }) => {
+const Link = ({
+	to,
+	dataChannel,
+	dataTag,
+	onClick,
+	onIndexPage,
+	markExternal,
+	className,
+	children,
+}) => {
 	// this allows use of <Link> if URL is possibly null,
 	// in which case the component becomes transparent
 	if (!to)
@@ -18,7 +27,14 @@ const Link = ({ to, onClick, onIndexPage, markExternal, className, children }) =
 		to.includes("://") || to.startsWith("//") || to.startsWith("mailto") || to === "feed.xml"
 	if (external)
 		return (
-			<ExternalLink to={to} onClick={onClick} mark={markExternal} className={className}>
+			<ExternalLink
+				to={to}
+				dataChannel={dataChannel}
+				dataTag={dataTag}
+				onClick={onClick}
+				mark={markExternal}
+				className={className}
+			>
 				{children}
 			</ExternalLink>
 		)
@@ -26,11 +42,13 @@ const Link = ({ to, onClick, onIndexPage, markExternal, className, children }) =
 	const id = to.startsWith("#")
 	if (id)
 		return (
-			<a href={to} className={className}>
+			<a href={to} data-channel={dataChannel} data-tag={dataTag} className={className}>
 				{children}
 			</a>
 		)
 
+	// I assume `channel:` and `tag:` links do not come with dataChannel and dataTag attributes,
+	// so I don't forward it here to keep <ChannelTag>, <Channel>, <Tag> clean(er)
 	if (to.startsWith("channel:")) {
 		if (to.includes("/tag:")) {
 			const tagStart = to.indexOf("/tag:")
@@ -73,9 +91,15 @@ const Link = ({ to, onClick, onIndexPage, markExternal, className, children }) =
 	// to prevent a redirect, but only if they don't contain a hash
 	to = to.endsWith("/") || to.includes("#") ? to : `${to}/`
 	return (
-		<Internal to={to} className={className} onClick={onClick}>
+		<InternalLink
+			to={to}
+			data-channel={dataChannel}
+			data-tag={dataTag}
+			className={className}
+			onClick={onClick}
+		>
 			{children}
-		</Internal>
+		</InternalLink>
 	)
 }
 

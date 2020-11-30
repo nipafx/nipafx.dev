@@ -2,22 +2,24 @@
 	font-family: "Bedstead", monospace;
 }
 
-.taglet a {
+.taglet {
 	text-decoration: none;
 }
 
-.taglet a:visited {
+.taglet:visited {
 	color: unset;
 }
 
-.taglet a:hover {
+.taglet:hover {
 	color: var(--alt-color);
 }
 
-.taglet.colorize, .taglet.selected {
+.taglet.colorize,
+.taglet.selected {
 	color: var(--alt-color);
 }
 
-.taglet.colorize a:hover, .taglet.selected a:hover {
+.taglet.colorize:hover,
+.taglet.selected:hover {
 	color: var(--fg-color);
 }
