@@ -39,9 +39,7 @@ const PostCard = ({ slug, className }) => {
 							</div>
 							<p className={style.description}>
 								<span dangerouslySetInnerHTML={{ __html: description }} />
-								<span className={style.date}>
-									<FormattedDate date={date} />
-								</span>
+								<FormattedDate date={date} className={style.date} />
 							</p>
 						</div>
 					</div>
