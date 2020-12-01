@@ -2,7 +2,6 @@ import React from "react"
 
 import { flatten, classNames } from "../infra/functions"
 
-import CodeFXForward from "../components/codefxForward"
 import Meta from "../components/meta"
 import SiteHeader from "../components/siteHeader"
 import SiteFooter from "../components/siteFooter"
@@ -17,7 +16,6 @@ const SiteLayout = ({ className, meta, onIndexPage, children }) => {
 			<SiteHeader onIndexPage={onIndexPage} />
 			<div className={style.content}>{children}</div>
 			<SiteFooter />
-			<CodeFXForward />
 		</div>
 	)
 }
