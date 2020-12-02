@@ -74,23 +74,25 @@
 	max-height: 8em;
 }
 
-.description {
+.bottom {
 	max-height: 0;
 	overflow: hidden;
 	margin: 0;
-
 	padding: 0 1em;
-	line-height: 1.5;
 
 	background-color: rgba(0, 0, 0, 0.7);
 	transition: background-color var(--menu-transition), max-height var(--menu-transition),
 		padding var(--menu-transition);
 }
 
+.description {
+	line-height: 1.5;
+}
+
 .date {
-	float: right;
 	text-align: right;
-	white-space: nowrap;
+
+	line-height: 1.5;
 }
 
 /*
@@ -108,15 +110,18 @@
 }
 
 .card:hover .top,
-.card:hover .description {
+.card:hover .bottom {
 	background-color: rgba(0, 0, 0, 0);
 }
 
-.card:hover .description {
+.card:hover .bottom {
 	max-height: 7em;
+}
+
+.card:hover .bottom:last-child {
 	padding-bottom: 0.5em;
 }
 
-.card:first-child:hover .description {
+.card:first-child:hover .bottom {
 	max-height: 4.5em;
 }

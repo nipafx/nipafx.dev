@@ -33,10 +33,11 @@ const PostCard = ({ title, slug, date, channel, tags, description, featuredImage
 							{tags.map(tagletText).join(" ")}
 						</span>
 					</div>
-					<p className={style.description}>
-						<span dangerouslySetInnerHTML={{ __html: description }} />
-						<FormattedDate date={date} className={style.date} />
-					</p>
+					<span
+						{...classNames(style.bottom, style.description)}
+						dangerouslySetInnerHTML={{ __html: description }}
+					/>
+					<FormattedDate date={date} {...classNames(style.bottom, style.date)} />
 				</Link>
 			</BackgroundImage>
 		</div>
