@@ -18,7 +18,9 @@ import {
 	faXing,
 } from "@fortawesome/free-brands-svg-icons"
 
-const FaIcon = ({ icon }) => <FontAwesomeIcon icon={iconForName(icon)} />
+const FaIcon = ({ icon, className }) => (
+	<FontAwesomeIcon icon={iconForName(icon)} className={className} />
+)
 
 // don't use a library (e.g. `library.add(fas, fab)`) because,
 // if the icons are referenced by string, they require JavaScript to show up;

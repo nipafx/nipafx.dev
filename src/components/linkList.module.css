@@ -2,8 +2,8 @@
 	text-decoration: none;
 }
 
-.links a:hover,
-.links a:visited:hover {
+.links a:hover > *,
+.links a:visited:hover > * {
 	color: var(--alt-color);
 }
 

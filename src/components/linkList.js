@@ -16,14 +16,14 @@ const LinkList = ({ showOnlyTexts, showOnlyIcons, showIconsUntil, links, classNa
 	if (textsFrom === 600) styles.push(style.textsFrom600)
 	if (textsFrom === 1000) styles.push(style.textsFrom1000)
 
-	return <div {...classNames(styles)}>{links.map(showLink)}</div>
+	return <div {...classNames(styles)}>{links.map(link => showLink(link, showOnlyIcons))}</div>
 }
 
 const showTextsFrom = (showOnlyTexts, showOnlyIcons, showIconsUntil) => {
 	const xor =
-		[showOnlyTexts, showOnlyIcons, showIconsUntil]
-			.map(flag => (flag ? 1 : 0))
-			.reduce((a, b) => a + b, 0) === 1
+		(showOnlyTexts && !showOnlyIcons && !showIconsUntil) ||
+		(!showOnlyTexts && showOnlyIcons && !showIconsUntil) ||
+		(!showOnlyTexts && !showOnlyIcons && showIconsUntil)
 	if (!xor) {
 		const message = `Specify either \`showOnlyTexts\` ("${showOnlyTexts}") or \`showOnlyIcons\` ("${showOnlyIcons}") or \`showIconsUntil\` ("${showIconsUntil}").`
 		throw new Error(message)
@@ -35,17 +35,15 @@ const showTextsFrom = (showOnlyTexts, showOnlyIcons, showIconsUntil) => {
 	throw new Error(`Illegal value for \`showIconsUntil\` ("${showIconsUntil}).`)
 }
 
-const showLink = ({ title, fontAwesome, url, className }) => (
-	<span key={url}>
-		<Link to={url} className={className}>
-			{fontAwesome && (
-				<span className={style.icon}>
-					<FaIcon icon={fontAwesome} />
-				</span>
-			)}
-			<span className={style.text}>{title}</span>
-		</Link>
-	</span>
+const showLink = ({ title, fontAwesome, url, className }, showOnlyIcons) => (
+	// it would be more common to apply `className` (e.g. "twitter") to <Link>
+	// to get a matching hover color, but then the " // " ::after each link
+	// also has that color
+	// I circumvent that here without requiring an additional nesting <span>
+	<Link key={url} to={url}>
+		{fontAwesome && <FaIcon icon={fontAwesome} {...classNames(className, style.icon)} />}
+		{!showOnlyIcons && <span {...classNames(className, style.text)}>{title}</span>}
+	</Link>
 )
 
 export default LinkList
