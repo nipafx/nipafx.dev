@@ -7,7 +7,7 @@ import ContentVideo from "../components/contentVideo"
 import { H2 } from "../components/headings"
 import Iframe from "../components/iframe"
 import Link from "../components/link"
-import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
+import { PROGRESS_BAR_REFERENCE_ID } from "../components/progressBar"
 import { PostHeader } from "../components/header"
 import PostContent from "../components/postContent"
 import PostEnd from "../components/postEnd"
@@ -18,7 +18,7 @@ import layout from "../layout/container.module.css"
 const TalkLayout = ({title, slug, date, tags, description, intro, featuredImage, slides, videoSlug, source, htmlAst}) => {
 	const toc = generateToc(slug, slides, videoSlug)
 	return (
-		<section id={PROGRESS_BAR_REFERENCE}>
+		<section id={PROGRESS_BAR_REFERENCE_ID}>
 			<PostHeader {...{ title, channel: "talks", date, tags, intro, featuredImage }} />
 			<PostContent
 				{...{ title, slug, channel: "talks", description, toc, source, htmlAst }}

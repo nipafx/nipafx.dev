@@ -4,10 +4,10 @@ import { classNames } from "../infra/functions"
 
 import style from "./progressBar.module.css"
 
-export const PROGRESS_BAR_OFFSET = "progress-bar-offset"
-export const PROGRESS_BAR_REFERENCE = "progress-bar-reference"
-const CONTAINER = "progress-bar-container"
-const DISPLAY = "progress-bar-display"
+export const PROGRESS_BAR_OFFSET_ID = "progress-bar-offset"
+export const PROGRESS_BAR_REFERENCE_ID = "progress-bar-reference"
+const CONTAINER_ID = "progress-bar-container"
+const DISPLAY_ID = "progress-bar-display"
 
 const ProgressBar = ({ className }) => {
 	const active = useRef(false)
@@ -27,25 +27,25 @@ const ProgressBar = ({ className }) => {
 	})
 	return (
 		<div
-			id={CONTAINER}
+			id={CONTAINER_ID}
 			{...classNames(className, style.container)}
 			onClick={event =>
 				jumpToPosition(active, offset, referenceElement, containerElement, event)
 			}
 		>
-			<div id={DISPLAY} className={style.bar}></div>
+			<div id={DISPLAY_ID} className={style.bar}></div>
 		</div>
 	)
 }
 
 const initializeProgress = (active, offset, referenceElement, containerElement, displayElement) => {
-	containerElement.current = document.querySelector("#" + CONTAINER)
-	displayElement.current = document.querySelector("#" + DISPLAY)
+	containerElement.current = document.getElementById(CONTAINER_ID)
+	displayElement.current = document.getElementById(DISPLAY_ID)
 	if (!displayElement.current) return
 
-	referenceElement.current = document.querySelector("#" + PROGRESS_BAR_REFERENCE)
+	referenceElement.current = document.getElementById(PROGRESS_BAR_REFERENCE_ID)
 	if (!referenceElement.current) return
-	const offsetElement = document.querySelector("#" + PROGRESS_BAR_OFFSET)
+	const offsetElement = document.getElementById(PROGRESS_BAR_OFFSET_ID)
 	if (offsetElement) {
 		const { height } = offsetElement.getBoundingClientRect()
 		offset.current = height

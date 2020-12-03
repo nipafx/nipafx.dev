@@ -3,7 +3,7 @@ import React from "react"
 import { createTableOfContentEntries } from "../components/sessionList"
 import { createTableOfContents } from "../infra/stubs"
 
-import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
+import { PROGRESS_BAR_REFERENCE_ID } from "../components/progressBar"
 import { PostHeader } from "../components/header"
 import PostContent from "../components/postContent"
 import PostEnd from "../components/postEnd"
@@ -14,7 +14,7 @@ const CourseLayout = ({ title, slug, date, tags, description, intro, toc, featur
 	// both tocs contain a "<ul>" wrapper - remove "</ul>" from the first and "<ul>" from the second
 	const fullToc = toc.substring(0, toc.length - 5) + sessionsToc.substring(4)
 	return (
-		<section id={PROGRESS_BAR_REFERENCE}>
+		<section id={PROGRESS_BAR_REFERENCE_ID}>
 			<PostHeader {...{ title, channel: "courses", date, tags, intro, featuredImage }} />
 			<PostContent {...{ title, slug, channel: "courses", description, toc: fullToc, htmlAst }}>
 				<SessionList slug={slug} />

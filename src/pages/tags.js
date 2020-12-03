@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
+import { PROGRESS_BAR_REFERENCE_ID } from "../components/progressBar"
 import Site from "../layout/site"
 import { AllTagsHeader } from "../components/header"
 import { Tag } from "../components/taglet"
@@ -17,7 +17,7 @@ const TagsPage = ({ data }) => (
 			description: "All tags of all articles, videos, newsletters, etc.",
 		}}
 	>
-		<section id={PROGRESS_BAR_REFERENCE}>
+		<section id={PROGRESS_BAR_REFERENCE_ID}>
 			<AllTagsHeader />
 			<div className={layout.container}>
 				<div className={style.container}>

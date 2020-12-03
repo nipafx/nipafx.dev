@@ -1,6 +1,6 @@
 import React from "react"
 
-import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
+import { PROGRESS_BAR_REFERENCE_ID } from "../components/progressBar"
 import Site from "../layout/site"
 import Link from "../components/link"
 
@@ -15,7 +15,7 @@ const FourOhFourPage = () => (
 			description: "Damn, that didn't go as planned. 🤕",
 		}}
 	>
-		<section id={PROGRESS_BAR_REFERENCE} className={layout.textContainer}>
+		<section id={PROGRESS_BAR_REFERENCE_ID} className={layout.textContainer}>
 			<h1>404</h1>
 			<p>Damn, that didn't go as planned. 🤕</p>
 			<p>

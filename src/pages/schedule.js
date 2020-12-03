@@ -5,7 +5,7 @@ import { classNames } from "../infra/functions"
 import stub from "../infra/stubs"
 
 import SiteLayout from "../layout/site"
-import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
+import { PROGRESS_BAR_REFERENCE_ID } from "../components/progressBar"
 import { PageHeader } from "../components/header"
 import Link from "../components/link"
 import Calendar from "../components/calendar"
@@ -34,7 +34,7 @@ const SchedulePage = ({ data }) => {
 
 	return (
 		<SiteLayout className="stream" meta={meta}>
-			<section id={PROGRESS_BAR_REFERENCE}>
+			<section id={PROGRESS_BAR_REFERENCE_ID}>
 				<div className={style.header}>
 					<PageHeader {...header} />
 				</div>

@@ -7,7 +7,7 @@ import Site from "../layout/site"
 import { IndexHeader } from "../components/header"
 import PostFilter from "../components/postFilter"
 import PostCard from "../components/postCard"
-import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
+import { PROGRESS_BAR_REFERENCE_ID } from "../components/progressBar"
 
 import layout from "../layout/container.module.css"
 import listStyle from "../components/postList.module.css"
@@ -44,7 +44,7 @@ const IndexPage = ({ data }) => {
 			}}
 			onIndexPage
 		>
-			<section id={PROGRESS_BAR_REFERENCE}>
+			<section id={PROGRESS_BAR_REFERENCE_ID}>
 				<IndexHeader />
 				<div className={layout.container}>
 					<PostFilter />

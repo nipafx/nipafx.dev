@@ -5,7 +5,7 @@ import { classNames } from "../infra/functions"
 import SiteLogo from "./siteLogo"
 import LinkList from "./linkList"
 import SiteMenu from "./siteMenu"
-import ProgressBar, { PROGRESS_BAR_OFFSET } from "./progressBar"
+import ProgressBar, { PROGRESS_BAR_OFFSET_ID } from "./progressBar"
 
 import channels from "../../content/meta/channel-links.json"
 
@@ -24,7 +24,7 @@ const SiteHeader = ({ onIndexPage }) => {
 		}
 	})
 	return (
-		<header id={PROGRESS_BAR_OFFSET} {...classNames(layout.container, style.header)}>
+		<header id={PROGRESS_BAR_OFFSET_ID} {...classNames(layout.container, style.header)}>
 			<div {...classNames(layout.siteHeader, style.container)}>
 				<SiteLogo className={style.logo} onIndexPage={onIndexPage} />
 				<LinkList showIconsUntil={600} className={style.channels} links={channels.links} />
@@ -37,7 +37,7 @@ const SiteHeader = ({ onIndexPage }) => {
 
 const initializeHeaderVisibility = (scrollPosition, headerElement) => {
 	scrollPosition.current = window.pageYOffset
-	headerElement.current = document.querySelector("#" + PROGRESS_BAR_OFFSET)
+	headerElement.current = document.getElementById(PROGRESS_BAR_OFFSET_ID)
 }
 
 const updateHeaderVisibility = (scrollPosition, headerElement) => {

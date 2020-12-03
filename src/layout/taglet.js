@@ -1,6 +1,6 @@
 import React from "react"
 
-import { PROGRESS_BAR_REFERENCE } from "../components/progressBar"
+import { PROGRESS_BAR_REFERENCE_ID } from "../components/progressBar"
 import { ChannelHeader, TagHeader } from "../components/header"
 import PostContent from "../components/postContent"
 import PostEnd from "../components/postEnd"
@@ -16,7 +16,7 @@ const TagletLayout = ({ channel, tag, title, description, featuredImage, content
 		htmlAst: contentAst,
 	}
 	return (
-		<section id={PROGRESS_BAR_REFERENCE}>
+		<section id={PROGRESS_BAR_REFERENCE_ID}>
 			{channel ? (
 				<ChannelHeader {...{ channel, description, featuredImage }} />
 			) : (
