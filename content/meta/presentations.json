@@ -1578,7 +1578,12 @@
 				{
 					"talk": "talk-java-x",
 					"title": "Java 16 Is Coming!",
-					"time": "05.12.2020 1515 UTC"
+					"programEntry": "https://jlove.konfy.care/jlove-schedule/",
+					"time": "05.12.2020 1515 UTC",
+					"location": {
+						"text": "Room Joy",
+						"url": "https://embed.emamo.com/event/jlove-conference/v/joy-Gjv9X6"
+					}
 				}
 			]
 		}
