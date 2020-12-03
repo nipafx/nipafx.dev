@@ -1,5 +1,6 @@
 const { DateTime } = require("luxon")
 
+const events = require("../../content/meta/events.json")
 const presentations = require("../../content/meta/presentations.json")
 const sessions = require("../../content/meta/sessions.json")
 const streams = require("../../content/meta/streams.json")
@@ -15,10 +16,12 @@ exports.getEvents = (type, time, order, limit, descriptions) => {
 const getEntries = (type, descriptions) => {
 	const entries = []
 
+	const events = !type || type.includes(`events`)
 	const presentations = !type || type.includes(`talks`)
 	const sessions = !type || type.includes(`courses`)
 	const streams = !type || type.includes(`streams`)
 
+	if (events) entries.push(...getEvents())
 	if (presentations) entries.push(...getPresentations(descriptions?.talks))
 	if (sessions) entries.push(...getSessions(descriptions?.courses))
 	if (streams) entries.push(...getStreams())
@@ -124,6 +127,22 @@ const getSessions = courses => {
 				virtual: session.location && session.location.url,
 			},
 			draft: session.draft,
+		}
+	})
+}
+
+const getEvents = () => {
+	return events.events.map(event => {
+		return {
+			type: "event",
+			title: event.title,
+			description: event.description,
+			startTime: DateTime.fromFormat(event.time, "dd.MM.yyyy HHmm z", {
+				setZone: true,
+			}),
+			location: event.location,
+			host: event.host,
+			draft: event.draft,
 		}
 	})
 }

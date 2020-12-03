@@ -65,6 +65,8 @@ body {
 	--alt-contrast-color: var(--bg-color);
 }
 
+.event,
+.events,
 .page,
 .pages {
 	--alt-color: var(--theme-yellow);

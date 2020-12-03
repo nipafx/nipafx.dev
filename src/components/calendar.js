@@ -198,30 +198,31 @@ const showLocationForEvent = event => {
 		}
 	} else {
 		// event is a talk or a course
-		location = {
+		location = event.host && {
 			name: event.host.name,
 			url: event.host.url,
 			text: `at ${event.host.name}`,
 		}
-		if (event.location.physical) {
+		if (event.location && event.location.physical) {
 			location.type = "https://schema.org/Place"
 			location.details = (
 				<span itemScope itemProp="address" itemType="https://schema.org/PostalAddress">
 					<meta itemProp="name" content={event.location.physical} />
 				</span>
 			)
-		} else if (event.location.virtual) {
+		} else if (event.location && event.location.virtual) {
 			location.type = "https://schema.org/VirtualLocation"
 			location.details = <meta itemProp="url" content={event.location.virtual} />
 		}
 
-		attendanceMode = event.location.physical
-			? "https://schema.org/OfflineEventAttendanceMode"
-			: // this implies that unknown locations are considered online events;
-			  // that's just a guess, but for offline events, I usually know the location
-			  "https://schema.org/OnlineEventAttendanceMode"
+		attendanceMode =
+			event.location && event.location.physical
+				? "https://schema.org/OfflineEventAttendanceMode"
+				: // this implies that unknown locations are considered online events;
+				  // that's just a guess, but for offline events, I usually know the location
+				  "https://schema.org/OnlineEventAttendanceMode"
 
-		organizer = {
+		organizer = event.host && {
 			type: "https://schema.org/Organization",
 			name: event.host.name,
 			url: event.host.url,
@@ -232,25 +233,30 @@ const showLocationForEvent = event => {
 }
 
 const showLocation = (location, attendanceMode, organizer) => {
-	const locationProp = location.type
-		? {
-				// itemScope must be truthy
-				itemScope: "-",
-				itemProp: "location",
-				itemType: location.type,
-		  }
-		: {}
+	const locationProp =
+		location && location.type
+			? {
+					// itemScope must be truthy
+					itemScope: "-",
+					itemProp: "location",
+					itemType: location.type,
+			  }
+			: null
 	return (
 		<React.Fragment>
-			<span {...locationProp} className={style.details}>
-				<Link to={location.url}>{location.text}</Link>
-				{location.details}
-			</span>
+			{locationProp && (
+				<span {...locationProp} className={style.details}>
+					<Link to={location.url}>{location.text}</Link>
+					{location.details}
+				</span>
+			)}
 			{attendanceMode && <meta itemProp="eventAttendanceMode" content={attendanceMode} />}
-			<span itemScope itemProp="organizer" itemType={organizer.type}>
-				<meta itemProp="name" content={organizer.name} />
-				<meta itemProp="url" content={organizer.url} />
-			</span>
+			{organizer && (
+				<span itemScope itemProp="organizer" itemType={organizer.type}>
+					<meta itemProp="name" content={organizer.name} />
+					<meta itemProp="url" content={organizer.url} />
+				</span>
+			)}
 			<span itemScope itemProp="performer" itemType="https://schema.org/Person">
 				<meta itemProp="name" content="Nicolai Parlog (nipafx)" />
 				<meta itemProp="url" content="https://nipafx.dev" />
