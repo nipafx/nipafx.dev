@@ -6,13 +6,11 @@ import PostEnd from "../components/postEnd"
 
 const PostLayout = ({ title, date, channel, tags, intro, featuredImage, children }) => {
 	return (
-		<main>
-			<section id={PROGRESS_BAR_REFERENCE}>
-				<PostHeader {...{ title, date, channel, tags, intro, featuredImage }} />
-				{children}
-				<PostEnd type="article" />
-			</section>
-		</main>
+		<section id={PROGRESS_BAR_REFERENCE}>
+			<PostHeader {...{ title, date, channel, tags, intro, featuredImage }} />
+			{children}
+			<PostEnd type="article" />
+		</section>
 	)
 }
 

@@ -14,15 +14,13 @@ const CourseLayout = ({ title, slug, date, tags, description, intro, toc, featur
 	// both tocs contain a "<ul>" wrapper - remove "</ul>" from the first and "<ul>" from the second
 	const fullToc = toc.substring(0, toc.length - 5) + sessionsToc.substring(4)
 	return (
-		<main>
-			<section id={PROGRESS_BAR_REFERENCE}>
-				<PostHeader {...{ title, channel: "courses", date, tags, intro, featuredImage }} />
-				<PostContent {...{ title, slug, channel: "courses", description, toc: fullToc, htmlAst }}>
-					<SessionList slug={slug} />
-				</PostContent>
-				<PostEnd type="course" />
-			</section>
-		</main>
+		<section id={PROGRESS_BAR_REFERENCE}>
+			<PostHeader {...{ title, channel: "courses", date, tags, intro, featuredImage }} />
+			<PostContent {...{ title, slug, channel: "courses", description, toc: fullToc, htmlAst }}>
+				<SessionList slug={slug} />
+			</PostContent>
+			<PostEnd type="course" />
+		</section>
 	)
 }
 

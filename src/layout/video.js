@@ -7,13 +7,11 @@ import PostEnd from "../components/postEnd"
 
 const VideoLayout = ({ title, slug, videoSlug, date, tags, description, intro, toc, source, htmlAst }) => {
 	return (
-		<main>
-			<section id={PROGRESS_BAR_REFERENCE}>
-				<PostHeader {...{ title, date, channel: "videos", tags, intro, featuredVideo: videoSlug }} />
-				<PostContent {...{ title, slug, channel: "videos", description, toc, source, htmlAst }} />
-				<PostEnd type="video" />
-			</section>
-		</main>
+		<section id={PROGRESS_BAR_REFERENCE}>
+			<PostHeader {...{ title, date, channel: "videos", tags, intro, featuredVideo: videoSlug }} />
+			<PostContent {...{ title, slug, channel: "videos", description, toc, source, htmlAst }} />
+			<PostEnd type="video" />
+		</section>
 	)
 }
 

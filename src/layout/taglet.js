@@ -16,17 +16,15 @@ const TagletLayout = ({ channel, tag, title, description, featuredImage, content
 		htmlAst: contentAst,
 	}
 	return (
-		<main>
-			<section id={PROGRESS_BAR_REFERENCE}>
-				{channel ? (
-					<ChannelHeader {...{ channel, description, featuredImage }} />
-				) : (
-					<TagHeader {...{ tag, description, featuredImage }} />
-				)}
-				<PostContent {...post}>{children}</PostContent>
-				<PostEnd type={channel ? "channel" : "tag"} />
-			</section>
-		</main>
+		<section id={PROGRESS_BAR_REFERENCE}>
+			{channel ? (
+				<ChannelHeader {...{ channel, description, featuredImage }} />
+			) : (
+				<TagHeader {...{ tag, description, featuredImage }} />
+			)}
+			<PostContent {...post}>{children}</PostContent>
+			<PostEnd type={channel ? "channel" : "tag"} />
+		</section>
 	)
 }
 

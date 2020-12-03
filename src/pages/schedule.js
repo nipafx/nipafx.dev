@@ -34,42 +34,35 @@ const SchedulePage = ({ data }) => {
 
 	return (
 		<SiteLayout className="stream" meta={meta}>
-			<main>
-				<section id={PROGRESS_BAR_REFERENCE}>
-					<div className={style.header}>
-						<PageHeader {...header} />
-					</div>
-					<div className={layout.container}>
-						<p {...classNames(style.right, style.colored)}>
-							The events are color-coded:
-							<br />
-							<Link className="stream" to="live">
-								streams are purple
-							</Link>
-							,{" "}
-							<Link className="course" to="courses">
-								courses are blue
-							</Link>
-							<br />
-							<Link className="talk" to="talks">
-								talks are pink
-							</Link>
-							, and I love you. 😊
-						</p>
-						<p className={style.right}>
-							By the way, you can
-							<br />
-							<a href={calendarUrl}>import this into your calendar</a>.
-						</p>
-						<Calendar
-							time="upcomingMonths"
-							order="asc"
-							display="monthGrid"
-							fullscreen
-						/>
-					</div>
-				</section>
-			</main>
+			<section id={PROGRESS_BAR_REFERENCE}>
+				<div className={style.header}>
+					<PageHeader {...header} />
+				</div>
+				<div className={layout.container}>
+					<p {...classNames(style.right, style.colored)}>
+						The events are color-coded:
+						<br />
+						<Link className="stream" to="live">
+							streams are purple
+						</Link>
+						,{" "}
+						<Link className="course" to="courses">
+							courses are blue
+						</Link>
+						<br />
+						<Link className="talk" to="talks">
+							talks are pink
+						</Link>
+						, and I love you. 😊
+					</p>
+					<p className={style.right}>
+						By the way, you can
+						<br />
+						<a href={calendarUrl}>import this into your calendar</a>.
+					</p>
+					<Calendar time="upcomingMonths" order="asc" display="monthGrid" fullscreen />
+				</div>
+			</section>
 		</SiteLayout>
 	)
 }

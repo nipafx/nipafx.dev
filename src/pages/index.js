@@ -44,18 +44,24 @@ const IndexPage = ({ data }) => {
 			}}
 			onIndexPage
 		>
-			<IndexHeader />
-			<div id={PROGRESS_BAR_REFERENCE} className={layout.container}>
-				<PostFilter />
-				<div
-					id={id}
-					{...classNames(layout.main, listStyle.container, "highlight-first-post-card")}
-				>
-					{posts.map(post => (
-						<PostCard key={post.slug} {...post} className={listStyle.card} />
-					))}
+			<section id={PROGRESS_BAR_REFERENCE}>
+				<IndexHeader />
+				<div className={layout.container}>
+					<PostFilter />
+					<div
+						id={id}
+						{...classNames(
+							layout.main,
+							listStyle.container,
+							"highlight-first-post-card"
+						)}
+					>
+						{posts.map(post => (
+							<PostCard key={post.slug} {...post} className={listStyle.card} />
+						))}
+					</div>
 				</div>
-			</div>
+			</section>
 		</Site>
 	)
 }

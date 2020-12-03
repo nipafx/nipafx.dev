@@ -17,21 +17,19 @@ const TagsPage = ({ data }) => (
 			description: "All tags of all articles, videos, newsletters, etc.",
 		}}
 	>
-		<main>
-			<section id={PROGRESS_BAR_REFERENCE}>
-				<AllTagsHeader />
-				<div className={layout.container}>
-					<div className={style.container}>
-						{data.tags.group.map(tag => (
-							<span key={tag.slug}>
-								<Tag tag={tag.slug} mode="forward" />
-								<span>{` (${tag.count})`}</span>
-							</span>
-						))}
-					</div>
+		<section id={PROGRESS_BAR_REFERENCE}>
+			<AllTagsHeader />
+			<div className={layout.container}>
+				<div className={style.container}>
+					{data.tags.group.map(tag => (
+						<span key={tag.slug}>
+							<Tag tag={tag.slug} mode="forward" />
+							<span>{` (${tag.count})`}</span>
+						</span>
+					))}
 				</div>
-			</section>
-		</main>
+			</div>
+		</section>
 	</Site>
 )
 

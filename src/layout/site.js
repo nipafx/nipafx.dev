@@ -16,7 +16,7 @@ const SiteLayout = ({ className, meta, onIndexPage, children }) => {
 			<Fonts />
 			<Meta {...meta} />
 			<SiteHeader onIndexPage={onIndexPage} />
-			<div className={style.content}>{children}</div>
+			<main className={style.content}>{children}</main>
 			<SiteFooter />
 		</div>
 	)
