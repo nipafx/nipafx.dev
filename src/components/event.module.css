@@ -27,7 +27,7 @@
 .date {
 	margin: 10px;
 
-	font-family: "Bedstead", monospace;
+	font-family: var(--code-font);
 	color: var(--fg-color-shade-2);
 	text-align: center;
 }
@@ -54,7 +54,7 @@
 	margin: 10px;
 	justify-self: end;
 
-	font-family: "Bedstead", monospace;
+	font-family: var(--code-font);
 	color: var(--fg-color-shade-2);
 	text-align: right;
 }

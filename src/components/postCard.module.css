@@ -62,7 +62,7 @@
 
 .channel:after {
 	color: var(--fg-color);
-	font-family: "Bedstead", monospace;
+	font-family: var(--code-font);
 	content: " // ";
 	white-space: pre;
 	transition: color var(--menu-transition);

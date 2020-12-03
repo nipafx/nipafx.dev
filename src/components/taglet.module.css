@@ -1,5 +1,5 @@
 .taglet {
-	font-family: "Bedstead", monospace;
+	font-family: var(--code-font);
 	text-decoration: none;
 }
 

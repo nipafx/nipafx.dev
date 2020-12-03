@@ -90,7 +90,7 @@ h1 + h2, h2 + h3, h3 + h4, h4 + h5 {
 
 h2::before {
 	/* same as .blockSeparator:after */
-	font-family: "Bedstead", monospace;
+	font-family: var(--code-font);
 	font-size: 32px;
 	font-weight: normal;
 	color: var(--bg-color-shade-2);
@@ -104,14 +104,14 @@ h2::before {
 
 .blockSeparator:after {
 	/* same as h2::before */
-	font-family: "Bedstead", monospace;
+	font-family: var(--code-font);
 	font-size: 32px;
 	font-weight: normal;
 	color: var(--bg-color-shade-2);
 }
 
 .inlineSeparator {
-	font-family: "Bedstead", monospace;
+	font-family: var(--code-font);
 	white-space: pre;
 	color: var(--alt-color);
 }

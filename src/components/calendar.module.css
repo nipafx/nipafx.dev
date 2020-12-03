@@ -72,7 +72,7 @@
 /* SLOTS/MULTI-DAY END */
 
 .date {
-	font-family: "Bedstead", monospace;
+	font-family: var(--code-font);
 	color: var(--fg-color-shade-2);
 	margin: 0;
 }
@@ -100,7 +100,7 @@
 }
 
 .details {
-	font-family: "Bedstead", monospace;
+	font-family: var(--code-font);
 	justify-self: end;
 	align-self: flex-end;
 }
@@ -126,7 +126,7 @@
 
 .fullscreen .monthTitle {
 	font-size: 48px;
-	font-family: "Bedstead", monospace;
+	font-family: var(--code-font);
 	font-weight: normal;
 	text-transform: uppercase;
 }
@@ -142,7 +142,7 @@
 }
 
 .fullscreen .monthTitle::after {
-	font-family: "Bedstead", monospace;
+	font-family: var(--code-font);
 	content: " //";
 }
 

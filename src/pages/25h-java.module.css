@@ -32,7 +32,7 @@
 }
 
 .date {
-	font-family: "Bedstead", monospace;
+	font-family: var(--code-font);
 	color: var(--fg-color-shade-2);
 	margin: 0;
 	font-size: var(--small-font-size);
