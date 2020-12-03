@@ -1,6 +1,6 @@
 import React from "react"
 
-import { flatten, classNames } from "../infra/functions"
+import { classNames } from "../infra/functions"
 
 import Fonts from "./fonts"
 import Meta from "../components/meta"
@@ -11,10 +11,10 @@ import style from "./site.module.css"
 
 const SiteLayout = ({ className, meta, onIndexPage, children }) => {
 	className = className || ""
-	return flatten(
+	return (
 		<div {...classNames(style.site, className)}>
 			<Fonts />
-			{meta && <Meta {...meta} />}
+			<Meta {...meta} />
 			<SiteHeader onIndexPage={onIndexPage} />
 			<div className={style.content}>{children}</div>
 			<SiteFooter />

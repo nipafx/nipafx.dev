@@ -122,16 +122,6 @@ export function resetPath() {
  * JS(X)
  */
 
-export function flatten(nodes) {
-	return React.Children.toArray(nodes).reduce((flatChildren, child) => {
-		if (child.type === React.Fragment) {
-			return flatChildren.concat(flatten(child.props.children))
-		}
-		flatChildren.push(child)
-		return flatChildren
-	}, [])
-}
-
 export function classNames() {
 	// accept both varargs and arrays
 	const args = Array.prototype.slice.call(arguments)
