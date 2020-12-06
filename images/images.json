@@ -1857,6 +1857,22 @@
 		}
 	},
 	{
+		"slug": "junit-5-params",
+		"credits": {
+			"author": {
+				"name": "TheDigitalArtist",
+				"url": "https://pixabay.com/users/thedigitalartist-202249/"
+			},
+			"source": {
+				"url": "https://pixabay.com/illustrations/complex-fractal-chaos-grid-clock-664440/"
+			},
+			"license": {
+				"name": "Pixabay License",
+				"url": "https://pixabay.com/service/license/"
+			}
+		}
+	},
+	{
 		"slug": "junit-5-extension-model",
 		"credits": {
 			"author": {
