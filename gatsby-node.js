@@ -249,10 +249,20 @@ exports.createSchemaCustomization = ({ actions }) => {
 	createTypes(typeDefs)
 }
 
+futurePost = node =>
+	// don't show future posts in production builds
+	process.env.NODE_ENV === `production` && Date.now() < Date.parse(node.frontmatter.date)
+
 createPostNodes = (node, createNode, createContentDigest) => {
 	if (![`articles`, `courses`, `videos`, `stubs`, `talks`].includes(node.fields.collection))
 		return
 	if (node.fields.collection === `stubs` && !node.frontmatter.isPost) return
+	if (futurePost(node)) {
+		console.log(
+			`Post ${node.frontmatter.slug} in ${node.fields.collection} skipped because it's scheduled for ${node.frontmatter.date}.`
+		)
+		return
+	}
 
 	const post = {
 		id: node.fields.collection + `-as-post-` + node.fields.id,
@@ -280,7 +290,7 @@ createPostNodes = (node, createNode, createContentDigest) => {
 }
 
 createArticleNodes = (node, createNode, createContentDigest) => {
-	if (node.fields.collection !== `articles`) return
+	if (node.fields.collection !== `articles` || futurePost(node)) return
 
 	const article = {
 		id: `article-` + node.fields.id,
@@ -353,7 +363,7 @@ createChannelNodes = (node, createNode, createContentDigest) => {
 }
 
 createCourseNodes = (node, createNode, createContentDigest) => {
-	if (node.fields.collection !== `courses`) return
+	if (node.fields.collection !== `courses` || futurePost(node)) return
 
 	const course = {
 		id: `course-` + node.fields.id,
@@ -386,7 +396,7 @@ createCourseNodes = (node, createNode, createContentDigest) => {
 }
 
 createPageNodes = (node, createNode, createContentDigest) => {
-	if (node.fields.collection !== `pages`) return
+	if (node.fields.collection !== `pages` || futurePost(node)) return
 
 	const page = {
 		id: `page-` + node.fields.id,
@@ -539,7 +549,7 @@ createTagNodes = (node, createNode, createContentDigest) => {
 }
 
 createTalkNodes = (node, createNode, createContentDigest) => {
-	if (node.fields.collection !== `talks`) return
+	if (node.fields.collection !== `talks` || futurePost(node)) return
 
 	const talk = {
 		id: `talk-` + node.fields.id,
@@ -572,7 +582,7 @@ createTalkNodes = (node, createNode, createContentDigest) => {
 }
 
 createVideoNodes = (node, createNode, createContentDigest) => {
-	if (node.fields.collection !== `videos`) return
+	if (node.fields.collection !== `videos` || futurePost(node)) return
 
 	const video = {
 		id: `video-` + node.fields.id,
