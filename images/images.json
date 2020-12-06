@@ -2454,5 +2454,21 @@
 				"url": "https://creativecommons.org/licenses/by/2.0/"
 			}
 		}
+	},
+	{
+		"slug": "java-2077",
+		"credits": {
+			"author": {
+				"name": "ractapopulous",
+				"url": "https://pixabay.com/users/ractapopulous-24766"
+			},
+			"source": {
+				"url": "https://pixabay.com/photos/city-disaster-end-of-the-world-fire-2444516/"
+			},
+			"license": {
+				"name": "Pixabay License",
+				"url": "https://pixabay.com/service/license/"
+			}
+		}
 	}
 ]
