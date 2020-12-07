@@ -22,7 +22,7 @@ const feed = {
 	serialize: ({ query: { site, posts, articles, videos, snippets, contentImages } }) =>
 		posts.nodes.map(post => {
 			const item = {
-				title: post.title,
+				title: sanitizeTitle(post.title),
 				description: post.intro ?? post.description,
 				url: `${site.siteMetadata.siteUrl}/${post.slug}`,
 				guid: `${site.siteMetadata.siteUrl}/${post.slug}`,
@@ -101,6 +101,10 @@ const feed = {
 	title: "nipafx",
 }
 
+/*
+ * ADD CONTENT
+ */
+
 const identifyContent = (slug, articles, videos) => {
 	const article = articles.nodes.find(article => article.slug === slug)
 	const video = videos.nodes.find(video => video.slug === slug)
@@ -130,6 +134,12 @@ const insertSnippets = (content, snippets) =>
 
 const getSnippet = (snippets, slug) => snippets.nodes.find(snippet => snippet.slug === slug)
 
+/*
+ * SANITIZE CONTENT
+ */
+
+const sanitizeTitle = title => title.replace(/<\/?code>/g, "")
+
 const sanitizeContent = content =>
 	content
 		.replace(/style="[^"]*"/g, "")
@@ -137,8 +147,8 @@ const sanitizeContent = content =>
 		.replace(/aria-label="[^"]*"/g, "")
 		.replace(/<a [^>]* class="header-id-link before">▚<\/a>/g, "")
 		.replace(/<(\/?)pullquote>/g, "<$1blockquote>")
-		.replace(/<admonition[^>]*>/g, () => `<p style="font-weight: bold;">Note:</p>`)
-		.replace(/<\/admonition>/g, () => `<p style="font-weight: bold;">End Note.</p>`)
+		.replace(/<admonition[^>]*>/g, `<p style="font-weight: bold;">Note:</p>`)
+		.replace(/<\/admonition>/g, `<p style="font-weight: bold;">End Note.</p>`)
 
 const makeLinksAbsolute = (content, site) =>
 	content.replace(/<a href="([^"]*)">/g, (tag, href) => {
