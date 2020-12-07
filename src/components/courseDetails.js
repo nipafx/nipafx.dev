@@ -3,6 +3,10 @@ import { graphql, useStaticQuery } from "gatsby"
 
 const CourseDetails = ({ slug }) => {
 	const { length, audience, requirements } = getCourseDetails(slug)
+	// the following  content is also embedded in the RSS feed,
+	// but because I couldn't reuse this component, the code is
+	// effectively duplicated
+	// ~> changes here need to be manually reproduced in feed generation
 	return (
 		<dl>
 			<dt>Audience:</dt><dd>{audience}</dd>

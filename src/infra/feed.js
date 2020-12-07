@@ -19,7 +19,9 @@ const feed = {
 			pubDate: new Date(),
 		}
 	},
-	serialize: ({ query: { site, posts, articles, videos, snippets, contentImages } }) =>
+	serialize: ({
+		query: { site, posts, articles, courses, stubs, talks, videos, snippets, contentImages },
+	}) =>
 		posts.nodes.map(post => {
 			const item = {
 				title: sanitizeTitle(post.title),
@@ -32,8 +34,10 @@ const feed = {
 			}
 
 			let content =
-				`<p>${item.description}</p>` + identifyContent(post.slug, articles, videos)
+				`<p>${item.description}</p>` +
+				identifyContent(post.slug, articles, courses, stubs, talks, videos)
 			content = insertSnippets(content, snippets)
+			content = insertCourseDetails(content, courses)
 			content = sanitizeContent(content)
 			content = makeLinksAbsolute(content, site)
 			content = insertContentMedia(content, contentImages, site)
@@ -54,6 +58,33 @@ const feed = {
 				}
 			}
 			articles: allArticle {
+				nodes {
+					slug
+					content {
+						html
+					}
+				}
+			}
+			courses: allCourse {
+				nodes {
+					slug
+					length
+					audience
+					requirements
+					content {
+						html
+					}
+				}
+			}
+			stubs: allStub(filter: { isPost: { eq: true } }) {
+				nodes {
+					slug
+					content {
+						html
+					}
+				}
+			}
+			talks: allTalk {
 				nodes {
 					slug
 					content {
@@ -105,11 +136,17 @@ const feed = {
  * ADD CONTENT
  */
 
-const identifyContent = (slug, articles, videos) => {
+const identifyContent = (slug, articles, courses, stubs, talks, videos) => {
 	const article = articles.nodes.find(article => article.slug === slug)
+	const course = courses.nodes.find(course => course.slug === slug)
+	const stub = stubs.nodes.find(stub => stub.slug === slug)
+	const talk = talks.nodes.find(talk => talk.slug === slug)
 	const video = videos.nodes.find(video => video.slug === slug)
 
 	if (article) return article.content.html
+	if (course) return course.content.html
+	if (stub) return stub.content.html
+	if (talk) return talk.content.html
 	if (video) {
 		let videoUrl = videoData.videos
 			.find(v => v.slug === video.videoSlug)
@@ -118,7 +155,7 @@ const identifyContent = (slug, articles, videos) => {
 		return video.content.html + `<p><a href="${videoUrl}">Watch the video.</a></p>`
 	}
 
-	return ""
+	throw new Error("No content found for " + slug)
 }
 
 const insertSnippets = (content, snippets) =>
@@ -133,6 +170,21 @@ const insertSnippets = (content, snippets) =>
 		)
 
 const getSnippet = (snippets, slug) => snippets.nodes.find(snippet => snippet.slug === slug)
+
+const insertCourseDetails = (content, courses) =>
+	content.replace(
+		/<coursedetails[^>]*slug="([^"]*)"[^>]*>\n*<\/coursedetails>/g,
+		replaceCourseDetails(courses)
+	)
+
+const replaceCourseDetails = courses => (tag, slug) => {
+	const course = courses.nodes.find(course => course.slug === slug)
+	return `<dl>
+		<dt>Audience:</dt><dd>${course.audience}</dd>
+		<dt>Prerequisite:</dt><dd>${course.requirements}</dd>
+		<dt>Length:</dt><dd>${course.length}</dd>
+	</dl>`
+}
 
 /*
  * SANITIZE CONTENT
