@@ -1583,7 +1583,8 @@
 					"location": {
 						"text": "Room Joy",
 						"url": "https://embed.emamo.com/event/jlove-conference/v/joy-Gjv9X6"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2020-12-05-jlove"
 				}
 			]
 		}
