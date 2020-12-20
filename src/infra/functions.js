@@ -25,7 +25,8 @@ export function emptyTaglets() {
 }
 
 export function tagletsFromPath() {
-	const hash = (window.location.hash || "").replace("#", "")
+	// during server-side rendering to work, `window` is undefined, so check that first
+	const hash = (typeof window === "undefined" ? "" : window.location.hash || "").replace("#", "")
 
 	const allChannels = !hash.includes("channels~~")
 	const allTags = !hash.includes("tags~~")

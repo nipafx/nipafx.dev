@@ -11,27 +11,8 @@ import tagletStyle from "./taglet.module.css"
 import Feedback from "./feedback"
 
 const PostFilter = () => {
-	const channelListId = "post-filter-channels-426396"
-	const tagListId = "post-filter-tags-247802"
-	useLayoutEffect(() => {
-		// annoyingly, I have to duplicate the channel list (for small and large devices)
-		// and so I can't use HTML IDs and use classes instead
-		const channelLists = document.querySelectorAll(`.${channelListId}`)
-		const tagLists = document.querySelectorAll(`.${tagListId}`)
-		highlightSelectedTaglets(channelLists, tagLists, tagletsFromPath())
-	}, [])
-	useEffect(() => {
-		const channelLists = document.querySelectorAll(`.${channelListId}`)
-		const tagLists = document.querySelectorAll(`.${tagListId}`)
-		const pathChangeHandler = () =>
-			highlightSelectedTaglets(channelLists, tagLists, tagletsFromPath())
-		window.addEventListener("hashchange", pathChangeHandler, false)
-		return () => {
-			window.removeEventListener("hashchange", pathChangeHandler)
-		}
-	})
-
 	const { channels, tags } = channelsAndTags()
+	const selectedTaglets = tagletsFromPath()
 	return (
 		<Nav
 			title="Filter"
@@ -40,53 +21,53 @@ const PostFilter = () => {
 			open
 			backToTop
 		>
-			<div {...classNames(channelListId, style.entries)}>
-				<Channel key="all" channel="all" plural mode="uplink" />
+			<div className={style.entries}>
+				<Channel
+					key="all"
+					channel="all"
+					plural
+					mode="uplink"
+					className={
+						selectedTaglets.isChannelSelected("all") ? tagletStyle.selected : null
+					}
+				/>
 				<br />
-				{channels.map(channel => (
-					<Channel
-						key={channel}
-						channel={channel}
-						plural
-						mode="uplink"
-						className={channel}
-					/>
-				))}
+				{channels.map(channel => {
+					const classes = [
+						channel,
+						selectedTaglets.isChannelSelected(channel) ? tagletStyle.selected : null,
+					]
+					return (
+						<Channel
+							key={channel}
+							channel={channel}
+							plural
+							mode="uplink"
+							{...classNames(classes)}
+						/>
+					)
+				})}
 			</div>
-			<div {...classNames(tagListId, style.entries)}>
-				<Tag key="all" tag="all" mode="uplink" />
+			<div className={style.entries}>
+				<Tag
+					key="all"
+					tag="all"
+					mode="uplink"
+					className={selectedTaglets.isTagSelected("all") ? tagletStyle.selected : null}
+				/>
 				<br />
 				{tags.map(tag => (
-					<Tag key={tag} tag={tag} mode="uplink" />
+					<Tag
+						key={tag}
+						tag={tag}
+						mode="uplink"
+						className={selectedTaglets.isTagSelected(tag) ? tagletStyle.selected : null}
+					/>
 				))}
 			</div>
 			<Feedback className={style.entries} />
 		</Nav>
 	)
-}
-
-const highlightSelectedTaglets = (channelLists, tagLists, selectedTaglets) => {
-	channelLists.forEach(channelList => {
-		for (
-			let channel = channelList.firstChild;
-			channel !== null;
-			channel = channel.nextSibling
-		) {
-			if (channel.dataset && channel.dataset.channel) {
-				const selected = selectedTaglets.isChannelSelected(channel.dataset.channel)
-				channel.classList.toggle(tagletStyle.selected, selected)
-			}
-		}
-	})
-
-	tagLists.forEach(tagList => {
-		for (let tag = tagList.firstChild; tag !== null; tag = tag.nextSibling) {
-			if (tag.dataset && tag.dataset.tag) {
-				const selected = selectedTaglets.isTagSelected(tag.dataset.tag)
-				tag.classList.toggle(tagletStyle.selected, selected)
-			}
-		}
-	})
 }
 
 const channelsAndTags = () => {
