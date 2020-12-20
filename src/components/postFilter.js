@@ -13,11 +13,13 @@ import Feedback from "./feedback"
 const PostFilter = () => {
 	const { channels, tags } = channelsAndTags()
 	const selectedTaglets = tagletsFromPath()
+	const channelTitle = selectedTaglets.isChannelSelected("all") ? "channels ◇" : "channels ◆"
+	const tagTitle = selectedTaglets.isTagSelected("all") ? "tags ◇" : "tags ◆"
 	return (
 		<Nav
 			title="Filter"
 			longHeaders={["channels", "tags", "bugs & features"]}
-			shortHeaders={["channels", "tags", "bugs"]}
+			shortHeaders={[channelTitle, tagTitle, "bugs"]}
 			open
 			backToTop
 		>
