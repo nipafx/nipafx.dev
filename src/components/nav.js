@@ -8,7 +8,7 @@ import PopOutAccordion from "./accordion-pop-out"
 import layout from "../layout/container.module.css"
 import style from "./nav.module.css"
 
-const Nav = ({ title, longHeaders, shortHeaders, open, children }) => {
+const Nav = ({ title, longHeaders, shortHeaders, open, backToTop, children }) => {
 	return (
 		<div {...classNames(layout.navbar, style.container)}>
 			<section {...classNames(style.nav)}>
@@ -25,6 +25,7 @@ const Nav = ({ title, longHeaders, shortHeaders, open, children }) => {
 					className={style.sideNav}
 					headerClassName={style.sideHeader}
 					headers={shortHeaders ?? longHeaders}
+					backToTop={backToTop}
 				>
 					{children}
 				</PopOutAccordion>

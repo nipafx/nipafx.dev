@@ -4,7 +4,7 @@ import { classNames } from "../infra/functions"
 
 import style from "./accordion-pop-out.module.css"
 
-const PopOutAccordion = ({ className, headerClassName, headers, children }) => {
+const PopOutAccordion = ({ headerClassName, headers, backToTop, className, children }) => {
 	const id = "pop-out-accordion-c92x5f"
 	useEffect(() => {
 		document.getElementById(id).classList.add(style.animated)
@@ -15,9 +15,26 @@ const PopOutAccordion = ({ className, headerClassName, headers, children }) => {
 	children = Array.isArray(children) ? children : [children]
 	return (
 		<div id={id} {...classNames(style.container, className)}>
+			{backToTop && backToTopButton(headerClassName)}
 			{children.map((child, index) =>
 				child ? item(headers[index], headerClassName, index, child) : null
 			)}
+		</div>
+	)
+}
+
+const backToTopButton = titleClassName => {
+	return (
+		<div key="back-to-top" className={style.item}>
+			<span
+				{...classNames(style.itemLabel, titleClassName)}
+				// the filter on the landing page uses the hash to encode filter state,
+				// so back-to-top can't link to an anchor without resetting the filter
+				// ~> use JS to scroll
+				onClick={() => window.scrollTo(0, 0)}
+			>
+				{"▼"}
+			</span>
 		</div>
 	)
 }

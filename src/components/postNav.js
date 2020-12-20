@@ -29,6 +29,7 @@ const PostNav = ({ title, slug, channel, description, toc, canonical, series, so
 			]}
 			shortHeaders={["org", "ser", "src", "toc", "s+f", "bug"]}
 			open={open}
+			backToTop
 		>
 			{canonical && showCanonical(canonical, title)}
 			{series && showSeries(series)}

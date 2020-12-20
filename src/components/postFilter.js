@@ -38,6 +38,7 @@ const PostFilter = () => {
 			longHeaders={["channels", "tags", "bugs & features"]}
 			shortHeaders={["channels", "tags", "bugs"]}
 			open
+			backToTop
 		>
 			<div {...classNames(channelListId, style.entries)}>
 				<Channel key="all" channel="all" plural mode="uplink" />
