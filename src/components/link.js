@@ -24,7 +24,7 @@ const Link = ({
 	className = className || ""
 
 	const external =
-		to.includes("://") || to.startsWith("//") || to.startsWith("mailto") || to === "feed.xml"
+		to.includes("://") || to.startsWith("//") || to.startsWith("mailto") || to.endsWith("feed.xml")
 	if (external)
 		return (
 			<ExternalLink

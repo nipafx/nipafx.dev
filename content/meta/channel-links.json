@@ -3,7 +3,7 @@
 		{
 			"title": "RSS",
 			"fontAwesome": "faRss",
-			"url": "feed.xml",
+			"url": "/feed.xml",
 			"className": "rss"
 		},
 		{
