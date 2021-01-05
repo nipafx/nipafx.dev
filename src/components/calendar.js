@@ -30,6 +30,7 @@ const Calendar = ({ type, time, order, limit, display, fullscreen }) => {
 
 	const noEvents = `Looks like nothing's planned at the moment. 🏝️🍹`
 	const events = getEvents(type, time, order, limit, getData())
+	printEvents(events)
 	return (
 		<React.Fragment>
 			{events.length === 0 ? (
@@ -39,6 +40,14 @@ const Calendar = ({ type, time, order, limit, display, fullscreen }) => {
 			)}
 		</React.Fragment>
 	)
+}
+
+const printEvents = events => {
+	const message = events
+		.map(event => event.startTime.toUTC().toFormat("dd.MM./HHmm") + " " + event.title)
+		.join(" — ")
+	// this message is perfect for, say, Moobot
+	console.log("All times UTC (https://time.is/UTC): " + message)
 }
 
 const showEvents = (display, events) => {
