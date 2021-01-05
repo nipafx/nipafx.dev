@@ -421,9 +421,34 @@
 			"description": "Working on PRs, issues, and maybe new extensions"
 		},
 		{
-			"time": "29.12.2020 1800",
-			"title": "CANCELED",
-			"description": "I planned a \"JUnit Pioneer\" stream, but I got family plans instead. :)"
+			"time": "05.01.2021 1800",
+			"title": "JUnit Pioneer Test Reports",
+			"description": "Launching a new project under the Pioneer roof"
+		},
+		{
+			"time": "12.01.2021 1800",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "17.01.2021 0800",
+			"title": "nipafx.dev // GatsbyJS",
+			"description": "Polishing Nicolai's website"
+		},
+		{
+			"time": "19.01.2021 1800",
+			"title": "StackOverflow: Java 9-16",
+			"description": "Answering StackOverflow questions on new Java versions"
+		},
+		{
+			"time": "26.01.2021 1800",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "31.01.2021 0800",
+			"title": "nipafx.dev // GatsbyJS",
+			"description": "Polishing Nicolai's website"
 		}
 	]
 }
