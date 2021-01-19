@@ -2486,5 +2486,21 @@
 				"url": "https://pixabay.com/service/license/"
 			}
 		}
+	},
+	{
+		"slug": "java-react-folders",
+		"credits": {
+			"author": {
+				"name": "Frida Bredesen",
+				"url": "https://unsplash.com/@fridooh"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/48wHiCtJsbE"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
