@@ -432,7 +432,7 @@
 		},
 		{
 			"time": "17.01.2021 0800",
-			"title": "React + Sprint Boot",
+			"title": "React + Spring Boot",
 			"description": "Working on a calendar that helps Gabi map out the year"
 		},
 		{
@@ -441,13 +441,18 @@
 			"description": "Answering StackOverflow questions on new Java versions"
 		},
 		{
+			"time": "21.01.2021 1800",
+			"title": "React + Spring Boot",
+			"description": "Working on a calendar that helps Gabi map out the year"
+		},
+		{
 			"time": "26.01.2021 1800",
 			"title": "JUnit Pioneer",
 			"description": "Working on PRs, issues, and maybe new extensions"
 		},
 		{
 			"time": "31.01.2021 0800",
-			"title": "React + Sprint Boot",
+			"title": "React + Spring Boot",
 			"description": "Working on a calendar that helps Gabi map out the year"
 		}
 	]
