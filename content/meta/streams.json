@@ -454,6 +454,11 @@
 			"time": "31.01.2021 0800",
 			"title": "React + Spring Boot",
 			"description": "Working on a calendar that helps Gabi map out the year"
+		},
+		{
+			"time": "16.02.2021 1800",
+			"title": "ModiTect, Layrry, Deptective // Gunnar Morling",
+			"description": "Red Hat's Gunnar Morling joins us to tell us about his side projects and help us implement a new feature in ModiTect"
 		}
 	]
 }
