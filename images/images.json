@@ -2502,5 +2502,21 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "strawman",
+		"credits": {
+			"author": {
+				"name": "GDJ",
+				"url": "https://pixabay.com/users/gdj-1086657/"
+			},
+			"source": {
+				"url": "https://pixabay.com/vectors/scarecrow-farm-silhouette-straw-man-5126665/"
+			},
+			"license": {
+				"name": "Pixabay License",
+				"url": "https://pixabay.com/service/license/"
+			}
+		}
 	}
 ]

@@ -179,6 +179,12 @@
 			"url": "https://www.youtube.com/watch?v=k9--KYubKzk",
 			"title": "Java After Eight at Jfokus 2020",
 			"thumbnail": "java-after-eight-jfokus-2020"
+		},
+		{
+			"slug": "jdk-news-1",
+			"url": "https://www.youtube.com/watch?v=QmnJygpnrSQ",
+			"title": "JDK News #1 - Pattern Matching Quartet",
+			"thumbnail": "jdk-news-1"
 		}
 	]
 }
