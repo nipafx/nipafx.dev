@@ -176,10 +176,6 @@ li > p:first-child {
 	margin-top: 0;
 }
 
-ol {
-	counter-reset: item;
-}
-
 dd {
 	margin-inline-start: 1.5em;
 }
