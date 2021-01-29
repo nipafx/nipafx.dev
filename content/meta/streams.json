@@ -456,9 +456,34 @@
 			"description": "Working on a calendar that helps Gabi map out the year"
 		},
 		{
+			"time": "02.02.2021 1800",
+			"title": "Updating Demos to Java 16",
+			"description": "[Java After Eight](https://github.com/nipafx/java-after-eight) and [Java X](https://github.com/nipafx/demo-java-x) need to be bumped to Java 16, so we'll create and include some examples for new language features"
+		},
+		{
+			"time": "09.02.2021 1800",
+			"title": "Playwright & JUnit Pioneer",
+			"description": "Experimenting with [Playwright](https://playwright.dev/) and seeing what Pioneer can do to better integrate it with JUnit 5"
+		},
+		{
+			"time": "14.02.2021 0800",
+			"title": "React + Spring Boot",
+			"description": "Working on a calendar that helps Gabi map out the year"
+		},
+		{
 			"time": "16.02.2021 1800",
 			"title": "ModiTect, Layrry, Deptective // Gunnar Morling",
 			"description": "Red Hat's Gunnar Morling joins us to tell us about his side projects and help us implement a new feature in ModiTect"
+		},
+		{
+			"time": "23.02.2021 1800",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "28.02.2021 0800",
+			"title": "nipafx.dev // GatsbyJS",
+			"description": "Polishing Nicolai's new website"
 		}
 	]
 }
