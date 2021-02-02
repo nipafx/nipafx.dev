@@ -147,7 +147,7 @@ Optional<Lifecycle> getTestInstanceLifecycle();
 
 Very importantly, the context gives access to the class or method it was created for.
 This allows extensions to reflectively interact with it, for example to access a test instance's fields or a test method's annotations.
-To support [custom annotations](#Custom-Annotations) you need to to evaluate [meta-annotations](https://en.wikibooks.org/wiki/Java_Programming/Annotations/Meta-Annotations), but you don't have to do it by hand - use [the helper class `AnnotationSupport`](https://junit.org/junit5/docs/current/api/org/junit/platform/commons/support/AnnotationSupport.html) for that.
+To support [custom annotations](#Custom-Annotations) you need to evaluate [meta-annotations](https://en.wikibooks.org/wiki/Java_Programming/Annotations/Meta-Annotations), but you don't have to do it by hand - use [the helper class `AnnotationSupport`](https://junit.org/junit5/docs/current/api/org/junit/platform/commons/support/AnnotationSupport.html) for that.
 
 ```java
 Optional<String> getConfigurationParameter(String key)
@@ -251,7 +251,7 @@ class SomeTests {
 Actually, a slightly less verbose and more readable option exists, but for that we first have to examine the second pillar of JUnit's extension model, [custom annotations](#Custom-Annotations).
 We'll do that right after discussing the other two approaches to registering extensions.
 
-#### Programmatical Registration
+#### Programmatic Registration
 
 Registering extensions with annotations is very smooth and requires only a minimum of effort, but it has one serious disadvantage: You can't do everything in an annotation!
 Their values must be compile-time constants and that can be rather limiting.
@@ -296,12 +296,12 @@ If you have an extension that you think needs to be registered with all tests in
 Simply let your extension JAR proclaim that it provides implementations of `org.junit.jupiter.api.extension.Extension` and Jupiter picks it up.
 
 Almost... Automatic registration is turned off by default, so you first need to [configure Jupiter](https://junit.org/junit5/docs/current/user-guide/#running-tests-config-params) to auto-detect extensions by setting `junit.jupiter.extensions.autodetection.enabled` to `true`.
-While your at it, consider requiring explicit activation for your extension with your own parameter (you can query it with the store's `getConfigurationParameter` method).
+While you're at it, consider requiring explicit activation for your extension with your own parameter (you can query it with the store's `getConfigurationParameter` method).
 This way you can use your extension JAR without all global extensions being registered all the time.
 
 ### Custom Annotations
 
-The JUnit Jupiter API is driven by annotations and the engine does a little extra work when it checks for their presence: It not only looks for annotations on classes, methods and parameters but also *on other annotations*.
+The JUnit Jupiter API is driven by annotations, and the engine does a little extra work when it checks for their presence: it looks for annotations not only on classes, methods and parameters but also *on other annotations*.
 And it treats everything it finds as if it were immediately present on the examined element.
 Annotating annotations is possible with so-called [meta-annotations](https://en.wikibooks.org/wiki/Java_Programming/Annotations/Meta-Annotations) and the cool thing is, all JUnit annotations are totally meta.
 
@@ -376,7 +376,7 @@ So if the requirements state that we may want to benchmark the class but not nec
 We do this by checking whether they are individually annotated.
 
 Coincidentally, the first four points directly correspond to four of the extension points: *BeforeAll*, *BeforeTestExecution*, *AfterTestExecution*, *AfterAll*.
-So all we have to do is implement the four corresponding interfaces.
+So all we have to do is to implement the four corresponding interfaces.
 The implementations are pretty trivial - they just do what we stated above:
 
 ```java
