@@ -476,14 +476,14 @@
 			"description": "Red Hat's Gunnar Morling joins us to tell us about his side projects and help us implement a new feature in ModiTect"
 		},
 		{
+			"time": "21.02.2021 0800",
+			"title": "nipafx.dev // GatsbyJS",
+			"description": "Polishing Nicolai's new website"
+		},
+		{
 			"time": "23.02.2021 1800",
 			"title": "JUnit Pioneer",
 			"description": "Working on PRs, issues, and maybe new extensions"
-		},
-		{
-			"time": "28.02.2021 0800",
-			"title": "nipafx.dev // GatsbyJS",
-			"description": "Polishing Nicolai's new website"
 		}
 	]
 }
