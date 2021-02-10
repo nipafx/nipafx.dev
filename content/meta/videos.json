@@ -191,6 +191,12 @@
 			"url": "https://www.youtube.com/watch?v=1oW27AgtTwQ",
 			"title": "What Developers Say About IntelliJ IDEA. Nicolai Parlog (2021)",
 			"thumbnail": "intellij-birthday-interview"
+		},
+		{
+			"slug": "brian-goetz-25h",
+			"url": "https://www.youtube.com/watch?v=ZyTH8uCziI4",
+			"title": "Java's Quirks and Wrong (?) Defaults with Brian Goetz",
+			"thumbnail": "brian-goetz-25h"
 		}
 	]
 }
