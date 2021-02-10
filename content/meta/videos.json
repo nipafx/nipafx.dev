@@ -185,6 +185,12 @@
 			"url": "https://www.youtube.com/watch?v=QmnJygpnrSQ",
 			"title": "JDK News #1 - Pattern Matching Quartet",
 			"thumbnail": "jdk-news-1"
+		},
+		{
+			"slug": "intellij-birthday-interview",
+			"url": "https://www.youtube.com/watch?v=1oW27AgtTwQ",
+			"title": "What Developers Say About IntelliJ IDEA. Nicolai Parlog (2021)",
+			"thumbnail": "intellij-birthday-interview"
 		}
 	]
 }
