@@ -14,7 +14,7 @@ The runner-up for the video title was:
 
 > Today's problems come from yesterday's solutions.
 
-Brian and I talk about a few things that annoy Java developers today, why they are the way they are, and what could have been done differently. Our topics (link to timestamps in video):
+At [the 25-hour live stream](25h-java), Brian and I talk about a few things that annoy Java developers today, why they are the way they are, and what could have been done differently. Our topics (link to timestamps in video):
 
 * [What's wrong with serialization?](https://www.youtube.com/watch?v=ZyTH8uCziI4&t=03m28s)
 * [How it could've been better](https://www.youtube.com/watch?v=ZyTH8uCziI4&t=12m06s)

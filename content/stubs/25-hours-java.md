@@ -57,6 +57,8 @@ We'll talk about Java distributions, AdoptOpenJDK, and how Microsoft contributes
 Under the headline "today's problems come from yesterday's solutions" we'll talk about a few things that annoy Java developers today (who said `null`?).
 Also: projects Amber and Valhalla.
 
+<contentvideo slug="brian-goetz-25h"></contentvideo>
+
 ### Christian Stein
 
 JUnit 5 core committer, Apache Maven developer, OpenJDK Author, and tinkerer with modern Java versions.
