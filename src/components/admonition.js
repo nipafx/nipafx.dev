@@ -31,6 +31,8 @@ const typeText = type => {
 			return "Note"
 		case "update":
 			return "Update"
+		case "warning":
+			return "Warning"
 	}
 }
 

@@ -2518,5 +2518,21 @@
 				"url": "https://pixabay.com/service/license/"
 			}
 		}
+	},
+	{
+		"slug": "pattern-matching",
+		"credits": {
+			"author": {
+				"name": "JJ Ying",
+				"url": "https://unsplash.com/@jjying"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/q1x3cuziBsc"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
