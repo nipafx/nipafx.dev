@@ -127,7 +127,7 @@ Do that for a year and tell me it's not taking a toll.
 Unless you're a rockstar working on some hot product or share insight into unseen territory, nobody will care.
 Just a dude with a blog?
 Nobody will care.
-Yet another poor soul acting out his Java Stockholm Syndrome?
+Yet another poor soul acting out their Java Stockholm Syndrome?
 Nobody will care.
 Looking at your visitor stats you will be able to identify your readers by their screen resolution.
 
@@ -154,8 +154,7 @@ This is more serious.
 The internet can turn into a truly dark place very quickly.
 And it happens much quicker and gets much darker if you're a member of a minority (which in our field of work includes everyone who's not a straight, white dude).
 
-In case you don't know what I'm talking about, you might want to read this [first hand report](https://medium.com/the-lighthouse/is-that-a-threat-1f073e51d84f#.7czln2q4q "Is That a Threat?
-- Alison Leiby") from Alison Leiby, which is a pretty random example of what can happen if you step on the wrong hemorrhoids (that's what assholes' toes are called, right?).
+In case you don't know what I'm talking about, you might want to read this [first hand report](https://medium.com/the-lighthouse/is-that-a-threat-1f073e51d84f#.7czln2q4q) from Alison Leiby, which is a pretty random example of what can happen if you step on the wrong hemorrhoids (that's what assholes' toes are called, right?).
 And keep in mind that Leiby posted the "offending tweet" to the general populace; our community is not exactly known for its better-than-average inclusiveness.
 
 <pullquote>Our community is not exactly known for its inclusiveness.</pullquote>
@@ -174,6 +173,8 @@ That wasn't my intention when I started writing but somehow this is how it came 
 Let's ignore the obvious psychological implications here and give it a positive ending:
 
 **I like blogging!**
+
+<pullquote>I like blogging!</pullquote>
 
 No really, I do!
 I enjoy the act of writing, many of the activities I harped on about, and of course also the positive effects of blogging that are so often mentioned elsewhere.

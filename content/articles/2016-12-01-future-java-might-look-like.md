@@ -1,6 +1,6 @@
 ---
 title: "What Future Java Might Look Like"
-tags: [java-next, project-valhalla, generics, value-types]
+tags: [java-next, project-valhalla, generics, pattern-matching, value-types]
 date: 2016-12-01
 slug: what-future-java-might-look-like
 canonicalUrl: https://www.sitepoint.com/what-java-might-one-day-look-like/
