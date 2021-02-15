@@ -25,10 +25,14 @@ const Video = ({ slug, className }) => {
 		if (hasEmbedCookie) setShowIframe(true)
 	})
 
+	const classes = [ className ]
+	if (video.border) classes.push(style.border)
+	if (!showIframe) classes.push(style.container)
+
 	return showIframe ? (
-		<Iframe title={video.title} src={videoEmbedUrl(video.url)} className={className}></Iframe>
+		<Iframe title={video.title} src={videoEmbedUrl(video.url)} {...classNames(classes)}></Iframe>
 	) : (
-		<div {...classNames(style.container, className)}>
+		<div {...classNames(classes)}>
 			<Image id={video.thumbnail} type="videoThumbnail" className={style.thumbnail} />
 			<div
 				{...classNames(style.button, style.embed)}

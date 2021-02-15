@@ -10,6 +10,10 @@
 		". .     .";
 }
 
+.border {
+	border: 1px solid var(--alt-color);
+}
+
 .thumbnail {
 	grid-column: 1 / span 3;
 	grid-row: 1 / span 5;
