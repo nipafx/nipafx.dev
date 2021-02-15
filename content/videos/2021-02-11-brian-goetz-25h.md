@@ -5,8 +5,8 @@ tags: [conversation, migration, optional, serialization]
 date: 2021-02-11
 slug: 25h-brian-goetz
 videoSlug: brian-goetz-25h
-intro: "Mutability, nullability, serialization, primitives - Java seems to have gotten most things wrong. But could it have been successful otherwise? Brian Goetz and I discuss why Java is the way it is."
 description: "Mutability, nullability, serialization, primitives - Nicolai Parlog discusses with Java language architect Brian Goetz why Java is the way it is."
+intro: "Mutability, nullability, serialization, primitives - Java seems to have gotten most things wrong. But could it have been successful otherwise? Brian Goetz and I discuss why Java is the way it is."
 featuredImage: brian-goetz-25h
 ---
 

@@ -3,8 +3,7 @@ title: "Serialize `Optional`"
 tags: [java-8, optional, serialization]
 date: 2014-11-02
 slug: serialize-java-optional
-intro: "A summary of why you can't serialize `Optional` and what can be done to deal with that limitation if necessary."
-description: "A summary of why you can't serialize Optional and what can be done to deal with that limitation if necessary."
+description: "A summary of why you can't serialize `Optional` and what can be done to deal with that limitation if necessary."
 searchKeywords: "serialize optional"
 featuredImage: serialize-optional
 repo: serialize-optional

@@ -3,8 +3,7 @@ title: "New Javadoc Tags `@apiNote`, `@implSpec`, and `@implNote`"
 tags: [java-8, tools]
 date: 2015-01-07
 slug: javadoc-tags-apiNote-implSpec-implNote
-intro: "There are new Javadoc tags used in Java 8: `@apiNote`, `@implSpec`, and `@implNote`. Take a look at their history, meaning and use on command line and with Maven."
-description: "There are new Javadoc tags used in Java 8: @apiNote, @implSpec, and @implNote. Take a look at their history, meaning and use on command line and with Maven."
+description: "There are new Javadoc tags used in Java 8: `@apiNote`, `@implSpec`, and `@implNote`. Take a look at their history, meaning and use on command line and with Maven."
 searchKeywords: "javadoc tags"
 featuredImage: javadoc-8-tag
 repo: javadoc-8-tags

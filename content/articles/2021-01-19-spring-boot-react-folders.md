@@ -3,8 +3,8 @@ title: "Sorting A React App Into Java's Folder Structure"
 tags: [js, libraries, tools]
 date: 2021-01-19
 slug: java-react-folders
-description: "How to use react-app-rewired to sort a React app into a Java folder structure with package.json at the root, and sources in src/{main|test}/js"
-intro: "Have a Java project and want to sort a React app into its folder structure with package.json at the root and sources in `src/{main|test}/{java|js}`? Here's how to do that with _react-app-rewired_."
+description: "How to use react-app-rewired to sort a React app into a Java folder structure with `package.json` at the root, and sources in `src/{main|test}/js`"
+intro: "Have a Java project and want to sort a React app into its folder structure with `package.json` at the root and sources in `src/{main|test}/{java|js}`? Here's how to do that with react-app-rewired."
 featuredImage: java-react-folders
 inlineCodeLanguage: none
 repo: react-calendar

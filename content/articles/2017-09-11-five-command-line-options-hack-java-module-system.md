@@ -3,8 +3,7 @@ title: "Five Command Line Options To Hack The Java Module System"
 tags: [java-9, j_ms]
 date: 2017-09-11
 slug: five-command-line-options-hack-java-module-system
-description: "Get your code running on the Java 9 Module System with the command line options --add-exports, --add-opens, --add-modules, --add-reads, and --patch-module."
-intro: "Get your code running on the Java 9 Module System with the command line options  --add-exports, --add-opens, --add-modules, --add-reads, and --patch-module."
+description: "Get your code running on the Java 9 Module System with the command line options `--add-exports`, `--add-opens`, `--add-modules`, `--add-reads`, and `--patch-module`."
 searchKeywords: "command line options"
 featuredImage: java-9-command-line-options
 inlineCodeLanguage: shell

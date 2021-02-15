@@ -3,8 +3,7 @@ title: "Intention Revealing Code With `Optional`"
 tags: [clean-code, java-8, optional]
 date: 2014-10-07
 slug: intention-revealing-code-java-8-optional
-intro: "Write intention revealing code with Java 8's new type `Optional` and prevent most NPEs. This is not optional!"
-description: "Write intention revealing code with Java 8's new type Optional and prevent most NPEs. This is not optional!"
+description: "Write intention revealing code with Java 8's new type `Optional` and prevent most NPEs. This is not optional!"
 searchKeywords: "Optional"
 featuredImage: intention-revealing-optional
 ---

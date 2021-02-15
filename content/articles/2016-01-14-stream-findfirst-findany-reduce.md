@@ -3,8 +3,8 @@ title: "Beware Of findFirst() And findAny()"
 tags: [java-8, streams]
 date: 2016-01-14
 slug: java-stream-findfirst-findany-reduce
-description: "Stream.findFirst() and findAny() work with any number of elements in the stream. Make sure to reduce(toOnlyElement()) if there should be at most one."
-intro: "When using Stream.findFirst() or findAny(), you will often assume that there is at most one element left in the stream. But neither tests that assumption so maybe you should use a different approach."
+description: "`Stream.findFirst()` and `findAny()` work with any number of elements in the stream. Make sure to `reduce(toOnlyElement())` if there should be at most one."
+intro: "When using `Stream.findFirst()` or `findAny()`, you will often assume that there is at most one element left in the stream. But neither tests that assumption so maybe you should use a different approach."
 searchKeywords: "stream findFirst findAny"
 featuredImage: stream-findfirst-findany-reduce
 ---

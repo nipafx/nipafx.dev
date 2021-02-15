@@ -4,7 +4,7 @@ tags: [java-8, lambda, techniques]
 date: 2015-04-17
 slug: java-getting-rid-of-anonymous-classes
 description: "Anonymous classes are verbose and obfuscating. Functional implementations can oust them from their last strongholds (mainly abstract classes)."
-intro: "Anonymous classes are verbose and obfuscating. Functional implementations can oust them from their last strongholds (\"almost-functional\" interfaces  and abstract classes)."
+intro: "Anonymous classes are verbose and obfuscating. Functional implementations can oust them from their last strongholds (\"almost-functional\" interfaces and abstract classes)."
 searchKeywords: "anonymous classes"
 featuredImage: anonymous-classes
 ---

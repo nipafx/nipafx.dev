@@ -4,8 +4,8 @@ tags: [java-basics]
 date: 2016-06-13
 slug: implement-java-hashcode-correctly
 canonicalUrl: https://www.sitepoint.com/how-to-implement-javas-hashcode-correctly/
-description: "So you wrote a nice equals implementation? Great! But now you have to implement hashCode as well. Let’s see how to do it correctly."
-intro: "Hand in hand with a class's definition of equality goes a matching implementation of hashCode. Again, there are a couple of things to be considered to get it right. Let’s check ’em out!"
+description: "So you wrote a nice `equals` implementation? Great! But now you have to implement `hashCode` as well. Let’s see how to do it correctly."
+intro: "Hand in hand with a class's definition of equality goes a matching implementation of `hashCode`. Again, there are a couple of things to be considered to get it right. Let’s check 'em out!"
 searchKeywords: "hashCode"
 featuredImage: implementing-hashcode-correctly
 ---

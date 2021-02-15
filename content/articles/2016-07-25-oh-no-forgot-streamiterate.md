@@ -3,7 +3,7 @@ title: "Oh No, I Forgot `Stream::iterate`!"
 tags: [java-9, streams]
 date: 2016-07-25
 slug: java-9-stream-iterate
-description: "In Java 9 Stream gets a couple of new methods - one of them is an overload of `iterate` that takes a predicate and returns a finite stream."
+description: "In Java 9 `Stream` gets a couple of new methods - one of them is an overload of `iterate` that takes a predicate and returns a finite stream."
 intro: "There I go babbling about new stream methods and then I forget one: a `Stream::iterate` overload that produces a finite stream."
 searchKeywords: "stream iterate"
 featuredImage: java-9-stream

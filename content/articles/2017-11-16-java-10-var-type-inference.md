@@ -3,8 +3,7 @@ title: "First Contact With 'var' In Java 10"
 tags: [java-10, java-basics, var]
 date: 2017-11-16
 slug: java-10-var-type-inference
-description: "Java 10 introduces the var keyword, which lets the compiler infer local variable types. Here's how var works, why it exists, how it impacts readability."
-intro: "Java 10 introduces 'var' which lets the compiler infer local variable types. Here's how it works, why it exists, and how it impacts readability."
+description: "Java 10 introduces the `var` keyword, which lets the compiler infer local variable types. Here's how var works, why it exists, how it impacts readability."
 searchKeywords: "var"
 featuredImage: var-example
 repo: java-x-demo

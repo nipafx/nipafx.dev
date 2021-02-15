@@ -8,7 +8,7 @@ import { videoContentUrl } from "../infra/functions"
 
 import structuredDataJson from "../../content/meta/structured-data.json"
 
-const Meta = ({title, slug, publicationDate, canonicalUrl, image, description, searchKeywords, videoUrl, structuredDataType}) => {
+const Meta = ({title: titleUnescaped, slug, publicationDate, canonicalUrl, image, description: descriptionUnescaped, searchKeywords, videoUrl, structuredDataType}) => {
 	const data = useStaticQuery(
 		graphql`
 			query {
@@ -23,6 +23,9 @@ const Meta = ({title, slug, publicationDate, canonicalUrl, image, description, s
 			}
 		`
 	)
+
+	const title = titleUnescaped?.replace(/<\/?code>/g, "")
+	const description = descriptionUnescaped?.replace(/<\/?code>/g, "")
 
 	const site = data.site.siteMetadata
 	const siteName = `${site.title} - ${site.description}`

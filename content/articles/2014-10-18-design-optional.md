@@ -3,8 +3,7 @@ title: "The Design of `Optional`"
 tags: [java-next, java-8, optional]
 date: 2014-10-18
 slug: design-java-optional
-intro: "A digest of how `Optional` was introduced in Java 8, summarizing the many discussions about it and their key points based on the mail archive of JSR-335."
-description: "A digest of how Optional was introduced in Java 8, summarizing the many discussions about it and their key points based on the mail archive of JSR-335."
+description: "A digest of how `Optional` was introduced in Java 8, summarizing the many discussions about it and their key points based on the mail archive of JSR-335."
 searchKeywords: "Optional"
 featuredImage: optional-design
 ---

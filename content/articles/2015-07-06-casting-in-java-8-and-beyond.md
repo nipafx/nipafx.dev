@@ -3,8 +3,8 @@ title: "Casting In Java 8 (And Beyond?)"
 tags: [java-8, optional, streams]
 date: 2015-07-06
 slug: casting-in-java-8-and-beyond
-description: "Proposal to implement new casting methods on Java's Class. They aim to fulfill the need for improved ways to cast which was created by Java 8."
-intro: "Proposal to implement new casting methods on Java's Class. They aim to fulfill the need for improved ways to cast which was created by Java 8's Optional and Stream."
+description: "Proposal to implement new casting methods on Java's `Class`. They aim to fulfill the need for improved ways to cast which was created by Java 8."
+intro: "Proposal to implement new casting methods on Java's `Class`. They aim to fulfill the need for improved ways to cast which was created by Java 8's `Optional` and `Stream`."
 searchKeywords: "cast"
 featuredImage: casting-java-8-and-beyond
 ---

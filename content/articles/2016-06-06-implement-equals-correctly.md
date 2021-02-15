@@ -4,8 +4,8 @@ tags: [java-basics]
 date: 2016-06-06
 slug: implement-java-equals-correctly
 canonicalUrl: https://www.sitepoint.com/implement-javas-equals-method-correctly/
-description: "A fundamental aspect of any Java class is its definition of equality. It is determined by a class’s equals method. Let's see how to implement it correctly."
-intro: "A fundamental aspect of any Java class is its definition of equality. It is determined by a class’s equals method and there are a couple of things to be considered for a correct implementation. Let’s check ’em out so we get it right!"
+description: "A fundamental aspect of any Java class is its definition of equality. It is determined by a class's `equals` method. Let's see how to implement it correctly."
+intro: "A fundamental aspect of any Java class is its definition of equality. It is determined by a class's `equals` method and there are a couple of things to be considered for a correct implementation. Let’s check ’em out so we get it right!"
 searchKeywords: "equals"
 featuredImage: implementing-equals-correctly
 ---

@@ -3,8 +3,7 @@ title: "Why Isn't `Optional` Serializable?"
 tags: [java-next, java-8, optional, serialization, value-types]
 date: 2014-10-22
 slug: why-isnt-java-optional-serializable
-intro: "Discussing the reasons for not making Java 8's new type `Optional` serializable."
-description: "Discussing the reasons for not making Java 8's new type Optional serializable."
+description: "Discussing the reasons for not making Java 8's new type `Optional` serializable."
 searchKeywords: "Optional Serializable"
 featuredImage: optional-serializable
 ---

@@ -1,10 +1,9 @@
 ---
-title: "Unified Logging Of JVM Messages With The -Xlog Option"
+title: "Unified Logging Of JVM Messages With The `-Xlog` Option"
 tags: [java-9, java-basics]
 date: 2017-09-27
 slug: java-unified-logging-xlog
-description: "Java 9 introduces unified logging, a central mechanism configurable with -Xlog to observe class loading, threading, garbage collector, module system, etc."
-intro: "Java 9 introduces unified logging, a central mechanism configurable with -Xlog to observe class loading, threading, the garbage collector, the module system, etc."
+description: "Java 9 introduces unified logging, a central mechanism configurable with `-Xlog` to observe class loading, threading, garbage collector, module system, etc."
 searchKeywords: "xlog"
 featuredImage: unified-logging
 inlineCodeLanguage: shell

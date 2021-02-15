@@ -3,8 +3,7 @@ title: "Test Collection Implementations with Guava"
 tags: [collections, libraries, testing]
 date: 2015-03-09
 slug: test-collection-implementations-guava
-description: "If you write your own Java collections you will want to test collection implementations. See how this works with Google's Guava-Testlib."
-intro: "If you write your own Java collections you will want to test your implementations. See how this works with Google's Guava-Testlib."
+description: "Here's how to use Guava-Testlib to easily and thoroughly test your own Java collection implementations."
 searchKeywords: "Test Collection Implementation"
 featuredImage: test-collection-implementations-with-guava
 ---

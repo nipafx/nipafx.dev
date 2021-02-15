@@ -3,8 +3,8 @@ title: "Unlocking Traits With `var`"
 tags: [default-methods, java-10, lambda, var]
 date: 2018-06-25
 slug: java-var-traits
-description: "In Java 10, 'var' makes it is possible to ad-hoc combine traits into an instance that matches your exact requirements. Alas, it has some downsides."
-intro: "With 'var' it is possible to ad-hoc combine traits into an instance that matches your exact requirements. This allows for pretty cool experimentation, but unfortunately has some serious downsides."
+description: "In Java 10, `var` makes it is possible to ad-hoc combine traits into an instance that matches your exact requirements. Alas, it has some downsides."
+intro: "With `var` it is possible to ad-hoc combine traits into an instance that matches your exact requirements. This allows for pretty cool experimentation, but unfortunately has some serious downsides."
 searchKeywords: "traits"
 featuredImage: var-traits
 repo: java-x-demo

@@ -3,8 +3,7 @@ title: "Evolving Java With `––enable–preview` aka Preview Language Feature
 tags: [java-next]
 date: 2019-07-11
 slug: enable-preview-language-features
-description: "Use `--enable-preview` (plus `--source` or `--release` during compilation) to experiment with Java's preview features like switch expressions and text blocks"
-intro: "How to use `--enable-preview` (plus `--source` or `--release` during compilation) to experiment with Java's preview features like switch expressions and text blocks"
+description: "Use `--enable-preview` (plus `--source` or `--release` during compilation) to experiment with Java's preview features"
 searchKeywords: "enable-preview"
 featuredImage: preview-features
 ---
