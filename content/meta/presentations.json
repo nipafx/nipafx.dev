@@ -1600,7 +1600,38 @@
 					"title": "Java After Eleven",
 					"programEntry": "https://programm.javaland.eu/2021/#/scheduledEvent/606740",
 					"time": "17.03.2021 1400 Europe/Berlin",
-					"locationText": "Brühl, Phantasialand, Hauptbühne"
+					"locationText": "Online"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Devtalks Romania",
+				"url": "https://www.devtalks.ro/",
+				"image": "devtalks-ro-2021"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-after-n",
+					"title": "Java After Eleven",
+					"time": "09.06.2021 1400 Europe/Bucharest",
+					"locationText": "Online"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Developer Week '21",
+				"url": "https://www.devtalks.ro/",
+				"image": "developer-week-2021"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-after-n",
+					"title": "Java After Eleven",
+					"programEntry": "https://www.developer-week.de/programm/#/talk/java-after-eleven",
+					"time": "30.06.2021 1030 Europe/Berlin",
+					"locationText": "Nürnberg Convention Center NCC Ost, Raum Helsinki"
 				}
 			]
 		}
