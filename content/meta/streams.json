@@ -477,13 +477,48 @@
 		},
 		{
 			"time": "21.02.2021 0800",
-			"title": "nipafx.dev // GatsbyJS",
+			"title": "React + Spring Boot",
 			"description": "Polishing Nicolai's new website"
 		},
 		{
 			"time": "23.02.2021 1800",
 			"title": "JUnit Pioneer",
 			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "02.03.2021 1800",
+			"title": "Extending ModiTect // Gunnar Morling",
+			"description": "We'll continue our efforts to teach Moditect the creation of application class-path images"
+		},
+		{
+			"time": "07.03.2021 0800",
+			"title": "nipafx.dev // GatsbyJS",
+			"description": "Polishing Nicolai's new website"
+		},
+		{
+			"time": "09.03.2021 1800",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "16.03.2021 1800",
+			"title": "Java 16 Release Party 🥂",
+			"description": "Java 16 is out today, so I'll grab something fancy to drink and have fun with the new release. I present the new features and there'll be a guest or two to tell us more about them."
+		},
+		{
+			"time": "21.03.2021 0800",
+			"title": "nipafx.dev // GatsbyJS",
+			"description": "Polishing Nicolai's new website"
+		},
+		{
+			"time": "23.03.2021 1800",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "30.03.2021 1800",
+			"title": "Java Ecosystem Map",
+			"description": "I want to create a map of the Java ecosystem, but I'm not sure yet, what that's gonna look like. Let's explore the idea together!"
 		}
 	]
 }
