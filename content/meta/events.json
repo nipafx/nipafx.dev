@@ -41,6 +41,17 @@
 				"type": "virtual",
 				"text": "more about hack-commit-pu.sh"
 			}
+		},
+		{
+			"time": "28.09.2021 0800 Europe/Berlin",
+			"title": "Accento",
+			"description": "A conference I co-organize: 3 tracks with 15 slots, focussing on **Java** with a spicy side dish of **JavaScript** and **operations**, aimed at experienced and expert-level developers.",
+			"url": "https://accento.dev/",
+			"location": {
+				"type": "physical",
+				"text": "more about Accento",
+				"info": "Karlsruhe, Südwerk"
+			}
 		}
 	]
 }
