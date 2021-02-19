@@ -135,11 +135,11 @@ const getEvents = () => {
 			type: "event",
 			title: event.title,
 			description: event.description,
+			url: event.url,
 			startTime: DateTime.fromFormat(event.time, "dd.MM.yyyy HHmm z", {
 				setZone: true,
 			}),
 			location: event.location,
-			host: event.host,
 			draft: event.draft,
 		}
 	})

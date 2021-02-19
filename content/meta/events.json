@@ -2,27 +2,45 @@
 	"events": [
 		{
 			"time": "27.03.2020 1500 Europe/Berlin",
-			"title": "Coffee with Thorben & Nicolai Parlog",
+			"title": "Coffee with Thorben",
 			"description": "Hanging out, chatting about Java",
-			"url": "https://www.youtube.com/watch?v=gBLgZlkCCPY"
+			"url": "https://www.youtube.com/channel/UCYeDPubBiFCZXIOgGYoyADw",
+			"location": {
+				"type": "virtual",
+				"text": "on YouTube",
+				"info": "https://www.youtube.com/watch?v=gBLgZlkCCPY"
+			}
 		},
 		{
 			"time": "15.12.2020 2000 Europe/Berlin",
 			"title": "Cyberland Late Night",
 			"description": "Hanging out, chatting about Java",
-			"url": "https://www.youtube.com/watch?v=BOOLAsXCU-Y"
+			"url": "https://www.youtube.com/channel/UCAMGr2FLBzpxnVJCk-Lhd_A",
+			"location": {
+				"type": "virtual",
+				"text": "on YouTube",
+				"info": "https://www.youtube.com/watch?v=BOOLAsXCU-Y"
+			}
 		},
 		{
 			"time": "12.03.2021 2000 Europe/Berlin",
 			"title": "Tonite #WithMe",
 			"description": "Hanging out with Markus Karg, chatting about pattern matching in Java",
-			"url": "https://www.youtube.com/user/headcrashing"
+			"url": "https://www.youtube.com/user/headcrashing",
+			"location": {
+				"type": "virtual",
+				"text": "on YouTube"
+			}
 		},
 		{
 			"time": "29.05.2021 0900 Europe/Paris",
 			"title": "Hack.Commit.Push",
 			"description": "Helping you to help us. Join if you want to hack on JUnit Pioneer and we'll support you all the way from learning about Jupiter's extension API to merging your PR.",
-			"url": "https://hack-commit-pu.sh/"
+			"url": "https://hack-commit-pu.sh/",
+			"location": {
+				"type": "virtual",
+				"text": "more about hack-commit-pu.sh"
+			}
 		}
 	]
 }

@@ -39,20 +39,21 @@ const SchedulePage = ({ data }) => {
 				</div>
 				<div className={layout.container}>
 					<p {...classNames(style.right, style.colored)}>
-						The events are color-coded:
+						The entries are color-coded:
 						<br />
 						<Link className="stream" to="live">
-							streams are purple
+							streams
 						</Link>
 						,{" "}
 						<Link className="course" to="courses">
-							courses are blue
+							courses
 						</Link>
-						<br />
+						,{" "}
 						<Link className="talk" to="talks">
-							talks are pink
+							talks
 						</Link>
-						, and I love you. 😊
+						,{" "}
+						<span {...classNames("event", style.event)}>events</span>
 					</p>
 					<p className={style.right}>
 						By the way, you can

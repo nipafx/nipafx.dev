@@ -10,3 +10,7 @@
 .colored > a:hover {
 	color: var(--fg-color);
 }
+
+.event {
+	color: var(--alt-color);
+}
