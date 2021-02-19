@@ -1600,7 +1600,9 @@
 					"title": "Java After Eleven",
 					"programEntry": "https://programm.javaland.eu/2021/#/scheduledEvent/606740",
 					"time": "17.03.2021 1400 Europe/Berlin",
-					"locationText": "Online"
+					"location": {
+						"text": "Online"
+					}
 				}
 			]
 		},
@@ -1615,7 +1617,9 @@
 					"talk": "talk-java-after-n",
 					"title": "Java After Eleven",
 					"time": "09.06.2021 1400 Europe/Bucharest",
-					"locationText": "Online"
+					"location": {
+						"text": "Online"
+					}
 				}
 			]
 		},

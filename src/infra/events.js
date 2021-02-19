@@ -72,29 +72,25 @@ const sortOrder = order => {
 
 const getPresentations = talks => {
 	return presentations.events.flatMap(event =>
-		event.presentations.map(presentation => {
+		event.presentations.map(pres => {
 			return {
 				type: "talk",
-				title: presentation.title,
-				description: talks
-					? talks.find(talk => talk.slug === presentation.talk).description
-					: null,
-				startTime: DateTime.fromFormat(presentation.time, "dd.MM.yyyy HHmm z", {
+				title: pres.title,
+				description: talks?.find(talk => talk.slug === pres.talk).description,
+				url: pres.announcement || pres.program || pres.programEntry,
+				startTime: DateTime.fromFormat(pres.time, "dd.MM.yyyy HHmm z", {
 					setZone: true,
 				}),
 				host: {
 					name: event.event.name,
-					url:
-						presentation.announcement ||
-						presentation.program ||
-						presentation.programEntry ||
-						event.event.url,
+					url: event.event.url,
 				},
 				location: {
-					physical: presentation.locationText,
-					virtual: presentation.location && presentation.location.url,
+					type: pres.locationText ? "physical" : pres.location ? "virtual" : null,
+					text: `at ${event.event.name}`,
+					info: pres.locationText || (pres.location && pres.location.url),
 				},
-				draft: presentation.draft,
+				draft: pres.draft,
 			}
 		})
 	)
@@ -116,15 +112,17 @@ const getSessions = courses => {
 			description:
 				session.description ||
 				courses?.find(course => course.slug === session.courses[0]).description,
-			startTime: DateTime.fromFormat(session.dates.from, "dd.MM.yyyy"),
+			url: session.announcement,
+			startTime: times.start,
 			days,
 			host: {
 				name: session.event.name,
-				url: session.announcement,
+				url: session.event.url,
 			},
 			location: {
-				physical: session.locationText,
-				virtual: session.location && session.location.url,
+				type: session.locationText ? "physical" : session.location ? "virtual" : null,
+				text: `at ${session.event.name}`,
+				info: session.locationText || (session.location && session.location.url),
 			},
 			draft: session.draft,
 		}
@@ -153,10 +151,21 @@ const getStreams = () => {
 			type: "stream",
 			title: stream.title,
 			description: stream.description,
+			url: "https://twitch.tv/nipafx",
 			startTime: DateTime.fromFormat(stream.time, "dd.MM.yyyy HHmm", {
 				zone: "UTC",
 				setZone: true,
 			}),
+			host: {
+				type: "person",
+				name: "Nicolai Parlog (nipafx)",
+				url: "https://nipafx.dev",
+			},
+			location: {
+				type: "virtual",
+				text: "on Twitch",
+				info: "https://twitch.tv/nipafx",
+			},
 			draft: stream.draft,
 		}
 	})

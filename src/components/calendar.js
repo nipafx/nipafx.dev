@@ -190,75 +190,57 @@ const showDatesForEvent = event => {
 }
 
 const showLocationForEvent = event => {
-	let location, attendanceMode, organizer
-	if (event.type === "stream") {
-		location = {
-			type: "https://schema.org/VirtualLocation",
-			name: "Nicolai Parlog (nipafx)",
-			text: "on Twitch",
-			url: "https://twitch.tv/nipafx",
-			details: <meta itemProp="url" content="https://twitch.tv/nipafx" />,
-		}
+	const location = {
+		text: event.location.text,
+	}
+	let attendanceMode
+
+	if (event.location.type === "physical") {
+		// pick the most specific URL
+		location.url = event.url || (event.host && event.host.url)
+		location.type = "https://schema.org/Place"
+		location.details = (
+			<span itemScope itemProp="address" itemType="https://schema.org/PostalAddress">
+				<meta itemProp="name" content={event.location.info} />
+			</span>
+		)
+		attendanceMode = "https://schema.org/OfflineEventAttendanceMode"
+	} else if (event.location.type === "virtual") {
+		// pick the most specific URL
+		location.url = event.location.info || event.url || (event.host && event.host.url)
+		location.type = "https://schema.org/VirtualLocation"
+		location.details = <meta itemProp="url" content={event.location.info} />
 		attendanceMode = "https://schema.org/OnlineEventAttendanceMode"
-		organizer = {
-			type: "https://schema.org/Person",
-			name: "Nicolai Parlog (nipafx)",
-			url: "https://nipafx.dev",
-		}
-	} else {
-		// event is a talk or a course
-		location = event.host && {
-			name: event.host.name,
-			url: event.host.url,
-			text: `at ${event.host.name}`,
-		}
-		if (event.location && event.location.physical) {
-			location.type = "https://schema.org/Place"
-			location.details = (
-				<span itemScope itemProp="address" itemType="https://schema.org/PostalAddress">
-					<meta itemProp="name" content={event.location.physical} />
-				</span>
-			)
-		} else if (event.location && event.location.virtual) {
-			location.type = "https://schema.org/VirtualLocation"
-			location.details = <meta itemProp="url" content={event.location.virtual} />
-		}
+	}
 
-		attendanceMode =
-			event.location && event.location.physical
-				? "https://schema.org/OfflineEventAttendanceMode"
-				: // this implies that unknown locations are considered online events;
-				  // that's just a guess, but for offline events, I usually know the location
-				  "https://schema.org/OnlineEventAttendanceMode"
-
-		organizer = event.host && {
-			type: "https://schema.org/Organization",
-			name: event.host.name,
-			url: event.host.url,
-		}
+	const organizer = event.host && {
+		type:
+			event.host.type === "person"
+				? "https://schema.org/Person"
+				: // default to organization because it is more common
+				  "https://schema.org/Organization",
+		name: event.host.name,
+		url: event.host.url,
 	}
 
 	return showLocation(location, attendanceMode, organizer)
 }
 
 const showLocation = (location, attendanceMode, organizer) => {
-	const locationProp =
-		location && location.type
-			? {
-					// itemScope must be truthy
-					itemScope: "-",
-					itemProp: "location",
-					itemType: location.type,
-			  }
-			: null
+	const locationProp = location.type
+		? {
+				// itemScope must be truthy
+				itemScope: "-",
+				itemProp: "location",
+				itemType: location.type,
+		  }
+		: {}
 	return (
 		<React.Fragment>
-			{locationProp && (
-				<span {...locationProp} className={style.details}>
-					<Link to={location.url}>{location.text}</Link>
-					{location.details}
-				</span>
-			)}
+			<span {...locationProp} className={style.details}>
+				<Link to={location.url}>{location.text}</Link>
+				{location.details}
+			</span>
 			{attendanceMode && <meta itemProp="eventAttendanceMode" content={attendanceMode} />}
 			{organizer && (
 				<span itemScope itemProp="organizer" itemType={organizer.type}>
