@@ -4,7 +4,7 @@ tags: [javafx, libfx]
 date: 2014-09-14
 slug: libfx-0-1-1
 description: "Release post for LibFX 0.1.1 including a description of `Nestings` and pointers to GitHub, Maven and the Javadoc."
-searchKeywords: "libfx 0.1.1"
+searchKeywords: "libfx"
 featuredImage: libfx-library
 repo: libfx
 ---
@@ -13,7 +13,8 @@ Just today I released [LibFX 0.1.1](https://github.com/nipafx/LibFX/releases/tag
 
 > That's one small step for everybody else, one giant leap for me.
 
-Or something like that... ;)
+Or something like that...
+😉
 It's surely no big deal for a seasoned open source developer but since it's the very first production-ready release of my very first own open source library, it feels like quite the accomplishment to me.
 
 So I am here to proudly present it!
@@ -31,7 +32,7 @@ It is [described in detail in the project's wiki](https://github.com/nipafx/LibF
 Nestings enhance JavaFX' properties with a neat way to capture object hierarchies.
 Imagine the model for your UI has an `ObjectProperty<Employee> currentEmployee` and the employee has an `ObjectProperty<Address> addressProperty()` which in turn has a `StringProperty streetNameProperty()`.
 
-Now let's say you create an editor which you want to use to display and edit the current employee's street name.
+Now let's say you create an editor that you want to use to display and edit the current employee's street name.
 Note that the current employee can be replaced as well as the employee's address or the address' street name and of course you want your editor to always be up to date and point to the correct property.
 
 With the standard FX classes you are out of luck and essentially have to implement a lot of listening to property changes and updating bindings which will soon clutter your code.
@@ -84,11 +85,4 @@ But what I really crave is [SonarQube](http://www.sonarqube.org/)!
 I want it badly!
 But I'm still looking for a way to get it without breaking my budget.
 As soon as I find one I'll fix every possible issue and be back here to brag about the code quality.
-;)
-
-## So Long...
-
-So I'll be back and I hope so will you!
-Join the discussion about **LibFX** below or subscribe to my feeds (on the right).
-I'm currently looking for another newsletter plugin and as soon as I get it, you can subscribe to that, too!
-:)
+😁

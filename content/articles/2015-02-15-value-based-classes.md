@@ -23,7 +23,7 @@ Let's have a quick look at why value-based classes were introduced and which exi
 ### Why Do They Exist?
 
 A future version of Java will most likely contain value types.
-I will write about them in the coming weeks ([so](https://twitter.com/nipafx) [stay](feed.xml) [tuned](news)) and will present them in some detail.
+I will write about them in the coming weeks ([so](https://twitter.com/nipafx) [stay](/feed.xml) [tuned](news)) and will present them in some detail.
 And while they definitely have benefits, these are not covered in the present post, which might make the limitations seem pointless.
 Believe me, they aren't!
 Or don't believe me and [see for yourself](http://cr.openjdk.java.net/~jrose/values/values.html).

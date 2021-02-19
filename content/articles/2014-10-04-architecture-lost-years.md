@@ -79,7 +79,7 @@ Martin goes on to explain the concept.
 I'm not going to summarize that part.
 It is too complex and important to be cramped into a few lines.
 I'm currently thinking about writing a small app just to test drive the concept.
-If I do, I might make some posts out of my experience, so stay tuned: [⇒ newsletter](news), [⇒ RSS](feed.xml)
+If I do, I might make some posts out of my experience, so stay tuned: [⇒ newsletter](news), [⇒ RSS](/feed.xml)
 
 <admonition type="update">
 
