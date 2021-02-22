@@ -295,8 +295,8 @@ These are the general properties of pattern matching (in Java):
 * pattern variables are flow-scoped, which means their scope is that portion of their block where the test passed
 * patterns can be combined
 
-Now that we've got all of the general properties covered, I can go into type patterns with `instanceof`... in the next post.
+Now that we've got all of the general properties covered, I can go into type patterns with `instanceof`... in [the next post](java-type-pattern-matching).
 
-Until then - if you want to take a closer look at the evolution of pattern matching in Java, check out [JDK News #1](jdk-news-1):
+And if you want to take a closer look at the evolution of pattern matching in Java, check out [JDK News #1](jdk-news-1):
 
 <contentvideo slug="jdk-news-1"></contentvideo>

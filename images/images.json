@@ -2534,5 +2534,21 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "type-pattern-matching",
+		"credits": {
+			"author": {
+				"name": "JJ Ying",
+				"url": "https://unsplash.com/@jay_zhang"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/J10TawzEW6Q"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
