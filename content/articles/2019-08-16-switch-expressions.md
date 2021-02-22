@@ -1,9 +1,9 @@
 ---
 title: "Definitive Guide To Switch Expressions In Java 13"
-tags: [java-12, java-13, java-basics]
+tags: [java-13, java-basics, switch]
 date: 2019-08-16
 slug: java-13-switch-expressions
-description: "Java 12 introduces switch expressions. Together with a new lambda-style arrow syntax, this makes switch more expressive and less error-prone."
+description: "Java 13 finalized switch expressions. Together with a new lambda-style arrow syntax, this makes switch more expressive and less error-prone."
 searchKeywords: "switch expression"
 featuredImage: java-12-switch
 repo: java-x-demo
