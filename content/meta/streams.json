@@ -519,6 +519,11 @@
 			"time": "30.03.2021 1700",
 			"title": "Java Ecosystem Map",
 			"description": "I want to create a map of the Java ecosystem, but I'm not sure yet, what that's gonna look like. Let's explore the idea together!"
+		},
+		{
+			"time": "13.04.2021 1700",
+			"title": "Building with Bach // Christian Stein",
+			"description": "Christian Stein is here to show us the newest release of his Java-native, module-based build tool [Bach](https://github.com/sormuras/bach)."
 		}
 	]
 }
