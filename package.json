@@ -26,7 +26,7 @@
 		"gatsby-plugin-sitemap": "^2.4.17",
 		"gatsby-react-router-scroll": "^2.3.1",
 		"gatsby-remark-autolink-headers": "^2.3.14",
-		"gatsby-remark-prismjs": "^3.5.14",
+		"gatsby-remark-prismjs": "^3.13.0",
 		"gatsby-source-filesystem": "^2.3.31",
 		"gatsby-transformer-json": "^2.4.13",
 		"gatsby-transformer-remark": "^2.8.36",
@@ -37,7 +37,7 @@
 		"luxon": "^1.25.0",
 		"mitt": "^1.2.0",
 		"node-html-parser": "^1.2.21",
-		"prismjs": "^1.21.0",
+		"prismjs": "^1.23.0",
 		"prop-types": "^15.7.2",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
@@ -55,7 +55,10 @@
 		"prettier": "^1.19.1",
 		"webpack-filter-warnings-plugin": "^1.2.1"
 	},
-	"browserslist": [">0.25%", "not dead"],
+	"browserslist": [
+		">0.25%",
+		"not dead"
+	],
 	"keywords": [
 		"gatsby"
 	],
