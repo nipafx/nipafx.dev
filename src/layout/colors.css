@@ -82,7 +82,6 @@ body {
 	--alt-contrast-color: var(--fg-color);
 }
 
-/* text in schedule.js references that courses are blue */
 .course,
 .courses {
 	--alt-color: var(--theme-blue-dark);

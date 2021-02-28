@@ -45,10 +45,6 @@ const SchedulePage = ({ data }) => {
 							streams
 						</Link>
 						,{" "}
-						<Link className="course" to="courses">
-							courses
-						</Link>
-						,{" "}
 						<Link className="talk" to="talks">
 							talks
 						</Link>

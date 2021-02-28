@@ -81,27 +81,6 @@
 			]
 		},
 		{
-			"title": "Courses",
-			"children": [
-				{
-					"title": "In-house",
-					"url": "/courses#in-house"
-				},
-				{
-					"title": "Conferences",
-					"url": "/courses#conferences"
-				},
-				{
-					"title": "Remote",
-					"url": "/courses#remote"
-				},
-				{
-					"title": "Online",
-					"url": "/courses#online"
-				}
-			]
-		},
-		{
 			"title": "About",
 			"children": [
 				{

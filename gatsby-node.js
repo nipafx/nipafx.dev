@@ -254,7 +254,8 @@ futurePost = node =>
 	process.env.NODE_ENV === `production` && Date.now() < Date.parse(node.frontmatter.date)
 
 createPostNodes = (node, createNode, createContentDigest) => {
-	if (![`articles`, `courses`, `videos`, `stubs`, `talks`].includes(node.fields.collection))
+	// do not include `courses` nodes to make them less prominent (now that I no longer offer them)
+	if (![`articles`, `videos`, `stubs`, `talks`].includes(node.fields.collection))
 		return
 	if (node.fields.collection === `stubs` && !node.frontmatter.isPost) return
 	if (futurePost(node)) {

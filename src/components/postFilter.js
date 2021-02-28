@@ -90,6 +90,8 @@ const channelsAndTags = () => {
 	return {
 		channels: channels.nodes
 			.map(node => node.internalName)
+			// remove courses (they are no longer posts)
+			.filter(channel => channel !== "courses")
 			// remove pages (for now?)
 			.filter(channel => channel !== "pages"),
 		tags: tags.group.map(group => group.slug),
