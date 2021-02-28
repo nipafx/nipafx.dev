@@ -1,36 +1,21 @@
 import React from "react"
 
-import { PROGRESS_BAR_REFERENCE_ID } from "../components/progressBar"
-import Site from "../layout/site"
-import Link from "../components/link"
+import stub from "../infra/stubs"
 
-import layout from "../layout/container.module.css"
+import PostContent from "../components/postContent"
+import PostLayout from "../layout/post"
+import SiteLayout from "../layout/site"
 
-const FourOhFourPage = () => (
-	<Site
-		className="page"
-		meta={{
-			title: "404",
-			slug: "404",
-			description: "Damn, that didn't go as planned. 🤕",
-		}}
-	>
-		<section id={PROGRESS_BAR_REFERENCE_ID} className={layout.textContainer}>
-			<h1>404</h1>
-			<p>Damn, that didn't go as planned. 🤕</p>
-			<p>
-				I'm terribly sorry this happened and I really hope you can find what you're looking
-				for - on this blog, but also in life. It's not easy to achieve your goals and broken
-				sites throwing a wrench into your daily business aren't exactly helping.
-			</p>
-			<p>
-				But look at the bright side: You're out and about learning about Java and that's
-				pretty cool! I'd love to help you with that as much as I can: If you{" "}
-				<Link to="contact">reach out to me</Link> and let me know what you were looking for,
-				I'll find it and get back to you ASAP.
-			</p>
-		</section>
-	</Site>
-)
+const FourOhFourPage = () => {
+	const { meta, header, content } = stub(`404`)
+
+	return (
+		<SiteLayout className="page" meta={meta}>
+			<PostLayout {...header}>
+				<PostContent {...content} />
+			</PostLayout>
+		</SiteLayout>
+	)
+}
 
 export default FourOhFourPage
