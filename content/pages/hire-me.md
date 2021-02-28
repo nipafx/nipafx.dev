@@ -3,13 +3,15 @@ title: "Hire Nicolai Parlog"
 tags: [meta]
 date: 2020-10-03
 slug: hire
-description: "The site is hot from the oven and this part is still under construction..."
+description: "I used to be for hire, but I no longer am. This page only exists to keep links working because what evil bastard breaks links on purpose?!"
 searchKeywords: "Nicolai Parlog"
 ---
 
-There should be something here very soon - be sure to check back!
+Before [becoming a developer advocate on the Java team at Oracle](nicolai-parlog), you could hire me for a variety of services, like courses, [talks](talks), consultations, and authorship.
+That is no longer the case and so this site no longer advertises any of that.
+😃
 
-<!-- TODO -->
+<!-- This is the text from the old WordPress website -->
 
 <!--
 <div class="alignright">
