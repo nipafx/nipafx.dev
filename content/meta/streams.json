@@ -487,8 +487,8 @@
 		},
 		{
 			"time": "02.03.2021 1800",
-			"title": "Extending ModiTect // Gunnar Morling",
-			"description": "We'll continue our efforts to teach Moditect the creation of application class-path images"
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
 		},
 		{
 			"time": "07.03.2021 0800",
@@ -497,13 +497,13 @@
 		},
 		{
 			"time": "09.03.2021 1800",
-			"title": "JUnit Pioneer",
-			"description": "Working on PRs, issues, and maybe new extensions"
+			"title": "Extending ModiTect // Gunnar Morling",
+			"description": "We'll continue our efforts to teach Moditect the creation of application class-path images"
 		},
 		{
 			"time": "16.03.2021 1800",
 			"title": "Java 16 Release Party 🥂",
-			"description": "Java 16 is out today, so I'll grab something fancy to drink and have fun with the new release. I present the new features and there'll be a guest or two to tell us more about them."
+			"description": "Java 16 is out today, so I'll grab something fancy to drink and have fun with the new release. I'll introduce its features and then we'll have Stuart Marks (1900 UTC) and Chris Hegarty (2000 UTC) over to talk about API evolution and records."
 		},
 		{
 			"time": "21.03.2021 0800",
@@ -511,9 +511,9 @@
 			"description": "Polishing Nicolai's new website"
 		},
 		{
-			"time": "23.03.2021 1800",
+			"time": "23.03.2021 1700",
 			"title": "JUnit Pioneer",
-			"description": "Working on PRs, issues, and maybe new extensions"
+			"description": "Working on PRs, issues, and maybe new extensions. (The start time is not a mistake, I moved it an hour earlier because I only have time until 1930 UTC.)"
 		},
 		{
 			"time": "30.03.2021 1700",
