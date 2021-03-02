@@ -26,8 +26,9 @@ body {
 	--theme-red-rgb: 239, 78, 78;
 	--theme-orange: #EFB74E;
 	--theme-orange-rgb: 239, 183, 78;
-	--theme-yellow: #EFE359;
-	--theme-yellow-rgb: 239, 227, 89;
+	/* Cyberpunk 2077 Yellow! */
+	--theme-yellow: #FDF800;
+	--theme-yellow-rgb: 253, 248, 0;
 
 	--codefx-color: #ffa500;
 	--rss-color: #f0941a;

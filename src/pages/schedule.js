@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import { graphql } from "gatsby"
 
 import { classNames } from "../infra/functions"
 import stub from "../infra/stubs"
