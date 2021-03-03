@@ -235,7 +235,7 @@ The new [collection factory methods](http://openjdk.java.net/jeps/269) `List::of
 
 ### Reactive Streams
 
-I'm gonna break with the code first approach here, because for reactive streams there is too much code involved - have a look at [the demo](https://github.com/nipafx/demo-java-x/tree/master/src/main/java/org/codefx/demo/java9/api/reactive_streams).
+I'm gonna break with the code-first approach here, because for reactive streams there is too much code involved - have a look at [the demo](https://github.com/nipafx/demo-java-x/tree/master/src/main/java/org/codefx/demo/java9/api/reactive_streams).
 
 [Reactive streams](https://docs.oracle.com/javase/9/docs/api/java/util/concurrent/Flow.html) require three basic types:
 
@@ -365,7 +365,7 @@ Java 9 finally [resolves that with `Runtime.Version`](https://docs.oracle.com/ja
 
 Not only the language and API was improved, though.
 The JVM got some new features as well.
-Naturally, its a little tougher to show them with code first, but I'll do my best.
+Naturally, its a little tougher to show them with code-first, but I'll do my best.
 
 ### Multi-Release JARs
 
@@ -508,7 +508,7 @@ This and a few specific mechanisms (mostly *unnamed module* and *automatic modul
 
 For a thorough introduction to the module system:
 
--   ⇝ read the [Code First Java 9 Module System Tutorial](java-module-system-tutorial)
+-   ⇝ read the [Code-First Java 9 Module System Tutorial](java-module-system-tutorial)
 -   ⇝ get my book [The Java Module System](https://www.manning.com/books/the-java-module-system?a_aid=nipa&a_bid=869915cb) (Manning)
 
 ## Reflection

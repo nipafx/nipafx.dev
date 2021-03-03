@@ -2550,5 +2550,22 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "unix-domain-sockets",
+		"credits": {
+			"author": {
+				"name": "Jon Sailer",
+				"url": "https://unsplash.com/@eyefish73"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/Pfh-iY5Cgbs"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			},
+			"edited": true
+		}
 	}
 ]

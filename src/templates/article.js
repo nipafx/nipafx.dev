@@ -13,7 +13,7 @@ export default ({ data }) => {
 		date: data.article.date,
 		tags: data.article.tags,
 		canonical:
-			data.article.canonicalUrl ?? data.article.canonicalText
+			data.article.canonicalUrl || data.article.canonicalText
 				? { url: data.article.canonicalUrl, text: data.article.canonicalText }
 				: undefined,
 		description: data.article.description,
