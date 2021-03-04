@@ -1608,6 +1608,23 @@
 		},
 		{
 			"event": {
+				"name": "Modern JVM Bash",
+				"url": "https://www.meetup.com/kotlin-belfast/",
+				"image": "kug-belfast"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-after-n",
+					"title": "Java After Eleven",
+					"time": "26.03.2021 1200 UTC",
+					"location": {
+						"text": "Online"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Devtalks Romania",
 				"url": "https://www.devtalks.ro/",
 				"image": "devtalks-ro-2021"
