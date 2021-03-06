@@ -198,6 +198,13 @@
 			"url": "https://www.youtube.com/watch?v=ZyTH8uCziI4",
 			"title": "Java's Quirks and Wrong (?) Defaults with Brian Goetz",
 			"thumbnail": "brian-goetz-25h"
+		},
+		{
+			"slug": "jdk-news-2",
+			"url": "https://www.youtube.com/watch?v=WBvTilbh8S0",
+			"title": "JDK News #2 - Patterns, `switch`, and Valhalla's Primitive Classes",
+			"thumbnail": "jdk-news-2",
+			"border": true
 		}
 	]
 }

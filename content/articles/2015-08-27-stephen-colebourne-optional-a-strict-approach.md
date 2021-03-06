@@ -468,6 +468,6 @@ This should [free up your mind](intention-revealing-code-java-8-optional#the-eff
 The price to pay might be a shred of performance.
 If someone proves that it is more, we can still return to `null` for those specific cases.
 Or throw hardware at the problem.
-Or wait for [value types](tag:value-types).
+Or wait for [value types](tag:primitive-classes).
 
 What do you think?
