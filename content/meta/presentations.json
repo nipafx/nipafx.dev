@@ -1616,6 +1616,7 @@
 				{
 					"talk": "talk-java-after-n",
 					"title": "Java After Eleven",
+					"announcement": "https://www.meetup.com/devbash/events/276733036/",
 					"time": "26.03.2021 1200 UTC",
 					"location": {
 						"text": "Online"

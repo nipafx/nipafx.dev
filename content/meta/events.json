@@ -29,7 +29,8 @@
 			"url": "https://www.youtube.com/user/headcrashing",
 			"location": {
 				"type": "virtual",
-				"text": "on YouTube"
+				"text": "on YouTube",
+				"info": "https://www.youtube.com/watch?v=Fr98tn0aCcU"
 			}
 		},
 		{
