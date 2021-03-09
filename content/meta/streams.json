@@ -524,6 +524,11 @@
 			"time": "13.04.2021 1700",
 			"title": "Building with Bach // Christian Stein",
 			"description": "Christian Stein is here to show us the newest release of his Java-native, module-based build tool [Bach](https://github.com/sormuras/bach)."
+		},
+		{
+			"time": "27.04.2021 1800",
+			"title": "Extending ModiTect // Gunnar Morling",
+			"description": "We'll continue our efforts to teach Moditect the creation of application class-path images"
 		}
 	]
 }
