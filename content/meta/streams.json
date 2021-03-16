@@ -506,6 +506,11 @@
 			"description": "Java 16 is out today, so I'll grab something fancy to drink and have fun with the new release. I'll introduce its features and then we'll have Stuart Marks (1900 UTC) and Chris Hegarty (2000 UTC) over to talk about API evolution and records."
 		},
 		{
+			"time": "19.03.2021 1700",
+			"title": "How to Java 16 // Oleg Šelajev",
+			"description": "Oleg is stuck on Java 11 and wants to see what all the fuss about newer releases is about. I'll show him."
+		},
+		{
 			"time": "21.03.2021 0800",
 			"title": "nipafx.dev // GatsbyJS",
 			"description": "Polishing Nicolai's new website"
