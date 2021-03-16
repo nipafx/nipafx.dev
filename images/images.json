@@ -2567,5 +2567,22 @@
 			},
 			"edited": true
 		}
+	},
+	{
+		"slug": "java-16-guide",
+		"credits": {
+			"author": {
+				"name": "Tyler Delgado",
+				"url": "https://unsplash.com/@creatd"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/dnknfhZiBKg"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			},
+			"edited": true
+		}
 	}
 ]
