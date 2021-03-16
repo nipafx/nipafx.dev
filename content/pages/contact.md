@@ -3,7 +3,7 @@ title: "Contact"
 tags: [meta]
 date: 2020-10-03
 slug: contact
-description: "Whether to ask a Java question, hire me, or just hang out and chat - here's how to get in touch"
+description: "Whether to ask a Java question, give feedback on this blog, or just hang out and chat - here's how to get in touch"
 ---
 
 To the point:

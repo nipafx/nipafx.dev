@@ -260,7 +260,7 @@ In the earlier example, `Shape`, `Circle`, and `Rectangle` could come from a lib
 Another situation where you might not extend a type is if you want to avoid stuffing it full of methods from various, mostly independent subdomains.
 That's when you pull out the [visitor pattern](https://en.wikipedia.org/wiki/Visitor_pattern), which...
 I don't know about you, but I'm not exactly enjoying the moments where I realize I need to use it.
-Type patterns are not enough the replace the visitor pattern, but everything else we need for that is already in the making.
+Type patterns are not enough to replace the visitor pattern, but everything else we need for that is already in the making.
 
 ### Interaction With Upcoming Features
 
