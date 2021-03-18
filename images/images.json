@@ -2584,5 +2584,21 @@
 			},
 			"edited": true
 		}
+	},
+	{
+		"slug": "junit-pioneer-helmet",
+		"credits": {
+			"author": {
+				"name": "Levi Stute",
+				"url": "https://unsplash.com/@levi_stute_cinematography"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/J7DzHVusAms"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
