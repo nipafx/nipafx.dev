@@ -1626,6 +1626,31 @@
 		},
 		{
 			"event": {
+				"name": "Global Summit for Java Devs",
+				"url": "https://java.geekle.us/",
+				"image": "java-summit-2021"
+			},
+			"presentations": [
+				{
+					"talk": "talk-junit-pioneer",
+					"title": "To Jupiter And Beyond",
+					"time": "31.03.2021 1200 UTC",
+					"location": {
+						"text": "Online"
+					}
+				},
+				{
+					"talk": "talk-junit-pioneer",
+					"title": "To Jupiter And Beyond",
+					"time": "31.03.2021 1955 UTC",
+					"location": {
+						"text": "Online"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Devtalks Romania",
 				"url": "https://www.devtalks.ro/",
 				"image": "devtalks-ro-2021"
