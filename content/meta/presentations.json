@@ -1602,7 +1602,8 @@
 					"time": "17.03.2021 1400 Europe/Berlin",
 					"location": {
 						"text": "Online"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-after-eight/2021-03-18-javaland/"
 				}
 			]
 		},
