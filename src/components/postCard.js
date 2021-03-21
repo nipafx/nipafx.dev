@@ -7,8 +7,8 @@ import { Channel, tagletText } from "./taglet"
 import FormattedDate from "./formattedDate"
 import Link from "./link"
 
-import style from "./postCard.module.css"
-import tagletStyle from "./taglet.module.css"
+import * as style from "./postCard.module.css"
+import * as tagletStyle from "./taglet.module.css"
 
 const PostCard = ({ title, slug, date, channel, tags, description, featuredImage, className }) => {
 	return (

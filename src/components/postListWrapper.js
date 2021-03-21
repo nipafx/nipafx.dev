@@ -5,8 +5,8 @@ import { classNames } from "../infra/functions"
 
 import PostList from "./postList"
 
-import style from "./wrapper.module.css"
-import layout from "../layout/container.module.css"
+import * as style from "./wrapper.module.css"
+import * as layout from "../layout/container.module.css"
 
 const PostListWrapper = ({ kind, slug }) => {
 	return <PostList slugs={getPostSlugs(kind, slug)} {...classNames(layout.wide, style.wrapper)} />

@@ -5,7 +5,7 @@ import { classNames, tagletsFromPath, emptyTaglets, tagletsPath } from "../infra
 
 import Link from "./link"
 
-import style from "./taglet.module.css"
+import * as style from "./taglet.module.css"
 
 export const Tag = ({ tag, mode, className, onClick: onClick_External, children }) => {
 	const { link, forward, onClick: onClick_Internal } = detectMode(mode, null, tag)

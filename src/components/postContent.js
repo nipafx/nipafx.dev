@@ -5,8 +5,8 @@ import { classNames } from "../infra/functions"
 
 import PostNav from "../components/postNav"
 
-import layout from "../layout/container.module.css"
-import style from "./postContent.module.css"
+import * as layout from "../layout/container.module.css"
+import * as style from "./postContent.module.css"
 
 const PostContent = ({ title, slug, channel, description, toc, canonical, series, source, openNav, htmlAst, children }) => {
 	return (

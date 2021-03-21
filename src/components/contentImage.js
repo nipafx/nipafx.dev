@@ -4,8 +4,8 @@ import { classNames } from "../infra/functions"
 
 import Image from "./image"
 
-import layout from "../layout/container.module.css"
-import style from "./contentImage.module.css"
+import * as layout from "../layout/container.module.css"
+import * as style from "./contentImage.module.css"
 
 const ContentImage = ({ slug, options, className }) => {
 	options = options || ""

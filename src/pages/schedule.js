@@ -10,8 +10,8 @@ import { PageHeader } from "../components/header"
 import Link from "../components/link"
 import Calendar from "../components/calendar"
 
-import layout from "../layout/container.module.css"
-import style from "./schedule.module.css"
+import * as layout from "../layout/container.module.css"
+import * as style from "./schedule.module.css"
 
 const SchedulePage = ({ data }) => {
 	useEffect(() => {
@@ -35,7 +35,7 @@ const SchedulePage = ({ data }) => {
 	return (
 		<SiteLayout className="stream" meta={meta}>
 			<section id={PROGRESS_BAR_REFERENCE_ID}>
-				<div className={style.header}>
+				<div>
 					<PageHeader {...header} />
 				</div>
 				<div className={layout.container}>

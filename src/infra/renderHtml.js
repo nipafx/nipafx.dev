@@ -15,8 +15,8 @@ import { PullQuote, BlockQuote } from "../components/quote"
 import Snippet from "../components/snippet"
 import Table from "../components/table"
 
-import layout from "../layout/container.module.css"
-import contentStyle from "../components/postContent.module.css"
+import * as layout from "../layout/container.module.css"
+import * as contentStyle from "../components/postContent.module.css"
 
 const RenderHtml = ({ withAst, htmlAst }) => {
 	const renderAst = new RehypeReact({

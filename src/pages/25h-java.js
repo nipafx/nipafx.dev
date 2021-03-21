@@ -6,7 +6,7 @@ import PostLayout from "../layout/post"
 import PostContent from "../components/postContent"
 import SiteLayout from "../layout/site"
 
-import style from "./25h-java.module.css"
+import * as style from "./25h-java.module.css"
 
 const BuildModulesPage = () => {
 	const { meta, header, content } = stub(`25h-java`)

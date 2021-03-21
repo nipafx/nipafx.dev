@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 
-import style from "./toc.module.css"
+import * as style from "./toc.module.css"
 
 // DEPENDS ON header height
 const HEADER_HEIGHT = 85

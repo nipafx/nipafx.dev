@@ -8,7 +8,7 @@ import Image from "./image"
 import Link from "./link"
 import MarkdownAsHtml from "../infra/markdownAsHtml"
 
-import style from "./event.module.css"
+import * as style from "./event.module.css"
 
 import presentationData from "../../content/meta/presentations.json"
 import sessionData from "../../content/meta/sessions.json"

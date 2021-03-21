@@ -6,8 +6,8 @@ import { classNames, tagletsFromPath } from "../infra/functions"
 import { Channel, Tag } from "./taglet"
 import Nav from "./nav"
 
-import style from "./postFilter.module.css"
-import tagletStyle from "./taglet.module.css"
+import * as style from "./postFilter.module.css"
+import * as tagletStyle from "./taglet.module.css"
 import Feedback from "./feedback"
 
 const PostFilter = () => {

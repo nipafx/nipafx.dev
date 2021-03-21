@@ -12,8 +12,8 @@ import PostContent from "../components/postContent"
 import PostList from "../components/postList"
 import SiteLayout from "../layout/site"
 
-import style from "./demos.module.css"
-import layout from "../layout/container.module.css"
+import * as style from "./demos.module.css"
+import * as layout from "../layout/container.module.css"
 
 const DemosPage = () => {
 	const { meta, header, content } = stub(`demos`)

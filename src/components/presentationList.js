@@ -6,8 +6,8 @@ import { ordinalDay } from "../infra/functions"
 import EventList from "./eventList"
 import { H2, H3 } from "./headings"
 
-import style from "./presentationList.module.css"
-import layout from "../layout/container.module.css"
+import * as style from "./presentationList.module.css"
+import * as layout from "../layout/container.module.css"
 
 const PresentationList = ({ slug }) => {
 	const presentations = getPresentationsByYear(slug)
@@ -93,7 +93,7 @@ const prepareDescription = ({ announcement, slidesUrl, videoUrl, misc }) => {
 
 const presentDate = ({ time }) => {
 	return (
-		<span className={style.date}>
+		<span>
 			<span>{time.toFormat("EEE")}, </span>
 			<span className={style.day}>
 				{time.toFormat("MMM")} {ordinalDay(time.day)}

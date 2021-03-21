@@ -4,7 +4,7 @@ import { classNames, tagletsFromPath } from "../infra/functions"
 
 import PostCard from "./postCardWrapper"
 
-import style from "./postList.module.css"
+import * as style from "./postList.module.css"
 
 const PostList = ({ slugs, highlightFirst, className }) => {
 	if (slugs.length === 0) return null

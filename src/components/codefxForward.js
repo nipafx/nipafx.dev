@@ -6,7 +6,7 @@ import Link from "./link"
 
 import { classNames } from "../infra/functions"
 
-import style from "./codefxForward.module.css"
+import * as style from "./codefxForward.module.css"
 
 const COOKIE_NAME = "codefx_is_now_nipafx"
 const COOKIE_VALUE = "got_it"

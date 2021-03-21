@@ -13,7 +13,7 @@ import PostContent from "../components/postContent"
 import PostEnd from "../components/postEnd"
 import PresentationList from "../components/presentationList"
 
-import layout from "../layout/container.module.css"
+import * as layout from "../layout/container.module.css"
 
 const TalkLayout = ({title, slug, date, tags, description, intro, featuredImage, slides, videoSlug, source, htmlAst}) => {
 	const toc = generateToc(slug, slides, videoSlug)

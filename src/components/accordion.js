@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 
 import { classNames } from "../infra/functions"
 
-import style from "./accordion.module.css"
+import * as style from "./accordion.module.css"
 
 const Accordion = ({ className, headerClassName, headers, open, children }) => {
 	const id = "accordion-45f3n6"

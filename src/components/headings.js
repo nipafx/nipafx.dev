@@ -1,6 +1,6 @@
 import React from "react"
 
-import style from "./headings.module.css"
+import * as style from "./headings.module.css"
 
 export const H1 = ({ id, hasAnchor, children }) => <h1>{inner(id, hasAnchor, children)}</h1>
 export const H2 = ({ id, hasAnchor, children }) => <h2>{inner(id, hasAnchor, children)}</h2>

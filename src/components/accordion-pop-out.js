@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 
 import { classNames } from "../infra/functions"
 
-import style from "./accordion-pop-out.module.css"
+import * as style from "./accordion-pop-out.module.css"
 
 const PopOutAccordion = ({ headerClassName, headers, backToTop, className, children }) => {
 	const id = "pop-out-accordion-c92x5f"

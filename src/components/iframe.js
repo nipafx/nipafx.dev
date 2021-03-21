@@ -2,7 +2,7 @@ import React from "react"
 
 import { classNames } from "../infra/functions"
 
-import style from "./iframe.module.css"
+import * as style from "./iframe.module.css"
 
 const Iframe = ({ title, src, className }) => {
 	return (

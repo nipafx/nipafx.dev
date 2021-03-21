@@ -8,7 +8,7 @@ import Link from "./link"
 import Play from "../images/youtube-play.svg"
 import Plus from "../images/plus.svg"
 
-import style from "./video.module.css"
+import * as style from "./video.module.css"
 
 import videoData from "../../content/meta/videos.json"
 

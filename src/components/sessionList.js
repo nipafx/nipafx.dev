@@ -9,8 +9,8 @@ import EventList from "./eventList"
 import { H2, H3 } from "./headings"
 import Link from "./link"
 
-import style from "./sessionList.module.css"
-import layout from "../layout/container.module.css"
+import * as style from "./sessionList.module.css"
+import * as layout from "../layout/container.module.css"
 
 const SessionList = ({ slug }) => {
 	const sessions = getSessionsByYear(slug)
@@ -90,7 +90,7 @@ const prepareDescription = ({ announcement, dates }) => {
 
 const presentDates = ({ dates }) => {
 	return (
-		<span className={style.date}>
+		<span>
 			<span>{dates.from.toFormat("EEE")}, </span>
 			<span className={style.day}>
 				{dates.from.toFormat("MMMM")} {ordinalDay(dates.from.day)}

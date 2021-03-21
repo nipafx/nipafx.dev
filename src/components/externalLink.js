@@ -2,7 +2,7 @@ import React from "react"
 
 import { classNames } from "../infra/functions"
 
-import style from "./externalLink.module.css"
+import * as style from "./externalLink.module.css"
 
 const ExternalLink = ({ to, dataChannel, dataTag, onClick, mark, className, children }) => {
 	const classes = []

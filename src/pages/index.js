@@ -9,8 +9,8 @@ import PostFilter from "../components/postFilter"
 import PostCard from "../components/postCard"
 import { PROGRESS_BAR_REFERENCE_ID } from "../components/progressBar"
 
-import layout from "../layout/container.module.css"
-import listStyle from "../components/postList.module.css"
+import * as layout from "../layout/container.module.css"
+import * as listStyle from "../components/postList.module.css"
 
 // this page originally used <PostList> but it has a run time of O(n²),
 // which may be the reason why the page is sluggish on mobile devices;

@@ -1,6 +1,6 @@
 import React from "react"
 
-import style from "./admonition.module.css"
+import * as style from "./admonition.module.css"
 
 const Admonition = ({ children, type, hint }) => {
 	const text = typeText(type) + (hint ? ` (${hint})` : "") + ":"

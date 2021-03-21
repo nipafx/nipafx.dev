@@ -6,7 +6,7 @@ import { classNames } from "../infra/functions"
 
 import Link from "./link"
 
-import style from "./image.module.css"
+import * as style from "./image.module.css"
 
 import metaData from "../../images/images.json"
 

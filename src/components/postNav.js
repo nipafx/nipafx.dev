@@ -12,7 +12,7 @@ import canonicalSites from "../../content/meta/canonical-sites.json"
 import channelLinks from "../../content/meta/channel-links.json"
 import shareLinks from "../../content/meta/share-links.json"
 
-import style from "./postNav.module.css"
+import * as style from "./postNav.module.css"
 import Feedback from "./feedback"
 
 const PostNav = ({ title, slug, channel, description, toc, canonical, series, source, open }) => {

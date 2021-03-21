@@ -7,8 +7,8 @@ import { getEvents } from "../infra/events"
 import MarkdownAsHtml from "../infra/markdownAsHtml"
 import Link from "../components/link"
 
-import style from "./calendar.module.css"
-import layout from "../layout/container.module.css"
+import * as style from "./calendar.module.css"
+import * as layout from "../layout/container.module.css"
 
 const Calendar = ({ type, time, order, limit, display, fullscreen }) => {
 	if (fullscreen) {

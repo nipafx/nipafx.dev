@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import RenderHtml from "../infra/renderHtml"
 
-import layout from "../layout/container.module.css"
+import * as layout from "../layout/container.module.css"
 
 const Snippet = ({ html, markdown }) => {
 	if (html)

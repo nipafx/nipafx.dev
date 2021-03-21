@@ -5,7 +5,7 @@ import { classNames, resetPath } from "../infra/functions"
 
 import Link from "./link"
 
-import style from "./siteLogo.module.css"
+import * as style from "./siteLogo.module.css"
 
 const SiteLogo = ({ className, onIndexPage }) => {
 	const onClick = onIndexPage ? _ => resetPath() : null

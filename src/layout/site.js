@@ -7,7 +7,7 @@ import Meta from "../components/meta"
 import SiteHeader from "../components/siteHeader"
 import SiteFooter from "../components/siteFooter"
 
-import style from "./site.module.css"
+import * as style from "./site.module.css"
 
 const SiteLayout = ({ className, meta, onIndexPage, children }) => {
 	className = className || ""

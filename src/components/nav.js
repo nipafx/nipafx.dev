@@ -5,8 +5,8 @@ import { classNames } from "../infra/functions"
 import Accordion from "./accordion"
 import PopOutAccordion from "./accordion-pop-out"
 
-import layout from "../layout/container.module.css"
-import style from "./nav.module.css"
+import * as layout from "../layout/container.module.css"
+import * as style from "./nav.module.css"
 
 const Nav = ({ title, longHeaders, shortHeaders, open, backToTop, children }) => {
 	return (

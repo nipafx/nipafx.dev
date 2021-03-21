@@ -9,8 +9,8 @@ import ProgressBar, { PROGRESS_BAR_OFFSET_ID } from "./progressBar"
 
 import channels from "../../content/meta/channel-links.json"
 
-import layout from "../layout/container.module.css"
-import style from "./siteHeader.module.css"
+import * as layout from "../layout/container.module.css"
+import * as style from "./siteHeader.module.css"
 
 const SiteHeader = ({ onIndexPage }) => {
 	const scrollPosition = useRef(0)

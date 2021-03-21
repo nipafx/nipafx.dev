@@ -6,7 +6,7 @@ import { classNames } from "../infra/functions"
 
 import Link from "./link"
 
-import style from "./linkList.module.css"
+import * as style from "./linkList.module.css"
 
 const LinkList = ({ showOnlyTexts, showOnlyIcons, showIconsUntil, links, className }) => {
 	const textsFrom = showTextsFrom(showOnlyTexts, showOnlyIcons, showIconsUntil)

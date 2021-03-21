@@ -6,7 +6,7 @@ import Link from "./link"
 
 import { classNames } from "../infra/functions"
 
-import style from "./eventList.module.css"
+import * as style from "./eventList.module.css"
 
 const EventList = ({ events, presentDate, className }) => {
 	return (

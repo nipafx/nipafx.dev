@@ -4,8 +4,8 @@ import { classNames } from "../infra/functions"
 
 import Video from "./video"
 
-import layout from "../layout/container.module.css"
-import style from "./contentVideo.module.css"
+import * as layout from "../layout/container.module.css"
+import * as style from "./contentVideo.module.css"
 
 const ContentVideo = ({ slug, options, className }) => {
 	options = options || ""

@@ -6,7 +6,7 @@ import { classNames } from "../infra/functions"
 import Link from "./link"
 import { ChannelTag } from "./taglet"
 
-import style from "./siteMenu.module.css"
+import * as style from "./siteMenu.module.css"
 
 import json from "../../content/meta/site-menu.json"
 
@@ -25,7 +25,7 @@ const SiteMenu = ({ className, onIndexPage }) => {
 	return (
 		<div id={SITE_NAV} {...classNames(className, style.rootContainer)}>
 			<div>
-				<nav {...classNames(style.menu, style.topLevelContainer)}>
+				<nav className={style.menu}>
 					{json.entries.map((entry, index) => topLevelEntry(entry, index, onIndexPage))}
 				</nav>
 			</div>

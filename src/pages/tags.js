@@ -6,8 +6,8 @@ import Site from "../layout/site"
 import { AllTagsHeader } from "../components/header"
 import { Tag } from "../components/taglet"
 
-import layout from "../layout/container.module.css"
-import style from "./tags.module.css"
+import * as layout from "../layout/container.module.css"
+import * as style from "./tags.module.css"
 
 const TagsPage = ({ data }) => (
 	<Site

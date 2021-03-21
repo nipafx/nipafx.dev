@@ -4,8 +4,8 @@ import { classNames } from "../infra/functions"
 
 import Calendar from "./calendar"
 
-import layout from "../layout/container.module.css"
-import style from "./wrapper.module.css"
+import * as layout from "../layout/container.module.css"
+import * as style from "./wrapper.module.css"
 
 const CalendarWrapper = props => {
 	return (

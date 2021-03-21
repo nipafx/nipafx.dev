@@ -7,8 +7,8 @@ import Video from "./video"
 
 import { classNames } from "../infra/functions"
 
-import layout from "../layout/container.module.css"
-import style from "./header.module.css"
+import * as layout from "../layout/container.module.css"
+import * as style from "./header.module.css"
 
 const Header = ({ children, featuredImage, featuredVideo }) => (
 	<header {...classNames(layout.container, style.header)}>
@@ -20,7 +20,7 @@ const Header = ({ children, featuredImage, featuredVideo }) => (
 			<Image
 				id={featuredImage}
 				type="postTitle"
-				{...classNames(layout.headerImage, style.image)}
+				className={layout.headerImage}
 			/>
 		)}
 		{featuredVideo && <Video slug={featuredVideo} />}

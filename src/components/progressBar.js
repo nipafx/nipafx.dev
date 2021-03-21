@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react"
 
 import { classNames } from "../infra/functions"
 
-import style from "./progressBar.module.css"
+import * as style from "./progressBar.module.css"
 
 export const PROGRESS_BAR_OFFSET_ID = "progress-bar-offset"
 export const PROGRESS_BAR_REFERENCE_ID = "progress-bar-reference"
