@@ -28,11 +28,11 @@ const PresentationList = ({ slug }) => {
 				<React.Fragment>
 					<H2 id="past">Past Presentations</H2>
 					<p>{pastText(presentations.pastByYear, slug)}</p>
-					{presentations.pastByYear.map(pres => (
-						<React.Fragment key={pres.year}>
-							<H3 id={pres.year}>{pres.year}</H3>
+					{presentations.pastByYear.map(presByYear => (
+						<React.Fragment key={presByYear.year}>
+							<H3 id={presByYear.year}>{presByYear.year}</H3>
 							<EventList
-								events={preparePresentations(pres.presentations)}
+								events={preparePresentations(presByYear.presentations)}
 								className={layout.main}
 								presentDate={presentDate}
 							/>
@@ -117,12 +117,12 @@ export const createTableOfContentEntries = slug => {
 			anchor: "upcoming",
 		})
 	if (presentations.pastByYear.length > 0) {
-		const years = presentations.pastByYear.map(({ year }) => {
-			return {
+		const years = presentations.pastByYear.map(({ year }) => (
+			{
 				title: year,
 				anchor: year,
 			}
-		})
+		))
 		toc.push({
 			title: "Past Presentations",
 			anchor: "past",
