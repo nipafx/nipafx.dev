@@ -57,23 +57,22 @@ const upcomingText = upcoming => {
 			? `In the coming months, I'll deliver this course at ${upcoming[0].event.name}.`
 			: upcoming.length === 2
 			? `In the coming months, I'll deliver this course at ${upcoming[0].event.name} and ${upcoming[1].event.name}.`
-			: `In the coming months, I'll deliver this course at ${upcoming[0].event.name} and on a few other occasionans.`
+			: `In the coming months, I'll deliver this course at ${upcoming[0].event.name} and on a few other occasions.`
 	return `${intro} ${announcement} Check out the link${
 		upcoming.length < 2 ? "" : "s"
 	} below if you want to participate.`
 }
 
 const prepareSessions = sessions =>
-	sessions.map(session => {
-		return {
-			title: session.title,
-			description: prepareDescription(session),
-			host: session.event,
-			url: session.announcement,
-			location: session.location,
-			dates: session.dates,
-		}
-	})
+	sessions.map(session => ({
+		title: session.title,
+		description: prepareDescription(session),
+		host: session.event,
+		url: session.announcement,
+		location: session.location,
+		dates: session.dates,
+		reactKey: session.dates.from.toUTC().toISO() + "-" + session.dates.to.toUTC().toISO(),
+	}))
 
 const prepareDescription = ({ announcement, dates }) => {
 	// don't show announcement and sign-up details for past sessions
@@ -115,10 +114,12 @@ const presentDates = ({ dates }) => {
 }
 
 export const createTableOfContentEntries = slug => {
-	const toc = [{
-		title: "Upcoming Public Sessions",
-		anchor: "upcoming",
-	}]
+	const toc = [
+		{
+			title: "Upcoming Public Sessions",
+			anchor: "upcoming",
+		},
+	]
 	const sessions = getSessionsByYear(slug)
 	if (sessions.pastByYear.length > 0) {
 		const years = sessions.pastByYear.map(({ year }) => {

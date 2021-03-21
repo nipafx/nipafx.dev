@@ -72,15 +72,14 @@ const pastText = (pastByYear, specificTalk) => {
 }
 
 const preparePresentations = presentations =>
-	presentations.map(presentation => {
-		return {
-			title: presentation.title,
-			description: prepareDescription(presentation),
-			host: presentation.event,
-			location: presentation.location,
-			time: presentation.time,
-		}
-	})
+	presentations.map(presentation => ({
+		title: presentation.title,
+		description: prepareDescription(presentation),
+		host: presentation.event,
+		location: presentation.location,
+		time: presentation.time,
+		reactKey: presentation.time.toUTC().toISO(),
+	}))
 
 const prepareDescription = ({ announcement, slidesUrl, videoUrl, misc }) => {
 	const description = []
@@ -117,12 +116,10 @@ export const createTableOfContentEntries = slug => {
 			anchor: "upcoming",
 		})
 	if (presentations.pastByYear.length > 0) {
-		const years = presentations.pastByYear.map(({ year }) => (
-			{
-				title: year,
-				anchor: year,
-			}
-		))
+		const years = presentations.pastByYear.map(({ year }) => ({
+			title: year,
+			anchor: year,
+		}))
 		toc.push({
 			title: "Past Presentations",
 			anchor: "past",
