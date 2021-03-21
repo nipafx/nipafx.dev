@@ -12,7 +12,7 @@ const SiteLogo = ({ className, onIndexPage }) => {
 	return (
 		<div {...classNames(className, style.logo)}>
 			<Link to="/" onClick={onClick}>
-				<img src={logo().base64} />
+				<img src={logo()} />
 			</Link>
 		</div>
 	)
@@ -21,18 +21,12 @@ const SiteLogo = ({ className, onIndexPage }) => {
 const logo = () =>
 	// I switched to a base64-encoded image, so the logo shows up immediately. At 200px width,
 	// this adds 6.4KiB per logo, which appears in header and footer, so ~13KiB in total.
-	//
-	// Before base64, I used "fixed" and "noBase64" and in case I need to go back, these comments are helpful:
-	// * using "fixed" images because "fluid" cut off a few pixels on the left - not sure why
-	// * using "noBase64" prevents the blur-up effect, which I don't like for the logo
 	useStaticQuery(graphql`
 		query {
 			logo: imageSharp(fields: { id: { eq: "logo" } }) {
-				fixed(base64Width: 200) {
-					base64
-				}
+				gatsbyImageData(placeholder: BLURRED blurredOptions: { width: 200 })
 			}
 		}
-	`).logo.fixed
+	`).logo.gatsbyImageData.placeholder.fallback
 
 export default SiteLogo

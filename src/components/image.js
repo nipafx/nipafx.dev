@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import { classNames } from "../infra/functions"
 
@@ -15,7 +15,7 @@ const Image = ({ id, type, className }) => {
 
 	return (
 		<div {...classNames(className, style.container)}>
-			<Img {...image.image} />
+			<GatsbyImage image={image.data} alt=""/>
 			{showCredits(type) && credits(image.credits, type)}
 		</div>
 	)
@@ -78,25 +78,18 @@ const typeClasses = type => {
 
 const getImageWithCredits = (id, type) => {
 	const img = getImage(id, type)
-	const image = isFixedType(type) ? { fixed: img.fixed } : { fluid: img.fluid }
+	const data = img.gatsbyImageData
 	const json = metaData.find(node => node.slug === id)
 	const credits = findCreditsInData(json)
 	return {
-		image,
+		data,
 		credits,
 	}
 }
 
 export const getImagePath = (id, type) => {
 	const img = getImage(id, type)
-	return img[isFixedType(type) ? "fixed" : "fluid"].src
-}
-
-export const getImagePaths = (id, type) => {
-	const img = getImage(id, type)
-	return img[isFixedType(type) ? "fixed" : "fluid"]
-		.srcSet.split(",\n")
-		.map(pathWithWidth => pathWithWidth.split(" ")[0])
+	return img.gatsbyImageData.images.fallback.src
 }
 
 const getImage = (id, type) => {
@@ -120,9 +113,7 @@ const getImageData = () => {
 						fields {
 							id
 						}
-						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 60) {
-							...GatsbyImageSharpFluid
-						}
+						gatsbyImageData(layout: FULL_WIDTH breakpoints: [1000, 2000] jpgOptions: { quality: 60 } placeholder: BLURRED)
 					}
 				}
 				courseTitle: allImageSharp(
@@ -132,9 +123,7 @@ const getImageData = () => {
 						fields {
 							id
 						}
-						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 60) {
-							...GatsbyImageSharpFluid
-						}
+						gatsbyImageData(layout: FULL_WIDTH breakpoints: [1000, 2000] jpgOptions: { quality: 60 } placeholder: BLURRED)
 					}
 				}
 				pageTitle: allImageSharp(
@@ -144,9 +133,7 @@ const getImageData = () => {
 						fields {
 							id
 						}
-						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 60) {
-							...GatsbyImageSharpFluid
-						}
+						gatsbyImageData(layout: FULL_WIDTH breakpoints: [1000, 2000] jpgOptions: { quality: 60 } placeholder: BLURRED)
 					}
 				}
 				talkTitle: allImageSharp(
@@ -156,9 +143,7 @@ const getImageData = () => {
 						fields {
 							id
 						}
-						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 60) {
-							...GatsbyImageSharpFluid
-						}
+						gatsbyImageData(layout: FULL_WIDTH breakpoints: [1000, 2000] jpgOptions: { quality: 60 } placeholder: BLURRED)
 					}
 				}
 				videoTitle: allImageSharp(
@@ -168,9 +153,7 @@ const getImageData = () => {
 						fields {
 							id
 						}
-						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 60) {
-							...GatsbyImageSharpFluid
-						}
+						gatsbyImageData(layout: FULL_WIDTH breakpoints: [1000, 2000] jpgOptions: { quality: 60 } placeholder: BLURRED)
 					}
 				}
 				videoThumbnail: allImageSharp(
@@ -180,9 +163,7 @@ const getImageData = () => {
 						fields {
 							id
 						}
-						fluid(maxWidth: 1000, srcSetBreakpoints: [1000, 2000], jpegQuality: 60) {
-							...GatsbyImageSharpFluid
-						}
+						gatsbyImageData(layout: FULL_WIDTH breakpoints: [1000, 2000] jpgOptions: { quality: 60 } placeholder: BLURRED)
 					}
 				}
 				content: allImageSharp(
@@ -192,9 +173,7 @@ const getImageData = () => {
 						fields {
 							id
 						}
-						fluid(maxWidth: 800, srcSetBreakpoints: [800], jpegQuality: 60) {
-							...GatsbyImageSharpFluid
-						}
+						gatsbyImageData(layout: CONSTRAINED width: 800 jpgOptions: { quality: 60 } placeholder: BLURRED)
 					}
 				}
 				eventLogos: allImageSharp(
@@ -204,9 +183,7 @@ const getImageData = () => {
 						fields {
 							id
 						}
-						fluid(maxWidth: 800, srcSetBreakpoints: [800], jpegQuality: 60) {
-							...GatsbyImageSharpFluid
-						}
+						gatsbyImageData(layout: FULL_WIDTH breakpoints: [800] jpgOptions: { quality: 60 } placeholder: BLURRED)
 					}
 				}
 			}
@@ -258,20 +235,6 @@ const findCreditsInData = json => {
 		}
 
 	return json.credits
-}
-
-const isFixedType = type => {
-	switch (type) {
-		case "postTitle":
-		case "postCard":
-		case "content":
-		case "eventCard":
-		case "sidebar":
-		case "videoThumbnail":
-			return false
-		default:
-			throw new Error(`Unknown image type "${type}".`)
-	}
 }
 
 const showCredits = type => {

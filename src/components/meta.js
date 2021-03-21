@@ -3,7 +3,7 @@ import Helmet from "react-helmet"
 
 import { graphql, useStaticQuery } from "gatsby"
 
-import { getImagePath, getImagePaths } from "./image"
+import { getImagePath } from "./image"
 import { videoContentUrl } from "../infra/functions"
 
 import structuredDataJson from "../../content/meta/structured-data.json"
@@ -108,7 +108,7 @@ const Meta = ({title: titleUnescaped, slug, publicationDate, canonicalUrl, image
 			image: [pageImage],
 			description,
 		}
-	// Google recommends to include structured data for videos even if they are in YouTube
+	// Google recommends to include structured data for videos even if they are on YouTube
 	if (structuredDataType === `video`)
 		structuredData = {
 			"@context": "https://schema.org",
@@ -116,7 +116,7 @@ const Meta = ({title: titleUnescaped, slug, publicationDate, canonicalUrl, image
 			name: title,
 			description,
 			uploadDate: publicationDate,
-			thumbnailUrl: getImagePaths(image.slug, image.type),
+			thumbnailUrl: site.siteUrl + getImagePath(image.slug, image.type),
 			contentUrl: videoContentUrl(videoUrl),
 		}
 

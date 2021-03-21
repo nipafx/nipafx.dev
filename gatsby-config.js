@@ -166,6 +166,9 @@ module.exports = {
 			resolve: `gatsby-plugin-sharp`,
 		},
 		{
+			resolve: `gatsby-plugin-image`,
+		},
+		{
 			resolve: `gatsby-transformer-sharp`,
 		},
 		{

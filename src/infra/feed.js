@@ -108,9 +108,7 @@ const feed = {
 					fields {
 						id
 					}
-					fluid(maxWidth: 800, srcSetBreakpoints: [800], jpegQuality: 60) {
-						src
-					}
+					gatsbyImageData(layout: CONSTRAINED width: 800 jpgOptions: { quality: 60 })
 				}
 			}
 			snippets: allSnippet {
@@ -223,8 +221,8 @@ const insertContentMedia = (content, contentImages, site) =>
 		.replace(/<contentvideo[^>]*slug="([^"]*)"[^>]*>\n*<\/contentvideo>/g, replaceContentVideo)
 
 const replaceContentImage = (contentImages, site) => (tag, slug) => {
-	const imageUrl = contentImages.nodes.find(img => img.fields.id === slug).fluid.src
-	return `<img src="${site.siteMetadata.siteUrl + imageUrl}">`
+	const url = contentImages.nodes.find(image => image.fields.id === slug).gatsbyImageData.images.fallback.src
+	return `<img src="${site.siteMetadata.siteUrl + url}">`
 }
 
 const replaceContentVideo = (tag, slug) => {
