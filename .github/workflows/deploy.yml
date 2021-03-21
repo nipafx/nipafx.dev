@@ -24,7 +24,9 @@ jobs:
             node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
       - name: install dependencies
-        run: npm install
+        # re `--legacy-peer-deps`, see
+        # https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#updating-community-plugins
+        run: npm --legacy-peer-deps install
       - name: build with Gatsby
         run: npx gatsby build
       - name: deploy to Netlify

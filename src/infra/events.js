@@ -1,3 +1,5 @@
+// uses `require` instead of `import` because it's called during RSS generation,
+// which happens outside of ES modules
 const { DateTime } = require("luxon")
 
 const events = require("../../content/meta/events.json")

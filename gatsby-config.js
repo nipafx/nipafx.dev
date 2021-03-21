@@ -155,14 +155,6 @@ module.exports = {
 			resolve: `gatsby-transformer-json`,
 		},
 		{
-			resolve: `gatsby-plugin-favicon`,
-			options: {
-				logo: "./src/images/favicon.png",
-				background: "#262429",
-				theme_color: "#69ea7d",
-			},
-		},
-		{
 			resolve: "gatsby-plugin-react-svg",
 			options: {
 				rule: {
@@ -295,9 +287,9 @@ module.exports = {
 				short_name: `nipafx.dev`,
 				description: `Website of Nicolai (aka nipafx), a Java enthusiast with a passion for learning and sharing, online and offline`,
 				start_url: `/`,
+				icon: "src/images/favicon.png",
 				background_color: `#262429`,
 				theme_color: `#69ea7d`,
-				// `icons` set by gatsby-plugin-favicon
 				display: `minimal-ui`,
 				categories: [`software`, `development`, `programming`, `java`],
 				lang: `en-US`,
