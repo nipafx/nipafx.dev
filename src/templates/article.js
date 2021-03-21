@@ -6,7 +6,7 @@ import { detectSeries, detectSource, processTableOfContents } from "../infra/stu
 import SiteLayout from "../layout/site"
 import ArticleLayout from "../layout/article"
 
-export default ({ data }) => {
+const ArticleTemplate = ({ data }) => {
 	const article = {
 		title: data.article.title,
 		slug: data.article.slug,
@@ -72,3 +72,5 @@ export const query = graphql`
 		}
 	}
 `
+
+export default ArticleTemplate

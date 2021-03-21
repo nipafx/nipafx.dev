@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import SiteLayout from "../layout/site"
 import TalkLayout from "../layout/talk"
 
-export default ({ data }) => {
+const TalkTemplate = ({ data }) => {
 	const talk = {
 		title: data.talk.title,
 		slug: data.talk.slug,
@@ -64,3 +64,5 @@ export const query = graphql`
 		}
 	}
 `
+
+export default TalkTemplate

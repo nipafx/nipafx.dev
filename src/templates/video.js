@@ -8,7 +8,7 @@ import { detectSource, processTableOfContents } from "../infra/stubs"
 
 import videoData from "../../content/meta/videos.json"
 
-export default ({ data }) => {
+const VideoTemplate = ({ data }) => {
 	const video = {
 		title: data.video.title,
 		slug: data.video.slug,
@@ -67,3 +67,5 @@ export const query = graphql`
 		}
 	}
 `
+
+export default VideoTemplate

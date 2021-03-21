@@ -6,7 +6,7 @@ import { processTableOfContents } from "../infra/stubs"
 import SiteLayout from "../layout/site"
 import PageLayout from "../layout/page"
 
-export default ({ data }) => {
+const PageTemplate = ({ data }) => {
 	const page = {
 		title: data.page.title,
 		slug: data.page.slug,
@@ -55,3 +55,5 @@ export const query = graphql`
 		}
 	}
 `
+
+export default PageTemplate

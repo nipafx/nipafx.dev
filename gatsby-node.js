@@ -653,7 +653,7 @@ createArticlePages = (graphql, createPage) => {
 }
 
 createChannelPages = (graphql, createPage) => {
-	const pageTemplate = path.resolve(`./src/templates/channel.js`)
+	const channelTemplate = path.resolve(`./src/templates/channel.js`)
 
 	return graphql(`
 		{
@@ -668,7 +668,7 @@ createChannelPages = (graphql, createPage) => {
 		data.channels.nodes.forEach(channel => {
 			createPage({
 				path: channel.slug,
-				component: pageTemplate,
+				component: channelTemplate,
 				context: {
 					channel: channel.internalName,
 				},
@@ -774,7 +774,7 @@ createTalkPages = (graphql, createPage) => {
 }
 
 createVideoPages = (graphql, createPage) => {
-	const articleTemplate = path.resolve(`./src/templates/video.js`)
+	const videoTemplate = path.resolve(`./src/templates/video.js`)
 
 	return graphql(`
 		{
@@ -788,7 +788,7 @@ createVideoPages = (graphql, createPage) => {
 		data.videos.nodes.forEach(video => {
 			createPage({
 				path: video.slug,
-				component: articleTemplate,
+				component: videoTemplate,
 				context: {
 					slug: video.slug,
 				},

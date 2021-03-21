@@ -8,7 +8,7 @@ import PostListWrapper from "../components/postListWrapper"
 import SiteLayout from "../layout/site"
 import TagletLayout from "../layout/taglet"
 
-const TagPage = ({ pageContext, data }) => {
+const TagTemplate = ({ pageContext, data }) => {
 	const richTag = data.tags.nodes.length > 0 ? data.tags.nodes[0] : null
 	const simpleTag = pageContext.tag
 	const tag = richTag
@@ -60,4 +60,4 @@ export const pageQuery = graphql`
 	}
 `
 
-export default TagPage
+export default TagTemplate

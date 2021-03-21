@@ -6,7 +6,7 @@ import { processTableOfContents } from "../infra/stubs"
 import SiteLayout from "../layout/site"
 import TagletLayout from "../layout/taglet"
 
-const ChannelPage = ({ data }) => {
+const ChannelTemplate = ({ data }) => {
 	const channel = {
 		channel: data.channel.internalName,
 		title: data.channel.title,
@@ -53,4 +53,4 @@ export const query = graphql`
 	}
 `
 
-export default ChannelPage
+export default ChannelTemplate
