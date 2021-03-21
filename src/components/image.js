@@ -11,11 +11,11 @@ import * as style from "./image.module.css"
 import metaData from "../../images/images.json"
 
 const Image = ({ id, type, className }) => {
-	const image = getImageWithCredits(id, type)
+	const image = getImage(id, type)
 
 	return (
 		<div {...classNames(className, style.container)}>
-			<GatsbyImage image={image.data} alt=""/>
+			<GatsbyImage image={image.data} alt={image.alt}/>
 			{showCredits(type) && credits(image.credits, type)}
 		</div>
 	)
@@ -76,25 +76,30 @@ const typeClasses = type => {
 	}
 }
 
-const getImageWithCredits = (id, type) => {
-	const img = getImage(id, type)
+export const getImageMeta = (id, type) => {
+	const image = getImage(id, type)
+	return {
+		path: image.data.images.fallback.src,
+		alt: image.alt
+	}
+}
+
+const getImage = (id, type) => {
+	const img = getImageData(id, type)
 	const data = img.gatsbyImageData
-	const json = metaData.find(node => node.slug === id)
+	const json = metaData.find(image => image.slug === id)
+	const alt = json?.alt || ""
 	const credits = findCreditsInData(json)
 	return {
 		data,
+		alt,
 		credits,
 	}
 }
 
-export const getImagePath = (id, type) => {
-	const img = getImage(id, type)
-	return img.gatsbyImageData.images.fallback.src
-}
-
-const getImage = (id, type) => {
-	const imageData = getImageData()
-	const image = findImageInData(imageData, type, id)
+const getImageData = (id, type) => {
+	const imagesData = getImagesData()
+	const image = findImageInData(imagesData, type, id)
 	if (!image) {
 		const message = `Missing ${type} image: ${id}`
 		throw new Error(message)
@@ -102,7 +107,7 @@ const getImage = (id, type) => {
 	return image
 }
 
-const getImageData = () => {
+const getImagesData = () => {
 	return useStaticQuery(
 		graphql`
 			query {

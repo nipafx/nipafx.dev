@@ -3,7 +3,7 @@ import Helmet from "react-helmet"
 
 import { graphql, useStaticQuery } from "gatsby"
 
-import { getImagePath } from "./image"
+import { getImageMeta } from "./image"
 import { videoContentUrl } from "../infra/functions"
 
 import structuredDataJson from "../../content/meta/structured-data.json"
@@ -37,11 +37,9 @@ const Meta = ({title: titleUnescaped, slug, publicationDate, canonicalUrl, image
 	// (which Google treats as two different pages), the canonical URL
 	// has to be used to identify one of them as the... well, canonical URL
 	const pageCanonicalUrl = canonicalUrl || pageUrl
-	const pageImage =
-		image && image.slug
-			? site.siteUrl + getImagePath(image.slug, image.type)
-			: `${site.siteUrl}/nicolai.jpg`
-	const pageImageAlt = null
+	const pageImageMeta = image && image.slug ? getImageMeta(image.slug, image.type) : undefined
+	const pageImage = `${site.siteUrl}${pageImageMeta ? pageImageMeta.path : "/nicolai.jpg"}`
+	const pageImageAlt = pageImageMeta?.alt
 
 	if (pageTitle.length > 60) console.warn("Long title: ", slug)
 	if (pageDescription.length > 180) console.warn("Long description: ", slug)
@@ -74,6 +72,7 @@ const Meta = ({title: titleUnescaped, slug, publicationDate, canonicalUrl, image
 		"og:title": pageTitle,
 		"og:type": "article",
 		"og:image": pageImage,
+		"og:image:alt": pageImageAlt,
 		"og:url": pageUrl,
 		"og:description": pageDescription,
 		"og:site_name": siteName,
@@ -116,7 +115,7 @@ const Meta = ({title: titleUnescaped, slug, publicationDate, canonicalUrl, image
 			name: title,
 			description,
 			uploadDate: publicationDate,
-			thumbnailUrl: site.siteUrl + getImagePath(image.slug, image.type),
+			thumbnailUrl: site.siteUrl + getImageMeta(image.slug, image.type),
 			contentUrl: videoContentUrl(videoUrl),
 		}
 

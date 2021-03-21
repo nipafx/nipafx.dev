@@ -1,3 +1,4 @@
+const imageData = require("../../images/images.json")
 const videoData = require("../../content/meta/videos.json")
 
 // see "rss" module for documentation on the settings:
@@ -222,7 +223,8 @@ const insertContentMedia = (content, contentImages, site) =>
 
 const replaceContentImage = (contentImages, site) => (tag, slug) => {
 	const url = contentImages.nodes.find(image => image.fields.id === slug).gatsbyImageData.images.fallback.src
-	return `<img src="${site.siteMetadata.siteUrl + url}">`
+	const alt = imageData.find(image => image.slug === slug)?.alt
+	return `<img src="${site.siteMetadata.siteUrl + url}" alt=${alt}>`
 }
 
 const replaceContentVideo = (tag, slug) => {
