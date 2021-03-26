@@ -1621,7 +1621,9 @@
 					"time": "26.03.2021 1200 UTC",
 					"location": {
 						"text": "Online"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-after-eight/2021-03-26-devbash",
+					"video": "https://www.youtube.com/watch?v=K2R6tn0Dlxk"
 				}
 			]
 		},
