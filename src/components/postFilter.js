@@ -18,8 +18,8 @@ const PostFilter = () => {
 	return (
 		<Nav
 			title="Filter"
-			longHeaders={["channels", "tags", "bugs & features"]}
-			shortHeaders={[channelTitle, tagTitle, "bugs"]}
+			longHeaders={["channels", "tags"]}
+			shortHeaders={[channelTitle, tagTitle]}
 			open
 			backToTop
 		>
@@ -67,7 +67,6 @@ const PostFilter = () => {
 					/>
 				))}
 			</div>
-			<Feedback className={style.entries} />
 		</Nav>
 	)
 }

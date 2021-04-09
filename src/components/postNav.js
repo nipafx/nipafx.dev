@@ -25,7 +25,6 @@ const PostNav = ({ title, slug, channel, description, toc, canonical, series, so
 				"source code",
 				"table of contents",
 				"share & follow",
-				"bugs & features",
 			]}
 			shortHeaders={["org", "ser", "src", "toc", "s+f", "bug"]}
 			open={open}
@@ -36,7 +35,6 @@ const PostNav = ({ title, slug, channel, description, toc, canonical, series, so
 			{source && showSource(source, channel)}
 			{toc && showToc(toc)}
 			{showShare(title, slug, description)}
-			<Feedback className={style.entry} />
 		</Nav>
 	)
 }
