@@ -4,7 +4,7 @@ tags: [junit-pioneer, java-next, conversation]
 date: 2020-10-07
 slug: live
 style: streams
-description: "I regularly stream on Twitch - mostly live-coding sessions, but also the occasional game or a conversation with a guest - and would love to see you there"
+description: "I regularly stream [on Twitch](https://twitch.tv/nipafx) - mostly live-coding sessions, but also the occasional game or a conversation with a guest - and would love to see you there"
 ---
 
 ## Upcoming

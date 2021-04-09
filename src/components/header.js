@@ -37,9 +37,9 @@ export const IndexHeader = () => (
 		<span>You. Me. Java.</span>
 		{null}
 		<span>
-			Nice of you to stop by. I'm Nicolai (aka nipafx), a Java enthusiast with a passion for
-			learning and sharing, online and offline. If you want to sharpen your Java skills,
-			you've come to the right place.
+			Nice of you to stop by. I'm nipafx, but you can call me Nicolai 😉, a Java enthusiast with
+			a passion for learning and sharing, online and offline. If you want to sharpen your Java
+			skills, you've come to the right place.
 		</span>
 	</Header>
 )

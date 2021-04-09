@@ -3,49 +3,132 @@ title: "About Nicolai Parlog"
 tags: [personal]
 date: 2020-10-03
 slug: nicolai-parlog
-description: "The site is hot from the oven and this part is still under construction..."
+description: "I'm nipafx, but you can call me Nicolai 😉, a Java enthusiast with a passion for learning and sharing. I'm a Java Developer Advocate at Oracle and organizer of Accento."
 searchKeywords: "Nicolai Parlog"
 ---
 
-There should be something here very soon - be sure to check back!
+I tend to talk a lot about Java and all those words must go somewhere.
 
-<!-- TODO -->
+<contentimage slug="nicolai" options="sidebar"></contentimage>
+
+Words as ones and zeros:
+
+* [blog posts](channel:articles)
+* [regular newsletter](news)
+* occasional article on sites like [InfoQ](https://www.infoq.com/profile/Nicolai-Parlog/) and [SitePoint](https://www.sitepoint.com/author/nicolaip/)
+
+Words on dead trees:
+
+* [_The Java Module System_](https://www.manning.com/books/the-java-module-system?a_aid=nipa&a_bid=869915cb)
+* three out of [97 Things Every Java Programmer Should Know](https://www.oreilly.com/library/view/97-things-every/9781491952689/)
+* occasional article in magazines like [Heise's iX Developer](https://www.heise.de/ix/)
+
+Words on camera:
+
+* [YouTube videos](channel:videos)
+* [Twitch live streams](live)
+
+Words in real life:
+
+* [talks at JUGs and conferences](talks) ([slides](https://slides.nipafx.dev/))
+* [Accento - a Java/JS/Ops conference](https://accento.dev)
+
+Words as code:
+
+* [demo repositories](demos)
+* [JUnit Pioneer](https://junit-pioneer.org)
+
+If you want to get in touch, see [here](contact).
 
 <!--
+## English - short
 
-I'm Nicolai (aka nipafx), a Java enthusiast with a passion for learning and sharing, online and offline.
+Nicolai is a Java enthusiast with a passion for learning and sharing. He's a Java Developer Advocate at Oracle and organizer of [Accento]. For more, see [nipafx.dev].
 
-Hi. 👋
-(I'd love to follow that up with "nice to meet you", but we're note quite there yet.
-If you want to change that, I'm all up for it, so feel free [to get in touch](contact).)
+[Accento]: https://accento.dev
+[nipafx.dev]: https://nipafx.dev
 
-Hi, nice to almost-meet you! 👋
-(Feel free [to get in touch](contact) to compelte the handshake.)
-my name is Nicolai Parlog, but online I go by nipafx.
-I'm the author of this site, [_The Java Module System_ (Manning, 2019)](https://www.manning.com/books/the-java-module-system?a_aid=nipa&a_bid=869915cb), as well as many articles for publications like [The Java Magazine](TODO), [InfoQ](TODO), TODO, and more.
+## English - normal
 
+Nicolai (aka nipafx) is a Java enthusiast focused on language features and core APIs with a passion for learning and sharing - in articles, newsletters, and books; in tweets, videos, and streams; in demo repos and at conferences - more on all of that on [nipafx.dev]. He's a Java Developer Advocate at Oracle and organizer of [Accento]. That aside, he's best known for his haircut.
 
+[Accento]: https://accento.dev
+[nipafx.dev]: https://nipafx.dev
 
-For years now, Java has been my passion and it's still going strong.
+## Deutsch - normal
 
---
+Nicolai (aka nipafx) ist ein Java-Enthusiast mit Fokus auf Sprachfeatures und APIs, der leidenschaftlich gerne lernt und lehrt. Das macht er in Blog Posts, Newslettern und Büchern; in Tweets, Videos und Streams; in Demo Repositories und auf Konferenzen - mehr dazu auf [nipafx.dev]. Er ist Java Developer Advocate bei Oracle und Organisator von [Accento]. Davon abgesehen kennt man ihn für seine Frisur.
 
-Hi, nice to almost-meet you! 👋
-My name is Nicolai Parlog, but online I go by nipafx.
-I'm the author of this site, [_The Java Module System_ (Manning, 2019)](https://www.manning.com/books/the-java-module-system?a_aid=nipa&a_bid=869915cb), as well as many articles for publications like [The Java Magazine](TODO), [InfoQ](TODO), TODO, and more.
+[Accento]: https://accento.dev
+[nipafx.dev]: https://nipafx.dev
 -->
 
+## Random Musings On The Past
 
+### Java and I
+
+Java and I first met in highschool at the turn of the century (way to make yourself feel old, Nicolai), but I gotta admit, it wasn't exactly love at first sight.
+All of that indirection, for what?!
+While studying computer science and mathematics at [TU Dortmund](https://www.tu-dortmund.de/en/) (2004-2010), we got to know and understand one another a bit better.
+
+But it wasn't until I started using it every day at work at [Fraunhofer ISI](https://www.isi.fraunhofer.de/en.html) (2011-2014) that we really hit it off!
+We spent so much time together, my significant other started to get jealous.
+After leaving the institute for [Disy Informationssysteme GmbH](https://www.disy.net/en/) (2014-2016), my love to Java spilled over into the public.
+
+It all began with the blog in 2014 and from there snowballed to conferences, books, YouTube and Twitch - all the things I mentioned above.
+For a few years, I was the editor of [Sitepoint's Java channel](https://www.sitepoint.com/java/), a freelancing developer and author, and an independent trainer.
+In 2019, I became [Java Champion](https://apexapps.oracle.com/pls/apex/f?p=119297:3::::::).
+
+But the cherry on the ice cream sundae, something I would never have thought, is that seven years later I'd be working at Java's source as a developer advocate for Oracle.
+
+### Why nipafx?
+
+I occasionally get asked why nipa_fx_, is it the same fx as in JavaFX?
+Capitalization aside, yes. 😊
+If you find that weird, I hear you, but it was pretty much an accident.
+Here's what happened.
+
+Back in 2014, I dabbled with JavaFX.
+I created a few controls and some helper methods before eventually learning about [ControlsFX](https://github.com/controlsfx/controlsfx) (same FX).
+I contributed [a control](https://github.com/controlsfx/controlsfx/wiki/ControlsFX-Features#snapshotview) to the project and took inspiration from its name when starting a project for the helper methods.
+I thought CodeFX (same FX) would make a nice companion, so I got the domain codefx.org and registered it with Maven Central.
+
+At about the same time, I decided to give blogging a shot.
+Need a name and domain for that as well.
+Being all out of ideas, I decided on a switcharoo:
+
+* use codefx.org for the blog
+* rename still unpublished library to LibFX (same FX)
+* use `org.codefx.libfx` as group ID
+
+Come October (still 2014), I got on Twitter and needed a name for _that_ as well.
+My first choice, @CodeFX, was taken.
+@NicolaiParlog is way too long, @nicolai was taken and so were @nipa and all reasonable derivations, so what to do?!
+Once again invited to be creative, I wasn't and picked _nipafx_ (same FX).
+
+<contentimage slug="creativity-not-today" options="sidebar"></contentimage>
+
+To me, that was just a user handle and I never thought of it as even a nickname until I started to meet people at JUGs and conferences who knew me from Twitter and thought of me primarily as nipafx.
+A few more years down the road... now I _am_ nipafx.
+(But you can call me Nicolai. 😁)
+
+### What Happened To CodeFX?
+
+So what happened to CodeFX?
+It was too good a name.
+You might be thinking that's an upside, but that's only true for the first person to use it.
+Everybody else struggles to get this user name on the platforms they want to use.
+
+My blog was _codefx.org_, on Twitter I was _nipafx_, on Google+ (remember that?) I was _NicolaiParlog_, on YouTube I managed to get _codefx_ as vanity URL, but on GitHub I was _nicolaiparlog_ with _CodeFX-org_ as an organization (why both?!).
+On Twitch _codefx_ was taken as well, so I used _nipafx_.
+What a mess!
+
+Then, in 2019, lightning struck (figuratively) when I watched [this video by Ben Claremont](https://www.youtube.com/watch?v=YVeKtq6QJKk).
+I realized that there's no reason to put an artificial entity between you and me and that CodeFX would have to die.
+More details in [this newsletter](https://medium.com/nipafx-news/late-hello-to-2019-3de73659b061#cb9d) from back then but long story short:
+Now it's _nipafx_ everywhere.
 
 <!--
-I’m a thirty year old boy, as the narrator would put it, who has found his passion in software development. I constantly read, think and write about it, code for a living as well as for fun, and am always thinking about ways to improve skills and workflows – mine as well as those of the people sharing their time with me.
-
-Initially, I considered this whole blogging thing a hobby, aimed at improving my knowledge and giving back to the great community which enabled me to even call myself a developer (as opposed to just some guy hacking away at his keyboard). But after about a year and a half it turned into much more. Researching topics that really interested me, I inadvertently acquired knowledge that others seek.
-
-<contentimage slug="nicolai-parlog" options="sidebar"></contentimage>
-
-This enabled me to speak at conferences and writing became a (semi-)professional activity. It also gave me the chance to diversify my work life! If you need someone to write, speak, teach, or consult about bleeding edge topics like Project Jigsaw, Java 9, JUnit 5, Clean Comments, or Java in general, you should ping me – I am for hire.
-
 ## Bio
 
 I was born in Dortmund, Germany, where I studied mathematics and computer science. In November 2010 I finished the latter with a focus on theoretical aspects; my thesis was called Linear Temporal Logics Over Data Strings (and I assume I am one of three people who actually read it).
@@ -88,14 +171,11 @@ Then there is JDeps Mvn, a Maven plugin running JDeps on the compiled classes an
 
 Last but not least, I’m a founding member of Do-FOSS, an initiative which advances the use of Free and Open Source Software in the city of Dortmund.
 
-## Contact
+### Blogging
 
-You can reach me via mail or contact me on Twitter or Google+.
+Initially, I considered this whole blogging thing a hobby, aimed at improving my knowledge and giving back to the great community which enabled me to even call myself a developer (as opposed to just some guy hacking away at his keyboard). But after about a year and a half it turned into much more. Researching topics that really interested me, I inadvertently acquired knowledge that others seek.
 
-Some jurisdictions require me to list a postal address, so here goes the last shred of anonymity:
+<contentimage slug="nicolai-parlog" options="sidebar"></contentimage>
 
-Nicolai Parlog
-Werderstraße 96
-76137 Karlsruhe
-Germany
+This enabled me to speak at conferences and writing became a (semi-)professional activity. It also gave me the chance to diversify my work life! If you need someone to write, speak, teach, or consult about bleeding edge topics like Project Jigsaw, Java 9, JUnit 5, Clean Comments, or Java in general, you should ping me – I am for hire.
 -->
