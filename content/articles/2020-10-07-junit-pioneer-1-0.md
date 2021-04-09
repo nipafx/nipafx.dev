@@ -1,6 +1,6 @@
 ---
 title: "JUnit Pioneer 1.0"
-tags: [junit-5, testing]
+tags: [junit-pioneer, junit-5, testing]
 date: 2020-10-07
 slug: junit-pioneer-1-0-0
 description: "Yesterday we released JUnit Pioneer 1.0 🥳 - here's a quick rundown of its features"

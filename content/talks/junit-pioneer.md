@@ -1,7 +1,7 @@
 ---
 title: "To Jupiter And Beyond - On An Exploratory Mission With JUnit Pioneer"
 # subtitle:
-tags: [junit-5]
+tags: [junit-pioneer, junit-5, community, documentation, tools]
 date: 2021-03-18
 slug: talk-junit-pioneer
 description: "JUnit Pioneer gathers JUnit 5 extensions. This talk discusses the technical aspects, but also the mission, dev practices, automatic releases, and what Twitch has to do with all of this."
