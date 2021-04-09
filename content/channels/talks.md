@@ -3,7 +3,7 @@ title: "Talks"
 singularName: "talk"
 pluralName: "talks"
 slug: "talks"
-description: "One of the best ways to share my passion about Java is giving a talk - be it at a local meetup, an international conference, in-house at a company, or (nowadays) remotely"
+description: "One of the best ways to share my passion about Java is giving a talk - be it at a local meetup, an international conference, anywhere in between, and (nowadays) remotely. Here's a list of my talks."
 featuredImage: talks-jokerconf-2018
 ---
 
@@ -25,6 +25,11 @@ Looking into the future, these are the next two planned presentations - for more
 
 ## Events
 
+From small meetups at local communities all the way to large conferences, I love speaking about Java (or the few other topics I have something to say about).
+If you're organizing one of these events, please [hit me up](/contact).
+In most cases, you don't need to worry about travel expenses - Big O will cover that.
+
+<!--
 ### Community Meetings
 
 Local communities like Java User Groups are the backbone of the Java community and presenting there before chit-chatting about Java over snacks and drinks is always great fun.
@@ -52,3 +57,4 @@ Travel expenses are extra, but can be reduced by other activities in the vicinit
 ### Remote
 
 Travel expenses aside, everything above holds the same for remote talks.
+-->
