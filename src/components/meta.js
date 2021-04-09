@@ -28,8 +28,8 @@ const Meta = ({title: titleUnescaped, slug, publicationDate, canonicalUrl, image
 	const description = descriptionUnescaped?.replace(/<\/?code>/g, "")
 
 	const site = data.site.siteMetadata
-	const siteName = `${site.title} - ${site.description}`
-	const pageTitle = title ? `${title} - ${site.title}` : siteName
+	const siteName = `${site.title} // ${site.description}`
+	const pageTitle = title ? `${title} // ${site.title}` : siteName
 	const pageDescription = description || site.description
 	// trailing slash is the default URL
 	const pageUrl = slug ? `${site.siteUrl}/${slug}/` : site.siteUrl
