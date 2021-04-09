@@ -217,6 +217,12 @@
 			"url": "https://www.youtube.com/watch?v=4zP_5vrFg1w",
 			"title": "Java 16 Rundown, First Of Java 17 - Inside Java Newscast #1",
 			"thumbnail": "inside-java-newscast-1"
+		},
+		{
+			"slug": "inside-java-newscast-2",
+			"url": "https://www.youtube.com/watch?v=yQqBqix7yTA",
+			"title": "Vector API, Record Serialization, And Java 17 Release Schedule - Inside Java Newscast #2",
+			"thumbnail": "inside-java-newscast-2"
 		}
 	]
 }
