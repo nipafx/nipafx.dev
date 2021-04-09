@@ -207,6 +207,12 @@
 			"border": true
 		},
 		{
+			"slug": "oleg-learns-records",
+			"url": "https://www.youtube.com/watch?v=nja_qwMunCA",
+			"title": "Oleg learns Java past 8 & 11: Records (JDK16)",
+			"thumbnail": "oleg-learns-records"
+		},
+		{
 			"slug": "inside-java-newscast-1",
 			"url": "https://www.youtube.com/watch?v=4zP_5vrFg1w",
 			"title": "Java 16 Rundown, First Of Java 17 - Inside Java Newscast #1",
