@@ -7,6 +7,7 @@ description: "In this talk, I introduce the Java language features, new/updated 
 searchKeywords: "java 15"
 featuredImage: java-16
 slides: https://slides.nipafx.dev/java-x
+videoSlug: java-16-jlove-2020
 repo: java-x-demo
 ---
 

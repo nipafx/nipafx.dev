@@ -223,6 +223,12 @@
 			"url": "https://www.youtube.com/watch?v=yQqBqix7yTA",
 			"title": "Vector API, Record Serialization, And Java 17 Release Schedule - Inside Java Newscast #2",
 			"thumbnail": "inside-java-newscast-2"
+		},
+		{
+			"slug": "java-16-jlove-2020",
+			"url": "https://www.youtube.com/watch?v=IdXtZROB-e4",
+			"title": "Java 16 Is Coming!",
+			"thumbnail": "java-16-jlove-2020"
 		}
 	]
 }
