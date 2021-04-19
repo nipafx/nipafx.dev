@@ -235,6 +235,12 @@
 			"url": "https://www.youtube.com/watch?v=9rF67IK3asU",
 			"title": "Java Generics II - Bounded Type Parameters",
 			"thumbnail": "generics-2"
+		},
+		{
+			"slug": "generics-3",
+			"url": "https://www.youtube.com/watch?v=HHKRo_UkHW0",
+			"title": "Java Generics III - Wildcards",
+			"thumbnail": "generics-3"
 		}
 	]
 }
