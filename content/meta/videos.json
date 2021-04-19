@@ -229,6 +229,12 @@
 			"url": "https://www.youtube.com/watch?v=IdXtZROB-e4",
 			"title": "Java 16 Is Coming!",
 			"thumbnail": "java-16-jlove-2020"
+		},
+		{
+			"slug": "generics-2",
+			"url": "https://www.youtube.com/watch?v=9rF67IK3asU",
+			"title": "Java Generics II - Bounded Type Parameters",
+			"thumbnail": "generics-2"
 		}
 	]
 }
