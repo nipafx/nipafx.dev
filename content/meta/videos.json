@@ -241,6 +241,12 @@
 			"url": "https://www.youtube.com/watch?v=HHKRo_UkHW0",
 			"title": "Java Generics III - Wildcards",
 			"thumbnail": "generics-3"
+		},
+		{
+			"slug": "inside-java-newscast-3",
+			"url": "https://www.youtube.com/watch?v=T7-4I_pUlpw",
+			"title": "Quicker Java and JDK 16 compatibility - Inside Java Newscast #3",
+			"thumbnail": "inside-java-newscast-3"
 		}
 	]
 }
