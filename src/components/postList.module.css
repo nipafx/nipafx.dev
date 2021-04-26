@@ -6,7 +6,7 @@
 }
 
 .card {
-	height: 240px;
+	height: 220px;
 	opacity: 1;
 	transition: opacity var(--transition-duration);
 }
@@ -27,10 +27,10 @@
 	/* Make the first not-.removed .card larger using this one awesome trick: https://stackoverflow.com/a/8539107/2525313 */
 	:global(.highlight-first-post-card) .card:not(.removed) {
 		grid-column: 1 / span 2;
-		height: 480px;
+		height: 450px;
 	}
 	:global(.highlight-first-post-card) .card:not(.removed) ~ .card:not(.removed) {
 		grid-column: unset;
-		height: 240px;
+		height: 220px;
 	}
 }
