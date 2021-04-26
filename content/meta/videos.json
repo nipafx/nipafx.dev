@@ -234,13 +234,15 @@
 			"slug": "generics-2",
 			"url": "https://www.youtube.com/watch?v=9rF67IK3asU",
 			"title": "Java Generics II - Bounded Type Parameters",
-			"thumbnail": "generics-2"
+			"thumbnail": "generics-2",
+			"border": true
 		},
 		{
 			"slug": "generics-3",
 			"url": "https://www.youtube.com/watch?v=HHKRo_UkHW0",
 			"title": "Java Generics III - Wildcards",
-			"thumbnail": "generics-3"
+			"thumbnail": "generics-3",
+			"border": true
 		},
 		{
 			"slug": "inside-java-newscast-3",
@@ -252,7 +254,8 @@
 			"slug": "junit-pioneer-exploratory",
 			"url": "https://www.youtube.com/watch",
 			"title": "JUnit Pioneer - An Exploratory Mission to Jupiter And Beyond",
-			"thumbnail": "junit-pioneer-exploratory"
+			"thumbnail": "junit-pioneer-exploratory",
+			"border": true
 		}
 	]
 }
