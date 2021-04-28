@@ -2609,5 +2609,22 @@
 	{
 		"slug": "creativity-not-today",
 		"alt": "Game of Thrones Meme; Syrio Forel says to Aria 'What do we say to being creative?' She replies 'Not today'"
+	},
+	{
+		"slug": "just-smoke",
+		"alt": "Swirling bright smoke on non-descript black background",
+		"credits": {
+			"author": {
+				"name": "Geert Pieters",
+				"url": "https://unsplash.com/@shotsbywolf"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/A2cHC7Sfh9w"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
