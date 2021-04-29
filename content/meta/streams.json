@@ -554,6 +554,41 @@
 			"time": "27.04.2021 1800",
 			"title": "Extending ModiTect // Gunnar Morling",
 			"description": "We'll continue our efforts to teach Moditect the creation of application class-path images"
+		},
+		{
+			"time": "04.05.2021 1700",
+			"title": "To Jupiter and Beyond",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "09.05.2021 0700",
+			"title": "nipafx.dev // GatsbyJS",
+			"description": "Polishing Nicolai's website"
+		},
+		{
+			"time": "11.05.2021 1700",
+			"title": "Java Ecosystem Map",
+			"description": "I want to create a map of the Java ecosystem, but I'm not sure yet, what that's gonna look like. Let's explore the idea together!"
+		},
+		{
+			"time": "18.05.2021 1700",
+			"title": "To Jupiter and Beyond",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "25.05.2021 1700",
+			"title": "Extending ModiTect // Gunnar Morling",
+			"description": "We'll continue our efforts to teach Moditect the creation of application class-path images"
+		},
+		{
+			"time": "29.06.2021 1700",
+			"title": "Gunnar Morling",
+			"description": "We had so much fun with Moditect, we're gonna keep streaming together"
+		},
+		{
+			"time": "27.07.2021 1700",
+			"title": "Gunnar Morling",
+			"description": "We had so much fun with Moditect, we're gonna keep streaming together"
 		}
 	]
 }
