@@ -34,13 +34,33 @@
 			}
 		},
 		{
+			"time": "28.04.2021 1700 Europe/Berlin",
+			"title": "CyberLand Next Generation",
+			"description": "",
+			"url": "https://cyberland.ijug.eu/2021-04-next-generation/",
+			"location": {
+				"type": "virtual",
+				"text": "more info"
+			}
+		},
+		{
+			"time": "05.05.2021 1215 America/Detroit",
+			"title": "AMA with Brian Goetz",
+			"description": "Interested in where Java is going, or the motivation for some of its past choices? Brian Goetz, who lead the evolution of the Java Language, joined by guest facilitator Nicolai Parlog, is here to answer your questions!",
+			"url": "https://2021.phillyemergingtech.com/talks/ama-with-brian-goetz-java-language-architect-at-oracle/",
+			"location": {
+				"type": "virtual",
+				"text": "more info"
+			}
+		},
+		{
 			"time": "29.05.2021 0900 Europe/Paris",
 			"title": "Hack.Commit.Push",
 			"description": "Helping you to help us. Join if you want to hack on JUnit Pioneer and we'll support you all the way from learning about Jupiter's extension API to merging your PR.",
-			"url": "https://hack-commit-pu.sh/",
+			"url": "https://paris2021.hack-commit-pu.sh/",
 			"location": {
 				"type": "virtual",
-				"text": "more about hack-commit-pu.sh"
+				"text": "more info"
 			}
 		},
 		{
