@@ -8,7 +8,7 @@ description: "JUnit Pioneer gathers JUnit 5 extensions. This talk discusses the 
 searchKeywords: "junit 5 extensions"
 featuredImage: junit-pioneer-helmet
 slides: https://slides.nipafx.dev/junit-pioneer
-# videoSlug:
+videoSlug: junit-pioneer-exploratory
 ---
 
 JUnit is a huge success and [JUnit 5](https://junit.org/junit5) is an amazing overhaul of a tried-and-true formula.
