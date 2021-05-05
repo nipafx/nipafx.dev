@@ -2626,5 +2626,22 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "record-semantics",
+		"alt": "Crystal pyramid shot in studio with colored flashes",
+		"credits": {
+			"author": {
+				"name": "Michael Dziedzic",
+				"url": "https://unsplash.com/@lazycreekimages"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/dvHkp6FzfIM"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
