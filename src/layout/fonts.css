@@ -115,3 +115,14 @@ code {
 pre > code {
 	font-size: var(--small-font-size);
 }
+
+/* bold code doesn't look very good,
+   so "unbold" it in headers  */
+h1 code,
+h2 code,
+h3 code,
+.h3 code,
+h4 code,
+h5 code {
+	font-weight: normal;
+}
