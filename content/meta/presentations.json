@@ -1655,6 +1655,24 @@
 		},
 		{
 			"event": {
+				"name": "JUG Bonn",
+				"url": "https://www.meetup.com/JUG-Bonn/",
+				"image": "jug-bonn"
+			},
+			"presentations": [
+				{
+					"talk": "talk-just",
+					"title": "Why Don't They Just...?! The Deliberations Behind Evolving Java",
+					"announcement": "https://www.meetup.com/JUG-Bonn/events/277503278",
+					"time": "02.06.2021 1900 Europe/Berlin",
+					"location": {
+						"text": "Online"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Devtalks Romania",
 				"url": "https://www.devtalks.ro/",
 				"image": "devtalks-ro-2021"
@@ -1673,7 +1691,7 @@
 		{
 			"event": {
 				"name": "Developer Week '21",
-				"url": "https://www.devtalks.ro/",
+				"url": "https://www.developer-week.de",
 				"image": "developer-week-2021"
 			},
 			"presentations": [
@@ -1682,7 +1700,9 @@
 					"title": "Java After Eleven",
 					"programEntry": "https://www.developer-week.de/programm/#/talk/java-after-eleven",
 					"time": "30.06.2021 1030 Europe/Berlin",
-					"locationText": "Nürnberg Convention Center NCC Ost, Raum Helsinki"
+					"location": {
+						"text": "Online"
+					}
 				}
 			]
 		}
