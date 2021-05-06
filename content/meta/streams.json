@@ -581,6 +581,11 @@
 			"description": "We'll continue our efforts to teach Moditect the creation of application class-path images"
 		},
 		{
+			"time": "29.05.2021 0700",
+			"title": "Hack.Commit.Push",
+			"description": "Helping you help us. Join [Hack.Commit.Push](https://paris2021.hack-commit-pu.sh/) if you want to hack on JUnit Pioneer and we'll support you all the way from learning about Jupiter's extension API to merging your PR.<br/>I'll live-stream on Twitch."
+		},
+		{
 			"time": "29.06.2021 1700",
 			"title": "Gunnar Morling",
 			"description": "We had so much fun with Moditect, we're gonna keep streaming together"
