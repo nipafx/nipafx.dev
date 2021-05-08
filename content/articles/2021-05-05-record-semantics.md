@@ -314,6 +314,29 @@ Before you get your keyboards out to write angry comments (which you can't becau
 It's a different trade-off with different costs and benefits and if Kotlin's make more sense to you, that's fine with me.
 Don't @ me (as the kids say).
 
+<admonition type="note">
+
+Readers have been pointing out [Kotlin's `@JvmRecord`](https://kotlinlang.org/docs/jvm-records.html#declare-records-in-kotlin), some as a big gotcha: "See, data classes can be records, too - check mate" (I'm paraphrasing [but only barely](https://news.ycombinator.com/item?id=27078785)).
+If you had the same thought, I ask you to stop and mull it over for a second.
+What exactly does that get you?
+
+The data class has to abide by all record rules, which means it can't do more than records.
+But Kotlin still doesn't understand the concept of transparent tuples and can't do more with a `kotlin§@JvmRecord data class` than with a regular data class.
+So you have records' freedoms and data classes' guarantees - the worst of both worlds.
+
+Why does `@JvmRecord` exist, then?
+Just interoperability.
+As [the proposal](https://github.com/Kotlin/KEEP/blob/master/proposals/jvm-records.md) says:
+
+</admonition>
+
+<pullquote>There's not much use in declaring JVM records in Kotlin</pullquote>
+
+> There's not much use in declaring JVM records in Kotlin besides two use cases:
+>
+>* migrating an existing Java record to Kotlin and preserving its ABI;
+>* generating a record class attribute with record component info for a Kotlin class to be read later by a potential framework relying on Java reflection to introspect records.
+
 
 ## Reflection
 
