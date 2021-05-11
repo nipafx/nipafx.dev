@@ -67,7 +67,7 @@ These instructions, or rather abstractions of them, are defined as methods on `V
 The vector has an _element type_ `E`, which is the kind of data you want to work with.
 There's one type corresponding to each of the six numerical primitive types - you can see the need for Valhalla's primitive classes right there.
 
-TODO: https://www.youtube.com/watch?v=WBvTilbh8S0 (card)
+https://www.youtube.com/watch?v=WBvTilbh8S0 (card)
 
 Then there's the _shape_, which is the vector's size in bits.
 It can be 64 bits, 128 bits, and so forth.

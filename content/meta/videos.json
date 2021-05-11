@@ -256,6 +256,12 @@
 			"title": "JUnit Pioneer - An Exploratory Mission to Jupiter And Beyond",
 			"thumbnail": "junit-pioneer-exploratory",
 			"border": true
+		},
+		{
+			"slug": "inside-java-newscast-4",
+			"url": "https://www.youtube.com/watch?v=UYyf0uzOez0",
+			"title": "Five Secret Java API Tricks and Record Semantics - Inside Java Newscast #4",
+			"thumbnail": "inside-java-newscast-4"
 		}
 	]
 }
