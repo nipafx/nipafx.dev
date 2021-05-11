@@ -76,6 +76,64 @@ This works because `ifPresent` accepts a `Consumer`, which is what `downstream` 
 So the lambda takes the first argument that it receives (of type `Optional`) and calls a method on it (`ifPresent`) that accepts all the remaining lambda arguments (one of type `Consumer`).
 That's exactly what the `Type::method`-style method reference (where `method` is not static) was made for - hence `Optional::ifPresent`.
 
+### A Practical Example
+
+Now let's see a more practical example (thanks to [Jake](https://programmingideaswithjake.wordpress.com) for giving me a good idea for one 🙏).
+Say there's a data structure and the only option it offers to traverse it is with [a visitor](https://en.wikipedia.org/wiki/Visitor_pattern#Java_example):
+
+```java
+interface Structure<T> {
+
+	// implementation will traverse the structure
+	// and pass each element to the visitor
+	accept(StructureVisitor<T> visitor)
+
+}
+
+@FunctionalInterface
+interface StructureVisitor<T> {
+
+	visit(T element);
+
+}
+```
+
+If you now want to turn a `Stream<Structure<T>>` into a `Stream<T>`, `flatMap` is really unhandy.
+You'd need to write a method that turns a `Structure<T>` into a `Stream<T>`, which would probably mean creating a visitor that adds all visited elements to a collection and then exposes that.
+
+```java
+// `CollectingVisitor` implementation goes here
+
+Stream<Structure<T>> structures = // ...
+Stream<T> elements = structures.flatMap(structure -> {
+	StructureVisitor<T> visitor = new CollectingVisitor<>();
+	structure.accept(visitor);
+	return visitor.collectedElements.stream();
+});
+```
+
+Works, but not exactly elegant.
+Now let's see it with `mapMulti`:
+
+```java
+// no `CollectingVisitor` needed
+
+Stream<Structure<T>> structures = // ...
+Stream<T> elements = structures.mapMulti(
+	(structure, downstream) -> structure.accept(downstream::accept));
+```
+
+Much better.
+And it gets better yet if `StructureVisitor` extends `Consumer` or is outright replaced with it:
+
+```java
+Stream<Structure<T>> structures = // ...
+Stream<T> elements = structures.mapMulti(Structure::accept);
+```
+
+(All of that said, I find easy creation of streams important enough that I'd probably still create a method that accepts a `Structure<T>` and returns a `Stream<T>` - it would essentially be the body of the lambda above that gets passed to `flatMap`.
+And once I have that, I find `flatMap` the better choice because it has stronger semantics and is more well-known than `mapMulti`.)
+
 
 ## The Unfortunate Type Witness
 
