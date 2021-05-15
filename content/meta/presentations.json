@@ -1690,6 +1690,24 @@
 		},
 		{
 			"event": {
+				"name": "JUG Frankfurt",
+				"url": "https://jugf.github.io/",
+				"image": "jug-ffm"
+			},
+			"presentations": [
+				{
+					"talk": "talk-just",
+					"title": "Why Don't They Just...?! The Deliberations Behind Evolving Java",
+					"announcement": "https://jugf.github.io/posts/why-dont-they-just-evolving-java-16-06-2021/",
+					"time": "16.06.2021 1830 Europe/Berlin",
+					"location": {
+						"text": "Online"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Developer Week '21",
 				"url": "https://www.developer-week.de",
 				"image": "developer-week-2021"
