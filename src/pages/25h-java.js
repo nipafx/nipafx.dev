@@ -8,11 +8,11 @@ import SiteLayout from "../layout/site"
 
 import * as style from "./25h-java.module.css"
 
-const BuildModulesPage = () => {
+const Java25hPage = () => {
 	const { meta, header, content } = stub(`25h-java`)
 
 	return (
-		<SiteLayout className="article" meta={meta}>
+		<SiteLayout className="event" meta={meta}>
 			<PostLayout {...header}>
 				<PostContent {...content} />
 				<Schedule />
@@ -193,4 +193,4 @@ const time = (date, showUtc) => {
 	return date.getHours() + ":" + minutes + (showUtc ? " UTC" : "")
 }
 
-export default BuildModulesPage
+export default Java25hPage

@@ -1,7 +1,7 @@
 ---
 title: "25 Hours of Java"
 isPost: true
-channel: "articles"
+channel: "events"
 structuredDataType: "event"
 tags: [conversation, community]
 date: 2020-04-20
@@ -12,7 +12,8 @@ searchKeywords: "java 25 years"
 featuredImage: 25h-java
 ---
 
-Yes, 25 hours of Java! There will be technical deep dives, interviews, discussions, cake, code, more cake, and even more code!
+Yes, 25 hours of Java!
+There will be technical deep dives, interviews, discussions, cake, code, more cake, and even more code!
 Most importantly, it will be a lot of fun and I hope you join me on that fine Saturday in May.
 
 ## Coordinates
