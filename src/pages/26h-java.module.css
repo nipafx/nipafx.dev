@@ -1,0 +1,142 @@
+.schedule {
+	margin: 2em 0 0;
+	display: grid;
+	grid-gap: 20px;
+
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"overflow	"
+		"pioneer	"
+		"quarkus	"
+		"jbang		"
+		"pacman		"
+		"ama		"
+		"ron		"
+		"maurizio	"
+		"brian		"
+		"late		"
+		"billy		"
+		"ted		"
+		"closing	";
+}
+
+.entry {
+	display: flex;
+	flex-direction: column;
+
+	border: 1px solid var(--alt-color);
+	text-align: center;
+	padding: 10px 10px 0;
+}
+
+.nipafx {
+	--alt-color: var(--theme-green);
+}
+
+.sebi {
+	--alt-color: var(--theme-red);
+}
+
+.billy {
+	--alt-color: var(--theme-blue-light);
+}
+
+.ted {
+	--alt-color: var(--theme-orange);
+}
+
+.date {
+	font-family: var(--code-font);
+	color: var(--fg-color-shade-2);
+	margin: 0;
+	font-size: var(--small-font-size);
+}
+
+.date::before {
+	content: "// ";
+}
+
+.date::after {
+	content: " //";
+}
+
+.day::after {
+	content: "; ";
+}
+
+.start-time {
+	color: var(--alt-color);
+}
+
+.end-time::before {
+	content: " to ";
+}
+
+.topic::before {
+	content: none;
+}
+
+.topic {
+	margin: 0;
+}
+
+.description {
+	color: var(--fg-color-shade-2);
+	margin: 0;
+
+	flex-grow: 1;
+}
+
+.link {
+	align-self: flex-end;
+
+	font-family: var(--code-font);
+	text-decoration: none;
+	color: var(--alt-color);
+}
+
+.link:visited {
+	color: var(--alt-color);
+}
+
+.link:hover {
+	color: var(--fg-color);
+}
+
+@media all and (min-width: 600px) {
+	.schedule {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(13, minmax(2em, auto));
+		grid-template-areas:
+			"overflow	brian	"
+			"pioneer	late	"
+			"pioneer	billy	"
+			"pioneer	billy	"
+			"pioneer	billy	"
+			"pioneer	ted		"
+			"pioneer	ted		"
+			"quarkus	ted		"
+			"jbang		ted		"
+			"pacman		ted		"
+			"ama		closing	"
+			"ron		closing	"
+			"maurizio	closing	";
+	}
+}
+
+@media all and (min-width: 1000px) {
+	.schedule {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: repeat(9, minmax(2em, auto));
+		grid-template-areas:
+			"overflow	pacman		ted		"
+			"pioneer	ama			ted		"
+			"pioneer	ron			ted		"
+			"pioneer	maurizio	ted		"
+			"pioneer	brian	 	ted		"
+			"pioneer	late		closing	"
+			"pioneer	billy		closing	"
+			"quarkus	billy		closing	"
+			"jbang		billy		.		";
+	}
+}
