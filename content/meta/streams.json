@@ -591,6 +591,31 @@
 			"description": "Helping you help us. Join [Hack.Commit.Push](https://paris2021.hack-commit-pu.sh/) if you want to hack on JUnit Pioneer and we'll support you all the way from learning about Jupiter's extension API to merging your PR.<br/>I'll live-stream on Twitch."
 		},
 		{
+			"time": "01.06.2021 1700",
+			"title": "JUnit Pioneer - Annotation War",
+			"description": "Large team stream, trying to figure out how to best scan extension that relate to Before/AfterAll extensions"
+		},
+		{
+			"time": "08.06.2021 1700",
+			"title": "Java Ecosystem Map",
+			"description": "Trying to present a nice, snappy, interactive graph"
+		},
+		{
+			"time": "13.06.2021 0700",
+			"title": "nipafx.dev // GatsbyJS",
+			"description": "Polishing Nicolai's new website"
+		},
+		{
+			"time": "15.06.2021 1700",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "22.06.2021 1700",
+			"title": "T.B.D.",
+			"description": "Not sure whether I'll be able to stream that day, so I'll leave this here as a placeholder"
+		},
+		{
 			"time": "29.06.2021 1700",
 			"title": "Gunnar Morling",
 			"description": "We had so much fun with Moditect, we're gonna keep streaming together"
