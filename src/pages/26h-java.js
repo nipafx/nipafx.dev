@@ -117,7 +117,7 @@ const Schedule = () => (
 				new Date(2021, 4, 30, 5),
 				"ted",
 				"Remote Mob Registration",
-				"Ted will work on his _Remote Mob Registration System_, built with Java 16, Spring Boot 2.5, and a Thymeleaf-based front-end. t goes without saying that it was lovingly TDD'd."
+				"Ted will work on his _Remote Mob Registration System_, built with Java 16, Spring Boot 2.5, and a Thymeleaf-based front-end. It goes without saying that it was lovingly TDD'd."
 			)}
 			{entry(
 				"closing",
