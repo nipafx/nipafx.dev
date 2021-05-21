@@ -46,8 +46,18 @@
 		{
 			"time": "05.05.2021 1215 America/Detroit",
 			"title": "AMA with Brian Goetz",
-			"description": "Interested in where Java is going, or the motivation for some of its past choices? Brian Goetz, who lead the evolution of the Java Language, joined by guest facilitator Nicolai Parlog, is here to answer your questions!",
+			"description": "Interested in where Java is going, or the motivation for some of its past choices? Brian Goetz, who lead the evolution of the Java Language is here to answer your questions!",
 			"url": "https://2021.phillyemergingtech.com/talks/ama-with-brian-goetz-java-language-architect-at-oracle/",
+			"location": {
+				"type": "virtual",
+				"text": "more info"
+			}
+		},
+		{
+			"time": "03.06.2021 1605 Europe/Budapest",
+			"title": "AMA with Brian Goetz",
+			"description": "This is an opportunity to ask questions of Brian Goetz, Architect for the Java Language at Oracle, all your questions about the history, evolution, and future of Java!",
+			"url": "https://craft-conf.com/speaker/BrianGoetz",
 			"location": {
 				"type": "virtual",
 				"text": "more info"
