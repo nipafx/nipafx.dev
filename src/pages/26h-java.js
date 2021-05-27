@@ -100,16 +100,32 @@ const Schedule = () => (
 				new Date(2021, 4, 29, 20),
 				new Date(2021, 4, 29, 21),
 				"nipafx",
-				"T.B.D.",
-				"Not sure yet, but something about Java. Have an idea? [Get in touch!](contact)"
+				"Exploring Java 17",
+				"Java 17 is entering the home stretch - let's look over the list of targeted JEPs."
+			)}
+			{entry(
+				"pratik",
+				new Date(2021, 4, 29, 21),
+				new Date(2021, 4, 30, 22),
+				"billy",
+				"Pratik Patel // Java on Cloud",
+				"Pratik Patel is a technologist/futureist, former Lead Java Developer Advocate at IBM, Java Champion, and community organizer."
+			)}
+			{entry(
+				"josh",
+				new Date(2021, 4, 29, 22),
+				new Date(2021, 4, 30, 23),
+				"billy",
+				"Josh Long // Spring Native",
+				"Josh is a Spring Developer Advocate, Java Champion, author, podcaster, screencaster... just all the things and more."
 			)}
 			{entry(
 				"billy",
-				new Date(2021, 4, 29, 21),
+				new Date(2021, 4, 29, 23),
 				new Date(2021, 4, 30, 0),
 				"billy",
-				"Spring, Community, Coding",
-				"Billy will have Josh Long and Pratik Patel over to chat and will then do some live-coding."
+				"Java, Java, Java",
+				"Billy does some live-coding."
 			)}
 			{entry(
 				"ted",
@@ -120,12 +136,12 @@ const Schedule = () => (
 				"Ted will work on his _Remote Mob Registration System_, built with Java 16, Spring Boot 2.5, and a Thymeleaf-based front-end. It goes without saying that it was lovingly TDD'd."
 			)}
 			{entry(
-				"closing",
+				"just",
 				new Date(2021, 4, 30, 5),
 				new Date(2021, 4, 30, 8),
 				"nipafx",
-				"T.B.D.",
-				"Not sure yet, but something about Java. Have an idea? [Get in touch!](contact)"
+				"Why don't they just...?!",
+				"Nicolai needs to turn a bunch of blog posts and notes into [a talk](/talk-just) that he'll give just a few days later, so out of desperation, he works on it during the live stream. 🤦 It's a fun talk, though, about why Java doesn't have immutable collections, a truly monadic `Optional`, `?.` for null-safe member selection, and more."
 			)}
 		</div>
 	</div>

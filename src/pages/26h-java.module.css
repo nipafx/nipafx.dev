@@ -15,9 +15,11 @@
 		"maurizio	"
 		"brian		"
 		"late		"
+		"pratik		"
+		"josh		"
 		"billy		"
 		"ted		"
-		"closing	";
+		"just		";
 }
 
 .entry {
@@ -110,17 +112,17 @@
 		grid-template-areas:
 			"overflow	brian	"
 			"pioneer	late	"
-			"pioneer	billy	"
-			"pioneer	billy	"
+			"pioneer	pratik	"
+			"pioneer	josh	"
 			"pioneer	billy	"
 			"pioneer	ted		"
 			"pioneer	ted		"
 			"quarkus	ted		"
 			"jbang		ted		"
 			"pacman		ted		"
-			"ama		closing	"
-			"ron		closing	"
-			"maurizio	closing	";
+			"ama		just	"
+			"ron		just	"
+			"maurizio	just	";
 	}
 }
 
@@ -134,9 +136,9 @@
 			"pioneer	ron			ted		"
 			"pioneer	maurizio	ted		"
 			"pioneer	brian	 	ted		"
-			"pioneer	late		closing	"
-			"pioneer	billy		closing	"
-			"quarkus	billy		closing	"
+			"pioneer	late		just	"
+			"pioneer	pratik		just	"
+			"quarkus	josh		just	"
 			"jbang		billy		.		";
 	}
 }
