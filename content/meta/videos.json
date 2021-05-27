@@ -262,6 +262,12 @@
 			"url": "https://www.youtube.com/watch?v=UYyf0uzOez0",
 			"title": "Five Secret Java API Tricks and Record Semantics - Inside Java Newscast #4",
 			"thumbnail": "inside-java-newscast-4"
+		},
+		{
+			"slug": "inside-java-newscast-5",
+			"url": "https://www.youtube.com/watch?v=HLrptRxncGg",
+			"title": "Pattern Matching in Switches and Security Manager Deprecation - Inside Java Newscast #5",
+			"thumbnail": "inside-java-newscast-5"
 		}
 	]
 }
