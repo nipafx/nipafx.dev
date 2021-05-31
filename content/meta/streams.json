@@ -206,11 +206,6 @@
 			"description": "Working on PRs, issues, and maybe new extensions"
 		},
 		{
-			"time": "23.05.2020 0600",
-			"title": "25 Hours of Java",
-			"description": "Celebration of Java's 25th birthday with technical deep dives (Java 9-14, upcoming features, JUnit 5), guests (Brian Goetz, Trisha Gee, Venkat Subramaniam, and more), and cake. Details: https://bit.ly/25hJava"
-		},
-		{
 			"time": "26.05.2020 1700",
 			"title": "T'rowback Tuesday: Streams",
 			"description": "Recap, updates, deep dive, controversy - all about streams"

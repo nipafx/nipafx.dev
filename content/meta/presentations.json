@@ -1712,7 +1712,11 @@
 				{
 					"talk": "talk-just",
 					"title": "Why Don't They Just...?! The Deliberations Behind Evolving Java",
-					"time": "15.06.2021 0900 Europe/Zurich"
+					"programEntry": "https://voxxeddays.com/zurich/schedule/speaker-details/?id=3103",
+					"time": "15.06.2021 1235 Europe/Zurich",
+					"location": {
+						"text": "Online"
+					}
 				}
 			]
 		},

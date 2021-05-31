@@ -12,6 +12,16 @@
 			}
 		},
 		{
+			"time": "23.05.2020 0600 UTC",
+			"title": "25 Hours of Java",
+			"description": "Celebration of Java's 25th birthday with technical deep dives (Java 9-14, upcoming features, JUnit 5), guests (Brian Goetz, Trisha Gee, Venkat Subramaniam, and more), and cake. Details: https://bit.ly/25hJava",
+			"location": {
+				"type": "virtual",
+				"text": "on Twitch",
+				"info": "https://twitch.tv/nipafx"
+			}
+		},
+		{
 			"time": "15.12.2020 2000 Europe/Berlin",
 			"title": "Cyberland Late Night",
 			"description": "Hanging out, chatting about Java",
@@ -51,6 +61,16 @@
 			"location": {
 				"type": "virtual",
 				"text": "more info"
+			}
+		},
+		{
+			"time": "29.05.2021 0600 UTC",
+			"title": "26 Hours of Java",
+			"description": "Celebration of Java's 26th birthday with live programming, technical deep dives, and guests. Details: https://bit.ly/26h-java",
+			"location": {
+				"type": "virtual",
+				"text": "on Twitch",
+				"info": "https://twitch.tv/nipafx"
 			}
 		},
 		{
