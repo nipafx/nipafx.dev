@@ -1,5 +1,5 @@
 ---
-title: "Why Don't They Just...?! The Deliberations Behind Evolving Java"
+title: "Why Don't They Just... ?! The Deliberations Behind Evolving Java"
 tags: [streams, optional, records, collections]
 date: 2021-04-28
 slug: talk-just

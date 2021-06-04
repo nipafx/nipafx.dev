@@ -1663,7 +1663,8 @@
 				{
 					"talk": "talk-just",
 					"title": "Why Don't They Just...?! The Deliberations Behind Evolving Java",
-					"time": "02.06.2021 1600 Europe/Amsterdam"
+					"time": "02.06.2021 1545 Europe/Amsterdam",
+					"slides": "https://slides.nipafx.dev/just/2021-06-02-j-spring"
 				}
 			]
 		},
@@ -1679,9 +1680,7 @@
 					"title": "Why Don't They Just...?! The Deliberations Behind Evolving Java",
 					"announcement": "https://www.meetup.com/JUG-Bonn/events/277503278",
 					"time": "02.06.2021 1900 Europe/Berlin",
-					"location": {
-						"text": "Online"
-					}
+					"slides": "https://slides.nipafx.dev/just/2021-06-02-jug-bonn"
 				}
 			]
 		},
@@ -1750,6 +1749,24 @@
 					"title": "Java After Eleven",
 					"programEntry": "https://www.developer-week.de/programm/#/talk/java-after-eleven",
 					"time": "30.06.2021 1030 Europe/Berlin",
+					"location": {
+						"text": "Online"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Switzerland",
+				"url": "https://www.jug.ch/",
+				"image": "jug-ch"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-after-n",
+					"title": "Java After Eleven",
+					"announcement": "https://www.jug.ch/eventpreview.php?id=748",
+					"time": "14.07.2021 1800 Europe/Zurich",
 					"location": {
 						"text": "Online"
 					}
