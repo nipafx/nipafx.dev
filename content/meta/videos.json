@@ -268,6 +268,12 @@
 			"url": "https://www.youtube.com/watch?v=HLrptRxncGg",
 			"title": "Pattern Matching in Switches and Security Manager Deprecation - Inside Java Newscast #5",
 			"thumbnail": "inside-java-newscast-5"
+		},
+		{
+			"slug": "inside-java-newscast-6",
+			"url": "https://www.youtube.com/watch?v=Twwpk6vub1M",
+			"title": "Java 17: Features and Development - Inside Java Newscast #6",
+			"thumbnail": "inside-java-newscast-6"
 		}
 	]
 }
