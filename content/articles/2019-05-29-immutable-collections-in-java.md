@@ -69,7 +69,7 @@ ImmutableList<Agent> section4 = agents;
 section4.forEach(System.out::println);
 
 // now lets mutate `section4`
-agents.add(new Agent("Motoko");
+agents.add(new Agent("Motoko"));
 // prints "Motoko" - wait, how the fuck did she get in here?!
 section4.forEach(System.out::println);
 ```
