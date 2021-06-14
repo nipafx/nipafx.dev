@@ -10,12 +10,11 @@ videoSlug: java-16-jlove-2020
 repo: java-x-demo
 ---
 
-Many projects are still on Java 8, some already on 11 and yet, these days Java 17 gets released!
-Java's releases between 9 and 16 have a lot in stock - in this talk you'll learn about...
+Some projects are still on Java 8, many already on 11 and yet, these days Java 17 gets released!
+Java's recent releases have a lot in stock - in this talk you'll learn about...
 
-* new language features like sealed types, records, switch expressions, `var`, and more
-* new APIs like stack walking and the reactive HTTP/2 client
+* new language features like sealed types, pattern matching records, switch expressions, `var`, and more
 * the additions to existing APIs, like `Stream` and `Optional`
 * other niceties like multi-release JARs and performance improvements
 
-After this talk you will be prepared to get started with Java 16.
+After this talk you will be prepared to get started with Java 17.
