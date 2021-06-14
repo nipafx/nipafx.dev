@@ -274,6 +274,12 @@
 			"url": "https://www.youtube.com/watch?v=Twwpk6vub1M",
 			"title": "Java 17: Features and Development - Inside Java Newscast #6",
 			"thumbnail": "inside-java-newscast-6"
+		},
+		{
+			"slug": "ron-pressler-26h",
+			"url": "https://www.youtube.com/watch?v=KG24inClY2M",
+			"title": "The State of Project Loom with Ron Pressler",
+			"thumbnail": "ron-pressler-26h"
 		}
 	]
 }
