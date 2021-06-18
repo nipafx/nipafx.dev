@@ -11,7 +11,7 @@ inlineCodeLanguage: shell
 repo: jpms-monitor
 ---
 
-The Java Platform Module System (JPMS) brings modularization to Java and the JVM and it changes how we program in the large.
+Java's module system brings modularization to Java and the JVM and it changes how we program in the large.
 To get the most out of it, we need to know it well, and the first step is to learn the basics.
 In this tutorial I'll first show you a simple *Hello World* example and then we'll take an existing demo application and modularize it with Java 9.
 We will create module declarations (`module-info.java`) and use the module path to compile, package, and run the application - code first, explanations second, so you can cut to the chase.
@@ -25,7 +25,7 @@ All commands like `javac`, `jar`, and `java` refer to the Java 9 variants.
 Let's start with the simplest possible application, one that prints *Hello, modular World!* Here's the class:
 
 ```java
-package org.codefx.demo.jpms;
+package dev.nipafx.demo.modules;
 
 public class HelloModularWorld {
 
@@ -39,14 +39,14 @@ public class HelloModularWorld {
 To become a module, it needs a `module-info.java` in the project's root source directory:
 
 ```java
-module org.codefx.demo.jpms_hello_world {
+module dev.nipafx.demo.hello_modules {
 	// this module only needs types from the base module 'java.base';
 	// because every Java module needs 'java.base', it is not necessary
 	// to explicitly require it - I do it nonetheless for demo purposes
 	requires java.base;
 	// this export makes little sense for the application,
 	// but once again, I do this for demo purposes
-	exports org.codefx.demo.jpms;
+	exports dev.nipafx.demo.modules;
 }
 ```
 
@@ -61,12 +61,12 @@ $ javac
 	-d target/classes
 	${source-files}
 $ jar --create
-	--file target/jpms-hello-world.jar
-	--main-class org.codefx.demo.jpms.HelloModularWorld
+	--file target/hello-modules.jar
+	--main-class dev.nipafx.demo.modules.HelloModularWorld
 	-C target/classes .
 $ java
-	--module-path target/jpms-hello-world.jar
-	--module org.codefx.demo.jpms_hello_world
+	--module-path target/hello-modules.jar
+	--module dev.nipafx.demo.hello_modules
 ```
 
 Very similar to what we would have done for a non-modular application, except we're now using something called a "module path" and can define the project's main class (without a manifest).
@@ -74,7 +74,7 @@ Let's see how that works.
 
 ### Modules
 
-The basic building block of the JPMS are modules (surprise!).
+The basic building block of the module system are modules (surprise!).
 Like JARs, they are a container for types and resources; but unlike JARs, they have additional characteristics - these are the most fundamental ones:
 
 <pullquote>Modules are like JARs with additional characteristics</pullquote>
@@ -134,7 +134,7 @@ Conflicting or evolving names in particular cause trouble, so it is important th
 The best way to achieve that is the reverse-domain naming scheme that is already commonly used for packages:
 
 ```java
-module org.codefx.demo.jpms {
+module dev.nipafx.demo.modules {
 
 }
 ```
@@ -146,7 +146,7 @@ Another thing we missed in JARs was the ability to declare dependencies, but wit
 <pullquote>All dependencies have to be made explicit with `java§requires` directives</pullquote>
 
 Dependencies are declared with `java§requires` directives, which consist of the keyword itself followed by a module name.
-When scanning modules, the JPMS builds a *readability graph*, where modules are nodes and `java§requires` directives get turned into so-called *readability edges* - if module *org.codefx.demo.jpms* requires module *java.base*, then at runtime *org.codefx.demo.jpms* reads *java.base*.
+When scanning modules, the module system builds a *readability graph*, where modules are nodes and `java§requires` directives get turned into so-called *readability edges* - if module *dev.nipafx.demo.modules* requires module *java.base*, then at run time *dev.nipafx.demo.modules* reads *java.base*.
 
 The module system will throw an error if it cannot find a required module with the right name, which means compiling as well as launching an application will fail if modules are missing.
 This achieves *reliable configuration* one of [the goals of the module system](motivation-goals-project-jigsaw), but can be prohibitively strict - check my post on [optional dependencies](java-modules-optional-dependencies) to see a more lenient alternative.
@@ -156,7 +156,7 @@ Because it contains essential types like `java§Object`, all Java code needs it 
 Still, I do it in this case to show you a `java§requires` directive:
 
 ```java
-module org.codefx.demo.jpms {
+module dev.nipafx.demo.modules {
 	requires java.base;
 }
 ```
@@ -164,13 +164,13 @@ module org.codefx.demo.jpms {
 #### Exports And Accessibility
 
 A module lists the packages it exports.
-For code in one module (say *org.codefx.demo.jpms*) to access types in another (say `java§String` in *java.base*), the following *accessibility* rules must be fulfilled:
+For code in one module (say *dev.nipafx.demo.modules*) to access types in another (say `java§String` in *java.base*), the following *accessibility* rules must be fulfilled:
 
 <pullquote>A module's API is defined by its `java§exports` directives</pullquote>
 
 -   the accessed type (`java§String`) must be public
 -   the package containing the type (`java§java.lang`) must be exported by its module (*java.base*)
--   the accessing module (*org.codefx.demo.jpms*) must read the accessed one (*java.base*), which is typically achieved by requiring it
+-   the accessing module (*dev.nipafx.demo.modules*) must read the accessed one (*java.base*), which is typically achieved by requiring it
 
 If any of these rules are violated at compile or run time, the module systems throws an error.
 This means that `java§public` is no longer really public.
@@ -184,9 +184,9 @@ Since our example has no meaningful API, no outside code needs to access it and 
 Once again I'll do it nonetheless for demonstration purposes:
 
 ```java
-module org.codefx.demo.jpms_hello_world {
+module dev.nipafx.demo.hello_modules {
 	requires java.base;
-	exports org.codefx.demo.jpms;
+	exports dev.nipafx.demo.modules;
 }
 ```
 
@@ -225,19 +225,19 @@ The only difference is that we no longer need a manifest to declare an applicati
 
 ```shell
 $ jar --create
-	--file target/jpms-hello-world.jar
-	--main-class org.codefx.demo.jpms.HelloModularWorld
+	--file target/hello-modules.jar
+	--main-class dev.nipafx.demo.modules.HelloModularWorld
 	-C target/classes .
 ```
 
 Finally, launching looks a little different.
-We use the module path instead of the class path to tell the JPMS where to find modules.
+We use the module path instead of the class path to tell the runtime where to find modules.
 All we need to do beyond that is to name the main module with `--module`:
 
 ```shell
 $ java
-	--module-path target/jpms-hello-world.jar
-	--module org.codefx.demo.jpms_hello_world
+	--module-path target/hello-modules.jar
+	--module dev.nipafx.demo.hello_modules
 ```
 
 And that's it!
@@ -283,7 +283,7 @@ module monitor {
 }
 ```
 
-Note that we should choose a module name like *org.codefx.demo.monitor*, but that would crowd the examples, so I'll stick to the shorter *monitor*.
+Note that we should choose a module name like *dev.nipafx.demo.monitor*, but that would crowd the examples, so I'll stick to the shorter *monitor*.
 As explained, it requires *spark.core* and because the application has no meaningful API, it exports no packages.
 
 We can then compile, package, and run it as follows:
@@ -545,7 +545,7 @@ That's pretty inconvenient, so modules like *alpha* that use another module's ty
 
 ### Optional Dependencies
 
-This is quite straight-forward: If you want to compile against a module's types, but don't want to force its presence at runtime you can mark your dependency as being optional with the `static` modifier:
+This is quite straight-forward: If you want to compile against a module's types, but don't want to force its presence at run time you can mark your dependency as being optional with the `static` modifier:
 
 ```java
 module monitor {
@@ -637,7 +637,7 @@ List<ServiceObserverFactory> observerFactories = ServiceLoader
 ```
 
 It uses [the `java§ServiceLoader` API](http://download.java.net/java/jdk9/docs/api/java/util/ServiceLoader.html), which exists since Java 6, to inform the module system that it needs all implementations of `java§ServiceObserverFactory`.
-The JPMS will then track down all modules in the readability graph that provide that service, create an instance of each and return them.
+It will then track down all modules in the readability graph that provide that service, create an instance of each and return them.
 
 There are two particularly interesting consequences:
 
@@ -654,7 +654,7 @@ Quick recap:
 -   a module is a run-time concept created from a modular JAR
 -   a modular JAR is like any old plain JAR, except that it contains a module descriptor `module-info.class`, which is compiled from a module declaration `module-info.java`
 -   the module declaration gives a module its name, defines its dependencies (with `java§requires`, `java§requires static`, and `java§requires transitive`) and API (with `java§exports` and `java§exports to`), enables reflective access (with `java§open` and `java§opens to`) and declares use or provision of services
--   modules are placed on the module path where the JPMS finds them during module resolution, which is the phase that processes descriptors and results in a readability graph
+-   modules are placed on the module path where the module system finds them during module resolution, which is the phase that processes descriptors and results in a readability graph
 
-If you want to learn more about the module system, read the posts I linked above, check [the JPMS tag](tag:j_ms), or get [my book *The Java Module System* (Manning)](https://www.manning.com/books/the-java-module-system?a_aid=nipa&a_bid=869915cb).
+If you want to learn more about the module system, read the posts I linked above, check the [j_ms](tag:j_ms) tag, or get [my book *The Java Module System* (Manning)](https://www.manning.com/books/the-java-module-system?a_aid=nipa&a_bid=869915cb).
 Also, be aware that migrating to Java 9 can be challenging - check my [migration guide](java-9-migration-guide) for details.
