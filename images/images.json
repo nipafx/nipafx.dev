@@ -2643,5 +2643,22 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "java-modules-irl",
+		"alt": "Close-up of a sculpture consisting of abstract metal pieces, which are partially rusted.",
+		"credits": {
+			"author": {
+				"name": "Ricardo Gomez Angel",
+				"url": "https://unsplash.com/@ripato"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/yRxjLhk65nY"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]

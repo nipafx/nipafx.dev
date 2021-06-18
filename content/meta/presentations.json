@@ -1785,8 +1785,8 @@
 			},
 			"presentations": [
 				{
-					"talk": "talk-java-module-system",
-					"title": "The Java Module System",
+					"talk": "talk-java-modules-irl",
+					"title": "Java Modules In Real Life",
 					"time": "21.07.2021 1700 Europe/Berlin",
 					"location": {
 						"text": "Online"
