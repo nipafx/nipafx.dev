@@ -1776,23 +1776,6 @@
 					}
 				}
 			]
-		},
-		{
-			"event": {
-				"name": "IntelliJ IDEA Live Stream",
-				"url": "https://blog.jetbrains.com/idea/category/livestream/",
-				"image": "intellij-idea-stream"
-			},
-			"presentations": [
-				{
-					"talk": "talk-java-modules-irl",
-					"title": "Java Modules In Real Life",
-					"time": "21.07.2021 1700 Europe/Berlin",
-					"location": {
-						"text": "Online"
-					}
-				}
-			]
 		}
 	]
 }
