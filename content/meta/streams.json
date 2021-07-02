@@ -612,13 +612,38 @@
 		},
 		{
 			"time": "29.06.2021 1700",
-			"title": "Module System Troubles // Gunnar Morling",
+			"title": "Module Troubles // Gunnar Morling",
 			"description": "After I recently asked people to post their problems with the module system on Twitter and Reddit, Gunnar and I will go through the replies and see whether we can help."
 		},
 		{
+			"time": "04.07.2021 0700",
+			"title": "Java Ecosystem Map",
+			"description": "Trying to present a nice, snappy, interactive graph that visualizes the Java ecosystem"
+		},
+		{
+			"time": "06.07.2021 1700",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "13.07.2021 1700",
+			"title": "Spring Petclinic on Java 16 // Billy Korando",
+			"description": "I'll support (alt: distract) Billy in his continuous work to apply Java 16 features to the Spring Petclinic."
+		},
+		{
+			"time": "20.07.2021 1700",
+			"title": "Accento Open Beta",
+			"description": "Conversation with Rachel Andrew (of CSS fame) and Kenzie Woodbridge (doc wrangling guru) about writing in software development."
+		},
+		{
+			"time": "25.07.2021 0700",
+			"title": "JUnit Pioneer - A Half Day's Work",
+			"description": "Working from 1 to 5 (pm CEST) on PRs, issues, and maybe new extensions"
+		},
+		{
 			"time": "27.07.2021 1700",
-			"title": "Gunnar Morling",
-			"description": "We had so much fun with Moditect, we're gonna keep streaming together"
+			"title": "Module Troubles // Gunnar Morling",
+			"description": "Gunnar and I will try to solve common module system problems like split packages or resource access."
 		}
 	]
 }
