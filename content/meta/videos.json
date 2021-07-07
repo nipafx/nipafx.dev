@@ -279,13 +279,15 @@
 			"slug": "ron-pressler-26h",
 			"url": "https://www.youtube.com/watch?v=KG24inClY2M",
 			"title": "The State of Project Loom with Ron Pressler",
-			"thumbnail": "ron-pressler-26h"
+			"thumbnail": "ron-pressler-26h",
+			"border": true
 		},
 		{
 			"slug": "maurizio-cimadamore-26h",
 			"url": "https://www.youtube.com/watch?v=B8k9QGvPxC0",
 			"title": "The State of Project Panama with Maurizio Cimadamore",
-			"thumbnail": "maurizio-cimadamore-26h"
+			"thumbnail": "maurizio-cimadamore-26h",
+			"border": true
 		},
 		{
 			"slug": "inside-java-newscast-7",
