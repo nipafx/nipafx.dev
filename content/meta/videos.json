@@ -294,6 +294,12 @@
 			"url": "https://www.youtube.com/watch?v=iYqA7yYluTM",
 			"title": "Handling `null` and upgrading past Java 8 - Inside Java Newscast #7",
 			"thumbnail": "inside-java-newscast-7"
+		},
+		{
+			"slug": "just-j-spring-2021",
+			"url": "https://www.youtube.com/watch?v=JJtR4U5X70Y",
+			"title": "J-Spring 2021: Nicolai Parlog - Why don't they just...?! The Deliberations Behind Evolving Java",
+			"thumbnail": "just-j-spring-2021"
 		}
 	]
 }
