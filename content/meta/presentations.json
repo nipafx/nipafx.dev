@@ -1765,6 +1765,22 @@
 		},
 		{
 			"event": {
+				"name": "JUG Manchester",
+				"url": "https://www.meetup.com/ManchesterUK-Java-Community",
+				"image": "jug-manchester"
+			},
+			"presentations": [
+				{
+					"talk": "talk-just",
+					"title": "Why Don't They Just...?! The Deliberations Behind Evolving Java",
+					"announcement": "https://www.meetup.com/ManchesterUK-Java-Community/events/279245038/",
+					"time": "15.07.2021 1230 Europe/London",
+					"locationText": "Online"
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "IT-Tage",
 				"url": "https://www.ittage.informatik-aktuell.de/index.html",
 				"image": "it-tage-2021"
