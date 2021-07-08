@@ -2660,5 +2660,22 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "visitor-pattern-pointless",
+		"alt": "I honestly don't know what the image is showing. It seems to be a bunch of identical white plastic things that that are connected in a regular pattern.",
+		"credits": {
+			"author": {
+				"name": "JJ Ying",
+				"url": "https://unsplash.com/@jjying"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/7JX0-bfiuxQ"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
