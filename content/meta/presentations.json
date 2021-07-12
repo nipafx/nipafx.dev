@@ -1781,6 +1781,21 @@
 		},
 		{
 			"event": {
+				"name": "JUG Mannheim",
+				"url": "http://www.majug.de/",
+				"image": "jug-mannheim"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-after-n",
+					"title": "Java After Eleven",
+					"time": "29.07.2021 1900 Europe/Berlin",
+					"locationText": "Online"
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "IT-Tage",
 				"url": "https://www.ittage.informatik-aktuell.de/index.html",
 				"image": "it-tage-2021"
