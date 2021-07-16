@@ -1759,7 +1759,8 @@
 					"title": "Java After Eleven",
 					"announcement": "https://www.jug.ch/eventpreview.php?id=748",
 					"time": "14.07.2021 1800 Europe/Zurich",
-					"locationText": "Online"
+					"locationText": "Online",
+					"slides": "https://slides.nipafx.dev/java-after-eight/2021-07-14-jug-ch"
 				}
 			]
 		},
