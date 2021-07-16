@@ -6,7 +6,7 @@ slug: talk-just
 description: "There are many nifty features that Java could have but doesn't. Somewhat surprisingly, there are reasons for that and in this talk I'll discuss those for a few concrete cases as well as the deliberations behind such decisions."
 featuredImage: just-smoke
 slides: https://slides.nipafx.dev/just
-videoSlug: just-j-spring-2021
+videoSlug: just-jug-manchester
 ---
 
 There are many nifty features that Java could have but doesn't.

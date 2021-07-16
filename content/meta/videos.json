@@ -306,6 +306,12 @@
 			"url": "https://www.youtube.com/watch?v=anQq-R6AWOY",
 			"title": "Incremental Evolution, Pattern Switches, Wayland Support - Inside Java Newscast #8",
 			"thumbnail": "inside-java-newscast-8"
+		},
+		{
+			"slug": "just-jug-manchester",
+			"url": "https://www.youtube.com/watch?v=anQq-R6AWOY",
+			"title": "Why Don't They Just... ?! at JUG Manchester",
+			"thumbnail": "just-jug-manchester"
 		}
 	]
 }
