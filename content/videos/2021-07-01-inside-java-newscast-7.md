@@ -1,5 +1,5 @@
 ---
-title: "Handling `null` and upgrading past Java 8 - Inside Java Newscast #7"
+title: "Handling `null` and Upgrading Past Java 8 - Inside Java Newscast #7"
 tags: [migration, optional, switch, project-valhalla]
 date: 2021-07-01
 slug: inside-java-newscast-7

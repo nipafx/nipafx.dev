@@ -300,6 +300,12 @@
 			"url": "https://www.youtube.com/watch?v=JJtR4U5X70Y",
 			"title": "J-Spring 2021: Nicolai Parlog - Why don't they just...?! The Deliberations Behind Evolving Java",
 			"thumbnail": "just-j-spring-2021"
+		},
+		{
+			"slug": "inside-java-newscast-8",
+			"url": "https://www.youtube.com/watch?v=anQq-R6AWOY",
+			"title": "Incremental Evolution, Pattern Switches, Wayland Support - Inside Java Newscast #8",
+			"thumbnail": "inside-java-newscast-8"
 		}
 	]
 }
