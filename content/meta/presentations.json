@@ -1792,8 +1792,25 @@
 				{
 					"talk": "talk-java-after-n",
 					"title": "Java After Eleven",
-					"time": "29.07.2021 1900 Europe/Berlin",
+					"announcement": "http://www.majug.de/2021/07/29/java-after-11/",
+					"time": "29.07.2021 1930 Europe/Berlin",
 					"locationText": "Online"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Hessen",
+				"url": "https://jugh.de",
+				"image": "jug-hessen"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 17 Is Coming!",
+					"announcement": "https://www.meetup.com/de-DE/Java-User-Group-Hessen-JUGH/events/279609825/",
+					"time": "26.08.2021 1800 Europe/Berlin",
+					"locationText": "online"
 				}
 			]
 		},
