@@ -642,8 +642,8 @@
 		},
 		{
 			"time": "27.07.2021 1700",
-			"title": "Module Troubles // Gunnar Morling",
-			"description": "Gunnar and I will try to solve common module system problems like split packages or resource access."
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
 		}
 	]
 }
