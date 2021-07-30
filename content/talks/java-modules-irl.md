@@ -1,5 +1,5 @@
 ---
-title: "Java Modules In Real Life"
+title: "Java Modules in Real Life"
 tags: [j_ms, migration]
 date: 2021-06-18
 slug: talk-java-modules-irl
