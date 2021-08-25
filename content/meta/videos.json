@@ -320,6 +320,12 @@
 			"thumbnail": "inside-java-newscast-9"
 		},
 		{
+			"slug": "ama-brian-goetz-ete-2021.jpg",
+			"url": "https://www.youtube.com/watch?v=9si7gK94gLo",
+			"title": "AMA About the Java Language — Brian Goetz and Nicolai Parlog",
+			"thumbnail": "ama-brian-goetz-ete-2021.jpg"
+		},
+		{
 			"slug": "inside-java-newscast-11",
 			"url": "https://www.youtube.com/watch?v=2AUk8SxOSOw",
 			"title": "Fast and Secure Inter-process Communication on JDK 16 - Inside Java Newscast #11",
