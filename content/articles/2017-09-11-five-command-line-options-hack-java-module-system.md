@@ -131,7 +131,8 @@ Since named modules can not access code from the class path, it might also be ne
 ### Extending The Module Graph With `--add-modules`
 
 The option `--add-modules $modules`, which is available on `javac` and `java`, allows explicitly defining a comma-separated list of root modules beyond the initial module.
-(Root modules form the initial set of modules from which [the module graph is built by resolving their dependencies](http://openjdk.java.net/projects/jigsaw/spec/sotms/#resolution).) This allows you to add modules (and their dependencies) to the module graph that would otherwise not show up because the initial module does not depend on them (directly or indirectly).
+(Root modules form the initial set of modules from which [the module graph is built by resolving their dependencies](http://openjdk.java.net/projects/jigsaw/spec/sotms/#resolution).)
+This allows you to add modules (and their dependencies) to the module graph that would otherwise not show up because the initial module does not depend on them (directly or indirectly).
 
 A particularly important use case for `--add-modules` are Java EE modules, which are [not resolved by default](java-9-migration-guide#dependencies-on-java-ee-modules) when running an application from the class path.
 As an example, let's pick a class that uses `JAXBException` from the Java EE module *java.xml.bind*.
@@ -218,11 +219,14 @@ Sad.
 
 ### Relying On Weak Encapsulation
 
-The Java 9 runtime [allows illegal access by default to code on the class path](java-9-migration-guide#illegal-access-to-internal-apis) with nothing more than a warning.
-That's great to run unprepared applications on Java 9, but I advise against relying on that during a proper build because it allows new illegal accesses to slip by unnoticed.
+The Java 9-15 runtimes [allow illegal access by default to code on the class path](java-9-migration-guide#illegal-access-to-internal-apis) with nothing more than a warning.
+That's great to run unprepared applications on newer Java versions, but I advise against relying on that during a proper build because it allows new illegal accesses to slip by unnoticed.
 Instead, I collect all the `--add-exports` and `--add-opens` I need and then activate strong encapsulation at run time with `--illegal-access=deny`.
 
 <pullquote>Don't rely on weak encapsulation</pullquote>
+
+On Java 16, this default behavior switched to denying illegal access by default, but `--illegal-access` could be used to overwrite that.
+In Java 17 and later, there is no blanket escape hatch: the `--illegal-access` option becomes a no-op, but `--add-exports` and `--add-opens` remain in place for specific exceptions.
 
 ### The Pitfalls Of Command Line Options
 
