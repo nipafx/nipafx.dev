@@ -247,7 +247,8 @@
 					"programEntry": "https://jeeconf.com/program/fun-with-var/",
 					"time": "26.04.2019 1105 Europe/Kiev",
 					"locationText": "Kiev, Mercure Congress Hall, Track D",
-					"slides": "https://slides.nipafx.dev/java-var/2019-04-26-jeeconf"
+					"slides": "https://slides.nipafx.dev/java-var/2019-04-26-jeeconf",
+					"video": "https://www.youtube.com/watch?v=rJUid3A5_JA"
 				},
 				{
 					"talk": "talk-java-next",
@@ -255,7 +256,8 @@
 					"programEntry": "https://jeeconf.com/program/java-next-new-releases-amber-valhalla-and-more-goodies/",
 					"time": "26.04.2019 1400 Europe/Kiev",
 					"locationText": "Kiew, Mercure Congress Hall, Track A",
-					"slides": "https://slides.nipafx.dev/java-next/2019-04-26-jeeconf"
+					"slides": "https://slides.nipafx.dev/java-next/2019-04-26-jeeconf",
+					"video": "https://www.youtube.com/watch?v=ZGia_kdkF9E"
 				}
 			]
 		},
