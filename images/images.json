@@ -2677,5 +2677,22 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "random-generator",
+		"alt": "Close-up of three red dice on a dark, reflective surface.",
+		"credits": {
+			"author": {
+				"name": "JJ Ying",
+				"url": "https://unsplash.com/@tamiminaser"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/yG9pCqSOrAg"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
