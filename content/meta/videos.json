@@ -336,6 +336,12 @@
 			"url": "https://www.youtube.com/watch?v=x1_DBqJrykM",
 			"title": "Fast and Secure Inter-process Communication on JDK 16 - Inside Java Newscast #11",
 			"thumbnail": "brian-goetz-valhalla-26h"
+		},
+		{
+			"slug": "inside-java-newscast-12",
+			"url": "https://www.youtube.com/watch?v=KVXbWCwOLg4",
+			"title": "Faster LTS and free JDK with Java 17 - Inside Java Newscast #12",
+			"thumbnail": "inside-java-newscast-12"
 		}
 	]
 }

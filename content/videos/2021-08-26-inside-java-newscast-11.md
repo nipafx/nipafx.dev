@@ -90,7 +90,7 @@ So if you're doing inter-process communication on the same host, maybe between J
 -->
 
 
-## Shots
+## Bits & Bytes
 
 I got two shorter pieces of news for you:
 
