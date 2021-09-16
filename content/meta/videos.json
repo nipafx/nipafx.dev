@@ -342,6 +342,12 @@
 			"url": "https://www.youtube.com/watch?v=KVXbWCwOLg4",
 			"title": "Faster LTS and free JDK with Java 17 - Inside Java Newscast #12",
 			"thumbnail": "inside-java-newscast-12"
+		},
+		{
+			"slug": "intellij-stream-java-17",
+			"url": "https://www.youtube.com/watch?v=lJ5aMP9Vbnw",
+			"title": "Getting Ready for Java 17",
+			"thumbnail": "intellij-stream-java-17"
 		}
 	]
 }
