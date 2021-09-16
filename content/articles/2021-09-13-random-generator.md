@@ -9,7 +9,7 @@ featuredImage: random-generator
 
 Java's API around random numbers used to be a bit muddied.
 First and foremost, there's [the class `Random`][random], which has a solid API.
-Then there are [its subclasses `SecureRandom`](https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/security/SecureRandom.html), which is slower but a cryptographically strong random number generator, and [`ThreadLocalRandom`](https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/concurrent/ThreadLocalRandom.html), which is faster than `Random` but not thread-safe.
+Then there are [its subclasses `SecureRandom`][secure-random], which is slower but a cryptographically strong random number generator, and [`ThreadLocalRandom`][thread-local-random], which is faster than `Random` but not thread-safe.
 
 
 Then, off to the side, [we have `SplittableRandom`][splittable], which is also not thread-safe, but has a method `split` that returns a new `SplittableRandom` that you can pass to a task in a newly spawned thread - this works great for fork/join-style computations.
@@ -26,14 +26,20 @@ Apparently, these classes aren't doing great under the hood either with a few id
 
 But all of this changes with Java 17.
 
-[random]: https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Random.html
-[splittable]: https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/SplittableRandom.html
+[random]: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Random.html
+[secure-random]: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/security/SecureRandom.html
+[thread-local-random]: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ThreadLocalRandom.html
+[splittable]: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/SplittableRandom.html
 
 
 ## The New Type Hierarchy Around `RandomGenerator`
 
 Thanks to the work done as part of [JEP 356][jep-356], Java 17 ships with a new and better [random generator API][random-api].
-One of its core elements is the introduction of a new interfaces hierarchy für random (number) generators with [the new interface `RandomGenerator`][random-generator] at its top.
+One of its core elements is the new interface hierarchy for random (number) generators with [the new interface `RandomGenerator`][random-generator] at its top.
+
+[jep-356]: https://openjdk.java.net/jeps/356
+[random-api]: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html
+[random-generator]: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/RandomGenerator.html
 
 ### `RandomGenerator`
 
@@ -67,10 +73,6 @@ Similarly to `List` vs `ArrayList` and `LinkedList`.
 
 No new public classes were added, though, so how do you get an instance of, say, `LeapableGenerator`?
 
-[jep-356]: https://openjdk.java.net/jeps/356
-[random-api]: https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/random/package-summary.html
-[random-generator]: https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/random/RandomGenerator.html
-
 
 ## Algorithm Selection
 
@@ -103,10 +105,10 @@ The Javadoc contains [a list of algorithms][algorithms] that all JDK implementat
 Due to advances in random number generator algorithm development and analysis, this list isn't set in stone, though.
 Algorithms can be deprecated at any time and can be removed in major JDK versions.
 
-[algorithms]: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html#algorithms
-
 So picking algorithms by name may not be the best way to write robust code.
 Fortunately, a better alternative exists.
+
+[algorithms]: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html#algorithms
 
 ### By Properties
 

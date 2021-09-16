@@ -9,7 +9,7 @@ featuredImage: unix-domain-sockets
 repo: java-x-demo
 ---
 
-Java's [`SocketChannel`](https://download.java.net/java/early_access/jdk16/docs/api/java.base/java/nio/channels/SocketChannel.html) / [`ServerSocketChannel`](https://download.java.net/java/early_access/jdk16/docs/api/java.base/java/nio/channels/ServerSocketChannel.html) API provides blocking and multiplexed non-blocking access to sockets.
+Java's [`SocketChannel`](https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/channels/SocketChannel.html) / [`ServerSocketChannel`](https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/channels/ServerSocketChannel.html) API provides blocking and multiplexed non-blocking access to sockets.
 Before Java 16, this was limited to TCP/IP sockets - with [JEP 380](https://openjdk.java.net/jeps/380) it is now also possible to access Unix domain sockets.
 They are addressed by filesystem path names and you can use them for inter-process communication on the same host.
 Unix domain sockets are supported on Unix based operating system (Linux, MacOS) and - despite their name - Windows 10 and Windows Server 2019.
