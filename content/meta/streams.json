@@ -651,14 +651,19 @@
 			"description": "Working on PRs, issues, and maybe new extensions"
 		},
 		{
+			"time": "14.09.2021 1500",
+			"title": "Java 17 AMA",
+			"description": "Java 17 comes out with LTS and license changes - ask me anything about all that"
+		},
+		{
 			"time": "16.09.2021 1700",
-			"title": "JUnit Pioneer",
-			"description": "Working on PRs, issues, and maybe new extensions"
+			"title": "JUnit Pioneer on Java 17",
+			"description": "Exploring how much the Pioneer code base benefits from Java 17"
 		},
 		{
 			"time": "23.09.2021 1700",
-			"title": "JUnit Pioneer",
-			"description": "Working on PRs, issues, and maybe new extensions"
+			"title": "JUnit Pioneer on JUnit 5.8",
+			"description": "JUnit 5.8 comes out and we'll explore its features and what that means for JUnit Pioneer"
 		},
 		{
 			"time": "30.09.2021 1700",
