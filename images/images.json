@@ -2683,7 +2683,7 @@
 		"alt": "Close-up of three red dice on a dark, reflective surface.",
 		"credits": {
 			"author": {
-				"name": "JJ Ying",
+				"name": "Naser Tamimi",
 				"url": "https://unsplash.com/@tamiminaser"
 			},
 			"source": {
@@ -2693,6 +2693,24 @@
 				"name": "Unsplash License",
 				"url": "https://unsplash.com/license"
 			}
+		}
+	},
+	{
+		"slug": "java-pattern-matching",
+		"alt": "Wavy white lines on off-white material - very abstract",
+		"credits": {
+			"author": {
+				"name": "Jean-Philippe Delberghe",
+				"url": "https://unsplash.com/@jipy32"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/75xPHEQBmvA"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			},
+			"edited": true
 		}
 	}
 ]

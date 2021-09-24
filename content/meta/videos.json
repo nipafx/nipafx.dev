@@ -348,6 +348,12 @@
 			"url": "https://www.youtube.com/watch?v=lJ5aMP9Vbnw",
 			"title": "Getting Ready for Java 17",
 			"thumbnail": "intellij-stream-java-17"
+		},
+		{
+			"slug": "oracle-dev-live-pattern-matching",
+			"url": "https://www.youtube.com/watch?v=UlFFKkq6fyU",
+			"title": "Pattern Matching in Java 17 and Beyond",
+			"thumbnail": "oracle-dev-live-pattern-matching"
 		}
 	]
 }

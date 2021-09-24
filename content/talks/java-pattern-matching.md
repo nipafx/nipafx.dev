@@ -6,6 +6,7 @@ slug: talk-java-pattern-matching
 description: "Pattern Matching is finding its way into Java, one step at a time, along three paths: patterns, switch improvements, sealed classes. Let's see how they all come together."
 featuredImage: java-pattern-matching
 slides: https://slides.nipafx.dev/patterns
+videoSlug: oracle-dev-live-pattern-matching
 ---
 
 Pattern Matching is finding its way into Java, one step at a time, along three paths:
