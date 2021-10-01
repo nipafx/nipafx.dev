@@ -1796,7 +1796,8 @@
 					"title": "Java After Eleven",
 					"announcement": "http://www.majug.de/2021/07/29/java-after-11/",
 					"time": "29.07.2021 1930 Europe/Berlin",
-					"locationText": "Online"
+					"locationText": "Online",
+					"slides": "https://slides.nipafx.dev/java-after-eight/2021-07-29-jug-mannheim"
 				}
 			]
 		},
@@ -1812,7 +1813,27 @@
 					"title": "Java 17 Is Coming!",
 					"announcement": "https://www.meetup.com/de-DE/Java-User-Group-Hessen-JUGH/events/279609825/",
 					"time": "26.08.2021 1800 Europe/Berlin",
-					"locationText": "online"
+					"locationText": "online",
+					"slides": "https://slides.nipafx.dev/java-x/2021-08-26-jug-hessen",
+					"video": "https://www.youtube.com/watch?v=J56HIgfVX-s"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Oracle Developer Live Java Innovations",
+				"url": "https://developer.oracle.com/developer-live/java-innovations-sep-2021/",
+				"image": "oracle-dev-live-2021"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Pattern Matching in Java (17)",
+					"announcement": "https://developer.oracle.com/developer-live/java-innovations-sep-2021/",
+					"time": "14.09.2021 1040 America/Los_Angeles",
+					"locationText": "online",
+					"slides": "https://slides.nipafx.dev/patterns/2021-09-14-oracle-dev-live",
+					"video": "https://www.youtube.com/watch?v=UlFFKkq6fyU"
 				}
 			]
 		},

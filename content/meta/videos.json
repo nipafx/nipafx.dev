@@ -326,6 +326,12 @@
 			"thumbnail": "ama-brian-goetz-ete-2021.jpg"
 		},
 		{
+			"slug": "java-x-jug-hessen",
+			"url": "https://www.youtube.com/watch?v=J56HIgfVX-s",
+			"title": "Java 17 ist da",
+			"thumbnail": "java-x-jug-hessen"
+		},
+		{
 			"slug": "inside-java-newscast-11",
 			"url": "https://www.youtube.com/watch?v=2AUk8SxOSOw",
 			"title": "Fast and Secure Inter-process Communication on JDK 16 - Inside Java Newscast #11",
@@ -350,10 +356,10 @@
 			"thumbnail": "intellij-stream-java-17"
 		},
 		{
-			"slug": "oracle-dev-live-pattern-matching",
+			"slug": "pattern-matching-oracle-dev-live",
 			"url": "https://www.youtube.com/watch?v=UlFFKkq6fyU",
 			"title": "Pattern Matching in Java 17 and Beyond",
-			"thumbnail": "oracle-dev-live-pattern-matching"
+			"thumbnail": "pattern-matching-oracle-dev-live"
 		}
 	]
 }
