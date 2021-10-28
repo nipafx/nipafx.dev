@@ -31,7 +31,7 @@ Then lets dive right in!
 
 ## Long-Term Support
 
-### Every 3 years
+### Every 3 Years
 
 Remember the old days when we hoped for a new Java release every two years but got one every three to five?
 Then came the new release cadence that, like clockwork, has been shipping a new feature release every six months since then.
@@ -47,7 +47,7 @@ But there's a tension here between developers and companies:
 The former often prefer a faster, incremental update strategy while the latter opt for the stability offered by updating every few years.
 We've seen a drift towards the faster cycle with more and more projects and companies adopting it, but we at Oracle think that we can do more to ease the tension and give that drift a little push.
 
-### Every 2 years 🤯
+### Every 2 Years 🤯
 
 Because today, September 14th, Mark Reinhold, Chief Architect of the Java Platform Group at Oracle, proposed to increase the LTS cadence to every four versions, meaning every two years.
 If this proposal is accepted, the next LTS versions after 17 won't be 23 and 29 but 21, 25, and 29.

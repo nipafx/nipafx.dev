@@ -360,6 +360,12 @@
 			"url": "https://www.youtube.com/watch?v=UlFFKkq6fyU",
 			"title": "Pattern Matching in Java 17 and Beyond",
 			"thumbnail": "pattern-matching-oracle-dev-live"
+		},
+		{
+			"slug": "inside-java-newscast-14",
+			"url": "https://www.youtube.com/watch?v=f08Lbenw_kM",
+			"title": "11 Tricks From dev.java - Inside Java Newscast #14",
+			"thumbnail": "inside-java-newscast-14"
 		}
 	]
 }
