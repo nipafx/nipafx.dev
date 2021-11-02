@@ -1848,8 +1848,24 @@
 					"talk": "talk-java-x",
 					"title": "Java 17 Is Here!",
 					"programEntry": "https://www.ittage.informatik-aktuell.de/programm/2021/java-17-is-coming.html",
-					"time": "07.12.2021 1400 Europe/Berlin",
+					"time": "08.12.2021 1200 Europe/Berlin",
 					"locationText": "Online"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JavaZone",
+				"url": "https://2021.javazone.no/",
+				"image": "javazone-2021"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-after-n",
+					"title": "Java After Eleven",
+					"programEntry": "https://2021.javazone.no/#/program/5b991cb8-5cdc-4c18-980a-4e0191859a5d",
+					"time": "09.12.2021 0900 Europe/Oslo",
+					"locationText": "Oslo Spektrum"
 				}
 			]
 		}
