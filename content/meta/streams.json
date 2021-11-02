@@ -674,6 +674,26 @@
 			"time": "28.10.2021 1700",
 			"title": "Module Troubles // Gunnar Morling",
 			"description": "After I recently asked people to post their problems with the module system on Twitter and Reddit, Gunnar and I will go through the replies and see whether we can help."
+		},
+		{
+			"time": "04.11.2021 1800",
+			"title": "Java 18 JEPs",
+			"description": "Let's check out the list of open JEPs and see which ones are proposed to or already targeted to Java 18"
+		},
+		{
+			"time": "11.11.2021 1800",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "14.11.2021 0800",
+			"title": "JUnit Pioneer",
+			"description": "A full day of work on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "25.11.2021 1800",
+			"title": "Module Troubles // Gunnar Morling",
+			"description": "We'll explore testing a bit more and then, if time permits, look into resource bundles"
 		}
 	]
 }
