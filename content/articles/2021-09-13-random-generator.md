@@ -11,7 +11,6 @@ Java's API around random numbers used to be a bit muddied.
 First and foremost, there's [the class `Random`][random], which has a solid API.
 Then there are [its subclasses `SecureRandom`][secure-random], which is slower but a cryptographically strong random number generator, and [`ThreadLocalRandom`][thread-local-random], which is faster than `Random` but not thread-safe.
 
-
 Then, off to the side, [we have `SplittableRandom`][splittable], which is also not thread-safe, but has a method `split` that returns a new `SplittableRandom` that you can pass to a task in a newly spawned thread - this works great for fork/join-style computations.
 The streams of random numbers `SplittableRandom` returns, e.g. with `SplittableRandom::longs`, employ this functionality when used as a parallel stream.
 
