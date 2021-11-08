@@ -1,7 +1,7 @@
 ---
 title: "11 Tricks From dev.java - Inside Java Newscast #14"
 tags: [generics, lambda, pattern-matching, records, serialization]
-date: 2021-10-05
+date: 2021-10-28
 slug: inside-java-newscast-14
 videoSlug: inside-java-newscast-14
 description: "From compact record constructors to boolean expressions in pattern matching, from generic wildcards to chaining predicates and comparators, from jpackage to jlink - here are 11 Java tricks handpicked from dev.java."
