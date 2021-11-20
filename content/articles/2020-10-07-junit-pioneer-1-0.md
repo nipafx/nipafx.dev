@@ -56,7 +56,7 @@ In order of appearance... (note that there's always more detail in the documenta
 
 ### System Properties and Environment Variables
 
-If your tests rely on specific values for system properties or environment variables or you want to verify that they correctly read them, `@ClearSystemProperty`, `@SetSystemProperty`, `@ClearEnvironmentVariable`, and `@ClearEnvironmentVariable` are there for you:
+If your tests rely on specific values for system properties or environment variables or you want to verify that they correctly read them, `@ClearSystemProperty`, `@SetSystemProperty`, `@ClearEnvironmentVariable`, and `@SetEnvironmentVariable` are there for you:
 
 ```java
 @ClearSystemProperty(key = "A")
