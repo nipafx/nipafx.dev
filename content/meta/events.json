@@ -93,6 +93,17 @@
 				"text": "more about Accento",
 				"info": "Karlsruhe, Südwerk"
 			}
+		},
+		{
+			"time": "02.12.2021 1905 Europe/Kiev",
+			"title": "Build-up: Java Edition",
+			"description": "Fireside chat and AMA about Modern Java",
+			"url": "https://build-up.cloud-builders.tech/en",
+			"location": {
+				"type": "virtual",
+				"text": "register",
+				"info": "https://build-up.cloud-builders.tech/en"
+			}
 		}
 	]
 }
