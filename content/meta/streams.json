@@ -694,6 +694,26 @@
 			"time": "25.11.2021 1800",
 			"title": "Module Troubles // Gunnar Morling",
 			"description": "We'll explore testing a bit more and then, if time permits, look into resource bundles"
+		},
+		{
+			"time": "02.12.2021 1900",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "23.12.2021 1900",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "25.12.2021 1400",
+			"title": "X-Mas Stream",
+			"description": "Tired of 🎅🎄🎁👪 ?! Me too! Let's hang out together for some games, coding, or whatever else looks like fun."
+		},
+		{
+			"time": "26.12.2021 1400",
+			"title": "X-Mas Stream",
+			"description": "Tired of 🎅🎄🎁👪 ?! Me too! Let's hang out together for some games, coding, or whatever else looks like fun."
 		}
 	]
 }
