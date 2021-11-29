@@ -101,9 +101,9 @@ Steps 2 and 3 are proposed by JEP 421, more on that in a second, and will probab
 Steps 4 to 6 are still on the drawing board, including whether these will even be the exact steps, so predictions are unreliable, but I guess that they will each happen with a year or more in between.
 That means the journey from finalization's initial deprecation in 2017 to its eventual removal in a few years will probably take about a decade - more than enough time for the ecosystem to wean off its alluring promises and replace it with better alternatives.
 
-### Java Enhancement Proposal 421
+### JDK Enhancement Proposal 421
 
-[Java Enhancement Proposal 421][jep-421] plans to mark finalization for removal.
+[JDK Enhancement Proposal 421][jep-421] plans to mark finalization for removal.
 Specifically, the annotation `@Deprecated(forRemoval=true)` will be added to `Object`'s `finalize` method, all `finalize` implementations in public non-final classes, and to `Runtime::runFinalization` and `System::runFinalization`.
 There will also be a command line flag that disables finalization entirely, so you can test your application's correctness.
 

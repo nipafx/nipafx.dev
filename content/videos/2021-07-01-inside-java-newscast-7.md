@@ -20,7 +20,7 @@ Ready?
 
 Then... let me tell you why I'm a week late.
 This episode was supposed to come out a week ago, but the team was busy building the JEP cafe.
-Every few weeks, my colleague Jose Paumard will open the doors of the JEP cafe to talk about an interesting Java Enhancement Proposal - [the first episode](https://www.youtube.com/watch?v=l1VrmvyIEpM) explains where JEPs come from and the next one will be on sealed classes.
+Every few weeks, my colleague Jose Paumard will open the doors of the JEP cafe to talk about an interesting JDK Enhancement Proposal - [the first episode](https://www.youtube.com/watch?v=l1VrmvyIEpM) explains where JEPs come from and the next one will be on sealed classes.
 If you're not yet subscribed to this channel, now's a good time to change that, and if you are, hit the bell icon to get notified as soon as we upload more videos.
 
 Now, let's dive right into `null`.

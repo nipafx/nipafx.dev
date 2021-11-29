@@ -144,7 +144,7 @@ Being able to create and adopt this one by one instead in one big chunk in a sin
 ## Pattern Switches with Sealed Classes
 
 Let's have a bit of a closer look at pattern switches and sealed classes.
-They come from Java Enhancement Proposals [406](ttps://openjdk.java.net/jeps/406) and [409](ttps://openjdk.java.net/jeps/409) - as usual links to this and everything else I mention in the description.
+They come from JDK Enhancement Proposals [406](ttps://openjdk.java.net/jeps/406) and [409](ttps://openjdk.java.net/jeps/409) - as usual links to this and everything else I mention in the description.
 If you scroll down to check it out, I'd appreciate it if you leave a like so more Java devs get to see this video.
 
 ### Pattern Switch

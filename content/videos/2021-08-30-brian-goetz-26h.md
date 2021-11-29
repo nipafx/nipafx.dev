@@ -15,7 +15,7 @@ Hi everyone,
 I'm nipafx (but you can call me Nicolai) and today it's gonna be you, me, Brian Goetz, and the state of Project Valhalla!
 Brian is the lead of Project Valhalla, which aims to overcome Java's original sin: splitting the type system into primitives and reference types.
 
-Brian and I talked about all things Valhalla: unifying the type system, expanding generics, current work in Java Enhancement Proposals 401 and 402, the project timeline, and more.
+Brian and I talked about all things Valhalla: unifying the type system, expanding generics, current work in JDK Enhancement Proposals 401 and 402, the project timeline, and more.
 Speaking of the JEPs, it's helpful to have read them before watching the conversation - they're linked in the description.
 Down there you'll also find time stamps to various parts of the conversation, so you can jump to what interests you most.
 

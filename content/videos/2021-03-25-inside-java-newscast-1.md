@@ -13,7 +13,7 @@ featuredImage: inside-java-newscast-1
 Hi everyone,
 
 I'm nipafx (but you can call me Nicolai) and today it's gonna be you, me, and the first episode of the Inside Java Newscast.
-Here we cover recent developments in the JDK, drawing from Java Enhancement Proposals, design documents, the mailing list, and the occasional chicken bone.
+Here we cover recent developments in the JDK, drawing from JDK Enhancement Proposals, design documents, the mailing list, and the occasional chicken bone.
 
 Today we're covering the recent weeks up to today, March 23rd 2021, and we have two larger topics:
 
@@ -185,7 +185,7 @@ Let me know in the comments.
 
 With Java 16 out the door, what's next?
 Java 17 of course!
-Two Java Enhancement Proposals are already targeted for the upcoming release in September and there's a fair chance that a third one will be soon.
+Two JDK Enhancement Proposals are already targeted for the upcoming release in September and there's a fair chance that a third one will be soon.
 Let's go over the list.
 
 ### Another Port

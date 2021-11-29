@@ -143,7 +143,7 @@ Nicolai, can I leave it to you?
 Today, June 10th, the JDK 17 repo gets forked and rampdown phase 1 starts.
 But... what exactly does that mean?
 I didn't know myself, so I looked into it and here's the summary.
-If you want to know _all_ the details, check out [Java Enhancement Proposal number 3 on the JDK Release Process](https://openjdk.java.net/jeps/3).
+If you want to know _all_ the details, check out [JDK Enhancement Proposal number 3 on the JDK Release Process](https://openjdk.java.net/jeps/3).
 As usual, you'll find a link to that in the description.
 
 Rampdown Phase 1

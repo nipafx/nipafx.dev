@@ -27,7 +27,7 @@ Jigsaw itself came a little later - [Mark Reinhold announced it on his blog](htt
 Since then it underwent a series of technical and organizational challenges and reshuffles before going back on track in 2011 when it got fully staffed and started an exploratory phase, which ended three years later.
 
 In that time a lot happened and it is easy to ignore just how much work had to be done!
-There are three Java Enhancement Proposals (JEPs) just to [envision how to cut the JDK](http://openjdk.java.net/jeps/200), to [reorganize the (massive) code base](http://openjdk.java.net/jeps/201) accordingly, and to [restructure the run-time image](http://openjdk.java.net/jeps/220).
+There are three JDK Enhancement Proposals (JEPs) just to [envision how to cut the JDK](http://openjdk.java.net/jeps/200), to [reorganize the (massive) code base](http://openjdk.java.net/jeps/201) accordingly, and to [restructure the run-time image](http://openjdk.java.net/jeps/220).
 And none of that even touched on the design, let alone implementation, of the module system itself.
 
 ### Bones of Contention

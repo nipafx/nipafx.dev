@@ -24,7 +24,7 @@ Then let's dive right i..
 Wait, did you notice that I said "_we_ got two topics for you"?
 Because today, I'm not alone.
 Jose Paumard is with me - Java Champion, JavaOne Rockstar, my colleague here at the Java Platform Group at Oracle, and an all around amazing Java expert.
-He'll tell you all about Java Enhancement Proposal 406.
+He'll tell you all about JDK Enhancement Proposal 406.
 
 
 ## Pattern Matching And Switches
