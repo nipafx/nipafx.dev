@@ -2712,5 +2712,21 @@
 			},
 			"edited": true
 		}
+	},
+	{
+		"slug": "java-17",
+		"credits": {
+			"author": {
+				"name": "Arno Senoner",
+				"url": "https://unsplash.com/@arnosenoner"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/iOF6Vy0C8lE"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
