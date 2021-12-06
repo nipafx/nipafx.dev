@@ -697,6 +697,11 @@
 		},
 		{
 			"time": "02.12.2021 1900",
+			"title": "Just Chatting Java",
+			"description": "A bit hung-over from my booster shot, lets just chat about Java. Bring your questions!"
+		},
+		{
+			"time": "09.12.2021 1800",
 			"title": "JUnit Pioneer",
 			"description": "Working on PRs, issues, and maybe new extensions"
 		},
