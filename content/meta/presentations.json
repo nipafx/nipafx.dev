@@ -1870,6 +1870,22 @@
 					"slides": "https://slides.nipafx.dev/java-after-eight/2021-12-09-javazone"
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "Jfokus",
+				"url": "https://www.jfokus.se/",
+				"image": "jfokus-2022"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"programEntry": "https://www.jfokus.se/talks/869",
+					"time": "09.02.2021 1400 Europe/Stockholm",
+					"locationText": "Stockholm Waterfront Conference, Room A1"
+				}
+			]
 		}
 	]
 }
