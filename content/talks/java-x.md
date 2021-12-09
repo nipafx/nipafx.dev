@@ -1,5 +1,5 @@
 ---
-title: "Java 17 Is Here!"
+title: "Modern Java - Language, Runtime, LTS"
 tags: [java-9, java-10, java-11, java-12, java-13, java-14, java-15, java-16, java-17]
 date: 2017-02-23
 slug: talk-java-x
