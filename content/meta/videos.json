@@ -372,6 +372,12 @@
 			"url": "https://www.youtube.com/watch?v=eDgBnjOid-g",
 			"title": "What Happens to Finalization in JDK 18? - Inside Java Newscast #15",
 			"thumbnail": "inside-java-newscast-15"
+		},
+		{
+			"slug": "inside-java-newscast-17",
+			"url": "https://www.youtube.com/watch?v=2J2tJm_iwk0",
+			"title": "Project Loom Brings Structured Concurrency - Inside Java Newscast #17",
+			"thumbnail": "inside-java-newscast-17"
 		}
 	]
 }
