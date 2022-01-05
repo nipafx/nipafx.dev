@@ -361,7 +361,7 @@ public String sanity(Bool ternaryBool) {
 		// `return` is only possible from block
 		case TRUE, FALSE -> { return "sane"; }
 		default -> { return "This is ridiculous!"; }
-	};
+	}
 }
 ```
 
