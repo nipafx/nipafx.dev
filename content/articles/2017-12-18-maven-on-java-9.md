@@ -23,9 +23,9 @@ This post was originally written for Java 9, but it applies just the same to bui
 
 First things first, you have to pick the right versions.
 Maven adopted Java 9 without much ado, so you might not have to make many updates.
-Here are the minimum requirements:
+Here are the minimum requirements (although I advise to always pick the newest available version of any tool just to be safe):
 
--   **Maven itself**: 3.5.0
+-   **Maven itself**: generally speaking 3.5.0, but e.g. [this bug](https://issues.apache.org/jira/browse/MNG-6506) was only fixed in 3.6.1
 -   **Maven Compiler Plugin**: 3.7.0 / 3.8.0 for Java 11
 
 With that settled, I'll leave out all `<version>` tags for the configurations I show.

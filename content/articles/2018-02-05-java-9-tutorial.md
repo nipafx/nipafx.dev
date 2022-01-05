@@ -31,7 +31,7 @@ For the best integration into your favorite IDE you should use its most current 
 If the cutting edge isn't for you, you should at least be on [Intellij IDEA 2017.2](https://blog.jetbrains.com/idea/2017/07/support-for-java-9-in-intellij-idea-2017-2/) or [Eclipse Oxygen.1a](https://jaxenter.com/eclipse-oxygen-1a-java-9-junit-5-138113.html) (before that version, Eclipse needed Java 9 support plugins - they are obsolete now).
 
 Similarly, use a current version of your build tool.
-In the case of Maven this should at least be 3.5.0 of the application itself and 3.7.0 of the compiler plugin.
+In the case of Maven this should at least be 3.5.0 (although, e.g. [this bug](https://issues.apache.org/jira/browse/MNG-6506) was only fixed in 3.6.1) of the application itself and 3.7.0 of the compiler plugin.
 For Gradle, [use at least 4.2.1](https://blog.gradle.org/java-9-support-update).
 
 ⇝ [Six tips for running Maven on Java 9](maven-on-java-9).

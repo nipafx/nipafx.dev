@@ -144,11 +144,11 @@ The first rule of moving to Java 11 is ~~you do not talk ...~~ to update all the
 Your IDE, your build tool, its plugins, and, most importantly, your dependencies.
 You don't *have* to do all of these updates in advance, but if you can, you absolutely should - it will very likely get you past some hurdles you can then stay blissfully unaware of.
 
-Here are the recommended minimum versions for a few tools:
+Here are the recommended minimum versions for a few tools (although I advise to always pick the newest available version just to be safe):
 
 -   **IntelliJ IDEA**: [2018.2](https://blog.jetbrains.com/idea/2018/06/java-11-in-intellij-idea-2018-2/)
 -   **Eclipse**: Photon 4.9RC2 with [Java 11 plugin](https://marketplace.eclipse.org/content/java-11-support-eclipse-photon-49)
--   **Maven**: 3.5.0
+-   **Maven**: generally speaking 3.5.0, but e.g. [this bug](https://issues.apache.org/jira/browse/MNG-6506) was only fixed in 3.6.1
 	-   **compiler plugin**: 3.8.0
 	-   **surefire** and **failsafe**: 2.22.0
 -   **Gradle**: [5.0](https://docs.gradle.org/5.0/release-notes.html#java-11-runtime-support)
