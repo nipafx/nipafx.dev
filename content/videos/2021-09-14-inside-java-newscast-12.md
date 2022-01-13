@@ -135,7 +135,7 @@ I'll talk more about it in the next Newscast but you can check it out until then
 Talking about talking about things.
 If you're watching this video in the hours after it goes live, you have a good chance that I'm streaming on Twitch right now.
 I'll just be there to answer questions about everything I explained above or everything Java, really, so you have any, come by and ask.
-Find me at twitch.tv/nipafx - I'll be live until about 1730  UTC, that's 1030 am Pacific time and 1930 European summer time.
+Find me at twitch.tv/nipafx - I'll be live until about 1730 UTC, that's 1030 am Pacific time and 1930 European summer time.
 
 Otherwise, do all the YouTube things, I'll see you again in two weeks
 So long...

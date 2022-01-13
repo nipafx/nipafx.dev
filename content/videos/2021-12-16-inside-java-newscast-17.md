@@ -8,14 +8,6 @@ description: "Project Loom aims to bring structured concurrency to Java, a conce
 featuredImage: inside-java-newscast-17
 ---
 
-<!--
-Cards:
-- google talk
-- JEP Cafe
-- IJN #6
-- IJN #15
--->
-
 ## Intro
 
 Welcome everyone, to the Inside Java Newscast where we cover recent developments in the OpenJDK community.
