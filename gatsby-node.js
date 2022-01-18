@@ -1,24 +1,47 @@
+/*
+When more than 10 event listeners are registered, node emits a warning like this
+(reproduce with `node --trace-warnings node_modules/.bin/gatsby develop`):
+
+(node:64191) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 end listeners added to [PassThrough]. Use emitter.setMaxListeners() to increase limit
+    at _addListener (node:events:465:17)
+    at PassThrough.addListener (node:events:487:10)
+    at PassThrough.Readable.on (node:internal/streams/readable:899:35)
+    at eos (node:internal/streams/end-of-stream:169:10)
+    at pipe (node:internal/streams/pipeline:348:3)
+    at pipelineImpl (node:internal/streams/pipeline:293:9)
+    at pipeline (node:internal/streams/pipeline:146:10)
+    at probeStream (/home/nipa/code/nipafx.dev/node_modules/probe-image-size/stream.js:63:8)
+    at get_image_size (/home/nipa/code/nipafx.dev/node_modules/probe-image-size/index.js:13:12)
+    at getImageSizeAsync (/home/nipa/code/nipafx.dev/node_modules/gatsby-plugin-sharp/index.js:63:28)
+    at getImageMetadata (/home/nipa/code/nipafx.dev/node_modules/gatsby-plugin-sharp/image-data.js:33:39)
+    at generateImageData (/home/nipa/code/nipafx.dev/node_modules/gatsby-plugin-sharp/image-data.js:123:26)
+    at resolver (/home/nipa/code/nipafx.dev/node_modules/gatsby-transformer-sharp/customize-schema.js:605:31)
+    at wrappedTracingResolver (/home/nipa/code/nipafx.dev/node_modules/gatsby/src/schema/resolvers.ts:683:20)
+    at resolveField (/home/nipa/code/nipafx.dev/node_modules/graphql/execution/execute.js:464:18)
+    at executeFields (/home/nipa/code/nipafx.dev/node_modules/graphql/execution/execute.js:292:18)
+
+Setting a slightly higher limit, removes that warning.
+*/
+require(`events`).EventEmitter.defaultMaxListeners = 15;
+
 const fs = require(`fs`)
 const path = require(`path`)
 const { createICalendar } = require(`./src/infra/iCalendar`)
 const { markdownToHtml } = require(`./src/infra/markdownToHtml`)
-const FilterWarningsPlugin = require(`webpack-filter-warnings-plugin`)
 
-exports.onCreateWebpackConfig = ({ actions }) => {
-	actions.setWebpackConfig({
-		plugins: [
-			// Silence mini-css-extract-plugin generating lots of warnings for CSS ordering.
-			// We use CSS modules that should not care for the order of CSS imports, so we
-			// should be safe to ignore these.
-			//
-			// See:
-			// https://github.com/facebook/create-react-app/issues/5372
-			// https://github.com/webpack-contrib/mini-css-extract-plugin/issues/250
-			new FilterWarningsPlugin({
-				exclude: /.*mini-css-extract-plugin.*/,
-			}),
-		],
-	})
+exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
+	// Silence mini-css-extract-plugin generating lots of warnings for CSS ordering.
+	// The site uses CSS modules, so order of CSS imports doesn't matter.
+	//
+	// See:
+	// https://github.com/facebook/create-react-app/issues/5372
+	// https://github.com/webpack-contrib/mini-css-extract-plugin/issues/250
+	// https://stackoverflow.com/a/63128321/2525313 & https://stackoverflow.com/a/68211261/2525313
+	if (stage === `develop` || stage === `build-javascript`) {
+		const config = getConfig()
+		config.plugins.find(plugin => plugin.constructor.name === `MiniCssExtractPlugin`).options.ignoreOrder = true
+		actions.replaceWebpackConfig(config)
+	}
 }
 
 exports.sourceNodes = ({ actions, createContentDigest }) => {
@@ -61,8 +84,8 @@ exports.onCreateNode = ({ node, getNode, actions, createContentDigest }) => {
 		// draft nodes shouldn't show up anywhere during a production build
 		if (node.frontmatter.draft) {
 			console.warn(
-				"Draft: ",
-				node.fileAbsolutePath.substring(node.fileAbsolutePath.lastIndexOf("/") + 1)
+				`Draft: `,
+				node.fileAbsolutePath.substring(node.fileAbsolutePath.lastIndexOf(`/`) + 1)
 			)
 			if (process.env.NODE_ENV === `production`) {
 				deleteNode(node)
@@ -807,7 +830,7 @@ exports.onPostBuild = ({ graphql }) => {
 			}
 		}
 	`).then(({ data }) => {
-		const iCal = createICalendar("", "upcomingMonths", "asc")
+		const iCal = createICalendar(``, `upcomingMonths`, `asc`)
 		return fs.writeFileSync(`./public/${data.site.siteMetadata.calendar}`, iCal.toString())
 	})
 }
