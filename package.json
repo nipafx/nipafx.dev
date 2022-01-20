@@ -39,7 +39,7 @@
 		"react-helmet": "^6.1.0",
 		"rehype-react": "^7.0.4",
 		"remark": "^11.0.2",
-		"remark-html": "^10.0.0",
+		"remark-html": "^13.0.2",
 		"webpack": "5.66"
 	},
 	"devDependencies": {
