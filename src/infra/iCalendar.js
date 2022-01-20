@@ -49,7 +49,7 @@ const createCalendarEvent = event => {
 exports.createICalendar = (type, time, order, limit) => {
 	const calendar = ical({
 		domain: `nipafx.dev`,
-		name: `Nicolais stream/talk/course schedule`,
+		name: `Nicolai's stream/talk/course schedule`,
 		url: `https://nipafx.dev/schedule.ics`,
 		timezone: `Etc/UTC`,
 		ttl: 60 * 60 * 24,
