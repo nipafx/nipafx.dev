@@ -118,7 +118,7 @@ Some agreed...
 ... some didn't ...
 
 > \[Returning the user provided default value\] prevents people from distinguishing between a stream that is empty and a stream containing only the "orElse" value.
-Just like Map.get() prevents distinguishing between "not there" and "mapped to null."
+> Just like Map.get() prevents distinguishing between "not there" and "mapped to null."
 >
 > [Brian Goetz, Mar 6 2013](http://mail.openjdk.java.net/pipermail/lambda-libs-spec-experts/2013-March/001437.html)
 
@@ -139,7 +139,7 @@ Then the users would be able to decide whether they want to use `Optional` or no
 But not everyone aggreed:
 
 > \[...\] the foremost reason I see for not allowing an Optional-free usage style is that people will adopt it rather than use Optional.
-They will see it as a license to put null everywhere, and they'll get NPEs way downstream and blame it on Java.
+> They will see it as a license to put null everywhere, and they'll get NPEs way downstream and blame it on Java.
 >
 > [Tim Peierls, Mar 6 2013](http://mail.openjdk.java.net/pipermail/lambda-libs-spec-experts/2013-March/001432.html)
 
@@ -168,8 +168,7 @@ Others feared that any discouragement would be ignored:
 
 > I don't like it; I think it's going to result in things like: `Map<String,Optional<List<Optional<String>>>>`
 >
-> [David M.
-Lloyd, Sep 14 2012](http://mail.openjdk.java.net/pipermail/lambda-libs-spec-experts/2012-September/000013.html)
+> [David M. Lloyd, Sep 14 2012](http://mail.openjdk.java.net/pipermail/lambda-libs-spec-experts/2012-September/000013.html)
 
 Which was answered:
 
