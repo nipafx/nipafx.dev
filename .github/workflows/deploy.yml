@@ -17,11 +17,9 @@ jobs:
       - name: cache node modules
         uses: actions/cache@v2
         env:
-          cache-name: cache-node-modules
+          cache-name: cache-npm-folder
         with:
-          path: |
-            ~/.npm
-            node_modules
+          path: ~/.npm
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
       - name: install dependencies
         # re `ci` see https://stackoverflow.com/a/53325242/2525313
