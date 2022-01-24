@@ -191,7 +191,7 @@ JEP 395 says:
 
 Where _nominal_ means that records are identified by their name and not their structure.
 That way you can't mix up two different record types that both model **int × int**, for example `Pair(int first, int second)` and `Range(int low, int high)`.
-Also, we access the record components not by index (not `range.get1()`) but by name (`record.low()`).
+Also, we access the record components not by index (not `range.get1()`) but by name (`range.low()`).
 
 (Beyond that, a record's accessors and its canonical constructor form an _embedding-projection pair_, but I hardly understand that.
 Definitely too little to explain.)
@@ -241,7 +241,7 @@ Range newRange = range with { low = 0; }
 // newRange: [0; 10]
 ```
 
-The language can derive `with` expressions precisely because `Range`s API is aligned with its declaration.
+The language can derive `with` expressions precisely because `Range`'s API is aligned with its declaration.
 And similar to before, we can rely on `newRange` being exactly like `range` except for `low` - there can be no hidden state that we failed to transport.
 And the language really doesn't have to do much here:
 
@@ -249,7 +249,7 @@ And the language really doesn't have to do much here:
 * execute the `with` block
 * pass the variables to the canonical constructor
 
-(Note that this feature is far from being a reality and might get dropped or change considerably.)
+(Note that this feature is far from being a reality and might change considerably or even get dropped.)
 
 ### Serialization
 
