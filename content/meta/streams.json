@@ -722,8 +722,8 @@
 		},
 		{
 			"time": "27.01.2022 1800",
-			"title": "Loom and Valhalla // Gunnar Morling",
-			"description": "I'll present Gunnar (and you?) with a bit on Project Loom (its proposals and the code I wrote for them) and when he gets bored, we switch to Project Valhalla and try out the recent EA build."
+			"title": "Project Loom // Gunnar Morling",
+			"description": "I'll present Gunnar (and you?) with what Project Loom is about - its proposals and the code I wrote for them."
 		},
 		{
 			"time": "03.02.2022 1800",
@@ -731,9 +731,14 @@
 			"description": "Working on PRs, issues, and maybe new extensions"
 		},
 		{
-			"time": "10.02.2022 1800",
+			"time": "05.02.2022 1200",
 			"title": "Java Ecosystem Map",
 			"description": "Trying to present a nice, snappy, interactive graph that visualizes the Java ecosystem"
+		},
+		{
+			"time": "10.02.2022 1800",
+			"title": "NIO Hands on Guide // Elliot Barlas",
+			"description": "Direct NIO is very performant, but not exactly easy to use - Elliot is here to get us started by live-coding a client and server."
 		},
 		{
 			"time": "17.02.2022 1800",
@@ -743,7 +748,7 @@
 		{
 			"time": "24.02.2022 1800",
 			"title": "Project Valhalla // Gunnar Morling",
-			"description": "Gunnar and I explore  Project Valhalla, going over its proposals and experimenting with its early-access build."
+			"description": "Gunnar and I explore Project Valhalla, going over its proposals and experimenting with its early-access build."
 		}
 	]
 }
