@@ -384,6 +384,12 @@
 			"url": "https://www.youtube.com/watch?v=4Y3LijiBxRA",
 			"title": "Java's Plans for 2022 - Inside Java Newscast #18",
 			"thumbnail": "inside-java-newscast-18"
+		},
+		{
+			"slug": "inside-java-newscast-19",
+			"url": "https://www.youtube.com/watch?v=9R8G8Ehzn8o",
+			"title": "Where to use Optional - Inside Java Newscast #19",
+			"thumbnail": "inside-java-newscast-19"
 		}
 	]
 }

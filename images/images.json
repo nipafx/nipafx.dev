@@ -2728,5 +2728,21 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "java-optional-opinions",
+		"credits": {
+			"author": {
+				"name": "Ralph Klein",
+				"url": "https://pixabay.com/users/fotosforyou_rk-2368449/"
+			},
+			"source": {
+				"url": "https://pixabay.com/photos/ant-insect-macro-animal-ant-hill-1350089/"
+			},
+			"license": {
+				"name": "CC0",
+				"url": "http://creativecommons.org/publicdomain/zero/1.0"
+			}
+		}
 	}
 ]
