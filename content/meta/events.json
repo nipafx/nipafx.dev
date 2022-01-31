@@ -104,6 +104,17 @@
 				"text": "register",
 				"info": "https://build-up.cloud-builders.tech/en"
 			}
+		},
+		{
+			"time": "30.01.2022 2100 Asia/Dhaka",
+			"title": "Interview with JUGBD",
+			"description": "We will discuss the recent advancement and innovations happening in the Java world in an informal discussion where we will focus on his work at Oracle helping the Java community and take questions from the audience related to Java.",
+			"url": "https://jugbd.org/",
+			"location": {
+				"type": "virtual",
+				"text": "on YouTube",
+				"info": "https://www.youtube.com/watch?v=YWUSkm68TkU"
+			}
 		}
 	]
 }
