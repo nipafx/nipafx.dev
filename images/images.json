@@ -2744,5 +2744,21 @@
 				"url": "http://creativecommons.org/publicdomain/zero/1.0"
 			}
 		}
+	},
+	{
+		"slug": "javadoc-snippets-maven",
+		"credits": {
+			"author": {
+				"name": "Kelly Sikkema",
+				"url": "https://unsplash.com/@kellysikkema"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/HHtzGcZkRZY"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]

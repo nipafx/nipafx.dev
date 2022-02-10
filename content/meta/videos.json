@@ -390,6 +390,12 @@
 			"url": "https://www.youtube.com/watch?v=9R8G8Ehzn8o",
 			"title": "Where to use Optional - Inside Java Newscast #19",
 			"thumbnail": "inside-java-newscast-19"
+		},
+		{
+			"slug": "inside-java-newscast-20",
+			"url": "https://www.youtube.com/watch?v=m2cVOYuVs1U",
+			"title": "Compiled & Tested Code In Javadoc - Inside Java Newscast #20",
+			"thumbnail": "inside-java-newscast-20"
 		}
 	]
 }
