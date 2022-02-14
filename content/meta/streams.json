@@ -746,9 +746,39 @@
 			"description": "Working on PRs, issues, and maybe new extensions"
 		},
 		{
-			"time": "24.02.2022 1800",
+			"time": "24.02.2022 1900",
 			"title": "Project Valhalla // Gunnar Morling",
 			"description": "Gunnar and I explore Project Valhalla, going over its proposals and experimenting with its early-access build."
+		},
+		{
+			"time": "03.03.2022 1800",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "10.03.2022 1930",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "13.03.2022 0900",
+			"title": "Java Ecosystem Map",
+			"description": "Adding explanations to [javamap.dev](https://javamap.dev), an interactive graph that visualizes the Java ecosystem"
+		},
+		{
+			"time": "17.03.2022 1800",
+			"title": "NIO Hands on Guide // Elliot Barlas",
+			"description": "Direct NIO is very performant, but not exactly easy to use - Elliot is here to get us started by live-coding a client and server."
+		},
+		{
+			"time": "22.03.2022 1800",
+			"title": "Java 18 AMA",
+			"description": "Java 18 comes out with new features and additions - ask me anything about that"
+		},
+		{
+			"time": "24.03.2022 1930",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
 		}
 	]
 }
