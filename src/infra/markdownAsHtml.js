@@ -5,7 +5,7 @@ import { markdownToHtml } from "./markdownToHtml"
 /* WARNING:
 	This component does not work well if a child string contains
 	newlines. They will be stripped and the result will have no
-	spaces in their place.It also can't run the remark used to,
+	spaces in their place. It also can't run the remark used to,
 	e.g. apply inlineCodeLanguage.
 	It is probably best to use it as little as possible. Remember
 	that if custom HTML tags (like `<admonition>`) are followed

@@ -1,4 +1,4 @@
-const feed = require("./src/infra/feed")
+const feed = require(`./src/infra/feed`)
 
 module.exports = {
 	siteMetadata: {
@@ -155,7 +155,7 @@ module.exports = {
 			resolve: `gatsby-transformer-json`,
 		},
 		{
-			resolve: "gatsby-plugin-react-svg",
+			resolve: `gatsby-plugin-react-svg`,
 			options: {
 				rule: {
 					include: /src\/images/,
@@ -179,21 +179,21 @@ module.exports = {
 						resolve: `gatsby-remark-promote-tags`,
 						options: {
 							tags: [
-								"admonition",
-								"calendar",
-								"contentimage",
-								"contentvideo",
-								"coursedetails",
-								"postlist",
-								"pullquote",
-								"repolist",
-								"snippet",
+								`admonition`,
+								`calendar`,
+								`contentimage`,
+								`contentvideo`,
+								`coursedetails`,
+								`postlist`,
+								`pullquote`,
+								`repolist`,
+								`snippet`,
 							],
 						},
 					},
 					{
 						// use before prismjs (https://www.gatsbyjs.org/packages/gatsby-remark-autolink-headers/#how-to-use)
-						resolve: "gatsby-remark-autolink-headers",
+						resolve: `gatsby-remark-autolink-headers`,
 						options: {
 							// same icon is used in `headings.js`
 							icon: `▚`,
@@ -209,21 +209,21 @@ module.exports = {
 					{
 						resolve: `gatsby-remark-add-inline-code-language`,
 						options: {
-							defaultInlineLanguage: "java",
-							inlineCodeMarker: "§",
+							defaultInlineLanguage: `java`,
+							inlineCodeMarker: `§`,
 						},
 					},
 					{
 						resolve: `gatsby-remark-prismjs`,
 						options: {
-							classPrefix: "language-",
+							classPrefix: `language-`,
 							// This is used to allow setting a language for inline code
 							// (i.e. single backticks) by creating a separator.
-							inlineCodeMarker: "§",
+							inlineCodeMarker: `§`,
 							showLineNumbers: false,
 							languageExtensions: [
 								{
-									extend: "java",
+									extend: `java`,
 									definition: {
 										// This setting overrides the existing keyword matcher; this is hence
 										// a modified version of node_modules/prismjs/components/prism-java.js
@@ -242,27 +242,27 @@ module.exports = {
 		{
 			// pull in FontAwesome CSS during build
 			// https://medium.com/@johnny02/how-to-add-font-awesome-to-a-gatsby-site-89da940924d5
-			resolve: "gatsby-plugin-fontawesome-css",
+			resolve: `gatsby-plugin-fontawesome-css`,
 		},
 		{
-			resolve: "gatsby-plugin-react-helmet",
+			resolve: `gatsby-plugin-react-helmet`,
 		},
 		{
-			resolve: "gatsby-plugin-force-trailing-slashes",
+			resolve: `gatsby-plugin-force-trailing-slashes`,
 		},
 		{
-			resolve: "gatsby-plugin-matomo",
+			resolve: `gatsby-plugin-matomo`,
 			options: {
-				siteId: "1",
-				matomoUrl: "https://matomo.nipafx.dev",
-				siteUrl: "https://nipafx.dev",
+				siteId: `1`,
+				matomoUrl: `https://matomo.nipafx.dev`,
+				siteUrl: `https://nipafx.dev`,
 				disableCookies: true,
 				// activate to run on localhost (and turn off do-not-track)
 				// dev: true,
 			},
 		},
 		{
-			resolve: "gatsby-plugin-sitemap",
+			resolve: `gatsby-plugin-sitemap`,
 		},
 		{
 			resolve: `gatsby-plugin-feed`,
@@ -290,7 +290,7 @@ module.exports = {
 				short_name: `nipafx.dev`,
 				description: `Website of Nicolai (aka nipafx), a Java enthusiast with a passion for learning and sharing, online and offline`,
 				start_url: `/`,
-				icon: "src/images/favicon.png",
+				icon: `src/images/favicon.png`,
 				background_color: `#262429`,
 				theme_color: `#69ea7d`,
 				display: `minimal-ui`,
@@ -303,7 +303,7 @@ module.exports = {
 			options: {
 				headers: {
 					"/*": [
-						// apparently, "same-origin" is the default, which I find too restrictive
+						// apparently, `same-origin` is the default, which I find too restrictive
 						`Referrer-Policy: no-referrer-when-downgrade`
 					]
 				}
