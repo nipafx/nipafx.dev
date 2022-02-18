@@ -1873,6 +1873,22 @@
 		},
 		{
 			"event": {
+				"name": "JavaLand",
+				"url": "http://www.javaland.eu/de/home/",
+				"image": "javaland"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"program": "https://shop.doag.org/javaland/2022/agenda/",
+					"time": "15.03.2022 1500 Europe/Berlin",
+					"locationText": "Brühl, Phantasialand, Wintergarten"
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Jfokus",
 				"url": "https://www.jfokus.se/",
 				"image": "jfokus-2022"
