@@ -402,6 +402,12 @@
 			"url": "https://www.youtube.com/watch?v=a8OdwUiSnXw",
 			"title": "State of Pattern Matching with Brian Goetz",
 			"thumbnail": "brian-goetz-pattern-matching-26h"
+		},
+		{
+			"slug": "inside-java-newscast-21",
+			"url": "https://www.youtube.com/watch?v=Nu225G7pMHw",
+			"title": "All About JDK 18 - Inside Java Newscast #21",
+			"thumbnail": "inside-java-newscast-21"
 		}
 	]
 }
