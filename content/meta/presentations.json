@@ -1889,6 +1889,22 @@
 		},
 		{
 			"event": {
+				"name": "Devoxx France",
+				"url": "https://www.devoxx.fr/en/",
+				"image": "devoxx-fr"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"programEntry": "https://cfp.devoxx.fr/2022/talk/VIN-6950/Java_Next_-_From_Amber_to_Loom,_from_Panama_to_Valhalla",
+					"time": "21.04.2022 1530 Europe/Paris",
+					"locationText": "Paris, Palais des Congrès"
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Jfokus",
 				"url": "https://www.jfokus.se/",
 				"image": "jfokus-2022"
