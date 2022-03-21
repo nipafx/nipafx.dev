@@ -1890,6 +1890,21 @@
 		},
 		{
 			"event": {
+				"name": "Stockholm JVM JUG",
+				"url": "https://www.meetup.com/stockholm-jvm-jug/",
+				"image": "jug-stockholm"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-modules-irl",
+					"title": "Java Modules in Real Life",
+					"time": "29.03.2022 1800 Europe/Stockholm",
+					"locationText": "Online"
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Devoxx France",
 				"url": "https://www.devoxx.fr/en/",
 				"image": "devoxx-fr"
