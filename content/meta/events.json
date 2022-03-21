@@ -115,6 +115,16 @@
 				"text": "on YouTube",
 				"info": "https://www.youtube.com/watch?v=YWUSkm68TkU"
 			}
+		},
+		{
+			"time": "22.03.2022 2000 UTC",
+			"title": "Java 18 AMA on Twitter",
+			"description": "And if I'm not enough for you, there's this Twitter Space with Billy Korando and a few OpenJDK developers where we talk about JDK 18 nd answer all your questions about it.",
+			"location": {
+				"type": "virtual",
+				"text": "on Twitter",
+				"info": "https://twitter.com/i/spaces/1PlKQaZOqzDKE"
+			}
 		}
 	]
 }
