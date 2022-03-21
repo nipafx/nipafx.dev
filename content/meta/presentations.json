@@ -1883,7 +1883,8 @@
 					"title": "Java Next",
 					"program": "https://shop.doag.org/javaland/2022/agenda/",
 					"time": "15.03.2022 1500 Europe/Berlin",
-					"locationText": "Brühl, Phantasialand, Wintergarten"
+					"locationText": "Brühl, Phantasialand, Wintergarten",
+					"slides": "https://slides.nipafx.dev/java-next/2022-03-15-javaland"
 				}
 			]
 		},
