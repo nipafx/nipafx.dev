@@ -13,7 +13,7 @@ featuredImage: inside-java-newscast-21
 What's happening in Ukraine right now is terrible and saddening.
 But I'm proud that on behalf of its 150,000 employees around the world and in support of both the elected government of Ukraine and for the people of Ukraine, Oracle suspended all operations in the Russian Federation, while our operations in Ukraine are active, and we are doing everything we can to support our Ukrainian customers.
 
-I'm not personally involved in those efforts and, like most of us, can do little to support Ukranians.
+I'm not personally involved in those efforts and, like most of us, can do little to support Ukrainians.
 One thing we can do is donate to NGOs with feet on the ground, like Save The Children Ukraine or Red Cross for Ukraine, that can use that money to directly help people in need.
 If you're living in Europe, particularly Eastern Europe, you may also be able to help with in-kind donations or even volunteer work to help refugees who are arriving in your town.
 If you're in a position to help in those or other ways, it would mean the world to me.
@@ -113,7 +113,7 @@ There are [a few changes of the API in JDK 18][JEP 419]:
 		.get(ValueLayout.JAVA_INT, 100);
 	```
 * a new API to copy Java arrays to and from memory segments
-    ```java
+	```java
 	MemorySegment segment = // ...
 	int[] array = // ...
 	// before

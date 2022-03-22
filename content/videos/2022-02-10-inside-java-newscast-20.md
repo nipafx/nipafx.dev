@@ -59,13 +59,47 @@ So here's what you do instead:
 
 1. you create a demo class in a tested source tree
 2. in that demo class, you write a test for your functionality
+	```java
+	import org.junit.jupiter.api.Test;
+
+	class SnippetDocsDemo {
+
+		@Test
+		void constructorDemo() {
+			// @start region="constructor"
+			// How to call the constructor:
+			SnippetDocs docs = new SnippetDocs();
+			// @end
+
+			// assert correct behavior...
+		}
+
+	}
+	```
 3. you reference that test in your Javadoc with the new `@snippet` tag
+	```java
+	/**
+	* This class has a constructor
+	* and here's how you call it:
+	*
+	* {@snippet
+	*     class="SnippetDocsDemo"
+	*     region="constructor"
+	* }
+	*/
+	public class SnippetDocs { ... }
+	```
 
 Let's go into a bit of detail on each step, starting at the end.
 
 The `@snippet` tag accepts a few attributes that are expressed in simple `key=value` pairs.
 The most important thing to configure is where to find your demo class, which you can do with `class=$NAME_OF_THE_CLASS`.
 Now, in order for the `javadoc` tool to know where to look for these demo classes, you have to use the `--snippet-path` option with the path to the source tree you put the demo classes into.
+
+```bash
+javadoc # options...
+	--snippet-path ./src/demo/java
+```
 
 With these two ingredients, the `class` attribute in the `@snippet` tag and the path as `javadoc` command line option, you're getting your first results:
 The complete demo class is embedded in the Javadoc.
@@ -78,6 +112,8 @@ Simply add `region="$REGION_NAME"` to the tag, then head over to your demo file 
 * after the last line you want to show, simple write `@end`
 
 There you go, now just the juicy part shows up!
+
+<contentimage slug="javadoc-simple-snippet"></contentimage>
 
 That covers the third step, now lets take a look at the second.
 Technically, you don't need to write tests of course - just regular code suffices, but I think it's important to assert that the code actually does what the documentation claims.
