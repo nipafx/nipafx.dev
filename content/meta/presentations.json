@@ -1937,6 +1937,22 @@
 		},
 		{
 			"event": {
+				"name": "JavaDay @ JUG Karlsruhe",
+				"url": "http://jug-karlsruhe.de/",
+				"image": "javaday-2022"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"announcement": "http://jug-karlsruhe.de/",
+					"time": "26.04.2022 2000 Europe/Berlin",
+					"locationText": "Disy, Zimmerstraße 3, Karlsruhe"
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Jfokus",
 				"url": "https://www.jfokus.se/",
 				"image": "jfokus-2022"
