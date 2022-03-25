@@ -774,6 +774,26 @@
 			"time": "24.03.2022 1800",
 			"title": "JUnit Pioneer",
 			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "31.03.2022 1700",
+			"title": "Java X Feature Demo",
+			"description": "My feature demo is out of date and I want to spend some time moving it forward towards 18."
+		},
+		{
+			"time": "10.04.2022 0800",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "14.04.2022 1700",
+			"title": "Modularizing Eclipse Collections",
+			"description": "Don Raab, Sirisha Pratha (both of Eclipse Collection fame), and I try to turn EC JARs into modules."
+		},
+		{
+			"time": "28.04.2022 1830",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
 		}
 	]
 }
