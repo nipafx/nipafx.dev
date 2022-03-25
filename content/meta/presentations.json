@@ -781,7 +781,7 @@
 			"event": {
 				"name": "ObjektForum Stuttgart",
 				"url": "http://www.jugs.org/",
-				"image": "jug-stutgart"
+				"image": "jug-stuttgart"
 			},
 			"presentations": [
 				{
@@ -1416,7 +1416,7 @@
 			"event": {
 				"name": "JUG Stuttgart",
 				"url": "http://www.jugs.org/",
-				"image": "jug-stutgart"
+				"image": "jug-stuttgart"
 			},
 			"presentations": [
 				{
@@ -1916,6 +1916,22 @@
 					"programEntry": "https://cfp.devoxx.fr/2022/talk/VIN-6950/Java_Next_-_From_Amber_to_Loom,_from_Panama_to_Valhalla",
 					"time": "21.04.2022 1530 Europe/Paris",
 					"locationText": "Paris, Palais des Congrès"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Stuttgart",
+				"url": "https://www.jugs.org/",
+				"image": "jug-stuttgart"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-ama",
+					"title": "Java Next",
+					"announcement": "https://www.jugs.org/va2022/04-01.html",
+					"time": "01.04.2022 1530 Europe/Berlin",
+					"locationText": "Optica, Marienstr. 10, 70178 Stuttgart"
 				}
 			]
 		},
