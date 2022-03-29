@@ -1966,6 +1966,22 @@
 					"locationText": "Stockholm Waterfront Conference, Room A1"
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "Devoxx UK",
+				"url": "https://www.devoxx.co.uk",
+				"image": "devoxx-uk"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"programEntry": "https://www.devoxx.co.uk/talk/?id=5270",
+					"time": "11.05.2022 1340 Europe/London",
+					"locationText": "Business Design Centre, Gallery Hall"
+				}
+			]
 		}
 	]
 }
