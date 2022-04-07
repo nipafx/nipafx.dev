@@ -408,6 +408,12 @@
 			"url": "https://www.youtube.com/watch?v=Nu225G7pMHw",
 			"title": "All About JDK 18 - Inside Java Newscast #21",
 			"thumbnail": "inside-java-newscast-21"
+		},
+		{
+			"slug": "inside-java-newscast-23",
+			"url": "https://www.youtube.com/watch?v=6dpHdo-UnCg",
+			"title": "Virtual Thread Deep Dive - Inside Java Newscast #23",
+			"thumbnail": "inside-java-newscast-23"
 		}
 	]
 }
