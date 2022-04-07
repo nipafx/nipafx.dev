@@ -125,9 +125,9 @@ $ java -Xlog:gc*=debug -version
 
 Using selectors, there are three easy steps to get to know a subsystem of the JVM:
 
--   Find interesting tags in the output of `java -Xlog:help`.
--   Use them with `-Xlog:tag_1*,tag_2*,tag_n*` to display all `info` messages that were tagged with any of them.
--   Selectively switch to lower log levels with `-Xlog:tag_1*=debug`.
+- find interesting tags in the output of `java -Xlog:help`
+- use them with `-Xlog:tag_1*,tag_2*,tag_n*` to display all `info` messages that were tagged with any of them
+- selectively switch to lower log levels with `-Xlog:tag_1*=debug`
 
 ## Defining Where Messages Should Go
 

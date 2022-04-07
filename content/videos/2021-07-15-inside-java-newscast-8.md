@@ -1,6 +1,6 @@
 ---
 title: "Incremental Evolution, Pattern Switches vs Visitor Pattern, and Wayland Support - Inside Java Newscast #8"
-tags: [java-17, project-panama, modules, pattern-matching, sealed, patterns]
+tags: [java-17, project-panama, pattern-matching, sealed, patterns]
 date: 2021-07-15
 slug: inside-java-newscast-8
 videoSlug: inside-java-newscast-8
