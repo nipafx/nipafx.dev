@@ -2760,5 +2760,21 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "java-switch",
+		"credits": {
+			"author": {
+				"name": "Jean-Philippe Delberghe",
+				"url": "https://unsplash.com/@jipy32"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/Wec3M4dY_LE"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
