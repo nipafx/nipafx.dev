@@ -1899,7 +1899,8 @@
 					"talk": "talk-java-modules-irl",
 					"title": "Java Modules in Real Life",
 					"time": "29.03.2022 1800 Europe/Stockholm",
-					"locationText": "Online"
+					"locationText": "Online",
+					"slides": "https://slides.nipafx.dev/modules-irl/2022-03-29-jug-stockholm"
 				}
 			]
 		},
@@ -1915,7 +1916,8 @@
 					"title": "Java Next",
 					"programEntry": "https://cfp.devoxx.fr/2022/talk/VIN-6950/Java_Next_-_From_Amber_to_Loom,_from_Panama_to_Valhalla",
 					"time": "21.04.2022 1530 Europe/Paris",
-					"locationText": "Paris, Palais des Congrès"
+					"locationText": "Paris, Palais des Congrès, Room 243",
+					"slides": "https://slides.nipafx.dev/java-next/2022-04-21-devoxxfr"
 				}
 			]
 		},
