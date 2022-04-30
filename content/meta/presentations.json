@@ -1984,6 +1984,22 @@
 					"locationText": "Business Design Centre, Gallery Hall"
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "Javaday Istanbul",
+				"url": "https://www.javaday.istanbul/",
+				"image": "javaday-istanbul"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"programEntry": "https://www.javaday.istanbul/nicolai-parlog-speaker",
+					"time": "28.05.2022 1555 Europe/Istanbul",
+					"locationText": "Hilton Hotel Kozyatağı, Multi Room 3"
+				}
+			]
 		}
 	]
 }
