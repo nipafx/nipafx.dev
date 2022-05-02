@@ -414,6 +414,12 @@
 			"url": "https://www.youtube.com/watch?v=6dpHdo-UnCg",
 			"title": "Virtual Thread Deep Dive - Inside Java Newscast #23",
 			"thumbnail": "inside-java-newscast-23"
+		},
+		{
+			"slug": "inside-java-newscast-24",
+			"url": "https://www.youtube.com/watch?v=ENX5kHblFlY",
+			"title": "WHEN And NULL In Pattern Matching - Inside Java Newscast #24",
+			"thumbnail": "inside-java-newscast-24"
 		}
 	]
 }
