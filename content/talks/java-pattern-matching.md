@@ -1,5 +1,5 @@
 ---
-title: "Pattern Matching in Java (17)"
+title: "Pattern Matching in Java (19)"
 tags: [pattern-matching, project-amber]
 date: 2021-09-16
 slug: talk-java-pattern-matching
