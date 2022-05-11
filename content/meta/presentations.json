@@ -1987,6 +1987,22 @@
 		},
 		{
 			"event": {
+				"name": "JPrime",
+				"url": "https://jprime.io",
+				"image": "jprime"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"programEntry": "https://jprime.io/agenda/149",
+					"time": "26.05.2022 1405 Europe/Sofia",
+					"locationText": "Tsarigradsko Shosse 115B, Sofia, Hall A"
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Javaday Istanbul",
 				"url": "https://www.javaday.istanbul/",
 				"image": "javaday-istanbul"
@@ -1998,6 +2014,22 @@
 					"programEntry": "https://www.javaday.istanbul/nicolai-parlog-speaker",
 					"time": "28.05.2022 1555 Europe/Istanbul",
 					"locationText": "Hilton Hotel Kozyatağı, Multi Room 3"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Darmstadt",
+				"url": "https://www.javaday.istanbul/",
+				"image": "jug-darmstadt"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"announcement": "https://www.jug-da.de/2022/09/JDK-Tools-Java-Next/",
+					"time": "22.09.2022 1830 Europe/Berlin",
+					"locationText": "t.b.d."
 				}
 			]
 		}
