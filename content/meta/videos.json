@@ -420,6 +420,12 @@
 			"url": "https://www.youtube.com/watch?v=ENX5kHblFlY",
 			"title": "WHEN And NULL In Pattern Matching - Inside Java Newscast #24",
 			"thumbnail": "inside-java-newscast-24"
+		},
+		{
+			"slug": "java-next-jfokus-2022",
+			"url": "https://www.youtube.com/watch?v=EVZnk1ZyYeQ",
+			"title": "Java Next - From Amber to Loom, from Panama to Valhalla",
+			"thumbnail": "java-next-jfokus-2022"
 		}
 	]
 }

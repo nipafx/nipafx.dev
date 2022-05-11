@@ -1917,7 +1917,8 @@
 					"programEntry": "https://cfp.devoxx.fr/2022/talk/VIN-6950/Java_Next_-_From_Amber_to_Loom,_from_Panama_to_Valhalla",
 					"time": "21.04.2022 1530 Europe/Paris",
 					"locationText": "Paris, Palais des Congrès, Room 243",
-					"slides": "https://slides.nipafx.dev/java-next/2022-04-21-devoxxfr"
+					"slides": "https://slides.nipafx.dev/java-next/2022-04-21-devoxxfr",
+					"video": "https://www.youtube.com/watch?v=LoaGT6R-rZo"
 				}
 			]
 		},
@@ -1949,7 +1950,8 @@
 					"title": "Java Next",
 					"announcement": "http://jug-karlsruhe.de/",
 					"time": "26.04.2022 2000 Europe/Berlin",
-					"locationText": "Disy, Zimmerstraße 3, Karlsruhe"
+					"locationText": "Disy, Zimmerstraße 3, Karlsruhe",
+					"slides": "https://slides.nipafx.dev/java-next/2022-04-26-jug-karlsruhe"
 				}
 			]
 		},
@@ -1965,7 +1967,9 @@
 					"title": "Java Next",
 					"programEntry": "https://www.jfokus.se/talks/869",
 					"time": "04.05.2022 1400 Europe/Stockholm",
-					"locationText": "Stockholm Waterfront Conference, Room A1"
+					"locationText": "Stockholm Waterfront Conference, Room A1",
+					"slides": "https://slides.nipafx.dev/java-next/2022-05-04-jfokus",
+					"video": "https://www.youtube.com/watch?v=EVZnk1ZyYeQ"
 				}
 			]
 		},
@@ -1981,7 +1985,8 @@
 					"title": "Java Next",
 					"programEntry": "https://www.devoxx.co.uk/talk/?id=5270",
 					"time": "11.05.2022 1340 Europe/London",
-					"locationText": "Business Design Centre, Gallery Hall"
+					"locationText": "Business Design Centre, Gallery Hall",
+					"slides": "https://slides.nipafx.dev/java-next/2022-05-11-devoxxuk"
 				}
 			]
 		},
