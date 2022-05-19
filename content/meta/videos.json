@@ -426,6 +426,12 @@
 			"url": "https://www.youtube.com/watch?v=EVZnk1ZyYeQ",
 			"title": "Java Next - From Amber to Loom, from Panama to Valhalla",
 			"thumbnail": "java-next-jfokus-2022"
+		},
+		{
+			"slug": "inside-java-newscast-25",
+			"url": "https://www.youtube.com/watch?v=KuHhUDhIFYs",
+			"title": "News Grab Bag: Loom Virtual Threads, Lilliput, Pattern Matching, ... - Inside Java Newscast #25",
+			"thumbnail": "inside-java-newscast-25"
 		}
 	]
 }
