@@ -2025,6 +2025,22 @@
 		},
 		{
 			"event": {
+				"name": "DevStaff",
+				"url": "https://www.meetup.com/devstaff/",
+				"image": "devstaff"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"programEntry": "https://www.meetup.com/devstaff/events/286142452/",
+					"time": "07.06.2022 1900 Europe/Athens",
+					"locationText": "European Union Agency for Cybersecurity - ENISA, Heraklion, Greece"
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "JUG Darmstadt",
 				"url": "https://www.jug-da.de/",
 				"image": "jug-darmstadt"
@@ -2041,7 +2057,6 @@
 		}
 	],
 	"future-events": [
-		"07./08.06, Kreta",
 		"18.-20.07., JBCN (Barcelona), https://www.jbcnconf.com/2022/talks.html",
 		"28.07., JUG Karlsruhe",
 		"16.08., Software Testing Karlsruhe",
