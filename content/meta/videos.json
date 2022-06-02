@@ -432,6 +432,12 @@
 			"url": "https://www.youtube.com/watch?v=KuHhUDhIFYs",
 			"title": "News Grab Bag: Loom Virtual Threads, Lilliput, Pattern Matching, ... - Inside Java Newscast #25",
 			"thumbnail": "inside-java-newscast-25"
+		},
+		{
+			"slug": "inside-java-newscast-26",
+			"url": "https://www.youtube.com/watch?v=YM0CFX3Ap_g",
+			"title": "Deconstructing Records in Pattern Matching - Inside Java Newscast #26",
+			"thumbnail": "inside-java-newscast-26"
 		}
 	]
 }
