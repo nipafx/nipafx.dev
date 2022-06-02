@@ -102,15 +102,13 @@ I've also noticed that some people already started experimenting with virtual th
 I'll link to a few experiments in a pinned comment, like the one from Elliot Barlas where he achieves 5 million persistent connections with straight-forward Java code or the Helidon team's announcement of Helidon on virtual threads.
 Reply with others, I wanna catch 'em all!
 
-Now, what's next?
-
-<!--
 * Elliot's 5 million persistent connections: https://github.com/ebarlas/project-loom-c5m
 * Elliot's comparison of platform vs virtual threads vs async: https://github.com/ebarlas/project-loom-comparison
 * James Baker's experiments with Jepsen and Foundation DB: https://jbaker.io/2022/05/09/project-loom-for-distributed-systems/
 * Helidon on Loom: https://twitter.com/m0mus/status/1526101284956393472
 * my lab with some simple code snippets: https://github.com/nipafx/loom-lab
--->
+
+Now, what's next?
 
 
 ## Maven Central

@@ -184,7 +184,7 @@ A good alternative to synchronization is a `ReentrantLock`.
 public synchronized String accessResource() {
 	return access();
 }
-
+```
 
 ```java
 // with `ReentrantLock` (not pinning 👍🏾):

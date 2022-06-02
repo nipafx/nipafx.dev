@@ -256,7 +256,6 @@ And there's more...
 > You can include other files than just Java sources.
 > You can add HTML IDs, so URLs can link directly to a snippet.
 
-
 ... that was from [the last Newscast][ijn#20], which goes into a lot more details on all of this.
 And keep in mind that all you have to do for that is run the JDK 18 Javadoc tool - you don't have even have to run your entire build on JDK 18, let alone migrate your code base to it.
 For more on that as well as how to configure all this with Maven, check out [my blog post on the topic](javadoc-snippets-maven).

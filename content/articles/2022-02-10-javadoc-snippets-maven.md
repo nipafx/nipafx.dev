@@ -1,6 +1,6 @@
 ---
 title: "Configuring Maven For Compiled And Tested Code In Javadoc"
-tags: [java-18, documentation]
+tags: [java-18, documentation, tools]
 date: 2022-02-10
 slug: javadoc-snippets-maven
 description: "For JDK 18's / JEP 413's embedded snippets to be compiled and tested by your Maven build, they need to be added to a source set, Surefire needs to pick them up, and Javadoc needs to know their location - here's how to do that."
