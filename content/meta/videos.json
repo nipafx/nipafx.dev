@@ -438,6 +438,12 @@
 			"url": "https://www.youtube.com/watch?v=YM0CFX3Ap_g",
 			"title": "Deconstructing Records in Pattern Matching - Inside Java Newscast #26",
 			"thumbnail": "inside-java-newscast-26"
+		},
+		{
+			"slug": "inside-java-newscast-27",
+			"url": "https://www.youtube.com/watch?v=UG9nViGZCEw",
+			"title": "Java 19 - The Best Java Release? - Inside Java Newscast #27",
+			"thumbnail": "inside-java-newscast-27"
 		}
 	]
 }
