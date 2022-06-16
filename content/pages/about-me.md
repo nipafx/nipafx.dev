@@ -15,7 +15,9 @@ Words as ones and zeros:
 
 * [blog posts](channel:articles)
 * [regular newsletter](news)
-* occasional article on sites like [InfoQ](https://www.infoq.com/profile/Nicolai-Parlog/) and [SitePoint](https://www.sitepoint.com/author/nicolaip/)
+* [contributions to dev.java](https://dev.java)
+* occasional article on [inside.java](https://inside.java/u/NicolaiParlog/) and [Java Magazine](https://blogs.oracle.com/javamagazine/authors/Blog-Author/CORE52F2E4F4BF0C4B1CA1DFEB616AD77B6F/nicolai-parlog)
+<!-- * occasional article on sites like [InfoQ](https://www.infoq.com/profile/Nicolai-Parlog/) and [SitePoint](https://www.sitepoint.com/author/nicolaip/) -->
 
 Words on dead trees:
 
@@ -25,7 +27,8 @@ Words on dead trees:
 
 Words on camera:
 
-* [YouTube videos](channel:videos)
+* [YouTube videos on my channel](channel:videos)
+* [YouTube videos on the Java channel](https://youtube.com/java)
 * [Twitch live streams](live)
 
 Words in real life:

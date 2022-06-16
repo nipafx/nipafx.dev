@@ -125,7 +125,7 @@ It's all still pretty vague at this point.
 ## Outro
 
 And that's it for this Inside Java Newscast episode - you gotta admit, it was a pretty sick one.
-Id' love to know what you think about JEP 405, so leave a comment below.
+I'd love to know what you think about JEP 405, so leave a comment below.
 Don't forget to share this video with your friends and enemies.
 I'll see you again in two weeks - so long...
 
