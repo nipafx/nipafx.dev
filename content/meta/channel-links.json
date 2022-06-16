@@ -13,6 +13,13 @@
 			"className": "twitter"
 		},
 		{
+			"title": "Mastodon",
+			"fontAwesome": "faMastodon",
+			"url": "https://mastodon.technology/@nipafx",
+			"className": "mastodon",
+			"rel": "me"
+		},
+		{
 			"title": "Discord",
 			"fontAwesome": "faDiscord",
 			"url": "https://discord.com/invite/7m9w8Td",

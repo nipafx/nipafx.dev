@@ -6,6 +6,7 @@ import { Channel, ChannelTag, Tag } from "./taglet"
 
 const Link = ({
 	to,
+	rel,
 	dataChannel,
 	dataTag,
 	onClick,
@@ -24,11 +25,15 @@ const Link = ({
 	className = className || ""
 
 	const external =
-		to.includes("://") || to.startsWith("//") || to.startsWith("mailto") || to.endsWith("feed.xml")
+		to.includes("://") ||
+		to.startsWith("//") ||
+		to.startsWith("mailto") ||
+		to.endsWith("feed.xml")
 	if (external)
 		return (
 			<ExternalLink
 				to={to}
+				rel={rel}
 				dataChannel={dataChannel}
 				dataTag={dataTag}
 				onClick={onClick}
@@ -42,7 +47,13 @@ const Link = ({
 	const id = to.startsWith("#")
 	if (id)
 		return (
-			<a href={to} data-channel={dataChannel} data-tag={dataTag} className={className}>
+			<a
+				href={to}
+				rel={rel}
+				data-channel={dataChannel}
+				data-tag={dataTag}
+				className={className}
+			>
 				{children}
 			</a>
 		)
@@ -93,6 +104,7 @@ const Link = ({
 	return (
 		<InternalLink
 			to={to}
+			rel={rel}
 			data-channel={dataChannel}
 			data-tag={dataTag}
 			className={className}

@@ -69,7 +69,7 @@
 @media all and (min-width: 400px) {
 	.container {
 		/* Xrem to split the list of link icons roughly in half */
-		grid-template-columns: 1fr 7rem;
+		grid-template-columns: 1fr 9rem;
 		grid-template-areas:
 			"logo links"
 			"menu menu";
@@ -84,7 +84,7 @@
 @media all and (min-width: 600px) {
 	.container {
 		/* Yrem to split the list of link texts roughly in half */
-		grid-template-columns: 1fr 22rem;
+		grid-template-columns: 1fr 23rem;
 	}
 
 	.channels {
@@ -97,7 +97,7 @@
 	}
 }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 1200px) {
 	.container {
 		grid-template-columns: auto 1fr;
 		grid-template-areas:

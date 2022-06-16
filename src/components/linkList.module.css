@@ -51,16 +51,16 @@
 	}
 }
 
-@media all and (min-width: 1000px) {
-	.textsFrom1000 .icon {
+@media all and (min-width: 1200px) {
+	.textsFrom1200 .icon {
 		display: none;
 	}
 
-	.textsFrom1000 .text {
+	.textsFrom1200 .text {
 		display: unset;
 	}
 
-	.textsFrom1000 > *:not(:last-child):after {
+	.textsFrom1200 > *:not(:last-child):after {
 		color: var(--alt-color);
 		white-space: unset;
 		content: " // ";
