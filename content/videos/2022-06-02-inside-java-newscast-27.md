@@ -261,6 +261,15 @@ try (var executor = Executors
 
 Your interaction with virtual threads will likely be very indirect.
 While there's a new `Thread.Builder` API and new methods `Thread.ofVirtual` and `Thread.startVirtualThread(Runnable)`, you probably won't use them very often.
+
+```java
+Runnable runnable = // ...
+Thread thread = Thread
+	.ofVirtual()
+	.name("duke")
+	.unstarted(runnable);
+```
+
 A good way to start multiple virtual threads is with the `Executor` that uses a virtual thread per task.
 And I'll come to an even better way in a minute.
 But most threads in your app will likely not be created by you but by your web server.
@@ -283,6 +292,33 @@ Consequently, the lifetimes of all concurrent subtasks are confined to a single 
 
 To that end, the parent task creates a new scope, decides on the error handling it needs, spawns the subtasks, and then awaits their completion.
 It can process any errors that occurred or, if all went well, compose the subtasks' results to its result.
+
+```java
+UserOrder load(long userId, long orderId)
+		throws InterruptedException {
+	try (var scope =
+			new StructuredTaskScope
+				.ShutdownOnFailure()) {
+		// spawn subtasks
+		Future<String> user = scope
+			.fork(() -> findUser(userId));
+		Future<Integer> order = scope
+			.fork(() -> fetchOrder(orderId));
+
+		// wait for them to complete...
+		scope.join();
+		// ... and throw errors if any
+		scope.throwIfFailed();
+
+		// here, both subtasks succeeded
+		return new UserOrder(
+			user.resultNow(),
+			order.resultNow());
+	} catch (ExecutionException ex) {
+		// handle errors if any
+	}
+}
+```
 
 Nesting subtasks in a parent's block induces a hierarchy that can be represented at run time when structured concurrency builds a tree-shaped hierarchy of tasks.
 This tree is the concurrent counterpart to a single thread's call stack and tools can use it to present subtasks as children of their parent tasks.
@@ -348,6 +384,23 @@ Then you write a loop that takes steps of that length, so that in each iteration
 
 At run time, the just-in-time compiler will create machine code specifically for the CPU that executes this, thus guaranteeing optimal performance on all platforms.
 Neat, huh?
+
+```java
+static final VectorSpecies<Float> VS =
+	FloatVector.SPECIES_PREFERRED;
+
+// assume a, b, c have same length,
+// which is a multiple of the vector length
+void compute(float[] a, float[] b, float[] c) {
+	int upperBound = VS.loopBound(a.length);
+	for (i = 0; i < upperBound; i += VS.length()) {
+		var va = FloatVector.fromArray(VS, a, i);
+		var vb = FloatVector.fromArray(VS, b, i);
+		var vc = va.add(vb);
+		vc.intoArray(c, i);
+	}
+}
+```
 
 While JDK 19 [further improves the vector API][jep-426], it doesn't take the big step to bring it out of incubation.
 It's waiting for Project Valhalla's improvements because they will change the API and it would be sad to finalize it now and then in a few years be stuck with a version that could be better but can't be changed anymore.
