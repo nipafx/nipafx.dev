@@ -2057,6 +2057,22 @@
 		},
 		{
 			"event": {
+				"name": "Garden State JUG",
+				"url": "https://gsjug.org/",
+				"image": "jug-garden-state"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"announcement": "https://gsjug.org/meetings/2022/oct2022.html",
+					"time": "11.10.2022 1830 America/New_York",
+					"locationText": "Remote"
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "IT-Tage",
 				"url": "https://www.ittage.informatik-aktuell.de/index.html",
 				"image": "it-tage-2022"
