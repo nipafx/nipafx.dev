@@ -2054,6 +2054,22 @@
 					"locationText": "t.b.d."
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "IT-Tage",
+				"url": "https://www.ittage.informatik-aktuell.de/index.html",
+				"image": "it-tage-2022"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"announcement": "https://www.ittage.informatik-aktuell.de/programm/2022/java-next-from-amber-to-loom-from-panama-to-valhalla.html",
+					"time": "13.12.2022 1000 Europe/Berlin",
+					"locationText": "Remote, Track 4"
+				}
+			]
 		}
 	],
 	"future-events": [
@@ -2063,7 +2079,6 @@
 		"22.-25.08., JUG Hamburg",
 		"27.09., JUG Karlsruhe",
 		"06.-07.10., Infoshare (Danzig), https://infoshare.pl/conference/",
-		"17.-19.10., Java One (Las Vegas)",
-		"12.-15.12., IT-Tage (remote) [?]"
+		"17.-19.10., Java One (Las Vegas)"
 	]
 }
