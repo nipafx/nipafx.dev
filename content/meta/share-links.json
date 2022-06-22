@@ -7,6 +7,13 @@
 			"className": "twitter"
 		},
 		{
+			"title": "Mastodon",
+			"fontAwesome": "faMastodon",
+			"//": "This service doesn't work well when the text is too long, so don't include the description",
+			"url": "https://toot.kytta.dev/?text=\"$TITLE\" by @nipafx@mastodon.technology:\nhttps://nipafx.dev/$SLUG",
+			"className": "mastodon"
+		},
+		{
 			"title": "Facebook",
 			"fontAwesome": "faFacebookF",
 			"url": "https://www.facebook.com/sharer/sharer.php?u=https://nipafx.dev/$SLUG",
