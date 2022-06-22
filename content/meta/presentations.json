@@ -1898,6 +1898,7 @@
 				{
 					"talk": "talk-java-modules-irl",
 					"title": "Java Modules in Real Life",
+					"announcement": "https://www.meetup.com/stockholm-jvm-jug/events/284652069",
 					"time": "29.03.2022 1800 Europe/Stockholm",
 					"locationText": "Online",
 					"slides": "https://slides.nipafx.dev/modules-irl/2022-03-29-jug-stockholm"
@@ -2033,7 +2034,7 @@
 				{
 					"talk": "talk-java-next",
 					"title": "Java Next",
-					"programEntry": "https://www.meetup.com/devstaff/events/286142452/",
+					"announcement": "https://www.meetup.com/devstaff/events/286142452/",
 					"time": "07.06.2022 1900 Europe/Athens",
 					"locationText": "European Union Agency for Cybersecurity - ENISA, Heraklion, Greece"
 				}
@@ -2081,7 +2082,7 @@
 				{
 					"talk": "talk-java-next",
 					"title": "Java Next",
-					"announcement": "https://www.ittage.informatik-aktuell.de/programm/2022/java-next-from-amber-to-loom-from-panama-to-valhalla.html",
+					"programEntry": "https://www.ittage.informatik-aktuell.de/programm/2022/java-next-from-amber-to-loom-from-panama-to-valhalla.html",
 					"time": "13.12.2022 1000 Europe/Berlin",
 					"locationText": "Remote, Track 4"
 				}
@@ -2089,6 +2090,21 @@
 		}
 	],
 	"future-events": [
+		{
+			"event": {
+				"name": "IntelliJ IDEA LiveStream",
+				"url": "https://blog.jetbrains.com/idea/category/livestream/",
+				"image": "intellij-idea-stream"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-modules-irl",
+					"title": "Java Modules in Real Life",
+					"time": "27.07.2022 1700 Europe/Berlin",
+					"locationText": "Online"
+				}
+			]
+		},
 		"18.-20.07., JBCN (Barcelona), https://www.jbcnconf.com/2022/talks.html",
 		"28.07., JUG Karlsruhe",
 		"16.08., Software Testing Karlsruhe",
