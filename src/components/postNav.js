@@ -13,7 +13,6 @@ import channelLinks from "../../content/meta/channel-links.json"
 import shareLinks from "../../content/meta/share-links.json"
 
 import * as style from "./postNav.module.css"
-import Feedback from "./feedback"
 
 const PostNav = ({ title, slug, channel, description, toc, canonical, series, source, open }) => {
 	return (
@@ -174,11 +173,13 @@ const updateShareUrl = (
 	articleDescription
 ) => {
 	articleTitle = articleTitle.replace(/[/`/]/g, "")
-	url = url
-		.replace("$DESCRIPTION", articleDescription)
-		.replace("$TITLE", articleTitle)
-		.replace("$SLUG", articleSlug)
+	// first, encode the url with placeholders to properly format line breaks
+	// then, encode title/description, e.g. to replace hashes ("Newscast #27")
+	// finally, replace placeholders
 	url = encodeURI(url)
+		.replace("$DESCRIPTION", encodeURI(articleDescription).replace("#", "%23"))
+		.replace("$TITLE", encodeURI(articleTitle).replace("#", "%23"))
+		.replace("$SLUG", articleSlug)
 	return { title, fontAwesome, url, className }
 }
 
