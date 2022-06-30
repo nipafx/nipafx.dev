@@ -1,6 +1,6 @@
 ---
 title: "Goodbye Disy, Hello SitePoint"
-tags: [meta, personal]
+tags: [meta]
 date: 2016-08-04
 slug: goodbye-disy-hello-sitepoint
 description: "I worked for Disy for about 2 years. Now I said goodbye to become the editor of SitePoint's burgeoning Java channel and have more time for other projects."

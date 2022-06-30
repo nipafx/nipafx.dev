@@ -64,6 +64,33 @@ Nicolai (aka nipafx) ist ein Java-Enthusiast mit Fokus auf Sprachfeatures und AP
 
 [Accento]: https://accento.dev
 [nipafx.dev]: https://nipafx.dev
+
+
+## All the things I did - until May 2022
+
+Before Oracle
+* Java Champion (since 2019)
+* wrote "The Java Module System" (Manning; 2019)
+* contributor to "97 Things Every Java Programmer Should Know" (2020)
+* dozens of articles in various publications (e.g. Heise Developer; since 2016)
+* gave 82 talks at local meetups, user groups, national and international conferences (since 2015)
+* taught Java at companies like Bayer, 1und1, and Accenture (since 2017)
+
+Started before, continued at Oracle
+* published 147 blog posts with ~2M unique page views (since 2014)
+* newsletter on Java with 1.1k subscribers (since 2017)
+* organizer of a Java conference (Accento; since 2019)
+* contributor, initiator, and maintainer of open source projects (mainly JUnit Pioneer since 2017)
+* creator of several Java demo projects with >450 stars on GitHub (since 2014)
+* YouTube channel on Java with 3.4k subscribers and 7.2k hours watched (since 2017)
+* one of very few dedicated Java live streamers; 8.1k hours watched (since 2019)
+
+At Oracle:
+* gave 24 talks at local meetups, user groups, national and international conferences
+* published 20 YouTube videos for @Java with >100k views
+* published two articles in Java Magazine
+* contributed to dev.java
+
 -->
 
 ## Random Musings On The Past
