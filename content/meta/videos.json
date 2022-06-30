@@ -444,6 +444,12 @@
 			"url": "https://www.youtube.com/watch?v=UG9nViGZCEw",
 			"title": "Java 19 - The Best Java Release? - Inside Java Newscast #27",
 			"thumbnail": "inside-java-newscast-27"
+		},
+		{
+			"slug": "inside-java-newscast-28",
+			"url": "https://www.youtube.com/watch?v=96tl7fspjSE",
+			"title": "What is OpenJDK? - Inside Java Newscast #28",
+			"thumbnail": "inside-java-newscast-28"
 		}
 	]
 }
