@@ -2042,6 +2042,72 @@
 		},
 		{
 			"event": {
+				"name": "JBCNConf",
+				"url": "https://www.jbcnconf.com/2022/",
+				"image": "jbcnconf"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"programEntry": "https://www.jbcnconf.com/2022/infoTalk.html?id=61f1ba52c4c4120b9d29afa6",
+					"time": "19.07.2022 1525 Europe/Madrid",
+					"locationText": "Room 1 'Grace Hopper'"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "IntelliJ IDEA LiveStream",
+				"url": "https://blog.jetbrains.com/idea/category/livestream/",
+				"image": "intellij-idea-stream"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-modules-irl",
+					"title": "Java Modules in Real Life",
+					"time": "27.07.2022 1700 Europe/Berlin",
+					"locationText": "Online"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Software Testing Karsrluhe",
+				"url": "https://www.meetup.com/de-DE/software-testing-karlsruhe/",
+				"image": "software-testing-karlsruhe"
+			},
+			"presentations": [
+				{
+					"talk": "talk-junit-pioneer",
+					"title": "To JUnit 5 And Beyond",
+					"announcement": "https://www.meetup.com/de-DE/software-testing-karlsruhe/events/286256589/",
+					"time": "16.08.2022 1900 Europe/Berlin",
+					"location": {
+						"text": "Google Meet",
+						"url": "https://meet.google.com/uag-mxsh-hza"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JCON Online 2022",
+				"url": "https://2022.jcon.one/",
+				"image": "jcon-2022"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"programEntry": "https://jcononline2022.sched.com/event/14h4H",
+					"time": "20.09.2022 1200 Europe/Berlin",
+					"locationText": "Online"
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "JUG Darmstadt",
 				"url": "https://www.jug-da.de/",
 				"image": "jug-darmstadt"
@@ -2090,25 +2156,8 @@
 		}
 	],
 	"future-events": [
-		{
-			"event": {
-				"name": "IntelliJ IDEA LiveStream",
-				"url": "https://blog.jetbrains.com/idea/category/livestream/",
-				"image": "intellij-idea-stream"
-			},
-			"presentations": [
-				{
-					"talk": "talk-java-modules-irl",
-					"title": "Java Modules in Real Life",
-					"time": "27.07.2022 1700 Europe/Berlin",
-					"locationText": "Online"
-				}
-			]
-		},
-		"18.-20.07., JBCN (Barcelona), https://www.jbcnconf.com/2022/talks.html",
-		"28.07., JUG Karlsruhe",
-		"16.08., Software Testing Karlsruhe",
 		"22.-25.08., JUG Hamburg",
+		"23.08., Cloud Builders",
 		"27.09., JUG Karlsruhe",
 		"06.-07.10., Infoshare (Danzig), https://infoshare.pl/conference/",
 		"17.-19.10., Java One (Las Vegas)"

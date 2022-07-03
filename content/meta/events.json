@@ -125,6 +125,16 @@
 				"text": "on Twitter",
 				"info": "https://twitter.com/i/spaces/1PlKQaZOqzDKE"
 			}
+		},
+		{
+			"time": "28.07.2022 1800 Europe/Berlin",
+			"title": "JUG Karlsruhe Sommeredition",
+			"description": "JUG Karlsruhe hangs out on Disy's rooftop with drinks and food",
+			"location": {
+				"type": "physical",
+				"text": "Zimmerstraße 3",
+				"info": "Zimmerstraße 3, 76137 Karlsruhe"
+			}
 		}
 	]
 }
