@@ -450,6 +450,12 @@
 			"url": "https://www.youtube.com/watch?v=96tl7fspjSE",
 			"title": "What is OpenJDK? - Inside Java Newscast #28",
 			"thumbnail": "inside-java-newscast-28"
+		},
+		{
+			"slug": "inside-java-newscast-29",
+			"url": "https://www.youtube.com/watch?v=5qYJYGvVLg8",
+			"title": "Data-Oriented Programming - Inside Java Newscast #29",
+			"thumbnail": "inside-java-newscast-29"
 		}
 	]
 }
