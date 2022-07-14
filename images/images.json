@@ -2776,5 +2776,21 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "java-dop",
+		"credits": {
+			"author": {
+				"name": "Alexander Sinn",
+				"url": "https://unsplash.com/@swimstaralex"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/KgLtFCgfC28"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
