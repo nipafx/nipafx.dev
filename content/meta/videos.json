@@ -456,6 +456,12 @@
 			"url": "https://www.youtube.com/watch?v=5qYJYGvVLg8",
 			"title": "Data-Oriented Programming - Inside Java Newscast #29",
 			"thumbnail": "inside-java-newscast-29"
+		},
+		{
+			"slug": "inside-java-newscast-30",
+			"url": "https://www.youtube.com/watch?v=ZaGnGs9TeNc",
+			"title": "Java Q&A - Inside Java Newscast #30",
+			"thumbnail": "inside-java-newscast-30"
 		}
 	]
 }
