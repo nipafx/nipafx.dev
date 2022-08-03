@@ -14,14 +14,14 @@ import presentationData from "../../content/meta/presentations.json"
 import sessionData from "../../content/meta/sessions.json"
 
 const Event = ({ event, presentDate, className }) => {
-	const { title, description, host, location } = event
+	const { title, slug, description, host, location } = event
 	return (
 		<div itemScope itemType="https://schema.org/Event" {...classNames(style.card, className)}>
 			{presentDate && <span className={style.date}>{presentDate(event)}</span>}
 			{title && (
-				<span key="title" {...classNames("h3", style.title)}>
+				<Link key="title" to={slug} {...classNames("h3", style.title)}>
 					<MarkdownAsHtml itemProp="name">{title}</MarkdownAsHtml>
-				</span>
+				</Link>
 			)}
 			{presentDescription(description)}
 			<span className={style.filler} />

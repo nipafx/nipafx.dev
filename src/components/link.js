@@ -20,7 +20,7 @@ const Link = ({
 	if (!to)
 		// if `children` are undefined, this can't return `undefined` or React is
 		// very unhappy that the render method didn't return anything; null is ok, though :)
-		return children ?? null
+		return children ? <div className={className}>{children}</div> : null
 
 	className = className || ""
 

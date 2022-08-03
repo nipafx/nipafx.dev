@@ -74,6 +74,7 @@ const pastText = (pastByYear, specificTalk) => {
 const preparePresentations = presentations =>
 	presentations.map(presentation => ({
 		title: presentation.title,
+		slug: presentation.slug,
 		description: prepareDescription(presentation),
 		host: presentation.event,
 		location: presentation.location,

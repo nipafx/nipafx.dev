@@ -66,6 +66,7 @@ const upcomingText = upcoming => {
 const prepareSessions = sessions =>
 	sessions.map(session => ({
 		title: session.title,
+		slug: session.slug,
 		description: prepareDescription(session),
 		host: session.event,
 		url: session.announcement,
