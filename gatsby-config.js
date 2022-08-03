@@ -248,9 +248,6 @@ module.exports = {
 			resolve: `gatsby-plugin-react-helmet`,
 		},
 		{
-			resolve: `gatsby-plugin-force-trailing-slashes`,
-		},
-		{
 			resolve: `gatsby-plugin-matomo`,
 			options: {
 				siteId: `1`,
@@ -320,4 +317,5 @@ module.exports = {
 		"Tag.series": `Post.slug`,
 		"Post.featuredImage": `ImageSharp.fields.id`,
 	},
+	trailingSlash: "always",
 }
