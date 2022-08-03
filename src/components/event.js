@@ -119,18 +119,18 @@ export const getPresentationsByYear = slug => {
 			return {
 				year,
 				presentations: presentations
-					.filter(pres => pres.time.year === year)
-					.filter(pres => pres.time < today)
+					.filter(pres => pres.time.instant.year === year)
+					.filter(pres => pres.time.instant < today)
 					.sort(
 						// pres2 - pres1 to get most recent presentation ("largest" date) first
-						(pres1, pres2) => pres2.time - pres1.time
+						(pres1, pres2) => pres2.time.instant - pres1.time.instant
 					),
 			}
 		})
 		.filter(pres => pres.presentations.length > 0)
 	const upcoming = presentations
-		.filter(pres => pres.time >= today)
-		.sort((pres1, pres2) => pres1.time - pres2.time)
+		.filter(pres => pres.time.instant >= today)
+		.sort((pres1, pres2) => pres1.time.instant - pres2.time.instant)
 
 	return { pastByYear, upcoming }
 }
@@ -187,8 +187,23 @@ const extractLocation = (location) => ({
 	url: location.url,
 })
 
-const parseTime = timeString =>
-	DateTime.fromFormat(timeString, "dd.MM.yyyy HHmm z", { setZone: true })
+const parseTime = timeString => {
+	const dateTime = DateTime.fromFormat(timeString, "dd.MM.yyyy HHmm z", { setZone: true })
+	if (dateTime.isValid)
+		return {
+			instant: dateTime,
+			hasTime: true,
+		}
+
+	const date = DateTime.fromFormat(timeString, "dd.MM.yyyy")
+	if (date.isValid)
+		return {
+			instant: date,
+			hasTime: false,
+		}
+
+	throw new Error("Can't parse time string: " + timeString)
+}
 
 /*
  * COURSES / SESSIONS

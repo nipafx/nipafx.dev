@@ -2333,6 +2333,24 @@
 		},
 		{
 			"event": {
+				"name": "Cloud Builders: Java Conf",
+				"url": "https://www.cloud-builders.tech/",
+				"image": "cloud-builders-java"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-after-n",
+					"title": "Java After Eleven",
+					"agenda": "https://www.cloud-builders.tech/#agenda-description",
+					"time": "23.08.2022",
+					"location": {
+						"type": "virtual"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "JCON Online 2022",
 				"url": "https://2022.jcon.one/",
 				"image": "jcon-2022"
@@ -2363,6 +2381,42 @@
 					"time": "22.09.2022 1830 Europe/Berlin",
 					"location": {
 						"text": "t.b.d."
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Accento @ JUG Karlsruhe",
+				"url": "http://jug-karlsruhe.de/",
+				"image": "jug-karlsruhe"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-dop",
+					"title": "Data-Oriented Programming in Java",
+					"announcement": "https://www.meetup.com/java-user-group-karlsruhe/events/287383182/",
+					"time": "27.09.2022 1915 Europe/Berlin",
+					"location": {
+						"text": "Disy, Zimmerstraße 3, Karlsruhe"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "infoshare",
+				"url": "https://infoshare.pl/conference/",
+				"image": "infoshare"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Pattern Matching in Java (19)",
+					"announcement": "https://infoshare.pl/conference/",
+					"time": "06.10.2022",
+					"location": {
+						"text": "AmberExpo, Żaglowa 11, Gdańsk"
 					}
 				}
 			]
@@ -2406,10 +2460,7 @@
 		}
 	],
 	"future-events": [
-		"22.-25.08., JUG Hamburg",
-		"23.08., Cloud Builders",
-		"27.09., JUG Karlsruhe",
-		"06.-07.10., Infoshare (Danzig), https://infoshare.pl/conference/",
+		"23.08., JUG Hamburg",
 		"17.-19.10., Java One (Las Vegas)"
 	]
 }

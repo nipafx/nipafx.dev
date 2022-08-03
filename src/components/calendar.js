@@ -44,7 +44,9 @@ const Calendar = ({ type, time, order, limit, display, fullscreen }) => {
 
 const printEvents = events => {
 	const message = events
-		.map(event => event.startTime.toUTC().toFormat("dd.MM./HHmm") + " " + event.title)
+		.map(event => event.startTime.hasTime
+			? event.startTime.instant.toUTC().toFormat("dd.MM./HHmm") + " " + event.title
+			: event.startTime.instant.toUTC().toFormat("dd.MM.") + " " + event.title)
 		.join(" — ")
 	// this message is perfect for, say, Moobot
 	console.log("All times UTC (https://time.is/UTC): " + message)
@@ -71,7 +73,7 @@ const showAllEvents = events => {
 }
 
 const showMonth = events => {
-	const month = events[0].startTime.toFormat("LLLL yyyy")
+	const month = events[0].startTime.instant.toFormat("LLLL yyyy")
 	return (
 		<div key={month} className={style.month}>
 			<h2 className={style.monthTitle}>{month}</h2>
@@ -86,8 +88,8 @@ const gridStyleForMonthWith = events => {
 	const weekdaysWithEvents = events
 		.flatMap(event =>
 			event.days
-				? event.days.map(day => event.startTime.set({ day })).map(day => day.weekday)
-				: [event.startTime.weekday]
+				? event.days.map(day => event.startTime.instant.set({ day })).map(day => day.weekday)
+				: [event.startTime.instant.weekday]
 		)
 		.sort()
 		.filter((value, index, self) => index === 0 || value !== self[index - 1])
@@ -96,8 +98,8 @@ const gridStyleForMonthWith = events => {
 		.map(day => (weekdaysWithEvents.includes(day + 1) ? `1fr` : `0`))
 		.join(` `)
 
-	const weekdayOfFirstOfMonth = events[0].startTime.set({ day: 1 }).weekday
-	const daysInMonth = events[0].startTime.daysInMonth
+	const weekdayOfFirstOfMonth = events[0].startTime.instant.set({ day: 1 }).weekday
+	const daysInMonth = events[0].startTime.instant.daysInMonth
 	const calendarDays = Math.ceil((weekdayOfFirstOfMonth + daysInMonth - 1) / 7) * 7
 	const calendar = arrayTo(calendarDays)
 		// array is zero-based, but grid areas are one-based
@@ -125,7 +127,7 @@ const showEvent = (event, inMonth) => {
 
 	return (
 		<div
-			key={event.startTime}
+			key={event.startTime.instant}
 			itemScope
 			itemType="https://schema.org/Event"
 			{...classNames(classes)}
@@ -144,9 +146,9 @@ const showEvent = (event, inMonth) => {
 }
 
 const gridAreaForEvent = event => {
-	const startDay = event.days ? event.days[0] : event.startTime.day
+	const startDay = event.days ? event.days[0] : event.startTime.instant.day
 	const startSlot = event.slot ?? 1
-	const endDay = event.days ? event.days[event.days.length - 1] : event.startTime.day
+	const endDay = event.days ? event.days[event.days.length - 1] : event.startTime.instant.day
 	const endSlot = event.slot ?? 2
 	return `d${startDay}s${startSlot}-start / d${startDay}s${startSlot}-start / d${endDay}s${endSlot}-end / d${endDay}s${endSlot}-end`
 }
@@ -155,7 +157,7 @@ const showDatesForEvent = event => {
 	const structuredStartDate = (
 		<meta
 			itemProp="startDate"
-			content={event.startTime.toISO({
+			content={event.startTime.instant.toISO({
 				suppressSeconds: true,
 				suppressMilliseconds: true,
 			})}
@@ -164,8 +166,8 @@ const showDatesForEvent = event => {
 	const status = <meta itemProp="eventStatus" content="http://schema.org/EventScheduled" />
 
 	if (event.days) {
-		const startDate = event.startTime.set({ day: event.days[0] })
-		const endDate = event.startTime.set({ day: event.days[event.days.length - 1] })
+		const startDate = event.startTime.instant.set({ day: event.days[0] })
+		const endDate = event.startTime.instant.set({ day: event.days[event.days.length - 1] })
 		return (
 			<React.Fragment>
 				<span className={style.weekday}>{startDate.toFormat("EEE")}</span>
@@ -180,9 +182,9 @@ const showDatesForEvent = event => {
 	} else
 		return (
 			<React.Fragment>
-				<span className={style.weekday}>{event.startTime.toFormat("EEE")}</span>
-				<span className={style.day}>{ordinalDay(event.startTime.day)}</span>
-				<span className={style.time}>{event.startTime.toUTC().toFormat("HH:mm")} UTC</span>
+				<span className={style.weekday}>{event.startTime.instant.toFormat("EEE")}</span>
+				<span className={style.day}>{ordinalDay(event.startTime.instant.day)}</span>
+				{event.startTime.hasTime && <span className={style.time}>{event.startTime.instant.toUTC().toFormat("HH:mm")} UTC</span>}
 				{structuredStartDate}
 				{status}
 			</React.Fragment>
@@ -295,8 +297,8 @@ const aggregateByMonths = events => {
 		const previous = events[i - 1]
 		const current = events[i]
 		const sameMonth =
-			current.startTime.year === previous.startTime.year &&
-			current.startTime.month === previous.startTime.month
+			current.startTime.instant.year === previous.startTime.instant.year &&
+			current.startTime.instant.month === previous.startTime.instant.month
 		if (sameMonth) aggregated[aggregated.length - 1].push(current)
 		else aggregated.push([current])
 	}
@@ -305,7 +307,7 @@ const aggregateByMonths = events => {
 
 // WARNING: This does not work if a multi-day event collides with other events on 2+ days
 const detectSlots = events => {
-	const daysOf = event => events.days ?? [event.startTime.day]
+	const daysOf = event => events.days ?? [event.startTime.instant.day]
 	const intersect = (event1, event2) => daysOf(event1).find(day => daysOf(event2).includes(day))
 
 	const processed = []

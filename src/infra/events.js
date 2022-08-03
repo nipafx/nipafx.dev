@@ -42,7 +42,7 @@ const timeFilter = time => {
 				second: 0,
 				millisecond: 0,
 			})
-			return event => event.startTime > thisMorning
+			return event => event.startTime.instant > thisMorning
 		case "upcomingMonths":
 			const firstOfCurrentMonth = DateTime.utc().set({
 				day: 1,
@@ -51,9 +51,9 @@ const timeFilter = time => {
 				second: 0,
 				millisecond: 0,
 			})
-			return event => event.startTime > firstOfCurrentMonth
+			return event => event.startTime.instant > firstOfCurrentMonth
 		case "upcomingYears":
-			return event => event.startTime.year >= DateTime.utc().year
+			return event => event.startTime.instant.year >= DateTime.utc().year
 		default:
 			throw new Error("Unknown time filter: " + time)
 	}
@@ -64,9 +64,9 @@ const sortOrder = order => {
 
 	switch (order) {
 		case "asc":
-			return (event1, event2) => event1.startTime - event2.startTime
+			return (event1, event2) => event1.startTime.instant - event2.startTime.instant
 		case "desc":
-			return (event1, event2) => event2.startTime - event1.startTime
+			return (event1, event2) => event2.startTime.instant - event1.startTime.instant
 		default:
 			throw new Error("Unknown order: " + order)
 	}
@@ -80,9 +80,7 @@ const getPresentations = talks => {
 				title: pres.title,
 				description: talks?.find(talk => talk.slug === pres.talk).description,
 				url: pres.announcement || pres.program || pres.programEntry,
-				startTime: DateTime.fromFormat(pres.time, "dd.MM.yyyy HHmm z", {
-					setZone: true,
-				}),
+				startTime: parseTime(pres.time),
 				host: {
 					name: event.event.name,
 					url: event.event.url,
@@ -97,6 +95,24 @@ const getPresentations = talks => {
 			}
 		})
 	)
+}
+
+const parseTime = timeString => {
+	const dateTime = DateTime.fromFormat(timeString, "dd.MM.yyyy HHmm z", { setZone: true })
+	if (dateTime.isValid)
+		return {
+			instant: dateTime,
+			hasTime: true,
+		}
+
+	const date = DateTime.fromFormat(timeString, "dd.MM.yyyy")
+	if (date.isValid)
+		return {
+			instant: date.plus({ hours: 12 }),
+			hasTime: false,
+		}
+
+	throw new Error("Can't parse time string: " + timeString)
 }
 
 const getSessions = courses => {
@@ -116,7 +132,10 @@ const getSessions = courses => {
 				session.description ||
 				courses?.find(course => course.slug === session.courses[0]).description,
 			url: session.announcement,
-			startTime: times.start,
+			startTime: {
+				instant: times.start.plus({ hours: 12 }),
+				hasTime: false,
+			},
 			days,
 			host: {
 				name: session.event.name,
@@ -139,9 +158,7 @@ const getEvents = () => {
 			title: event.title,
 			description: event.description,
 			url: event.url,
-			startTime: DateTime.fromFormat(event.time, "dd.MM.yyyy HHmm z", {
-				setZone: true,
-			}),
+			startTime: parseTime(event.time),
 			location: event.location,
 			draft: event.draft,
 		}
@@ -155,10 +172,13 @@ const getStreams = () => {
 			title: stream.title,
 			description: stream.description,
 			url: "https://twitch.tv/nipafx",
-			startTime: DateTime.fromFormat(stream.time, "dd.MM.yyyy HHmm", {
-				zone: "UTC",
-				setZone: true,
-			}),
+			startTime: {
+				instant: DateTime.fromFormat(stream.time, "dd.MM.yyyy HHmm", {
+					zone: "UTC",
+					setZone: true,
+				}),
+				hasTime: true,
+			},
 			host: {
 				type: "person",
 				name: "Nicolai Parlog (nipafx)",

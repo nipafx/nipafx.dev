@@ -34,7 +34,7 @@ const extractExtendedInformation = event => {
 
 const createCalendarEvent = event => {
 	const basicInformation = {
-		start: event.startTime.toISO(),
+		start: event.startTime.instant.toISO(),
 		summary: event.title,
 		description: event.description,
 		htmlDescription: event.description

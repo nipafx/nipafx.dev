@@ -79,7 +79,7 @@ const preparePresentations = presentations =>
 		host: presentation.event,
 		location: presentation.location,
 		time: presentation.time,
-		reactKey: presentation.time.toUTC().toISO(),
+		reactKey: presentation.time.instant.toUTC().toISO(),
 	}))
 
 const prepareDescription = ({ announcement, slidesUrl, videoUrl, misc }) => {
@@ -94,14 +94,14 @@ const prepareDescription = ({ announcement, slidesUrl, videoUrl, misc }) => {
 const presentDate = ({ time }) => {
 	return (
 		<span>
-			<span>{time.toFormat("EEE")}, </span>
+			<span>{time.instant.toFormat("EEE")}, </span>
 			<span className={style.day}>
-				{time.toFormat("MMM")} {ordinalDay(time.day)}
+				{time.instant.toFormat("MMM")} {ordinalDay(time.instant.day)}
 			</span>
-			<span>, {time.toFormat("HH:mm z")}</span>
+			{time.hasTime && <span>, {time.instant.toFormat("HH:mm z")}</span>}
 			<meta
 				itemProp="startDate"
-				content={time.toISO({ suppressSeconds: true, suppressMilliseconds: true })}
+				content={time.instant.toISO({ suppressSeconds: true, suppressMilliseconds: true })}
 			/>
 			<meta itemProp="eventStatus" content="http://schema.org/EventScheduled" />
 		</span>
