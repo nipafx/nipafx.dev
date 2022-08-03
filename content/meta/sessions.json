@@ -13,6 +13,9 @@
 			"dates": {
 				"from": "02.12.2020",
 				"to": "03.12.2020"
+			},
+			"location": {
+				"type": "physical"
 			}
 		}
 	]

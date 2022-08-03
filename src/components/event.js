@@ -51,9 +51,17 @@ const presentDescription = description => {
 }
 
 const presentLocation = (host, location) => {
-	// this implies that unknown locations are considered online events;
-	// that's just a guess, but for offline events, I usually know the location
-	const physical = location && !location.url
+	let physical
+	switch (location.type) {
+		case "physical":
+			physical = true
+			break
+		case "virtual":
+			physical = false
+			break
+		default:
+			throw new Error("Unknown location type: " + location.type)
+	}
 	const attendanceMode = physical
 		? "https://schema.org/OfflineEventAttendanceMode"
 		: "https://schema.org/OnlineEventAttendanceMode"
@@ -129,20 +137,20 @@ export const getPresentationsByYear = slug => {
 
 const getPresentations = slug => {
 	let presentations = presentationData.events.flatMap(event =>
-		event.presentations.map(presentation => {
+		event.presentations.map(pres => {
 			return {
-				slug: presentation.talk,
-				title: presentation.title,
+				slug: pres.talk,
+				title: pres.title,
 				announcement: extractAnnouncement(
-					presentation.announcement,
-					presentation.program,
-					presentation.programEntry
+					pres.announcement,
+					pres.program,
+					pres.programEntry
 				),
-				time: parseTime(presentation.time),
-				location: extractLocation(presentation.location, presentation.locationText),
-				slidesUrl: presentation.slides,
-				videoUrl: presentation.video,
-				misc: presentation.misc,
+				time: parseTime(pres.time),
+				location: extractLocation(pres.location),
+				slidesUrl: pres.slides,
+				videoUrl: pres.video,
+				misc: pres.misc,
 				event: event.event,
 			}
 		})
@@ -171,23 +179,23 @@ const extractAnnouncement = (announcement, program, programEntry) => {
 		}
 }
 
+const extractLocation = (location) => ({
+	// for virtual events, text "Online" is default
+	text: location.text ?? (location.type === "virtual" ? "Online" : null),
+	// type "physical" is default
+	type: location.type ?? "physical",
+	url: location.url,
+})
+
 const parseTime = timeString =>
 	DateTime.fromFormat(timeString, "dd.MM.yyyy HHmm z", { setZone: true })
-
-const extractLocation = (location, locationText) => {
-	if (!location && !locationText) return undefined
-	return {
-		text: location && location.text ? location.text : locationText,
-		url: location ? location.url : null,
-	}
-}
 
 /*
  * COURSES / SESSIONS
  */
 
 export const getSessionsByYear = slug => {
-	const sessions = extractSessions().filter(session => session.courses.includes(slug))
+	const sessions = getSessions().filter(session => session.courses.includes(slug))
 	const today = DateTime.local()
 	const pastByYear = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016]
 		.map(year => {
@@ -210,18 +218,14 @@ export const getSessionsByYear = slug => {
 	return { pastByYear, upcoming }
 }
 
-const extractSessions = () => {
+const getSessions = () => {
 	return sessionData.sessions.map(session => {
 		const dates = {
 			from: DateTime.fromFormat(session.dates.from, "dd.MM.yyyy"),
 			to: DateTime.fromFormat(session.dates.to, "dd.MM.yyyy"),
 		}
-		const location =
-			session.location ?? session.locationText
-				? {
-						text: session.locationText,
-				  }
-				: null
+		const location = extractLocation(session.location)
+
 		// for unknown reasons (Gatsby caching?) this parsing does not behave well
 		// when `session.dates` is overridden with the parsed dates,
 		// so I create a new object instead

@@ -88,9 +88,10 @@ const getPresentations = talks => {
 					url: event.event.url,
 				},
 				location: {
-					type: pres.locationText ? "physical" : pres.location ? "virtual" : null,
 					text: `at ${event.event.name}`,
-					info: pres.locationText || (pres.location && pres.location.url),
+					// type "physical" is default
+					type: pres.location.type ?? "physical",
+					info: pres.location.type === "virtual" ? pres.location.url : pres.location.text
 				},
 				draft: pres.draft,
 			}
