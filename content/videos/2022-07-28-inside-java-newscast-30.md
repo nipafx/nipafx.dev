@@ -4,7 +4,7 @@ tags: [project-leyden, project-lilliput, project-valhalla, project-amber]
 date: 2022-07-28
 slug: inside-java-newscast-30
 videoSlug: inside-java-newscast-30
-description: "TODO"
+description: "We asked you for questions on YouTube, Reddit, and Twitter and are here to answer a bunch of them. From projects Amber to Valhalla, Leyden to Lilliput, from language to performance, from the immediate future to pipe dreams we covered a lot of ground."
 featuredImage: inside-java-newscast-30
 ---
 
