@@ -462,6 +462,12 @@
 			"url": "https://www.youtube.com/watch?v=ZaGnGs9TeNc",
 			"title": "Java Q&A - Inside Java Newscast #30",
 			"thumbnail": "inside-java-newscast-30"
+		},
+		{
+			"slug": "inside-java-newscast-31",
+			"url": "https://www.youtube.com/watch?v=xBBuShS0ERs",
+			"title": "Sequenced Collections, Purity, and more at JavaOne - Inside Java Newscast #31",
+			"thumbnail": "inside-java-newscast-31"
 		}
 	]
 }
