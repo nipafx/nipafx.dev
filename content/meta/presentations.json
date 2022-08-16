@@ -2351,6 +2351,24 @@
 		},
 		{
 			"event": {
+				"name": "JavaDay @ JUG Hamburg",
+				"url": "https://www.meetup.com/de-DE/jug-hamburg/",
+				"image": "javaday-2022"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"announcement": "https://www.meetup.com/de-DE/jug-hamburg/events/287711738/",
+					"time": "23.08.2022 2000 Europe/Berlin",
+					"location": {
+						"text": "Oracle, Kühnehöfe 5, Hamburg"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "JCON Online 2022",
 				"url": "https://2022.jcon.one/",
 				"image": "jcon-2022"
@@ -2460,7 +2478,7 @@
 		}
 	],
 	"future-events": [
-		"23.08., JUG Hamburg",
+		"16.09., jOnConf",
 		"17.-19.10., Java One (Las Vegas)"
 	]
 }
