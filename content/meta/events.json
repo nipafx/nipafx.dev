@@ -95,28 +95,6 @@
 			}
 		},
 		{
-			"time": "02.12.2021 1905 Europe/Kiev",
-			"title": "Build-up: Java Edition",
-			"description": "Fireside chat and AMA about Modern Java",
-			"url": "https://build-up.cloud-builders.tech/en",
-			"location": {
-				"type": "virtual",
-				"text": "register",
-				"info": "https://build-up.cloud-builders.tech/en"
-			}
-		},
-		{
-			"time": "30.01.2022 2100 Asia/Dhaka",
-			"title": "Interview with JUGBD",
-			"description": "We will discuss the recent advancement and innovations happening in the Java world in an informal discussion where we will focus on his work at Oracle helping the Java community and take questions from the audience related to Java.",
-			"url": "https://jugbd.org/",
-			"location": {
-				"type": "virtual",
-				"text": "on YouTube",
-				"info": "https://www.youtube.com/watch?v=YWUSkm68TkU"
-			}
-		},
-		{
 			"time": "22.03.2022 2000 UTC",
 			"title": "Java 18 AMA on Twitter",
 			"description": "And if I'm not enough for you, there's this Twitter Space with Billy Korando and a few OpenJDK developers where we talk about JDK 18 nd answer all your questions about it.",
