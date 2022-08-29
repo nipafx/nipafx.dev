@@ -2546,10 +2546,26 @@
 					}
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "ElsassJUG",
+				"url": "https://www.meetup.com/ElsassJUG/",
+				"image": "jug-elsass"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-dop",
+					"title": "Data-Oriented Programming in Java",
+					"time": "07.12.2022 1900 Europe/Paris",
+					"location": {
+						"text": "Sfeir, 1 Av. de l'Europe, Schilitgheim"
+					}
+				}
+			]
 		}
 	],
 	"future-events": [
-		"16.09., jOnConf",
 		"17.-19.10., Java One (Las Vegas)"
 	]
 }
