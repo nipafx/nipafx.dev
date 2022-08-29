@@ -2398,7 +2398,8 @@
 					"location": {
 						"text": "Google Meet",
 						"url": "https://meet.google.com/uag-mxsh-hza"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/junit-pioneer/2022-08-16-software-testing-karlsruhe"
 				}
 			]
 		},
@@ -2434,7 +2435,8 @@
 					"time": "23.08.2022 2000 Europe/Berlin",
 					"location": {
 						"text": "Oracle, Kühnehöfe 5, Hamburg"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-next/2022-08-23-jug-hamburg"
 				}
 			]
 		},
