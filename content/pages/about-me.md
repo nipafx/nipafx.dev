@@ -58,6 +58,10 @@ Nicolai (aka nipafx) is a Java enthusiast focused on language features and core 
 [Accento]: https://accento.dev
 [nipafx.dev]: https://nipafx.dev
 
+## English - normal - HTML
+
+Nicolai (aka nipafx) is a Java enthusiast focused on language features and core APIs with a passion for learning and sharing - in articles, newsletters, and books; in tweets, videos, and streams; in demo repos and at conferences - more on all of that on <a href="https://nipafx.dev">nipafx.dev</a>. He's a Java Developer Advocate at Oracle and organizer of <a href="https://accento.dev">Accento</a>. That aside, he's best known for his haircut.
+
 ## Deutsch - normal
 
 Nicolai (aka nipafx) ist ein Java-Enthusiast mit Fokus auf Sprachfeatures und APIs, der leidenschaftlich gerne lernt und lehrt. Das macht er in Blog Posts, Newslettern und Büchern; in Tweets, Videos und Streams; in Demo Repositories und auf Konferenzen - mehr dazu auf [nipafx.dev]. Er ist Java Developer Advocate bei Oracle und Organisator von [Accento]. Davon abgesehen kennt man ihn für seine Frisur.
