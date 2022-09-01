@@ -10,7 +10,7 @@ inlineCodeLanguage: shell
 repo: java-9-migration
 ---
 
-The [Java Platform Module System](tag:j_ms) (JPMS) not only comes with [an entire set of new rules to abide by](java-module-system-tutorial), it also introduces a host of command line options to break them.
+The [Java module system](tag:j_ms) not only comes with [an entire set of new rules to abide by](java-module-system-tutorial), it also introduces a host of command line options to break them.
 Whether you need to access internal APIs, add unforeseen modules, or extend modules with classes of your own, they have you covered.
 In this post I want to go over the five most important command line options that you will need to get your project to compile, test, and run in the face of [various migration challenges](java-9-migration-guide).
 
