@@ -8,6 +8,8 @@ description: "String templates make it easy and safe to embed variables and expr
 featuredImage: inside-java-newscast-32
 ---
 
+## Intro
+
 Welcome everyone to the Inside Java Newscast, where we cover recent developments in the OpenJDK community.
 I'm Nicolai Parlog, Java developer advocate at Oracle, and today I have another JavaOne-inspired mix of topics for you, namely string templates, the deserialization filter, and JavaFX 19.
 

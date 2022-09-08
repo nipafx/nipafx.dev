@@ -474,6 +474,12 @@
 			"url": "https://www.youtube.com/watch?v=HiHgAh7wWPc",
 			"title": "String Templates, JavaFX 19, Deserialization, and more at JavaOne - Inside Java Newscast #32",
 			"thumbnail": "inside-java-newscast-32"
+		},
+		{
+			"slug": "inside-java-newscast-33",
+			"url": "https://www.youtube.com/watch?v=vvXmO2ZMGsk",
+			"title": "Java 19 in Action - Inside Java Newscast #33",
+			"thumbnail": "inside-java-newscast-33"
 		}
 	]
 }

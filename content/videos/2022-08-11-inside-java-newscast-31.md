@@ -8,6 +8,8 @@ description: "Sequenced collections introduce an abstraction for collections wit
 featuredImage: inside-java-newscast-31
 ---
 
+## Intro
+
 Welcome everyone to the Inside Java Newscast, where we cover recent developments in the OpenJDK community.
 I'm Nicolai Parlog, Java developer advocate at Oracle, and today we're gonna look at sequenced collections and the meaning of immutability and purity.
 And in an unprecedented move, I can already share next episode's topics, too:
