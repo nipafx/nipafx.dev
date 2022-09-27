@@ -480,6 +480,12 @@
 			"url": "https://www.youtube.com/watch?v=vvXmO2ZMGsk",
 			"title": "Java 19 in Action - Inside Java Newscast #33",
 			"thumbnail": "inside-java-newscast-33"
+		},
+		{
+			"slug": "inside-java-newscast-34",
+			"url": "https://www.youtube.com/watch?v=I9hQvJO39uM",
+			"title": "Loom in the Java Ecosystem - Inside Java Newscast #34",
+			"thumbnail": "inside-java-newscast-34"
 		}
 	]
 }
