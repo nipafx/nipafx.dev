@@ -2484,7 +2484,7 @@
 			},
 			"presentations": [
 				{
-					"talk": "talk-java-dop",
+					"talk": "talk-java-pattern-matching",
 					"title": "Data-Oriented Programming in Java",
 					"announcement": "https://www.meetup.com/java-user-group-karlsruhe/events/287383182/",
 					"time": "27.09.2022 1915 Europe/Berlin",
@@ -2557,7 +2557,7 @@
 			},
 			"presentations": [
 				{
-					"talk": "talk-java-dop",
+					"talk": "talk-java-pattern-matching",
 					"title": "Data-Oriented Programming in Java",
 					"announcement": "https://www.meetup.com/fr-FR/elsassjug/events/288224601/",
 					"time": "07.12.2022 1900 Europe/Paris",
