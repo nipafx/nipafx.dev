@@ -2535,6 +2535,47 @@
 		},
 		{
 			"event": {
+				"name": "JavaOne",
+				"url": "https://www.oracle.com/javaone/",
+				"image": "javaone"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-after-n",
+					"title": "Java After Eleven",
+					"programEntry": "https://reg.rf.oracle.com/flow/oracle/cloudworld/session-catalog/page/catalog?search=1425",
+					"time": "18.10.2022 1215 America/Los_Angeles",
+					"location": { }
+				},
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Pattern Matching in Java (19)",
+					"programEntry": "https://reg.rf.oracle.com/flow/oracle/cloudworld/session-catalog/page/catalog?search=2618",
+					"time": "18.10.2022 1600 America/Los_Angeles",
+					"location": { }
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "J-Fall",
+				"url": "https://jfall.nl",
+				"image": "j-fall"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"program": "https://jfall.nl/timetable-2022/",
+					"time": "03.11.2022 1140 Europe/Amsterdam",
+					"location": {
+						"text": "Pathé Ede, Room 9"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "IT-Tage",
 				"url": "https://www.ittage.informatik-aktuell.de/index.html",
 				"image": "it-tage-2022"
@@ -2572,6 +2613,6 @@
 		}
 	],
 	"future-events": [
-		"17.-19.10., Java One (Las Vegas)"
+		"11.10., Kvadrat"
 	]
 }
