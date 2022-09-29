@@ -2507,10 +2507,10 @@
 				{
 					"talk": "talk-java-pattern-matching",
 					"title": "Pattern Matching in Java (19)",
-					"announcement": "https://infoshare.pl/conference/",
-					"time": "06.10.2022",
+					"programEntry": "https://infoshare.pl/conference/agenda/#talk640-5",
+					"time": "06.10.2022 1320 Europe/Warsaw",
 					"location": {
-						"text": "AmberExpo, Żaglowa 11, Gdańsk"
+						"text": "AmberExpo, Advanced Dev Red"
 					}
 				}
 			]
