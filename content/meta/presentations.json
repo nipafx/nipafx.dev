@@ -2454,7 +2454,8 @@
 					"time": "20.09.2022 1200 Europe/Berlin",
 					"location": {
 						"type": "virtual"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-next/2022-09-20-jcon"
 				}
 			]
 		},
@@ -2472,7 +2473,8 @@
 					"time": "22.09.2022 1830 Europe/Berlin",
 					"location": {
 						"text": "t.b.d."
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-next/2022-09-22-jug-darmstadt"
 				}
 			]
 		},
@@ -2490,7 +2492,8 @@
 					"time": "27.09.2022 1915 Europe/Berlin",
 					"location": {
 						"text": "Disy, Zimmerstraße 3, Karlsruhe"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/patterns/2022-09-27-jug-karlsruhe/"
 				}
 			]
 		},
