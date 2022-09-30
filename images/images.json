@@ -2792,5 +2792,17 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "java-amber",
+		"credits": {
+			"source": {
+				"url": "https://pxhere.com/en/photo/1247296"
+			},
+			"license": {
+				"name": "CC0",
+				"url": "https://creativecommons.org/publicdomain/zero/1.0/"
+			}
+		}
 	}
 ]
