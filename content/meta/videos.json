@@ -458,6 +458,12 @@
 			"thumbnail": "inside-java-newscast-29"
 		},
 		{
+			"slug": "intellij-stream-modules-irl",
+			"url": "https://www.youtube.com/watch?v=0xijKEeb5ug",
+			"title": "Java Modules in Real Life",
+			"thumbnail": "intellij-stream-modules-irl"
+		},
+		{
 			"slug": "inside-java-newscast-30",
 			"url": "https://www.youtube.com/watch?v=ZaGnGs9TeNc",
 			"title": "Java Q&A - Inside Java Newscast #30",
