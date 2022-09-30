@@ -26,8 +26,8 @@ const credits = (credits, type) => {
 	const classes = [style.credits].concat(typeClasses(type))
 	const source = responsiveText("src", "source")
 	const author = responsiveText(
-		credits.author.name === "me" ? "me" : "dev",
-		credits.author.name === "me" ? "me" : "artist"
+		credits.author && credits.author.name === "me" ? "me" : "dev",
+		credits.author && credits.author.name === "me" ? "me" : "artist"
 	)
 	const license = responsiveText("lic", "license")
 
