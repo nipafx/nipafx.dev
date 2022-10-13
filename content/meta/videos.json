@@ -492,6 +492,12 @@
 			"url": "https://www.youtube.com/watch?v=I9hQvJO39uM",
 			"title": "Loom in the Java Ecosystem - Inside Java Newscast #34",
 			"thumbnail": "inside-java-newscast-34"
+		},
+		{
+			"slug": "inside-java-newscast-35",
+			"url": "https://www.youtube.com/watch?v=Au3z_kQd9QY",
+			"title": "The Simplest Hello World - Inside Java Newscast #35",
+			"thumbnail": "inside-java-newscast-35"
 		}
 	]
 }
