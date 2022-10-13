@@ -2511,7 +2511,26 @@
 					"time": "06.10.2022 1320 Europe/Warsaw",
 					"location": {
 						"text": "AmberExpo, Advanced Dev Red"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/patterns/2021-10-06-infoshare"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Kvadrat",
+				"url": "https://kvadrat.se/",
+				"image": "kvadrat"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Modern Java - Language, Runtime, LTS",
+					"time": "11.10.2022 1130 Europe/Stockholm",
+					"location": {
+						"type": "virtual"
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2022-10-11-kvadrat"
 				}
 			]
 		},
@@ -2529,7 +2548,8 @@
 					"time": "11.10.2022 1830 America/New_York",
 					"location": {
 						"type": "virtual"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-next/2022-10-11-gsjug"
 				}
 			]
 		},
