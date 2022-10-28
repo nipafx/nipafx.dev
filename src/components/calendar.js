@@ -187,7 +187,7 @@ const showDatesForEvent = event => {
 			<React.Fragment>
 				<span className={style.weekday}>{event.startTime.instant.toFormat("EEE")}</span>
 				<span className={style.day}>{ordinalDay(event.startTime.instant.day)}</span>
-				{event.startTime.hasTime && <span className={style.time}>{event.startTime.instant.toUTC().toFormat("HH:mm")} UTC</span>}
+				{event.startTime.hasTime && <span className={style.time}>{event.startTime.instant.toFormat("HH:mm")} UTC</span>}
 				{structuredStartDate}
 				{status}
 			</React.Fragment>

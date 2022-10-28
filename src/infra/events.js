@@ -101,11 +101,11 @@ const parseTime = timeString => {
 	const dateTime = DateTime.fromFormat(timeString, "dd.MM.yyyy HHmm z", { setZone: true })
 	if (dateTime.isValid)
 		return {
-			instant: dateTime,
+			instant: dateTime.toUTC(),
 			hasTime: true,
 		}
 
-	const date = DateTime.fromFormat(timeString, "dd.MM.yyyy")
+	const date = DateTime.fromFormat(timeString, "dd.MM.yyyy", { zone: "UTC",setZone: true })
 	if (date.isValid)
 		return {
 			instant: date.plus({ hours: 12 }),
@@ -118,8 +118,8 @@ const parseTime = timeString => {
 const getSessions = courses => {
 	return sessions.sessions.map(session => {
 		const times = {
-			start: DateTime.fromFormat(session.dates.from, "dd.MM.yyyy"),
-			end: DateTime.fromFormat(session.dates.to, "dd.MM.yyyy"),
+			start: DateTime.fromFormat(session.dates.from, "dd.MM.yyyy", { zone: "UTC",setZone: true }),
+			end: DateTime.fromFormat(session.dates.to, "dd.MM.yyyy", { zone: "UTC",setZone: true }),
 		}
 		const days = [...Array(times.end.day - times.start.day + 1).keys()].map(
 			day => day + times.start.day
@@ -173,10 +173,7 @@ const getStreams = () => {
 			description: stream.description,
 			url: "https://twitch.tv/nipafx",
 			startTime: {
-				instant: DateTime.fromFormat(stream.time, "dd.MM.yyyy HHmm", {
-					zone: "UTC",
-					setZone: true,
-				}),
+				instant: DateTime.fromFormat(stream.time, "dd.MM.yyyy HHmm", { zone: "UTC", setZone: true }),
 				hasTime: true,
 			},
 			host: {
