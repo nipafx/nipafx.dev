@@ -2565,14 +2565,31 @@
 					"title": "Java After Eleven",
 					"programEntry": "https://reg.rf.oracle.com/flow/oracle/cloudworld/session-catalog/page/catalog?search=1425",
 					"time": "18.10.2022 1215 America/Los_Angeles",
-					"location": { }
+					"location": {
+						"text": "Caesar's Forum, Room 211"
+					},
+					"slides": "https://slides.nipafx.dev/java-after-eight/2022-10-18-javaone"
 				},
 				{
 					"talk": "talk-java-pattern-matching",
 					"title": "Pattern Matching in Java (19)",
 					"programEntry": "https://reg.rf.oracle.com/flow/oracle/cloudworld/session-catalog/page/catalog?search=2618",
 					"time": "18.10.2022 1600 America/Los_Angeles",
-					"location": { }
+					"location": {
+						"text": "Caesar's Forum, Room 211"
+					},
+					"slides": "https://slides.nipafx.dev/patterns/2022-10-18-javaone"
+				},
+				{
+					"talk": "talk-java-modules-irl",
+					"title": "Java Modules in Real Life",
+					"programEntry": "https://reg.rf.oracle.com/flow/oracle/cloudworld/session-catalog/page/catalog?search=2631",
+					"time": "18.10.2022 1715 America/Los_Angeles",
+					"location": {
+						"text": "Caesar's Forum, Room 211"
+					},
+					"slides": "https://slides.nipafx.dev/modules-irl/2022-10-18-javaone",
+					"video": "https://reg.rf.oracle.com/flow/oracle/cloudworld/session-catalog/page/catalog/session/1656367267729001LzFV"
 				}
 			]
 		},
