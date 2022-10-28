@@ -2607,7 +2607,8 @@
 					"time": "27.10.2022 1715 Europe/Warsaw",
 					"location": {
 						"text": "Manggha, Krakow"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2022-10-27-bytemycode"
 				}
 			]
 		},
@@ -2631,6 +2632,24 @@
 		},
 		{
 			"event": {
+				"name": "ElsassJUG",
+				"url": "https://www.meetup.com/ElsassJUG/",
+				"image": "jug-elsass"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming in Java",
+					"announcement": "https://www.meetup.com/fr-FR/elsassjug/events/288224601/",
+					"time": "07.12.2022 1900 Europe/Paris",
+					"location": {
+						"text": "Sfeir, 1 Av. de l'Europe, Schilitgheim"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "IT-Tage",
 				"url": "https://www.ittage.informatik-aktuell.de/index.html",
 				"image": "it-tage-2022"
@@ -2647,27 +2666,8 @@
 					}
 				}
 			]
-		},
-		{
-			"event": {
-				"name": "ElsassJUG",
-				"url": "https://www.meetup.com/ElsassJUG/",
-				"image": "jug-elsass"
-			},
-			"presentations": [
-				{
-					"talk": "talk-java-pattern-matching",
-					"title": "Data-Oriented Programming in Java",
-					"announcement": "https://www.meetup.com/fr-FR/elsassjug/events/288224601/",
-					"time": "07.12.2022 1900 Europe/Paris",
-					"location": {
-						"text": "Sfeir, 1 Av. de l'Europe, Schilitgheim"
-					}
-				}
-			]
 		}
 	],
 	"future-events": [
-		"11.10., Kvadrat"
 	]
 }
