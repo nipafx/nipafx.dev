@@ -106,11 +106,11 @@ const gridStyleForMonthWith = events => {
 		// e.g. weekdayOfFirstOfMonth = 3 (Wednesday): 0->0, 1->0, 2->1
 		.map(day => Math.max(0, day - weekdayOfFirstOfMonth + 2))
 		.map(day => (day <= daysInMonth ? day : 0))
-	// events on the same day need to end up in different cells, so duplicate each "week line"
-	const gridTemplateRows = arrayTo((calendarDays / 7) * 2).map(index => {
-		const week = Math.floor(index / 2)
+	// events on the same day need to end up in different cells, so have each "week line" several times
+	const gridTemplateRows = arrayTo((calendarDays / 7) * 3).map(index => {
+		const week = Math.floor(index / 3)
 		const days = calendar.slice(week * 7, (week + 1) * 7)
-		return days.map(day => (day === 0 ? `.` : `d${day}s${(index % 2) + 1}`))
+		return days.map(day => (day === 0 ? `.` : `d${day}s${(index % 3) + 1}`))
 	})
 
 	return {
@@ -122,7 +122,10 @@ const gridStyleForMonthWith = events => {
 const showEvent = (event, inMonth) => {
 	const classes = [event.type, style.event]
 	if (event.days) classes.push(style.multiDay)
-	if (event.slot) classes.push(style[`slot${event.slot}`])
+	if (event.slot) {
+		classes.push(style[`slot${event.slot}`])
+		classes.push(style[`slotMax${event.slots}`])
+	}
 	const gridArea = inMonth ? gridAreaForEvent(event) : undefined
 
 	return (
@@ -149,7 +152,7 @@ const gridAreaForEvent = event => {
 	const startDay = event.days ? event.days[0] : event.startTime.instant.day
 	const startSlot = event.slot ?? 1
 	const endDay = event.days ? event.days[event.days.length - 1] : event.startTime.instant.day
-	const endSlot = event.slot ?? 2
+	const endSlot = event.slot ?? 3
 	return `d${startDay}s${startSlot}-start / d${startDay}s${startSlot}-start / d${endDay}s${endSlot}-end / d${endDay}s${endSlot}-end`
 }
 
@@ -307,21 +310,26 @@ const aggregateByMonths = events => {
 
 // WARNING: This does not work if a multi-day event collides with other events on 2+ days
 const detectSlots = events => {
-	const daysOf = event => events.days ?? [event.startTime.instant.day]
+	const daysOf = event => event.days ?? [event.startTime.instant.day]
 	const intersect = (event1, event2) => daysOf(event1).find(day => daysOf(event2).includes(day))
+	const pushToProcessed = (currentSlot, processed) => currentSlot.length === 1
+		? processed.push(currentSlot[0])
+		: currentSlot.forEach((event, index) => processed.push({ ...event, slot: index + 1, slots: currentSlot.length }))
 
 	const processed = []
-	for (let i = 0; i < events.length; i++) {
+	let currentSlot = [ events[0] ]
+
+	for (let i = 1; i < events.length; i++) {
 		const event = events[i]
-		if (i > 0 && intersect(processed[i - 1], event))
-			// continue existing collision with next slot
-			processed.push({ ...event, slot: processed[i - 1].slot + 1 })
-		else if (i < events.length - 1 && intersect(event, events[i + 1]))
-			// start new collision
-			processed.push({ ...event, slot: 1 })
-		// no collision
-		else processed.push(event)
+		if (intersect(currentSlot[0], event))
+			currentSlot.push(event)
+		else {
+			pushToProcessed(currentSlot, processed)
+			currentSlot = [ event ]
+		}
 	}
+
+	pushToProcessed(currentSlot, processed)
 
 	return processed
 }

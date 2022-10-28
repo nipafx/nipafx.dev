@@ -41,30 +41,36 @@
 
 /* SLOTS/MULTI-DAY START */
 
-.event.slot1 {
+.event.slot1,
+.event.slot2.slotMax3 {
 	margin-bottom: 0;
 }
 
-.event.slot2 {
+.event.slot2,
+.event.slot3 {
 	margin-top: 0;
 	padding-top: 0;
 	border-top-style: none;
 }
 
-.event.slot1 > *:last-child {
+.event.slot1 > *:last-child,
+.event.slot2.slotMax3 > *:last-child {
 	padding-bottom: 10px;
 }
 
-.event.slot2 > *:first-child {
+.event.slot2 > *:first-child,
+.event.slot3 > *:first-child {
 	border-top: 1px solid var(--fg-color);
 	padding-top: 10px;
 }
 
-.event:not(.multi-day).slot1 {
+.event:not(.multi-day).slot1,
+.event:not(.multi-day).slot2.slotMax3 {
 	border-bottom-style: none;
 }
 
-.multi-day + .event.slot2 {
+.multi-day + .event.slot2,
+.multi-day + .event.slot3 {
 	margin-top: -1px;
 	border-top: 1px solid var(--bg-color);
 }
