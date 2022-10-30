@@ -15,7 +15,7 @@
 		{
 			"title": "Mastodon",
 			"fontAwesome": "faMastodon",
-			"url": "https://mastodon.technology/@nipafx",
+			"url": "https://mastodon.social/@nipafx",
 			"className": "mastodon",
 			"rel": "me"
 		},
