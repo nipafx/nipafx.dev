@@ -498,6 +498,12 @@
 			"url": "https://www.youtube.com/watch?v=Au3z_kQd9QY",
 			"title": "The Simplest Hello World - Inside Java Newscast #35",
 			"thumbnail": "inside-java-newscast-35"
+		},
+		{
+			"slug": "inside-java-newscast-36",
+			"url": "https://www.youtube.com/watch?v=3M5o3hUH09A",
+			"title": "GraalVM In OpenJDK And More JavaOne Announcements - Inside Java Newscast #36",
+			"thumbnail": "inside-java-newscast-36"
 		}
 	]
 }
