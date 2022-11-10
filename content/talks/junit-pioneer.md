@@ -26,3 +26,7 @@ In this talk, we're going to take a close look at the project and we won't just 
 * how we use Shipkit and GitHub actions for one-click releases
 
 If you're maintaining your own small open source project or are interested in a peek behind the scenes, this talk is for you.
+
+<contentimage slug="junit-pioneer-sketchnotes"></contentimage>
+
+(Amazing sketch notes were created by [Johannes Dienst](https://johannesdienst.net) [🐦](https://twitter.com/johannesdienst). 🤩)

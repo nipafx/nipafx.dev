@@ -2804,5 +2804,14 @@
 				"url": "https://creativecommons.org/publicdomain/zero/1.0/"
 			}
 		}
+	},
+	{
+		"slug": "junit-pioneer-sketchnotes",
+		"credits": {
+			"author": {
+				"name": "Johannes Dienst",
+				"url": "https://johannesdienst.net"
+			}
+		}
 	}
 ]
