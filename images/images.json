@@ -2813,5 +2813,21 @@
 				"url": "https://johannesdienst.net"
 			}
 		}
+	},
+	{
+		"slug": "openjdk-open-sky",
+		"credits": {
+			"author": {
+				"name": "frank mckenna",
+				"url": "https://unsplash.com/@frankiefoto"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/OD9EOzfSOh0"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
