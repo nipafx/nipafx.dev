@@ -2455,7 +2455,8 @@
 					"location": {
 						"type": "virtual"
 					},
-					"slides": "https://slides.nipafx.dev/java-next/2022-09-20-jcon"
+					"slides": "https://slides.nipafx.dev/java-next/2022-09-20-jcon",
+					"video": "https://www.youtube.com/watch?v=v2ug_elHZH4"
 				}
 			]
 		},
@@ -2549,7 +2550,8 @@
 					"location": {
 						"type": "virtual"
 					},
-					"slides": "https://slides.nipafx.dev/java-next/2022-10-11-gsjug"
+					"slides": "https://slides.nipafx.dev/java-next/2022-10-11-gsjug",
+					"video": "https://www.youtube.com/watch?v=iWNW2yC2WMk"
 				}
 			]
 		},
