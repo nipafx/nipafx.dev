@@ -2668,6 +2668,40 @@
 					}
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "Turkey Java Community",
+				"url": "https://turkeyjava.com/",
+				"image": "turkish-java-community"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"time": "11.01.2023 2000 Europe/Istanbul",
+					"location": {
+						"type": "virtual"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Voxxed Days Zürich",
+				"url": "https://voxxeddays.com/zurich/",
+				"image": "voxxed-days-zurich"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"time": "16.03.2023",
+					"location": {
+						"text": "Zürich, Arena Cinema Sihlcity"
+					}
+				}
+			]
 		}
 	],
 	"future-events": [
