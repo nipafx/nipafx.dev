@@ -2661,10 +2661,10 @@
 					"talk": "talk-java-next",
 					"title": "Java Next",
 					"programEntry": "https://www.ittage.informatik-aktuell.de/programm/2022/java-next-from-amber-to-loom-from-panama-to-valhalla.html",
-					"time": "13.12.2022 1000 Europe/Berlin",
+					"time": "13.12.2022 1100 Europe/Berlin",
 					"location": {
-						"text": "Track 4",
-						"type": "virtual"
+						"type": "virtual",
+						"text": "Track 4"
 					}
 				}
 			]
@@ -2679,9 +2679,11 @@
 				{
 					"talk": "talk-java-next",
 					"title": "Java Next",
+					"announcement": "https://kommunity.com/organizers/turkey-java-community/events/java-next-from-amber-to-loom-from-panama-to-valhalla-cefb34f5",
 					"time": "11.01.2023 2000 Europe/Istanbul",
 					"location": {
-						"type": "virtual"
+						"type": "virtual",
+						"text": "on YouTube"
 					}
 				}
 			]
