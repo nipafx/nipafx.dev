@@ -504,6 +504,12 @@
 			"url": "https://www.youtube.com/watch?v=3M5o3hUH09A",
 			"title": "GraalVM In OpenJDK And More JavaOne Announcements - Inside Java Newscast #36",
 			"thumbnail": "inside-java-newscast-36"
+		},
+		{
+			"slug": "inside-java-newscast-39",
+			"url": "https://www.youtube.com/watch?v=ghGvFcg6GEQ",
+			"title": "24 Java Features You Missed In 2022 - Inside Java Newscast #39",
+			"thumbnail": "inside-java-newscast-39"
 		}
 	]
 }
