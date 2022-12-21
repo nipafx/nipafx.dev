@@ -103,7 +103,17 @@ A `rearrange` with a shuffle and a mask would do the trick, but it's tedious and
 JDK 19 added a more succinct operation to the vector API to accomplish this: [`compress`][vector-compress].
 Just pass in a mask of the lanes you want to select and they'll be placed in a contiguous section at the beginning of the result vector, with everything else set to 0.
 
-To go the other way, use [`expand`][expand]:
+```java
+int[] colors = { 255, 79, 198, 87, 160, 255, 179, 228 }
+boolean[] selectRed = { true, false, false, true, false, false, true, false };
+
+// this example only works if the species has length <= 8
+var rgbVector = IntVector.fromArray(SPECIES, colors, 0);
+var redMask = VectorMask.fromArray(SPECIES, selectRed, 0);
+var reds = rgbVector.compress(redMask);
+```
+
+To go the other way, use [`expand`][vector-expand]:
 Starting from index 0, lanes are parceled out into each result lane where the mask is true.
 Spiritually speaking, compress and expand are inverse to one another but not quite because both lose information, namely the non-selected lanes.
 But if you compress and then expand with the same mask, you get the input vector back with all lanes that the mask didn't select set to zero.
@@ -172,6 +182,16 @@ Ik, coming back to G1, the maximum allowed heap region size of 32MB can cause in
 On very large heaps, it leads to increased internal region management overhead and decreased performance due to larger local allocation buffers.
 Since JDK 18, it's possible to manually increase the heap region size beyond 32MB to up to 512MB with the command line option `-XX:G1HeapRegionSize`.
 
+```shell
+$ java -Xlog:gc* -XX:G1HeapRegionSize=512M
+# [...]
+# [0.002s][info][gc,init] Heap Region Size: 512M
+# [0.002s][info][gc,init] Heap Min Capacity: 512M
+# [0.002s][info][gc,init] Heap Initial Capacity: 1G
+# [0.002s][info][gc,init] Heap Max Capacity: 16G
+# [...]
+```
+
 Good right, that was good?
 Pause worked, let's keep going.
 
@@ -213,18 +233,27 @@ Stream.of(
 		Locale.of("vi", "VN")
 ).forEach(locale -> {
 	Locale.setDefault(locale);
-	var custom = now.format(DateTimeFormatter.ofPattern("y-MM-dd"));
-	var localized = now.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT));
-	// it's now possible to create custom localized formatters for specific patterns
-	var customLocalized = now.format(DateTimeFormatter.ofLocalizedPattern("yMM"));
-	System.out.printf("""
-					Locale %s:
-						custom: %s
-						local: %s
-						both: %s
-					%n""",
-			locale, custom, localized, customLocalized);
+
+	var custom = DateTimeFormatter.ofPattern("y-MM-dd");
+	var local = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+	// it's now possible to create custom
+	// localized formatters for specific patterns
+	var customLocal = DateTimeFormatter.ofLocalizedPattern("yMM");
+
+	System.out.printf(
+		"%s  | %s | %s | %s %n",
+		locale, now.format(custom),
+		now.format(local), now.format(customLocal));
 });
+```
+
+Output:
+
+```
+locale |   custom   |  local     |   both
+en_US  | 2022-12-14 | 12/14/22   | 12/2022
+ro_RO  | 2022-12-14 | 14.12.2022 | 12.2022
+vi_VN  | 2022-12-14 | 14/12/2022 | tháng 12, 2022
 ```
 
 [ofLocalizedPattern]: https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/time/format/DateTimeFormatter.html#ofLocalizedPattern(java.lang.String)
