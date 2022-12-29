@@ -12,3 +12,23 @@ To keep things organized, I defined some terms:
 * _Talks_: An abstract and list of presentations for a talk
 * _Video_: A post linking to a YouTube video
 * _Post_: Each of the above is a _post_
+
+## Building & Deploying
+
+```sh
+# to develop the site locally:
+npx gatsby develop
+
+# to develop Netlify integrations locally:
+npx netlify dev
+
+# to build the site:
+npx gatsby clean
+npx gatsby build
+# or shorter:
+npm run build
+
+# to deploy the site (requires env vars
+# `NETLIFY_SITE_ID` and `NETLIFY_AUTH_TOKEN`)
+npx netlify deploy --prod --dir=public
+```

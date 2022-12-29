@@ -20,11 +20,11 @@ When more than 10 event listeners are registered, node emits a warning like this
     at resolveField (/home/nipa/code/nipafx.dev/node_modules/graphql/execution/execute.js:464:18)
     at executeFields (/home/nipa/code/nipafx.dev/node_modules/graphql/execution/execute.js:292:18)
 
-Setting a slightly higher limit, removes that warning.
+Setting a slightly higher limit removes that warning.
 */
 require(`events`).EventEmitter.defaultMaxListeners = 15;
 
-const fs = require(`fs`)
+const fs = require(`fs-extra`)
 const path = require(`path`)
 const { createICalendar } = require(`./src/infra/iCalendar`)
 const { markdownToHtml } = require(`./src/infra/markdownToHtml`)
@@ -830,7 +830,10 @@ exports.onPostBuild = ({ graphql }) => {
 			}
 		}
 	`).then(({ data }) => {
+		// create calendar
 		const iCal = createICalendar(``, `upcomingMonths`, `asc`)
-		return fs.writeFileSync(`./public/${data.site.siteMetadata.calendar}`, iCal.toString())
+		fs.writeFileSync(`./public/${data.site.siteMetadata.calendar}`, iCal.toString())
+
+		return null
 	})
 }
