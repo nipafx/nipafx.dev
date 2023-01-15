@@ -1,7 +1,5 @@
 name: Site Deploy
 on:
-  push:
-    branches: [ master ]
   # deploy every midnight
   schedule:
     - cron: '0 0 * * *'
