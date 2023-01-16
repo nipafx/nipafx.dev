@@ -2628,7 +2628,8 @@
 					"time": "03.11.2022 1140 Europe/Amsterdam",
 					"location": {
 						"text": "Pathé Ede, Room 9"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-next/2022-11-03-j-fall"
 				}
 			]
 		},
@@ -2646,7 +2647,8 @@
 					"time": "07.12.2022 1900 Europe/Paris",
 					"location": {
 						"text": "Sfeir, 1 Av. de l'Europe, Schilitgheim"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/patterns/2022-12-07-elsassjug"
 				}
 			]
 		},
@@ -2665,7 +2667,8 @@
 					"location": {
 						"type": "virtual",
 						"text": "Track 4"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2022-10-11-kvadrat"
 				}
 			]
 		},
@@ -2684,7 +2687,9 @@
 					"location": {
 						"type": "virtual",
 						"text": "on YouTube"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-next/2023-01-11-tjc",
+					"video": "https://www.youtube.com/watch?v=5URti9wDEIc"
 				}
 			]
 		},
