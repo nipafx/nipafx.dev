@@ -168,7 +168,7 @@ switch (string) {
 ```
 
 In the second preview in JDK 18, the answer to that depends on the presence of an _unconditional pattern_, that is a pattern that matches all possible instances of the switched variable's type.
-Think of a switch over a variable of type `Shape` where the last case is `case Shape s` - that always matches, it's unconditional on type `Shape`.
+Think of a switch over a variable of type `Shape` where the last case is `case Shape s` - that always matches, it's unconditional in type `Shape`.
 Unconditional patterns even match `null`, meaning in JDK 18 the variable `s` could be null - that would probably lead to a number of `NullPointerException`s in its own right and I wasn't a fan of silently sweeping `null` in with the other shapes.
 
 ```java

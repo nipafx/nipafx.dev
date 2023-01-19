@@ -510,6 +510,12 @@
 			"url": "https://www.youtube.com/watch?v=ghGvFcg6GEQ",
 			"title": "24 Java Features You Missed In 2022 - Inside Java Newscast #39",
 			"thumbnail": "inside-java-newscast-39"
+		},
+		{
+			"slug": "inside-java-newscast-40",
+			"url": "https://www.youtube.com/watch?v=-sfB40FHfJE",
+			"title": "Java's Plans for 2023 - Inside Java Newscast #40",
+			"thumbnail": "inside-java-newscast-40"
 		}
 	]
 }
