@@ -1,6 +1,6 @@
 ---
 title: "What Happens to Finalization in JDK 18? - Inside Java Newscast #15"
-tags: [java-18, migration, reflection]
+tags: [java-18, deprecation, migration, reflection]
 date: 2021-11-11
 slug: inside-java-newscast-15
 videoSlug: inside-java-newscast-15

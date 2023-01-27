@@ -120,7 +120,7 @@ They may be worked on in 2023 but won't be delivered before the FFM API is final
 
 ## Project Lilliput
 
-I gave an intro to [Project Lilliput][lilliput] before - check it out here.
+I gave an intro to [Project Lilliput][lilliput] before - [check it out here][ijn#25].
 The gist is that it tries to reduce the size of the object header in Hotspot from 128 or 96 bits to 32 bits.
 This would free up 10-20% of your heap!
 Not bad.
@@ -136,6 +136,7 @@ Aleksey Shipilëv recently [extended it][aleksey-jol] to simulate Lilliput's cur
 You can feed JOL a heapdump and get an estimate of Lilliput's effect on your project.
 
 [lilliput]: https://wiki.openjdk.org/display/lilliput
+[ijn#25]: https://www.youtube.com/watch?v=KuHhUDhIFYs&t=482s
 [jep-64-bits]: https://openjdk.org/jeps/8294992
 [lilliput-fork]: https://github.com/openjdk/lilliput-jdk17u
 [build-jdk]: https://openjdk.org/groups/build/doc/building.html

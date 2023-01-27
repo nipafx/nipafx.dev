@@ -1,6 +1,6 @@
 ---
 title: "Pattern Matching in Switches and Security Manager Deprecation - Inside Java Newscast #5"
-tags: [switch, pattern-matching]
+tags: [switch, pattern-matching, deprecation]
 date: 2021-05-27
 slug: inside-java-newscast-5
 videoSlug: inside-java-newscast-5
