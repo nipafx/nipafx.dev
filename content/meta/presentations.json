@@ -2706,8 +2706,9 @@
 					"announcement": "https://www.meetup.com/de-DE/jug-bonn/events/291005879/",
 					"time": "07.02.2023 1900 Europe/Berlin",
 					"location": {
-						"text": "t.b.d."
-					}
+						"text": "LeanIX, Friedrich-Ebert-Allee 37-39"
+					},
+					"slides": "https://slides.nipafx.dev/openjdk-features/2023-02-07-jug-bonn"
 				}
 			]
 		},
