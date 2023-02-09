@@ -239,13 +239,13 @@ If it does, some projects on level 1 may suddenly require additional command lin
 There are three uncomfortable solutions to this:
 
 1. Add an asterisk to each (mis)behave-phrase that ignores misbehavior due to changes that are unrelated to the module system.
-But guess what?
-Then Log4J 1.2 is on level 1 even though it works on no JVM that contains the module system.
-That's... odd.
+   But guess what?
+   Then Log4J 1.2 is on level 1 even though it works on no JVM that contains the module system.
+   That's... odd.
 2. Add versions to the assessment.
-A project may be on level 11-2, but 12-0 because of some change to `Unsafe`.
-But what does that have to do with the module system and hence the project's JPMS maturity?
-Right, nothing.
+   A project may be on level 11-2, but 12-0 because of some change to `Unsafe`.
+   But what does that have to do with the module system and hence the project's JPMS maturity?
+   Right, nothing.
 3. Handwave the problem away and hope that developers who employ this model use their common sense to determine how a Java change impacts a project's maturity.
 
 For now, I'm going with 3.
