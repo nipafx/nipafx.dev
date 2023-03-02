@@ -522,6 +522,12 @@
 			"url": "https://www.youtube.com/watch?v=3HnH6G_zcP0",
 			"title": "Prepare Your Code Bases For Future Java - Inside Java Newscast #41",
 			"thumbnail": "inside-java-newscast-41"
+		},
+		{
+			"slug": "inside-java-newscast-43",
+			"url": "https://www.youtube.com/watch?v=QPWFjNroHls",
+			"title": "The Holy Grail of Java Performance - Inside Java Newscast #43",
+			"thumbnail": "inside-java-newscast-43"
 		}
 	]
 }
