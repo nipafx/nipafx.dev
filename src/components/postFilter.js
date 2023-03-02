@@ -74,13 +74,13 @@ const PostFilter = () => {
 const channelsAndTags = () => {
 	const { channels, tags } = useStaticQuery(graphql`
 		query {
-			channels: allChannel(sort: { fields: internalName }) {
+			channels: allChannel(sort: { internalName: ASC }) {
 				nodes {
 					internalName
 				}
 			}
-			tags: allPost(sort: { fields: slug }) {
-				group(field: tags) {
+			tags: allPost(sort: { slug: ASC }) {
+				group(field: { tags: SELECT }) {
 					slug: fieldValue
 				}
 			}

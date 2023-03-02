@@ -36,7 +36,7 @@ const TagsPage = ({ data }) => (
 export const query = graphql`
 	{
 		tags: allPost {
-			group(field: tags) {
+			group(field: { tags: SELECT }) {
 				slug: fieldValue
 				count: totalCount
 			}

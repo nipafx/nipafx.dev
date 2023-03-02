@@ -754,7 +754,7 @@ createTagPages = (graphql, createPage) => {
 	return graphql(`
 		{
 			tags: allPost {
-				group(field: tags) {
+				group(field: { tags: SELECT }) {
 					name: fieldValue
 				}
 			}

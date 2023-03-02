@@ -48,7 +48,7 @@ const feed = {
 		}),
 	query: `
 		{
-			posts: allPost(sort: {fields: [date], order: DESC}) {
+			posts: allPost(sort: { date: DESC }) {
 				nodes {
 					title
 					slug

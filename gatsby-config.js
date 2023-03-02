@@ -240,11 +240,6 @@ module.exports = {
 			},
 		},
 		{
-			// pull in FontAwesome CSS during build
-			// https://medium.com/@johnny02/how-to-add-font-awesome-to-a-gatsby-site-89da940924d5
-			resolve: `gatsby-plugin-fontawesome-css`,
-		},
-		{
 			resolve: `gatsby-plugin-react-helmet`,
 		},
 		{

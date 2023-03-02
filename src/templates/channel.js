@@ -43,7 +43,7 @@ export const query = graphql`
 			}
 		}
 		posts: allPost(
-			sort: { fields: [date], order: DESC }
+			sort: { date: DESC }
 			filter: { channel: { eq: $channel } }
 		) {
 			nodes {

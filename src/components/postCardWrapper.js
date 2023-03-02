@@ -20,15 +20,10 @@ const getPost = slug => {
 					tags
 					description
 					featuredImage {
-						fluid(
-							maxWidth: 800
-							base64Width: 10
-							srcSetBreakpoints: [800, 1600]
-							toFormat: JPG
-							jpegQuality: 40
-						) {
-							...GatsbyImageSharpFluid
-						}
+						gatsbyImageData(
+							width: 600,
+							formats: [ JPG ]
+							jpgOptions: { quality: 40})
 					}
 				}
 			}

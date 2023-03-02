@@ -16,7 +16,7 @@ const getPostSlugs = (kind, slug) => {
 	const { posts, tags } = useStaticQuery(
 		graphql`
 			query {
-				posts: allPost(sort: { fields: date, order: DESC }) {
+				posts: allPost(sort: { date: DESC }) {
 					nodes {
 						slug
 						channel

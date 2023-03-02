@@ -143,12 +143,12 @@ const loadChildren = tag => {
 		graphql`
 			query {
 				videoTags: allVideo {
-					group(field: tags) {
+					group(field: { tags: SELECT }) {
 						tag: fieldValue
 					}
 				}
 				articleTags: allArticle {
-					group(field: tags) {
+					group(field: { tags: SELECT }) {
 						tag: fieldValue
 					}
 				}

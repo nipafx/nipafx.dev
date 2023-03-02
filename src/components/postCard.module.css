@@ -1,9 +1,19 @@
+.card {
+	/* use a grid to stack image and content on top of one another */
+	display: grid;
+}
+
+
 .image {
-	height: 100%;
+	grid-area: 1/1;
+	/* unfortunately, DOM order is not enough to put the image in the background :( */
+	z-index: -1;
 }
 
 .content {
-	height: 100%;
+	grid-area: 1/1;
+	overflow: hidden;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -21,10 +31,6 @@
 
 .content:visited {
 	color: var(--fg-color);
-}
-
-.content .channel {
-	transition: color var(--menu-transition);
 }
 
 .top {

@@ -68,7 +68,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
 	query {
-		posts: allPost(sort: { fields: [date], order: DESC }) {
+		posts: allPost(sort: { date: DESC }) {
 			nodes {
 				title
 				slug
@@ -77,15 +77,10 @@ export const query = graphql`
 				tags
 				description
 				featuredImage {
-					fluid(
-						maxWidth: 800
-						base64Width: 10
-						srcSetBreakpoints: [800, 1600]
-						toFormat: JPG
-						jpegQuality: 40
-					) {
-						...GatsbyImageSharpFluid
-					}
+					gatsbyImageData(
+						width: 600,
+						formats: [ JPG ]
+						jpgOptions: { quality: 40})
 				}
 			}
 		}

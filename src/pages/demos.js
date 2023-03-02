@@ -60,7 +60,7 @@ const getReposWithPostSlugs = () => {
 						description
 					}
 				}
-				posts: allPost(sort: { fields: date, order: DESC }) {
+				posts: allPost(sort: { date: DESC }) {
 					nodes {
 						date
 						repo {
