@@ -6,6 +6,7 @@ date: 2022-11-13
 slug: talk-openjdk-features
 description: "How a community of Java enthusiasts drives innovation for 15 years, turning ideas into designs into code into features you can use in your IDE"
 featuredImage: openjdk-open-sky
+slides: https://slides.nipafx.dev/openjdk-features
 ---
 
 OpenJDK is one of the world's most influential open source communities.

@@ -4,7 +4,7 @@ tags: [project-leyden]
 date: 2023-03-02
 slug: inside-java-newscast-43
 videoSlug: inside-java-newscast-43
-description: "The goal of Project Leyden is to improve the startup time, time to peak performance, and footprint of Java programs. Project lead MArk Reinhold recently proposed to extend the Java programming model with features for selectively shifting and constraining computation with condensors. Let's look at his white paper and roadmap."
+description: "The goal of Project Leyden is to improve the startup time, time to peak performance, and footprint of Java programs. Project lead Mark Reinhold recently proposed to extend the Java programming model with features for selectively shifting and constraining computation with condensors. Let's look at his white paper and roadmap."
 featuredImage: inside-java-newscast-43
 ---
 
