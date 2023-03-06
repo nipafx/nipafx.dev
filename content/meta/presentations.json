@@ -2702,7 +2702,7 @@
 			"presentations": [
 				{
 					"talk": "talk-openjdk-features",
-					"title": "From Idea to IDE - How Java Features Are Considered, Designed, And Shipped",
+					"title": "From Idea to IDE",
 					"announcement": "https://www.meetup.com/de-DE/jug-bonn/events/291005879/",
 					"time": "07.02.2023 1900 Europe/Berlin",
 					"location": {
@@ -2722,9 +2722,9 @@
 				{
 					"talk": "talk-java-next",
 					"title": "Java Next",
-					"time": "16.03.2023",
+					"time": "16.03.2023 1325 Europe/Zurich",
 					"location": {
-						"text": "Zürich, Arena Cinema Sihlcity"
+						"text": "Zürich, Arena Cinema Sihlcity, Room 3"
 					}
 				}
 			]
@@ -2737,11 +2737,44 @@
 			},
 			"presentations": [
 				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming in Java (20)",
+					"time": "23.03.2023 1415 Europe/Bucharest",
+					"location": {
+						"text": "Sheraton Bucharest Hotel, Track 1"
+					}
+				},
+				{
 					"talk": "talk-java-amber",
 					"title": "The SolutionFactory To Java's Problems",
-					"time": "23.03.2023",
+					"time": "24.03.2023 1645 Europe/Bucharest",
 					"location": {
-						"text": "Sheraton Bucharest Hotel"
+						"text": "Sheraton Bucharest Hotel, Track 1"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Karlsruher Entwicklertag",
+				"url": "https://entwicklertag.de/",
+				"image": "karlsruher-entwicklertag"
+			},
+			"presentations": [
+				{
+					"talk": "talk-openjdk-features",
+					"title": "From Idea to IDE",
+					"time": "14.06.2023",
+					"location": {
+						"text": "IHK Karlsruhe"
+					}
+				},
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"time": "14.06.2023",
+					"location": {
+						"text": "IHK Karlsruhe"
 					}
 				}
 			]

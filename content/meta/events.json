@@ -113,6 +113,17 @@
 				"text": "Zimmerstraße 3",
 				"info": "Zimmerstraße 3, 76137 Karlsruhe"
 			}
+		},
+		{
+			"time": "24.10.2023 0800 Europe/Berlin",
+			"title": "Accento",
+			"description": "A conference I co-organize: 2 tracks with 10 slots, focussing on **Java** with a spicy side dish of **web dev**, aimed at experienced and expert-level developers.",
+			"url": "https://accento.dev/",
+			"location": {
+				"type": "physical",
+				"text": "more about Accento",
+				"info": "Karlsruhe, Südwerk"
+			}
 		}
 	]
 }
