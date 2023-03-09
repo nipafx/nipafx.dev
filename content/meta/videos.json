@@ -524,10 +524,22 @@
 			"thumbnail": "inside-java-newscast-41"
 		},
 		{
+			"slug": "inside-java-newscast-42",
+			"url": "https://www.youtube.com/watch?v=olgii0eWu88",
+			"title": "From Java Security with Love - Inside Java Newscast #42",
+			"thumbnail": "inside-java-newscast-42"
+		},
+		{
 			"slug": "inside-java-newscast-43",
 			"url": "https://www.youtube.com/watch?v=QPWFjNroHls",
 			"title": "The Holy Grail of Java Performance - Inside Java Newscast #43",
 			"thumbnail": "inside-java-newscast-43"
+		},
+		{
+			"slug": "programmer-guide-jfr",
+			"url": "https://www.youtube.com/watch?v=K1ApBZGiT-Y",
+			"title": "Programmer's Guide to JDK Flight Recorder",
+			"thumbnail": "programmer-guide-jfr"
 		}
 	]
 }

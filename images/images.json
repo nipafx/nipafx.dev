@@ -2829,5 +2829,21 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "java-20-guide",
+		"credits": {
+			"author": {
+				"name": "Matthew Ball",
+				"url": "https://unsplash.com/@tex450"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/TFE_-9eLmEs"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
