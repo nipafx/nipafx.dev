@@ -2715,6 +2715,7 @@
 	},
 	{
 		"slug": "java-17",
+		"alt": "White structured wall with slightly cracked plaster on which metal charcters are mounted that from 'No 17'",
 		"credits": {
 			"author": {
 				"name": "Arno Senoner",
@@ -2731,6 +2732,7 @@
 	},
 	{
 		"slug": "java-optional-opinions",
+		"alt": "Close-up of a black ant with brown/reddish legs",
 		"credits": {
 			"author": {
 				"name": "Ralph Klein",
@@ -2747,6 +2749,7 @@
 	},
 	{
 		"slug": "javadoc-snippets-maven",
+		"alt": "Top down photo of colored papper rectangles pseudo-chaotically laid out to be equal parts interesting and pleasing",
 		"credits": {
 			"author": {
 				"name": "Kelly Sikkema",
@@ -2763,6 +2766,7 @@
 	},
 	{
 		"slug": "java-switch",
+		"alt": "A fancy gear switch from some modern car",
 		"credits": {
 			"author": {
 				"name": "Jean-Philippe Delberghe",
@@ -2779,6 +2783,7 @@
 	},
 	{
 		"slug": "java-dop",
+		"alt": "An angled photo of a surface (a screen?) that shows white and red 0s and 1s on black with the digits strategically colored so the red ones form a heart",
 		"credits": {
 			"author": {
 				"name": "Alexander Sinn",
@@ -2795,6 +2800,7 @@
 	},
 	{
 		"slug": "java-amber",
+		"alt": "A clumped-up chain of spherical bernstein beads on a white surface",
 		"credits": {
 			"source": {
 				"url": "https://pxhere.com/en/photo/1247296"
@@ -2807,6 +2813,7 @@
 	},
 	{
 		"slug": "junit-pioneer-sketchnotes",
+		"alt": "Sketch notes of the presentation",
 		"credits": {
 			"author": {
 				"name": "Johannes Dienst",
@@ -2816,6 +2823,7 @@
 	},
 	{
 		"slug": "openjdk-open-sky",
+		"alt": "Five sea gulls flying across a blue sky, tinged golden by the setting sun, above a blue sea with waves crashing into the sand in the foreground",
 		"credits": {
 			"author": {
 				"name": "frank mckenna",
@@ -2832,6 +2840,7 @@
 	},
 	{
 		"slug": "java-20-guide",
+		"alt": "Two hands, each holding a large ballon in the shape of a digit, forming the number 20",
 		"credits": {
 			"author": {
 				"name": "Matthew Ball",
