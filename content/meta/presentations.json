@@ -2778,6 +2778,24 @@
 					}
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "GOTO Amsterdam",
+				"url": "https://gotoams.nl/2023",
+				"image": "goto-amsterdam"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-after-n",
+					"title": "Java After Seventeen",
+					"program": "https://gotoams.nl/2023/schedule?date=2023-06-27",
+					"time": "27.06.2023 1120 Europe/Amsterdam",
+					"location": {
+						"text": "Beurs van Berlage, Effectenbeurszaal"
+					}
+				}
+			]
 		}
 	],
 	"future-events": [
