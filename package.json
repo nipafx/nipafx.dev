@@ -38,7 +38,7 @@
 		"rehype-react": "^7.1.2",
 		"remark": "^13.0.0",
 		"remark-html": "^13.0.2",
-		"webpack": "5.75.0"
+		"webpack": "5.76.2"
 	},
 	"//": "DON'T UPDATE remark OR remark-html PAST 13.x - it only comes as ES 6 module, but is needed from gatsby-node.js, which only uses Common JS modules",
 	"devDependencies": {
