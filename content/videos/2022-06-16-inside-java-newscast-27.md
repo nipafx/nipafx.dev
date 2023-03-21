@@ -294,16 +294,11 @@ To that end, the parent task creates a new scope, decides on the error handling 
 It can process any errors that occurred or, if all went well, compose the subtasks' results to its result.
 
 ```java
-UserOrder load(long userId, long orderId)
-		throws InterruptedException {
-	try (var scope =
-			new StructuredTaskScope
-				.ShutdownOnFailure()) {
+UserOrder load(long userId, long orderId) throws InterruptedException {
+	try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 		// spawn subtasks
-		Future<String> user = scope
-			.fork(() -> findUser(userId));
-		Future<Integer> order = scope
-			.fork(() -> fetchOrder(orderId));
+		Future<String> user = scope.fork(() -> findUser(userId));
+		Future<Integer> order = scope.fork(() -> fetchOrder(orderId));
 
 		// wait for them to complete...
 		scope.join();
@@ -311,9 +306,7 @@ UserOrder load(long userId, long orderId)
 		scope.throwIfFailed();
 
 		// here, both subtasks succeeded
-		return new UserOrder(
-			user.resultNow(),
-			order.resultNow());
+		return new UserOrder(user.resultNow(), order.resultNow());
 	} catch (ExecutionException ex) {
 		// handle errors if any
 	}
