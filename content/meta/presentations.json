@@ -2722,6 +2722,7 @@
 				{
 					"talk": "talk-java-next",
 					"title": "Java Next",
+					"programEntry": "https://voxxeddays.com/zurich/schedule/talk/?id=5456",
 					"time": "16.03.2023 1325 Europe/Zurich",
 					"location": {
 						"text": "Zürich, Arena Cinema Sihlcity, Room 3"
@@ -2740,6 +2741,7 @@
 					"talk": "talk-java-pattern-matching",
 					"title": "Data-Oriented Programming in Java (20)",
 					"time": "23.03.2023 1415 Europe/Bucharest",
+					"programEntry": "https://romania.voxxeddays.com/talk/?id=5825",
 					"location": {
 						"text": "Sheraton Bucharest Hotel, Track 1"
 					}
@@ -2748,8 +2750,27 @@
 					"talk": "talk-java-amber",
 					"title": "The SolutionFactory To Java's Problems",
 					"time": "24.03.2023 1645 Europe/Bucharest",
+					"programEntry": "https://romania.voxxeddays.com/talk/?id=5155",
 					"location": {
 						"text": "Sheraton Bucharest Hotel, Track 1"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Saar",
+				"url": "https://www.meetup.com/de-DE/java-user-group-saarland-jugsaar/",
+				"image": "jug-saar"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming in Java",
+					"announcement": "https://www.meetup.com/de-DE/java-user-group-saarland-jugsaar/events/292356892/",
+					"time": "23.05.2023 1800 Europe/Berlin",
+					"location": {
+						"text": "eurodata AG, Saarbrücken"
 					}
 				}
 			]
