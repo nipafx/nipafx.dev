@@ -203,15 +203,13 @@ It doesn't do that directly - instead it removes incidental white space and cons
 
 The compiler removes indentation in a fairly interesting and non-trivial algorithm that deserves its own blog post, but the gist is:
 
--   all trailing whitespace is removed (and good riddance!)
--   for leading white space:
-	-   check all non-blank lines (i.e.
-lines that aren't just white space)
-	-   count the number of leading white space characters in each (the exact character doesn't matter, i.e.
-a space counts exactly as much as a tab)
-	-   take the smallest of those numbers and remove that many white space characters from each line (once again ignoring the exact kind of character)
-	-   the result is that at least one of the lines has no leading white space
--   in what's called a *significant trailing line policy* the line containing the closing `"""` is always included in that check (even though it is blank if `"""` is on its own line!)
+* all trailing whitespace is removed (and good riddance!)
+* for leading white space:
+	* check all non-blank lines (i.e. lines that aren't just white space)
+	* count the number of leading white space characters in each (the exact character doesn't matter, i.e. a space counts exactly as much as a tab)
+	* take the smallest of those numbers and remove that many white space characters from each line (once again ignoring the exact kind of character)
+	* the result is that at least one of the lines has no leading white space
+* in what's called a *significant trailing line policy* the line containing the closing `"""` is always included in that check (even though it is blank if `"""` is on its own line!)
 
 The second point leads to the removal of shared leading white space while keeping indentation within the string intact:
 
