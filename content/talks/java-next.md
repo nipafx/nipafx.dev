@@ -7,7 +7,7 @@ slug: talk-java-next
 description: "From Amber to Loom, from Panama to Valhalla - the four big projects are entering the home stretch. Time to take a closer look at how they will improve Java."
 featuredImage: java-next
 slides: https://slides.nipafx.dev/java-next
-videoSlug: java-next-jfokus-2022
+videoSlug: java-next-voxxed-zuerich-2023
 ---
 
 Java's four big projects are entering the home stretch:

@@ -540,6 +540,12 @@
 			"url": "https://www.youtube.com/watch?v=K1ApBZGiT-Y",
 			"title": "Programmer's Guide to JDK Flight Recorder",
 			"thumbnail": "programmer-guide-jfr"
+		},
+		{
+			"slug": "java-next-voxxed-zuerich-2023",
+			"url": "https://www.youtube.com/watch?v=dX8vF4oYGqI",
+			"title": "Java Next - From Amber to Loom, from Panama to Valhalla by Nicolai Parlog",
+			"thumbnail": "java-next-voxxed-zuerich-2023"
 		}
 	]
 }
