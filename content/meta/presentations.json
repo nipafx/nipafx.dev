@@ -2746,7 +2746,8 @@
 					"programEntry": "https://romania.voxxeddays.com/talk/?id=5825",
 					"location": {
 						"text": "Sheraton Bucharest Hotel, Track 1"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/patterns/2023-03-23-voxxed-days-bucharest"
 				},
 				{
 					"talk": "talk-java-amber",
@@ -2755,7 +2756,8 @@
 					"programEntry": "https://romania.voxxeddays.com/talk/?id=5155",
 					"location": {
 						"text": "Sheraton Bucharest Hotel, Track 1"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/project-amber/2023-03-24-voxxed-days-bucharest"
 				}
 			]
 		},
