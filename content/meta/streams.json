@@ -809,6 +809,11 @@
 			"time": "14.07.2022 1900",
 			"title": "JUnit Pioneer",
 			"description": "Working on PRs, issues, and maybe new extensions"
+		},
+		{
+			"time": "31.03.2023 1900",
+			"title": "Sequenced Collections Q&A",
+			"description": "We'll be talking to Stuart Marks about JEP 431 - his proposal for sequenced collections in the JDK that's targeted for JDK 21."
 		}
 	]
 }
