@@ -814,6 +814,21 @@
 			"time": "31.03.2023 1900",
 			"title": "Sequenced Collections Q&A",
 			"description": "We'll be talking to Stuart Marks about JEP 431 - his proposal for sequenced collections in the JDK that's targeted for JDK 21."
+		},
+		{
+			"time": "13.04.2023 1600",
+			"title": "JUnit Pioneer",
+			"description": "Checking in on the project to see whether everything goes well post 2.0"
+		},
+		{
+			"time": "20.04.2023 1800",
+			"title": "🤷",
+			"description": "I'm sure we'll find something to do."
+		},
+		{
+			"time": "27.04.2023 1800",
+			"title": "🤷",
+			"description": "I'm sure we'll find something to do."
 		}
 	]
 }
