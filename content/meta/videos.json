@@ -546,6 +546,12 @@
 			"url": "https://www.youtube.com/watch?v=dX8vF4oYGqI",
 			"title": "Java Next - From Amber to Loom, from Panama to Valhalla by Nicolai Parlog",
 			"thumbnail": "java-next-voxxed-zuerich-2023"
+		},
+		{
+			"slug": "inside-java-newscast-45",
+			"url": "https://www.youtube.com/watch?v=9G_0el3RWPE",
+			"title": "Java 21's New (Sequenced) Collections - Inside Java Newscast #45",
+			"thumbnail": "inside-java-newscast-45"
 		}
 	]
 }
