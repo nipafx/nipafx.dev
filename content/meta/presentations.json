@@ -2341,7 +2341,8 @@
 					"location": {
 						"text": "International Barcelona Convention Center, Room 1 'Grace Hopper'"
 					},
-					"slides": "https://slides.nipafx.dev/java-next/2022-07-19-jbcnconf"
+					"slides": "https://slides.nipafx.dev/java-next/2022-07-19-jbcnconf",
+					"videos": "https://www.youtube.com/watch?v=0UuIREqnkG0"
 				}
 			]
 		},
@@ -2849,5 +2850,10 @@
 		}
 	],
 	"future-events": [
+		{ "JUG Stuttgart": "04.05. - ???" },
+		{ "JUG Mannheim": "??? - ???" },
+		{ "JUG Karlsruhe": "13.06. - ???" },
+		{ "JUG Frankfurt": "26.07. - Pattern Matching" },
+		{ "JUG CH": "29.-31.08.? - ???" }
 	]
 }
