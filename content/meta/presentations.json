@@ -2847,13 +2847,31 @@
 					}
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "JUG Frankfurt",
+				"url": "https://jugf.github.io/",
+				"image": "jug-ffm"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming in Java (20)",
+					"announcement": "https://jugf.github.io/posts/data-oriented-programming-in-java-20-26-07-2023/",
+					"time": "26.07.2022 1830 Europe/Berlin",
+					"location": {
+						"text": "Freifunk München",
+						"url": "https://meet.ffmuc.net/jugfmeeting"
+					}
+				}
+			]
 		}
 	],
 	"future-events": [
 		{ "JUG Stuttgart": "04.05. - ???" },
 		{ "JUG Mannheim": "??? - ???" },
 		{ "JUG Karlsruhe": "13.06. - ???" },
-		{ "JUG Frankfurt": "26.07. - Pattern Matching" },
 		{ "JUG CH": "29.-31.08.? - ???" }
 	]
 }
