@@ -2872,8 +2872,12 @@
 	],
 	"future-events": [
 		{ "JUG Stuttgart": "04.05. - ???" },
-		{ "JUG Mannheim": "??? - ???" },
+		{ "RheinJUG": "Anfang Mai - ???" },
+		{ "JUG Mannheim": "25.05.? - ???" },
 		{ "JUG Karlsruhe": "13.06. - ???" },
-		{ "JUG CH": "29.-31.08.? - ???" }
+		{ "JUG CH": "29.-31.08.? - ???" },
+		{ "JUG Paderborn": "06.09.? - ???" },
+		{ "JUG Hannover": "September? - ???" },
+		{ "JavaForum Nord": "12.09.? - ???" }
 	]
 }
