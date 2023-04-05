@@ -2790,17 +2790,19 @@
 				{
 					"talk": "talk-openjdk-features",
 					"title": "From Idea to IDE",
-					"time": "14.06.2023",
+					"programEntry": "https://www.entwicklertag.de/2023/From_Idea_to_IDE_-_How_Java_Features_Are_Considered_Designed_And_Shipped.html",
+					"time": "14.06.2023 1045 Europe/Berlin",
 					"location": {
-						"text": "IHK Karlsruhe"
+						"text": "IHK Karlsruhe, Raum Fidelitas"
 					}
 				},
 				{
 					"talk": "talk-java-next",
 					"title": "Java Next",
-					"time": "14.06.2023",
+					"programEntry": "https://www.entwicklertag.de/2023/Java_Next_-_From_Amber_to_Loom_from_Panama_to_Valhalla.html",
+					"time": "14.06.2023 1545 Europe/Berlin",
 					"location": {
-						"text": "IHK Karlsruhe"
+						"text": "IHK Karlsruhe, Raum Baden"
 					}
 				}
 			]
