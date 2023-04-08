@@ -18,7 +18,7 @@ General contact information and person responsible for the content:
 Contact:
 
 > [email to nicolai@nipafx.dev](mailto:nicolai@nipafx.dev)  \
-> [Twitter DM](https://twitter/nipafx)
+> [Twitter DM](https://twitter.com/nipafx)
 
 VAT-ID:
 
