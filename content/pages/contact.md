@@ -9,7 +9,7 @@ description: "Whether to ask a Java question, give feedback on this blog, report
 To the point:
 
 * [email](mailto:nicolai@nipafx.dev)
-* [Twitter DM](https://twitter/nipafx)
+* [Twitter DM](https://twitter.com/nipafx)
 * [Discord](https://discord.com/invite/7m9w8Td) (DM or in public channels)
 * [this site on GitHub](https://github.com/nipafx/nipafx.dev)
 
