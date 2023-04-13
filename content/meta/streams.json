@@ -816,19 +816,19 @@
 			"description": "We'll be talking to Stuart Marks about JEP 431 - his proposal for sequenced collections in the JDK that's targeted for JDK 21."
 		},
 		{
-			"time": "13.04.2023 1600",
+			"time": "13.04.2023 1900",
 			"title": "JUnit Pioneer",
 			"description": "Checking in on the project to see whether everything goes well post 2.0"
 		},
 		{
-			"time": "20.04.2023 1800",
+			"time": "20.04.2023 1900",
 			"title": "Rebooting the Stream",
-			"description": "Reimplementing by stream layout in Spring Boot"
+			"description": "Reimplementing my stream layout in Spring Boot"
 		},
 		{
-			"time": "27.04.2023 1800",
+			"time": "27.04.2023 1900",
 			"title": "Rebooting the Stream",
-			"description": "Reimplementing by stream layout in Spring Boot"
+			"description": "Reimplementing my stream layout in Spring Boot"
 		}
 	]
 }
