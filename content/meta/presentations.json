@@ -171,7 +171,7 @@
 					"announcement": "http://www.majug.de/2019/07/04/Java-Next/",
 					"time": "04.07.2019 1900 Europe/Berlin",
 					"location": {
-						"text": "Uni Mannheim A5, 6 im Raum C013"
+						"text": "Universität Mannheim A5, 6 im Raum C013"
 					},
 					"slides": "https://slides.nipafx.dev/java-next/2019-07-04-jug-mannheim"
 				}
@@ -2474,7 +2474,7 @@
 					"announcement": "https://www.jug-da.de/2022/09/JDK-Tools-Java-Next/",
 					"time": "22.09.2022 1830 Europe/Berlin",
 					"location": {
-						"text": "t.b.d."
+						"text": "Accso, Hilpertstraße 12"
 					},
 					"slides": "https://slides.nipafx.dev/java-next/2022-09-22-jug-darmstadt"
 				}
@@ -2764,6 +2764,24 @@
 		},
 		{
 			"event": {
+				"name": "JUG Stuttgart",
+				"url": "http://www.jugs.org/",
+				"image": "jug-stuttgart"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-amber",
+					"title": "Die SolutionFactory für Javas Probleme",
+					"announcement": "https://www.jugs.org/veranstaltungen/die-solutionfactory-fuer-javas-probleme/",
+					"time": "04.05.2023 1830 Europe/Berlin",
+					"location": {
+						"text": "Universität Stuttgart, Pfaffenwald 47, Raum 4.282"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "JUG Saar",
 				"url": "https://www.meetup.com/de-DE/java-user-group-saarland-jugsaar/",
 				"image": "jug-saar"
@@ -2871,7 +2889,6 @@
 		}
 	],
 	"future-events": [
-		{ "JUG Stuttgart": "04.05. - ???" },
 		{ "RheinJUG": "Anfang Mai - ???" },
 		{ "JUG Mannheim": "25.05.? - ???" },
 		{ "JUG Karlsruhe": "13.06. - ???" },
