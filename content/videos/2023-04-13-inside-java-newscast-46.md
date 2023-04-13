@@ -68,7 +68,7 @@ Classes in general may get explicit deconstructors and deconstruction on assignm
 Triangle(var a, var b, var c) = fetchTriangle();
 System.out.println("A & B: " + a + " & " + b);
 
-/* {+} */Collection<Triangle> triangles = // ...
+Collection<Triangle> triangles = // ...
 // more made up syntax!     ↓↓↓↓↓ unused
 for (Triangle(var a, var b, var c) : triangles)
 	System.out.println("A & B: " + a + " & " + b);
@@ -201,6 +201,20 @@ switch (shape) {
 ```
 
 That way, when a new subtype gets added, you can follow the compile errors to all the switches that need to be updated.
+
+```java
+sealed interface Shape
+	permits Triangle, Rectangle, Circle, Line { }
+
+var shape = // ...
+switch (shape) {
+	case Circle c -> highlight(c);
+	case Triangle t -> { }
+	case Rectangle r -> { }
+	// no `Line` branch ⇝ compile error
+}
+```
+
 Now, if you'd have used a default branch, the switch would still be exhaustive and you wouldn't get a compile error - the code would silently run into that branch whether that's correct or not.
 
 ```java
@@ -220,6 +234,18 @@ Ok, so we need to avoid default branches by explicitly listing all possible subt
 But sometimes you just have "defaulty" behavior for a few of those branches and so you want to combine them.
 But while multiple case labels are legal since Java 14, multiple named patterns are not.
 Because `case Triangle t, Rectangle r` doesn't make any sense - you could use neither `t` nor `r` because the compiler doesn't know which one matched.
+
+```java
+sealed interface Shape
+	permits Triangle, Rectangle, Circle { }
+
+var shape = // ...
+switch (shape) {
+	case Circle c -> highlight(c);
+	// compile error
+	case Triangle t, Rectangle r -> { }
+}
+```
 
 And this is where unnamed patterns come in!
 With them, you can use multiple unnamed patterns in a single case label: `case Triangle _, Rectangle _`.
