@@ -821,14 +821,19 @@
 			"description": "Checking in on the project to see whether everything goes well post 2.0"
 		},
 		{
-			"time": "20.04.2023 1900",
+			"time": "18.04.2023 1700",
 			"title": "Rebooting the Stream",
-			"description": "Reimplementing my stream layout in Spring Boot"
+			"description": "Connecting Spring Boot and React via WebSocket, adding a Twitch chat bot, letting you change the theme (and the lighting in my room? 😮)."
+		},
+		{
+			"time": "20.04.2023 1700",
+			"title": "Rebooting the Stream",
+			"description": "Connecting Spring Boot and React via WebSocket, adding a Twitch chat bot, letting you change the theme (and the lighting in my room? 😮)."
 		},
 		{
 			"time": "27.04.2023 1900",
 			"title": "Rebooting the Stream",
-			"description": "Reimplementing my stream layout in Spring Boot"
+			"description": "Connecting Spring Boot and React via WebSocket, adding a Twitch chat bot, letting you change the theme (and the lighting in my room? 😮)."
 		}
 	]
 }
