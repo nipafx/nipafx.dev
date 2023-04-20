@@ -2800,6 +2800,23 @@
 		},
 		{
 			"event": {
+				"name": "JUG Mannheim",
+				"url": "http://www.majug.de/",
+				"image": "jug-mannheim"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming in Java",
+					"time": "25.05.2023",
+					"location": {
+						"text": "t.b.d."
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Karlsruher Entwicklertag",
 				"url": "https://entwicklertag.de/",
 				"image": "karlsruher-entwicklertag"
@@ -2886,13 +2903,28 @@
 					}
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "JUG Paderborn",
+				"url": "https://jug-pb.gitlab.io/",
+				"image": "jug-paderborn"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"time": "06.09.2023 1800 Europe/Berlin",
+					"location": {
+						"text": "t.b.d."
+					}
+				}
+			]
 		}
 	],
 	"future-events": [
-		{ "JUG Mannheim": "25.05. - ???" },
 		{ "RheinJUG": "20.07. - Java-Next" },
 		{ "JUG CH": "29.08. Bern, 30.08. Zürich, 31.08. in St. Gallen. - ???" },
-		{ "JUG Paderborn": "06.09. - Java Next" },
 		{ "JUG Hannover": "September? - ???" },
 		{ "JavaForum Nord": "12.09.? - ???" }
 	]
