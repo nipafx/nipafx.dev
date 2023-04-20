@@ -115,6 +115,15 @@
 			}
 		},
 		{
+			"time": "20.05.2023",
+			"title": "Java Birthday Party",
+			"description": "Celebration of Java's 28th birthday - all details t.b.d.",
+			"location": {
+				"type": "virtual",
+				"text": "t.b.d"
+			}
+		},
+		{
 			"time": "24.10.2023 0800 Europe/Berlin",
 			"title": "Accento",
 			"description": "A conference I co-organize: 2 tracks with 10 slots, focussing on **Java** with a spicy side dish of **web dev**, aimed at experienced and expert-level developers.",
