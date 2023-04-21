@@ -2887,6 +2887,23 @@
 		},
 		{
 			"event": {
+				"name": "RheinJUG",
+				"url": "http://www.rheinjug.de/",
+				"image": "rheinjug"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"time": "20.07.2023",
+					"location": {
+						"text": "t.b.d."
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "JUG Frankfurt",
 				"url": "https://jugf.github.io/",
 				"image": "jug-ffm"
@@ -2923,7 +2940,6 @@
 		}
 	],
 	"future-events": [
-		{ "RheinJUG": "20.07. - Java-Next" },
 		{ "JUG CH": "29.08. Bern, 30.08. Zürich, 31.08. in St. Gallen. - ???" },
 		{ "JUG Hannover": "September? - ???" },
 		{ "JavaForum Nord": "12.09.? - ???" }
