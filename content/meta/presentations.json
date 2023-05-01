@@ -2923,6 +2923,57 @@
 		},
 		{
 			"event": {
+				"name": "JUG Switzerland - Bern",
+				"url": "http://jug.ch/",
+				"image": "jug-ch"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Modern Java - Language, Runtime, LTS",
+					"time": "29.08.2023",
+					"location": {
+						"text": "t.b.d."
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Switzerland - Zürich",
+				"url": "http://jug.ch/",
+				"image": "jug-ch"
+			},
+			"presentations": [
+				{
+					"talk": "talk-openjdk-features",
+					"title": "From Idea to IDE",
+					"time": "30.08.2023",
+					"location": {
+						"text": "t.b.d."
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Switzerland - St. Gallen",
+				"url": "http://jug.ch/",
+				"image": "jug-ch"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"time": "31.08.2023",
+					"location": {
+						"text": "t.b.d."
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "JUG Paderborn",
 				"url": "https://jug-pb.gitlab.io/",
 				"image": "jug-paderborn"
@@ -2940,7 +2991,6 @@
 		}
 	],
 	"future-events": [
-		{ "JUG CH": "29.08. Bern, 30.08. Zürich, 31.08. in St. Gallen. - ???" },
 		{ "JUG Hannover": "September? - ???" },
 		{ "JavaForum Nord": "12.09.? - ???" }
 	]
