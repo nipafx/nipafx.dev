@@ -2054,7 +2054,7 @@
 						"type": "virtual",
 						"text": "register",
 						"url": "https://build-up.cloud-builders.tech/en"
-							}
+					}
 				}
 			]
 		},
@@ -2630,7 +2630,8 @@
 					"location": {
 						"text": "Pathé Ede, Room 9"
 					},
-					"slides": "https://slides.nipafx.dev/java-next/2022-11-03-j-fall"
+					"slides": "https://slides.nipafx.dev/java-next/2022-11-03-j-fall",
+					"video": "https://www.youtube.com/watch?v=Vp8GRXbNP3c"
 				}
 			]
 		},
@@ -2748,7 +2749,8 @@
 					"location": {
 						"text": "Sheraton Bucharest Hotel, Track 1"
 					},
-					"slides": "https://slides.nipafx.dev/patterns/2023-03-23-voxxed-days-bucharest"
+					"slides": "https://slides.nipafx.dev/patterns/2023-03-23-voxxed-days-bucharest",
+					"video": "https://www.youtube.com/watch?v=zn4neparqUQ"
 				},
 				{
 					"talk": "talk-java-amber",
@@ -2758,7 +2760,8 @@
 					"location": {
 						"text": "Sheraton Bucharest Hotel, Track 1"
 					},
-					"slides": "https://slides.nipafx.dev/project-amber/2023-03-24-voxxed-days-bucharest"
+					"slides": "https://slides.nipafx.dev/project-amber/2023-03-24-voxxed-days-bucharest",
+					"video": "https://www.youtube.com/watch?v=1sLcR1ckLqc"
 				}
 			]
 		},

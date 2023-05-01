@@ -558,6 +558,12 @@
 			"url": "https://www.youtube.com/watch?v=nP1k412Bylw",
 			"title": "Getting Rid Of Unused Variables (Finally) - Inside Java Newscast #46",
 			"thumbnail": "inside-java-newscast-46"
+		},
+		{
+			"slug": "java-dop-voxxed-bucharest-2023",
+			"url": "https://www.youtube.com/watch?v=zn4neparqUQ",
+			"title": "[VDBUH2023] - Nicolai Parlog - Data-Oriented Programming in Java (20)",
+			"thumbnail": "java-dop-voxxed-bucharest-2023"
 		}
 	]
 }
