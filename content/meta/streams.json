@@ -841,11 +841,6 @@
 			"description": "What's next for the Spring Boot / React app that is my stream setup? Twitch API, chat on screen, Markdown formatting, light/scene/content changes by you? Yes!"
 		},
 		{
-			"time": "11.05.2023 1900",
-			"title": "Rebooting the Stream",
-			"description": "What's next for the Spring Boot / React app that is my stream setup? Twitch API, chat on screen, Markdown formatting, light/scene/content changes by you? Yes!"
-		},
-		{
 			"time": "17.05.2023 1700",
 			"title": "JSpecify with Kevin B9n and Manu S8n",
 			"description": "JSpecify works to \"define a common set of annotation types for use in JVM languages, to improve static analysis and language interoperation\" and it's \"been focusing on nullness analysis first\". (Cue XKCD 927. 😋) I'll talk to two core contributors: Google's Kevin Bourrillion and UCR professor Manu Sridharan."
