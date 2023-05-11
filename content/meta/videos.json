@@ -564,6 +564,12 @@
 			"url": "https://www.youtube.com/watch?v=zn4neparqUQ",
 			"title": "[VDBUH2023] - Nicolai Parlog - Data-Oriented Programming in Java (20)",
 			"thumbnail": "java-dop-voxxed-bucharest-2023"
+		},
+		{
+			"slug": "inside-java-newscast-48",
+			"url": "https://www.youtube.com/watch?v=r2G4ed2E4QY",
+			"title": "Save 10-20% Memory With Compact Headers - Inside Java Newscast #48",
+			"thumbnail": "inside-java-newscast-48"
 		}
 	]
 }
