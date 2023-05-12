@@ -2811,9 +2811,10 @@
 				{
 					"talk": "talk-java-pattern-matching",
 					"title": "Data-Oriented Programming in Java",
-					"time": "25.05.2023",
+					"announcement": "https://www.meetup.com/de-DE/mannheim-java-usergroup/events/293466511/",
+					"time": "25.05.2023 1900 Europe/Berlin",
 					"location": {
-						"text": "t.b.d."
+						"text": "LivePerson Germany GmbH, P3 1-3"
 					}
 				}
 			]
@@ -2988,6 +2989,48 @@
 					"time": "06.09.2023 1800 Europe/Berlin",
 					"location": {
 						"text": "t.b.d."
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Java Forum Nord",
+				"url": "https://javaforumnord.de/2023/",
+				"image": "javaforumnord"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming in Java (21)",
+					"time": "12.09.2023",
+					"location": {
+						"text": "Hannover"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "IT-Tage",
+				"url": "https://www.ittage.informatik-aktuell.de/",
+				"image": "it-tage-2023"
+			},
+			"presentations": [
+				{
+					"talk": "talk-openjdk-features",
+					"title": "From Idea to IDE",
+					"time": "11.12.2023",
+					"location": {
+						"text": "Kap Europa, Frankfurt"
+					}
+				},
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming in Java (21)",
+					"time": "11.12.2023",
+					"location": {
+						"text": "Kap Europa, Frankfurt"
 					}
 				}
 			]
