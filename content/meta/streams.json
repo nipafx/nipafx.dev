@@ -842,7 +842,7 @@
 		},
 		{
 			"time": "17.05.2023 1700",
-			"title": "JSpecify with Kevin B9n and Manu S8n",
+			"title": "JSpecify with Kevin B9n and Manu S7n",
 			"description": "JSpecify works to \"define a common set of annotation types for use in JVM languages, to improve static analysis and language interoperation\" and it's \"been focusing on nullness analysis first\". (Cue XKCD 927. 😋) I'll talk to two core contributors: Google's Kevin Bourrillion and UCR professor Manu Sridharan."
 		}
 	]
