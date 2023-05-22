@@ -115,12 +115,13 @@
 			}
 		},
 		{
-			"time": "20.05.2023",
-			"title": "Java Birthday Party",
-			"description": "Celebration of Java's 28th birthday - all details t.b.d.",
+			"time": "20.05.2023 0400 UTC",
+			"title": "28 Hours of Java",
+			"description": "We're celebrating Java's 28th birthday with a 28-hour live stream with guests, games, presentations, conversations, and lots of Java code.",
 			"location": {
 				"type": "virtual",
-				"text": "t.b.d"
+				"text": "on YouTube",
+				"info": "https://www.youtube.com/watch?v=CYn2Vq0lwao"
 			}
 		},
 		{
