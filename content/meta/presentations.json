@@ -2955,9 +2955,10 @@
 				{
 					"talk": "talk-java-x",
 					"title": "Modern Java - Language, Runtime, LTS",
-					"time": "29.08.2023",
+					"time": "29.08.2023 1800 Europe/Zurich",
+					"announcement": "https://www.jug.ch/html/events/2023/modern_java.html",
 					"location": {
-						"text": "t.b.d."
+						"text": "vatter Business Center, Raum Frutiger"
 					}
 				}
 			]
@@ -2972,9 +2973,10 @@
 				{
 					"talk": "talk-openjdk-features",
 					"title": "From Idea to IDE",
-					"time": "30.08.2023",
+					"time": "30.08.2023 1815 Europe/Zurich",
+					"announcement": "https://www.jug.ch/html/events/2023/from_idea_to_ide.html",
 					"location": {
-						"text": "t.b.d."
+						"text": "HWZ Hochschule für Wirtschaft, Raum 312"
 					}
 				}
 			]
@@ -2989,9 +2991,10 @@
 				{
 					"talk": "talk-java-next",
 					"title": "Java Next",
-					"time": "31.08.2023",
+					"time": "31.08.2023 1800 Europe/Zurich",
+					"announcement": "https://www.jug.ch/html/events/2023/java_next.html",
 					"location": {
-						"text": "t.b.d."
+						"text": "Ostschweizer Fachhochschule, Campus St.Gallen, Seminarraum FZ 401"
 					}
 				}
 			]
