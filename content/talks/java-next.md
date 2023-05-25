@@ -22,9 +22,9 @@ Time to take a closer look at how...
 After this talk, you will know what to expect from Java in the next few years.
 
 <!--
-Javas vier große Projekte sind auf die Zielgerade eingebogen:
-Amber, Panama und Loom haben ihre Kern-Features bereit inkubiert, gepreviewt oder sogar finalisiert und Valhalla ist nicht weit davon entfernt.
-Es wird also Zeit, sich genauer anzugucken wie...
+# Java Next - von Amber zu Loom, von Panama zu Valhalla
+
+Javas vier große Projekte sind auf die Zielgerade eingebogen: Amber, Panama und Loom haben ihre Kern-Features bereit inkubiert, gepreviewt oder sogar finalisiert und Valhalla ist nicht weit davon entfernt. Es wird also Zeit, sich genauer anzugucken wie...
 
 * Project Amber Java ausdrucksstärker macht und auf die Probleme von heute und morgen anpasst
 * Project Panama den Isthmus durchschneidet, der Java von nativem Code trennt

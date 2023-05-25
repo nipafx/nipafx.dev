@@ -21,17 +21,14 @@ We'll also explore how to use pattern matching as a safe, powerful, and maintain
 The talk ends with a juxtaposition to OOP, so you not only learn how to employ DOP but also when (not).
 
 <!--
-Java hat Probleme! Langatmig, umständlich, keine Ausdrucksstärke und kein Spaß.
-(Zumindest sagt das die Jugend von heute.)
+# Daten-orientierte Programmierung in Java (21)
 
-Spaß beiseite (und den Wunsch nach Syntax Sugar ebenfalls), Java hat in der Tat einige beständige Schwächen und Project Amber wurde ins Leben gerufen, um sie anzugehen.
-Nicht als einzelne Lösung für ein klar umrissenes Problem sondern als SolutionFactory, als Fabrik, die stetig und sorgfältig Lösungen produziert:
+In Daten-orientierter Programmierung (DOP) modellieren wir Daten als Daten und implementieren polymorphes Verhalten mit Pattern Matching. Dieser Vortrag führt das Konzept von DOP und seine vier Leitprinzipien ein:
 
-* Textblöcke und Interpolation, um Strings mächtiger zu machen
-* Pattern Patching, Records und Sealed Types, um gegen die Klobigkeit im Umgang mit Daten vorzugehen
-* `var`, Records und Destrulturierung, um die Redundanz in Variablen- und Typdeklarationen zuu reduzieren
-* ein vereinfachtes Startprotokoll, um Anfängern einen leichteren Einstieg in Java zu ermöglichen
+* Modelliere die Daten, die ganzen Daten und nichts als die Daten
+* Daten sind unveränderlich
+* Validiere an der Grenze
+* Mache illegale Zustände unrepräsentierbar
 
-Wir schauen uns diese Features einzeln und im Zusammenspiel an und erkunden wie sie Java ausdrucksstärker, prägnanter und lesbarer machen.
-Nach diesem Talk weißt du wie Project Amber die Evolution der Sprache vorantreibt.
+Wir werden außerdem erkunden wie Pattern Matching als sicherer, mächtiger und wartbarer Mechanismus für ad-hoc Polymorphismus eingesetzt werden kann und uns erlaubt vielfältige Operationen auf diesen Typen zu implementieren ohne sie mit Funktionalität zu überladen. Der Vortrag endet mit einer Gegenüberstellung mit Objekt-orientierter Programmierung, so dass wir nicht nur sehen wie man DOP einsetzt sondern auch wann (nicht).
 -->
