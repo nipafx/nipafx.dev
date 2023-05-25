@@ -2779,7 +2779,8 @@
 					"time": "04.05.2023 1830 Europe/Berlin",
 					"location": {
 						"text": "Universität Stuttgart, Pfaffenwald 47, Raum 4.282"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/project-amber/2023-05-04-jug-stuttgart"
 				}
 			]
 		},
@@ -2796,7 +2797,8 @@
 					"time": "24.05.2023 0800 America/Los_Angeles",
 					"location": {
 						"type": "virtual"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/virtual-threads/2023-05-24-oracle"
 				}
 			]
 		},
@@ -2814,7 +2816,8 @@
 					"time": "23.05.2023 1800 Europe/Berlin",
 					"location": {
 						"text": "eurodata AG, Saarbrücken"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/patterns/2023-05-23-jug-saar"
 				}
 			]
 		},
@@ -3054,7 +3057,5 @@
 		}
 	],
 	"future-events": [
-		{ "JUG Hannover": "September? - ???" },
-		{ "JavaForum Nord": "12.09.? - ???" }
 	]
 }

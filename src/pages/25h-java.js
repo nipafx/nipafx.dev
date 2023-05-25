@@ -146,7 +146,7 @@ const Schedule = () => (
 			new Date(2020, 4, 24, 6),
 			new Date(2020, 4, 24, 7),
 			"sharat",
-			"SharatChander",
+			"Sharat Chander",
 			"Hanging out, discussing community."
 		)}
 	</div>

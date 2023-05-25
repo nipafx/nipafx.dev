@@ -1,5 +1,5 @@
 ---
-title: "Data-Oriented Programming in Java (20)"
+title: "Data-Oriented Programming in Java (21)"
 tags: [pattern-matching, sealed, project-amber]
 date: 2022-09-27
 slug: talk-java-pattern-matching
