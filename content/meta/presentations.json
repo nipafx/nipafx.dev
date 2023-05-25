@@ -2935,9 +2935,9 @@
 			"presentations": [
 				{
 					"talk": "talk-java-pattern-matching",
-					"title": "Data-Oriented Programming in Java (20)",
+					"title": "Data-Oriented Programming in Java (21)",
 					"announcement": "https://jugf.github.io/posts/data-oriented-programming-in-java-20-26-07-2023/",
-					"time": "26.07.2022 1830 Europe/Berlin",
+					"time": "26.07.2023 1830 Europe/Berlin",
 					"location": {
 						"text": "Freifunk München",
 						"url": "https://meet.ffmuc.net/jugfmeeting"
