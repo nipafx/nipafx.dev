@@ -2785,6 +2785,23 @@
 		},
 		{
 			"event": {
+				"name": "Oracle (Internal)",
+				"url": "https://www.oracle.com/java/",
+				"image": "oracle"
+			},
+			"presentations": [
+				{
+					"talk": "talk-virtual-threads",
+					"title": "Scaling Simply with Virtual Threads",
+					"time": "24.05.2023 0800 America/Los_Angeles",
+					"location": {
+						"type": "virtual"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "JUG Saar",
 				"url": "https://www.meetup.com/de-DE/java-user-group-saarland-jugsaar/",
 				"image": "jug-saar"
