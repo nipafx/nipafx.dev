@@ -576,6 +576,12 @@
 			"url": "https://www.youtube.com/watch?v=P9JPUbG5npI",
 			"title": "Script Java Easily in 21 and Beyond - Inside Java Newscast #49",
 			"thumbnail": "inside-java-newscast-49"
+		},
+		{
+			"slug": "inside-java-newscast-50",
+			"url": "https://www.youtube.com/watch?v=qGaUZ1Z34jw",
+			"title": "All That is in Java 21?! 😱 - Inside Java Newscast #50",
+			"thumbnail": "inside-java-newscast-50"
 		}
 	]
 }
