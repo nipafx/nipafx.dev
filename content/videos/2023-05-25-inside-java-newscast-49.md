@@ -8,6 +8,8 @@ description: "To give Java and programming beginners a better learning path, JEP
 featuredImage: inside-java-newscast-49
 ---
 
+## Intro
+
 Welcome everyone to the Inside Java Newscast, where we cover recent developments in the OpenJDK community.
 I'm Nicolai Parlog, Java developer advocate at Oracle, and today we're gonna look at how the smallest possible Java program will soon turn from "public class Hello public static void main String bracket bracket args" to, wait for it, "void main".
 

@@ -8,13 +8,15 @@ description: "JEP 427 proposes two changes to pattern matching in switch: 1. Gua
 featuredImage: inside-java-newscast-24
 ---
 
+## Two-week Schedule
+
 So four weeks ago, I said I'll see you in two but...
 Wait.
 What?
 How long has that been out of whack?
 Yeah, better, wow that must've been irritating.
 
-Anyway, so four weeks ago, I said I'll see you in two but then conference season hit lick a truck and I forgot that you actually have to travel to conferences and then you're not at home.
+Anyway, so four weeks ago, I said I'll see you in two but then conference season hit like a truck and I forgot that you actually have to travel to conferences and then you're not at home.
 Speaking to people face to face.
 I know it's weird, but really hope to be back on a two-week schedule now.
 

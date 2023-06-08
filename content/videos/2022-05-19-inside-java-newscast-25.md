@@ -8,6 +8,8 @@ description: "Project Loom's virtual threads are merged and ship with JDK 19 - h
 featuredImage: inside-java-newscast-25
 ---
 
+## Back to Conferencing
+
 Wow, thank you.
 It's nice to be here again.
 Last time I was here was February 2020 and then, I don#t know, something happened.

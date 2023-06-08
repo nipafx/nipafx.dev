@@ -8,6 +8,8 @@ description: "JEP 443 proposes to add unnamed variables and patterns to Java. Wi
 featuredImage: inside-java-newscast-46
 ---
 
+## Intro
+
 Welcome everyone, to the Inside Java Newscast where we cover recent developments in the OpenJDK community.
 I'm Nicolai Parlog, Java developer advocate at Oracle, and today we're gonna get rid of all those variables you had to declare even though you didn't want to use them.
 No need for this first parameter of that lambda?

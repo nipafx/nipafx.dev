@@ -8,6 +8,8 @@ description: "All lists, some sets, and some maps have an encounter order, but t
 featuredImage: inside-java-newscast-45
 ---
 
+## Intro
+
 Welcome everyone, to my new studio - to the Inside Java Newscast where we cover recent developments in the OpenJDK community.
 I'm Nicolai Parlog, Java developer advocate at Oracle, and today we're gonna see how Java 21 will make it super easy to get the last `List` element or the first `LinkedHashSet` entry, to loop and stream over a reversed list or set, and generally how to better exploit what the Java collection framework calls _encounter order_.
 Yes, we'll talk about JEP 431: Sequenced Collections.
@@ -18,6 +20,7 @@ And if you missed that, head over to [inside.java/podcast](https://inside.java/p
 
 Ready?
 Then let's dive right in!
+
 
 ## Sequenced Types and Methods
 

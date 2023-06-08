@@ -8,6 +8,8 @@ description: "JDK Enhancement Proposal 450 proposes to merge a compressed class 
 featuredImage: inside-java-newscast-48
 ---
 
+## Intro
+
 Welcome everyone, to the Inside Java Newscast where we cover recent developments in the OpenJDK community.
 I'm Nicolai Parlog, Java developer advocate at Oracle, and today we're gonna see how Java may soon return 10% to 20% of your memory back to you.
 And in the process learn a lot about object headers and bit about garbage collection, concurrency, the type system, and hash codes, of all things.
