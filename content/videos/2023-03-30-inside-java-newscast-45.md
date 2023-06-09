@@ -139,7 +139,7 @@ var letters = List.of("c", "b", "a");
 "a".equals(letters.getLast());
 
 // same but from a sorted set
-// (sequenced natural ordering)
+// (sequenced by natural ordering)
 var letterSet = new TreeSet<>(letters);
 "a".equals(letters.getFirst());
 "c".equals(letters.getLast());

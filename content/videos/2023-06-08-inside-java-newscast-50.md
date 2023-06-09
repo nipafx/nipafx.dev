@@ -61,7 +61,35 @@ JDK 21 steps up its collections game and [introduces a set of new interfaces](ht
 
 At its core is `SequencedCollection`, which extends `Collection` and is ultimately implemented by all lists, some sets, and a few other data structures.
 It offers methods `add...`/`get...`/`remove...` `...First` and `...Last`, which do what you'd expect.
+
+```java
+// getting first and last elements from a list
+// (sequenced by order of addition)
+var letters = List.of("c", "b", "a");
+"c".equals(letters.getFirst());
+"a".equals(letters.getLast());
+
+// same but from a sorted set
+// (sequenced by natural ordering)
+var letterSet = new TreeSet<>(letters);
+"a".equals(letters.getFirst());
+"c".equals(letters.getLast());
+```
+
 It also has a method `reversed` that returns a `SequencedCollection` that is a view on the underlying collection but in reverse order, which makes it super easy to iterate or stream over.
+
+```java
+var letters = new ArrayList<>(List.of("a", "b", "c"));
+var reversedLetters = letters.reversed();
+
+letters.addLast("d");
+reversedLetters.forEach(System.out::print);
+// ~> dcba
+
+reversedLetters.addFirst("e");
+letters.forEach(System.out::print);
+// ~> abcde
+```
 
 If you want to learn more about that, the companion interfaces `SequencedSet` and `SequencedMap`, and a few odds and ends, check out [Inside Java Newscast #45](inside-java-newscast-45).
 
@@ -93,6 +121,19 @@ To effectively use pattern matching, you need three things:
 * the ability to enforce limited inheritance so the `switch` can check exhaustiveness
 * and an easy way to aggregate and deconstruct data
 
+```java
+var shape = loadShape();
+var area = switch(shape) {
+	case Circle(var r) -> r * r * Math.PI;
+	case Square(var l) -> l * l;
+	// no default needed
+}
+
+sealed interface Shape permits Circle, Square { }
+record Circle(double radius) { }
+record Square(double length) { }
+```
+
 There are other features that come in really handy (and they are being worked on and one even previews in 21 - more on that later), but these are the basics and JDK 21 finalizes the last two pieces: [pattern matching for switch](https://openjdk.org/jeps/441) and [record patterns](https://openjdk.org/jeps/440).
 Now that we've got everything together, you can use this powerful idiom in your projects - be it in the small or in the large if you use a functional or data-oriented approach.
 To see how these features play together to achieve that, check out [Inside Java Newscast #29](inside-java-newscast-29).
@@ -119,6 +160,29 @@ It's called the structured concurrency API.
 If you haven't seen this coming a mile away, for one you're not reading the title cards, but you must also have skipped quite a few of our videos.
 May I suggest subscribing to the channel and liking this video, so this doesn't happen again in the future?
 
+```java
+// create task scope with desired
+// error handling strategy
+// (custom strategies are possible)
+try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
+
+	// fork subtasks
+	Subtask<String> user = scope.fork(() -> findUser());
+	Subtask<Integer> order = scope.fork(() -> fetchOrder());
+
+	scope
+		// wait for both subtasks
+		.join()
+		// propagate potential errors
+		.throwIfFailed();
+
+	// both subtasks have succeeded
+	// ~> compose their results
+	// (these calls are non-blocking)
+	return new Response(user.get(), order.get());
+} // task scope gets shut down
+```
+
 The structured concurrency API was incubating in JDK 20 and [is upgraded to a preview in JDK 21](https://openjdk.org/jeps/453).
 Beyond moving to a proper package, namely `java.util.concurrent`, the only change has been that `StructuredTaskScope`'s method `fork` now returns the new type `Subtask`.
 In 20 it returned a `Future` but that offered degrees of freedom (like calling the blocking `get` method) that are counterproductive in structured concurrency and was overall too evocative of asynchronous programming, which is exactly what structured concurrency isn't.
@@ -139,6 +203,39 @@ Unless you want to see vectors in action, then check [JEP Cafe #18](https://www.
 By efficiently invoking code outside the JVM (_foreign functions_) and by safely accessing memory not managed by the JVM (_foreign memory_), the foreign function and memory API enables Java programs to call native libraries and process native data without the brittleness and danger of the Java Native Interface (_JNI_).
 One of the main drivers of the FFM API is to provide safe and timely deallocation, in a programming language whose main staple is _automatic_ deallocation (thanks GC).
 Finding the right primitive to express this capability in a way that is harmonious with the rest of the Java programming model triggered a round of API changes in JDK 20 and again in JDK 21, which is why the API will take [another round of previewing](https://openjdk.org/jeps/442).
+
+```java
+// 1. find foreign function on the C library path
+Linker linker = Linker.nativeLinker();
+SymbolLookup stdlib = linker.defaultLookup();
+MethodHandle radixsort = linker.downcallHandle(stdlib.find("radixsort"), ...);
+
+// 2. allocate on-heap memory to store four strings
+String[] words = { "mouse", "cat", "dog", "car" };
+
+// 3. use try-with-resources to manage the lifetime of off-heap memory
+try (Arena offHeap = Arena.ofConfined()) {
+	// 4. allocate a region of off-heap memory to store four pointers
+	MemorySegment pointers = offHeap
+		.allocateArray(ValueLayout.ADDRESS, words.length);
+	// 5. copy the strings from on-heap to off-heap
+	for (int i = 0; i < words.length; i++) {
+		MemorySegment cString = offHeap.allocateUtf8String(words[i]);
+		pointers.setAtIndex(ValueLayout.ADDRESS, i, cString);
+	}
+
+	// 6. sort the off-heap data by calling the foreign function
+	radixsort.invoke(pointers, words.length, MemorySegment.NULL, '\0');
+
+	// 7. copy the (reordered) strings from off-heap to on-heap
+	for (int i = 0; i < words.length; i++) {
+		MemorySegment cString = pointers.getAtIndex(ValueLayout.ADDRESS, i);
+		words[i] = cString.getUtf8String(0);
+	}
+
+// 8. all off-heap memory is deallocated at the end of the try-with-resources block
+}
+```
 
 On that note, the quality of feedback during the preview phase from projects adopting the API has been excellent and very important for its evolution.
 If you want to help move Java forward, the easiest way to do that is to experiment with preview features and report back to the respective mailing lists.
@@ -162,9 +259,20 @@ JDK 21 allows for [much simpler entry points into a Java program](https://openjd
 The main method no longer needs to be public nor static nor does it need the `args` array.
 And the whole surrounding class becomes optional, too, making `void main` the smallest possible Java program.
 
+```java
+// content of file `Hello.java`
+void main() {
+	System.out.println("Hello, World!");
+}
+```
+
 Let me briefly clarify two points that I didn't explain very well two weeks ago, though:
 
 1. This is a preview feature, so if you use it in a single source-file program, where it clearly shines, you need to add `--enable-preview --source 21` to the `java` command.
+	```
+	java --enable-preview --source 21 Hello.java
+	```
+
 2. There are plans to shorten `System.out.println` to just `println` and also offer a more succinct way to read from the terminal, but neither of that is part of JDK 21.
 
 <contentvideo slug="inside-java-newscast-49"></contentvideo>
@@ -173,10 +281,48 @@ Let me briefly clarify two points that I didn't explain very well two weeks ago,
 
 Unused variables are annoying but bearable.
 Unused patterns during deconstruction, on the other hand, are really cumbersome and clutter code - they make you want to deconstruct less.
+
+```java
+String pageName = switch (page) {
+	case ErrorPage(var url, var ex)
+		-> "💥 ERROR: " + url.getHost();
+	case ExternalPage(var url, var content)
+		-> "💤 EXTERNAL: " + url.getHost();
+	case GitHubIssuePage(var url, var content, var links, int issueNumber)
+		-> "🐈 ISSUE #" + issueNumber;
+	case GitHubPrPage(var url, var content, var links, int prNumber)
+		-> "🐙 PR #" + prNumber;
+};
+```
+
 So it's really good that JDK 21 turns [the underscore into a special variable and pattern](https://openjdk.org/jeps/443) that says "I won't be used and you can have as many of me as you want in the same scope".
+
+```java
+String pageName = switch (page) {
+	case ErrorPage(var url, _)
+		-> "💥 ERROR: " + url.getHost();
+	case ExternalPage(var url, _)
+		-> "💤 EXTERNAL: " + url.getHost();
+	case GitHubIssuePage(_, _, _, int issueNumber)
+		-> "🐈 ISSUE #" + issueNumber;
+	case GitHubPrPage(_, _, _, int prNumber)
+		-> "🐙 PR #" + prNumber;
+};
+```
 
 That makes code more clearly readable and reduces IDE and compiler warnings.
 Best of all, though, it makes switching over sealed types more maintainable by allowing you to easily combine default-y handling of different types into a single branch while avoiding an outright `default` branch.
+
+```java
+String pageEmoji = switch (page) {
+	case GitHubIssuePage _ -> "🐈";
+	case GitHubPrPage _ -> "🐙";
+	// explicitly list remaining types to avoid default
+	// branch (only possible with unnamed patterns)
+	case ErrorPage _, ExternalPage _ -> "n.a.";
+};
+```
+
 If you want to better understand why that's important and how exactly unnamed variables and patterns work, watch [Inside Java Newscast #46](inside-java-newscast-46).
 
 <contentvideo slug="inside-java-newscast-46"></contentvideo>
@@ -188,11 +334,31 @@ For one, it's a bit cumbersome and not perfectly readable.
 But more importantly, if the embedded content comes from the user, there's the risk of injection attacks.
 And generally, unless we're creating text for humans to read, there's probably syntax and escaping to consider.
 
+```java
+// a cumbersome and dangerous example
+String property = "last_name";
+String value = "Doe";
+
+String query = "SELECT * FROM Person p WHERE p."
+	+ property + " = '" + value + "'";
+```
+
 [String Templates](https://openjdk.org/jeps/430) solve all that in one go.
 Not only do they make it easy to embed expressions in string literals or text blocks by encasing them in an opening backslash, curly brace and a closing curly brace, they also enforce processing of such string templates by domain-specific string processors.
 Such processors receive the string portions and the variables separately and returns instances of any type.
 The obvious processor just concatenates and returns a `String` but there are other possibilities out there.
 An SQL processor could validate and parse a statement's syntax and return a `java.sql.Statement` and a JSON processor could return a `JsonNode`.
+
+```java
+// a safe and readable example
+String property = "last_name";
+String value = "Doe";
+
+Statement query = SQL."""
+	SELECT * FROM Person p
+	WHERE p.\{property} = '\{value}'
+	""";
+```
 
 If you want to dig deeper, check out [Inside Java Newscast #47](https://www.youtube.com/watch?v=BzkCAz0Rc_w).
 
