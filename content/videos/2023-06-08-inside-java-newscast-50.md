@@ -93,8 +93,7 @@ letters.forEach(System.out::print);
 
 If you want to learn more about that, the companion interfaces `SequencedSet` and `SequencedMap`, and a few odds and ends, check out [Inside Java Newscast #45](inside-java-newscast-45).
 
-<!-- TODO: embed https://inside.java/2023/04/25/podcast-031/ -->
-<contentvideo slug="inside-java-newscast-45"></contentvideo>
+<contentvideo slug="inside-java-podcast-31"></contentvideo>
 
 ### Generational Low-Pause Garbage Collection
 
@@ -111,7 +110,7 @@ In a probably not representative case, Cassandra 4 showed
 If you want to give generational ZGC a try on your work load, download a JDK 21 early access build and launch it with `-XX:+UseZGC -XX:+ZGenerational`.
 For more details, check [JEP 439](https://openjdk.org/jeps/439) or [Inside Java Podcast #24](https://inside.java/2022/06/29/podcast-024/) with Erik Österlund.
 
-<!-- TODO: embed Billy's Newscast -->
+<contentvideo slug="inside-java-newscast-37"></contentvideo>
 
 ### Pattern Matching
 
@@ -189,14 +188,14 @@ In 20 it returned a `Future` but that offered degrees of freedom (like calling t
 
 Jose had a great JEP Cafe on all this, check out [episode #13](https://www.youtube.com/watch?v=2nOj8MKHvmw).
 
-<!-- TODO: embed https://www.youtube.com/watch?v=2nOj8MKHvmw -->
+<contentvideo slug="jep-cafe-13"></contentvideo>
 
 ### Vector API
 
 the vector API is in its [sixth incubation](https://openjdk.org/jeps/448), still waiting for Valhalla, nothing new to see here, please move on.
 Unless you want to see vectors in action, then check [JEP Cafe #18](https://www.youtube.com/watch?v=42My8Yfzwbg).
 
-<!-- TODO: embed https://www.youtube.com/watch?v=42My8Yfzwbg -->
+<contentvideo slug="jep-cafe-18"></contentvideo>
 
 ### Foreign Function & Memory API
 
@@ -362,7 +361,7 @@ Statement query = SQL."""
 
 If you want to dig deeper, check out [Inside Java Newscast #47](https://www.youtube.com/watch?v=BzkCAz0Rc_w).
 
-<!-- TODO: embed https://www.youtube.com/watch?v=BzkCAz0Rc_w -->
+<contentvideo slug="inside-java-newscast-47"></contentvideo>
 
 ## Outro
 

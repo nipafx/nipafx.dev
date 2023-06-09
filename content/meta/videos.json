@@ -506,6 +506,18 @@
 			"thumbnail": "inside-java-newscast-36"
 		},
 		{
+			"slug": "inside-java-newscast-37",
+			"url": "https://www.youtube.com/watch?v=WAyFMJb4ZKE",
+			"title": "Generational ZGC Needs You! - Inside Java Newscast #37",
+			"thumbnail": "inside-java-newscast-37"
+		},
+		{
+			"slug": "inside-java-newscast-38",
+			"url": "https://www.youtube.com/watch?v=iDfMuJQxQR0",
+			"title": "Generational ZGC Needs You! - Inside Java Newscast #37",
+			"thumbnail": "inside-java-newscast-38"
+		},
+		{
 			"slug": "inside-java-newscast-39",
 			"url": "https://www.youtube.com/watch?v=ghGvFcg6GEQ",
 			"title": "24 Java Features You Missed In 2022 - Inside Java Newscast #39",
@@ -566,6 +578,12 @@
 			"thumbnail": "java-dop-voxxed-bucharest-2023"
 		},
 		{
+			"slug": "inside-java-newscast-47",
+			"url": "https://www.youtube.com/watch?v=BzkCAz0Rc_w",
+			"title": "Interpolating Strings Like a King in Java 21 - Inside Java Newscast #47",
+			"thumbnail": "inside-java-newscast-47"
+		},
+		{
 			"slug": "inside-java-newscast-48",
 			"url": "https://www.youtube.com/watch?v=r2G4ed2E4QY",
 			"title": "Save 10-20% Memory With Compact Headers - Inside Java Newscast #48",
@@ -582,6 +600,24 @@
 			"url": "https://www.youtube.com/watch?v=qGaUZ1Z34jw",
 			"title": "All That is in Java 21?! 😱 - Inside Java Newscast #50",
 			"thumbnail": "inside-java-newscast-50"
+		},
+		{
+			"slug": "jep-cafe-13",
+			"url": "https://www.youtube.com/watch?v=2nOj8MKHvmw",
+			"title": "Java Asynchronous Programming Full Tutorial with Loom and Structured Concurrency - JEP Café #13",
+			"thumbnail": "jep-cafe-13"
+		},
+		{
+			"slug": "jep-cafe-18",
+			"url": "https://www.youtube.com/watch?v=42My8Yfzwbg",
+			"title": "Learn how to write fast Java code with the Vector API - JEP Café #18",
+			"thumbnail": "jep-cafe-18"
+		},
+		{
+			"slug": "inside-java-podcast-31",
+			"url": "https://www.youtube.com/watch?v=gTBb7LxTBbE",
+			"title": "Sequenced Collections - Inside Java Podcast 31",
+			"thumbnail": "inside-java-podcast-31"
 		}
 	]
 }
