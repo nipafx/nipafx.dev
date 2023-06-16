@@ -844,6 +844,21 @@
 			"time": "17.05.2023 1700",
 			"title": "JSpecify with Kevin B9n and Manu S7n",
 			"description": "JSpecify works to \"define a common set of annotation types for use in JVM languages, to improve static analysis and language interoperation\" and it's \"been focusing on nullness analysis first\". (Cue XKCD 927. 😋) I'll talk to two core contributors: Google's Kevin Bourrillion and UCR professor Manu Sridharan."
+		},
+		{
+			"time": "16.06.2023 1800",
+			"title": "Java 21 Upgrade Hurdles",
+			"description": "I need to research upgrade hurdles when going from JDK 17 to 21 and it's gonna be boring, so why not be bored together? Surely you also got nothing better to do on a Friday night. 😬"
+		},
+		{
+			"time": "22.06.2023 1700",
+			"title": "Rebooting the Stream",
+			"description": "What's next for the Spring Boot / React app that is my stream setup? Twitch API, chat on screen, Markdown formatting, light/scene/content changes by you? Yes!"
+		},
+		{
+			"time": "29.06.2023 1800",
+			"title": "Rebooting the Stream",
+			"description": "What's next for the Spring Boot / React app that is my stream setup? Twitch API, chat on screen, Markdown formatting, light/scene/content changes by you? Yes!"
 		}
 	]
 }
