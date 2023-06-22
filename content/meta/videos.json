@@ -618,6 +618,12 @@
 			"url": "https://www.youtube.com/watch?v=gTBb7LxTBbE",
 			"title": "Sequenced Collections - Inside Java Podcast 31",
 			"thumbnail": "inside-java-podcast-31"
+		},
+		{
+			"slug": "inside-java-newscast-51",
+			"url": "https://www.youtube.com/watch?v=MT3_2VyP_YY",
+			"title": "Java 21 - The Other Side - Inside Java Newscast #51",
+			"thumbnail": "inside-java-newscast-51"
 		}
 	]
 }
