@@ -169,7 +169,7 @@ It's also a GC-based mechanism and shares finalization's weakness that resources
 Another weakness is that it's also not easy to use, although for different reasons than finalization.
 We're gonna describe that API on more detail in the future on dev.java.
 
-[try]: https://dev.java/learn/catching-and-handling-exceptions/#anchor_6
+[try]: https://dev.java/learn/exceptions/catching-handling/#try-block
 [2]: https://openjdk.java.net/jeps/419
 [3]: https://inside.java/2020/12/11/podcast-009/
 [4]: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ref/Cleaner.html

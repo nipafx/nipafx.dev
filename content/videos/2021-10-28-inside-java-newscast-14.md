@@ -19,7 +19,7 @@ Then let's dive right in!
 ## Compact Record Constructors
 
 You know how to use records to model data carriers and how to verify incoming data during construction, but did you know that you don't have to list the parameters of all record constructors?
-A record's _canonical_ constructor has one argument per component but [in its _compact_ form](https://dev.java/learn/using-record-to-model-immutable-data/#compact), you don't have to list them.
+A record's _canonical_ constructor has one argument per component but [in its _compact_ form](https://dev.java/learn/records/#compact), you don't have to list them.
 You can't assign fields, that happens in compiler-generated code after yours, but you can reassign the parameters, which leads to the same result.
 
 ```java
@@ -36,11 +36,11 @@ public record Range(int start, int end) {
 ## Serializing Records
 
 You know that every object can be serialized with black magic, but did you know that no such deviance is needed for records?
-The guaranteed presence of constructor parameters and accessors makes serialization work with the object model and makes it easy for you to [create reliable serializable records](https://dev.java/learn/using-record-to-model-immutable-data/#serialization), immune to black magic like `writeObject`, `readObject`, and the like!
+The guaranteed presence of constructor parameters and accessors makes serialization work with the object model and makes it easy for you to [create reliable serializable records](https://dev.java/learn/records/#serialization), immune to black magic like `writeObject`, `readObject`, and the like!
 
 ## JPackage vs Modules
 
-You know `jpackage`, but... wait, [do you know `jpackage`](https://dev.java/learn/jpackage/)?
+You know `jpackage`, but... wait, [do you know `jpackage`](https://dev.java/learn/jvm/tool/jpackage/)?
 It's a command line tool that takes a whole Java app as input and produces a fully self-contained application image, meaning it includes your code, dependencies and a Java runtime.
 It creates the runtime for your app with `jlink`, which you can fully configure through `jpackage`, or you can pass it the path to a runtime image that you already created.
 Further configuration options include application metadata like icons and licenses, installation options and launchers as well as JVM and program options.
@@ -58,7 +58,7 @@ jpackage --type app-image -i inputDir -n name --main-class className --main-jar 
 
 ## Cross-OS Runtime Images
 
-Speaking of `jlink`, did you know that you can use it to [create runtime images across operating systems](https://dev.java/learn/creating-runtime-and-application-images-with-jlink/#cross-os)?
+Speaking of `jlink`, did you know that you can use it to [create runtime images across operating systems](https://dev.java/learn/jlink/#cross-os)?
 Say your build server runs Linux and you need a Windows runtime image:
 Then you just need to download and unpack a Windows JDK of the same version as the Linux one that runs `jlink` and add the Windows `jmods` folder to the Linux `jlink` executable's module path.
 
@@ -77,7 +77,7 @@ $ jlink
 
 You know how to use the `break` statement to get out of a loop, but did you know that you can give it a label to break out of an appropriately labeled outer loop as well?
 Likewise with `continue`, which skips the rest of current iteration of the innermost loop:
-[If you pass it a label](https://dev.java/learn/control-flow-statements/#anchor_5), it will skip the iteration of the labeled loop instead.
+[If you pass it a label](https://dev.java/learn/language-basics/controlling-flow/#continue), it will skip the iteration of the labeled loop instead.
 But as always, just because you can, doesn't mean you should!
 
 ```java
@@ -143,7 +143,7 @@ And the other way around, a `List<? super Number>` extends a `List<? super Integ
 
 ## Creating and Chaining Predicates
 
-You know how to write lambdas to create predicates, but did you know that the interface offers [a lot of methods to create and combine them](https://dev.java/learn/combining-lambda-expressions/#creating-predicates-with-factory-methods)?
+You know how to write lambdas to create predicates, but did you know that the interface offers [a lot of methods to create and combine them](https://dev.java/learn/lambdas/combining-chaining-composing/#creating-predicates)?
 Call the instance methods `and`, `or`, or `negate` for boolean formulas.
 Now predicates yet?
 No problem!
@@ -159,7 +159,7 @@ Predicate<Collection<String>> isNotEmpty = Predicate.not(isEmpty);
 ## Creating and Chaining Comparators
 
 If you think that was cool, hold your breath for comparators!
-You know how to implement them, but did you know there are even more [factory](https://dev.java/learn/writing-and-combining-comparators/#using-a-factory-method-to-create-a-comparator) and [combination methods](https://dev.java/learn/writing-and-combining-comparators/#chaining-comparators)?
+You know how to implement them, but did you know there are even more [factory](https://dev.java/learn/lambdas/writing-comparators/#creating-comparators-with-a-factory) and [combination methods](https://dev.java/learn/lambdas/writing-comparators/#chaining)?
 
 To compare longs, doubles, floats, and the like, use a method reference to their static `compare` method.
 
@@ -189,7 +189,7 @@ Comparator<Integer> naturalNullsLast = Comparator.nullsLast(natural);
 
 ## Executing Source Files as Scripts
 
-You know that you can use the `java` command [to launch a single source file](https://dev.java/learn/launching-single-file-source-code-programs) without having to manually compile it first, but did you know that you can use this capability to write full-on scripts in Java in just three simple steps?
+You know that you can use the `java` command [to launch a single source file](https://dev.java/learn/single-file-program/) without having to manually compile it first, but did you know that you can use this capability to write full-on scripts in Java in just three simple steps?
 First, add a shebang line to the source file that points at your `java` executable, followed by `--source` and the Java version the code was written for.
 
 ```java

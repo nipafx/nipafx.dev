@@ -21,7 +21,7 @@ Are you ready for that?
 Then let's dive right in!
 
 [reddit]: https://www.reddit.com/r/java/comments/sat1j4/opinions_on_using_optional_as_parameter/
-[optional-tutorial]: https://dev.java/learn/using-optionals/
+[optional-tutorial]: https://dev.java/learn/api/streams/optionals/
 
 ## Overloading Instead Of `Optional`
 
