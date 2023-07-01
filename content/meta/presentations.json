@@ -2879,18 +2879,22 @@
 				{
 					"talk": "talk-openjdk-features",
 					"title": "From Idea to IDE",
+					"programEntry": "https://jconeurope2023.sched.com/event/1K3ya/from-idea-to-ide-how-java-features-are-considered-designed-and-shipped?iframe=no&w=100%&sidebar=yes&bg=no",
 					"time": "20.06.2023 1100 Europe/Berlin",
 					"location": {
 						"text": " Cinedom Multiplex Cinema 5, Cologne"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/openjdk-features/2023-06-20-jcon-europe"
 				},
 				{
 					"talk": "talk-java-amber",
 					"title": "The SolutionFactory To Java's Problems",
+					"programEntry": "https://jconeurope2023.sched.com/event/1K40y/the-solutionfactory-to-javas-problems?iframe=no&w=100%&sidebar=yes&bg=no",
 					"time": "20.06.2023 1500 Europe/Berlin",
 					"location": {
 						"text": " Cinedom Multiplex Cinema 9, Cologne"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/project-amber/2023-06-20-jcon-europe"
 				}
 			]
 		},
