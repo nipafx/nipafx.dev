@@ -2908,9 +2908,10 @@
 				{
 					"talk": "talk-java-next",
 					"title": "Java Next",
-					"time": "20.07.2023",
+					"announcement": "http://www.rheinjug.de/rheinjug/event/2023/07/20/java-next-von-amber-zu-loom-von-panama-zu-valhalla-nicolai-parlog.html",
+					"time": "20.07.2023 1900 Europe/Berlin",
 					"location": {
-						"text": "t.b.d."
+						"text": "Universität Düsseldorf, Hörsaal 5C, Gebäude 25.12"
 					}
 				}
 			]
