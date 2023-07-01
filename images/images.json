@@ -2854,5 +2854,22 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "java-21-talk",
+		"alt": "A large sign saying 'Maspalomas, Cosa Canaria' with the current temperature '21 °C'",
+		"credits": {
+			"author": {
+				"name": "Derks24",
+				"url": "https://pixabay.com/users/derks24-5892478/"
+			},
+			"source": {
+				"url": "https://pixabay.com/photos/maspalomas-spain-temperature-beach-5026584/"
+			},
+			"license": {
+				"name": "Pixabay License",
+				"url": "https://pixabay.com/service/license/"
+			}
+		}
 	}
 ]
