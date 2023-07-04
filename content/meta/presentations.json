@@ -3048,19 +3048,19 @@
 			},
 			"presentations": [
 				{
-					"talk": "talk-openjdk-features",
-					"title": "From Idea to IDE",
-					"time": "11.12.2023",
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming in Java (21)",
+					"time": "12.12.2023 1400 Europe/Berlin",
 					"location": {
-						"text": "Kap Europa, Frankfurt"
+						"text": "Solar, Kap Europa, Frankfurt"
 					}
 				},
 				{
-					"talk": "talk-java-pattern-matching",
-					"title": "Data-Oriented Programming in Java (21)",
-					"time": "11.12.2023",
+					"talk": "talk-openjdk-features",
+					"title": "From Idea to IDE",
+					"time": "12.12.2023 1500 Europe/Berlin",
 					"location": {
-						"text": "Kap Europa, Frankfurt"
+						"text": "Solar, Kap Europa, Frankfurt"
 					}
 				}
 			]
