@@ -3025,6 +3025,23 @@
 		},
 		{
 			"event": {
+				"name": "Porto Tech Hub",
+				"url": "https://portotechhub.com/conference-2023/",
+				"image": "porto-tech-hub"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming in Java (21)",
+					"time": "27.10.2023",
+					"location": {
+						"text": "Porto Customs"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "IT-Tage",
 				"url": "https://www.ittage.informatik-aktuell.de/",
 				"image": "it-tage-2023"
