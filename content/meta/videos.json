@@ -624,6 +624,12 @@
 			"url": "https://www.youtube.com/watch?v=MT3_2VyP_YY",
 			"title": "Java 21 - The Other Side - Inside Java Newscast #51",
 			"thumbnail": "inside-java-newscast-51"
+		},
+		{
+			"slug": "inside-java-newscast-52",
+			"url": "https://www.youtube.com/watch?v=3bfR22iv8Pc",
+			"title": "Java 21 is no LTS Version - Inside Java Newscast #52",
+			"thumbnail": "inside-java-newscast-52"
 		}
 	]
 }
