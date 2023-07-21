@@ -2912,7 +2912,8 @@
 					"time": "20.07.2023 1900 Europe/Berlin",
 					"location": {
 						"text": "Universität Düsseldorf, Hörsaal 5C, Gebäude 25.12"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-next/2023-07-20-rheinjug"
 				}
 			]
 		},
