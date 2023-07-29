@@ -2932,7 +2932,8 @@
 					"location": {
 						"text": "Freifunk München",
 						"url": "https://meet.ffmuc.net/jugfmeeting"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/patterns/2023-07-26-jug-frankfurt"
 				}
 			]
 		},
