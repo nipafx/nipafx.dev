@@ -3045,6 +3045,42 @@
 		},
 		{
 			"event": {
+				"name": "Deboxx Belgium",
+				"url": "https://devoxx.be/",
+				"image": "devoxx-be"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 21 💣💥",
+					"time": "02.10.2023 0930 Europe/Brussels",
+					"programEntry": "https://devoxx.be/talk/?id=67954",
+					"location": {
+						"text": "Kinepolis, Antwerpen"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Eclipse Con",
+				"url": "https://www.eclipsecon.org/2023",
+				"image": "eclipse-con-2023"
+			},
+			"presentations": [
+				{
+					"talk": "talk-openjdk-features",
+					"title": "From Idea to IDE",
+					"schedule": "https://www.eclipsecon.org/2023/schedule/2023-10-16",
+					"time": "16.10.2023",
+					"location": {
+						"text": "Forum am Schlosspark, Ludwigsburg"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Porto Tech Hub",
 				"url": "https://portotechhub.com/conference-2023/",
 				"image": "porto-tech-hub"
@@ -3056,6 +3092,23 @@
 					"time": "27.10.2023",
 					"location": {
 						"text": "Porto Customs"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Enterprise JUG Austria",
+				"url": "https://www.meetup.com/de-DE/Enterprise-Java-User-Group-Austria/",
+				"image": "ejug-austria"
+			},
+			"presentations": [
+				{
+					"talk": "talk-virtual-threads",
+					"title": "Scaling Simply with Virtual Threads",
+					"time": "07.11.2023",
+					"location": {
+						"text": "t.b.d."
 					}
 				}
 			]
