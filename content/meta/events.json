@@ -134,6 +134,16 @@
 				"text": "more about Accento",
 				"info": "Karlsruhe, Südwerk"
 			}
+		},
+		{
+			"time": "19.09.2023",
+			"title": "Java 21 Release Party",
+			"description": "We're celebrating Java's 21st feature release with a live stream with technical explorations, expert interviews, and community voices.",
+			"location": {
+				"type": "virtual",
+				"text": "on YouTube",
+				"info": "https://www.youtube.com/java"
+			}
 		}
 	]
 }
