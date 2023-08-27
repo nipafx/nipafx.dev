@@ -630,6 +630,12 @@
 			"url": "https://www.youtube.com/watch?v=3bfR22iv8Pc",
 			"title": "Java 21 is no LTS Version - Inside Java Newscast #52",
 			"thumbnail": "inside-java-newscast-52"
+		},
+		{
+			"slug": "road-to-21-upgrade",
+			"url": "https://www.youtube.com/watch?v=5jIkRqBuSBs",
+			"title": "Upgrading From Java 17 To 21: All You Need To Know",
+			"thumbnail": "road-to-21-upgrade"
 		}
 	]
 }
