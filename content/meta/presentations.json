@@ -3045,7 +3045,7 @@
 		},
 		{
 			"event": {
-				"name": "Deboxx Belgium",
+				"name": "Devoxx Belgium",
 				"url": "https://devoxx.be/",
 				"image": "devoxx-be"
 			},
@@ -3056,7 +3056,7 @@
 					"time": "02.10.2023 0930 Europe/Brussels",
 					"programEntry": "https://devoxx.be/talk/?id=67954",
 					"location": {
-						"text": "Kinepolis, Antwerpen"
+						"text": "Kinepolis, Antwerpen, Room 5"
 					}
 				}
 			]
