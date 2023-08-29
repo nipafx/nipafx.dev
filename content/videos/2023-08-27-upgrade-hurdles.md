@@ -43,6 +43,32 @@ Let's start with some API changes.
 
 We'll get to that, Jose, but we also need to let people know that the introduction of these new interfaces [may lead to conflicts with external implementations of the collection interfaces](https://inside.java/2023/05/12/quality-heads-up/).
 So if you or your dependencies contain any of those, be aware that you may encounter method naming conflicts or issues with covariant overrides and type inference.
+
+```java
+public class StringList
+	extends AbstractList<String>
+	implements List<String> {
+
+	/* [...] */
+
+	public Optional<String> getFirst() {
+		return size() == 0
+				? Optional.empty()
+				: Optional.of(get(0));
+	}
+}
+
+// ✅ up to Java 20: compiles successfully
+
+// ❌ since Java 21:
+// error: getFirst() in StringList cannot
+//   implement getFirst() in List
+//     public Optional<String> getFirst() {
+//                                 ^
+//   return type Optional<String> is not
+//   compatible with String
+```
+
 You may have to refactor some code or update a dependency or both to fix that.
 
 
@@ -67,9 +93,44 @@ There are two sets of bug fixes that may change your code's behavior and that yo
 First, `Double.toString()` and `Float.toString()` [now correctly determine](https://inside.java/2022/09/23/quality-heads-up/) the smallest number of digits that still uniquely distinguish the float or double from its adjacent float or double.
 So, for example, calling `Double.toString(1e23)` will now print "1.0E23" instead of 9.a-lot-of-ninesE22.
 
+```java
+// 🤔 up to Java 18:
+jshell> Double.toString(1e23)
+$1 ==> "9.999999999999999E22"
+
+// ✅ since Java 19:
+jshell> Double.toString(1e23)
+$1 ==> "1.0E23"
+```
+
 The other change concerns `IdentityHashMap`.
 Its methods `remove(key, value)` and `replace(key, value, newValue)` erroneously compared `value` arguments to the values in the map with `equals` even though it's the _identity_ hash map.
 So [that's been fixed](https://www.oracle.com/java/technologies/javase/20-relnote-issues.html#JDK-8178355), which might mean that code now removes and replaces fewer elements than it used to.
+
+```java
+record User(String name) { }
+
+public static void main(String args[]) {
+	var users =
+		new IdentityHashMap<String, User>();
+	String key = "abc";
+
+	// add a (key, user) combination
+	users.put(key, new User("Jane Doe"));
+	// try to remove an EQUAL but
+	// not IDENTICAL combination
+	var removed = users
+		.remove(key, new User("Jane Doe"));
+
+	// according to the `IdentityHashMap`
+	// contract there should've been no
+	// removal
+
+	// ❌ up to Java 19: assertion fails
+	// ✅ since Java 20: assertion passes
+	assert !removed;
+}
+```
 
 ## Ongoing Deprecations
 
@@ -92,6 +153,13 @@ Another area to keep your eye on is [the security manager](https://www.youtube.c
 
 Another change we're contemplating is, even in the future, after we removed the security manager, are we still going to have the `getSecurityManager` API return `null`.
 Most things that use security features only do the check permissions test if `getSecurityManager` returns non-`null`.
+
+```java
+if (System.getSecurityManager() != null) {
+	// check permissions
+}
+```
+
 So if you're still calling `getSecurityManager` and you test it properly for `null`, your code will continue to work in the future.
 
 ### Finalization
@@ -170,14 +238,46 @@ In the spirit of every improvement breaks someone's workflow, we got some in net
 On Windows, network interface names in Java [now equal those assigned by the operating system](https://inside.java/2023/05/08/quality-heads-up/).
 You probably need to update calls to `NetworkInterace::getByName`.
 
+```java
+var net = NetworkInterface
+	.getByName("eth0");
+System.out.println(net);
+System.out.println("---");
+NetworkInterface
+	.networkInterfaces()
+	.map(NetworkInterface::getName)
+	.forEach(System.out::println);
+
+// Example output up to Java 20 / 🪟:
+//
+// name:eth0 (WAN Miniport (IPv6))
+// ----
+// lo
+// net0
+// eth0
+
+// Example output since Java 21 / 🪟:
+//
+// null
+// ----
+// ethernet_0
+// ethernet_32768
+// loopback_0
+```
+
 When you're using the `URL` class, first, you probably want to reconsider that and switch to `URI` instead.
 But anyway, if you _are_ using it, be aware that [parsing and validation of the URL string moved](https://inside.java/2022/11/22/heads-up/) from calls like `URL::openConnection` and `URLConnection::connect` to the constructor, so you may get exceptions there when you didn't before.
+You can set the system property `jdk.net.url.delayParsing` to configure the old behavior if need be.
 
 Similarly, built-in JNDI providers [are now more strict](https://www.oracle.com/java/technologies/javase/19-relnote-issues.html#JDK-8278972) with the URLs they accept.
-If that's an issue, you can use these system properties to configure their behavior.
+If that's an issue, you can use these system properties to configure their behavior:
+
+* for "ldap:" URLs: `com.sun.jndi.ldapURLParsing`
+* for "dns:" URLs: `com.sun.jndi.dnsURLParsing`
+* for "rmi:" URLs: `com.sun.jndi.rmiURLParsing`
 
 The last network-related change I have for you concerns the HTTP client that was added in Java 11.
-The idle connection timeout [was lowered](https://www.oracle.com/java/technologies/javase/20-relnote-issues.html#JDK-8297030) from an extremely lenient 20 minutes to 30 seconds and [can now be configured](https://www.oracle.com/java/technologies/javase/20-relnote-issues.html#JDK-8288717) with the system property `jdk.httpclient.keepalivetimeout`.
+The idle connection timeout [was lowered](https://www.oracle.com/java/technologies/javase/20-relnote-issues.html#JDK-8297030) from an extremely lenient 20 minutes to 30 seconds and [can now be configured](https://www.oracle.com/java/technologies/javase/20-relnote-issues.html#JDK-8288717) with the system properties `jdk.httpclient.keepalivetimeout` and `jdk.httpclient.keepalivetimeout.h2` (for HTTP/2).
 
 
 ## Encoding
@@ -215,7 +315,23 @@ The JDK also regularly updates the Unicode version it's using and that can occas
 Particularly [the update](https://inside.java/2023/03/28/quality-heads-up/) to [Unicode CLDR version 42](https://cldr.unicode.org/index/downloads/cldr-42) may not go unnoticed:
 
 * in formatted times, dates, and units, it replaced regular spaces with non-breaking and narrow non-breaking spaces
+
+```java
+var midFormat = DateTimeFormatter.ofLocalizedTime(FormatStyle.MEDIUM);
+// up to Java 19: ` 6:14:18 PM`
+// since Java 20: `6:14:18 PM` (narrow space before "PM")
+System.out.println( LocalTime.now().format(midFormat) );
+```
+
 * some date/time formats no longer say " at " between between date and time or time range
+
+```java
+var longFormat = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG);
+// up to Java 19: ` August 27, 2023 at 6:14:18 PM CEST`
+// since Java 20: `August 27, 2023, 6:14:18 PM CEST` (no "at" after "2023")
+System.out.println( ZonedDateTime.now().format(longFormat) );
+```
+
 * it fixes the first day of week info for China
 * expanded support for Japanese numbers
 * and introduced a few more small changes
@@ -281,9 +397,23 @@ On the runtime front you should be aware of a few VM options that are going away
 
 ### Obsolete Options
 
-Biased locking [was disabled by default](https://www.oracle.com/java/technologies/javase/18-relnote-issues.html#JDK-8256425) and deprecated in JDK 15 and now related VM options like `UseBiasedLocking` are obsolete.
+Biased locking [was disabled by default](https://www.oracle.com/java/technologies/javase/18-relnote-issues.html#JDK-8256425) and deprecated in JDK 15 and now related VM options like `UseBiasedLocking` are obsolete:
 
-G1's [remembered sets](://www.oracle.com/java/technologies/javase/18-relnote-issues.html#JDK-8017163) and [concurrent refinement threads](https://www.oracle.com/java/technologies/javase/20-relnote-issues.html#JDK-8137022) were refactored or replaced entirely, which impacts options `G1RSetRegionEntries` and `G1RSetSparseRegionEntries` as well as `G1UseAdaptiveConcRefinement` and... all these.
+* `UseBiasedLocking`
+* `BiasedLockingStartupDelay`
+* `BiasedLockingBulkRebiasThreshold`
+* `BiasedLockingBulkRevokeThreshold`
+* `BiasedLockingDecayTime`
+* `UseOptoBiasInlining`
+
+G1's [remembered sets](://www.oracle.com/java/technologies/javase/18-relnote-issues.html#JDK-8017163) and [concurrent refinement threads](https://www.oracle.com/java/technologies/javase/20-relnote-issues.html#JDK-8137022) were refactored or replaced entirely, which impacts options `G1RSetRegionEntries` and `G1RSetSparseRegionEntries` as well as `G1UseAdaptiveConcRefinement` and... all these:
+
+* `G1ConcRefinementGreenZone`
+* `G1ConcRefinementYellowZone`
+* `G1ConcRefinementRedZone`
+* `G1ConcRefinementThresholdStep`
+* `G1ConcRefinementServiceIntervalMillis`
+
 For background info on this and a summary of all the cool garbage collection improvements, check out the RoadTo21 episode  on GC & performance next week.
 
 > G1 region size can now be set up to 512 MB, previously it was 32.
