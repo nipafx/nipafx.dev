@@ -2871,5 +2871,22 @@
 				"url": "https://pixabay.com/service/license/"
 			}
 		}
+	},
+	{
+		"slug": "java-x-action",
+		"alt": "A blue train traveling down train tracks next to a tall building",
+		"credits": {
+			"author": {
+				"name": "Jan Böttinger",
+				"url": "https://unsplash.com/@bttngr"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/2a5vWvTyg3U"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
