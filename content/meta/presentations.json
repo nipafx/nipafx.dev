@@ -3066,6 +3066,25 @@
 		},
 		{
 			"event": {
+				"name": "betterCode(Java)",
+				"url": "https://java.bettercode.eu/",
+				"image": "better-code"
+			},
+			"presentations": [
+				{
+					"talk": "talk-openjdk-features",
+					"title": "From Idea to IDE",
+					"time": "04.10.2023 1615 Europe/Berlin",
+					"programEntry": "https://java.bettercode.eu/veranstaltung-21281-se-0-von-der-idee-zur-ide---wie-java-features-erwogen-designt-und-umgesetzt-werden.html",
+					"location": {
+						"type": "virtual",
+						"text": "online"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Eclipse Con",
 				"url": "https://www.eclipsecon.org/2023",
 				"image": "eclipse-con-2023"
