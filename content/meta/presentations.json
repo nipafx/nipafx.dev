@@ -3021,9 +3021,10 @@
 				{
 					"talk": "talk-java-pattern-matching",
 					"title": "Data-Oriented Programming in Java (21)",
-					"time": "12.09.2023",
+					"time": "12.09.2023 1000 Europe/Berlin",
+					"program": "https://javaforumnord.de/2023/programm/",
 					"location": {
-						"text": "Hannover"
+						"text": "Hannover Congress Centrum, Niedersachsenhalle A"
 					}
 				}
 			]
@@ -3093,7 +3094,7 @@
 				{
 					"talk": "talk-openjdk-features",
 					"title": "From Idea to IDE",
-					"schedule": "https://www.eclipsecon.org/2023/schedule/2023-10-16",
+					"program": "https://www.eclipsecon.org/2023/schedule/2023-10-16",
 					"time": "16.10.2023",
 					"location": {
 						"text": "Forum am Schlosspark, Ludwigsburg"
