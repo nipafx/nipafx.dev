@@ -3005,8 +3005,9 @@
 					"talk": "talk-java-next",
 					"title": "Java Next",
 					"time": "06.09.2023 1800 Europe/Berlin",
+					"announcement": "https://jug-pb.gitlab.io/blog/2023/java-next.html",
 					"location": {
-						"text": "t.b.d."
+						"text": "adesso SE, Paderborn"
 					}
 				}
 			]
