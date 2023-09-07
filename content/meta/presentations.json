@@ -3008,7 +3008,8 @@
 					"announcement": "https://jug-pb.gitlab.io/blog/2023/java-next.html",
 					"location": {
 						"text": "adesso SE, Paderborn"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-next/2023-09-06-jug-paderborn"
 				}
 			]
 		},
