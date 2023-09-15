@@ -136,13 +136,13 @@
 			}
 		},
 		{
-			"time": "19.09.2023",
+			"time": "19.09.2023 1500 Europe/Berlin",
 			"title": "Java 21 Release Party",
-			"description": "We're celebrating Java's 21st feature release with a live stream with technical explorations, expert interviews, and community voices.",
+			"description": "We're celebrating Java's 21st feature release with an 8-hour live stream with technical explorations, expert interviews, and community voices.",
 			"location": {
 				"type": "virtual",
 				"text": "on YouTube",
-				"info": "https://www.youtube.com/java"
+				"info": "https://www.youtube.com/watch?v=E8NV68ihJyY"
 			}
 		}
 	]
