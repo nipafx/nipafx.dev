@@ -3027,7 +3027,8 @@
 					"program": "https://javaforumnord.de/2023/programm/",
 					"location": {
 						"text": "Hannover Congress Centrum, Niedersachsenhalle A"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/patterns/2023-09-12-java-forum-nord"
 				}
 			]
 		},
@@ -3045,7 +3046,8 @@
 					"announcement": "https://jug-karlsruhe.de/content/java-21/",
 					"location": {
 						"text": "Disy, Zimmerstraße 3, Karlsruhe"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2023-09-19-jug-karlsruhe"
 				}
 			]
 		},
@@ -3063,7 +3065,9 @@
 					"programEntry": "https://devoxx.be/talk/?id=67954",
 					"location": {
 						"text": "Kinepolis, Antwerpen, Room 5"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2023-10-02-devoxx-be",
+					"video": "https://www.youtube.com/watch?v=uNeV3EBUS18"
 				}
 			]
 		},
