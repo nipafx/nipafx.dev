@@ -636,6 +636,18 @@
 			"url": "https://www.youtube.com/watch?v=5jIkRqBuSBs",
 			"title": "Upgrading From Java 17 To 21: All You Need To Know",
 			"thumbnail": "road-to-21-upgrade"
+		},
+		{
+			"slug": "inside-java-newscast-56",
+			"url": "https://www.youtube.com/watch?v=bQ2Rwpyj_Ks",
+			"title": "New Class-File API Will Make Java Updates Easier - Inside Java Newscast #56",
+			"thumbnail": "inside-java-newscast-56"
+		},
+		{
+			"slug": "jvmls-2023-class-file-api",
+			"url": "https://www.youtube.com/watch?v=pcg-E_qyMOI",
+			"title": "A Classfile API for the JDK",
+			"thumbnail": "jvmls-2023-class-file-api"
 		}
 	]
 }
