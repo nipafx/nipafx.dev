@@ -218,7 +218,7 @@ Me neither, but good to know that Java gets faster.
 
 To turn a date-time into a string, you need a `DateTimeFormatter`.
 Creating custom formatters is easy with the static factors method `ofPattern`.
-And creating localized formatters is easy, too, as long as you stick with the four predefined `FormatStyle`s `SHORT`, `MEDIUM`, `LONG`, and ?FULL.
+And creating localized formatters is easy, too, as long as you stick with the four predefined `FormatStyle`s `SHORT`, `MEDIUM`, `LONG`, and `FULL`.
 But what about custom localized formatters?
 JDK 19 is there for you!
 
