@@ -3150,8 +3150,8 @@
 			},
 			"presentations": [
 				{
-					"talk": "talk-java-pattern-matching",
-					"title": "Data-Oriented Programming in Java (21)",
+					"talk": "talk-virtual-threads",
+					"title": "Einfach Skalieren mit Virtuellen Threads ",
 					"time": "12.12.2023 1400 Europe/Berlin",
 					"location": {
 						"text": "Solar, Kap Europa, Frankfurt"
