@@ -2592,7 +2592,7 @@
 						"text": "Caesar's Forum, Room 211"
 					},
 					"slides": "https://slides.nipafx.dev/modules-irl/2022-10-18-javaone",
-					"video": "https://reg.rf.oracle.com/flow/oracle/cloudworld/session-catalog/page/catalog/session/1656367267729001LzFV"
+					"video": "https://www.youtube.com/watch?v=UqnwQp1uHuY"
 				}
 			]
 		},
@@ -2884,7 +2884,8 @@
 					"location": {
 						"text": " Cinedom Multiplex Cinema 5, Cologne"
 					},
-					"slides": "https://slides.nipafx.dev/openjdk-features/2023-06-20-jcon-europe"
+					"slides": "https://slides.nipafx.dev/openjdk-features/2023-06-20-jcon-europe",
+					"video": "https://www.youtube.com/watch?v=xRTSiXOcdAk"
 				},
 				{
 					"talk": "talk-java-amber",
@@ -3064,7 +3065,7 @@
 					"time": "02.10.2023 0930 Europe/Brussels",
 					"programEntry": "https://devoxx.be/talk/?id=67954",
 					"location": {
-						"text": "Kinepolis, Antwerpen, Room 5"
+						"text": "Kinepolis, Antwerpen, Room 8"
 					},
 					"slides": "https://slides.nipafx.dev/java-x/2023-10-02-devoxx-be",
 					"video": "https://www.youtube.com/watch?v=uNeV3EBUS18"
@@ -3086,7 +3087,8 @@
 					"location": {
 						"type": "virtual",
 						"text": "online"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/openjdk-features/2023-10-04-bettercode"
 				}
 			]
 		},

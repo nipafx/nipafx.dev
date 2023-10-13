@@ -7,7 +7,7 @@ description: "Advice on why, when, when not, and how to use Java modules in real
 featuredImage: java-modules-irl
 slides: https://slides.nipafx.dev/modules-irl
 repo: module-system-woes
-videoSlug: intellij-stream-modules-irl
+videoSlug: modules-irl-javaone-2022
 ---
 
 Many Java projects ([by some counts](https://snyk.io/jvm-ecosystem-report-2021/), over half) run on Java versions that support the module system and Maven Central offers [over 4.200 modules](https://github.com/sormuras/modules/blob/main/com.github.sormuras.modules/com/github/sormuras/modules/modules.properties).

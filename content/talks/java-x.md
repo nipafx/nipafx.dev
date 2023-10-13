@@ -5,6 +5,8 @@ date: 2023-07-01
 slug: talk-java-x
 description: "Java 21 is an explosive release! From virtual threads to pattern matching, from better APIs, GC, and tooling to exciting previews - it's a blast."
 featuredImage: java-21-talk
+slides: https://slides.nipafx.dev/java-x
+videoSlug: java-x-devoxx-2023
 repo: java-x-demo
 ---
 

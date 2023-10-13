@@ -139,6 +139,12 @@
 			"thumbnail": "expert-java-8-jfokus-2017"
 		},
 		{
+			"slug": "junit-5-riga-devdays-2017",
+			"url": "https://www.youtube.com/watch?v=OA3UJYxTBRA",
+			"title": "Nicolai Parlog - JUnit 5: Next Generation Testing on the JVM",
+			"thumbnail": "junit-5-riga-devdays-2017"
+		},
+		{
 			"slug": "jpms-java-saigon-2018",
 			"url": "https://www.youtube.com/watch?v=HXnqYF2Csho",
 			"title": "The Java Module System at Java Saigon in 2018",
@@ -350,10 +356,10 @@
 			"thumbnail": "inside-java-newscast-12"
 		},
 		{
-			"slug": "intellij-stream-java-17",
+			"slug": "java-17-intellij-stream",
 			"url": "https://www.youtube.com/watch?v=lJ5aMP9Vbnw",
 			"title": "Getting Ready for Java 17",
-			"thumbnail": "intellij-stream-java-17"
+			"thumbnail": "java-17-intellij-stream"
 		},
 		{
 			"slug": "pattern-matching-oracle-dev-live",
@@ -458,10 +464,10 @@
 			"thumbnail": "inside-java-newscast-29"
 		},
 		{
-			"slug": "intellij-stream-modules-irl",
+			"slug": "modules-irl-intellij-stream",
 			"url": "https://www.youtube.com/watch?v=0xijKEeb5ug",
 			"title": "Java Modules in Real Life",
-			"thumbnail": "intellij-stream-modules-irl"
+			"thumbnail": "modules-irl-intellij-stream"
 		},
 		{
 			"slug": "inside-java-newscast-30",
@@ -504,6 +510,12 @@
 			"url": "https://www.youtube.com/watch?v=3M5o3hUH09A",
 			"title": "GraalVM In OpenJDK And More JavaOne Announcements - Inside Java Newscast #36",
 			"thumbnail": "inside-java-newscast-36"
+		},
+		{
+			"slug": "modules-irl-javaone-2022",
+			"url": "https://www.youtube.com/watch?v=UqnwQp1uHuY",
+			"title": "Java Modules in Real Life",
+			"thumbnail": "modules-irl-javaone-2022"
 		},
 		{
 			"slug": "inside-java-newscast-37",
@@ -578,6 +590,12 @@
 			"thumbnail": "java-dop-voxxed-bucharest-2023"
 		},
 		{
+			"slug": "java-amber-voxxed-bucharest-2023",
+			"url": "https://www.youtube.com/watch?v=1sLcR1ckLqc",
+			"title": "[VDBUH2023] Ana-Maria Mihălceanu & Nicolai Parlog - Keynote: The SolutionFactory To Java's Problems",
+			"thumbnail": "java-amber-voxxed-bucharest-2023"
+		},
+		{
 			"slug": "inside-java-newscast-47",
 			"url": "https://www.youtube.com/watch?v=BzkCAz0Rc_w",
 			"title": "Interpolating Strings Like a King in Java 21 - Inside Java Newscast #47",
@@ -620,6 +638,12 @@
 			"thumbnail": "inside-java-podcast-31"
 		},
 		{
+			"slug": "openjdk-features-jcon-2023",
+			"url": "https://www.youtube.com/watch?v=xRTSiXOcdAk",
+			"title": "From Idea to IDE - How Java Features Are Considered, Designed, and Shipped | Nicolai Parlog (EN)",
+			"thumbnail": "openjdk-features-jcon-2023"
+		},
+		{
 			"slug": "inside-java-newscast-51",
 			"url": "https://www.youtube.com/watch?v=MT3_2VyP_YY",
 			"title": "Java 21 - The Other Side - Inside Java Newscast #51",
@@ -654,6 +678,12 @@
 			"url": "https://www.youtube.com/watch?v=pcg-E_qyMOI",
 			"title": "A Classfile API for the JDK",
 			"thumbnail": "jvmls-2023-class-file-api"
+		},
+		{
+			"slug": "java-x-devoxx-2023",
+			"url": "https://www.youtube.com/watch?v=uNeV3EBUS18",
+			"title": "Java 21 💣💥 By Nicolai Parlog",
+			"thumbnail": "java-x-devoxx-2023"
 		}
 	]
 }

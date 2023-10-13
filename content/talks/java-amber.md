@@ -6,6 +6,7 @@ slug: talk-java-amber
 description: "Project Amber steadily and carefully chips away at Java's persistent pain points. This talk discusses released, previewing, and upcoming features achieve that and make Java more expressive, more succinct, and more readable."
 featuredImage: java-amber
 slides: https://slides.nipafx.dev/project-amber
+videoSlug: java-amber-voxxed-bucharest-2023
 ---
 
 Java has issues!
