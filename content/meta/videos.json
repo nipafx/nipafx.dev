@@ -638,6 +638,12 @@
 			"thumbnail": "road-to-21-upgrade"
 		},
 		{
+			"slug": "road-to-21-patterns",
+			"url": "https://www.youtube.com/watch?v=QrwFrm1R8OY",
+			"title": "Java 21 Pattern Matching Tutorial",
+			"thumbnail": "road-to-21-patterns"
+		},
+		{
 			"slug": "inside-java-newscast-56",
 			"url": "https://www.youtube.com/watch?v=bQ2Rwpyj_Ks",
 			"title": "New Class-File API Will Make Java Updates Easier - Inside Java Newscast #56",
