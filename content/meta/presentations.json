@@ -3148,6 +3148,23 @@
 		},
 		{
 			"event": {
+				"name": "JUG Hamburg",
+				"url": "https://www.meetup.com/de-DE/jug-hamburg/",
+				"image": "jug-hamburg"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming in Java (21)",
+					"time": "30.11.2023 1800 Europe/Berlin",
+					"location": {
+						"text": "t.b.d."
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "IT-Tage",
 				"url": "https://www.ittage.informatik-aktuell.de/",
 				"image": "it-tage-2023"
@@ -3167,6 +3184,23 @@
 					"time": "12.12.2023 1500 Europe/Berlin",
 					"location": {
 						"text": "Solar, Kap Europa, Frankfurt"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Bielefeld",
+				"url": "https://www.meetup.com/de-DE/java-user-group-bielefeld/",
+				"image": "jug-bielefeld"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming in Java (21)",
+					"time": "10.01.2024",
+					"location": {
+						"text": "t.b.d."
 					}
 				}
 			]
