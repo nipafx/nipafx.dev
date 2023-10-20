@@ -3120,9 +3120,10 @@
 				{
 					"talk": "talk-java-pattern-matching",
 					"title": "Data-Oriented Programming in Java (21)",
-					"time": "27.10.2023",
+					"schedule": "https://portotechhub.com/conference-2023/schedule/",
+					"time": "27.10.2023 1210 Europe/Lisbon",
 					"location": {
-						"text": "Porto Customs"
+						"text": "Porto Customs, Five9"
 					}
 				}
 			]
@@ -3137,9 +3138,10 @@
 				{
 					"talk": "talk-virtual-threads",
 					"title": "Scaling Simply with Virtual Threads",
-					"time": "07.11.2023",
+					"announcement": "https://www.meetup.com/enterprise-java-user-group-austria/events/295890463/",
+					"time": "07.11.2023 1800 Europe/Vienna",
 					"location": {
-						"text": "t.b.d."
+						"text": "Raiffeisen Software Gmbh, Linz"
 					}
 				}
 			]
