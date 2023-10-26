@@ -684,6 +684,18 @@
 			"url": "https://www.youtube.com/watch?v=uNeV3EBUS18",
 			"title": "Java 21 💣💥 By Nicolai Parlog",
 			"thumbnail": "java-x-devoxx-2023"
+		},
+		{
+			"slug": "java-ama-devoxx-be-part-1",
+			"url": "https://www.youtube.com/watch?v=mE4iTvxLTC4",
+			"title": "Brian Goetz Answers Your Java Questions",
+			"thumbnail": "java-ama-devoxx-be-part-1"
+		},
+		{
+			"slug": "java-ama-devoxx-be-part-2",
+			"url": "https://www.youtube.com/watch?v=WoQJnnMIlFY",
+			"title": "Java Architects Answer Your Questions",
+			"thumbnail": "java-ama-devoxx-be-part-2"
 		}
 	]
 }
