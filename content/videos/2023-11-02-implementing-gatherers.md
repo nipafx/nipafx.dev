@@ -6,6 +6,7 @@ slug: implementing-gatherers
 videoSlug: implementing-gatherers
 description: "Implementing a bunch of `Gatherer`s to better understand the proposed addition to the stream API"
 featuredImage: implementing-gatherers
+repo: java-x-demo
 ---
 
 [JEP 461](https://openjdk.org/jeps/461) proposes `Stream::gather` and `Gatherer` - a new intermediate meta-operation that can be used to implement all kinds of specific operations, from existing ones like `map` and `sorted` to new ones like `flatMapIf` and `increasingSequence`.

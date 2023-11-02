@@ -6,6 +6,7 @@ slug: inside-java-newscast-57
 videoSlug: inside-java-newscast-57
 description: "Stream::gather is a new intermediate meta-operation that allows the JDK and us to implement all kinds of intermediate operations as `Gatherer`s without overloading the `Stream` interface"
 featuredImage: inside-java-newscast-57
+repo: java-x-demo
 ---
 
 Welcome everyone to the Inside Java Newscast, where we cover recent developments in the OpenJDK community.
