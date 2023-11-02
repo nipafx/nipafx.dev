@@ -696,6 +696,18 @@
 			"url": "https://www.youtube.com/watch?v=WoQJnnMIlFY",
 			"title": "Java Architects Answer Your Questions",
 			"thumbnail": "java-ama-devoxx-be-part-2"
+		},
+		{
+			"slug": "inside-java-newscast-57",
+			"url": "https://www.youtube.com/watch?v=epgJm2dZTSg",
+			"title": "Better Java Streams with Gatherers - Inside Java Newscast #57",
+			"thumbnail": "inside-java-newscast-57"
+		},
+		{
+			"slug": "implementing-gatherers",
+			"url": "https://www.youtube.com/watch?v=pNQ5OXMXDbY",
+			"title": "Implementing New Java Stream Operations",
+			"thumbnail": "implementing-gatherers"
 		}
 	]
 }
