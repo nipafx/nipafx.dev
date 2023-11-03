@@ -3156,9 +3156,10 @@
 				{
 					"talk": "talk-java-pattern-matching",
 					"title": "Data-Oriented Programming in Java (21)",
+					"announcement": "https://www.meetup.com/jug-hamburg/events/296971430/",
 					"time": "30.11.2023 1800 Europe/Berlin",
 					"location": {
-						"text": "t.b.d."
+						"text": "Techniker Krankenkasse, Bramfelder Straße 140"
 					}
 				}
 			]
