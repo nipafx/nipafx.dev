@@ -11,7 +11,7 @@ videoSlug: java-next-voxxed-zuerich-2023
 ---
 
 Java's four big projects are entering the home stretch:
-Amber, Panama, and Loom have already incubated, previewed, and even finalized some features and Valhalla is on track to follow soon.
+Amber, Panama, and Loom have already incubated, previewed, and finalized some features and Valhalla is on track to follow soon.
 Time to take a closer look at how...
 
 * Project Amber makes the language more expressive and ready for today's and tomorrow's problems
