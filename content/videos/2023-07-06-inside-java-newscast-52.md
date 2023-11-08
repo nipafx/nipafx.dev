@@ -38,7 +38,7 @@ At that point, OpenJDK no longer _has to_ concern itself with it.
 
 By the way, I'm saying OpenJDK a lot.
 In the briefest of terms, that's a place where a community of individuals work together to create the open source reference implementation of the Java Platform, Standard Edition as well as some related projects.
-For much more details on that, I'll refer you to Inside Java Newscast #28.
+For much more details on that, I'll refer you to [Inside Java Newscast #28](inside-java-newscast-28).
 
 So what happens when JDK 21 is released?
 The fork jdk21 is archived and focus shifts to jdk21u, which contains all the fixes that the community wants to provide for JDK 21 after its release.
@@ -86,7 +86,7 @@ A company's offer to provide services and guarantees for their certified Java im
 ## Maintenance in OpenJDK vs Support by Vendors
 
 I hope you can see the distinction now.
-OpenJDK will maintain JDK 21, the reference implementation of the Java Platform SE 21 specification, within its community and without any guarantees, services, or even builds forvat least 6 months, in all likelihood for a few years.
+OpenJDK will maintain JDK 21, the reference implementation of the Java Platform SE 21 specification, within its community and without any guarantees, services, or even builds for at least 6 months, in all likelihood for a few years.
 Vendors, on the other hand, will build their own JDKs, often from the OpenJDK code base.
 They may make them freely available and on top of them they may offer commercial support, which incentivizes them to contribute to the OpenJDK effort of maintaining these versions.
 
