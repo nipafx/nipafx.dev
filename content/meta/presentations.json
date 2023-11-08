@@ -3106,7 +3106,8 @@
 					"time": "16.10.2023 1400 Europe/Berlin",
 					"location": {
 						"text": "Room 2, Forum am Schlosspark, Ludwigsburg"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/openjdk-features/2023-10-16-eclipsecon"
 				}
 			]
 		},
@@ -3124,7 +3125,8 @@
 					"time": "27.10.2023 1210 Europe/Lisbon",
 					"location": {
 						"text": "Porto Customs, Five9"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/patterns/2023-10-27-porto-tech-hub"
 				}
 			]
 		},
@@ -3142,7 +3144,8 @@
 					"time": "07.11.2023 1800 Europe/Vienna",
 					"location": {
 						"text": "Raiffeisen Software Gmbh, Linz"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/virtual-threads/2023-11-07-ejug-austria"
 				}
 			]
 		},
