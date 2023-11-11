@@ -3177,6 +3177,7 @@
 				{
 					"talk": "talk-virtual-threads",
 					"title": "Einfach Skalieren mit Virtuellen Threads ",
+					"programEntry": "https://www.ittage.informatik-aktuell.de/programm/2023/einfach-skalieren-mit-virtuellen-threads.html",
 					"time": "12.12.2023 1400 Europe/Berlin",
 					"location": {
 						"text": "Solar, Kap Europa, Frankfurt"
@@ -3184,7 +3185,8 @@
 				},
 				{
 					"talk": "talk-openjdk-features",
-					"title": "From Idea to IDE",
+					"title": "Von der Idee zur IDE - wie Java-Features erwogen, designt und umgesetzt werden",
+					"programEntry": "https://www.ittage.informatik-aktuell.de/programm/2023/von-der-idee-zur-ide-wie-java-features-erwogen-designt-und-umgesetzt-werden.html",
 					"time": "12.12.2023 1500 Europe/Berlin",
 					"location": {
 						"text": "Solar, Kap Europa, Frankfurt"
