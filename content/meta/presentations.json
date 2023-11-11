@@ -3208,6 +3208,23 @@
 					}
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "Voxxed Days CERN",
+				"url": "https://cern.voxxeddays.com/",
+				"image": "voxxed-days-cern"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming in Java (21)",
+					"time": "22.01.2024",
+					"location": {
+						"text": "CERN (yes, that one!)"
+					}
+				}
+			]
 		}
 	],
 	"future-events": [
