@@ -115,7 +115,7 @@ const Meta = ({title: titleUnescaped, slug, publicationDate, canonicalUrl, image
 			name: title,
 			description,
 			uploadDate: publicationDate,
-			thumbnailUrl: site.siteUrl + getImageMeta(image.slug, image.type),
+			thumbnailUrl: site.siteUrl + getImageMeta(image.slug, image.type).path,
 			contentUrl: videoContentUrl(videoUrl),
 		}
 
