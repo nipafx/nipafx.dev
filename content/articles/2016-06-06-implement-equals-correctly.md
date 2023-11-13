@@ -280,15 +280,22 @@ Obviously all three instances share the same name, so `foo.equals(fu)` and `foo.
 By transitivity `fu.equals(fuu)` should also be `true` but it isn’t if the third field, apparently the department, is included in the comparison.
 
 There is really no way to make slice comparison work without violating reflexivity or, and this is trickier to analyze, transitivity.
-(If you think you found one, check again.
-Then let your coworkers check.
-If you are still sure, [ping me](https://twitter.com/nipafx).
-;) )
+
+<admonition type="note">
+
+Apparently, that's not quite true.
+There are other way to make it work but they aren't exactly trivial.
+Check these posts for details:
+
+* [Implementing equals() to allow Slice Comparison](http://www.angelikalanger.com/Articles/JavaSolutions/SecretsOfEquals/Equals-2.html) by Angelika Langer and Klaus Kreft
+* [How to Write an Equality Method in Java](https://www.artima.com/articles/how-to-write-an-equality-method-in-java) by Martin Odersky, Lex Spoon, and Bill Venners
+
+</admonition>
 
 So we end with two alternatives:
 
--   Use `getClass` and be aware that instances of the type and its subtypes can never equal.
--   Use `instanceof` but make `equals` final because there is no way to override it correctly.
+* Use `getClass` and be aware that instances of the type and its subtypes can never equal.
+* Use `instanceof` but make `equals` final because there is no way to override it correctly.
 
 Which one makes more sense really depends on the situation.
 Personally, I prefer `instanceof` because its problems (can not include new fields in inherited classes) occurs at declaration site not at use site.
@@ -329,18 +336,26 @@ We have discussed the difference between identity (must be the same reference; c
 
 Let’s put those pieces back together:
 
--   Make sure to override `equals(Object)` so our method is always called.
--   Include a self and null check for an [early return](java-multiple-return-statements#guard-clauses) in simple edge cases.
--   Use `getClass` to allow subtypes their own implementation (but no comparison across subtypes) or use `instanceof` and make `equals` final (and subtypes can equal).
--   Compare the desired fields using `Objects.equals`.
+* Make sure to override `equals(Object)` so our method is always called.
+* Include a self and null check for an [early return](java-multiple-return-statements#guard-clauses) in simple edge cases.
+* Use `getClass` to allow subtypes their own implementation (but no comparison across subtypes) or use `instanceof` and make `equals` final (and subtypes can equal).
+* Compare the desired fields using `Objects.equals`.
 
 Or let your IDE generate it all for you and edit where needed.
 
 ## Final Words
 
 We have seen how to properly implement `equals` (and will soon [look at `hashCode`](implement-java-hashcode-correctly)).
+If you'd like to verify that you upheld all the rules for your classes, consider testing them with [EqualsVerifier](https://jqno.nl/equalsverifier/), which "makes testing `equals()` and `hashCode()` in Java a one-liner!"
+
+```java
+@Test
+public void equalsContract() {
+	EqualsVerifier.forClass(Foo.class).verify();
+}
+```
+
 But what if we are using classes that we have no control over?
 What if their implementations of these methods do not suit our needs or are plain wrong?
-
 [LibFX](http://libfx.codefx.org) to the rescue!
 It contains [transforming collections](java-transforming-collections) and one of their features is to allow the user to specify the `equals` and `hashCode` methods she needs.
