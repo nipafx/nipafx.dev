@@ -3151,6 +3151,25 @@
 		},
 		{
 			"event": {
+				"name": "InfoDays - Java 21 LTS",
+				"url": "https://www.infodays.de/java-lts",
+				"image": "infodays"
+			},
+			"presentations": [
+				{
+					"talk": "talk-openjdk-features",
+					"title": "Von der Idee zur IDE - wie Java-Features erwogen, designt und umgesetzt werden ",
+					"program": "https://www.infodays.de/java-lts/#c13619",
+					"time": "15.11.2023 1600 Europe/Berlin",
+					"location": {
+						"type": "virtual",
+						"text": "online"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "JUG Hamburg",
 				"url": "https://www.meetup.com/de-DE/jug-hamburg/",
 				"image": "jug-hamburg"
