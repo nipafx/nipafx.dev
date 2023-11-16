@@ -3246,6 +3246,24 @@
 					}
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "Jfokus",
+				"url": "https://www.jfokus.se/jfokus/index.jsp",
+				"image": "jfokus-2024"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Deep-dive: Java 21 - Better Language, Better Scalability, Better APIs, Better Tools",
+					"programEntry": "https://www.jfokus.se/talks/1634",
+					"time": "05.02.2024 0900 Europe/Stockholm",
+					"location": {
+						"text": "Stockholm Waterfront Conference, Room C1"
+					}
+				}
+			]
 		}
 	],
 	"future-events": [
