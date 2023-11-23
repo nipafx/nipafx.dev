@@ -921,9 +921,19 @@
 			"description": "Working on PRs, issues, and maybe new extensions"
 		},
 		{
-			"time": "23.11.2023 1800",
+			"time": "07.12.2023 1930",
 			"title": "Refining the Stream",
 			"description": "What's next for the Spring Boot / React app that is my stream setup? Twitch API, chat on screen, Markdown formatting, light/scene/content changes by you? Yes!"
+		},
+		{
+			"time": "14.12.2023 1930",
+			"title": "Refining the Stream",
+			"description": "What's next for the Spring Boot / React app that is my stream setup? Twitch API, chat on screen, Markdown formatting, light/scene/content changes by you? Yes!"
+		},
+		{
+			"time": "21.12.2023 1800",
+			"title": "JUnit Pioneer",
+			"description": "Working on PRs, issues, and maybe new extensions"
 		}
 	]
 }
