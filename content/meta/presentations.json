@@ -3183,7 +3183,8 @@
 					"time": "30.11.2023 1800 Europe/Berlin",
 					"location": {
 						"text": "Techniker Krankenkasse, Bramfelder Straße 140"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/patterns/2023-11-30-jug-hamburg"
 				}
 			]
 		},
