@@ -714,6 +714,12 @@
 			"url": "https://www.youtube.com/watch?v=q8pxRkdKeR0",
 			"title": "Java On The GPU - Inside Java Newscast #58",
 			"thumbnail": "inside-java-newscast-58"
+		},
+		{
+			"slug": "inside-java-newscast-59",
+			"url": "https://www.youtube.com/watch?v=skXY0tD6i-M",
+			"title": "Java 22 Unpacking - Inside Java Newscast #59",
+			"thumbnail": "inside-java-newscast-59"
 		}
 	]
 }
