@@ -720,6 +720,12 @@
 			"url": "https://www.youtube.com/watch?v=skXY0tD6i-M",
 			"title": "Java 22 Unpacking - Inside Java Newscast #59",
 			"thumbnail": "inside-java-newscast-59"
+		},
+		{
+			"slug": "jspecify-presentation",
+			"url": "https://www.youtube.com/watch?v=HS_kA42YNkU",
+			"title": "Java, null, and JSpecify",
+			"thumbnail": "jspecify-presentation"
 		}
 	]
 }
