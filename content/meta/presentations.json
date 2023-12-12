@@ -3292,6 +3292,24 @@
 					}
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "JavaLand",
+				"url": "https://www.javaland.eu/de/home/",
+				"image": "javaland-2024"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-action",
+					"title": "Modern Java in Action",
+					"program": "https://meine.doag.org/events/javaland/2024/agenda/#eventDay.1712613600",
+					"time": "09.04.2024 1100 Europe/Berlin",
+					"location": {
+						"text": "Nürburgring, ring°arena"
+					}
+				}
+			]
 		}
 	],
 	"future-events": [
