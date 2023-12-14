@@ -726,6 +726,12 @@
 			"url": "https://www.youtube.com/watch?v=HS_kA42YNkU",
 			"title": "Java, null, and JSpecify",
 			"thumbnail": "jspecify-presentation"
+		},
+		{
+			"slug": "jspecify-valhalla",
+			"url": "https://www.youtube.com/watch?v=Re5HvyUtIJ0",
+			"title": "How Project Valhalla And JSpecify Can Kill NPEs",
+			"thumbnail": "jspecify-valhalla"
 		}
 	]
 }
