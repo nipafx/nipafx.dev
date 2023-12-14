@@ -3202,7 +3202,8 @@
 					"time": "12.12.2023 1400 Europe/Berlin",
 					"location": {
 						"text": "Solar, Kap Europa, Frankfurt"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/virtual-threads/2023-12-12-it-tage"
 				},
 				{
 					"talk": "talk-openjdk-features",
@@ -3211,7 +3212,17 @@
 					"time": "12.12.2023 1500 Europe/Berlin",
 					"location": {
 						"text": "Solar, Kap Europa, Frankfurt"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/openjdk-features/2023-12-12-it-tage"
+				},
+				{
+					"talk": "talk-java-amber",
+					"title": "Project Amber - Die SolutionFactory für Javas Probleme",
+					"time": "13.12.2023 1400 Europe/Berlin",
+					"location": {
+						"text": "Solar, Kap Europa, Frankfurt"
+					},
+					"slides": "https://slides.nipafx.dev/project-amber/2023-12-13-it-tage"
 				}
 			]
 		},
