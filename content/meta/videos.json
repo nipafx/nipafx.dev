@@ -732,6 +732,12 @@
 			"url": "https://www.youtube.com/watch?v=Re5HvyUtIJ0",
 			"title": "How Project Valhalla And JSpecify Can Kill NPEs",
 			"thumbnail": "jspecify-valhalla"
+		},
+		{
+			"slug": "inside-java-newscast-60",
+			"url": "https://www.youtube.com/watch?v=NxpHg_GzpnY",
+			"title": "Java Highlights of 2023 - Inside Java Newscast #60",
+			"thumbnail": "inside-java-newscast-60"
 		}
 	]
 }
