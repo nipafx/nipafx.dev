@@ -3236,9 +3236,10 @@
 				{
 					"talk": "talk-java-pattern-matching",
 					"title": "Data-Oriented Programming in Java (21)",
-					"time": "10.01.2024",
+					"time": "10.01.2024 1800 Europe/Berlin",
+					"announcement": "https://www.meetup.com/java-user-group-bielefeld/events/298067767/",
 					"location": {
-						"text": "t.b.d."
+						"text": "Bielefeld, Otto-Brenner-Straße 247, 5. OG"
 					}
 				}
 			]
@@ -3253,7 +3254,8 @@
 				{
 					"talk": "talk-java-pattern-matching",
 					"title": "Data-Oriented Programming in Java (21)",
-					"time": "22.01.2024",
+					"time": "23.01.2024 1505 Europe/Zurich",
+					"programEntry": "https://cern.voxxeddays.com/talk/?id=4020",
 					"location": {
 						"text": "CERN (yes, that one!)"
 					}
@@ -3297,9 +3299,10 @@
 				{
 					"talk": "talk-java-action",
 					"title": "Modern Java in Action",
-					"time": "07.03.2024",
+					"time": "07.03.2024 1010 Europe/Zurich",
+					"programEntry": "https://voxxeddays.com/zurich/schedule/talk/?id=2926",
 					"location": {
-						"text": "Zürich, Arena Cinema Sihlcity"
+						"text": "Zürich, Arena Cinema Sihlcity, Room 3"
 					}
 				}
 			]
