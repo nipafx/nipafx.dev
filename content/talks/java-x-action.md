@@ -1,10 +1,11 @@
 ---
 title: "Modern Java in Action"
-tags: [java-21]
+tags: [java-21, virtual-threads, pattern-matching, records]
 date: 2023-09-03
 slug: talk-java-action
 description: "Let's write a GitHub Crawler and let's throw in everything Java (21) has to offer"
 featuredImage: java-x-action
+repo: modern-java-demo
 ---
 
 Let's write a GitHub Crawler and let's throw in everything Java (21) has to offer:
