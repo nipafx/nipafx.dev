@@ -3246,6 +3246,24 @@
 		},
 		{
 			"event": {
+				"name": "JUG München",
+				"url": "https://www.meetup.com/java-user-group-munchen-jugm/",
+				"image": "jug-münchen"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 21 💣💥",
+					"time": "15.01.2024 1900 Europe/Berlin",
+					"announcement": "https://www.meetup.com/java-user-group-munchen-jugm/events/298028692/",
+					"location": {
+						"text": "München, Eden Hotel Wolff, Arnulfstraße 4"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Voxxed Days CERN",
 				"url": "https://cern.voxxeddays.com/",
 				"image": "voxxed-days-cern"
