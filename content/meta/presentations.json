@@ -3240,7 +3240,8 @@
 					"announcement": "https://www.meetup.com/java-user-group-bielefeld/events/298067767/",
 					"location": {
 						"text": "Bielefeld, Otto-Brenner-Straße 247, 5. OG"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/patterns/2024-01-10-jug-bielefeld/"
 				}
 			]
 		},
