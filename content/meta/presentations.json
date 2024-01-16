@@ -3259,7 +3259,8 @@
 					"announcement": "https://www.meetup.com/java-user-group-munchen-jugm/events/298028692/",
 					"location": {
 						"text": "München, Eden Hotel Wolff, Arnulfstraße 4"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2024-01-15-jug-muenchen"
 				}
 			]
 		},
