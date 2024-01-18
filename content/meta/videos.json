@@ -738,6 +738,12 @@
 			"url": "https://www.youtube.com/watch?v=NxpHg_GzpnY",
 			"title": "Java Highlights of 2023 - Inside Java Newscast #60",
 			"thumbnail": "inside-java-newscast-60"
+		},
+		{
+			"slug": "inside-java-newscast-61",
+			"url": "https://www.youtube.com/watch?v=iL7d-gGrms8",
+			"title": "Java's Plans for 2024 - Inside Java Newscast #61",
+			"thumbnail": "inside-java-newscast-61"
 		}
 	]
 }
