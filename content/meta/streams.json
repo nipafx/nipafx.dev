@@ -924,6 +924,11 @@
 			"time": "07.12.2023 1930",
 			"title": "Advent of Code",
 			"description": "Who's up for some puzzle-solving?"
+		},
+		{
+			"time": "01.02.2024 1900",
+			"title": "1 Billion Row Challenge",
+			"description": "1BRC organizer Gunnar Morling and a few top contenders will discuss in detail how they managed to parse one billion rows in Java in just a few second"
 		}
 	]
 }
