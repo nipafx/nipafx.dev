@@ -2888,5 +2888,22 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "hot-pool",
+		"alt": "A swimming pool's edge with a stainless steel ladder; the water is a nice turquoise and the concrete around it is bright yellow",
+		"credits": {
+			"author": {
+				"name": "Etienne Girardet",
+				"url": "https://unsplash.com/@etiennegirardet"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/swimming-pool-with-stainless-steel-ladder-Xh6BpT-1tXo"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
