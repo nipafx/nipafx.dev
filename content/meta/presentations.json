@@ -3278,7 +3278,9 @@
 					"programEntry": "https://cern.voxxeddays.com/talk/?id=4020",
 					"location": {
 						"text": "CERN (yes, that one!)"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/patterns/2024-01-23-voxxed-days-cern",
+					"videos": "https://www.youtube.com/watch?v=8FRU_aGY4mY"
 				}
 			]
 		},
