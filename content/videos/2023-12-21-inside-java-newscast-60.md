@@ -1,6 +1,6 @@
 ---
 title: "Java Highlights of 2023 - Inside Java Newscast #60"
-tags: [turn‑of-the-year, java-8, community, meta]
+tags: [turn‑of-the-year, on-ramp, java-8, community, meta]
 date: 2023-12-21
 slug: inside-java-newscast-60
 videoSlug: inside-java-newscast-60

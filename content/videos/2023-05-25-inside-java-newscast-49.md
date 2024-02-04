@@ -1,6 +1,6 @@
 ---
 title: "Script Java Easily in 21 and Beyond - Inside Java Newscast #49"
-tags: [java-basics]
+tags: [java-basics, on-ramp]
 date: 2023-05-25
 slug: inside-java-newscast-49
 videoSlug: inside-java-newscast-49

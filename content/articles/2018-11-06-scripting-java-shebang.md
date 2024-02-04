@@ -1,6 +1,6 @@
 ---
 title: "Scripting Java 11, Shebang And All"
-tags: [java-11, tools]
+tags: [java-11, tools, on-ramp]
 date: 2018-11-06
 slug: scripting-java-shebang
 description: "On Java 11+, you can run a single source file without compiling it. Beyond experimentation, you can write scripts this way. Even shebang is supported!"

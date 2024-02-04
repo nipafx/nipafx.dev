@@ -1,6 +1,6 @@
 ---
 title: "The Simplest Hello World - Inside Java Newscast #35"
-tags: [project-amber]
+tags: [project-amber, on-ramp]
 date: 2022-10-06
 slug: inside-java-newscast-35
 videoSlug: inside-java-newscast-35
