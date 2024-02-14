@@ -750,6 +750,12 @@
 			"url": "https://www.youtube.com/watch?v=cI-fY9YlmH4",
 			"title": "Java 22 Previews Statements Before `super(...)` and `this(...)` - Inside Java Newscast #62",
 			"thumbnail": "inside-java-newscast-62"
+		},
+		{
+			"slug": "inside-java-newscast-63",
+			"url": "https://www.youtube.com/watch?v=q2MFE3DVkH0",
+			"title": "Does Java 22 Kill Build Tools? - Inside Java Newscast #63",
+			"thumbnail": "inside-java-newscast-63"
 		}
 	]
 }
