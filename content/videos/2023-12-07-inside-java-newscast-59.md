@@ -92,13 +92,13 @@ Such a switch needs to be exhaustive, meaning it must cover all possible types, 
 Without a default branch, expressing the same "defaulty" behavior for a few different types is cumbersome, though, because branches like `case Circle c` and `case Rectangle r` cannot be combined - if they could, neither `c` nor `r` could be used because you'd never know whether the shape is a circle or a rectangle.
 
 ```java
-/* {+} */switch (shape) {
+switch (shape) {
 	case Triangle t -> highlight(t);
 	case Circle c -> { /* ... */ }
 	case Rectangle r -> { /* ... */ }
 }
 
-/* {+} */switch (shape) {
+switch (shape) {
 	case Triangle t -> highlight(t);
 	// compile error
 	case Circle c, Rectangle r -> { /* ... */ }
@@ -109,7 +109,7 @@ You cannot reference them anyway, so it doesn't matter which type the variable a
 This is the way to go and that's why unnamed variables are more than a nice-to-have feature.
 
 ```java
-/* {+} */switch (shape) {
+switch (shape) {
 	case Triangle t -> highlight(t);
 	// compiles! 🥳
 	case Circle _, Rectangle _ -> { /* ... */ }
