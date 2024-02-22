@@ -2895,7 +2895,8 @@
 					"location": {
 						"text": " Cinedom Multiplex Cinema 9, Cologne"
 					},
-					"slides": "https://slides.nipafx.dev/project-amber/2023-06-20-jcon-europe"
+					"slides": "https://slides.nipafx.dev/project-amber/2023-06-20-jcon-europe",
+					"video": "https://www.youtube.com/watch?v=-xmPO9DMeCs"
 				}
 			]
 		},
@@ -3126,7 +3127,8 @@
 					"location": {
 						"text": "Porto Customs, Five9"
 					},
-					"slides": "https://slides.nipafx.dev/patterns/2023-10-27-porto-tech-hub"
+					"slides": "https://slides.nipafx.dev/patterns/2023-10-27-porto-tech-hub",
+					"video": "https://www.youtube.com/watch?v=22-egnfqBRU"
 				}
 			]
 		},
@@ -3298,7 +3300,8 @@
 					"time": "05.02.2024 0900 Europe/Stockholm",
 					"location": {
 						"text": "Stockholm Waterfront Conference, Room C1"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2024-02-05-jfokus"
 				},
 				{
 					"talk": "talk-java-action",
@@ -3307,7 +3310,8 @@
 					"time": "07.02.2024 1300 Europe/Stockholm",
 					"location": {
 						"text": "Stockholm Waterfront Conference, Room A1"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x-action/2024-02-07-jfokus"
 				}
 			]
 		},
