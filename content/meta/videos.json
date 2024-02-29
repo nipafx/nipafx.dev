@@ -756,6 +756,12 @@
 			"url": "https://www.youtube.com/watch?v=q2MFE3DVkH0",
 			"title": "Does Java 22 Kill Build Tools? - Inside Java Newscast #63",
 			"thumbnail": "inside-java-newscast-63"
+		},
+		{
+			"slug": "inside-java-newscast-64",
+			"url": "https://www.youtube.com/watch?v=1ljQzMRtGy4",
+			"title": "(Dirty?) Tricks in Java 22 - Inside Java Newscast #64",
+			"thumbnail": "inside-java-newscast-64"
 		}
 	]
 }
