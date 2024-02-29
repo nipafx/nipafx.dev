@@ -3335,6 +3335,24 @@
 		},
 		{
 			"event": {
+				"name": "Oracle DevLive - JavaDay London",
+				"url": "https://www.oracle.com/uk/developer/devlive/london/",
+				"image": "oracle-dev-live"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-action",
+					"title": "Live Coding with Java 21",
+					"program": "https://reg.rf.oracle.com/flow/oracle/london24/attendee-portal/page/sessioncatalog/session/1705686377826001IKcB",
+					"time": "12.03.2024 1345 Europe/London",
+					"location": {
+						"text": "London"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "JavaLand",
 				"url": "https://www.javaland.eu/de/home/",
 				"image": "javaland-2024"
@@ -3347,6 +3365,69 @@
 					"time": "09.04.2024 1100 Europe/Berlin",
 					"location": {
 						"text": "Nürburgring, ring°arena"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Devoxx UK",
+				"url": "https://www.devoxx.co.uk/",
+				"image": "devoxx-uk"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming in Java (21 and 22)",
+					"announcement": "https://www.devoxx.co.uk/speaker-details/?id=22178",
+					"time": "09.05.2024",
+					"location": {
+						"text": "Business Design Centre, London"
+					}
+				},
+				{
+					"talk": "talk-openjdk-features",
+					"title": "From Idea to IDE",
+					"announcement": "https://www.devoxx.co.uk/speaker-details/?id=22178",
+					"time": "09.05.2024",
+					"location": {
+						"text": "Business Design Centre, London"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JCON Europe",
+				"url": "https://2024.europe.jcon.one/",
+				"image": "jcon-2024"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 22 - Better Language, Better APIs, Better Runtime",
+					"program": "https://2024.europe.jcon.one/schedule",
+					"time": "14.05.2024 0900 Europe/Berlin",
+					"location": {
+						"text": "Stockholm Waterfront Conference, Room C1"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "GOTO Amsterdam",
+				"url": "https://gotoams.nl",
+				"image": "goto-amsterdam-2024"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-action",
+					"title": "Modern Java in Action",
+					"program": "https://gotoams.nl/2024/schedule?date=2024-06-11",
+					"time": "11.06.2024 1430 Europe/Amsterdam",
+					"location": {
+						"text": "Amsterdam, Beurs van Berlage, Effectenbeurszaal"
 					}
 				}
 			]
