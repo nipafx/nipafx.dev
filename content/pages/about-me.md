@@ -46,33 +46,29 @@ If you want to get in touch, see [here](contact).
 <!--
 ## English - short
 
-Nicolai is a Java enthusiast with a passion for learning and sharing. He's a Java Developer Advocate at Oracle and organizer of [Accento]. For more, see [nipafx.dev].
+Nicolai is a Java enthusiast with a passion for learning and sharing and a Java Developer Advocate at Oracle. For more, see [nipafx.dev].
 
-[Accento]: https://accento.dev
 [nipafx.dev]: https://nipafx.dev
 
 ## English - normal
 
-Nicolai (aka nipafx) is a Java enthusiast focused on language features and core APIs with a passion for learning and sharing - in articles, newsletters, and books; in tweets, videos, and streams; in demo repos and at conferences - more on all of that on [nipafx.dev]. He's a Java Developer Advocate at Oracle and organizer of [Accento]. That aside, he's best known for his haircut.
+Nicolai (aka nipafx) is a Java enthusiast focused on language features, core APIs, and runtime evolution with a passion for learning and sharing. He does that mostly at conferences and in his biweekly Inside Java Newscast, but also occasionally in live streams, articles, and books - more on all that on [nipafx.dev]. He's a Java Developer Advocate at Oracle and otherwise best known for his haircut.
 
-[Accento]: https://accento.dev
 [nipafx.dev]: https://nipafx.dev
 
 ## English - normal - HTML
 
-Nicolai (aka nipafx) is a Java enthusiast focused on language features and core APIs with a passion for learning and sharing - in articles, newsletters, and books; in tweets, videos, and streams; in demo repos and at conferences - more on all of that on <a href="https://nipafx.dev">nipafx.dev</a>. He's a Java Developer Advocate at Oracle and organizer of <a href="https://accento.dev">Accento</a>. That aside, he's best known for his haircut.
+Nicolai (aka nipafx) is a Java enthusiast focused on language features, core APIs, and runtime evolution with a passion for learning and sharing. He does that mostly at conferences and in his biweekly Inside Java Newscast, but also occasionally in live streams, articles, and books - more on all that on <a href="https://nipafx.dev">nipafx.dev</a>. He's a Java Developer Advocate at Oracle and otherwise best known for his haircut.
 
 ## Deutsch - normal
 
-Nicolai (aka nipafx) ist ein Java-Enthusiast mit Fokus auf Sprachfeatures und APIs, der leidenschaftlich gerne lernt und lehrt. Das macht er in Blog Posts, Newslettern und Büchern; in Tweets, Videos und Streams; in Demo Repositories und auf Konferenzen - mehr dazu auf [nipafx.dev]. Er ist Java Developer Advocate bei Oracle und Organisator von [Accento]. Davon abgesehen kennt man ihn für seine Frisur.
+Nicolai (aka nipafx) ist Java-Enthusiast mit Fokus auf Sprachfeatures, APIs und Weiterentwicklungen der Runtime, der leidenschaftlich gerne lernt und lehrt. Das macht er hauptsächlich auf Konferenzen und in seinem zweiwöchentlichen Inside Java Newscast, aber auch gelegentlich in Live Streams, Artikeln oder Büchern - mehr dazu auf [nipafx.dev]. Er ist Java Developer Advocate bei Oracle; ansonsten kennt man ihn für seine Frisur.
 
-[Accento]: https://accento.dev
 [nipafx.dev]: https://nipafx.dev
 
 ## Deutsch - normal - HTML
 
-Nicolai (aka nipafx) ist ein Java-Enthusiast mit Fokus auf Sprachfeatures und APIs, der leidenschaftlich gerne lernt und lehrt. Das macht er in Blog Posts, Newslettern und Büchern; in Tweets, Videos und Streams; in Demo Repositories und auf Konferenzen - mehr dazu auf <a href="https://nipafx.dev">nipafx.dev</a>. Er ist Java Developer Advocate bei Oracle und Organisator von <a href="https://accento.dev">Accento</a>. Davon abgesehen kennt man ihn für seine Frisur.
-
+Nicolai (aka nipafx) ist Java-Enthusiast mit Fokus auf Sprachfeatures, APIs und Weiterentwicklungen der Runtime, der leidenschaftlich gerne lernt und lehrt. Das macht er hauptsächlich auf Konferenzen und in seinem zweiwöchentlichen Inside Java Newscast, aber auch gelegentlich in Live Streams, Artikeln oder Büchern - mehr dazu auf <a href="https://nipafx.dev">nipafx.dev</a>. Er ist Java Developer Advocate bei Oracle; ansonsten kennt man ihn für seine Frisur.
 
 ## All the things I did - until May 2022
 
