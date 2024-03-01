@@ -8,7 +8,8 @@ featuredImage: java-x-action
 repo: modern-java-demo
 ---
 
-Let's write a GitHub Crawler and let's throw in everything Java (21) has to offer:
+So you learned about all these new Java features but want to see how they come together?
+Then let's write a GitHub Crawler and let's throw in everything Java (21) has to offer:
 
 * virtual threads and structured concurrency
 * pattern matching and data-oriented programming
@@ -18,4 +19,4 @@ Let's write a GitHub Crawler and let's throw in everything Java (21) has to offe
 * modules and OS-specific binaries
 
 The end result will look very different from just a few years ago, let alone 10.
-This is not your dad's Java!
+This is not your parent's Java!

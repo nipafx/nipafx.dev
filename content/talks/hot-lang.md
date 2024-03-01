@@ -25,7 +25,7 @@ It's Java. 😱
 Did I exaggerate a bit?
 Am I overenthusiastic?
 A paid shill?
-A bit, yes, but that doesn't make me wrong. 😁
+Yes, but that doesn't make me wrong. 😁
 I promise, if you haven't touched Java in a while or only heard horror stories about it, you'll be surprised to see how far it came and how great it really is.
 Let me show you.
 
