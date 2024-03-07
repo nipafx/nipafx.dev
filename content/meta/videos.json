@@ -762,6 +762,12 @@
 			"url": "https://www.youtube.com/watch?v=1ljQzMRtGy4",
 			"title": "(Dirty?) Tricks in Java 22 - Inside Java Newscast #64",
 			"thumbnail": "inside-java-newscast-64"
+		},
+		{
+			"slug": "java-x-action-jfokus-2024",
+			"url": "https://www.youtube.com/watch?v=4UDwrfTNmo4",
+			"title": "Modern Java in Action",
+			"thumbnail": "java-x-action-jfokus-2024"
 		}
 	]
 }
