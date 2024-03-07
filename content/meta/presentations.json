@@ -3330,7 +3330,8 @@
 					"programEntry": "https://voxxeddays.com/zurich/schedule/talk/?id=2926",
 					"location": {
 						"text": "Zürich, Arena Cinema Sihlcity, Room 3"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x-action/2024-03-07-voxxed-days-z%C3%BCrich"
 				}
 			]
 		},
