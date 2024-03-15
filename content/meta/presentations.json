@@ -3349,7 +3349,8 @@
 					"time": "12.03.2024 1345 Europe/London",
 					"location": {
 						"text": "London"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x-action/2024-03-12-java-day-london"
 				}
 			]
 		},
