@@ -458,7 +458,7 @@ If you compile with `lint:serial`, note that you [will now get a warning](https:
 The `jar` tool [no longer generates an index](https://bugs.openjdk.org/browse/JDK-8302819).
 Its option `--generate-index` is hence ignored and leads to a warning, and the runtime ignores an index if it's present.
 
-`jlink`'s option `--compress` [now accepts values `zip0` to `zip9`](https://bugs.openjdk.org/browse/JDK-8293499) instead of the more abstract `0`, `1`, `2`.
+`jlink`'s option `--compress` [now accepts values `zip-0` to `zip-9`](https://bugs.openjdk.org/browse/JDK-8293499) instead of the more abstract `0`, `1`, `2`.
 This is actually caused by an addition to `jmod`:
 
 > The main purpose of `jmod` is to create a module file having the `jmod` extension that encapsulates a set of compiled Java classes, resources, and other related files.
