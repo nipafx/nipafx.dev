@@ -929,6 +929,11 @@
 			"time": "01.02.2024 1900",
 			"title": "1 Billion Row Challenge",
 			"description": "1BRC organizer Gunnar Morling and a few top contenders will discuss in detail how they managed to parse one billion rows in Java in just a few second"
+		},
+		{
+			"time": "02.04.2024 1700",
+			"title": "Just Chatting",
+			"description": "Gunnar Morling and I will hang out and chat. For example about RecordArgs - there are a few interesting aspects in there, particularly error handling. We'll probably also write some code."
 		}
 	]
 }
