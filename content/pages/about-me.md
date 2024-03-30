@@ -60,6 +60,12 @@ Nicolai (aka nipafx) is a Java enthusiast focused on language features, core API
 
 Nicolai (aka nipafx) is a Java enthusiast focused on language features, core APIs, and runtime evolution with a passion for learning and sharing. He does that mostly at conferences and in his biweekly Inside Java Newscast, but also occasionally in live streams, articles, and books - more on all that on <a href="https://nipafx.dev">nipafx.dev</a>. He's a Java Developer Advocate at Oracle and otherwise best known for his haircut.
 
+## Deutsch - kurz
+
+Nicolai (aka nipafx) ist Java-Enthusiast, der leidenschaftlich gerne lernt und lehrt. Er ist Java Developer Advocate bei Oracle; für Details, siehe [nipafx.dev].
+
+[nipafx.dev]: https://nipafx.dev
+
 ## Deutsch - normal
 
 Nicolai (aka nipafx) ist Java-Enthusiast mit Fokus auf Sprachfeatures, APIs und Weiterentwicklungen der Runtime, der leidenschaftlich gerne lernt und lehrt. Das macht er hauptsächlich auf Konferenzen und in seinem zweiwöchentlichen Inside Java Newscast, aber auch gelegentlich in Live Streams, Artikeln oder Büchern - mehr dazu auf [nipafx.dev]. Er ist Java Developer Advocate bei Oracle; ansonsten kennt man ihn für seine Frisur.
