@@ -768,6 +768,12 @@
 			"url": "https://www.youtube.com/watch?v=4UDwrfTNmo4",
 			"title": "Modern Java in Action",
 			"thumbnail": "java-x-action-jfokus-2024"
+		},
+		{
+			"slug": "inside-java-newscast-66",
+			"url": "https://www.youtube.com/watch?v=_afECXGjfDI",
+			"title": "Java 23: Restoring the Balance with Primitive Patterns - Inside Java Newscast #66",
+			"thumbnail": "inside-java-newscast-66"
 		}
 	]
 }
