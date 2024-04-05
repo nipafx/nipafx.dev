@@ -3369,6 +3369,15 @@
 					"location": {
 						"text": "Nürburgring, ring°arena"
 					}
+				},
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming in Java (22)",
+					"announcement": "https://meine.doag.org/events/javaland/2024/agenda/#eventDay.1712700000",
+					"time": "10.04.2024 1400 Europe/Berlin",
+					"location": {
+						"text": "Nürburgring, Bitburger Event-Center Teil A"
+					}
 				}
 			]
 		},
