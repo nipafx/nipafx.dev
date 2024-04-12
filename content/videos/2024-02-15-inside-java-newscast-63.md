@@ -245,5 +245,5 @@ And so it's very cool that this addition defers that complexity until you actual
 ## Outro
 
 And that's it for today on the Inside Java Newscast.
-I'm at Jfokus right now and we're going to record a bit more here, I reckon, so say tuned, subscribe, so you don't miss those videos and I'll see you again inb two weeks.
+I'm at [Jfokus](https://www.jfokus.se/) right now and we're going to record a bit more here, I reckon, so say tuned, subscribe, so you don't miss those videos and I'll see you again inb two weeks.
 So long ...

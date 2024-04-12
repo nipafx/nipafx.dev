@@ -774,6 +774,12 @@
 			"url": "https://www.youtube.com/watch?v=_afECXGjfDI",
 			"title": "Java 23: Restoring the Balance with Primitive Patterns - Inside Java Newscast #66",
 			"thumbnail": "inside-java-newscast-66"
+		},
+		{
+			"slug": "inside-java-newscast-67",
+			"url": "https://www.youtube.com/watch?v=tcihVdB7oU8",
+			"title": "Java Withers - Inside Java Newscast #67",
+			"thumbnail": "inside-java-newscast-67"
 		}
 	]
 }
