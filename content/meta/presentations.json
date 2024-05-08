@@ -3383,33 +3383,6 @@
 		},
 		{
 			"event": {
-				"name": "Devoxx UK",
-				"url": "https://www.devoxx.co.uk/",
-				"image": "devoxx-uk"
-			},
-			"presentations": [
-				{
-					"talk": "talk-java-pattern-matching",
-					"title": "Data-Oriented Programming in Java (21 and 22)",
-					"announcement": "https://www.devoxx.co.uk/speaker-details/?id=22178",
-					"time": "09.05.2024 1710 Europe/London",
-					"location": {
-						"text": "Gallery Hall, Business Design Centre, London"
-					}
-				},
-				{
-					"talk": "talk-openjdk-features",
-					"title": "From Idea to IDE",
-					"announcement": "https://www.devoxx.co.uk/speaker-details/?id=22178",
-					"time": "10.05.2024 1120 Europe/London",
-					"location": {
-						"text": "Room D, Business Design Centre, London"
-					}
-				}
-			]
-		},
-		{
-			"event": {
 				"name": "JCON Europe",
 				"url": "https://2024.europe.jcon.one/",
 				"image": "jcon-2024"
