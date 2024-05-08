@@ -99,6 +99,18 @@
 	margin: 0;
 }
 
+.title a {
+	text-decoration: unset;
+}
+
+.title a:visited {
+	color: unset;
+}
+
+.title a:hover {
+	text-decoration: underline;
+}
+
 .description {
 	color: var(--fg-color-shade-2);
 	margin: 0;

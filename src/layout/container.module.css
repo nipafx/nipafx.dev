@@ -66,6 +66,33 @@
 	grid-column: 4 / span 1;
 }
 
+/* these are the header id links added by `gatsby-remark-autolink-headers` */
+.textContainer > h2 > a:first-of-type,
+.textContainer > h3 > a:first-of-type,
+.textContainer > h4 > a:first-of-type,
+.textContainer > h5 > a:first-of-type {
+	color: var(--alt-color);
+	text-decoration: none;
+	float: left;
+	margin-left: -24px;
+	font-size: 0.5em;
+	line-height: 3.5em;
+}
+
+.textContainer > h2 > a:first-of-type:visited,
+.textContainer > h3 > a:first-of-type:visited,
+.textContainer > h4 > a:first-of-type:visited,
+.textContainer > h5 > a:first-of-type:visited {
+	color: var(--alt-color);
+}
+
+.textContainer > h2 > a:first-of-type:hover,
+.textContainer > h3 > a:first-of-type:hover,
+.textContainer > h4 > a:first-of-type:hover,
+.textContainer > h5 > a:first-of-type:hover {
+	color: var(--fg-color);
+}
+
 /* in text containers, ol/ul are .offCenter, so no need to indent them further */
 .textContainer > ul,
 .textContainer > ol {

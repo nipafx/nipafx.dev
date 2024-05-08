@@ -78,6 +78,7 @@ const getPresentations = talks => {
 			return {
 				type: "talk",
 				title: pres.title,
+				slug: pres.talk,
 				description: talks?.find(talk => talk.slug === pres.talk).description,
 				url: pres.announcement || pres.program || pres.programEntry,
 				startTime: parseTime(pres.time),

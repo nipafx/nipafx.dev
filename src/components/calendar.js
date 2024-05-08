@@ -138,7 +138,7 @@ const showEvent = (event, inMonth) => {
 		>
 			<span className={style.date}>{showDatesForEvent(event)}</span>
 			<h3 className={style.title}>
-				<MarkdownAsHtml itemProp="name">{event.title}</MarkdownAsHtml>
+				<Link to={event.slug}><MarkdownAsHtml itemProp="name">{event.title}</MarkdownAsHtml></Link>
 			</h3>
 			<p className={style.description}>
 				<MarkdownAsHtml itemProp="description">{event.description}</MarkdownAsHtml>
