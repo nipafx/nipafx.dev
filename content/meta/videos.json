@@ -780,6 +780,12 @@
 			"url": "https://www.youtube.com/watch?v=tcihVdB7oU8",
 			"title": "Java Withers - Inside Java Newscast #67",
 			"thumbnail": "inside-java-newscast-67"
+		},
+		{
+			"slug": "inside-java-newscast-69",
+			"url": "https://www.youtube.com/watch?v=WHknBEhzB0k",
+			"title": "Module Imports in Java 23 - Inside Java Newscast #69",
+			"thumbnail": "inside-java-newscast-69"
 		}
 	]
 }
