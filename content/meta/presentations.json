@@ -3427,9 +3427,10 @@
 				{
 					"talk": "talk-java-amber",
 					"title": "The SolutionFactory To Java's Problems",
+					"announcement": "https://www.meetup.com/utrecht-java-user-group/events/299097786/",
 					"time": "12.06.2024 1900 Europe/Amsterdam",
 					"location": {
-						"text": "t.b.d."
+						"text": "VodafoneZiggo kantoor Utrecht"
 					}
 				}
 			]
