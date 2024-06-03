@@ -925,7 +925,7 @@
 			"event": {
 				"name": "Java Forum Nord",
 				"url": "http://javaforumnord.de/",
-				"image": "javaforumnord"
+				"image": "java-forum-nord"
 			},
 			"presentations": [
 				{
@@ -1373,7 +1373,7 @@
 			"event": {
 				"name": "Java Forum Nord",
 				"url": "http://javaforumnord.de/",
-				"image": "javaforumnord"
+				"image": "java-forum-nord"
 			},
 			"presentations": [
 				{
@@ -3019,7 +3019,7 @@
 			"event": {
 				"name": "Java Forum Nord",
 				"url": "https://javaforumnord.de/2023/",
-				"image": "javaforumnord"
+				"image": "java-forum-nord"
 			},
 			"presentations": [
 				{
@@ -3449,6 +3449,24 @@
 					"time": "13.06.2024 1400 Europe/Amsterdam",
 					"location": {
 						"text": "Utrecht, Media Plaza, Progress"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Java Forum Stuttgart",
+				"url": "https://www.java-forum-stuttgart.de/",
+				"image": "java-forum-stuttgart"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-ama",
+					"title": "Modern Java - Ask Me Anything",
+					"programEntry": "https://www.java-forum-stuttgart.de/vortraege/modern-java-ask-me-anything/",
+					"time": "31.07.2024 1215 Europe/Berlin",
+					"location": {
+						"text": "Stuttgart, Kultur- & Kongresszentrum Liederhalle, Track C"
 					}
 				}
 			]
