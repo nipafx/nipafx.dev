@@ -626,6 +626,12 @@
 			"thumbnail": "jep-cafe-13"
 		},
 		{
+			"slug": "jep-cafe-16",
+			"url": "https://www.youtube.com/watch?v=fjvGzBFmyhM",
+			"title": "From ThreadLocal to ScopedValue with Loom Full Tutorial - JEP Café #16",
+			"thumbnail": "jep-cafe-16"
+		},
+		{
 			"slug": "jep-cafe-18",
 			"url": "https://www.youtube.com/watch?v=42My8Yfzwbg",
 			"title": "Learn how to write fast Java code with the Vector API - JEP Café #18",
@@ -782,10 +788,28 @@
 			"thumbnail": "inside-java-newscast-67"
 		},
 		{
+			"slug": "inside-java-newscast-68",
+			"url": "https://www.youtube.com/watch?v=AvAIFq4fLPw",
+			"title": "Java Withers - Inside Java Newscast #68",
+			"thumbnail": "inside-java-newscast-68"
+		},
+		{
 			"slug": "inside-java-newscast-69",
 			"url": "https://www.youtube.com/watch?v=WHknBEhzB0k",
 			"title": "Module Imports in Java 23 - Inside Java Newscast #69",
 			"thumbnail": "inside-java-newscast-69"
+		},
+		{
+			"slug": "inside-java-newscast-70",
+			"url": "https://www.youtube.com/watch?v=kzjGp7LmW0I",
+			"title": "All Java 23 Features - Inside Java Newscast #70",
+			"thumbnail": "inside-java-newscast-70"
+		},
+		{
+			"slug": "gc-stefan-johansson-devoxx-uk",
+			"url": "https://www.youtube.com/watch?v=jz_ZahwS5N0",
+			"title": "Garbage Collection in Java: The progress since JDK 8 by STEFAN JOHANSSON",
+			"thumbnail": "gc-stefan-johansson-devoxx-uk"
 		}
 	]
 }
