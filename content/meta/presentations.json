@@ -3413,7 +3413,8 @@
 					"time": "11.06.2024 1430 Europe/Amsterdam",
 					"location": {
 						"text": "Amsterdam, Beurs van Berlage, Effectenbeurszaal"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x-action/2024-06-11-goto-amsterdam"
 				}
 			]
 		},
@@ -3431,7 +3432,8 @@
 					"time": "12.06.2024 1900 Europe/Amsterdam",
 					"location": {
 						"text": "VodafoneZiggo kantoor Utrecht"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/project-amber/2024-06-12-utrecht-jug"
 				}
 			]
 		},
@@ -3449,7 +3451,8 @@
 					"time": "13.06.2024 1400 Europe/Amsterdam",
 					"location": {
 						"text": "Utrecht, Media Plaza, Progress"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x-action/2024-06-13-j-spring"
 				}
 			]
 		},
