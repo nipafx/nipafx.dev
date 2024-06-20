@@ -810,6 +810,12 @@
 			"url": "https://www.youtube.com/watch?v=jz_ZahwS5N0",
 			"title": "Garbage Collection in Java: The progress since JDK 8 by STEFAN JOHANSSON",
 			"thumbnail": "gc-stefan-johansson-devoxx-uk"
+		},
+		{
+			"slug": "inside-java-newscast-71",
+			"url": "https://www.youtube.com/watch?v=c6L4Ef9owuQ",
+			"title": "What Happened to Java's String Templates? Inside Java Newscast #71",
+			"thumbnail": "inside-java-newscast-71"
 		}
 	]
 }
