@@ -3473,6 +3473,40 @@
 					}
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "JavaZone",
+				"url": "https://2024.javazone.no",
+				"image": "javazone-2024"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 23 - Better Language, Better APIs, Better Runtime",
+					"time": "04.09.2024",
+					"location": {
+						"text": "Oslo Spektrum"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "IT-Tage",
+				"url": "https://www.ittage.informatik-aktuell.de/",
+				"image": "it-tage-2024"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 21 bis 23: New Features",
+					"time": "10.12.2024 0900 Europe/Berlin",
+					"location": {
+						"text": "Okzident, Kap Europa, Frankfurt"
+					}
+				}
+			]
 		}
 	],
 	"future-events": [
