@@ -3345,7 +3345,7 @@
 				{
 					"talk": "talk-java-action",
 					"title": "Live Coding with Java 21",
-					"program": "https://reg.rf.oracle.com/flow/oracle/london24/attendee-portal/page/sessioncatalog/session/1705686377826001IKcB",
+					"programEntry": "https://reg.rf.oracle.com/flow/oracle/london24/attendee-portal/page/sessioncatalog/session/1705686377826001IKcB",
 					"time": "12.03.2024 1345 Europe/London",
 					"location": {
 						"text": "London"
@@ -3501,7 +3501,8 @@
 				{
 					"talk": "talk-java-x",
 					"title": "Java 21 bis 23: New Features",
-					"time": "10.12.2024 0900 Europe/Berlin",
+					"programEntry": "https://www.ittage.informatik-aktuell.de/programm/2024/java-21-bis-23-new-features.html",
+					"time": "10.12.2024 1400 Europe/Berlin",
 					"location": {
 						"text": "Okzident, Kap Europa, Frankfurt"
 					}
