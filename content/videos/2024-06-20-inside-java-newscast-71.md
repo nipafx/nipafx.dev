@@ -26,7 +26,7 @@ Then let's dive right in!
 
 JDK 21 and 22 [previewed string templates](https://openjdk.org/jeps/459), a language feature that makes it easier to safely embed variables in structured languages like SQL, HTML, JSON, etc.
 I assume you know its outlines and understand how it embedded variables and how it required template processors to turn those templates into strings or other arbitrary objects.
-If you don't, here's a video will fill in the gaps.
+If you don't, here's a video that will fill in the gaps.
 
 From its first days, the proposal caught some flack.
 Lots of people took issue with its use of `\{}` instead of something they're more familiar with (like `${}`) to embed variables and we'll get back to that later.

@@ -30,6 +30,27 @@ The short one is:
 It allows primitives in patterns, which means you can now switch over or `instanceof`-check a primitive `float`, `double`, etc. and get more options when switching over `int` and `long`.
 While that may seem borderline pointless at first, it has a few unexpected benefits in the present and in the future.
 
+
+```java
+// in `switch`
+switch (Rank.of(book).current()) {
+	case 1 -> firstPlace(book);
+	case 2 -> secondPlace(book);
+	case 3 -> thirdPlace(book);
+	case int n when n <= 10
+		-> topTenPlace(book, n);
+	case int n when n <= 100
+		-> nthPlace(book, n);
+	case int n -> unranked(book);
+}
+
+// in `instanceof`
+jshell> boolean is216float = 16_777_216 instanceof float
+is216float ==> true
+jshell> boolean is217float = 16_777_217 instanceof float
+is217float ==> false
+```
+
 The longer summary is quite a bit longer because it goes far afield to explain why this is pretty cool actually.
 Go check out [Inside Java Newscast #66](https://www.youtube.com/watch?v=_afECXGjfDI) for all of that or just straight-up read the JEP.
 
@@ -48,6 +69,49 @@ JDK 22 started previewing looser rules by allowing statements that would compile
 Now, JDK 23 goes a step further and also allows assignments to fields in the same class.
 In [this second preview](https://openjdk.org/jeps/482), the feature has also been renamed to _flexible constructor bodies_.
 
+```java
+class Name {
+
+	private final String first;
+	private final String last;
+
+	Name(String first, String last) {
+		this.first = first;
+		this.last = last;
+	}
+
+}
+
+class ThreePartName extends Name {
+
+	private final String middle;
+
+	// JDK ≤21
+	ThreePartName(String first, String middle, String last) {
+		// shorten first if middle is given
+		super(middle.length() == 1 ? first.substring(0, 1) : first, last);
+		this.middle = middle;
+	}
+
+	// JDK 22 + PREVIEW FEATURES
+	ThreePartName(String first, String middle, String last) {
+		// shorten first if middle is given
+		var short1st = middle.length() == 1 ? first.substring(0, 1) : first;
+		super(short1st, last);
+		this.middle = middle;
+	}
+
+	// JDK 23 + PREVIEW FEATURES
+	ThreePartName(String first, String middle, String last) {
+		// shorten first if middle is given
+		var short1st = middle.length() == 1 ? first.substring(0, 1) : first;
+		this.middle = middle;
+		super(short1st, last);
+	}
+
+}
+```
+
 <contentvideo slug="inside-java-newscast-62"></contentvideo>
 
 ### Simplified Main
@@ -60,6 +124,15 @@ First, an implicitly declared class implicitly imports the three methods on the 
 Those methods are `print`, `println`, simple wrappers around the same methods on `System.out`, and `readln`, which takes a string that it prints as a prompt and returns whatever line the user typed as a reply, which is _so much_ simpler than the "`new BufferedReader` of `new InputStreamReader` of `System.in`"-dance.
 This will make it much easier for beginners to interact with the terminal, a classic early step when learning to program.
 
+```java
+// complete source file; executable with:
+//     java --enable-preview Main.java
+void main() {
+	var planet = readln("What planet are you on? ");
+	println("Hello, %s!".formatted(planet));
+}
+```
+
 The other addition is also an import, because implicitly declared classes now implicitly import the module _java.base_.
 
 <contentvideo slug="inside-java-newscast-49"></contentvideo>
@@ -71,6 +144,31 @@ When importing a module with `import module $modulename`, all public types in al
 This is particularly handy when coding outside of an IDE or when just starting out with Java.
 And with implicitly declared classes implicitly importing _java.base_, many simple programs will get away with zero explicit imports.
 
+```java
+// complete source file; executable with:
+//     java --enable-preview Main.java
+
+// implicit: `import module java.base;`
+import module java.xml;
+
+void main() {
+	// XML types are imported via java.xml
+	var xml = DatatypeFactory.newDefaultInstance();
+	// `List`, `BigDecimal`, `LocalDate`, etc. are imported via java.base
+	List<?> dates = Stream
+		.of(1, 2, 23, 29)
+		.map(BigDecimal::new)
+		.map(day -> LocalDate.of(
+			2024,
+			RandomGenerator.getDefault().nextInt(11) + 1,
+			day.intValue()))
+		.map(date -> xml.newXMLGregorianCalender(...))
+		.toList();
+
+	System.out.println(dates);
+}
+```
+
 <contentvideo slug="inside-java-newscast-69"></contentvideo>
 
 ### Structured Concurrency and Scoped Values
@@ -81,6 +179,28 @@ In JDK 23, both APIs are previewing for the third time - the only change is:
 
 > The type of the operation parameter of the `ScopedValue.callWhere` method is a now new functional interface which allows the Java compiler to infer whether a checked exception might be thrown.
 > With this change, the `ScopeValue.getWhere` method is no longer needed and is removed.
+
+```java
+private final static ScopedValue<Long> REQUEST_ID = ScopedValue.newInstance();
+
+void main() throws Exception {
+	var userOrder = ScopedValue.callWhere(REQUEST_ID, 42L, () -> fetchUserOrder("", ""));
+	println(userOrder);
+}
+
+UserOrder fetchUserOrder(String userId, String orderId) throws InterruptedException {
+	try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
+		Subtask<User> user = scope.fork(() -> fetchUser(userId));
+		Subtask<Order> order = scope.fork(() -> fetchOrder(orderId));
+
+		scope.join().throwIfFailed();
+		return new UserOrder(user.get(), order.get());
+	} catch (ExecutionException ex) {
+		var message = "Request %d failed".formatted(REQUEST_ID.get());
+		throw new RuntimeException(message, ex.getCause());
+	}
+}
+```
 
 In fact, this is the only change since their first preview in JDK 21, so if you're on that version, you can still test the APIs in almost their current form.
 If you do and have any feedback, please send it to [the Loom mailing list](https://mail.openjdk.org/pipermail/loom-dev/).
