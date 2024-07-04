@@ -816,6 +816,12 @@
 			"url": "https://www.youtube.com/watch?v=c6L4Ef9owuQ",
 			"title": "What Happened to Java's String Templates? Inside Java Newscast #71",
 			"thumbnail": "inside-java-newscast-71"
+		},
+		{
+			"slug": "inside-java-newscast-72",
+			"url": "https://www.youtube.com/watch?v=NcutSV82Jfk",
+			"title": "Java and AI? - Inside Java Newscast #72",
+			"thumbnail": "inside-java-newscast-72-b"
 		}
 	]
 }
