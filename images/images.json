@@ -2905,5 +2905,22 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "java-ai-braintree",
+		"alt": "A sculptured brain on an indefinite white surface, both strongly colored by blue and purple light",
+		"credits": {
+			"author": {
+				"name": "Milad Fakurian",
+				"url": "https://unsplash.com/@fakurian"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/blue-and-green-peacock-feather-58Z17lnVS4U"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]

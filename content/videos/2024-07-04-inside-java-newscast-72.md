@@ -1,6 +1,6 @@
 ---
 title: "Java and AI? - Inside Java Newscast #72"
-tags: [project-valhalla, project-babylon, project-panama]
+tags: [ai, java-next, project-valhalla, project-babylon, project-panama]
 date: 2024-07-04
 slug: inside-java-newscast-72
 videoSlug: inside-java-newscast-72
