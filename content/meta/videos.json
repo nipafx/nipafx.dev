@@ -822,6 +822,12 @@
 			"url": "https://www.youtube.com/watch?v=NcutSV82Jfk",
 			"title": "Java and AI? - Inside Java Newscast #72",
 			"thumbnail": "inside-java-newscast-72-b"
+		},
+		{
+			"slug": "inside-java-newscast-73",
+			"url": "https://www.youtube.com/watch?v=ucdzGd-f8as",
+			"title": "Integrity by Default - Inside Java Newscast #73",
+			"thumbnail": "inside-java-newscast-73"
 		}
 	]
 }
