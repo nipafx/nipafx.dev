@@ -3478,6 +3478,24 @@
 		},
 		{
 			"event": {
+				"name": "JUG Stammtisch Göttingen",
+				"url": "http://www.java.de/roller/blog/page/stammtisch_goettingen",
+				"image": "jug-deutschland"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming in Java (22)",
+					"program": "http://www.java.de/roller/blog/page/stammtisch_goettingen",
+					"time": "21.08.2024 1800 Europe/Berlin",
+					"location": {
+						"text": "Prof. Schumann GmbH, Jutta-Limbach-Straße 1"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "JavaZone",
 				"url": "https://2024.javazone.no",
 				"image": "javazone-2024"
