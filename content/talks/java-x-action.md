@@ -6,7 +6,7 @@ slug: talk-java-action
 description: "Let's write a GitHub Crawler and let's throw in everything Java (23) has to offer"
 featuredImage: java-x-action
 slides: https://slides.nipafx.dev/java-x-action/
-videoSlug: java-x-action-jfokus-2024
+videoSlug: java-x-action-gotoams-2024
 repo: modern-java-demo
 ---
 

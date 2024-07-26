@@ -828,6 +828,12 @@
 			"url": "https://www.youtube.com/watch?v=ucdzGd-f8as",
 			"title": "Integrity by Default - Inside Java Newscast #73",
 			"thumbnail": "inside-java-newscast-73"
+		},
+		{
+			"slug": "java-x-action-gotoams-2024",
+			"url": "https://www.youtube.com/watch?v=miUbs3mqPJE",
+			"title": "Modern Java in Action • Nicolai Parlog • GOTO 2024",
+			"thumbnail": "java-x-action-gotoams-2024"
 		}
 	]
 }
