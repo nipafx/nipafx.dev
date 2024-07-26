@@ -3331,7 +3331,8 @@
 					"location": {
 						"text": "Zürich, Arena Cinema Sihlcity, Room 3"
 					},
-					"slides": "https://slides.nipafx.dev/java-x-action/2024-03-07-voxxed-days-z%C3%BCrich"
+					"slides": "https://slides.nipafx.dev/java-x-action/2024-03-07-voxxed-days-z%C3%BCrich",
+					"video": "Vhttps://www.youtube.com/watch?v=Pmlpk4Ti9f8"
 				}
 			]
 		},
@@ -3414,7 +3415,8 @@
 					"location": {
 						"text": "Amsterdam, Beurs van Berlage, Effectenbeurszaal"
 					},
-					"slides": "https://slides.nipafx.dev/java-x-action/2024-06-11-goto-amsterdam"
+					"slides": "https://slides.nipafx.dev/java-x-action/2024-06-11-goto-amsterdam",
+					"videos": "https://www.youtube.com/watch?v=miUbs3mqPJE"
 				}
 			]
 		},
@@ -3484,6 +3486,7 @@
 				{
 					"talk": "talk-java-x",
 					"title": "Java 23 - Better Language, Better APIs, Better Runtime",
+					"programEntry": "https://2024.javazone.no/program/9b81c061-10e5-4f0f-97c0-e15a62e759cc",
 					"time": "04.09.2024",
 					"location": {
 						"text": "Oslo Spektrum"
