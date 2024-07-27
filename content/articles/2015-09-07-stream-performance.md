@@ -203,14 +203,10 @@ So let's have a lock at something else than just integer comparison.
 
 I compared the following operations:
 
-* **max**:
-Finding the maximum value.
-* **sum**:
-Computing the sum of all values; aggregated in an `int` ignoring overflows.
-* **arithmetic**:
-To model a less simple numeric operation I combined the values with a a handful of bit shifts and multiplications.
-* **string**:
-To model a complex operation that creates new objects I converted the elements to strings and xor'ed them character by character.
+* **max**: Finding the maximum value.
+* **sum**: Computing the sum of all values; aggregated in an `int` ignoring overflows.
+* **arithmetic**: To model a less simple numeric operation I combined the values with a a handful of bit shifts and multiplications.
+* **string**: To model a complex operation that creates new objects I converted the elements to strings and xor'ed them character by character.
 
 These were the results (for 500'000 ordered elements; in milliseconds):
 
