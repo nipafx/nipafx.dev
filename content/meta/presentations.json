@@ -3514,6 +3514,33 @@
 		},
 		{
 			"event": {
+				"name": "Devoxx Belgium",
+				"url": "https://devoxx.be/",
+				"image": "devoxx-be"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 23 - Better Language, Better APIs, Better Runtime",
+					"programEntry": "https://devoxx.be/talk/?id=16087",
+					"time": "07.10.2024 0930 Europe/Brussels",
+					"location": {
+						"text": "Kinepolis, Antwerpen, Room 6"
+					}
+				},
+				{
+					"talk": "talk-java-action",
+					"title": "Modern Java in Action",
+					"programEntry": "https://devoxx.be/talk/?id=18470",
+					"time": "10.10.2024 1500 Europe/Brussels",
+					"location": {
+						"text": "Kinepolis, Antwerpen, Room 4"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "IT-Tage",
 				"url": "https://www.ittage.informatik-aktuell.de/",
 				"image": "it-tage-2024"
