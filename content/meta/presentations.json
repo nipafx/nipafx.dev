@@ -3472,7 +3472,8 @@
 					"time": "31.07.2024 1215 Europe/Berlin",
 					"location": {
 						"text": "Stuttgart, Kultur- & Kongresszentrum Liederhalle, Mozart Saal"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-ama/2024-07-31-java-forum-stuttgart"
 				}
 			]
 		},
@@ -3490,7 +3491,8 @@
 					"time": "21.08.2024 1800 Europe/Berlin",
 					"location": {
 						"text": "Prof. Schumann GmbH, Jutta-Limbach-Straße 1"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-dop/2024-08-21-jug-göttingen"
 				}
 			]
 		},
