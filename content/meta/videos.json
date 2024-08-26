@@ -834,6 +834,12 @@
 			"url": "https://www.youtube.com/watch?v=miUbs3mqPJE",
 			"title": "Modern Java in Action • Nicolai Parlog • GOTO 2024",
 			"thumbnail": "java-x-action-gotoams-2024"
+		},
+		{
+			"slug": "inside-java-newscast-74",
+			"url": "https://www.youtube.com/watch?v=ucdzGd-f8as",
+			"title": "How to Read a JDK Enhancement Proposal - Inside Java Newscast #74",
+			"thumbnail": "inside-java-newscast-74-a"
 		}
 	]
 }
