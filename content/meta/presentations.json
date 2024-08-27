@@ -3395,8 +3395,10 @@
 					"program": "https://2024.europe.jcon.one/schedule",
 					"time": "14.05.2024 0900 Europe/Berlin",
 					"location": {
-						"text": "Stockholm Waterfront Conference, Room C1"
-					}
+						"text": "Cinedom, Cologne, Cinema BlackBox"
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2024-05-14-jcon-europe",
+					"video": "https://www.youtube.com/watch?v=vW6dBakPmKk"
 				}
 			]
 		},
