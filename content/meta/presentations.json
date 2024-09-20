@@ -3545,6 +3545,24 @@
 		},
 		{
 			"event": {
+				"name": "J-Fall",
+				"url": "https://jfall.nl/",
+				"image": "j-fall"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 23 - Better Language, Better APIs, Better Runtime",
+					"program": "https://jfall.nl/timetable/",
+					"time": "07.11.2024 1140 Europe/Amsterdam",
+					"location": {
+						"text": "Pathé Ede, Room 9"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "IT-Tage",
 				"url": "https://www.ittage.informatik-aktuell.de/",
 				"image": "it-tage-2024"
