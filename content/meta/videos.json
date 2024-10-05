@@ -840,6 +840,18 @@
 			"url": "https://www.youtube.com/watch?v=ucdzGd-f8as",
 			"title": "How to Read a JDK Enhancement Proposal - Inside Java Newscast #74",
 			"thumbnail": "inside-java-newscast-74-a"
+		},
+		{
+			"slug": "jvmls-2024-valhalla",
+			"url": "https://www.youtube.com/watch?v=IF9l8fYfSnI",
+			"title": " Valhalla - Where Are We? #JVMLS",
+			"thumbnail": "jvmls-2024-valhalla"
+		},
+		{
+			"slug": "inside-java-newscast-77",
+			"url": "https://www.youtube.com/watch?v=Lf2Vr7Zjmj8",
+			"title": "Big News from Project Valhalla - Inside Java Newscast #77",
+			"thumbnail": "inside-java-newscast-77"
 		}
 	]
 }
