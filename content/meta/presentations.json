@@ -3530,7 +3530,8 @@
 					"time": "07.10.2024 0930 Europe/Brussels",
 					"location": {
 						"text": "Kinepolis, Antwerpen, Room 6"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2024-10-07-devoxx-be"
 				},
 				{
 					"talk": "talk-java-action",
