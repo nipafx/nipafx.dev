@@ -3540,7 +3540,8 @@
 					"time": "10.10.2024 1500 Europe/Brussels",
 					"location": {
 						"text": "Kinepolis, Antwerpen, Room 4"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x-action/2024-10-10-devoxx-be"
 				}
 			]
 		},
