@@ -2922,5 +2922,22 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "university-manitoba",
+		"alt": "Moody photo of a dark and modern geothermal building within Smartpark at the University of Manitoba",
+		"credits": {
+			"author": {
+				"name": "m",
+				"url": "https://unsplash.com/@brydoncreative"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/black-and-gray-building-during-daytime-GvPceVqbxm4"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]

@@ -3546,6 +3546,26 @@
 		},
 		{
 			"event": {
+				"name": "betterCode(Java)",
+				"url": "https://java.bettercode.eu/",
+				"image": "better-code"
+			},
+			"presentations": [
+				{
+					"talk": "talk-teaching-java",
+					"title": "\"Java für Anfänger\" für Fortgeschrittene",
+					"time": "15.10.2024 1315 Europe/Berlin",
+					"programEntry": "https://java.bettercode.eu/veranstaltung-22593-se-0-java-fuer-anfaenger-fuer-fortgeschrittene.html",
+					"location": {
+						"type": "virtual",
+						"text": "online"
+					},
+					"slides": "https://slides.nipafx.dev/teaching-java/2024-10-15-bettercode"
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "J-Fall",
 				"url": "https://jfall.nl/",
 				"image": "j-fall"
