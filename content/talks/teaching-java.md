@@ -18,7 +18,7 @@ In recent years, Oracle and OpenJDK, particularly Project Amber, have set their 
 * simplified interaction with the terminal
 * enabling a programming paradigm that is better suited to small projects
 * a playground that allows quick and easy experimentation
-* a VS Code extension that meats developers where they are
+* a VS Code extension that meets developers where they are
 
 But it's not enough to improve the technological underpinnings.
 These developments also enable updates to curricula that make Java more approachable and more immediately usable.
