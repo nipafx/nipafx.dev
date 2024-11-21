@@ -852,6 +852,18 @@
 			"url": "https://www.youtube.com/watch?v=Lf2Vr7Zjmj8",
 			"title": "Big News from Project Valhalla - Inside Java Newscast #77",
 			"thumbnail": "inside-java-newscast-77"
+		},
+		{
+			"slug": "inside-java-newscast-79",
+			"url": "https://www.youtube.com/watch?v=ozUE4YN_WhI",
+			"title": "Release Your (Java) Projects Like OpenJDK With Tip & Tail - Inside Java Newscast #79",
+			"thumbnail": "inside-java-newscast-79"
+		},
+		{
+			"slug": "inside-java-newscast-80",
+			"url": "https://www.youtube.com/watch?v=QDk1c0ifoNo",
+			"title": "Java 24 Stops Pinning Virtual Threads (Almost) - Inside Java Newscast #80",
+			"thumbnail": "inside-java-newscast-80-a"
 		}
 	]
 }
