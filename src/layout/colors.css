@@ -35,6 +35,7 @@ body {
 	--books-color: #7e180a;
 	--discord-color: #5865F2;
 	--github-color: #f6f8fa;
+	--bluesky-color: #0085FF;
 	--mastodon-color: #0063FF;
 	--stackoverflow-color: #f58023;
 	--talks-color: #ff8c6a;
@@ -114,6 +115,10 @@ body {
 
 .discord {
 	--alt-color: var(--discord-color);
+}
+
+.bluesky {
+	--alt-color: var(--bluesky-color);
 }
 
 .mastodon {

@@ -3,6 +3,7 @@ import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faRss } from "@fortawesome/free-solid-svg-icons"
 import {
+	faBluesky,
 	faDiscord,
 	faFacebookF,
 	faGithub,
@@ -27,6 +28,8 @@ const FaIcon = ({ icon, className }) => (
 // importing them explicitly works around that
 const iconForName = icon => {
 	switch (icon) {
+		case "faBluesky":
+			return faBluesky
 		case "faDiscord":
 			return faDiscord
 		case "faFacebookF":

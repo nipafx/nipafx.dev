@@ -7,6 +7,12 @@
 			"className": "twitter"
 		},
 		{
+			"title": "BlueSky",
+			"fontAwesome": "faBluesky",
+			"url": "https://bsky.app/profile/nipafx.dev",
+			"className": "bluesky"
+		},
+		{
 			"title": "Mastodon",
 			"fontAwesome": "faMastodon",
 			"url": "https://mastodon.social/@nipafx",
