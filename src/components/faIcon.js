@@ -9,7 +9,6 @@ import {
 	faHackerNews,
 	faLinkedinIn,
 	faMastodon,
-	faMediumM,
 	faRedditAlien,
 	faStackOverflow,
 	faTwitch,
@@ -40,8 +39,6 @@ const iconForName = icon => {
 			return faLinkedinIn
 		case "faMastodon":
 			return faMastodon
-		case "faMediumM":
-			return faMediumM
 		case "faRedditAlien":
 			return faRedditAlien
 		case "faRss":

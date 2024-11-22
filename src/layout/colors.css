@@ -36,7 +36,6 @@ body {
 	--discord-color: #5865F2;
 	--github-color: #f6f8fa;
 	--mastodon-color: #0063FF;
-	--medium-color: #18b475;
 	--stackoverflow-color: #f58023;
 	--talks-color: #ff8c6a;
 	--twitch-color: #a970ff;
@@ -119,10 +118,6 @@ body {
 
 .mastodon {
 	--alt-color: var(--mastodon-color);
-}
-
-.medium {
-	--alt-color: var(--medium-color);
 }
 
 .youtube {

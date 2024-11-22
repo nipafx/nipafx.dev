@@ -26,12 +26,6 @@
 			"className": "discord"
 		},
 		{
-			"title": "Medium",
-			"fontAwesome": "faMediumM",
-			"url": "https://medium.com/nipafx-news",
-			"className": "medium"
-		},
-		{
 			"title": "YouTube",
 			"fontAwesome": "faYoutube",
 			"url": "https://youtube.com/nipafx",
