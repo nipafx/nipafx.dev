@@ -1,12 +1,6 @@
 {
 	"links": [
 		{
-			"title": "RSS",
-			"fontAwesome": "faRss",
-			"url": "/feed.xml",
-			"className": "rss"
-		},
-		{
 			"title": "Twitter",
 			"fontAwesome": "faTwitter",
 			"url": "https://twitter.com/nipafx/",
@@ -48,6 +42,12 @@
 			"fontAwesome": "faStackOverflow",
 			"url": "http://stackoverflow.com/users/2525313/nicolai-parlog",
 			"className": "stackoverflow"
+		},
+		{
+			"title": "RSS",
+			"fontAwesome": "faRss",
+			"url": "/feed.xml",
+			"className": "rss"
 		}
 	]
 }
