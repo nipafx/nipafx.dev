@@ -1,6 +1,6 @@
 ---
 title: "Java 24 Stops Pinning Virtual Threads (Almost) - Inside Java Newscast #80"
-tags: [project-loom, java-24]
+tags: [java-24, virtual-threads]
 date: 2024-11-21
 slug: inside-java-newscast-80
 videoSlug: inside-java-newscast-80
