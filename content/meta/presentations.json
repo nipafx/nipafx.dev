@@ -3600,6 +3600,42 @@
 					}
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "JUG Bonn",
+				"url": "https://www.meetup.com/JUG-Bonn/",
+				"image": "jug-bonn"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 23 - Better Language, Better APIs, Better Runtime",
+					"announcement": "https://www.meetup.com/jug-bonn/events/304774101/",
+					"time": "15.01.2025 1830 Europe/Berlin",
+					"location": {
+						"text": "Friedrich-Ebert-Allee 37-39"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Jfokus",
+				"url": "https://jfokus.se/",
+				"image": "jfokus-2025"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 24 - Better Language, Better APIs, Better Runtime",
+					"programEntry": "https://jfokus.se/talks/2495",
+					"time": "05.02.2025 0900 Europe/Stockholm",
+					"location": {
+						"text": "Stockholm Waterfront Conference, Room A1"
+					}
+				}
+			]
 		}
 	],
 	"future-events": [
