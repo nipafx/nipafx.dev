@@ -3369,16 +3369,18 @@
 					"time": "09.04.2024 1100 Europe/Berlin",
 					"location": {
 						"text": "Nürburgring, ring°arena"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x-action/2024-04-09-javaland"
 				},
 				{
-					"talk": "talk-java-pattern-matching",
-					"title": "Data-Oriented Programming in Java (22)",
+					"talk": "talk-java-amber",
+					"title": "The SolutionFactory To Java's Problems",
 					"announcement": "https://meine.doag.org/events/javaland/2024/agenda/#eventDay.1712700000",
 					"time": "10.04.2024 1400 Europe/Berlin",
 					"location": {
 						"text": "Nürburgring, Bitburger Event-Center Teil A"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/project-amber/2024-04-10-javaland"
 				}
 			]
 		},
@@ -3512,7 +3514,9 @@
 					"time": "05.09.2024 1020 Europe/Oslo",
 					"location": {
 						"text": "Oslo Spektrum, Room 6"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2024-09-05-javazone",
+					"video": "https://www.youtube.com/watch?v=A_ImrhN9H6A"
 				}
 			]
 		},
@@ -3531,7 +3535,8 @@
 					"location": {
 						"text": "Kinepolis, Antwerpen, Room 6"
 					},
-					"slides": "https://slides.nipafx.dev/java-x/2024-10-07-devoxx-be"
+					"slides": "https://slides.nipafx.dev/java-x/2024-10-07-devoxx-be",
+					"video": "https://www.youtube.com/watch?v=3azeRvyVe6g"
 				},
 				{
 					"talk": "talk-java-action",
@@ -3541,7 +3546,8 @@
 					"location": {
 						"text": "Kinepolis, Antwerpen, Room 4"
 					},
-					"slides": "https://slides.nipafx.dev/java-x-action/2024-10-10-devoxx-be"
+					"slides": "https://slides.nipafx.dev/java-x-action/2024-10-10-devoxx-be",
+					"video": "https://www.youtube.com/watch?v=bSyNJBzv7U8"
 				}
 			]
 		},

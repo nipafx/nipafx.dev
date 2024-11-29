@@ -864,6 +864,18 @@
 			"url": "https://www.youtube.com/watch?v=QDk1c0ifoNo",
 			"title": "Java 24 Stops Pinning Virtual Threads (Almost) - Inside Java Newscast #80",
 			"thumbnail": "inside-java-newscast-80-a"
+		},
+		{
+			"slug": "java-dop-voxxed-cern-2024",
+			"url": "https://www.youtube.com/watch?v=8FRU_aGY4mY",
+			"title": "Data Oriented Programming in Java 21 by Nicolai Parlog",
+			"thumbnail": "java-dop-voxxed-cern-2024"
+		},
+		{
+			"slug": "java-x-javazone-2024",
+			"url": "https://www.youtube.com/watch?v=A_ImrhN9H6A",
+			"title": "Java 23 - Better Language, Better APIs, Better Runtime",
+			"thumbnail": "java-x-javazone-2024"
 		}
 	]
 }
