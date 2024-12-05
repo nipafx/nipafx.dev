@@ -58,7 +58,7 @@ That way, you can easily and cheaply use all iteration mechanisms, be it a for-e
 ```java
 // method on `SequencedCollection`
 public SequencedCollection<E> reversed();
-/* {+} */
+
 // easy for loop
 for (var e : collection.reversed())
 	process(e);

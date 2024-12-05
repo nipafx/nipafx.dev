@@ -876,6 +876,12 @@
 			"url": "https://www.youtube.com/watch?v=A_ImrhN9H6A",
 			"title": "Java 23 - Better Language, Better APIs, Better Runtime",
 			"thumbnail": "java-x-javazone-2024"
+		},
+		{
+			"slug": "inside-java-newscast-81",
+			"url": "https://www.youtube.com/watch?v=yntTJjAS2YI",
+			"title": "Java 24 Language & API Changes - Inside Java Newscast #81",
+			"thumbnail": "inside-java-newscast-81-a"
 		}
 	]
 }
