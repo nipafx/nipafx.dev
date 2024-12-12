@@ -4,7 +4,7 @@ tags: [java-24]
 date: 2024-12-05
 slug: inside-java-newscast-81
 videoSlug: inside-java-newscast-81
-description: "Java 24's feature list contains a whopping 24 JDK Enhancement Proposals. Here, we'regoing to look at the language and API changes."
+description: "Java 24's feature list contains a whopping 24 JDK Enhancement Proposals. Here, we're going to look at the language and API changes."
 featuredImage: inside-java-newscast-81-a
 ---
 
@@ -375,5 +375,5 @@ JDK 24 also ships with a bunch of performance-related improvements:
 * we get experimental compact object headers
 * full JDK runtime images can be a bit smaller
 
-But more details on all of in the next Inside Java Newscast, next wekk.
+But more details on all of in the next Inside Java Newscast, next week.
 I'll see you then, so long...

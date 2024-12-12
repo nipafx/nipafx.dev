@@ -882,6 +882,12 @@
 			"url": "https://www.youtube.com/watch?v=yntTJjAS2YI",
 			"title": "Java 24 Language & API Changes - Inside Java Newscast #81",
 			"thumbnail": "inside-java-newscast-81-a"
+		},
+		{
+			"slug": "inside-java-newscast-82",
+			"url": "https://www.youtube.com/watch?v=oTc16DAMTqg",
+			"title": "Java 24 Performance Improvements & Deprecations - Inside Java Newscast #82",
+			"thumbnail": "inside-java-newscast-82"
 		}
 	]
 }
