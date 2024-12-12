@@ -3585,7 +3585,8 @@
 					"time": "07.11.2024 1140 Europe/Amsterdam",
 					"location": {
 						"text": "Pathé Ede, Room 9"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2024-11-07-j-fall"
 				}
 			]
 		},
@@ -3600,10 +3601,11 @@
 					"talk": "talk-java-x",
 					"title": "Java 21 bis 23: New Features",
 					"programEntry": "https://www.ittage.informatik-aktuell.de/programm/2024/java-21-bis-23-new-features.html",
-					"time": "10.12.2024 1400 Europe/Berlin",
+					"time": "12.12.2024 1300 Europe/Berlin",
 					"location": {
 						"text": "Okzident, Kap Europa, Frankfurt"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2024-12-12-it-tage"
 				}
 			]
 		},
