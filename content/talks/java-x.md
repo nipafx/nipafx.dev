@@ -1,16 +1,16 @@
 ---
-title: "Java 23 - Better Language, Better APIs, Better Runtime"
-tags: [java-23]
+title: "Java 24 - Better Language, Better APIs, Better Runtime"
+tags: [java-24]
 date: 2023-11-30
 slug: talk-java-x
-description: "Java 21 was an explosive release, but 22 and 23 are no slouches either: unnamed patterns, stream gatherers, multi-source-file launcher, Markdown in JavaDoc plus many new and improved features in preview"
+description: "Java 21 was an explosive release and since then, Java has shown no signs of slowing down: unnamed patterns, stream gatherers, multi-source-file launcher, Markdown in JavaDoc plus many new and improved features in preview"
 featuredImage: java-x-modern
 slides: https://slides.nipafx.dev/java-x
 videoSlug: java-x-javazone-2024
 repo: java-x-demo
 ---
 
-Java 21 was an explosive release, but 22 and 23 are no slouches either:
+Java 21 was an explosive release and since then, Java has shown no signs of slowing down:
 
 * from unnamed patterns to module imports
 * from the foreign-function and memory API to stream gatherers and the class-file API
