@@ -3644,6 +3644,40 @@
 					}
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "JUG Karlsruhe",
+				"url": "http://jug-karlsruhe.de/",
+				"image": "jug-karlsruhe"
+			},
+			"presentations": [
+				{
+					"talk": "talk-teaching-java",
+					"title": "\"Java für Anfänger\" für Fortgeschrittene",
+					"time": "19.02.2025",
+					"location": {
+						"text": "Disy, Zimmerstraße 3, Karlsruhe"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Karlsruhe",
+				"url": "http://jug-karlsruhe.de/",
+				"image": "jug-karlsruhe"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 25 💣💥",
+					"time": "16.10.2025",
+					"location": {
+						"text": "Disy, Zimmerstraße 3, Karlsruhe"
+					}
+				}
+			]
 		}
 	],
 	"future-events": [
