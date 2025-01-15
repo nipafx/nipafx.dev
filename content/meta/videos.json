@@ -888,6 +888,12 @@
 			"url": "https://www.youtube.com/watch?v=oTc16DAMTqg",
 			"title": "Java 24 Performance Improvements & Deprecations - Inside Java Newscast #82",
 			"thumbnail": "inside-java-newscast-82"
+		},
+		{
+			"slug": "inside-java-newscast-83",
+			"url": "https://www.youtube.com/watch?v=y26XGt8d_kI",
+			"title": "Java's Plans for 2025 - Inside Java Newscast #83",
+			"thumbnail": "inside-java-newscast-83"
 		}
 	]
 }
