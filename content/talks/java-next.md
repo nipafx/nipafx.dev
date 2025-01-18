@@ -18,8 +18,24 @@ Time to take a closer look at how...
 * Project Loom further improves efficient, structured concurrency
 * Project Amber makes the language more expressive and ready for today's and tomorrow's problems
 * Project Panama cuts through the isthmus separating Java from native code
-* Project Babylon extends the reach of Java to foreign programming models
+* Project Babylon extends the reach of Java to foreign programming models and hardware
 * Project Valhalla mends the rift in Java's type system and improves performance
 * Project Leyden improves Java's startup time, time to peak performance, and footprint
 
 After this talk, you will know what to expect from Java in the next few years.
+
+<!--
+Sechs große Projekte formen Javas Zukunft, und wir kommen langsam darin an.
+Loom hat schon jede Menge geliefert und muss jetzt noch ein paar lose Enden verknoten während Amber und Panama noch mittendrin sind, ihre Features zu finalisieren.
+Valhalla wird (hoffentlich) bald mit den Previews beginnen und Babylon und Leyden sind noch ziemlich jung.
+Es wird also Zeit, sich genauer anzugucken, wie...
+
+* Project Loom Concurrency effizienter und strukturierter macht
+* Project Amber die Sprache ausdrucksstärker und für heutige und zukünftige Herausforderungen fit macht
+* Project Panama den Isthmus zwischen nativem und Java-Code durchtrennt
+* Project Babylon Java's Reichweite auf fremde Programmiermodelle und Hardware ausweitet
+* Project Valhalla die Kluft in Java's Typsystem heilt und Performance verbessert
+* Project Leyden Javas Start- und Warmup-Zeit verkürzt
+
+Nach diesem Vortrag wisst ihr, was ihr in den nächsten Jahren von Javas Entwicklung erwarten könnt.
+-->

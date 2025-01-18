@@ -18,10 +18,9 @@ So let's discuss what AI development needs and how much Java already has to offe
 PS: I'm a Java fanboy, not an AI expert - bring pinches of salt.
 
 <!--
-
 Project Panama:
 * ...'s released foreign-function-and-memory API
-* ...'s  incubating vector API
+* ...'s incubating vector API
 Project Amber:
 * ...'s progressing additions to the on-ramp
 * simplified, multi-file launcher
@@ -33,4 +32,18 @@ Project Babylon:
 Project Valhalla:
 * ...'s ever-reclusive value types
 
+Example for AI as product/feature: ChatGPT, Cursor, IntelliJ
+
+---
+
+"Java kann keine KI" ... ist ein weitverbreitetes Missverständnis.
+Eines das - wie ich in diesem Vortrag argumentieren werde - weitestgehend durch unsere gegenwärtige Position auf der KI Timeline ensteht.
+Es übersieht die bereits anbrechende Realität, dass ein großer Teil der KI-bezogenen Softwareentwicklung das Hinzufügen KI-basierter Features zu anderen, bestehenden Projekten ist.
+
+In diesem Bereich ist Java bereits wettbewerbsfähig und wird dank der Arbeit der OpenJDK-Projekte Panama, Babylon, Valhalla und sogar Amber und Leyden sowie dutzenden großartigen Community-Projekten in den kommenden Jahren nur stärker werden.
+Sie zusammen werden KI-Entwicklung in Java so natürlich machen wie Webservices und Datenbankanbindungen es heute sind.
+
+In diesem Vortrag besprechen wir, was KI-Entwicklung benötigt, was Java davon bereits zu bieten hat, woran es noch mangelt und was es in Zukunft für relevante Fähigkeiten erlangen wird.
+
+PS: Ich bin hauptberuflich Java-Fan, also bringt ein wenig Skepsis mit.
 -->

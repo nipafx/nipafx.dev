@@ -29,5 +29,19 @@ Java 25 will be the next release with wide-ranging long-term support and it's a 
 * from Markdown in JavaDoc to quantum-resistend encryption
 * from faster launch times to improved garbage collection
 
-There are plenty of features in the language, API, and runtime to discuss - whether new, improved, or finalized. So let's go over them!
+There are plenty of features in the language, API, and runtime to discuss - whether new, improved, or finalized.
+So let's go over them!
+
+---
+
+Java 25 wird das nächste Release mit breiter Langzeitunterstützung und es bringt jede Menge mit:
+
+* von Unnamed Patterns zu Modulimporten
+* von der Foreign Function & Memory API zu Strema Gatherers und der Class-File API
+* von einfacher Main-Methode zum direkten Start von Quellcode
+* von Markdown in JavaDoc zu quantenresistenter Verschlüsselung
+* von schnelleren Starts zu verbesserter Garbage Collection
+
+Ob neu, verbessert oder finalisiert - es gibt jede Menge Features in der Sprache, der Standardbibliothek und der Laufzeit zu besprechen.
+Also machen wir genau das!
 -->
