@@ -728,7 +728,7 @@
 					"programEntry": "https://www.jfokus.se/jfokus/talks.jsp#Gettingyourhandsdirt",
 					"time": "05.02.2018 0900 Europe/Stockholm",
 					"location": {
-						"text": "Stockholm Waterfront Conference, Room 22"
+						"text": "Stockholm Waterfront, Room 22"
 					},
 					"slides": "http://slides.nipafx.dev/jpms/2018-02-05-jfokus"
 				},
@@ -738,7 +738,7 @@
 					"programEntry": "https://www.jfokus.se/jfokus/talks.jsp#ToJARHellAndBack-ALi",
 					"time": "06.02.2018 1100 Europe/Stockholm",
 					"location": {
-						"text": "Stockholm Waterfront Conference, Room A1"
+						"text": "Stockholm Waterfront, Room A1"
 					},
 					"slides": "http://slides.nipafx.dev/java-9-migration/2018-02-06-jfokus",
 					"video": "https://www.youtube.com/watch?v=FH8ncXalmAg"
@@ -1179,7 +1179,7 @@
 					"programEntry": "https://www.jfokus.se/jfokus/talks.jsp#ExpertJava8",
 					"time": "07.02.2017 1100 Europe/Stockholm",
 					"location": {
-						"text": "Stockholm Waterfront Conference, Room A1"
+						"text": "Stockholm Waterfront, Room A1"
 					},
 					"slides": "http://slides.nipafx.dev/expert-java-8/2017-02-07-jfokus",
 					"video": "https://www.youtube.com/watch?v=J3mDjgdZJSc"
@@ -1631,7 +1631,7 @@
 					"programEntry": "https://www.jfokus.se/talks/31",
 					"time": "05.02.2020 1915 Europe/Stockholm",
 					"location": {
-						"text": "Stockholm Waterfront Conference, Room A1"
+						"text": "Stockholm Waterfront, Room A1"
 					},
 					"slides": "https://slides.nipafx.dev/java-after-eight/2020-02-05-jfokus",
 					"video": "https://www.youtube.com/watch?v=k9--KYubKzk"
@@ -2240,7 +2240,7 @@
 					"programEntry": "https://www.jfokus.se/talks/869",
 					"time": "04.05.2022 1400 Europe/Stockholm",
 					"location": {
-						"text": "Stockholm Waterfront Conference, Room A1"
+						"text": "Stockholm Waterfront, Room A1"
 					},
 					"slides": "https://slides.nipafx.dev/java-next/2022-05-04-jfokus",
 					"video": "https://www.youtube.com/watch?v=EVZnk1ZyYeQ"
@@ -3299,7 +3299,7 @@
 					"programEntry": "https://www.jfokus.se/talks/1634",
 					"time": "05.02.2024 0900 Europe/Stockholm",
 					"location": {
-						"text": "Stockholm Waterfront Conference, Room C1"
+						"text": "Stockholm Waterfront, Room C1"
 					},
 					"slides": "https://slides.nipafx.dev/java-x/2024-02-05-jfokus"
 				},
@@ -3309,7 +3309,7 @@
 					"program": "https://www.jfokus.se/schedule",
 					"time": "07.02.2024 1300 Europe/Stockholm",
 					"location": {
-						"text": "Stockholm Waterfront Conference, Room A1"
+						"text": "Stockholm Waterfront, Room A1"
 					},
 					"slides": "https://slides.nipafx.dev/java-x-action/2024-02-07-jfokus",
 					"video": "https://www.youtube.com/watch?v=4UDwrfTNmo4"
@@ -3629,6 +3629,24 @@
 		},
 		{
 			"event": {
+				"name": "Jforum",
+				"url": "https://www.meetup.com/jforum-stockholm/",
+				"image": "jforum"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next - From Amber to Valhalla, from Loom to Leyden, from Babylon to Panama",
+					"announcement": "https://jforum.confetti.events/jforum-122-meetup",
+					"time": "04.02.2025 1900 Europe/Stockholm",
+					"location": {
+						"text": "Stockholm Waterfront"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Jfokus",
 				"url": "https://jfokus.se/",
 				"image": "jfokus-2025"
@@ -3640,7 +3658,7 @@
 					"programEntry": "https://jfokus.se/talks/2495",
 					"time": "05.02.2025 0900 Europe/Stockholm",
 					"location": {
-						"text": "Stockholm Waterfront Conference, Room A1"
+						"text": "Stockholm Waterfront, Room A1"
 					}
 				}
 			]
