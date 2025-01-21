@@ -40,7 +40,6 @@ body {
 	--stackoverflow-color: #f58023;
 	--talks-color: #ff8c6a;
 	--twitch-color: #a970ff;
-	--twitter-color: #1da1f3;
 	--youtube-color: #da281e;
 	--facebook-color: #1877F2;
 	--linkedin-color: #2977C9;
@@ -107,10 +106,6 @@ body {
 
 .rss {
 	--alt-color: var(--rss-color);
-}
-
-.twitter {
-	--alt-color: var(--twitter-color);
 }
 
 .discord {

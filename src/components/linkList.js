@@ -36,7 +36,7 @@ const showTextsFrom = (showOnlyTexts, showOnlyIcons, showIconsUntil) => {
 }
 
 const showLink = ({ title, fontAwesome, url, className, rel }, showOnlyIcons) => (
-	// it would be more common to apply `className` (e.g. "twitter") to <Link>
+	// it would be more common to apply `className` (e.g. "youtube") to <Link>
 	// to get a matching hover color, but then the " // " ::after each link
 	// also has that color
 	// I circumvent that here without requiring an additional nesting <span>

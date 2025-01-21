@@ -9,11 +9,12 @@ description: "Whether to ask a Java question, give feedback on this blog, report
 To the point:
 
 * [email](mailto:nicolai@nipafx.dev)
-* [Twitter DM](https://twitter.com/nipafx)
+* [Bluesky DM](https://bsky.app/profile/nipafx.dev)
+* [Mastodon DM](https://mastodon.social/@nipafx)
 * [Discord](https://discord.com/invite/7m9w8Td) (DM or in public channels)
 * [this site on GitHub](https://github.com/nipafx/nipafx.dev)
 
-I generally prefer email, but Twitter DMs are also a good way to get in touch, particularly if it's urgent.
+I generally prefer email, but DMs are also a good way to get in touch.
 If you just want to chat with me or a few other Java geeks, give the Discord a go - you can DM me there as well for a private conversation.
 In case there's something wrong with the site, opening an issue on GitHub is the best way to let me know.
 

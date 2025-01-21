@@ -13,7 +13,6 @@ import {
 	faRedditAlien,
 	faStackOverflow,
 	faTwitch,
-	faTwitter,
 	faVk,
 	faYoutube,
 	faXing,
@@ -50,8 +49,6 @@ const iconForName = icon => {
 			return faStackOverflow
 		case "faTwitch":
 			return faTwitch
-		case "faTwitter":
-			return faTwitter
 		case "faVk":
 			return faVk
 		case "faYoutube":

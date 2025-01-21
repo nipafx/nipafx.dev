@@ -1,12 +1,6 @@
 {
 	"links": [
 		{
-			"title": "Twitter",
-			"fontAwesome": "faTwitter",
-			"url": "https://twitter.com/intent/tweet?text=\"$TITLE\" by @nipafx:\n\n$DESCRIPTION\n\nhttps://nipafx.dev/$SLUG",
-			"className": "twitter"
-		},
-		{
 			"title": "Bluesky",
 			"fontAwesome": "faBluesky",
 			"url": "https://bsky.app/intent/compose?text=\"$TITLE\" by @nipafx.dev: $DESCRIPTION https://nipafx.dev/$SLUG",
