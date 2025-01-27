@@ -894,6 +894,12 @@
 			"url": "https://www.youtube.com/watch?v=y26XGt8d_kI",
 			"title": "Java's Plans for 2025 - Inside Java Newscast #83",
 			"thumbnail": "inside-java-newscast-83"
+		},
+		{
+			"slug": "inside-java-newscast-84",
+			"url": "https://www.youtube.com/watch?v=dPzle3EN4CM",
+			"title": "Java Language Evolution in 2025 - Inside Java Newscast #84",
+			"thumbnail": "inside-java-newscast-84"
 		}
 	]
 }
