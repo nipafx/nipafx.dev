@@ -3673,7 +3673,8 @@
 				{
 					"talk": "talk-teaching-java",
 					"title": "\"Java für Anfänger\" für Fortgeschrittene",
-					"time": "19.02.2025",
+					"announcement": "https://jug-karlsruhe.de/content/java-fuer-anfaenger-fuer-fortgeschrittende/",
+					"time": "19.02.2025 1915 Europe/Berlin",
 					"location": {
 						"text": "Disy, Zimmerstraße 3, Karlsruhe"
 					}
