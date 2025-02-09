@@ -689,7 +689,7 @@
 			"slug": "java-x-devoxx-2023",
 			"url": "https://www.youtube.com/watch?v=uNeV3EBUS18",
 			"title": "Java 21 💣💥 By Nicolai Parlog",
-			"thumbnail": "java-x-devoxx-2023"
+			"thumbnail": "java-x-devoxx-be-2023"
 		},
 		{
 			"slug": "java-ama-devoxx-be-part-1",
@@ -900,6 +900,12 @@
 			"url": "https://www.youtube.com/watch?v=dPzle3EN4CM",
 			"title": "Java Language Evolution in 2025 - Inside Java Newscast #84",
 			"thumbnail": "inside-java-newscast-84"
+		},
+		{
+			"slug": "java-x-devoxx-be-2024",
+			"url": "https://www.youtube.com/watch?v=z4qsidg261E",
+			"title": "Modern Java Deep Dive",
+			"thumbnail": "java-x-devoxx-be-2024"
 		}
 	]
 }

@@ -6,7 +6,7 @@ slug: talk-java-x
 description: "Java 21 was an explosive release and since then, Java has shown no signs of slowing down: unnamed patterns, stream gatherers, multi-source-file launcher, Markdown in JavaDoc plus many new and improved features in preview"
 featuredImage: java-x-modern
 slides: https://slides.nipafx.dev/java-x
-videoSlug: java-x-javazone-2024
+videoSlug: java-x-devoxx-be-2024
 repo: java-x-demo
 ---
 
