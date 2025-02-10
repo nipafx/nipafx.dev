@@ -3586,7 +3586,8 @@
 					"location": {
 						"text": "Pathé Ede, Room 9"
 					},
-					"slides": "https://slides.nipafx.dev/java-x/2024-11-07-j-fall"
+					"slides": "https://slides.nipafx.dev/java-x/2024-11-07-j-fall",
+					"video": "https://www.youtube.com/watch?v=Md6zTz_yFQ4"
 				}
 			]
 		},
@@ -3623,7 +3624,8 @@
 					"time": "15.01.2025 1830 Europe/Berlin",
 					"location": {
 						"text": "Friedrich-Ebert-Allee 37-39"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2025-01-15-jug-bonn"
 				}
 			]
 		},
@@ -3641,7 +3643,8 @@
 					"time": "04.02.2025 1900 Europe/Stockholm",
 					"location": {
 						"text": "Stockholm Waterfront"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-next/2025-02-04-jforum"
 				}
 			]
 		},
@@ -3659,7 +3662,8 @@
 					"time": "05.02.2025 0900 Europe/Stockholm",
 					"location": {
 						"text": "Stockholm Waterfront, Room A1"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2025-02-05-jfokus"
 				}
 			]
 		},
