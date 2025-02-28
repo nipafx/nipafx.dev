@@ -3681,6 +3681,84 @@
 					"time": "19.02.2025 1915 Europe/Berlin",
 					"location": {
 						"text": "Disy, Zimmerstraße 3, Karlsruhe"
+					},
+					"slides": "https://slides.nipafx.dev/teaching-java/2025-02-19-jug-karlsruhe"
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JavaOne",
+				"url": "https://javaone.com/",
+				"image": "javaone"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 24 - Better Language, Better APIs, Better Runtime",
+					"programEntry": "https://reg.rf.oracle.com/flow/oracle/javaone25/catalog/page/catalog/session/1734125339411001XDn4",
+					"time": "18.03.2025 1645 America/Los_Angeles",
+					"location": {
+						"text": "Redwood Shores, Auditorium"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Karlsruher Entwicklertag",
+				"url": "https://www.entwicklertag.de/",
+				"image": "karlsruher-entwicklertag"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 25 - bessere Sprache, bessere APIs, bessere Runtime",
+					"time": "03.06.2025",
+					"location": {
+						"text": "IHK Karlsruhe"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Code Europe, Cracow",
+				"url": "https://www.codeeurope.pl/en",
+				"image": "code-europe"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming - Version 1.1",
+					"time": "30.06.2025",
+					"location": {
+						"text": "ICE Kraków"
+					}
+				},
+				{
+					"talk": "talk-java-x",
+					"title": "Java 24 - Better Language, Better APIs, Better Runtime",
+					"time": "30.06.2025",
+					"location": {
+						"text": "ICE Kraków"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "WeAreDevelopers World Congress",
+				"url": "https://www.wearedevelopers.com/world-congress/",
+				"image": "we-are-developers"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming - Version 1.1",
+					"time": "09.07.2025",
+					"location": {
+						"text": "Messe Berlin, South Entrance & CityCube"
 					}
 				}
 			]
