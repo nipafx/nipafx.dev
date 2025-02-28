@@ -906,6 +906,12 @@
 			"url": "https://www.youtube.com/watch?v=z4qsidg261E",
 			"title": "Modern Java Deep Dive",
 			"thumbnail": "java-x-devoxx-be-2024"
+		},
+		{
+			"slug": "inside-java-newscast-86",
+			"url": "https://www.youtube.com/watch?v=7tfUJLUbZiM",
+			"title": "Scoped Values in Java 24 - Inside Java Newscast #86",
+			"thumbnail": "inside-java-newscast-86"
 		}
 	]
 }
