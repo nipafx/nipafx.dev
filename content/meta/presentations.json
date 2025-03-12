@@ -3714,9 +3714,10 @@
 				{
 					"talk": "talk-java-x",
 					"title": "Java 25 - bessere Sprache, bessere APIs, bessere Runtime",
-					"time": "03.06.2025",
+					"programEntry": "https://entwicklertag.de/programm/java25",
+					"time": "03.06.2025 1045 Europe/Berlin",
 					"location": {
-						"text": "IHK Karlsruhe"
+						"text": "IHK Karlsruhe, Raum Baden"
 					}
 				}
 			]
