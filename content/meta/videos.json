@@ -912,6 +912,12 @@
 			"url": "https://www.youtube.com/watch?v=7tfUJLUbZiM",
 			"title": "Scoped Values in Java 24 - Inside Java Newscast #86",
 			"thumbnail": "inside-java-newscast-86"
+		},
+		{
+			"slug": "inside-java-newscast-89",
+			"url": "https://www.youtube.com/watch?v=gjcWGDC_RuE",
+			"title": "JavaOne'25 Highlights - Inside Java Newscast #89",
+			"thumbnail": "inside-java-newscast-89"
 		}
 	]
 }
