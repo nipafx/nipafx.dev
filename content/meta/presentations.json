@@ -3706,6 +3706,33 @@
 		},
 		{
 			"event": {
+				"name": "JCON Europe",
+				"url": "https://2025.europe.jcon.one/",
+				"image": "jcon-2025"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-ama",
+					"title": "Modern Java - Ask Me Anything",
+					"programEntry": "https://schedule.jcon.one/session/794796",
+					"time": "13.05.2025 1430 Europe/Berlin",
+					"location": {
+						"text": "Cinedom, Cologne, Cinema BlackBox"
+					}
+				},
+				{
+					"talk": "talk-teaching-java",
+					"title": "Advanced \"Java 101\"",
+					"programEntry": "https://schedule.jcon.one/session/794808",
+					"time": "14.05.2025 1130 Europe/Berlin",
+					"location": {
+						"text": "Cinedom, Cologne, Cinema BlackBox"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Karlsruher Entwicklertag",
 				"url": "https://www.entwicklertag.de/",
 				"image": "karlsruher-entwicklertag"
