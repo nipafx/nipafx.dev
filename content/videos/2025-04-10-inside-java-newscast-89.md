@@ -1,10 +1,10 @@
 ---
 title: "JavaOne'25 Highlights - Inside Java Newscast #89"
-tags: [TODO]
+tags: [community, performance, maven, ai, valhalla]
 date: 2025-04-10
 slug: inside-java-newscast-89
 videoSlug: inside-java-newscast-89
-description: "TODO"
+description: "JavaOne 2025 had lots of talks from OpenJDK insiders as well as from community experts - here are some of the highlights"
 featuredImage: inside-java-newscast-89
 ---
 
