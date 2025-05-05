@@ -3759,17 +3759,17 @@
 				{
 					"talk": "talk-java-pattern-matching",
 					"title": "Data-Oriented Programming - Version 1.1",
-					"time": "30.06.2025",
+					"time": "30.06.2025 1330 Europe/Warsaw",
 					"location": {
-						"text": "ICE Kraków"
+						"text": "ICE Kraków, Palo Alto"
 					}
 				},
 				{
 					"talk": "talk-java-x",
-					"title": "Java 24 - Better Language, Better APIs, Better Runtime",
-					"time": "30.06.2025",
+					"title": "Java 25 - Better Language, Better APIs, Better Runtime",
+					"time": "01.07.2025 0930 Europe/Warsaw",
 					"location": {
-						"text": "ICE Kraków"
+						"text": "ICE Kraków, Cupertino"
 					}
 				}
 			]
