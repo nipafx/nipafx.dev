@@ -1,6 +1,6 @@
 ---
 title: "Scoped Values in Java 24 - Inside Java Newscast #86"
-tags: [java-24, project-loom]
+tags: [java-24, project-loom, structured-concurrency]
 date: 2025-02-27
 slug: inside-java-newscast-86
 videoSlug: inside-java-newscast-86

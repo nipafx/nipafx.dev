@@ -1,6 +1,6 @@
 ---
 title: "Project Loom Brings Structured Concurrency - Inside Java Newscast #17"
-tags: [java-18, project-loom]
+tags: [java-18, project-loom, structured-concurrency]
 date: 2021-12-16
 slug: inside-java-newscast-17
 videoSlug: inside-java-newscast-17

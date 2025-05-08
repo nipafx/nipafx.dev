@@ -1,6 +1,6 @@
 ---
 title: "24 Java Features You Missed In 2022 - Inside Java Newscast #39"
-tags: [collections, documentation, java-18, java-19, pattern-matching, performance, records]
+tags: [collections, documentation, java-18, java-19, pattern-matching, performance, records, structured-concurrency]
 date: 2022-12-15
 slug: inside-java-newscast-39
 videoSlug: inside-java-newscast-39

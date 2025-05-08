@@ -918,6 +918,12 @@
 			"url": "https://www.youtube.com/watch?v=gjcWGDC_RuE",
 			"title": "JavaOne'25 Highlights - Inside Java Newscast #89",
 			"thumbnail": "inside-java-newscast-89"
+		},
+		{
+			"slug": "inside-java-newscast-91",
+			"url": "https://www.youtube.com/watch?v=vLJDPmXufQw",
+			"title": "Structured Concurrency Revamp in Java 25 - Inside Java Newscast #91",
+			"thumbnail": "inside-java-newscast-91-a"
 		}
 	]
 }
