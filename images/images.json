@@ -2939,5 +2939,22 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "structured-ceiling",
+		"alt": "Photo of a regularly-structured ceiling with a circular opening in the center",
+		"credits": {
+			"author": {
+				"name": "Luke Ellis-Craven",
+				"url": "https://unsplash.com/@lukeelliscraven"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/architecture-building-ceiling-yCsk1q2Eq0o"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
