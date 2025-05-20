@@ -3663,7 +3663,8 @@
 					"location": {
 						"text": "Stockholm Waterfront, Room A1"
 					},
-					"slides": "https://slides.nipafx.dev/java-x/2025-02-05-jfokus"
+					"slides": "https://slides.nipafx.dev/java-x/2025-02-05-jfokus",
+					"video": "https://www.youtube.com/watch?v=2NTyzL-9Bfo"
 				}
 			]
 		},
@@ -3700,7 +3701,8 @@
 					"time": "18.03.2025 1645 America/Los_Angeles",
 					"location": {
 						"text": "Redwood Shores, Auditorium"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2025-03-18-javaone"
 				}
 			]
 		},
@@ -3718,7 +3720,8 @@
 					"time": "13.05.2025 1430 Europe/Berlin",
 					"location": {
 						"text": "Cinedom, Cologne, Cinema BlackBox"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-ama/2025-05-13-jcon"
 				},
 				{
 					"talk": "talk-teaching-java",
@@ -3727,7 +3730,8 @@
 					"time": "14.05.2025 1130 Europe/Berlin",
 					"location": {
 						"text": "Cinedom, Cologne, Cinema BlackBox"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/teaching-java/2025-05-14-jcon"
 				}
 			]
 		},
@@ -3759,6 +3763,7 @@
 				{
 					"talk": "talk-java-pattern-matching",
 					"title": "Data-Oriented Programming - Version 1.1",
+					"program": "https://www.codeeurope.pl/en/agenda",
 					"time": "30.06.2025 1330 Europe/Warsaw",
 					"location": {
 						"text": "ICE Kraków, Palo Alto"
@@ -3767,6 +3772,7 @@
 				{
 					"talk": "talk-java-x",
 					"title": "Java 25 - Better Language, Better APIs, Better Runtime",
+					"program": "https://www.codeeurope.pl/en/agenda",
 					"time": "01.07.2025 0930 Europe/Warsaw",
 					"location": {
 						"text": "ICE Kraków, Cupertino"
@@ -3784,9 +3790,10 @@
 				{
 					"talk": "talk-java-pattern-matching",
 					"title": "Data-Oriented Programming - Version 1.1",
-					"time": "09.07.2025",
+					"program": "https://www.wearedevelopers.com/world-congress/agenda-overview",
+					"time": "10.07.2025 1730 Europe/Berlin",
 					"location": {
-						"text": "Messe Berlin, South Entrance & CityCube"
+						"text": "Messe Berlin, South Entrance & CityCube, Stage 8"
 					}
 				}
 			]
@@ -3801,7 +3808,7 @@
 				{
 					"talk": "talk-java-x",
 					"title": "Java 25 💣💥",
-					"time": "16.10.2025",
+					"time": "16.10.2025 1600 Europe/Berlin",
 					"location": {
 						"text": "Disy, Zimmerstraße 3, Karlsruhe"
 					}
