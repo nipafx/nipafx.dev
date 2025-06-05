@@ -10,7 +10,7 @@ videoSlug: java-x-devoxx-be-2024
 repo: java-x-demo
 ---
 
-Java 25 will be the next release with long-term support and a lot has happened since the last one:
+Java 25 is the next release with long-term support and a lot has happened since the last one:
 
 * from unnamed patterns and flexible constructors to module imports
 * from the foreign-function and memory API to stream gatherers and the class-file API
@@ -22,7 +22,7 @@ There are plenty of features in the language, API, and runtime to discuss - whet
 So let's go over them!
 
 <!--
-Java 25 wird das nächste Release mit Langzeitunterstützung und seit dem letzten ist jede Menge passiert:
+Java 25 ist nächste Release mit Langzeitunterstützung und seit dem letzten ist jede Menge passiert:
 
 * von Unnamed Patterns und flexibleren Konstruktoren zu Modulimporten
 * von der Foreign Function & Memory API zu Strema Gatherers und der Class-File API
