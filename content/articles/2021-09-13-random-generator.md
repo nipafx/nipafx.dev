@@ -1,6 +1,6 @@
 ---
 title: "Better Random Number Generation in Java&nbsp;17"
-tags: [java-17, random]
+tags: [java-17, core-libs]
 date: 2021-09-13
 slug: java-random-generator
 description: "Java 17 expands the API for random number generation to make it more usable, extensible, and robust with `RandomGenerator` and `RandomGeneratorFactory` at its core."

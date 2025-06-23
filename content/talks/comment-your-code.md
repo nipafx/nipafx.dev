@@ -1,6 +1,6 @@
 ---
 title: "Comment Your &*☠# Code!"
-tags: [agile, clean-comments, documentation]
+tags: [clean-comments, documentation]
 date: 2016-06-24
 slug: talk-comment-your-code
 description: "A heartfelt rant / thoughtful talk arguing for more comments in code"

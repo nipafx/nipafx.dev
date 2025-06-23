@@ -1,6 +1,6 @@
 ---
 title: "SPJCN IV: Quo Vadis Scala"
-tags: [community, scala]
+tags: [community]
 date: 2017-01-26
 slug: spjcn-quo-vadis-scala
 canonicalUrl: https://medium.com/sitepoint/quo-vadis-scala-60d86d10019a#.rw1qzhb80

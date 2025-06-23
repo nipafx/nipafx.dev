@@ -1,6 +1,6 @@
 ---
 title: "Tricks with `var` and anonymous classes (that you should never use at work)"
-tags: [anonymous-classes, java-10, var]
+tags: [core-lang, java-10, var]
 date: 2018-06-18
 slug: java-var-anonymous-classes-tricks
 description: "Local-variable type inference with `var` makes it easier to work with anonymous classes, e.g. for ad-hoc fields and methods. Don't do it, though!"

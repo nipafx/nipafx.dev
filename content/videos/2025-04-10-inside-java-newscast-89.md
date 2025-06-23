@@ -1,6 +1,6 @@
 ---
 title: "JavaOne'25 Highlights - Inside Java Newscast #89"
-tags: [community, performance, maven, ai, valhalla]
+tags: [community, performance, maven, ai, project-valhalla]
 date: 2025-04-10
 slug: inside-java-newscast-89
 videoSlug: inside-java-newscast-89

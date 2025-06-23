@@ -1,6 +1,6 @@
 ---
 title: "Impulse: \"Adventures On The Road to Valhalla\""
-tags: [java-next, impulse, project-valhalla, generics, primitive-classes]
+tags: [java-next, impulse, project-valhalla, generics]
 date: 2015-08-14
 slug: java-road-to-valhalla
 description: "A summary of Brian Goetz' talk \"Adventures On The Road to Valhalla\" given at JVMLS in August 2015. Focused on generic specialization and the two prototypes."

@@ -1,6 +1,6 @@
 ---
-title: "Fun With `var`"
-tags: [anonymous-classes, default-methods, generics, lambda, java-10, var]
+title: "Fun with `var`"
+tags: [core-lang, default-methods, generics, lambda, java-10, var]
 date: 2018-11-08
 slug: talk-java-var
 description: "A live-coding talk where I show off all you need to know about `var` in Java. And then some."

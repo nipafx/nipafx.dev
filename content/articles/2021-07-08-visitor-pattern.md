@@ -1,6 +1,6 @@
 ---
 title: "Visitor Pattern Considered Pointless - Use Pattern Switches Instead"
-tags: [patterns, pattern-matching, sealed]
+tags: [patterns, pattern-matching]
 date: 2021-07-08
 slug: java-visitor-pattern-pointless
 description: "In modern Java, the visitor pattern is no longer needed. Using sealed types and switches with pattern matching achieves the same goals with less code and less complexity."

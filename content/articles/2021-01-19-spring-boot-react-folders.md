@@ -1,6 +1,6 @@
 ---
 title: "Sorting A React App Into Java's Folder Structure"
-tags: [js, libraries, tools]
+tags: [js, libraries, maven, tools]
 date: 2021-01-19
 slug: java-react-folders
 description: "How to use react-app-rewired to sort a React app into a Java folder structure with `package.json` at the root, and sources in `src/{main|test}/js`"

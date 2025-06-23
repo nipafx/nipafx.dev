@@ -1,6 +1,6 @@
 ---
 title: "Jakarta EE, javax, And A Week Of Turmoil"
-tags: [community, jakarta]
+tags: [community]
 date: 2019-05-13
 slug: jakarta-ee-javax-and-a-week-of-turmoil
 description: "During a week of turmoil, many people have written about Jakarta EE and javax. This post summarizes the community's opinions and gives you plenty of links."

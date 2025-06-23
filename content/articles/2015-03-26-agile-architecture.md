@@ -1,6 +1,6 @@
 ---
 title: "Impulse: \"Agile Architecture\""
-tags: [agile, architecture, impulse]
+tags: [architecture, impulse]
 date: 2015-03-26
 slug: agile-architecture
 description: "A summary of the talk \"Agile Architecture\" given by Molly Dishman and Martin Fowler as the keynote at the O'Reilly Software Architecture Conference."

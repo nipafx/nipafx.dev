@@ -1,6 +1,6 @@
 ---
 title: "Value-Based Classes"
-tags: [java-8, java-next, project-valhalla, primitive-classes]
+tags: [java-8, java-next, project-valhalla]
 date: 2015-02-15
 slug: java-value-based-classes
 description: "An explanation of value-based classes in Java 8. Why do they exist? What are their limitations? How (not) to use them?"

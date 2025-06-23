@@ -1,6 +1,6 @@
 ---
 title: "Random Numbers and JDK Flight Recorder - Inside Java Newscast #9"
-tags: [java-16, java-17, random, performance, tools]
+tags: [java-16, java-17, core-libs, performance, tools]
 date: 2021-07-29
 slug: inside-java-newscast-9
 videoSlug: inside-java-newscast-9
