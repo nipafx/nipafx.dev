@@ -930,6 +930,12 @@
 			"url": "https://www.youtube.com/watch?v=T5q72vcSjyk",
 			"title": "Java 25 Brings 18 JEPs 😱 Inside Java Newscast #92",
 			"thumbnail": "inside-java-newscast-92"
+		},
+		{
+			"slug": "inside-java-newscast-93",
+			"url": "https://www.youtube.com/watch?v=hqvMn2SwKiI",
+			"title": "Java 25 Encodes PEM - Inside Java Newscast #93",
+			"thumbnail": "inside-java-newscast-93"
 		}
 	]
 }
