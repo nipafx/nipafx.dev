@@ -79,7 +79,7 @@ Let's focus on support, though.
 Exactly which services and guarantees that entails, how much it costs, and how long it lasts differs from vendor to vendor, but the high-level view is that they build a JDK, possibly from the OpenJDK update fork we just talked about plus maybe local replacements or patches, and you pay them for support for that build - potentially for a long time.
 
 And here we are - _this_ is long-term support:
-A company's offer to provide services and guarantees for their certified Java implementation, that may or may not built from an OpenJDK update fork.
+A company's offer to provide services and guarantees for their certified Java implementation, that may or may not be built from an OpenJDK update fork.
 
 <contentimage slug="java-21-no-lts-support"></contentimage>
 

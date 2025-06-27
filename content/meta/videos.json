@@ -936,6 +936,12 @@
 			"url": "https://www.youtube.com/watch?v=hqvMn2SwKiI",
 			"title": "Java 25 Encodes PEM - Inside Java Newscast #93",
 			"thumbnail": "inside-java-newscast-93"
+		},
+		{
+			"slug": "inside-java-newscast-94",
+			"url": "https://www.youtube.com/watch?v=x6-kyQCYhNo",
+			"title": "Java 25 is ALSO no LTS Version - Inside Java Newscast #94",
+			"thumbnail": "inside-java-newscast-94"
 		}
 	]
 }
