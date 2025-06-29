@@ -3749,7 +3749,8 @@
 					"time": "03.06.2025 1045 Europe/Berlin",
 					"location": {
 						"text": "IHK Karlsruhe, Raum Baden"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2025-06-03-karlsruher-entwicklertag/"
 				}
 			]
 		},
@@ -3757,16 +3758,16 @@
 			"event": {
 				"name": "Code Europe, Cracow",
 				"url": "https://www.codeeurope.pl/en",
-				"image": "code-europe"
+				"image": "code-europe-2025"
 			},
 			"presentations": [
 				{
 					"talk": "talk-java-pattern-matching",
 					"title": "Data-Oriented Programming - Version 1.1",
 					"program": "https://www.codeeurope.pl/en/agenda",
-					"time": "30.06.2025 1330 Europe/Warsaw",
+					"time": "30.06.2025 1030 Europe/Warsaw",
 					"location": {
-						"text": "ICE Kraków, Palo Alto"
+						"text": "ICE Kraków, Cupertino"
 					}
 				},
 				{
@@ -3776,6 +3777,23 @@
 					"time": "01.07.2025 0930 Europe/Warsaw",
 					"location": {
 						"text": "ICE Kraków, Cupertino"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JavaZone",
+				"url": "https://2025.javazone.no",
+				"image": "javazone-2025"
+			},
+			"presentations": [
+				{
+					"talk": "talk-structured-concurrency",
+					"title": "Structured Concurrency in Action",
+					"time": "03.09.2025",
+					"location": {
+						"text": "Oslo Spektrum"
 					}
 				}
 			]
