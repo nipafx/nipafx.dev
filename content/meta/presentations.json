@@ -3768,7 +3768,8 @@
 					"time": "30.06.2025 1030 Europe/Warsaw",
 					"location": {
 						"text": "ICE Kraków, Cupertino"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-dop/2025-06-30-codeeurope"
 				},
 				{
 					"talk": "talk-java-x",
@@ -3777,7 +3778,8 @@
 					"time": "01.07.2025 0930 Europe/Warsaw",
 					"location": {
 						"text": "ICE Kraków, Cupertino"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2025-07-01-codeeurope"
 				}
 			]
 		},
