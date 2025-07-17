@@ -5,7 +5,7 @@ date: 2022-09-27
 slug: talk-java-pattern-matching
 description: "Data-oriented programming models data as data: records for entities and sealed types for alternatives. Combined with pattern matching we can define operations on the data without overloading it with functionality."
 featuredImage: java-dop
-slides: https://slides.nipafx.dev/patterns
+slides: https://slides.nipafx.dev/java-dop
 videoSlug: java-dop-voxxed-cern-2024
 ---
 
