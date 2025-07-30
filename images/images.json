@@ -495,7 +495,7 @@
 				"url": "http://jfx.wikia.com/wiki/JavaFX_Logo_-_Centigrade"
 			},
 			"license": {
-				"name": "CC BY-SA",
+				"name": "CC BY-SA 3.0",
 				"url": "https://creativecommons.org/licenses/by-sa/3.0/"
 			},
 			"edited": true
@@ -2954,6 +2954,23 @@
 			"license": {
 				"name": "Unsplash License",
 				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "http-stack",
+		"alt": "A diagram of the stacks for HTTP versions 1.1, 2, and 3",
+		"credits": {
+			"author": {
+				"name": "Sedrubal",
+				"url": "https://commons.wikimedia.org/wiki/User_talk:Sedrubal"
+			},
+			"source": {
+				"url": "https://en.wikipedia.org/wiki/File:HTTP-1.1_vs._HTTP-2_vs._HTTP-3_Protocol_Stack.svg"
+			},
+			"license": {
+				"name": "CC BY-SA 4.0",
+				"url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
 			}
 		}
 	}

@@ -948,6 +948,12 @@
 			"url": "https://www.youtube.com/watch?v=NSzRK8f7EX0",
 			"title": "Java Gets a JSON API - Inside Java Newscast #95",
 			"thumbnail": "inside-java-newscast-95"
+		},
+		{
+			"slug": "inside-java-newscast-96",
+			"url": "https://www.youtube.com/watch?v=WphRthIB46o",
+			"title": "HTTP/3 in Java - Inside Java Newscast #96",
+			"thumbnail": "inside-java-newscast-96"
 		}
 	]
 }
