@@ -954,6 +954,12 @@
 			"url": "https://www.youtube.com/watch?v=WphRthIB46o",
 			"title": "HTTP/3 in Java - Inside Java Newscast #96",
 			"thumbnail": "inside-java-newscast-96"
+		},
+		{
+			"slug": "inside-java-newscast-97",
+			"url": "https://www.youtube.com/watch?v=OMqwpv-0MSk",
+			"title": "Java Architects Answer Your Questions - Inside Java Newscast #97",
+			"thumbnail": "inside-java-newscast-97"
 		}
 	]
 }
