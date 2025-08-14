@@ -3769,7 +3769,8 @@
 					"location": {
 						"text": "ICE Kraków, Cupertino"
 					},
-					"slides": "https://slides.nipafx.dev/java-dop/2025-06-30-codeeurope"
+					"slides": "https://slides.nipafx.dev/java-dop/2025-06-30-codeeurope",
+					"video": "https://www.youtube.com/watch?v=-wi4SaL4OAs"
 				},
 				{
 					"talk": "talk-java-x",
@@ -3779,7 +3780,8 @@
 					"location": {
 						"text": "ICE Kraków, Cupertino"
 					},
-					"slides": "https://slides.nipafx.dev/java-x/2025-07-01-codeeurope"
+					"slides": "https://slides.nipafx.dev/java-x/2025-07-01-codeeurope",
+					"video": "https://www.youtube.com/watch?v=H9cd5odNsoc"
 				}
 			]
 		},
