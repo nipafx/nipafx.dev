@@ -3787,6 +3787,25 @@
 		},
 		{
 			"event": {
+				"name": "WeAreDevelopers World Congress",
+				"url": "https://www.wearedevelopers.com/world-congress/",
+				"image": "we-are-developers"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming - Version 1.1",
+					"program": "https://www.wearedevelopers.com/world-congress/agenda-overview",
+					"time": "10.07.2025 1730 Europe/Berlin",
+					"location": {
+						"text": "Messe Berlin, South Entrance & CityCube, Stage 8"
+					},
+					"slides": "https://slides.nipafx.dev/java-dop/2025-07-10-wearedevelopers"
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "JavaZone",
 				"url": "https://2025.javazone.no",
 				"image": "javazone-2025"
@@ -3804,18 +3823,17 @@
 		},
 		{
 			"event": {
-				"name": "WeAreDevelopers World Congress",
-				"url": "https://www.wearedevelopers.com/world-congress/",
-				"image": "we-are-developers"
+				"name": "OpenValue Düsseldorf",
+				"url": "https://www.meetup.com/de-DE/openvalue-dusseldorf/",
+				"image": "openvalue-dus"
 			},
 			"presentations": [
 				{
-					"talk": "talk-java-pattern-matching",
-					"title": "Data-Oriented Programming - Version 1.1",
-					"program": "https://www.wearedevelopers.com/world-congress/agenda-overview",
-					"time": "10.07.2025 1730 Europe/Berlin",
+					"talk": "talk-java-x",
+					"title": "Java 25 - Better Language, Better APIs, Better Runtime",
+					"time": "10.09.2025 1800 Europe/Berlin",
 					"location": {
-						"text": "Messe Berlin, South Entrance & CityCube, Stage 8"
+						"text": "OpenValue Düsseldorf, Am Wehrhahn 41"
 					}
 				}
 			]
