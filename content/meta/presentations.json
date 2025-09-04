@@ -3814,10 +3814,12 @@
 				{
 					"talk": "talk-structured-concurrency",
 					"title": "Structured Concurrency in Action",
-					"time": "03.09.2025",
+					"program": "https://2025.javazone.no/en/program/21ddefa1-454c-4944-8c8b-9767ded62369",
+					"time": "04.09.2025 1325 Europe/Oslo",
 					"location": {
-						"text": "Oslo Spektrum"
-					}
+						"text": "Nova Spektrum, Room I"
+					},
+					"slides": "https://slides.nipafx.dev/scia/2025-09-04-javazone"
 				}
 			]
 		},

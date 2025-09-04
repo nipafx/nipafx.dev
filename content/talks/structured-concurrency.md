@@ -1,10 +1,12 @@
 ---
 title: "Structured Concurrency in Action"
 tags: [structured-concurrency, java-25]
-date: 2025-05-19
+date: 2025-09-03
 slug: talk-structured-concurrency
 description: "A deep-dive into the structured concurrency API as it is currently proposed"
 featuredImage: structured-ceiling
+slides: https://slides.nipafx.dev/scia
+repo: structured-concurrency
 ---
 
 In Java 25, the structured concurrency API sees its fifth preview with considerable changes over previous iterations.
