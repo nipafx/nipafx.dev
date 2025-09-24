@@ -3819,7 +3819,8 @@
 					"location": {
 						"text": "Nova Spektrum, Room I"
 					},
-					"slides": "https://slides.nipafx.dev/scia/2025-09-04-javazone"
+					"slides": "https://slides.nipafx.dev/scia/2025-09-04-javazone",
+					"video": "https://vimeo.com/1115844230"
 				}
 			]
 		},
@@ -3836,7 +3837,8 @@
 					"time": "10.09.2025 1800 Europe/Berlin",
 					"location": {
 						"text": "OpenValue Düsseldorf, Am Wehrhahn 41"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2025-09-10-openvalue-duesseldorf/"
 				}
 			]
 		},
