@@ -3911,6 +3911,42 @@
 					}
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "IT-Tage",
+				"url": "https://www.ittage.informatik-aktuell.de/",
+				"image": "it-tage-2025"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 25 – bessere Sprache, bessere APIs, bessere Laufzeit",
+					"programEntry": "https://www.ittage.informatik-aktuell.de/programm/2025/java-25-bessere-sprache-bessere-apis-bessere-laufzeit.html",
+					"time": "10.12.2025 1000 Europe/Berlin",
+					"location": {
+						"text": "Kap Europa, Frankfurt"
+					}
+				},
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next – von Amber zu Valhalla, von Loom zu Leyden, von Babylon zu Panama",
+					"announcement": "https://www.ittage.informatik-aktuell.de/programm/2025/java-next-von-amber-zu-valhalla-von-loom-zu-leyden-von-babylon-zu-panama.html",
+					"time": "11.12.2025 0900 Europe/Berlin",
+					"location": {
+						"text": "Kap Europa, Frankfurt"
+					}
+				},
+				{
+					"talk": "talk-java-ama",
+					"title": "Modern Java – Fragt mich, was Ihr wollt!",
+					"announcement": "https://www.ittage.informatik-aktuell.de/programm/2025/modern-java-fragt-mich-was-ihr-wollt.html",
+					"time": "11.12.2025 1500 Europe/Berlin",
+					"location": {
+						"text": "Kap Europa, Frankfurt"
+					}
+				}
+			]
 		}
 	],
 	"future-events": [
