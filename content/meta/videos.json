@@ -960,6 +960,18 @@
 			"url": "https://www.youtube.com/watch?v=OMqwpv-0MSk",
 			"title": "Java Architects Answer Your Questions - Inside Java Newscast #97",
 			"thumbnail": "inside-java-newscast-97"
+		},
+		{
+			"slug": "road-to-25-upgrade",
+			"url": "https://www.youtube.com/watch?v=9azNjz7s1Ck",
+			"title": "How to Upgrade to Java 25",
+			"thumbnail": "road-to-25-upgrade"
+		},
+		{
+			"slug": "road-to-25-apis",
+			"url": "https://www.youtube.com/watch?v=VCaDlCZJydI",
+			"title": "All API Additions From Java 21 to 25",
+			"thumbnail": "road-to-25-apis"
 		}
 	]
 }
