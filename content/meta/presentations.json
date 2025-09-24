@@ -3844,6 +3844,42 @@
 		},
 		{
 			"event": {
+				"name": "Devoxx Belgium",
+				"url": "https://devoxx.be/",
+				"image": "devoxx-be"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 21 to 25 - Better Language, Better APIs, Better Runtime",
+					"programEntry": "https://m.devoxx.com/events/dvbe25/talks/4717/java-21-to-25-better-language-better-apis-better-runtime",
+					"time": "06.10.2025 0930 Europe/Brussels",
+					"location": {
+						"text": "Kinepolis, Antwerpen, Room 8"
+					}
+				},
+				{
+					"talk": "talk-java-x",
+					"title": "Java 25 [Keynote]]",
+					"programEntry": "https://m.devoxx.com/events/dvbe25/talks/46053/java-25-the-next-longterm-support-release",
+					"time": "08.10.2025 1010 Europe/Brussels",
+					"location": {
+						"text": "Kinepolis, Antwerpen, Room 8"
+					}
+				},
+				{
+					"talk": "talk-structured-concurrency",
+					"title": "Structured Concurrency in Action",
+					"programEntry": "https://m.devoxx.com/events/dvbe25/talks/4716/structured-concurrency-in-action",
+					"time": "09.10.2025 1740 Europe/Brussels",
+					"location": {
+						"text": "Kinepolis, Antwerpen, Room 5"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "JUG Karlsruhe",
 				"url": "http://jug-karlsruhe.de/",
 				"image": "jug-karlsruhe"
