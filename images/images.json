@@ -2973,5 +2973,107 @@
 				"url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
 			}
 		}
+	},
+	{
+		"slug": "unicode-cldr-42",
+		"alt": "A small collection of magnetic letters as are often used for fridges or kids white boards",
+		"credits": {
+			"author": {
+				"name": "Jason Leung",
+				"url": "https://unsplash.com/@ninjason"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/red-alphabet-decors-0sBTrm726C8"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "annotation-processing-off",
+		"alt": "Large @ (arond) sign used for email, made from lots of jigsaw puzzle pieces and separated on a white background",
+		"credits": {
+			"author": {
+				"name": "Old Photo Profile",
+				"url": "https://www.flickr.com/photos/horiavarlan/"
+			},
+			"source": {
+				"url": "https://www.flickr.com/photos/10361931@N06/4514164700"
+			},
+			"license": {
+				"name": "CC-BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0/"
+			}
+		}
+	},
+	{
+		"slug": "compat-removal",
+		"alt": "A Filofax Original Nude in personal size",
+		"credits": {
+			"author": {
+				"name": "Renáta-Adrienn",
+				"url": "https://unsplash.com/@renataadrienn"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/grey-and-black-pen-on-calendar-book-ebvCsRypmxM"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "jni-restriction",
+		"alt": "A blue sign on a white wall stating restricted area authorized personnel only",
+		"credits": {
+			"author": {
+				"name": "Jarrod Erbe",
+				"url": "https://unsplash.com/@erbephoto"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/a-blue-sign-on-a-white-wall-stating-restricted-area-authorized-personnel-only-tg7xChYyE08"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "remote-jstat-jhsdb-deprecation",
+		"alt": "The 2021 Apple TV remote",
+		"credits": {
+			"author": {
+				"name": "James Yarema",
+				"url": "https://unsplash.com/@jamesyarema"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/white-and-black-remote-control-dTa1LJAJvhI"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "inner-null-checks",
+		"alt": "A magnifying glass on a blue background",
+		"credits": {
+			"author": {
+				"name": "Markus Winkler",
+				"url": "https://unsplash.com/@markuswinkler"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/magnifying-glass-on-white-table-afW1hht0NSs"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]

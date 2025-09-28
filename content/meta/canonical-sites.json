@@ -11,6 +11,10 @@
 		{
 			"url": "medium\\.com/sitepoint",
 			"text": "I originally wrote this for Sitepoint's Java newsletter. Check it out: [$TITLE]($URL)."
+		},
+		{
+			"url": "inside\\.java",
+			"text": "I originally wrote this for inside.java. Check it out: [$TITLE]($URL)."
 		}
 	]
 }
