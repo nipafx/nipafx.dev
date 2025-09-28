@@ -1,6 +1,6 @@
 ---
 title: "Java 21 Pattern Matching Tutorial"
-tags: [java-21, pattern-matching, java-basics]
+tags: [java-21, pattern-matching, dop, java-basics]
 date: 2023-09-17
 slug: java-21-pattern-matching
 videoSlug: road-to-21-patterns

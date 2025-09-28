@@ -1,6 +1,6 @@
 ---
 title: "Java 19 in Action - Inside Java Newscast #33"
-tags: [java-19, project-loom]
+tags: [java-19, dop, project-loom]
 date: 2022-09-08
 slug: inside-java-newscast-33
 videoSlug: inside-java-newscast-33

@@ -1,6 +1,6 @@
 ---
 title: "Data-Oriented Programming - Inside Java Newscast #29"
-tags: [records, pattern-matching, patterns, techniques]
+tags: [records, dop, pattern-matching, patterns, techniques]
 date: 2022-07-14
 slug: inside-java-newscast-29
 videoSlug: inside-java-newscast-29
