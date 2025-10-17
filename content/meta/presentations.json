@@ -3856,11 +3856,12 @@
 					"time": "06.10.2025 0930 Europe/Brussels",
 					"location": {
 						"text": "Kinepolis, Antwerpen, Room 8"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2025-10-06-devoxx-be"
 				},
 				{
 					"talk": "talk-java-x",
-					"title": "Java 25 [Keynote]]",
+					"title": "Java 25 - \"The Next LTS Version\" [Keynote]",
 					"programEntry": "https://m.devoxx.com/events/dvbe25/talks/46053/java-25-the-next-longterm-support-release",
 					"time": "08.10.2025 1010 Europe/Brussels",
 					"location": {
@@ -3874,7 +3875,9 @@
 					"time": "09.10.2025 1740 Europe/Brussels",
 					"location": {
 						"text": "Kinepolis, Antwerpen, Room 5"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/scia/2025-10-09-devoxx-be",
+					"video": "https://www.youtube.com/watch?v=IosvCU9qM5M"
 				}
 			]
 		},
@@ -3891,7 +3894,8 @@
 					"time": "16.10.2025 1600 Europe/Berlin",
 					"location": {
 						"text": "Disy, Zimmerstraße 3, Karlsruhe"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2025-10-17-jug-karlsruhe"
 				}
 			]
 		},

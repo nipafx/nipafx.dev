@@ -6,6 +6,7 @@ slug: talk-structured-concurrency
 description: "A deep-dive into the structured concurrency API as it is currently proposed"
 featuredImage: structured-ceiling
 slides: https://slides.nipafx.dev/scia
+videoSlug: scia-devoxx-be-2025
 repo: structured-concurrency
 ---
 

@@ -972,6 +972,12 @@
 			"url": "https://www.youtube.com/watch?v=VCaDlCZJydI",
 			"title": "All API Additions From Java 21 to 25",
 			"thumbnail": "road-to-25-apis"
+		},
+		{
+			"slug": "scia-devoxx-be-2025",
+			"url": "https://www.youtube.com/watch?v=IosvCU9qM5M",
+			"title": "Structured Concurrency in Action",
+			"thumbnail": "scia-devoxx-be-2025"
 		}
 	]
 }
