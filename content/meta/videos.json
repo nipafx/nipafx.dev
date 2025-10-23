@@ -978,6 +978,12 @@
 			"url": "https://www.youtube.com/watch?v=IosvCU9qM5M",
 			"title": "Structured Concurrency in Action",
 			"thumbnail": "scia-devoxx-be-2025"
+		},
+		{
+			"slug": "inside-java-newscast-99",
+			"url": "https://www.youtube.com/watch?v=w9mY8c72Ouk",
+			"title": "Three G1 Improvements - Inside Java Newscast #99",
+			"thumbnail": "inside-java-newscast-99"
 		}
 	]
 }
