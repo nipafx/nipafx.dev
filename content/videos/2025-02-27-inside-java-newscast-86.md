@@ -76,7 +76,7 @@ static final ScopedValue<Integer> ANSWER =
 void main() throws Exception {
 	ScopedValue //      ⬐ VALUE
 		.where(ANSWER, 42)
-		//  |<---------- SCOPE ---------->|
+		//  |<---------- SCOPE ----------->|
 		.run(() -> IO.println(ANSWER.get()));
 
 	// OUT OF SCOPE
@@ -285,7 +285,7 @@ void main() throws Exception {
 3. As the name suggests, thread locals isolate data per thread, but, if you want to, you can also use them to pass data from one thread to another by using an instance of `InheritableThreadLocal` instead.
    Then, if one thread launches another, the thread-local variable is copied and the new thread starts by reading the same data.
    But if a thread launches a lot of threads like this, these copies pile up and can consume a sizeable amount of memory.
-   Scoped values' one-way data transmission makes cop ies unnecessary, so they scale really well with lots and lots of threads.
+   Scoped values' one-way data transmission makes copies unnecessary, so they scale really well with lots and lots of threads.
 
 ```java
 static final ThreadLocal<String> QUESTION = new ThreadLocal<>();

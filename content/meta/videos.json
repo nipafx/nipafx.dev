@@ -984,6 +984,12 @@
 			"url": "https://www.youtube.com/watch?v=w9mY8c72Ouk",
 			"title": "Three G1 Improvements - Inside Java Newscast #99",
 			"thumbnail": "inside-java-newscast-99"
+		},
+		{
+			"slug": "inside-java-newscast-100",
+			"url": "https://www.youtube.com/watch?v=Eua3nTkye2Y",
+			"title": "Try the New Valhalla EA Build - Inside Java Newscast #100",
+			"thumbnail": "inside-java-newscast-100"
 		}
 	]
 }
