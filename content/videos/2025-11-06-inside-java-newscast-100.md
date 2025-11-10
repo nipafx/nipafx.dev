@@ -1,5 +1,5 @@
 ---
-title: "Try the New Valhalla EA Build - Inside Java Newscast #100 "
+title: "Try the New Valhalla EA Build - Inside Java Newscast #100"
 tags: [project-valhalla]
 date: 2025-11-06
 slug: inside-java-newscast-100

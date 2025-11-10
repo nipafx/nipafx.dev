@@ -990,6 +990,12 @@
 			"url": "https://www.youtube.com/watch?v=Eua3nTkye2Y",
 			"title": "Try the New Valhalla EA Build - Inside Java Newscast #100",
 			"thumbnail": "inside-java-newscast-100"
+		},
+		{
+			"slug": "ijn-100-qa",
+			"url": "https://www.youtube.com/watch?v=TypHibJ72lg",
+			"title": "Q&A About My Work At Oracle's Java Platform Group - Part 2/2",
+			"thumbnail": "ijn-100-qa"
 		}
 	]
 }
