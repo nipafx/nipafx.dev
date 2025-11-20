@@ -996,6 +996,12 @@
 			"url": "https://www.youtube.com/watch?v=TypHibJ72lg",
 			"title": "Q&A About My Work At Oracle's Java Platform Group - Part 2/2",
 			"thumbnail": "ijn-100-qa"
+		},
+		{
+			"slug": "inside-java-newscast-101",
+			"url": "https://www.youtube.com/watch?v=bdHkbEIdBAs",
+			"title": "Java 26 Warns of Deep Reflection - Inside Java Newscast #101",
+			"thumbnail": "inside-java-newscast-101"
 		}
 	]
 }
