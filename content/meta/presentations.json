@@ -3838,7 +3838,8 @@
 					"location": {
 						"text": "OpenValue Düsseldorf, Am Wehrhahn 41"
 					},
-					"slides": "https://slides.nipafx.dev/java-x/2025-09-10-openvalue-duesseldorf/"
+					"slides": "https://slides.nipafx.dev/java-x/2025-09-10-openvalue-duesseldorf/",
+					"video": "https://www.youtube.com/watch?v=BB09kOFGovA"
 				}
 			]
 		},
@@ -3857,7 +3858,8 @@
 					"location": {
 						"text": "Kinepolis, Antwerpen, Room 8"
 					},
-					"slides": "https://slides.nipafx.dev/java-x/2025-10-06-devoxx-be"
+					"slides": "https://slides.nipafx.dev/java-x/2025-10-06-devoxx-be",
+					"video": "https://www.youtube.com/watch?v=lCprbhmX4II"
 				},
 				{
 					"talk": "talk-java-x",
@@ -3866,7 +3868,8 @@
 					"time": "08.10.2025 1010 Europe/Brussels",
 					"location": {
 						"text": "Kinepolis, Antwerpen, Room 8"
-					}
+					},
+					"video": "https://www.youtube.com/watch?v=EJ9q8hQXV8I"
 				},
 				{
 					"talk": "talk-structured-concurrency",
@@ -3912,7 +3915,8 @@
 					"time": "06.11.2025 1035 Europe/Amsterdam",
 					"location": {
 						"text": "Pathé Ede, Room 9"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2025-11-06-j-fall"
 				}
 			]
 		},
