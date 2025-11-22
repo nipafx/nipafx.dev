@@ -595,7 +595,7 @@
 			"presentations": [
 				{
 					"talk": "talk-java-next",
-					"title": "Java Next – New Releases, Valhalla, Amber, and More Goodies",
+					"title": "Java Next - New Releases, Valhalla, Amber, and More Goodies",
 					"programEntry": "https://2018.geekout.ee/nicolai-parlog",
 					"time": "07.06.2018 1330 Europe/Tallinn",
 					"location": {
@@ -626,7 +626,7 @@
 			"presentations": [
 				{
 					"talk": "talk-java-next",
-					"title": "Java Next – New Releases, Valhalla, Amber, and More Goodies",
+					"title": "Java Next - New Releases, Valhalla, Amber, and More Goodies",
 					"programEntry": "https://rigadevdays.lv/schedule/2018-05-30?sessionId=153",
 					"time": "30.05.2018 1200 Europe/Riga",
 					"location": {
@@ -3814,7 +3814,7 @@
 				{
 					"talk": "talk-structured-concurrency",
 					"title": "Structured Concurrency in Action",
-					"program": "https://2025.javazone.no/en/program/21ddefa1-454c-4944-8c8b-9767ded62369",
+					"programEntry": "https://2025.javazone.no/en/program/21ddefa1-454c-4944-8c8b-9767ded62369",
 					"time": "04.09.2025 1325 Europe/Oslo",
 					"location": {
 						"text": "Nova Spektrum, Room I"
@@ -3895,6 +3895,7 @@
 					"talk": "talk-java-x",
 					"title": "Java 25 💣💥",
 					"time": "16.10.2025 1600 Europe/Berlin",
+					"announcement": "https://jug-karlsruhe.de/content/dukes-day/",
 					"location": {
 						"text": "Disy, Zimmerstraße 3, Karlsruhe"
 					},
@@ -3912,6 +3913,7 @@
 				{
 					"talk": "talk-java-x",
 					"title": "Java 21 to 25 - Better Language, Better APIs, Better Runtime",
+					"program": "https://jfall.nl/timetable-2025/",
 					"time": "06.11.2025 1035 Europe/Amsterdam",
 					"location": {
 						"text": "Pathé Ede, Room 9"
@@ -3929,7 +3931,7 @@
 			"presentations": [
 				{
 					"talk": "talk-java-x",
-					"title": "Java 25 – bessere Sprache, bessere APIs, bessere Laufzeit",
+					"title": "Java 25 - bessere Sprache, bessere APIs, bessere Laufzeit",
 					"programEntry": "https://www.ittage.informatik-aktuell.de/programm/2025/java-25-bessere-sprache-bessere-apis-bessere-laufzeit.html",
 					"time": "10.12.2025 1000 Europe/Berlin",
 					"location": {
@@ -3938,8 +3940,8 @@
 				},
 				{
 					"talk": "talk-java-next",
-					"title": "Java Next – von Amber zu Valhalla, von Loom zu Leyden, von Babylon zu Panama",
-					"announcement": "https://www.ittage.informatik-aktuell.de/programm/2025/java-next-von-amber-zu-valhalla-von-loom-zu-leyden-von-babylon-zu-panama.html",
+					"title": "Java Next - von Amber zu Valhalla, von Loom zu Leyden, von Babylon zu Panama",
+					"programEntry": "https://www.ittage.informatik-aktuell.de/programm/2025/java-next-von-amber-zu-valhalla-von-loom-zu-leyden-von-babylon-zu-panama.html",
 					"time": "11.12.2025 0900 Europe/Berlin",
 					"location": {
 						"text": "Kap Europa, Frankfurt"
@@ -3947,8 +3949,8 @@
 				},
 				{
 					"talk": "talk-java-ama",
-					"title": "Modern Java – Fragt mich, was Ihr wollt!",
-					"announcement": "https://www.ittage.informatik-aktuell.de/programm/2025/modern-java-fragt-mich-was-ihr-wollt.html",
+					"title": "Modern Java - Fragt mich, was Ihr wollt!",
+					"programEntry": "https://www.ittage.informatik-aktuell.de/programm/2025/modern-java-fragt-mich-was-ihr-wollt.html",
 					"time": "11.12.2025 1500 Europe/Berlin",
 					"location": {
 						"text": "Kap Europa, Frankfurt"
