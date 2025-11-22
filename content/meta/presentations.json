@@ -4008,6 +4008,24 @@
 					}
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "JavaLand",
+				"url": "http://www.javaland.eu/de/home/",
+				"image": "javaland"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-ama",
+					"title": "Modern Java - Ask Me Anything",
+					"programEntry": "https://meine.doag.org/events/javaland/2026/agenda/#agendaId.6837#eventDay.all",
+					"time": "10.03.2026 1300 Europe/Berlin",
+					"location": {
+						"text": "Sanssouci, Europapark"
+					}
+				}
+			]
 		}
 	],
 	"future-events": [
