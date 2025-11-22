@@ -3957,6 +3957,57 @@
 					}
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "JUG Hamburg",
+				"url": "https://www.meetup.com/de-DE/jug-hamburg/",
+				"image": "jug-hamburg"
+			},
+			"presentations": [
+				{
+					"talk": "talk-structured-concurrency",
+					"title": "Structured Concurrency in Action",
+					"time": "20.01.2026",
+					"location": {
+						"text": "Hamburg"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Paderborn",
+				"url": "https://jug-pb.gitlab.io/",
+				"image": "jug-paderborn"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 25 - bessere Sprache, bessere APIs, bessere Laufzeit",
+					"time": "21.01.2026 1800 Europe/Berlin",
+					"location": {
+						"text": "adesso SE, Lise-Meitner-Straße 1c"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Ostfalen",
+				"url": "https://www.jug-ostfalen.de/",
+				"image": "jug-ostfalen"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 25 - bessere Sprache, bessere APIs, bessere Laufzeit",
+					"time": "22.01.2026 1900 Europe/Berlin",
+					"location": {
+						"text": "Cloudogu GmbH, Brabandtstraße 9-10, Braunschweig"
+					}
+				}
+			]
 		}
 	],
 	"future-events": [
