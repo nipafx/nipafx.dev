@@ -1002,6 +1002,12 @@
 			"url": "https://www.youtube.com/watch?v=bdHkbEIdBAs",
 			"title": "Java 26 Warns of Deep Reflection - Inside Java Newscast #101",
 			"thumbnail": "inside-java-newscast-101"
+		},
+		{
+			"slug": "inside-java-newscast-102",
+			"url": "https://www.youtube.com/watch?v=RPX5HrgYoGg",
+			"title": "All Features in Java 26 - Inside Java Newscast #102",
+			"thumbnail": "inside-java-newscast-102"
 		}
 	]
 }
