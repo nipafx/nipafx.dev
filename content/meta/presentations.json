@@ -3971,6 +3971,7 @@
 				{
 					"talk": "talk-structured-concurrency",
 					"title": "Structured Concurrency in Action",
+					"program": "https://www.meetup.com/de-de/jug-hamburg/events/",
 					"time": "20.01.2026",
 					"location": {
 						"text": "Hamburg"
@@ -3988,6 +3989,7 @@
 				{
 					"talk": "talk-java-x",
 					"title": "Java 25 - bessere Sprache, bessere APIs, bessere Laufzeit",
+					"program": "https://calendar.google.com/calendar/u/0/embed?src=u17n4jh1q5gk920j7m4dera66s@group.calendar.google.com",
 					"time": "21.01.2026 1800 Europe/Berlin",
 					"location": {
 						"text": "adesso SE, Lise-Meitner-Straße 1c"
@@ -4005,6 +4007,7 @@
 				{
 					"talk": "talk-java-x",
 					"title": "Java 25 - bessere Sprache, bessere APIs, bessere Laufzeit",
+					"announcement": "https://www.jug-ostfalen.de/event/2026/01/22/Java25-BetterLanguage,BetterAPIs,BetterRuntime.html",
 					"time": "22.01.2026 1900 Europe/Berlin",
 					"location": {
 						"text": "Cloudogu GmbH, Brabandtstraße 9-10, Braunschweig"
