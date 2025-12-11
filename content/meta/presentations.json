@@ -3935,8 +3935,9 @@
 					"programEntry": "https://www.ittage.informatik-aktuell.de/programm/2025/java-25-bessere-sprache-bessere-apis-bessere-laufzeit.html",
 					"time": "10.12.2025 1000 Europe/Berlin",
 					"location": {
-						"text": "Kap Europa, Frankfurt"
-					}
+						"text": "Kristall, Kap Europa, Frankfurt"
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2025-12-10-it-tage"
 				},
 				{
 					"talk": "talk-java-next",
@@ -3944,8 +3945,9 @@
 					"programEntry": "https://www.ittage.informatik-aktuell.de/programm/2025/java-next-von-amber-zu-valhalla-von-loom-zu-leyden-von-babylon-zu-panama.html",
 					"time": "11.12.2025 0900 Europe/Berlin",
 					"location": {
-						"text": "Kap Europa, Frankfurt"
-					}
+						"text": "Kristall, Kap Europa, Frankfurt"
+					},
+					"slides": "https://slides.nipafx.dev/java-next/2025-12-11-it-tage"
 				},
 				{
 					"talk": "talk-java-ama",
@@ -3953,8 +3955,9 @@
 					"programEntry": "https://www.ittage.informatik-aktuell.de/programm/2025/modern-java-fragt-mich-was-ihr-wollt.html",
 					"time": "11.12.2025 1500 Europe/Berlin",
 					"location": {
-						"text": "Kap Europa, Frankfurt"
-					}
+						"text": "Kristall, Kap Europa, Frankfurt"
+					},
+					"slides": "https://slides.nipafx.dev/java-ama/2025-12-11-it-tage"
 				}
 			]
 		},

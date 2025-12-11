@@ -22,7 +22,7 @@ There are plenty of features in the language, API, and runtime to discuss - whet
 So let's go over them!
 
 <!--
-Java 25 ist nächste Release mit Langzeitunterstützung und seit dem letzten ist jede Menge passiert:
+Java 25 ist das nächste Release mit Langzeitunterstützung und seit dem letzten ist jede Menge passiert:
 
 * von Unnamed Patterns und flexibleren Konstruktoren zu Modulimporten
 * von der Foreign Function & Memory API zu Strema Gatherers und der Class-File API
