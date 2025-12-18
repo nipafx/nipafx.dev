@@ -1008,6 +1008,12 @@
 			"url": "https://www.youtube.com/watch?v=RPX5HrgYoGg",
 			"title": "All Features in Java 26 - Inside Java Newscast #102",
 			"thumbnail": "inside-java-newscast-102"
+		},
+		{
+			"slug": "inside-java-newscast-103",
+			"url": "https://www.youtube.com/watch?v=fihoz8Zbk3w",
+			"title": "Java's 2025 in Review - Inside Java Newscast #103",
+			"thumbnail": "inside-java-newscast-103-a"
 		}
 	]
 }
