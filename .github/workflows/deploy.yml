@@ -9,6 +9,14 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    # permissions needed to deploy to GH Pages
+    permissions:
+      pages: write
+      id-token: write
+    # environment needed to deploy to GH Pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -35,6 +43,12 @@ jobs:
         run: npm install
       - name: build with Gatsby
         run: npx gatsby build
+      - name: upload site as artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: public/
+      - name: deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
       - name: deploy to Netlify
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
