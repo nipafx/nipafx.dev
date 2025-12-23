@@ -290,17 +290,6 @@ module.exports = {
 				lang: `en-US`,
 			},
 		},
-		{
-			resolve: `gatsby-plugin-netlify`,
-			options: {
-				headers: {
-					"/*": [
-						// apparently, `same-origin` is the default, which I find too restrictive
-						`Referrer-Policy: no-referrer-when-downgrade`
-					]
-				}
-			}
-		},
 	],
 	mapping: {
 		// NOTE: don't declare the fields on the left-hand side in the schema in `gatsby-node`

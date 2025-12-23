@@ -49,8 +49,3 @@ jobs:
           path: public/
       - name: deploy to GitHub Pages
         uses: actions/deploy-pages@v4
-      - name: deploy to Netlify
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        run: npx netlify deploy --prod --dir=public
