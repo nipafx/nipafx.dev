@@ -3918,7 +3918,8 @@
 					"location": {
 						"text": "Pathé Ede, Room 9"
 					},
-					"slides": "https://slides.nipafx.dev/java-x/2025-11-06-j-fall"
+					"slides": "https://slides.nipafx.dev/java-x/2025-11-06-j-fall",
+					"video": "https://www.youtube.com/watch?v=_uHJ5N0BuEc"
 				}
 			]
 		},
@@ -4032,7 +4033,24 @@
 					}
 				}
 			]
-		}
+		},
+		{
+			"event": {
+				"name": "JavaOne",
+				"url": "https://www.oracle.com/javaone/",
+				"image": "javaone"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 26: Better Language, Better APIs, Better Runtime",
+					"programEntry": "https://reg.rf.oracle.com/flow/oracle/javaone26/catalog/page/catalog/session/1765832182267001vRtU",
+					"time": "17.03.2026",
+					"location": {
+						"text": "Redwood Shores, Auditorium"
+					}
+				}
+			]		}
 	],
 	"future-events": [
 	]
