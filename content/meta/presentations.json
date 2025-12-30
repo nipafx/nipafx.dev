@@ -3972,10 +3972,10 @@
 				{
 					"talk": "talk-structured-concurrency",
 					"title": "Structured Concurrency in Action",
-					"program": "https://www.meetup.com/de-de/jug-hamburg/events/",
-					"time": "20.01.2026",
+					"announcement": "https://www.meetup.com/de-de/jug-hamburg/events/312611672/?slug=jug-hamburg&isFirstPublish=true",
+					"time": "20.01.2026 1900 Europe/Berlin",
 					"location": {
-						"text": "Hamburg"
+						"text": "HBT, Stadthausbrücke 3, Hamburg"
 					}
 				}
 			]
