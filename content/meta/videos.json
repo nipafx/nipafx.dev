@@ -1014,6 +1014,12 @@
 			"url": "https://www.youtube.com/watch?v=fihoz8Zbk3w",
 			"title": "Java's 2025 in Review - Inside Java Newscast #103",
 			"thumbnail": "inside-java-newscast-103-a"
+		},
+		{
+			"slug": "inside-java-newscast-104",
+			"url": "https://www.youtube.com/watch?v=1lYsDMOc7hM",
+			"title": "Java's Plans for 2026 - Inside Java Newscast #104",
+			"thumbnail": "inside-java-newscast-104"
 		}
 	]
 }
