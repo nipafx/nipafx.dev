@@ -14,7 +14,7 @@ Reactive programming solves this problem by only occupying platform threads when
 Virtual threads combine the simplicity of blocking code with the resource efficiency and scalability of reactive programming and in this talk you're going to learn how they do that and how you can use them in your project.
 
 <!--
-# Einfach Skalieren mit Virtuellen Threads
+# Einfach Skalieren mit virtuellen Threads
 
 Wenn jeder Request an ein Web Backend seinen eigenen Thread bekommt, diesen dann aber für Anfragen an das Dateisystem, Datenbanken oder andere Services blockt, wird die Anzahl der Threads, die das System erlaubt, schnell der limitierende Faktor bei der Skalierung des Durchsatzes.
 Reaktive Programmierung löst das System, indem sie nur dann Plattform-Threads besetzt, wenn diese auch benötigt werden - also nicht beim Warten.
