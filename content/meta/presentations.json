@@ -4026,7 +4026,8 @@
 				{
 					"talk": "talk-structured-concurrency",
 					"title": "Structured Concurrency in Action",
-					"time": "03.02.2026",
+					"announcement": "https://jug-karlsruhe.de/content/from-structured-concurrency-to-deterministic-multithreaded-testing/",
+					"time": "03.02.2026 1915 Europe/Berlin",
 					"location": {
 						"text": "Disy, Zimmerstraße 3, Karlsruhe"
 					}
