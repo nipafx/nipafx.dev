@@ -1020,6 +1020,12 @@
 			"url": "https://www.youtube.com/watch?v=1lYsDMOc7hM",
 			"title": "Java's Plans for 2026 - Inside Java Newscast #104",
 			"thumbnail": "inside-java-newscast-104"
+		},
+		{
+			"slug": "inside-java-newscast-105",
+			"url": "https://www.youtube.com/watch?v=cpGceyn7DBE",
+			"title": "Carrier Classes; Beyond Records - Inside Java Newscast #105",
+			"thumbnail": "inside-java-newscast-105"
 		}
 	]
 }
