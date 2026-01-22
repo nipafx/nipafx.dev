@@ -3976,7 +3976,8 @@
 					"time": "20.01.2026 1900 Europe/Berlin",
 					"location": {
 						"text": "HBT, Stadthausbrücke 3, Hamburg"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/scia/2026-01-20-jug-hamburg"
 				}
 			]
 		},
@@ -3994,7 +3995,8 @@
 					"time": "21.01.2026 1830 Europe/Berlin",
 					"location": {
 						"text": "adesso SE, Lise-Meitner-Straße 1c"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2026-01-21-jug-paderborn"
 				}
 			]
 		},
@@ -4012,7 +4014,8 @@
 					"time": "22.01.2026 1900 Europe/Berlin",
 					"location": {
 						"text": "Cloudogu GmbH, Brabandtstraße 9-10, Braunschweig"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2026-01-22-jug-ostfalen"
 				}
 			]
 		},
