@@ -22,7 +22,7 @@ But before we get started, a few notes:
 * If you want to speed things along, you actually can:
   Find a feature that interests you and is in some form of preview, try it out in as close to production as you can get get, and give feedback.
 * If you want to follow these developments along, subscribe to this channel, make it a habit to check in on inside.java, or come to JavaOne in March and talk to the very people spear-heading these projects.
- There's a 50$ discount code in the description.
+  There's a 50$ discount code in the description.
 * Also in the description of course, you'll find links to all projects, mailing lists, and everything else I mention in this episode.
 
 Ready?
