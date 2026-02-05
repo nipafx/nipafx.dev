@@ -1004,6 +1004,12 @@
 			"thumbnail": "inside-java-newscast-101"
 		},
 		{
+			"slug": "inside-java-podcast-42",
+			"url": "https://www.youtube.com/watch?v=bE1bRbZzQ_k",
+			"title": "SFrom Sumatra to Panama, from Babylon to Valhalla - Inside Java Podcast 42",
+			"thumbnail": "inside-java-podcast-42"
+		},
+		{
 			"slug": "inside-java-newscast-102",
 			"url": "https://www.youtube.com/watch?v=RPX5HrgYoGg",
 			"title": "All Features in Java 26 - Inside Java Newscast #102",
@@ -1026,6 +1032,12 @@
 			"url": "https://www.youtube.com/watch?v=cpGceyn7DBE",
 			"title": "Carrier Classes; Beyond Records - Inside Java Newscast #105",
 			"thumbnail": "inside-java-newscast-105"
+		},
+		{
+			"slug": "inside-java-newscast-106",
+			"url": "https://www.youtube.com/watch?v=BZlXZyXA4jY",
+			"title": "LazyConstants in JDK 26 - Inside Java Newscast #106",
+			"thumbnail": "inside-java-newscast-106"
 		}
 	]
 }
