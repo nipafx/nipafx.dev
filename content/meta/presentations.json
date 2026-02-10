@@ -2342,7 +2342,7 @@
 						"text": "International Barcelona Convention Center, Room 1 'Grace Hopper'"
 					},
 					"slides": "https://slides.nipafx.dev/java-next/2022-07-19-jbcnconf",
-					"videos": "https://www.youtube.com/watch?v=0UuIREqnkG0"
+					"video": "https://www.youtube.com/watch?v=0UuIREqnkG0"
 				}
 			]
 		},
@@ -3282,7 +3282,7 @@
 						"text": "CERN (yes, that one!)"
 					},
 					"slides": "https://slides.nipafx.dev/patterns/2024-01-23-voxxed-days-cern",
-					"videos": "https://www.youtube.com/watch?v=8FRU_aGY4mY"
+					"video": "https://www.youtube.com/watch?v=8FRU_aGY4mY"
 				}
 			]
 		},
@@ -3332,7 +3332,7 @@
 						"text": "Zürich, Arena Cinema Sihlcity, Room 3"
 					},
 					"slides": "https://slides.nipafx.dev/java-x-action/2024-03-07-voxxed-days-z%C3%BCrich",
-					"video": "Vhttps://www.youtube.com/watch?v=Pmlpk4Ti9f8"
+					"video": "https://www.youtube.com/watch?v=Pmlpk4Ti9f8"
 				}
 			]
 		},
@@ -3420,7 +3420,7 @@
 						"text": "Amsterdam, Beurs van Berlage, Effectenbeurszaal"
 					},
 					"slides": "https://slides.nipafx.dev/java-x-action/2024-06-11-goto-amsterdam",
-					"videos": "https://www.youtube.com/watch?v=miUbs3mqPJE"
+					"video": "https://www.youtube.com/watch?v=miUbs3mqPJE"
 				}
 			]
 		},
@@ -3721,7 +3721,8 @@
 					"location": {
 						"text": "Cinedom, Cologne, Cinema BlackBox"
 					},
-					"slides": "https://slides.nipafx.dev/java-ama/2025-05-13-jcon"
+					"slides": "https://slides.nipafx.dev/java-ama/2025-05-13-jcon",
+					"video": "https://www.youtube.com/watch?v=Yrv4AgEdEV0"
 				},
 				{
 					"talk": "talk-teaching-java",
@@ -3731,7 +3732,8 @@
 					"location": {
 						"text": "Cinedom, Cologne, Cinema BlackBox"
 					},
-					"slides": "https://slides.nipafx.dev/teaching-java/2025-05-14-jcon"
+					"slides": "https://slides.nipafx.dev/teaching-java/2025-05-14-jcon",
+					"video": "https://www.youtube.com/watch?v=p9Zd_uOe2l8"
 				}
 			]
 		},
