@@ -1038,6 +1038,12 @@
 			"url": "https://www.youtube.com/watch?v=BZlXZyXA4jY",
 			"title": "LazyConstants in JDK 26 - Inside Java Newscast #106",
 			"thumbnail": "inside-java-newscast-106"
+		},
+		{
+			"slug": "inside-java-newscast-107",
+			"url": "https://www.youtube.com/watch?v=99s7ozvJGLk",
+			"title": "Towards Better Checked Exceptions - Inside Java Newscast #107",
+			"thumbnail": "inside-java-newscast-107"
 		}
 	]
 }
