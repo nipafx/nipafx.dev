@@ -4069,12 +4069,13 @@
 					"talk": "talk-java-x",
 					"title": "Java 26: Better Language, Better APIs, Better Runtime",
 					"programEntry": "https://reg.rf.oracle.com/flow/oracle/javaone26/catalog/page/catalog/session/1765832182267001vRtU",
-					"time": "17.03.2026",
+					"time": "17.03.2026 1030 America/Los_Angeles",
 					"location": {
-						"text": "Redwood Shores, Auditorium"
+						"text": "Redwood Shores, Room 203"
 					}
 				}
-			]		}
+			]
+		}
 	],
 	"future-events": [
 	]
