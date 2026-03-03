@@ -4075,6 +4075,42 @@
 					}
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "San Francisco JUG",
+				"url": "https://luma.com/sfjava",
+				"image": "jug-san-francisco"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": " Java Next - From Amber to Valhalla, from Loom to Leyden, from Babylon to Panama",
+					"announcement": "https://luma.com/sfjava?e=evt-BxgRru3zJCdo1lu",
+					"time": "24.03.2026 1700 America/Los_Angeles",
+					"location": {
+						"text": "San Francisco, California"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Boulder JUG",
+				"url": "https://www.meetup.com/boulderjavausersgroup/",
+				"image": "jug-boulder"
+			},
+			"presentations": [
+				{
+					"talk": "talk-structured-concurrency",
+					"title": "Structured Concurrency in Action",
+					"announcement": "https://www.meetup.com/boulderjavausersgroup/events/310774448/",
+					"time": "01.04.2026 1730 America/Denver",
+					"location": {
+						"text": "Oracle Broomfield Office: Bldg 1. Conference Room 1+2; 500 Eldorado Blvd, Broomfield, Colorado"
+					}
+				}
+			]
 		}
 	],
 	"future-events": [
