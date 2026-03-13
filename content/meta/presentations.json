@@ -4097,6 +4097,24 @@
 		},
 		{
 			"event": {
+				"name": "Sunnyvale JUG",
+				"url": "https://sunnyvalejug.org/",
+				"image": "jug-sunnyvale"
+			},
+			"presentations": [
+				{
+					"talk": "talk-structured-concurrency",
+					"title": "Structured Concurrency in Action",
+					"announcement": "https://luma.com/banm0vb3",
+					"time": "25.03.2026 1700 America/Los_Angeles",
+					"location": {
+						"text": "San Jose, California"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Boulder JUG",
 				"url": "https://www.meetup.com/boulderjavausersgroup/",
 				"image": "jug-boulder"
@@ -4109,6 +4127,42 @@
 					"time": "01.04.2026 1730 America/Denver",
 					"location": {
 						"text": "Oracle Broomfield Office: Bldg 1. Conference Room 1+2; 500 Eldorado Blvd, Broomfield, Colorado"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Denver JUG",
+				"url": "https://www.meetup.com/denverjavausersgroup/",
+				"image": "jug-denver"
+			},
+			"presentations": [
+				{
+					"talk": "talk-structured-concurrency",
+					"title": "Structured Concurrency in Action",
+					"announcement": "https://www.meetup.com/denverjavausersgroup/events/313316550/",
+					"time": "02.04.2026 1730 America/Denver",
+					"location": {
+						"text": "Thrive Workplace, 9200 E Mineral Ave, Centennial, CO"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Kansas City JUG",
+				"url": "https://www.meetup.com/kansascityjug/",
+				"image": "jug-kansas-city"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming - Version 1.1",
+					"program": "https://www.meetup.com/kansascityjug/events/313733362/",
+					"time": "07.04.2026 1730 America/Chicago",
+					"location": {
+						"text": "1200 S Mahaffie Cir, Olathe, KS"
 					}
 				}
 			]
