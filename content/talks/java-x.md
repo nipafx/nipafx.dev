@@ -1,27 +1,26 @@
 ---
-title: "Java 25 - Better Language, Better APIs, Better Runtime"
-tags: [java-25]
-date: 2023-11-30
+title: "Java 27 - Better Language, Better APIs, Better Runtime"
+tags: [java-27]
+date: 2026-03-13
 slug: talk-java-x
-description: "Java 25 will be the next release with long-term support and a lot has happened since the last one: flexible constructors, stream gatherers, multi-source-file launcher, faster launch times plus many new and improved features in preview"
+description: "Java 25 is the latest release with wide-ranging long-term support. It's a doozy and Java 26 and 27 followed hot on its heels."
 featuredImage: java-x-modern
 slides: https://slides.nipafx.dev/java-x
 videoSlug: java-x-devoxx-be-2024
 repo: java-x-demo
 ---
 
-Java 25 is the next release with long-term support and a lot has happened since the last one:
+Java 25 is the latest release with wide-ranging long-term support. It's a doozy and Java 26 and 27 followed hot on its heels:
 
-* from unnamed patterns and flexible constructors to module imports
-* from the foreign-function and memory API to stream gatherers and the class-file API
+* from module imports to improved pattern matching
+* from structured concurrency to HTTP/3
 * from a simpler `main` to launching multi-source-file programs
-* from Markdown in JavaDoc to quantum-resistant encryption
-* from faster launch times to improved garbage collection
+* from better performance to quantum-resistant encryption
 
-There are plenty of features in the language, API, and runtime to discuss - whether new, improved, or finalized.
-So let's go over them!
+There are plenty of features in the language, API, and runtime to discuss - whether new, improved, or finalized. So let's go over them!
 
-<!--
+<!-- OUTDATED
+
 Java 25 ist das nächste Release mit Langzeitunterstützung und seit dem letzten ist jede Menge passiert:
 
 * von Unnamed Patterns und flexibleren Konstruktoren zu Modulimporten

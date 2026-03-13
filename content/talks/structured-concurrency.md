@@ -1,6 +1,6 @@
 ---
 title: "Structured Concurrency in Action"
-tags: [structured-concurrency, java-25]
+tags: [structured-concurrency, java-26]
 date: 2025-09-03
 slug: talk-structured-concurrency
 description: "A deep-dive into the structured concurrency API as it is currently proposed"
@@ -10,8 +10,8 @@ videoSlug: scia-devoxx-be-2025
 repo: structured-concurrency
 ---
 
-In Java 25, the structured concurrency API sees its fifth preview with considerable changes over previous iterations.
-With chances being good that it will finalize without a further overhaul, let's put it into action and explore how to:
+In Java 25, the structured concurrency API saw its fifth preview with considerable changes over previous iterations.
+Java 26 made only small tweaks and with chances being good that it will finalize without a further overhaul, let's put it into action and explore how to:
 
 * structure concurrent code
 * process and propagate errors and cancellation
