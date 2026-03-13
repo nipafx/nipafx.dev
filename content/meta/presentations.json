@@ -4054,7 +4054,8 @@
 					"time": "10.03.2026 1300 Europe/Berlin",
 					"location": {
 						"text": "Sanssouci, Europapark"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-ama/2026-03-10-javaland"
 				}
 			]
 		},
