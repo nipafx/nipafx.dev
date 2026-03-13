@@ -4169,5 +4169,23 @@
 		}
 	],
 	"future-events": [
+		{
+			"event": {
+				"name": "Java MUG",
+				"url": "https://www.javamug.org/",
+				"image": "jug-mug"
+			},
+			"presentations": [
+			]
+		},
+		{
+			"event": {
+				"name": "Austin JUG",
+				"url": "https://www.meetup.com/austin-java-users-group/",
+				"image": "jug-austin"
+			},
+			"presentations": [
+			]
+		}
 	]
 }
