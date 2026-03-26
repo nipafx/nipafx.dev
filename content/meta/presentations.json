@@ -4073,7 +4073,8 @@
 					"time": "17.03.2026 1030 America/Los_Angeles",
 					"location": {
 						"text": "Redwood Shores, Room 203"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2026-03-17-javaone/"
 				}
 			]
 		},
@@ -4088,10 +4089,11 @@
 					"talk": "talk-java-next",
 					"title": " Java Next - From Amber to Valhalla, from Loom to Leyden, from Babylon to Panama",
 					"announcement": "https://luma.com/sfjava?e=evt-BxgRru3zJCdo1lu",
-					"time": "24.03.2026 1700 America/Los_Angeles",
+					"time": "24.03.2026 1800 America/Los_Angeles",
 					"location": {
-						"text": "San Francisco, California"
-					}
+						"text": "Workato, San Francisco, California"
+					},
+					"slides": "https://slides.nipafx.dev/java-next/2026-03-24-sfjug"
 				}
 			]
 		},
@@ -4108,8 +4110,9 @@
 					"announcement": "https://luma.com/banm0vb3",
 					"time": "25.03.2026 1700 America/Los_Angeles",
 					"location": {
-						"text": "San Jose, California"
-					}
+						"text": "Adobe, San Jose, California"
+					},
+					"slides": "https://slides.nipafx.dev/scia/2026-03-25-sunnyvale-jug"
 				}
 			]
 		},
