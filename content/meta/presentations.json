@@ -4187,6 +4187,24 @@
 					}
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "Karlsruher Entwicklertag",
+				"url": "https://www.entwicklertag.de/",
+				"image": "karlsruher-entwicklertag"
+			},
+			"presentations": [
+				{
+					"talk": "talk-teaching-java",
+					"title": "\"Java für Anfänger\" für Fortgeschrittene",
+					"programEntry": "https://www.entwicklertag.de/programm/%22Java%20f%C3%BCr%20Anf%C3%A4nger%22%20f%C3%BCr%20Fortgeschrittene",
+					"time": "09.06.2025 1145 Europe/Berlin",
+					"location": {
+						"text": "IHK Karlsruhe, Raum Baden"
+					}
+				}
+			]
 		}
 	],
 	"future-events": [
