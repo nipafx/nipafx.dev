@@ -4162,10 +4162,28 @@
 				{
 					"talk": "talk-java-pattern-matching",
 					"title": "Data-Oriented Programming - Version 1.1",
-					"program": "https://www.meetup.com/kansascityjug/events/313733362/",
+					"announcement": "https://www.meetup.com/kansascityjug/events/313733362/",
 					"time": "07.04.2026 1730 America/Chicago",
 					"location": {
 						"text": "1200 S Mahaffie Cir, Olathe, KS"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Java MUG",
+				"url": "https://www.javamug.org/",
+				"image": "jug-mug"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming - Version 1.1",
+					"announcement": "https://www.meetup.com/javamug/events/313814924/",
+					"time": "08.04.2026 1900 America/Chicago",
+					"location": {
+						"text": "5445 Legacy Dr, Suite 100, Plano, TX"
 					}
 				}
 			]
@@ -4174,20 +4192,17 @@
 	"future-events": [
 		{
 			"event": {
-				"name": "Java MUG",
-				"url": "https://www.javamug.org/",
-				"image": "jug-mug"
-			},
-			"presentations": [
-			]
-		},
-		{
-			"event": {
 				"name": "Austin JUG",
 				"url": "https://www.meetup.com/austin-java-users-group/",
 				"image": "jug-austin"
 			},
 			"presentations": [
+				{
+					"time": "09.04.2026",
+					"location": {
+						"text": "11044 Research Blvd Suite C-120, Austin, TX"
+					}
+				}
 			]
 		}
 	]
