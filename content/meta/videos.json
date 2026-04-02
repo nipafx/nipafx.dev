@@ -1044,6 +1044,12 @@
 			"url": "https://www.youtube.com/watch?v=99s7ozvJGLk",
 			"title": "Towards Better Checked Exceptions - Inside Java Newscast #107",
 			"thumbnail": "inside-java-newscast-107"
+		},
+		{
+			"slug": "inside-java-newscast-109",
+			"url": "https://www.youtube.com/watch?v=5KO_JKy9fNA",
+			"title": "Analysing Crashed JVMs - Inside Java Newscast #109",
+			"thumbnail": "inside-java-newscast-109"
 		}
 	]
 }
