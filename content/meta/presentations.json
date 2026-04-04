@@ -4190,6 +4190,23 @@
 		},
 		{
 			"event": {
+				"name": "Austin JUG",
+				"url": "https://www.meetup.com/austin-java-users-group/",
+				"image": "jug-austin"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 26: Better Language, Better APIs, Better Runtime",
+					"time": "09.04.2026 1830 America/Chicago",
+					"location": {
+						"text": "11044 Research Blvd Suite C-120, Austin, TX"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Karlsruher Entwicklertag",
 				"url": "https://www.entwicklertag.de/",
 				"image": "karlsruher-entwicklertag"
@@ -4208,20 +4225,5 @@
 		}
 	],
 	"future-events": [
-		{
-			"event": {
-				"name": "Austin JUG",
-				"url": "https://www.meetup.com/austin-java-users-group/",
-				"image": "jug-austin"
-			},
-			"presentations": [
-				{
-					"time": "09.04.2026",
-					"location": {
-						"text": "11044 Research Blvd Suite C-120, Austin, TX"
-					}
-				}
-			]
-		}
 	]
 }
