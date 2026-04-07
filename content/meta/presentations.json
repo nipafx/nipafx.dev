@@ -4130,7 +4130,8 @@
 					"time": "01.04.2026 1730 America/Denver",
 					"location": {
 						"text": "Oracle Broomfield Office: Bldg 1. Conference Room 1+2; 500 Eldorado Blvd, Broomfield, Colorado"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/scia/2026-04-01-boulder-jug"
 				}
 			]
 		},
@@ -4148,7 +4149,8 @@
 					"time": "02.04.2026 1730 America/Denver",
 					"location": {
 						"text": "Thrive Workplace, 9200 E Mineral Ave, Centennial, CO"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/scia/2026-04-02-denver-jug"
 				}
 			]
 		},
@@ -4198,6 +4200,7 @@
 				{
 					"talk": "talk-java-x",
 					"title": "Java 26: Better Language, Better APIs, Better Runtime",
+					"announcement": "https://www.meetup.com/austin-java-users-group/events/313986182/",
 					"time": "09.04.2026 1830 America/Chicago",
 					"location": {
 						"text": "11044 Research Blvd Suite C-120, Austin, TX"
