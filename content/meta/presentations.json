@@ -4168,7 +4168,8 @@
 					"time": "07.04.2026 1730 America/Chicago",
 					"location": {
 						"text": "1200 S Mahaffie Cir, Olathe, KS"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-dop/2026-04-07-kcjug"
 				}
 			]
 		},
@@ -4186,7 +4187,8 @@
 					"time": "08.04.2026 1900 America/Chicago",
 					"location": {
 						"text": "5445 Legacy Dr, Suite 100, Plano, TX"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-dop/2026-04-08-javamug"
 				}
 			]
 		},
@@ -4204,7 +4206,8 @@
 					"time": "09.04.2026 1830 America/Chicago",
 					"location": {
 						"text": "11044 Research Blvd Suite C-120, Austin, TX"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2026-04-09-austin-jug"
 				}
 			]
 		},
