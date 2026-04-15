@@ -4213,6 +4213,23 @@
 		},
 		{
 			"event": {
+				"name": "J-Spring",
+				"url": "https://jspring.nl/",
+				"image": "j-spring"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 26: Better Language, Better APIs, Better Runtime",
+					"time": "04.06.2026",
+					"location": {
+						"text": "Kinepolis Jaarbeurs Utrecht"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Karlsruher Entwicklertag",
 				"url": "https://www.entwicklertag.de/",
 				"image": "karlsruher-entwicklertag"
