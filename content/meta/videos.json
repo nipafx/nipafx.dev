@@ -1006,7 +1006,7 @@
 		{
 			"slug": "inside-java-podcast-42",
 			"url": "https://www.youtube.com/watch?v=bE1bRbZzQ_k",
-			"title": "SFrom Sumatra to Panama, from Babylon to Valhalla - Inside Java Podcast 42",
+			"title": "From Sumatra to Panama, from Babylon to Valhalla - Inside Java Podcast 42",
 			"thumbnail": "inside-java-podcast-42"
 		},
 		{
@@ -1050,6 +1050,12 @@
 			"url": "https://www.youtube.com/watch?v=5KO_JKy9fNA",
 			"title": "Analysing Crashed JVMs - Inside Java Newscast #109",
 			"thumbnail": "inside-java-newscast-109"
+		},
+		{
+			"slug": "inside-java-newscast-110",
+			"url": "https://www.youtube.com/watch?v=KoOrPzGC_7w",
+			"title": "You Must Avoid Final Field Mutation - Inside Java Newscast #110",
+			"thumbnail": "inside-java-newscast-110"
 		}
 	]
 }
