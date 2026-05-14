@@ -3077,6 +3077,40 @@
 		}
 	},
 	{
+		"slug": "consistent-new-file",
+		"alt": "A residential building with mutliple rows of identical windows",
+		"credits": {
+			"author": {
+				"name": "Pierre Châtel-Innocenti",
+				"url": "https://unsplash.com/@chatelp"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/yellow-painted-buildings-window-frame-gUU-uYzudMw"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
+		"slug": "threadpoolexecutor-finalize",
+		"alt": "A blue swimming ring and a red plastic ball swimming in a pool",
+		"credits": {
+			"author": {
+				"name": "Joe Calata",
+				"url": "unsplash.com/@joecalata"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/pool-ring-floating-on-water-SFY8JxwzQbs"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
+	},
+	{
 		"slug": "avoid-final-field-mutation",
 		"alt": "A barred window in a red wall",
 		"credits": {
