@@ -3075,5 +3075,22 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "avoid-final-field-mutation",
+		"alt": "A barred window in a red wall",
+		"credits": {
+			"author": {
+				"name": "Sincerely Media",
+				"url": "https://unsplash.com/@sincerelymedia"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/orange-metal-window-grills-0s3iKAO0r2g"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
