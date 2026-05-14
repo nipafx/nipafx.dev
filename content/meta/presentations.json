@@ -4221,9 +4221,10 @@
 				{
 					"talk": "talk-java-x",
 					"title": "Java 26: Better Language, Better APIs, Better Runtime",
-					"time": "04.06.2026",
+					"program": "https://jspring.nl/timetable-2026/",
+					"time": "04.06.2026 1030 Europe/Amsterdam",
 					"location": {
-						"text": "Kinepolis Jaarbeurs Utrecht"
+						"text": "Kinepolis Jaarbeurs Utrecht, Room 12"
 					}
 				}
 			]
@@ -4239,9 +4240,45 @@
 					"talk": "talk-teaching-java",
 					"title": "\"Java für Anfänger\" für Fortgeschrittene",
 					"programEntry": "https://www.entwicklertag.de/programm/%22Java%20f%C3%BCr%20Anf%C3%A4nger%22%20f%C3%BCr%20Fortgeschrittene",
-					"time": "09.06.2025 1145 Europe/Berlin",
+					"time": "09.06.2026 1145 Europe/Berlin",
 					"location": {
 						"text": "IHK Karlsruhe, Raum Baden"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Devoxx Poland",
+				"url": "http://devoxx.pl/",
+				"image": "devoxx-pl"
+			},
+			"presentations": [
+				{
+					"talk": "talk-structured-concurrency",
+					"title": "Structured Concurrency in Action",
+					"programEntry": "https://devoxx.pl/talk/?id=9632",
+					"time": "18.06.2026 0900 Europe/Warsaw",
+					"location": {
+						"text": "Krakow, ICE Congress Centre, Room 2"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Java Forum Stuttgart",
+				"url": "https://www.java-forum-stuttgart.de/",
+				"image": "java-forum-stuttgart"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"programEntry": "https://www.java-forum-stuttgart.de/vortraege/java-next/",
+					"time": "09.07.2026 1215 Europe/Berlin",
+					"location": {
+						"text": "Stuttgart, Kultur- & Kongresszentrum Liederhalle, Track F"
 					}
 				}
 			]
