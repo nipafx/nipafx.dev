@@ -49,7 +49,7 @@ And where and how are they used?
 The new Javadoc tags are explained pretty well in the feature request's description (I changed the layout a little):
 
 > There are lots of things we might want to document about a method in an API.
-Historically we've framed them as either being "specification" (e.g., necessary postconditions) or "implementation notes" (e.g., hints that give the user an idea what's going on under the hood.) But really, there are four boxes (and we've been cramming them into two, or really 1.5):
+> Historically we've framed them as either being "specification" (e.g., necessary postconditions) or "implementation notes" (e.g., hints that give the user an idea what's going on under the hood.) But really, there are four boxes (and we've been cramming them into two, or really 1.5):
 >
 >  **{ API, implementation } x { specification, notes }**
 >
