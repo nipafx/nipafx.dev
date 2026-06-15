@@ -3458,7 +3458,8 @@
 					"location": {
 						"text": "Utrecht, Media Plaza, Progress"
 					},
-					"slides": "https://slides.nipafx.dev/java-x-action/2024-06-13-j-spring"
+					"slides": "https://slides.nipafx.dev/java-x-action/2024-06-13-j-spring",
+					"video": "https://www.youtube.com/watch?v=FWR-j5bDCpc"
 				}
 			]
 		},
@@ -4225,7 +4226,8 @@
 					"time": "04.06.2026 1030 Europe/Amsterdam",
 					"location": {
 						"text": "Kinepolis Jaarbeurs Utrecht, Room 12"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2026-06-04-j-spring"
 				}
 			]
 		},
@@ -4243,7 +4245,18 @@
 					"time": "09.06.2026 1145 Europe/Berlin",
 					"location": {
 						"text": "IHK Karlsruhe, Raum Baden"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/teaching-java"
+				},
+				{
+					"talk": "talk-structured-concurrency",
+					"title": "Structured Concurrency in Action",
+					"programEntry": "https://www.entwicklertag.de/programm/Structured%20Concurrency",
+					"time": "09.06.2026 1330 Europe/Berlin",
+					"location": {
+						"text": "IHK Karlsruhe, Raum Baden"
+					},
+					"slides": "https://slides.nipafx.dev/scia/2026-06-09-karlsruher-entwicklertag"
 				}
 			]
 		},
@@ -4261,6 +4274,33 @@
 					"time": "18.06.2026 0900 Europe/Warsaw",
 					"location": {
 						"text": "Krakow, ICE Congress Centre, Room 2"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JUG Bonn",
+				"url": "https://www.meetup.com/JUG-Bonn/",
+				"image": "jug-bonn"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 26: Better Language, Better APIs, Better Runtime",
+					"announcement": "https://www.meetup.com/de-de/jug-bonn/events/313191119/",
+					"time": "07.07.2026 1930 Europe/Berlin",
+					"location": {
+						"text": "cronn GmbH, Portlandweg 4"
+					}
+				},
+				{
+					"talk": "talk-structured-concurrency",
+					"title": "Structured Concurrency in Action",
+					"announcement": "https://www.meetup.com/de-de/jug-bonn/events/313191119/",
+					"time": "07.07.2026 2015 Europe/Berlin",
+					"location": {
+						"text": "cronn GmbH, Portlandweg 4"
 					}
 				}
 			]

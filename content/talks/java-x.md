@@ -19,16 +19,17 @@ Java 25 is the latest release with wide-ranging long-term support. It's a doozy 
 
 There are plenty of features in the language, API, and runtime to discuss - whether new, improved, or finalized. So let's go over them!
 
-<!-- OUTDATED
+<!--
 
-Java 25 ist das nächste Release mit Langzeitunterstützung und seit dem letzten ist jede Menge passiert:
+Java 25 ist das jüngste Release mit Langzeitunterstützung und es kam mit jeder Menge Features.
+Aber seitdem sind auch Java 26 und 27 bereits erschienen und haben noch ein wenig draufgelegt:
 
-* von Unnamed Patterns und flexibleren Konstruktoren zu Modulimporten
-* von der Foreign Function & Memory API zu Strema Gatherers und der Class-File API
+* von Modulimporten zu besserem Pattern Matching
+* von Structured Concurrency zu HTTP/3
 * von einer einfacheren Main-Methode zum direkten Start von Quellcode
-* von Markdown in JavaDoc zu quantenresistenter Verschlüsselung
-* von schnelleren Starts zu verbesserter Garbage Collection
+* von beserer Performance zu Quantencomputer-resistenter Verschlüsselung
 
 Ob neu, verbessert oder finalisiert - es gibt jede Menge Features in der Sprache, der Standardbibliothek und der Laufzeit zu besprechen.
 Also machen wir genau das!
+
 -->
