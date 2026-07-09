@@ -4325,6 +4325,87 @@
 					"slides": "https://slides.nipafx.dev/java-next/2026-07-09-java-forum-stuttgart"
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "betterCode() Java",
+				"url": "https://java.bettercode.eu/",
+				"image": "better-code-java"
+			},
+			"presentations": [
+				{
+					"talk": "talk-structured-concurrency",
+					"title": "Structured Concurrency in Action",
+					"programEntry": "https://java.bettercode.eu/veranstaltung-89657-se-0-structured-concurrency-in-action.html",
+					"time": "13.10.2026 1115 Europe/Berlin",
+					"location": {
+						"type": "virtual"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "J On the Beach",
+				"url": "https://jonthebeach.com/",
+				"image": "j-on-the-beach"
+			},
+			"presentations": [
+				{
+					"talk": "talk-structured-concurrency",
+					"title": "Structured Concurrency in Action",
+					"programEntry": "https://jonthebeach.com/workshops/structured-concurrency-in-action/",
+					"time": "30.10.2026 1500 Europe/Madrid",
+					"location": {
+						"text": " Palacio de Congresos de Torremolinos, Málaga"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Øredev",
+				"url": "https://oredev.org/",
+				"image": "oredev-2026"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 27 - Better Language, Better APIs, Better Runtime",
+					"programEntry": "https://oredev.org/program/d5ed39ab-db82-43fb-bdb1-95194e0bde4e",
+					"time": "04.11.2026 1115 Europe/Stockholm",
+					"location": {
+						"text": "Malmömässan, Malmö; Protocol"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "IT-Tage",
+				"url": "https://www.ittage.informatik-aktuell.de/",
+				"image": "it-tage-2026"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 27 - bessere Sprache, bessere APIs, bessere Laufzeit",
+					"programEntry": "https://www.ittage.informatik-aktuell.de/programm/2026/java-27-better-language-better-apis-better-runtime.html",
+					"time": "08.12.2026 0900 Europe/Berlin",
+					"location": {
+						"text": "Kap Europa, Frankfurt"
+					}
+				},
+				{
+					"talk": "talk-java-ama",
+					"title": "Modern Java - Fragt mich, was Ihr wollt!",
+					"programEntry": "https://www.ittage.informatik-aktuell.de/programm/2026/modern-java-fragt-mich-was-ihr-wollt.html",
+					"time": "08.12.2026 1000 Europe/Berlin",
+					"location": {
+						"text": "Kap Europa, Frankfurt"
+					}
+				}
+			]
 		}
 	],
 	"future-events": [
