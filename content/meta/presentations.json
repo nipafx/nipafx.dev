@@ -4292,7 +4292,8 @@
 					"time": "07.07.2026 1930 Europe/Berlin",
 					"location": {
 						"text": "cronn GmbH, Portlandweg 4"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2026-07-07-jug-bonn"
 				},
 				{
 					"talk": "talk-structured-concurrency",
@@ -4301,7 +4302,8 @@
 					"time": "07.07.2026 2015 Europe/Berlin",
 					"location": {
 						"text": "cronn GmbH, Portlandweg 4"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/scia/2026-07-07-jug-bonn"
 				}
 			]
 		},
@@ -4319,7 +4321,8 @@
 					"time": "09.07.2026 1215 Europe/Berlin",
 					"location": {
 						"text": "Stuttgart, Kultur- & Kongresszentrum Liederhalle, Track F"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-next/2026-07-09-java-forum-stuttgart"
 				}
 			]
 		}
