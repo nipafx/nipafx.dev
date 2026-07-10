@@ -3126,5 +3126,22 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "java-valhalla",
+		"alt": "A cabin in a forrest clearing with a mountain in the beackground; everything is covered by snow",
+		"credits": {
+			"author": {
+				"name": "Simon",
+				"url": "https://unsplash.com/@simon_berger"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/house-covered-with-snow-near-mountain-SD68VmEjzdA"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
