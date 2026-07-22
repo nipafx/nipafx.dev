@@ -3,7 +3,7 @@ title: "About Nicolai Parlog"
 tags: [personal]
 date: 2020-10-03
 slug: nicolai-parlog
-description: "I'm nipafx, but you can call me Nicolai 😉, a Java enthusiast with a passion for learning and sharing. I'm a Java Developer Advocate at Oracle and organizer of Accento."
+description: "I'm nipafx, but you can call me Nicolai 😉, a Java enthusiast with a passion for learning and sharing. I'm a Java Developer Advocate at Oracle."
 searchKeywords: "Nicolai Parlog"
 ---
 
@@ -14,9 +14,9 @@ I tend to talk a lot about Java and all those words must go somewhere.
 Words as ones and zeros:
 
 * [blog posts](channel:articles)
-* [regular newsletter](news)
-* [contributions to dev.java](https://dev.java)
-* occasional article on [inside.java](https://inside.java/u/NicolaiParlog/) and [Java Magazine](https://blogs.oracle.com/javamagazine/authors/Blog-Author/CORE52F2E4F4BF0C4B1CA1DFEB616AD77B6F/nicolai-parlog)
+* [past newsletter](news) (discontinued)
+* contributions to [inside.java](https://inside.java/u/NicolaiParlog/) and [dev.java](https://dev.java)
+<!-- * occasional article on [Java Magazine](https://blogs.oracle.com/javamagazine/authors/Blog-Author/CORE52F2E4F4BF0C4B1CA1DFEB616AD77B6F/nicolai-parlog) -->
 <!-- * occasional article on sites like [InfoQ](https://www.infoq.com/profile/Nicolai-Parlog/) and [SitePoint](https://www.sitepoint.com/author/nicolaip/) -->
 
 Words on dead trees:
@@ -34,11 +34,13 @@ Words on camera:
 Words in real life:
 
 * [talks at JUGs and conferences](talks) ([slides](https://slides.nipafx.dev/))
-* [Accento - a Java/JS/Ops conference](https://accento.dev)
+* [JavaOne](https://javaone.com/)
+* [Accento - a Java/JS/Ops conference](https://accento.dev) (discontinued)
 
 Words as code:
 
 * [demo repositories](demos)
+* [RecordArgs](https://github.com/nipafx/record-args)
 * [JUnit Pioneer](https://junit-pioneer.org)
 
 If you want to get in touch, see [here](contact).
@@ -215,7 +217,7 @@ Last but not least, I’m a founding member of Do-FOSS, an initiative which adva
 
 Initially, I considered this whole blogging thing a hobby, aimed at improving my knowledge and giving back to the great community which enabled me to even call myself a developer (as opposed to just some guy hacking away at his keyboard). But after about a year and a half it turned into much more. Researching topics that really interested me, I inadvertently acquired knowledge that others seek.
 
-<contentimage slug="nicolai-parlog" options="sidebar"></contentimage>
+<contentimage slug="nicolai" options="sidebar"></contentimage>
 
 This enabled me to speak at conferences and writing became a (semi-)professional activity. It also gave me the chance to diversify my work life! If you need someone to write, speak, teach, or consult about bleeding edge topics like Project Jigsaw, Java 9, JUnit 5, Clean Comments, or Java in general, you should ping me – I am for hire.
 -->
