@@ -4328,6 +4328,42 @@
 		},
 		{
 			"event": {
+				"name": "Japan Java User Group",
+				"url": "https://jjug.doorkeeper.jp/",
+				"image": "jjug"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-valhalla",
+					"title": "Valhalla, Now!",
+					"announcement": "https://jjug.doorkeeper.jp/events/198604",
+					"time": "19.08.2026 1900 Asia/Tokyo",
+					"location": {
+						"text": "Microsoft Japan, Shinagawa Grand Central Tower, Tokyo"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JCConf",
+				"url": "https://jcconf.tw",
+				"image": "jcconf"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-valhalla",
+					"title": "Valhalla, Now!",
+					"program": "https://jcconf.tw/2026/",
+					"time": "11.09.2026 0930 Asia/Taipei",
+					"location": {
+						"text": "International Conference Centre of Taiwan University Hospital, Taipei City"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "betterCode() Java",
 				"url": "https://java.bettercode.eu/",
 				"image": "better-code-java"
