@@ -1,6 +1,6 @@
 ---
 title: "JDK 27 & Valhalla, Now! - Inside Java Newscast #113"
-tags: [java-27, java-28, project-valhalla, project-babylon, project-leyden, community]
+tags: [java-27, java-28, project-valhalla, project-babylon, project-leyden, community, meta]
 date: 2026-07-19
 slug: inside-java-newscast-113
 videoSlug: inside-java-newscast-113

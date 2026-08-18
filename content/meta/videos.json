@@ -1062,6 +1062,12 @@
 			"url": "https://www.youtube.com/watch?v=aFSQFsB1neU",
 			"title": "JDK 27 + Valhalla, Now! + Hackathon - Inside Java Newscast #113",
 			"thumbnail": "inside-java-newscast-113"
+		},
+		{
+			"slug": "inside-java-newscast-114",
+			"url": "https://www.youtube.com/watch?v=-4gCNsoPAmQ",
+			"title": "JSON API, Valhalla Progress, LTS ❤️ PQC - Inside Java Newscast #114",
+			"thumbnail": "inside-java-newscast-114"
 		}
 	]
 }
