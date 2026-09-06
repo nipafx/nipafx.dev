@@ -45,6 +45,19 @@ But his analysis brought him to the conclusion that, for most classes, it's not 
 
 Primitive patterns will very likely [see another preview in JDK 28](https://mail.openjdk.org/archives/list/amber-spec-experts@openjdk.org/thread/WSXW4QMJ3EBIHIULEB25HUAMR5JB767H/), without changes.
 Not so much because new feedback is expected but because the upcoming feature of constant patterns has quite some overlap with primitive patterns and so Project Amber does not want to commit to one before the other is in play.
+
+```java
+record Point(int x, int y) { }
+
+var point = // ...
+switch (point) {
+	// primitive pattern
+	case Point(var x, _) when x == 0 -> // ...
+	// constant pattern (probably)
+	case Point(0, _) -> // ...
+}
+```
+
 That's understandable but a bit unfortunate - let's just hope this doesn't turn into another vector API.
 
 
@@ -58,8 +71,51 @@ I'll take you on a short tour through the API and then we discuss what it does n
 The core of the API is the sealed interface `JsonValue`, extended by six specialized interfaces for objects, arrays, strings, numbers, booleans, and null.
 But unlike earlier explorations it does not use pattern matching as its core mechanism to expose the JSON document's information - instead, `JsonValue` itself has methods `asMap()`, `asList()`, `asString()`, `asDouble()`, etc. that return the represented value in that form if it's of the right type.
 
+```java
+public sealed interface JsonValue permits
+		JsonObject, JsonArray, JsonNull
+		JsonString, JsonNumber, JsonBoolean {
+
+	Map<String, JsonValue> asMap();
+	List<JsonValue> asList();
+
+	String asString();
+	double asDouble();
+	long asLong();
+	int asInt();
+	boolean asBoolean();
+
+	JsonValue get(String name);
+	JsonValue get(int index);
+
+	Optional<JsonValue> tryGet(String name);
+	Optional<JsonValue> tryValue();
+}
+```
+
 So if you _know_ that a document represents a JSON object with, say, a `users` property that holds a non-empty array of users and you want to get the first user's name, you can call `Json.parse` with the JSON string and then, on the `JsonValue` it returns, `get("users").get(0).get("name")`.
 Or maybe you want to collect all user names in a list, then it would be `get("users").asList()` followed by a `stream()`, `map(...)` and `toList()`.
+
+```java
+var jsonDoc = """
+	{
+		"users": [
+			{ "name": "..." }
+		]
+	}
+	""";
+
+JsonValue val = Json.parse(jsonDoc);
+var name = val
+	.get("users")
+	.get(0)
+	.get("name");
+var names = val
+	.get("users")
+	.asList().stream()
+	.map((JsonValue user) -> user.get("name"))
+	.toList();
+```
 
 But note that if you ask for a property that does not exist, for an array index that's out of bounds, or to return a value as a type that it isn't, you will get an exception.
 It will detail the error and include the path you took through the JSON document to get there.
