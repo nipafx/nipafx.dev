@@ -4366,6 +4366,42 @@
 		},
 		{
 			"event": {
+				"name": "TWJUG",
+				"url": "https://www.twjug.org",
+				"image": "twjug"
+			},
+			"presentations": [
+				{
+					"talk": "talk-structured-concurrency",
+					"title": "Structured Concurrency in Action",
+					"announcement": "https://twjug.kktix.cc/events/twjug202609",
+					"time": "12.09.2026 1400 Asia/Taipei",
+					"location": {
+						"text": "Piccollage Office, Taipei City"
+					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "Devoxx Belgium",
+				"url": "https://devoxx.be/",
+				"image": "devoxx-be"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Modern Java in Practice - The Features That Matter",
+					"programEntry": "https://m.devoxx.com/events/dvbe26/talks/23524/modern-java-in-practice-the-features-that-matter",
+					"time": "06.10.2026 1330 Europe/Brussels",
+					"location": {
+						"text": "Kinepolis, Antwerpen"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "betterCode() Java",
 				"url": "https://java.bettercode.eu/",
 				"image": "better-code-java"
