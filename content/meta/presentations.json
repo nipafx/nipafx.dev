@@ -4340,7 +4340,8 @@
 					"time": "19.08.2026 1900 Asia/Tokyo",
 					"location": {
 						"text": "Microsoft Japan, Shinagawa Grand Central Tower, Tokyo"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/project-valhalla/2026-08-19-jjug"
 				}
 			]
 		},
@@ -4358,7 +4359,8 @@
 					"time": "11.09.2026 0930 Asia/Taipei",
 					"location": {
 						"text": "International Conference Centre of Taiwan University Hospital, Taipei City"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/project-valhalla/2026-09-11-jcconf"
 				}
 			]
 		},
