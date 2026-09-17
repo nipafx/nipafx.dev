@@ -4394,7 +4394,7 @@
 					"talk": "talk-java-x",
 					"title": "Modern Java in Practice - The Features That Matter",
 					"programEntry": "https://m.devoxx.com/events/dvbe26/talks/23524/modern-java-in-practice-the-features-that-matter",
-					"time": "06.10.2026 1330 Europe/Brussels",
+					"time": "05.10.2026 1330 Europe/Brussels",
 					"location": {
 						"text": "Kinepolis, Antwerpen"
 					}
@@ -4456,6 +4456,23 @@
 			]
 		},
 		{
+			"event": {
+				"name": "GDG DevFest Karlsruhe",
+				"url": "https://www.devfestka.de/",
+				"image": "devfest-karlsruhe-2026"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-x",
+					"title": "Java 27 - Bessere Sprache, Bessere APIs, Bessere Laufzeit",
+					"program": "https://www.devfestka.de/talks",
+					"time": "07.11.2026",
+					"location": {
+						"text": "Duale Hochschule Karlsruhe"
+					}
+				}
+			]
+		},		{
 			"event": {
 				"name": "IT-Tage",
 				"url": "https://www.ittage.informatik-aktuell.de/",
