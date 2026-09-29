@@ -4416,6 +4416,15 @@
 					"location": {
 						"text": "Kinepolis, Antwerpen"
 					}
+				},
+				{
+					"talk": "talk-java-next",
+					"title": "Java Next",
+					"announcement": "https://www.jug-da.de/2022/09/JDK-Tools-Java-Next/",
+					"time": "09.10.2026 1150 Europe/Brussels",
+					"location": {
+						"text": "Kinepolis, Antwerpen"
+					}
 				}
 			]
 		},
