@@ -4385,6 +4385,24 @@
 		},
 		{
 			"event": {
+				"name": "JUG Darmstadt",
+				"url": "https://www.jug-da.de/",
+				"image": "jug-darmstadt"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-valhalla",
+					"title": "Valhalla, Now!",
+					"announcement": "https://www.jug-da.de/2026/10/JCP-Meeting/",
+					"time": "01.10.2026 1830 Europe/Berlin",
+					"location": {
+						"text": "Room S3, SAP SE, Building WDF05, Dietmar-Hopp-Allee 20, Walldorf"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "Devoxx Belgium",
 				"url": "https://devoxx.be/",
 				"image": "devoxx-be"
