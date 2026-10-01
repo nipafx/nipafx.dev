@@ -10,14 +10,16 @@ videoSlug: java-x-devoxx-be-2024
 repo: java-x-demo
 ---
 
-Java 25 is the latest release with wide-ranging long-term support. It's a doozy and Java 26 and 27 followed hot on its heels:
+Java 25 is the latest release with wide-ranging long-term support.
+It's a doozy and Java 26 and 27 followed hot on its heels:
 
 * from module imports to improved pattern matching
 * from structured concurrency to HTTP/3
 * from a simpler `main` to launching multi-source-file programs
 * from better performance to quantum-resistant encryption
 
-There are plenty of features in the language, API, and runtime to discuss - whether new, improved, or finalized. So let's go over them!
+There are plenty of features in the language, API, and runtime to discuss - whether new, improved, or finalized.
+So let's go over them!
 
 <!--
 
