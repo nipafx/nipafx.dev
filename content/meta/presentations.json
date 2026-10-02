@@ -4387,6 +4387,25 @@
 		},
 		{
 			"event": {
+				"name": "Hochschule KA",
+				"url": "https://www.h-ka.de/",
+				"image": "hka"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming - Version 1.1",
+					"announcement": "https://www.h-ka.de/terminkalender/event/1620",
+					"time": "01.10.2026 1400 Europe/Berlin",
+					"location": {
+						"text": "Gebäude B / Foyer, HKA"
+					},
+					"slides": "https://slides.nipafx.dev/java-dop/2026-10-01-hochschule-ka"
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "JUG Darmstadt",
 				"url": "https://www.jug-da.de/",
 				"image": "jug-darmstadt"
@@ -4400,6 +4419,24 @@
 					"location": {
 						"text": "Room S3, SAP SE, Building WDF05, Dietmar-Hopp-Allee 20, Walldorf"
 					}
+				}
+			]
+		},
+		{
+			"event": {
+				"name": "JCP",
+				"url": "https://jcp.org",
+				"image": "jcp"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-next",
+					"title": " Java Next - Amber to Valhalla, Leyden to Babylon",
+					"time": "02.10.2026 0900 Europe/Berlin",
+					"location": {
+						"text": "SAP"
+					},
+					"slides": "https://slides.nipafx.dev/java-next/2026-10-02-jcp/"
 				}
 			]
 		},
