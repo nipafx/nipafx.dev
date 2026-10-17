@@ -11,6 +11,8 @@ import * as style from "./postCard.module.css"
 import * as tagletStyle from "./taglet.module.css"
 
 const PostCard = ({ title, slug, date, channel, tags, description, featuredImage, className }) => {
+	if (!featuredImage)
+		throw new Error(`Can't create post card for ${slug} because image is null`)
 	return (
 		<div
 			data-channel={channel}
