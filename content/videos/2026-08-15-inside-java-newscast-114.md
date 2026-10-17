@@ -155,7 +155,7 @@ There's a link to the announcement with more details and the expected time line 
 
 ## Monthly Security Updates
 
-The latest generation of AI models has [considerably increased the speed and scale of software vulneravility discovery and remediation](https://blogs.oracle.com/security/accelerating-vulnerability-detection-and-response-at-oracle).
+The latest generation of AI models has [considerably increased the speed and scale of software vulnerability discovery and remediation](https://blogs.oracle.com/security/accelerating-vulnerability-detection-and-response-at-oracle).
 The JDK is no exception to this and so [Oracle intends to shift the Java security update processes from a quarterly to a monthly cadence](https://blogs.oracle.com/java/transitioning-java-to-more-frequent-security-updates), a process that is planned to take much of 2027.
 In the first order, this only applies to Oracle JDKs, but OpenJDK Updates Project Lead Rob McKenna [proposed to adopt the same monthly model](https://mail.openjdk.org/archives/list/jdk-updates-dev@openjdk.org/thread/SVHDNJDY62MX6YBEA4FSMW4U72H77F6S/) for at least the six months after each JDK feature release; that's the interval during which Oracle maintains the respective OpenJDK branch.
 He furthermore invited discussions with maintainers of older OpenJDK update forks and branches to adopt the same model.
