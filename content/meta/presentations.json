@@ -4418,7 +4418,8 @@
 					"time": "01.10.2026 1830 Europe/Berlin",
 					"location": {
 						"text": "Room S3, SAP SE, Building WDF05, Dietmar-Hopp-Allee 20, Walldorf"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/project-valhalla/2026-10-01-jug-darmstadt"
 				}
 			]
 		},
@@ -4454,7 +4455,9 @@
 					"time": "05.10.2026 1330 Europe/Brussels",
 					"location": {
 						"text": "Kinepolis, Antwerpen"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-17+/2026-10-05-devoxx-be",
+					"video": "https://www.youtube.com/watch?v=zC2tbq7S5UE"
 				},
 				{
 					"talk": "talk-java-next",
@@ -4463,7 +4466,9 @@
 					"time": "09.10.2026 1150 Europe/Brussels",
 					"location": {
 						"text": "Kinepolis, Antwerpen"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-next/2026-10-09-devoxx-be",
+					"video": "https://www.youtube.com/watch?v=SwIqiKLcEzw"
 				}
 			]
 		},
@@ -4481,7 +4486,8 @@
 					"time": "13.10.2026 1115 Europe/Berlin",
 					"location": {
 						"type": "virtual"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/scia/2026-10-13-bettercode"
 				}
 			]
 		},
@@ -4538,7 +4544,8 @@
 					}
 				}
 			]
-		},		{
+		},
+		{
 			"event": {
 				"name": "IT-Tage",
 				"url": "https://www.ittage.informatik-aktuell.de/",
