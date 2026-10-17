@@ -3143,5 +3143,22 @@
 				"url": "https://unsplash.com/license"
 			}
 		}
+	},
+	{
+		"slug": "java-modern",
+		"alt": "A black and orange abstract background with curves",
+		"credits": {
+			"author": {
+				"name": "Martin Martzs",
+				"url": "https://unsplash.com/@martz90"
+			},
+			"source": {
+				"url": "https://unsplash.com/photos/a-black-and-orange-abstract-background-with-curves-qqyUN78RmgI"
+			},
+			"license": {
+				"name": "Unsplash License",
+				"url": "https://unsplash.com/license"
+			}
+		}
 	}
 ]
