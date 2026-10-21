@@ -2882,7 +2882,7 @@
 					"programEntry": "https://jconeurope2023.sched.com/event/1K3ya/from-idea-to-ide-how-java-features-are-considered-designed-and-shipped?iframe=no&w=100%&sidebar=yes&bg=no",
 					"time": "20.06.2023 1100 Europe/Berlin",
 					"location": {
-						"text": " Cinedom Multiplex Cinema 5, Cologne"
+						"text": "Cinedom Multiplex Cinema 5, Cologne"
 					},
 					"slides": "https://slides.nipafx.dev/openjdk-features/2023-06-20-jcon-europe",
 					"video": "https://www.youtube.com/watch?v=xRTSiXOcdAk"
@@ -2893,7 +2893,7 @@
 					"programEntry": "https://jconeurope2023.sched.com/event/1K40y/the-solutionfactory-to-javas-problems?iframe=no&w=100%&sidebar=yes&bg=no",
 					"time": "20.06.2023 1500 Europe/Berlin",
 					"location": {
-						"text": " Cinedom Multiplex Cinema 9, Cologne"
+						"text": "Cinedom Multiplex Cinema 9, Cologne"
 					},
 					"slides": "https://slides.nipafx.dev/project-amber/2023-06-20-jcon-europe",
 					"video": "https://www.youtube.com/watch?v=-xmPO9DMeCs"
@@ -3160,7 +3160,7 @@
 			"presentations": [
 				{
 					"talk": "talk-openjdk-features",
-					"title": "Von der Idee zur IDE - wie Java-Features erwogen, designt und umgesetzt werden ",
+					"title": "Von der Idee zur IDE - wie Java-Features erwogen, designt und umgesetzt werden",
 					"program": "https://www.infodays.de/java-lts/#c13619",
 					"time": "15.11.2023 1600 Europe/Berlin",
 					"location": {
@@ -3199,7 +3199,7 @@
 			"presentations": [
 				{
 					"talk": "talk-virtual-threads",
-					"title": "Einfach Skalieren mit Virtuellen Threads ",
+					"title": "Einfach Skalieren mit Virtuellen Threads",
 					"programEntry": "https://www.ittage.informatik-aktuell.de/programm/2023/einfach-skalieren-mit-virtuellen-threads.html",
 					"time": "12.12.2023 1400 Europe/Berlin",
 					"location": {
@@ -4089,7 +4089,7 @@
 			"presentations": [
 				{
 					"talk": "talk-java-next",
-					"title": " Java Next - From Amber to Valhalla, from Loom to Leyden, from Babylon to Panama",
+					"title": "Java Next - From Amber to Valhalla, from Loom to Leyden, from Babylon to Panama",
 					"announcement": "https://luma.com/sfjava?e=evt-BxgRru3zJCdo1lu",
 					"time": "24.03.2026 1800 America/Los_Angeles",
 					"location": {
@@ -4432,7 +4432,7 @@
 			"presentations": [
 				{
 					"talk": "talk-java-next",
-					"title": " Java Next - Amber to Valhalla, Leyden to Babylon",
+					"title": "Java Next - Amber to Valhalla, Leyden to Babylon",
 					"time": "02.10.2026 0900 Europe/Berlin",
 					"location": {
 						"text": "SAP"
@@ -4504,7 +4504,7 @@
 					"programEntry": "https://jonthebeach.com/workshops/structured-concurrency-in-action/",
 					"time": "30.10.2026 1500 Europe/Madrid",
 					"location": {
-						"text": " Palacio de Congresos de Torremolinos, Málaga"
+						"text": "Palacio de Congresos de Torremolinos, Málaga"
 					}
 				}
 			]
