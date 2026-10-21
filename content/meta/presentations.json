@@ -4493,6 +4493,24 @@
 		},
 		{
 			"event": {
+				"name": "JUG Madrid",
+				"url": "https://madridjug.es/",
+				"image": "jug-madrid"
+			},
+			"presentations": [
+				{
+					"talk": "talk-java-valhalla",
+					"title": "Valhalla, Now!",
+					"announcement": "https://www.meetup.com/madridjug/events/316884651/?eventOrigin=group_upcoming_events",
+					"time": "21.10.2026 1900 Europe/Madrid",
+					"location": {
+						"text": "Oracle, Paseo de la castellana 81, Madrid"
+					}
+				}
+			]
+		},
+		{
+			"event": {
 				"name": "J On the Beach",
 				"url": "https://jonthebeach.com/",
 				"image": "j-on-the-beach"
