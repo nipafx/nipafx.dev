@@ -4505,7 +4505,8 @@
 					"time": "21.10.2026 1900 Europe/Madrid",
 					"location": {
 						"text": "Oracle, Paseo de la castellana 81, Madrid"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/project-valhalla/2026-10-21-jug-madrid"
 				}
 			]
 		},
