@@ -4506,7 +4506,8 @@
 					"location": {
 						"text": "Oracle, Paseo de la castellana 81, Madrid"
 					},
-					"slides": "https://slides.nipafx.dev/project-valhalla/2026-10-21-jug-madrid"
+					"slides": "https://slides.nipafx.dev/project-valhalla/2026-10-21-jug-madrid",
+					"video": "https://www.youtube.com/watch?v=LHXQ1EA800E"
 				}
 			]
 		},
@@ -4518,13 +4519,24 @@
 			},
 			"presentations": [
 				{
+					"talk": "talk-java-pattern-matching",
+					"title": "Data-Oriented Programming Beyond Records",
+					"announcement": "https://jonthebeach.com/agenda/?day=friday&talk=data-oriented-programming-beyond-records",
+					"time": "30.10.2026 1100 Europe/Madrid",
+					"location": {
+						"text": "Palacio de Congresos de Torremolinos, Málaga"
+					},
+					"slides": "https://slides.nipafx.dev/java-dop/2026-10-30-j-on-the-beach"
+				},
+				{
 					"talk": "talk-structured-concurrency",
 					"title": "Structured Concurrency in Action",
 					"programEntry": "https://jonthebeach.com/workshops/structured-concurrency-in-action/",
 					"time": "30.10.2026 1500 Europe/Madrid",
 					"location": {
 						"text": "Palacio de Congresos de Torremolinos, Málaga"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/scia/2026-10-30-j-on-the-beach"
 				}
 			]
 		},
