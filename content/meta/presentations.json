@@ -4276,7 +4276,8 @@
 					"time": "18.06.2026 1435 Europe/Warsaw",
 					"location": {
 						"text": "Krakow, ICE Congress Centre, Room 3"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/scia/2026-06-18-devoxx-pl"
 				}
 			]
 		},
@@ -4554,7 +4555,8 @@
 					"time": "04.11.2026 1115 Europe/Stockholm",
 					"location": {
 						"text": "Malmömässan, Malmö; Protocol"
-					}
+					},
+					"slides": "https://slides.nipafx.dev/java-x/2026-11-04-oredev"
 				}
 			]
 		},
