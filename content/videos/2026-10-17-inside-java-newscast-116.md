@@ -1,5 +1,5 @@
 ---
-title: "OpenJDK Bug Fixing, JavaOne, and JDK 28 - Inside Java Newscast #116"
+title: "OpenJDK Bug Fixing + JavaOne + JDK 28 - Inside Java Newscast #116"
 tags: [openjdk, community, java-28]
 date: 2026-10-17
 slug: inside-java-newscast-116

@@ -1,5 +1,5 @@
 ---
-title: "JSON API, Valhalla Progress, LTS ❤️ PQC - Inside Java Newscast #114"
+title: "JSON API + Valhalla Progress + LTS ❤️ PQC - Inside Java Newscast #114"
 tags: [java-28, project-valhalla, project-amber, core-libs, community, openjdk, meta]
 date: 2026-08-15
 slug: inside-java-newscast-114
