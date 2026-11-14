@@ -1074,6 +1074,12 @@
 			"url": "https://www.youtube.com/watch?v=tn2lsyvzMvE",
 			"title": "OpenJDK Bug Fixing + JavaOne + JDK 28 - Inside Java Newscast #116",
 			"thumbnail": "inside-java-newscast-116"
+		},
+		{
+			"slug": "inside-java-newscast-117",
+			"url": "https://www.youtube.com/watch?v=44sLqD-0Sxk",
+			"title": "Adaptive Heap Sizing + Numeric Conversion + Primitive Patterns - Inside Java Newscast #117",
+			"thumbnail": "inside-java-newscast-117"
 		}
 	]
 }
