@@ -4605,6 +4605,24 @@
 					}
 				}
 			]
+		},
+		{
+			"event": {
+				"name": "JavaLand",
+				"url": "http://www.javaland.eu/de/home/",
+				"image": "javaland-2027"
+			},
+			"presentations": [
+				{
+					"talk": "talk-structured-concurrency",
+					"title": "Structured Concurrency in Action",
+					"program": "https://my.doag.org/events/javaland/2027/agenda/#eventDay.all",
+					"time": "03.03.2027 1500 Europe/Berlin",
+					"location": {
+						"text": "Das Studio, Europapark"
+					}
+				}
+			]
 		}
 	],
 	"future-events": [
